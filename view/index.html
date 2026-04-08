@@ -60,8 +60,9 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            min-w-0; /* Prevent flex blowout */
+            min-width: 0;
             overflow: hidden;
+            position: relative; /* Allows absolute positioning of mobile header */
         }
 
         .scrollable-content {
@@ -141,8 +142,8 @@
     <!-- END: Side Navigation -->
 
     <div class="main-wrapper">
-        <!-- BEGIN: Mobile Header (Hidden on Desktop) -->
-        <header class="bg-app-header w-full pt-6 pb-4 px-5 shadow-lg flex items-center justify-between text-app-text-light z-40 relative md:hidden flex-shrink-0">
+        <!-- BEGIN: Mobile Header (Hidden on Desktop, Animates on Mobile) -->
+        <header id="mobileHeader" class="bg-app-header w-full pt-6 pb-4 px-5 shadow-lg flex items-center justify-between text-app-text-light z-40 absolute top-0 left-0 md:hidden flex-shrink-0 transition-transform duration-300 ease-in-out">
             <div>
                 <div class="text-[10px] text-app-accent-gold font-bold uppercase tracking-widest mb-0.5">Executive Briefing</div>
                 <h1 class="text-lg font-bold truncate leading-tight">City Suites Audit</h1>
@@ -155,8 +156,9 @@
         <!-- END: Mobile Header -->
 
         <!-- BEGIN: MainContent -->
-        <main class="scrollable-content">
-            <div class="max-w-7xl mx-auto px-4 md:px-8 pt-6 pb-28 md:pb-12 space-y-8">
+        <main class="scrollable-content" id="scrollArea">
+            <!-- Note: pt-24 on mobile gives space for the absolute header to sit over the content, reverts to pt-6 on desktop -->
+            <div class="max-w-7xl mx-auto px-4 md:px-8 pt-24 md:pt-6 pb-28 md:pb-12 space-y-8">
                 
                 <!-- SECTION: Executive Summary (Responsive Grid) -->
                 <section class="fade-in">
@@ -428,8 +430,8 @@
         <!-- END: MainContent -->
     </div>
 
-    <!-- BEGIN: Mobile Bottom Navigation (Hidden on Tablet/Desktop) -->
-    <nav class="bg-app-header border-t border-slate-700 fixed bottom-0 w-full flex md:hidden justify-around items-center py-3 px-2 pb-6 z-50 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.3)]">
+    <!-- BEGIN: Mobile Bottom Navigation (Hidden on Tablet/Desktop, Animates on Mobile) -->
+    <nav id="mobileNav" class="bg-app-header border-t border-slate-700 fixed bottom-0 w-full flex md:hidden justify-around items-center py-3 px-2 pb-6 z-50 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.3)] transition-transform duration-300 ease-in-out">
         <button class="flex flex-col items-center text-app-accent-gold focus:outline-none transition-transform active:scale-95">
             <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
             <span class="text-[10px] font-semibold tracking-wide">Dashboard</span>
@@ -449,7 +451,41 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // High-performance Donut Chart Configuration
+        
+        // --- Mobile Scroll Hide/Show Logic ---
+        const scrollArea = document.getElementById('scrollArea');
+        const mobileHeader = document.getElementById('mobileHeader');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        let lastScrollTop = 0;
+        const delta = 10; // Minimum scroll distance to trigger hide/show
+        
+        scrollArea.addEventListener('scroll', function() {
+            // Guard clause: Only apply this logic on mobile screens
+            if (window.innerWidth >= 768) return;
+            
+            let currentScrollTop = scrollArea.scrollTop;
+            
+            // Ignore minor scroll jitters
+            if (Math.abs(lastScrollTop - currentScrollTop) <= delta) {
+                return;
+            }
+            
+            // If scrolling DOWN and past the top safe zone
+            if (currentScrollTop > lastScrollTop && currentScrollTop > 60) {
+                mobileHeader.style.transform = 'translateY(-100%)';
+                mobileNav.style.transform = 'translateY(100%)';
+            } else {
+                // If scrolling UP
+                mobileHeader.style.transform = 'translateY(0)';
+                mobileNav.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = currentScrollTop;
+        });
+
+
+        // --- High-performance Donut Chart Configuration ---
         const ctx = document.getElementById('donutChart').getContext('2d');
         new Chart(ctx, {
             type: 'doughnut',
