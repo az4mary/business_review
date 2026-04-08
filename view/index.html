@@ -42,45 +42,50 @@
         }
     </script>
     <style>
-        /* Responsive App Layout */
+        /* Responsive App Layout - Mobile First (Window Scrolling) */
         .app-layout {
-            height: 100dvh;
+            min-height: 100dvh;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
         }
 
-        @media (min-width: 768px) {
-            .app-layout {
-                flex-direction: row; /* Sidebar layout on tablet/desktop */
-            }
-        }
-        
         .main-wrapper {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            min-width: 0;
-            overflow: hidden;
-            position: relative; /* Allows absolute positioning of mobile header */
+            width: 100%;
         }
 
         .scrollable-content {
             flex-grow: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
         }
 
-        /* Hide scrollbar for a cleaner look */
-        .scrollable-content::-webkit-scrollbar {
-            width: 6px;
-        }
-        .scrollable-content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .scrollable-content::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+        /* Desktop specific layout (Locked internal scrolling) */
+        @media (min-width: 768px) {
+            .app-layout {
+                height: 100dvh; /* Lock height on desktop */
+                flex-direction: row; /* Sidebar layout */
+                overflow: hidden;
+            }
+            .main-wrapper {
+                height: 100dvh;
+                overflow: hidden;
+            }
+            .scrollable-content {
+                overflow-y: auto; /* Internal scrolling on desktop */
+                height: 100%;
+            }
+            /* Custom Scrollbar for desktop */
+            .scrollable-content::-webkit-scrollbar {
+                width: 6px;
+            }
+            .scrollable-content::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .scrollable-content::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
         }
 
         .fade-in {
@@ -143,7 +148,8 @@
 
     <div class="main-wrapper">
         <!-- BEGIN: Mobile Header (Hidden on Desktop, Animates on Mobile) -->
-        <header id="mobileHeader" class="bg-app-header w-full pt-6 pb-4 px-5 shadow-lg flex items-center justify-between text-app-text-light z-40 absolute top-0 left-0 md:hidden flex-shrink-0 transition-transform duration-300 ease-in-out">
+        <!-- Changed to fixed so it holds its ground against window scrolling on mobile -->
+        <header id="mobileHeader" class="bg-app-header w-full pt-6 pb-4 px-5 shadow-lg flex items-center justify-between text-app-text-light z-40 fixed top-0 left-0 md:relative md:hidden flex-shrink-0 transition-transform duration-300 ease-in-out">
             <div>
                 <div class="text-[10px] text-app-accent-gold font-bold uppercase tracking-widest mb-0.5">Executive Briefing</div>
                 <h1 class="text-lg font-bold truncate leading-tight">City Suites Audit</h1>
@@ -157,8 +163,7 @@
 
         <!-- BEGIN: MainContent -->
         <main class="scrollable-content" id="scrollArea">
-            <!-- Note: pt-24 on mobile gives space for the absolute header to sit over the content, reverts to pt-6 on desktop -->
-            <div class="max-w-7xl mx-auto px-4 md:px-8 pt-24 md:pt-6 pb-28 md:pb-12 space-y-8">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 pt-28 md:pt-6 pb-28 md:pb-12 space-y-8">
                 
                 <!-- SECTION: Executive Summary (Responsive Grid) -->
                 <section class="fade-in">
@@ -453,18 +458,21 @@
     document.addEventListener('DOMContentLoaded', function() {
         
         // --- Mobile Scroll Hide/Show Logic ---
-        const scrollArea = document.getElementById('scrollArea');
         const mobileHeader = document.getElementById('mobileHeader');
         const mobileNav = document.getElementById('mobileNav');
         
         let lastScrollTop = 0;
         const delta = 10; // Minimum scroll distance to trigger hide/show
         
-        scrollArea.addEventListener('scroll', function() {
-            // Guard clause: Only apply this logic on mobile screens
+        // Attaching scroll listener to the WINDOW instead of a div.
+        // This is crucial to trigger the native iOS Safari/Android Chrome behavior
+        // where the physical browser URL bar and bottom OS bar slide away on scroll.
+        window.addEventListener('scroll', function() {
+            // Guard clause: Only apply this animation logic on mobile viewports
             if (window.innerWidth >= 768) return;
             
-            let currentScrollTop = scrollArea.scrollTop;
+            // Get scroll position from window/document
+            let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
             
             // Ignore minor scroll jitters
             if (Math.abs(lastScrollTop - currentScrollTop) <= delta) {
@@ -482,7 +490,7 @@
             }
             
             lastScrollTop = currentScrollTop;
-        });
+        }, { passive: true }); // passive: true improves scroll performance on mobile
 
 
         // --- High-performance Donut Chart Configuration ---
