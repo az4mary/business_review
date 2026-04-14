@@ -57,7 +57,7 @@ To illustrate exactly how this works, let’s assume the estimated repairs from 
 
 Here is the exact timeline of payments:
 
-1. **Lease Signing (May 2026):** You pay the **$1,400 May rent** directly to the listing agent upon signing the lease.
+1. **Lease Signing (May 2026):** You pay the **$1,400 May rent** directly to the listing agent upon signing the lease. No security deposit is required.
     
 2. **Repair Approval:** The contractor provides the invoice. You get instant online approval from the financing company (this does not impact your credit). The contractor is paid within 24–72 hours, depending on their profile.
     
