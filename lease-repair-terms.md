@@ -34,7 +34,7 @@ This is based on the assumption that the repair loan is $10,000 with $450/monthl
 
 ---
 
-POSTED. 4/21/2026
+POSTED. 4/14/2026
 
 Thank you for your question. It is incredibly important that the financial and repair structures of this lease are completely clear upfront.
 
