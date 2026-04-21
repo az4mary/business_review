@@ -32,6 +32,9 @@ This is based on the assumption that the repair loan is $10,000 with $450/monthl
 | 1,400                                                                               | March 1, 2028                                      | March rent<br>24th loan payment included                    |
 | 1,400                                                                               | April 1, 2028                                      | April rent<br>Loan fully PAID                               |
 
+---
+
+POSTED. 4/21/2026
 
 Thank you for your question. It is incredibly important that the financial and repair structures of this lease are completely clear upfront.
 
