@@ -58,3 +58,18 @@ Validation:
 - Al-Khobar is framed as a sector platform, not a limitation.
 - Section 9 remains a partner-led action plan with ownership, KPIs, and implementation discipline.
 - Commit pushed to origin main: `ee9024c`.
+## STEP 5 - English Quality-Control Review and Final Cleanup
+
+Local checkpoint time:
+- `2026-06-14T20:10:11.7475739-05:00`
+
+English QC cleanup applied and pushed.
+
+Validation:
+- Heading continuity and numbering checked.
+- Targeted risky vocabulary scan returned clean for software-sales, productization, service-package, client-segmentation, digital-business-development, customer, sales, conversion, lead-generation, and department terms.
+- Business-development language tightened to client development, matter origination, practice group market visibility, or partner-led origination where appropriate.
+- China Desk / China-Saudi Corridor terminology checked.
+- Advisory mandate / advisory offering / advisory pathway terminology checked.
+- Section 10 remains present after the upgraded report and Closing Note.
+- Commit pushed to origin main: `5fee1f4`.
