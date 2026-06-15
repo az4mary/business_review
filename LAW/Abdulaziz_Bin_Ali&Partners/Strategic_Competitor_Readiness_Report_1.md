@@ -122,6 +122,84 @@ The firm has a good platform. The next stage is to make that platform more focus
 
 ---
 
+# Table of Contents
+
+1. [Cover Page](#1-cover-page)
+2. [Disclosure and Basis of Review](#2-disclosure-and-basis-of-review)
+3. [Executive Summary](#3-executive-summary)
+4. [Public Profile of the Firm](#4-public-profile-of-the-firm)
+
+   * [4.1 History](#41-history)
+   * [4.2 Location](#42-location)
+   * [4.3 Practice Areas](#43-practice-areas)
+   * [4.4 Sectors](#44-sectors)
+   * [4.5 Team Profile](#45-team-profile)
+   * [4.6 Client Base](#46-client-base)
+   * [4.7 Legal Updates and Thought Leadership](#47-legal-updates-and-thought-leadership)
+5. [What the Firm Is Doing Well](#5-what-the-firm-is-doing-well)
+
+   * [5.1 Full-Service Saudi Positioning](#51-full-service-saudi-positioning)
+   * [5.2 Strong Disputes and Arbitration Platform](#52-strong-disputes-and-arbitration-platform)
+   * [5.3 China Desk and International Client Relevance](#53-china-desk-and-international-client-relevance)
+   * [5.4 Sector Coverage](#54-sector-coverage)
+   * [5.5 Public Client Credibility](#55-public-client-credibility)
+   * [5.6 Active Legal Updates and Thought Leadership](#56-active-legal-updates-and-thought-leadership)
+   * [5.7 Summary of Current Strengths](#57-summary-of-current-strengths)
+6. [Competitive Risks](#6-competitive-risks)
+
+   * [6.1 International Firms Entering or Expanding in Saudi Arabia](#61-international-firms-entering-or-expanding-in-saudi-arabia)
+   * [6.2 Riyadh-Focused Competitors](#62-riyadh-focused-competitors)
+   * [6.3 Larger Saudi Firms with Stronger Public Profiles](#63-larger-saudi-firms-with-stronger-public-profiles)
+   * [6.4 Alternative Legal Service Providers](#64-alternative-legal-service-providers)
+   * [6.5 Technology-Enabled Legal Delivery](#65-technology-enabled-legal-delivery)
+   * [6.6 Specialist Boutiques](#66-specialist-boutiques)
+   * [6.7 Risk Summary](#67-risk-summary)
+7. [Improvement Areas](#7-improvement-areas)
+
+   * [7.1 Sharper Market Positioning](#71-sharper-market-positioning)
+   * [7.2 Stronger Lawyer Profiles](#72-stronger-lawyer-profiles)
+   * [7.3 Better Proof of Experience](#73-better-proof-of-experience)
+   * [7.4 Clearer Sector-Focused Advisory Platforms](#74-clearer-sector-focused-advisory-platforms)
+   * [7.5 More Visible Riyadh and National Coverage](#75-more-visible-riyadh-and-national-coverage)
+   * [7.6 Stronger Practice Group Market Visibility](#76-stronger-practice-group-market-visibility)
+   * [7.7 More Structured Integrated Advisory Offerings](#77-more-structured-integrated-advisory-offerings)
+   * [7.8 Summary of Improvement Areas](#78-summary-of-improvement-areas)
+8. [Strategic Pillars for Implementation](#strategic-pillars-for-implementation)
+9. [Recommended Strategic Initiatives](#8-recommended-strategic-initiatives)
+
+   * [8.1 Institutional Client Matrix](#81-institutional-client-matrix)
+   * [8.2 Sector-Focused Advisory Platforms](#82-sector-focused-advisory-platforms)
+   * [8.3 China-Saudi Corridor Strategy](#83-china-saudi-corridor-strategy)
+   * [8.4 Arbitration and Disputes Positioning](#84-arbitration-and-disputes-positioning)
+   * [8.5 PDPL and Data Protection Advisory Mandate](#85-pdpl-and-data-protection-advisory-mandate)
+   * [8.6 Legal Updates and Thought Leadership Distribution](#86-legal-updates-and-thought-leadership-distribution)
+   * [8.7 Partner-Led Origination Materials](#87-partner-led-origination-materials)
+   * [8.8 Internal Execution Requirements](#88-internal-execution-requirements)
+   * [8.9 Summary of Strategic Initiatives](#89-summary-of-strategic-initiatives)
+10. [90-Day, 6-Month, and 12-Month Partner-Led Action Plan](#9-90-day-6-month-and-12-month-partner-led-action-plan)
+
+    * [9.1 First 90 Days: Clarify Positioning and Strengthen Core Materials](#91-first-90-days-clarify-positioning-and-strengthen-core-materials)
+    * [9.2 First 6 Months: Build Advisory Pathways and Sector Platforms](#92-first-6-months-build-advisory-pathways-and-sector-platforms)
+    * [9.3 First 12 Months: Build a Sustainable Competitive Platform](#93-first-12-months-build-a-sustainable-competitive-platform)
+    * [9.4 Partner Ownership and Accountability Table](#94-partner-ownership-and-accountability-table)
+    * [9.5 Suggested Law-Firm KPIs](#95-suggested-law-firm-kpis)
+    * [9.6 Action Plan Summary](#96-action-plan-summary)
+    * [9.7 Immediate Leadership Decisions](#97-immediate-leadership-decisions)
+11. [Appendix: Sources Reviewed](#10-appendix-sources-reviewed)
+
+    * [10.1 Firm Website and Public Materials](#101-firm-website-and-public-materials)
+    * [10.2 Practice Area Information Reviewed](#102-practice-area-information-reviewed)
+    * [10.3 Sector Information Reviewed](#103-sector-information-reviewed)
+    * [10.4 Team and Leadership Information Reviewed](#104-team-and-leadership-information-reviewed)
+    * [10.5 Client and Market Positioning Information Reviewed](#105-client-and-market-positioning-information-reviewed)
+    * [10.6 Legal Updates and Thought Leadership Reviewed](#106-legal-updates-and-thought-leadership-reviewed)
+    * [10.7 External Market Context Considered](#107-external-market-context-considered)
+    * [10.8 Limitations of Sources](#108-limitations-of-sources)
+    * [10.9 Recommended Internal Sources for Future Review](#109-recommended-internal-sources-for-future-review)
+12. [Closing Note](#closing-note)
+
+---
+
 # 4. Public Profile of the Firm
 
 ## 4.1 History
