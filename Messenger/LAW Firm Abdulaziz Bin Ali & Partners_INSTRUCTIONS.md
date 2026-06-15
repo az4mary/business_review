@@ -46,3 +46,12 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 5. Check consistency of `advisory mandate`, `advisory offering`, and `advisory pathway`.
 6. Check whether Section 10 still matches the upgraded report.
 7. Do not ask for Arabic or Chinese translations until the English QC patching is complete.
+
+STEP 6 - Minor Formatting Cleanup and Final English Double-Check
+
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+
+1. Remove optional blank spacer lines between consecutive bullet items.
+2. Preserve Markdown content, heading structure, section order, tables, and paragraph spacing outside consecutive bullet lists.
+3. Validate that no blank spacer lines remain between consecutive bullet items.
+4. Send the completed English report back to the messenger for double-check before requesting Arabic translation.
