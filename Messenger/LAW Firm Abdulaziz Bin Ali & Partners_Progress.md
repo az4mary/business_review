@@ -73,3 +73,21 @@ Validation:
 - Advisory mandate / advisory offering / advisory pathway terminology checked.
 - Section 10 remains present after the upgraded report and Closing Note.
 - Commit pushed to origin main: `5fee1f4`.
+
+## STEP 6 - Option B Quality-Control Review Answers
+
+Local checkpoint time:
+- `2026-06-14T20:23:02.4495992-05:00`
+
+Quality-control review completed and pushed.
+
+Answers:
+- Heading continuity and numbering: Confirmed checked. The report preserves the title page, Sections 1-10, Strategic Pillars before Section 8, and Closing Note after Section 10.
+- Duplicate language introduced by patched sections: Confirmed checked. No blocking duplicate patched language remains.
+- Remaining instances of risky vocabulary: Confirmed checked. The targeted risky-language scan returned clean after final English terminology cleanup.
+- Consistency of "China Desk" vs "China-Saudi Corridor": Confirmed checked. "China Desk" remains the firm's visible public feature, and "China-Saudi Corridor" is used for the strategic platform built from that feature.
+- Consistency of "advisory mandate / advisory offering / advisory pathway": Confirmed checked. Each term remains aligned to its context: mandate for defined-scope work, offering for integrated client-facing support, and pathway for instruction/escalation structure.
+- Whether Section 10 still matches the upgraded report: Confirmed checked. Section 10 remains the sources appendix and still fits the upgraded report structure.
+- Whether Arabic and Chinese translations need to be updated after these English changes: Confirmed checked. Arabic and Chinese translations will need to be updated only after the final English version is complete; no translation request is being made in this step.
+
+Final English QC terminology cleanup commit pushed to origin main: `4d25feb`.
