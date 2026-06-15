@@ -121,3 +121,23 @@ Validation:
 - Heading structure and Section 10 / Closing Note order checked after cleanup.
 - Completed English report is ready to resend to the messenger for final confirmation before Arabic translation.
 - Commit pushed to origin main: `bee5138`.
+
+## STEP 9 - Fixed English Confirmation Upload Blocked
+
+Local checkpoint time:
+- `2026-06-14T22:05:20.6753889-05:00`
+
+NEXT STEP BLOCKED
+No future-step edits/proceeding
+
+Blocked item:
+- Sending the completed English report after apostrophe encoding cleanup to the messenger for final confirmation.
+
+Failure state:
+- Original corrected Markdown upload stalled with the send button disabled.
+- Simpler same-content Markdown copy upload stalled with the send button disabled.
+- Same-content `.txt` copy upload stalled with the send button disabled.
+- Stalled attachments were removed before stopping.
+- The composer contains the intended short prompt text but has no active attachment.
+
+Do you need any additional files/logs for troubleshooting?
