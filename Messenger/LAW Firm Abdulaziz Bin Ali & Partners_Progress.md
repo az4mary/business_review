@@ -142,22 +142,7 @@ Failure state:
 
 Do you need any additional files/logs for troubleshooting?
 
-## STEP 13 - Arabic Downloadable Markdown Received
 
-Local checkpoint time:
-- `2026-06-15T01:33:34.6593834-05:00`
-
-Arabic translation received and recorded.
-
-Validation:
-- Downloaded Arabic Markdown file saved at `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1_AR.md`.
-- File size: `173,017` bytes.
-- Lines: `1,937`.
-- Arabic character count: `77,308`.
-- CJK character count: `0`.
-- SHA-256: `ED2DC8874FD97CBC334AC0FBCB81D003366F69D7B58FD8D967421B63BAD4BA74`.
-- Arabic translation file pushed to origin main in commit `607e829`.
-- Chinese translation request was not sent.
 
 ## STEP 12 - Arabic Translation Retry as Downloadable Markdown File
 
@@ -202,3 +187,33 @@ Failure state:
 - Chinese translation request was not sent.
 
 Do you need any additional files/logs for troubleshooting?
+
+## STEP 13 - Arabic Downloadable Markdown Received
+
+Local checkpoint time:
+- `2026-06-15T01:33:34.6593834-05:00`
+
+Arabic translation received and recorded.
+
+Validation:
+- Downloaded Arabic Markdown file saved at `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1_AR.md`.
+- File size: `173,017` bytes.
+- Lines: `1,937`.
+- Arabic character count: `77,308`.
+- CJK character count: `0`.
+- SHA-256: `ED2DC8874FD97CBC334AC0FBCB81D003366F69D7B58FD8D967421B63BAD4BA74`.
+- Arabic translation file pushed to origin main in commit `607e829`.
+
+## STEP 14 - Chinese Translation Request Sent
+
+Local checkpoint time:
+- `2026-06-15T01:36:44.9497626-05:00`
+
+Chinese translation request sent to messenger.
+
+Validation:
+- Arabic translation was received and recorded before this request.
+- Composer-scoped upload helper flow used.
+- Final English report uploaded as `Strategic_Competitor_Readiness_Report_1(5).md`.
+- Short prompt sent: `Please translate the attached final English report into Chinese only. Preserve the Markdown structure and headings. Do not make additional English changes.`
+- New messenger user message confirmed after submission.
