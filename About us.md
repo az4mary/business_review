@@ -88,3 +88,6 @@ We are not just advisors; we are architects of execution.
 # ZYNE.store Company Mission Statement
 
 > **"To provide an elite standard of executive intelligence and operational assurance to small and medium enterprises, enabling them to lead with absolute clarity and execute with peerless precision."**
+
+# **zyne.store** slogan
+> **Elite Insight. Sovereign Delivery.**
