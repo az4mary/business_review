@@ -55,3 +55,12 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 2. Preserve Markdown content, heading structure, section order, tables, and paragraph spacing outside consecutive bullet lists.
 3. Validate that no blank spacer lines remain between consecutive bullet items.
 4. Send the completed English report back to the messenger for double-check before requesting Arabic translation.
+
+STEP 7 - Encoding Artifact Cleanup Before Translation
+
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+
+1. Replace the mojibake apostrophe artifact `â€™` globally with the straight apostrophe `'`.
+2. Validate that `â€™` no longer appears in the English report.
+3. Preserve all substantive content, heading structure, tables, and the completed bullet-spacing cleanup.
+4. Resend the completed English report to the messenger for final confirmation before requesting Arabic translation.
