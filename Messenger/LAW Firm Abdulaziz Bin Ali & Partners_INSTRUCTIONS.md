@@ -7,3 +7,12 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 2. Replace Section 3 Executive Summary with the Patch Segment 1 Executive Summary provided in the extracted messenger response.
 3. Insert the strategic-pillar bridge and table before Section 8 so the recommendations connect to implementation pillars.
 4. Preserve the rest of the report unless a local heading adjustment is required to make the insertion point coherent.
+
+STEP 2 - Patch Segment 2 - Section 7 and Section 8 Terminology Upgrades
+
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+
+1. Replace Section 7 with the Segment 2 upgraded Improvement Areas text.
+2. Replace Section 8 with the Segment 2 upgraded Recommended Strategic Initiatives text.
+3. Use the law-firm-calibrated terminology requested by the messenger, including Institutional Client Matrix, Sector-Focused Advisory Platforms, Integrated Advisory Offerings / Defined Advisory Mandates, Practice Group Market Visibility, Thought Leadership Distribution, and Partner-Led Origination Materials.
+4. Preserve Sections 1-6, the strategic-pillar bridge inserted before Section 8, and Sections 9-10 unless heading continuity requires a local formatting adjustment.
