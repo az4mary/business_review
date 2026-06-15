@@ -16,3 +16,12 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 2. Replace Section 8 with the Segment 2 upgraded Recommended Strategic Initiatives text.
 3. Use the law-firm-calibrated terminology requested by the messenger, including Institutional Client Matrix, Sector-Focused Advisory Platforms, Integrated Advisory Offerings / Defined Advisory Mandates, Practice Group Market Visibility, Thought Leadership Distribution, and Partner-Led Origination Materials.
 4. Preserve Sections 1-6, the strategic-pillar bridge inserted before Section 8, and Sections 9-10 unless heading continuity requires a local formatting adjustment.
+
+STEP 3 - Patch Segment 3 - Section 9 Action Plan, Ownership, KPIs, and Execution Discipline
+
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+
+1. Replace Section 9 with the Segment 3 partner-led action plan text.
+2. Rename Section 9 to `90-Day, 6-Month, and 12-Month Partner-Led Action Plan`.
+3. Add the 90-day, 6-month, and 12-month outputs, ownership and accountability table, law-firm-specific KPIs, capacity warning, and immediate leadership decisions provided by the messenger.
+4. Preserve Sections 1-8 and Section 10 unless heading continuity requires a local formatting adjustment.
