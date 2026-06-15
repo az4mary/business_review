@@ -142,6 +142,19 @@ Failure state:
 
 Do you need any additional files/logs for troubleshooting?
 
+## STEP 12 - Arabic Translation Retry as Downloadable Markdown File
+
+Local checkpoint time:
+- `2026-06-15T01:01:17.2595030-05:00`
+
+Arabic translation retry instruction sent to messenger.
+
+Validation:
+- Messenger confirmed no additional logs are needed.
+- Retry instruction sent: `Create the complete Arabic translation as a downloadable Markdown file. Preserve all headings, tables, bullets, numbering, and structure. Do not provide Chinese translation.`
+- New messenger user message confirmed after submission.
+- Chinese translation request was not sent.
+
 ## STEP 10 - Fixed English Confirmation Upload Sent
 
 Local checkpoint time:
