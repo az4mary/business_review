@@ -34,3 +34,15 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 2. Apply the global tone cleanup rules across the report, using law-firm leadership language and preserving the integrated full-service Saudi platform model.
 3. Remove or replace risky, software-sales, retail, overclaiming, and generic consulting vocabulary according to the Segment 4 cleanup checklist.
 4. Run the final consistency checks requested by the messenger, including formal title-page start, revised Executive Summary, strategic pillars before Section 8, visibility risk diagnosis, China-Saudi Corridor framing, Al-Khobar sector-platform framing, Section 9 partner-led action plan, ownership/KPIs, and measured partner-ready conclusion.
+
+STEP 5 - English Quality-Control Review and Final Cleanup
+
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` only if the English quality-control review identifies issues:
+
+1. Check heading continuity and numbering.
+2. Remove or reduce duplicate language introduced by patched sections.
+3. Clean any remaining risky vocabulary from the Segment 4 checklist, except where the term is used appropriately for competitor context or to warn against over-specialization.
+4. Check consistency of `China Desk` versus `China-Saudi Corridor`.
+5. Check consistency of `advisory mandate`, `advisory offering`, and `advisory pathway`.
+6. Check whether Section 10 still matches the upgraded report.
+7. Do not ask for Arabic or Chinese translations until the English QC patching is complete.
