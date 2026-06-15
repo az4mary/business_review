@@ -26,7 +26,7 @@ June 13th 2026
 
 This report provides an external strategic review of Abdulaziz Bin Ali & Partners Law Firm. It assesses the firm’s public market position, current strengths, visible competitive risks, and areas where the firm can improve its readiness for the next stage of growth in the Saudi legal market.
 
-The report is prepared for the firm’s leadership. It is intended to support management discussion, strategic planning, business development, and future operational improvement.
+The report is prepared for the firm’s leadership. It is intended to support management discussion, strategic planning, client development, and future operational improvement.
 
 **Recipient:**
 
@@ -238,7 +238,7 @@ The firm should consider strengthening public lawyer profiles by adding:
 - client industries served;
 - links to related legal updates.
 
-This would make the team’s expertise more visible and would support stronger business development.
+This would make the team’s expertise more visible and would support stronger partner-led origination.
 
 ---
 
@@ -270,7 +270,7 @@ The firm publishes legal updates on Saudi and international legal topics. Public
 
 This is a positive sign. It shows that the firm is active in legal analysis and is using thought leadership to communicate with the market.
 
-Legal updates are useful for three reasons. First, they help existing clients stay informed. Second, they show prospective clients that the firm understands current legal developments. Third, they support search visibility and business development.
+Legal updates are useful for three reasons. First, they help existing clients stay informed. Second, they show prospective clients that the firm understands current legal developments. Third, they support market visibility and matter origination.
 
 The firm should continue publishing legal updates, but it should use a more structured content strategy. Each update should connect to a practice area, a sector, and a target client group.
 
@@ -374,7 +374,7 @@ The firm should continue to strengthen this position by making the China Desk mo
 - bilingual client alerts in English and Chinese;
 - Saudi legal guide for Chinese companies.
 
-This would help the firm convert the China Desk from a profile strength into a more active business development platform.
+This would help the firm convert the China Desk from a profile strength into a more active cross-border origination platform.
 
 ## 5.4 Sector Coverage
 
@@ -403,7 +403,7 @@ The next step is to deepen the sector pages. Each sector should include clearer 
 - sample advisory pathways;
 - anonymized experience, where confidentiality allows.
 
-This would make the sector pages more useful for clients and more effective for business development.
+This would make the sector pages more useful for clients and more effective for matter origination.
 
 ## 5.5 Public Client Credibility
 
@@ -441,7 +441,7 @@ Thought leadership supports the firm in several ways:
 - it helps existing clients understand legal developments;
 - it shows prospective clients that the firm is active and informed;
 - it supports search visibility;
-- it creates material for business development;
+- it creates material for client development;
 - it supports referral relationships;
 - it helps lawyers build individual professional profiles;
 - it strengthens the firm’s reputation in selected practice areas.
@@ -526,7 +526,7 @@ This creates several risks:
 - foreign companies may first search for Riyadh-based counsel;
 - international law firms may prefer referral partners with visible Riyadh presence;
 - government-related and regulatory work may be perceived as Riyadh-centered;
-- business development events may be concentrated in Riyadh;
+- client development events may be concentrated in Riyadh;
 - competitors may use Riyadh presence as a signal of national coverage.
 
 The firm does not need to reduce its Al-Khobar identity. The Al-Khobar base is valuable. However, the firm should make its national reach clearer.
@@ -535,7 +535,7 @@ Possible responses include:
 
 - presenting the firm as serving clients across the Kingdom;
 - highlighting Riyadh-related work where confidentiality allows;
-- developing stronger business development activity in Riyadh;
+- developing stronger relationship-building activity in Riyadh;
 - building formal relationships with Riyadh-based advisers or institutions;
 - creating client materials for Riyadh-based companies and international investors;
 - attending or hosting events in Riyadh;
@@ -545,7 +545,7 @@ The firm should position Al-Khobar as a strength, while also making clear that i
 
 ## 6.3 Larger Saudi Firms with Stronger Public Profiles
 
-Some Saudi firms may have larger teams, more visible rankings, broader public matter descriptions, stronger digital presence, or more developed business development materials. These firms may be easier for clients to evaluate during the selection process.
+Some Saudi firms may have larger teams, more visible rankings, broader public matter descriptions, stronger digital presence, or more developed partner-led origination materials. These firms may be easier for clients to evaluate during the selection process.
 
 This creates a risk because sophisticated clients often compare firms before making an instruction. They may review websites, lawyer profiles, legal directories, client alerts, LinkedIn activity, public rankings, and representative experience.
 
@@ -1064,7 +1064,7 @@ The firm’s public profile is already credible. The improvement opportunity is 
 
 The recommendations in this report should not be treated as separate tasks. They should be organized around strategic pillars that connect the firm’s strengths, market risks, client needs, and implementation actions.
 
-This approach is important because senior law-firm leadership does not only need a list of improvements. It needs a practical view of where the firm should place management attention, partner time, and business development effort.
+This approach is important because senior law-firm leadership does not only need a list of improvements. It needs a practical view of where the firm should place management attention, partner time, and client development effort.
 
 The recommended strategic pillars are:
 
@@ -1463,7 +1463,7 @@ Each update should also identify:
 
 - whether the update can be repurposed into LinkedIn, a client alert, or a referral counsel note.
 
-The firm should consider publishing selected content in Arabic, English, and Chinese. This would support Saudi clients, international clients, and China-related business development.
+The firm should consider publishing selected content in Arabic, English, and Chinese. This would support Saudi clients, international clients, and China-related client development.
 
 ## 8.7 Partner-Led Origination Materials
 
@@ -1541,7 +1541,7 @@ Each working group should have:
 
 - supporting lawyers;
 
-- business development or administrative support;
+- client-development or administrative support;
 
 - target client groups;
 
@@ -1582,7 +1582,7 @@ The most important objective is to move from general visibility to targeted clie
 
 The recommendations in this report should be implemented in stages. The firm should avoid trying to complete every initiative at the same time. A phased approach will allow leadership to focus on the most important actions first, test what works, and then build a more structured long-term platform for market visibility, institutional client relationships, referral counsel work, and matter origination.
 
-The action plan below is based on the firm’s public profile and visible market position. Before implementation, the firm should validate priorities through internal review, including leadership input, client feedback, staffing capacity, business development goals, matter profitability, and partner availability.
+The action plan below is based on the firm’s public profile and visible market position. Before implementation, the firm should validate priorities through internal review, including leadership input, client feedback, staffing capacity, client development goals, matter profitability, and partner availability.
 
 The action plan should be treated as a partner-led execution program, not a general marketing exercise. Each priority should have an executive sponsor, responsible practice group, supporting lawyers or staff, defined output, and review date.
 
@@ -1730,7 +1730,7 @@ Each update should identify:
 
 - related advisory pathway;
 
-- business development purpose;
+- matter origination purpose;
 
 - suggested instruction pathway;
 
@@ -1926,7 +1926,7 @@ By the end of six months, the firm should have:
 
 The first 12 months should focus on building a repeatable system. The firm should move from individual improvements to a structured platform for market positioning, institutional client relationships, referral work, thought leadership, and partner-led origination.
 
-### Priority 1: Build an annual partner-led business development plan
+### Priority 1: Build an annual partner-led client-development plan
 
 The firm should create an annual plan linked to:
 
@@ -1998,7 +1998,7 @@ This should include:
 
 - tracking submission deadlines;
 
-- coordinating submissions with business development priorities.
+- coordinating submissions with client-development priorities.
 
 Directory recognition is not the only measure of quality, but it can help international clients and referral law firms assess the firm more quickly.
 
@@ -2076,7 +2076,7 @@ By the end of 12 months, the firm should have:
 
 | Output | Owner | Purpose |
 | --- | --- | --- |
-| Annual partner-led business development plan | Senior management | Build repeatable growth discipline |
+| Annual partner-led client-development plan | Senior management | Build repeatable growth discipline |
 | Client and referral tracking system | Managing partner / designated owner | Understand source of new work |
 | Legal directory submission process | Practice leads and responsible coordinator | Improve external credibility |
 | Multilingual materials library | China Desk and leadership sponsor | Support Saudi, international, and Chinese clients |
@@ -2089,15 +2089,15 @@ The following table shows how the firm can assign responsibility for implementat
 
 | Strategic priority | Executive sponsor | Responsible practice group | Supporting roles | 90-day output | 6-month output | KPI |
 | --- | --- | --- | --- | --- | --- | --- |
-| Signature entry points | Founding partner / senior management | All priority practice groups | Marketing / administrative support | Approved list of signature strengths | Updated practice and firm materials | Signature strengths reflected in website and proposals |
-| Representative Experience Bank | Senior lawyer or designated partner | All practice groups | Legal coordinator / BD support | Initial matter-example list | Approved internal experience bank | Number of approved examples |
+| Signature entry points | Founding partner / senior management | All priority practice groups | Client-development / administrative support | Approved list of signature strengths | Updated practice and firm materials | Signature strengths reflected in website and proposals |
+| Representative Experience Bank | Senior lawyer or designated partner | All practice groups | Legal coordinator / client-development support | Initial matter-example list | Approved internal experience bank | Number of approved examples |
 | Institutional Client Matrix | Relationship partner sponsor | Corporate, disputes, China Desk, employment, data protection | Finance / admin support where needed | Priority client groups identified | Client and referral tracking started | Number of priority accounts mapped |
-| China-Saudi Corridor | China Desk sponsor | Corporate, employment, disputes, data protection | Bilingual support / BD support | China Desk profile outline | China-facing materials prepared | China-related inquiries and referrals |
-| Disputes and arbitration positioning | Disputes sponsor | Domestic disputes and arbitration | Sector lawyers / BD support | Disputes profile outline | Updated disputes and arbitration materials | Disputes inquiries, referrals, and representative matters |
+| China-Saudi Corridor | China Desk sponsor | Corporate, employment, disputes, data protection | Bilingual support / client-development support | China Desk profile outline | China-facing materials prepared | China-related inquiries and referrals |
+| Disputes and arbitration positioning | Disputes sponsor | Domestic disputes and arbitration | Sector lawyers / client-development support | Disputes profile outline | Updated disputes and arbitration materials | Disputes inquiries, referrals, and representative matters |
 | PDPL and data protection mandate | Data protection sponsor | Data protection, technology, employment, corporate | Content support / legal coordinator | Mandate scope drafted | Client-ready PDPL materials prepared | PDPL inquiries and assessments |
 | Sector-focused advisory platforms | Sector sponsor | Relevant practice groups | Website / content support | Priority sectors selected | Sector pages and advisory pathways improved | Sector inquiries and content engagement |
-| Thought leadership distribution | Content sponsor | All practice groups | Marketing / BD coordinator | 90-day content calendar | Updates linked to advisory pathways | Updates published and linked to inquiries |
-| Referral counsel materials | International relationship sponsor | Corporate, disputes, China Desk | BD support | Referral counsel note outline | Foreign law firm profile prepared | Referral law firm inquiries |
+| Thought leadership distribution | Content sponsor | All practice groups | Client-development coordinator | 90-day content calendar | Updates linked to advisory pathways | Updates published and linked to inquiries |
+| Referral counsel materials | International relationship sponsor | Corporate, disputes, China Desk | Client-development support | Referral counsel note outline | Foreign law firm profile prepared | Referral law firm inquiries |
 | Capacity and service quality | Senior management | All practice groups | Operations / admin support | Capacity risks identified | Client feedback process started | Responsiveness, feedback, and staffing review |
 
 ## 9.5 Suggested Law-Firm KPIs
@@ -2293,7 +2293,7 @@ The review did not include:
 - staffing utilization;
 - internal workflow systems;
 - proposal win and loss data;
-- business development pipeline;
+- matter origination pipeline;
 - client concentration;
 - internal strategic priorities;
 - confidential representative matters.
@@ -2318,7 +2318,7 @@ If the firm decides to conduct a deeper internal review, the following sources w
 - client feedback;
 - internal workflow maps;
 - technology systems inventory;
-- business development pipeline;
+- matter origination pipeline;
 - legal directory submissions;
 - anonymized representative matter list;
 - referral relationship map;
