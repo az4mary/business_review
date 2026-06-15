@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Strategic Competitor-Readiness Report prepared by ZYNE for Abdulaziz Bin Ali & Partners Law Firm.">
+  <title>Strategic Competitor-Readiness Report | ZYNE</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/ZYNE-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/ZYNE-favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ZYNE-apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #030303;
+      --panel: #0a0a0a;
+      --panel-soft: #111;
+      --paper: #0d0d0c;
+      --line: rgba(219, 171, 54, 0.34);
+      --line-soft: rgba(255, 255, 255, 0.1);
+      --gold: #d9a72f;
+      --gold-bright: #f6d978;
+      --gold-deep: #8c6111;
+      --text: #f6f1e8;
+      --muted: #b9b4a8;
+      --dim: #7f786d;
+      --steel: #8b99a0;
+      --emerald: #78a88f;
+      --danger: #c98763;
+      --max: 1320px;
+      --sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif: "Cinzel", Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 76% 4%, rgba(217, 167, 47, 0.16), transparent 26rem),
+        radial-gradient(circle at 0% 34%, rgba(126, 138, 145, 0.1), transparent 30rem),
+        linear-gradient(180deg, #000 0%, #070707 48%, #030303 100%);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.72), transparent 74%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(217, 167, 47, 0.2);
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      min-width: max-content;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(217,167,47,0.18), rgba(0,0,0,0.35));
+      box-shadow: inset 0 0 18px rgba(217,167,47,0.12);
+    }
+
+    .brand-mark img {
+      width: 27px;
+      height: 27px;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(18px, 3vw, 42px);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #f5f1e6;
+      padding: 33px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a[aria-current="page"] {
+      color: var(--gold-bright);
+      border-color: var(--gold);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 44px;
+      padding: 0 22px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: transparent;
+      color: var(--gold-bright);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .button svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      border-color: var(--gold-bright);
+      background: rgba(217, 167, 47, 0.1);
+      color: #fff4c9;
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, #f4d474 0%, #d39c24 52%, #875b0e 100%);
+      color: #050505;
+      box-shadow: 0 12px 28px rgba(217, 167, 47, 0.18);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #050505;
+      color: var(--gold-bright);
+      cursor: pointer;
+    }
+
+    .menu-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .report-hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(217, 167, 47, 0.24);
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.76) 48%, rgba(0,0,0,0.38) 100%),
+        radial-gradient(circle at 78% 40%, rgba(217,167,47,0.22), transparent 22rem),
+        #050505;
+    }
+
+    .report-hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 45%;
+      opacity: 0.32;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.88), transparent),
+        repeating-linear-gradient(90deg, transparent 0 32px, rgba(217,167,47,0.11) 33px 34px, transparent 35px 78px);
+      clip-path: polygon(0 66%, 4% 58%, 4% 47%, 8% 47%, 8% 55%, 13% 55%, 13% 37%, 17% 37%, 17% 64%, 23% 64%, 23% 42%, 27% 42%, 27% 57%, 33% 57%, 33% 28%, 37% 28%, 37% 67%, 44% 67%, 44% 45%, 49% 45%, 49% 61%, 56% 61%, 56% 34%, 61% 34%, 61% 66%, 68% 66%, 68% 48%, 73% 48%, 73% 60%, 79% 60%, 79% 35%, 84% 35%, 84% 68%, 91% 68%, 91% 52%, 96% 52%, 96% 66%, 100% 66%, 100% 100%, 0 100%);
+    }
+
+    .report-hero .shell {
+      position: relative;
+      z-index: 1;
+      min-height: 560px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      align-items: center;
+      gap: clamp(34px, 6vw, 86px);
+      padding: 68px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-bright);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .hero-title {
+      max-width: 930px;
+      margin-top: 20px;
+      font-family: var(--serif);
+      font-size: clamp(2.55rem, 5.1vw, 5.4rem);
+      line-height: 0.98;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      color: var(--gold-bright);
+    }
+
+    .gold-rule {
+      width: 54px;
+      height: 2px;
+      margin: 28px 0 22px;
+      background: var(--gold);
+    }
+
+    .hero-copy {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.2vw, 1.16rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .crest-panel {
+      position: relative;
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+    }
+
+    .crest-panel::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      max-width: 100%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(217,167,47,0.18);
+      border-radius: 999px;
+      box-shadow: inset 0 0 80px rgba(217,167,47,0.08), 0 0 110px rgba(217,167,47,0.12);
+    }
+
+    .crest-panel img {
+      position: relative;
+      width: 340px;
+      filter: drop-shadow(0 25px 32px rgba(0, 0, 0, 0.74)) drop-shadow(0 0 24px rgba(217, 167, 47, 0.32));
+      mix-blend-mode: screen;
+    }
+
+    .metadata {
+      margin-top: -56px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .metadata-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: rgba(5, 5, 5, 0.92);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+    }
+
+    .meta-card {
+      padding: 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .meta-card:last-child {
+      border-right: 0;
+    }
+
+    .meta-card span {
+      display: block;
+      color: var(--dim);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--gold-bright);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .report-layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 34px;
+      padding: clamp(56px, 7vw, 88px) 0;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 116px;
+      max-height: calc(100dvh - 140px);
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012)),
+        rgba(0,0,0,0.68);
+    }
+
+    .toc-header {
+      padding: 20px;
+      border-bottom: 1px solid rgba(217,167,47,0.22);
+    }
+
+    .toc-header span {
+      color: var(--dim);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .toc-header strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--gold-bright);
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .toc nav {
+      display: grid;
+      padding: 12px;
+      gap: 2px;
+    }
+
+    .toc a {
+      display: block;
+      border-radius: 5px;
+      padding: 9px 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .toc a.depth-3 {
+      padding-left: 22px;
+      color: var(--dim);
+      font-size: 0.76rem;
+    }
+
+    .toc a:hover,
+    .toc a:focus-visible {
+      background: rgba(217,167,47,0.1);
+      color: var(--gold-bright);
+    }
+
+    .reader {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.014)),
+        rgba(8, 8, 8, 0.92);
+      box-shadow: 0 30px 90px rgba(0,0,0,0.34);
+      overflow: hidden;
+    }
+
+    .reader-toolbar {
+      position: sticky;
+      top: 93px;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 22px;
+      border-bottom: 1px solid rgba(217,167,47,0.24);
+      background: rgba(7, 7, 7, 0.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .reader-toolbar span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .reader-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon-button {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(217,167,47,0.38);
+      border-radius: 5px;
+      background: transparent;
+      color: var(--gold-bright);
+      cursor: pointer;
+    }
+
+    .icon-button svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .report-content {
+      padding: clamp(26px, 5vw, 58px);
+    }
+
+    .report-content.loading,
+    .report-content.error {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .report-content h1,
+    .report-content h2,
+    .report-content h3,
+    .report-content h4 {
+      scroll-margin-top: 132px;
+      color: var(--text);
+      line-height: 1.18;
+    }
+
+    .report-content h1 {
+      margin: 0 0 24px;
+      font-family: var(--serif);
+      color: var(--gold-bright);
+      font-size: clamp(2.1rem, 4vw, 3.8rem);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .report-content h2 {
+      margin: 52px 0 18px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(217,167,47,0.22);
+      font-family: var(--serif);
+      color: var(--gold-bright);
+      font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .report-content h3 {
+      margin: 34px 0 14px;
+      color: #f4e7c5;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .report-content h4 {
+      margin: 28px 0 12px;
+      color: var(--gold-bright);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .report-content p {
+      color: #d5cfc2;
+      font-size: 1rem;
+    }
+
+    .report-content p + p {
+      margin-top: 16px;
+    }
+
+    .report-content ul,
+    .report-content ol {
+      margin: 16px 0 22px;
+      padding-left: 24px;
+      color: #d5cfc2;
+    }
+
+    .report-content li {
+      margin: 8px 0;
+      padding-left: 4px;
+    }
+
+    .report-content strong {
+      color: #fff1c2;
+    }
+
+    .report-content em {
+      color: #e9ddc7;
+    }
+
+    .report-content a {
+      color: var(--gold-bright);
+      border-bottom: 1px solid rgba(217,167,47,0.44);
+    }
+
+    .report-content blockquote {
+      margin: 26px 0;
+      padding: 18px 22px;
+      border-left: 3px solid var(--gold);
+      background: rgba(217,167,47,0.08);
+      color: #e8dfcf;
+    }
+
+    .report-content hr {
+      margin: 42px 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(217,167,47,0.46), transparent);
+    }
+
+    .report-content table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      color: #d5cfc2;
+      font-size: 0.88rem;
+    }
+
+    .table-wrap {
+      margin: 22px 0 30px;
+      overflow-x: auto;
+      border: 1px solid rgba(217,167,47,0.24);
+      border-radius: 6px;
+      background: rgba(0,0,0,0.32);
+    }
+
+    .report-content th,
+    .report-content td {
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .report-content th {
+      color: var(--gold-bright);
+      background: rgba(217,167,47,0.08);
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .report-content tr:nth-child(even) td {
+      background: rgba(255,255,255,0.025);
+    }
+
+    .section-bridge {
+      padding: 34px 0;
+      text-align: center;
+      border-top: 1px solid rgba(217,167,47,0.2);
+      border-bottom: 1px solid rgba(217,167,47,0.2);
+      background:
+        linear-gradient(90deg, rgba(217,167,47,0.06), transparent 18%, transparent 82%, rgba(217,167,47,0.06)),
+        #050505;
+    }
+
+    .section-bridge h2 {
+      font-family: var(--serif);
+      color: var(--gold-bright);
+      font-size: clamp(1.45rem, 2vw, 2rem);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .section-bridge p {
+      max-width: 760px;
+      margin: 8px auto 0;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(217,167,47,0.16);
+      background: #000;
+      padding: 22px 0;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-family: var(--serif);
+      color: var(--gold-bright);
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-brand span,
+    .footer-center {
+      font-size: 0.78rem;
+    }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .socials a {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(217,167,47,0.54);
+      border-radius: 999px;
+      color: var(--gold-bright);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      .site-header,
+      .report-hero,
+      .metadata,
+      .toc,
+      .reader-toolbar,
+      .section-bridge,
+      .site-footer {
+        display: none;
+      }
+
+      .shell,
+      .report-layout {
+        width: 100%;
+        display: block;
+        padding: 0;
+      }
+
+      .reader {
+        border: 0;
+        box-shadow: none;
+        background: #fff;
+      }
+
+      .report-content {
+        padding: 0;
+      }
+
+      .report-content,
+      .report-content p,
+      .report-content li {
+        color: #111;
+      }
+
+      .report-content h1,
+      .report-content h2,
+      .report-content h3,
+      .report-content h4,
+      .report-content strong {
+        color: #111;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav .button {
+        display: none;
+      }
+
+      .report-hero .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .crest-panel {
+        min-height: 260px;
+        order: -1;
+      }
+
+      .crest-panel img {
+        width: min(360px, 88%);
+      }
+
+      .metadata-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .meta-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .meta-card:nth-child(n+3) {
+        border-top: 1px solid var(--line);
+      }
+
+      .report-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: auto;
+        max-height: 360px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+      }
+
+      main {
+        padding-top: 76px;
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-name {
+        font-size: 1.55rem;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
+        background: rgba(0, 0, 0, 0.96);
+        border-bottom: 1px solid rgba(217,167,47,0.2);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 15px 0;
+      }
+
+      .report-hero .shell {
+        min-height: auto;
+        padding: 44px 0 72px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.15rem, 11vw, 3.7rem);
+      }
+
+      .hero-actions,
+      .reader-toolbar,
+      .reader-actions {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .metadata {
+        margin-top: -34px;
+      }
+
+      .metadata-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-card,
+      .meta-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .meta-card + .meta-card {
+        border-top: 1px solid var(--line);
+      }
+
+      .reader-toolbar {
+        position: static;
+      }
+
+      .reader-actions {
+        grid-template-columns: repeat(3, 38px);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand,
+      .socials {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="ZYNE home">
+        <span class="brand-mark"><img src="/assets/ZYNE-favicon.svg" alt=""></span>
+        <span class="brand-name">ZYNE</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="#report" aria-current="page">Report</a>
+        <a href="#contents">Contents</a>
+        <a href="/#intelligence">Intelligence</a>
+        <a href="/#delivery">Delivery</a>
+        <a href="mailto:contact@zyne.store">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button" href="mailto:contact@zyne.store">
+          Schedule Executive Briefing
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="report">
+    <section class="report-hero">
+      <div class="shell">
+        <div>
+          <p class="eyebrow">Executive Intelligence & Strategic Execution</p>
+          <h1 class="hero-title"><span>Strategic</span> Competitor-Readiness Report</h1>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p class="hero-copy">Positioning Abdulaziz Bin Ali & Partners for the next stage of Saudi legal market growth through sharper visibility, stronger proof of experience, and disciplined execution.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#reader">
+              Read Report
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </a>
+            <button class="button" type="button" id="printHero">
+              Print / Save PDF
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 8V4h10v4M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="crest-panel" aria-hidden="true">
+          <img src="/assets/ZYNE Logo Trans.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="metadata shell" aria-label="Report metadata">
+      <div class="metadata-grid">
+        <div class="meta-card">
+          <span>Prepared For</span>
+          <strong>The Founding Partner and Senior Management</strong>
+        </div>
+        <div class="meta-card">
+          <span>Client</span>
+          <strong>Abdulaziz Bin Ali & Partners Law Firm</strong>
+        </div>
+        <div class="meta-card">
+          <span>Prepared By</span>
+          <strong>ZYNE.store</strong>
+        </div>
+        <div class="meta-card">
+          <span>Date</span>
+          <strong>June 13th 2026</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell report-layout">
+      <aside class="toc" id="contents">
+        <div class="toc-header">
+          <span>Report Navigation</span>
+          <strong>Contents</strong>
+        </div>
+        <nav id="tocNav" aria-label="Report table of contents">
+          <a href="#reader">Loading contents...</a>
+        </nav>
+      </aside>
+
+      <article class="reader" id="reader">
+        <div class="reader-toolbar">
+          <span id="readerStatus">Loading report source...</span>
+          <div class="reader-actions" aria-label="Reader actions">
+            <button class="icon-button" type="button" id="decreaseText" aria-label="Decrease text size" title="Decrease text size">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 19l5-14 5 14M7 14h6M18 8v8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </button>
+            <button class="icon-button" type="button" id="increaseText" aria-label="Increase text size" title="Increase text size">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19L9 5l5 14M6 14h6M18 8v8M14 12h8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </button>
+            <button class="icon-button" type="button" id="printReport" aria-label="Print or save PDF" title="Print or save PDF">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 8V4h10v4M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="report-content loading" id="reportContent">
+          <p>Loading the strategic report...</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="section-bridge">
+      <div class="shell">
+        <h2>From Analysis to Execution</h2>
+        <p>ZYNE turns strategic diagnostics into implementation plans, advisory pathways, market positioning assets, and operational systems that leadership teams can act on.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/ZYNE-favicon.svg" alt="">
+        <div>
+          <strong>ZYNE</strong>
+          <span>Elite Insight. Sovereign Delivery.</span>
+        </div>
+      </div>
+      <div class="footer-center">Executive Intelligence &nbsp; | &nbsp; Operational Assurance &nbsp; | &nbsp; Strategic Execution<br>&copy; 2026 ZYNE. All rights reserved.</div>
+      <div class="socials" aria-label="Social links">
+        <a href="mailto:contact@zyne.store" aria-label="LinkedIn">in</a>
+        <a href="mailto:contact@zyne.store" aria-label="X">x</a>
+        <a href="mailto:contact@zyne.store" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const markdownUrl = "/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md";
+    const reportContent = document.querySelector("#reportContent");
+    const tocNav = document.querySelector("#tocNav");
+    const readerStatus = document.querySelector("#readerStatus");
+    const toggle = document.querySelector(".menu-toggle");
+    const links = document.querySelector("#navLinks");
+    let readerScale = 1;
+
+    const escapeHtml = (value) => value
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    const inlineMarkdown = (value) => {
+      let text = escapeHtml(value);
+      text = text.replace(/`([^`]+)`/g, "<code>$1</code>");
+      text = text.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+      text = text.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+      text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+      return text;
+    };
+
+    const slugify = (value, used) => {
+      const base = value.toLowerCase()
+        .replace(/&amp;/g, "and")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-") || "section";
+      const count = used.get(base) || 0;
+      used.set(base, count + 1);
+      return count ? `${base}-${count}` : base;
+    };
+
+    const isTableSeparator = (line) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line);
+    const isTableRow = (line) => /^\s*\|.*\|\s*$/.test(line);
+
+    const splitTableRow = (line) => line.trim()
+      .replace(/^\|/, "")
+      .replace(/\|$/, "")
+      .split("|")
+      .map((cell) => cell.trim());
+
+    function renderMarkdown(source) {
+      const lines = source.replace(/\r\n/g, "\n").split("\n");
+      const html = [];
+      const toc = [];
+      const usedSlugs = new Map();
+      let i = 0;
+      let listStack = [];
+
+      const closeLists = (target = 0) => {
+        while (listStack.length > target) {
+          html.push(`</${listStack.pop()}>`);
+        }
+      };
+
+      while (i < lines.length) {
+        const raw = lines[i];
+        const line = raw.trimEnd();
+        const trimmed = line.trim();
+
+        if (!trimmed) {
+          closeLists();
+          i += 1;
+          continue;
+        }
+
+        if (/^---+$/.test(trimmed)) {
+          closeLists();
+          html.push("<hr>");
+          i += 1;
+          continue;
+        }
+
+        const heading = /^(#{1,4})\s+(.+)$/.exec(trimmed);
+        if (heading) {
+          closeLists();
+          const depth = heading[1].length;
+          const text = heading[2].replace(/\s+#*$/, "");
+          const id = slugify(escapeHtml(text), usedSlugs);
+          html.push(`<h${depth} id="${id}">${inlineMarkdown(text)}</h${depth}>`);
+          if (depth <= 3) {
+            toc.push({ depth, text: text.replace(/\*\*/g, ""), id });
+          }
+          i += 1;
+          continue;
+        }
+
+        if (isTableRow(trimmed) && i + 1 < lines.length && isTableSeparator(lines[i + 1])) {
+          closeLists();
+          const headers = splitTableRow(trimmed);
+          i += 2;
+          const rows = [];
+          while (i < lines.length && isTableRow(lines[i].trim())) {
+            rows.push(splitTableRow(lines[i]));
+            i += 1;
+          }
+          html.push('<div class="table-wrap"><table><thead><tr>');
+          headers.forEach((cell) => html.push(`<th>${inlineMarkdown(cell)}</th>`));
+          html.push("</tr></thead><tbody>");
+          rows.forEach((row) => {
+            html.push("<tr>");
+            headers.forEach((_, index) => html.push(`<td>${inlineMarkdown(row[index] || "")}</td>`));
+            html.push("</tr>");
+          });
+          html.push("</tbody></table></div>");
+          continue;
+        }
+
+        const bullet = /^(\s*)([-*])\s+(.+)$/.exec(line);
+        const ordered = /^(\s*)(\d+)\.\s+(.+)$/.exec(line);
+        if (bullet || ordered) {
+          const match = bullet || ordered;
+          const level = Math.floor(match[1].length / 3);
+          const type = bullet ? "ul" : "ol";
+          while (listStack.length > level + 1) closeLists(listStack.length - 1);
+          if (listStack.length < level + 1 || listStack[listStack.length - 1] !== type) {
+            if (listStack.length > level) closeLists(level);
+            html.push(`<${type}>`);
+            listStack.push(type);
+          }
+          html.push(`<li>${inlineMarkdown(match[3])}</li>`);
+          i += 1;
+          continue;
+        }
+
+        if (trimmed.startsWith(">")) {
+          closeLists();
+          const quoteLines = [];
+          while (i < lines.length && lines[i].trim().startsWith(">")) {
+            quoteLines.push(lines[i].trim().replace(/^>\s?/, ""));
+            i += 1;
+          }
+          html.push(`<blockquote>${quoteLines.map(inlineMarkdown).join("<br>")}</blockquote>`);
+          continue;
+        }
+
+        closeLists();
+        const paragraph = [trimmed];
+        i += 1;
+        while (
+          i < lines.length &&
+          lines[i].trim() &&
+          !/^(#{1,4})\s+/.test(lines[i].trim()) &&
+          !/^---+$/.test(lines[i].trim()) &&
+          !/^(\s*)([-*])\s+/.test(lines[i]) &&
+          !/^(\s*)(\d+)\.\s+/.test(lines[i]) &&
+          !isTableRow(lines[i].trim()) &&
+          !lines[i].trim().startsWith(">")
+        ) {
+          paragraph.push(lines[i].trim());
+          i += 1;
+        }
+        html.push(`<p>${inlineMarkdown(paragraph.join(" "))}</p>`);
+      }
+
+      closeLists();
+      return { html: html.join("\n"), toc };
+    }
+
+    const loadReport = async () => {
+      try {
+        const response = await fetch(markdownUrl, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Report source returned ${response.status}`);
+        const markdown = await response.text();
+        const rendered = renderMarkdown(markdown);
+        reportContent.classList.remove("loading", "error");
+        reportContent.innerHTML = rendered.html;
+        tocNav.innerHTML = rendered.toc
+          .filter((item) => item.depth >= 1 && item.depth <= 3)
+          .map((item) => `<a class="depth-${item.depth}" href="#${item.id}">${escapeHtml(item.text)}</a>`)
+          .join("");
+        readerStatus.textContent = `${rendered.toc.length} sections loaded from the source report`;
+      } catch (error) {
+        reportContent.classList.remove("loading");
+        reportContent.classList.add("error");
+        reportContent.innerHTML = `<p>The report could not be loaded. Confirm the Markdown source is available at <code>${markdownUrl}</code>.</p>`;
+        tocNav.innerHTML = '<a href="#reader">Report unavailable</a>';
+        readerStatus.textContent = "Report source unavailable";
+      }
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    });
+
+    links.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+
+    document.querySelector("#increaseText").addEventListener("click", () => {
+      readerScale = Math.min(1.18, readerScale + 0.06);
+      reportContent.style.fontSize = `${readerScale}rem`;
+    });
+
+    document.querySelector("#decreaseText").addEventListener("click", () => {
+      readerScale = Math.max(0.88, readerScale - 0.06);
+      reportContent.style.fontSize = `${readerScale}rem`;
+    });
+
+    document.querySelector("#printReport").addEventListener("click", () => window.print());
+    document.querySelector("#printHero").addEventListener("click", () => window.print());
+
+    loadReport();
+  </script>
+</body>
+</html>
