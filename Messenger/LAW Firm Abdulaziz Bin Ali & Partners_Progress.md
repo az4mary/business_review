@@ -39,3 +39,22 @@ Validation:
 - Suggested law-firm KPIs and immediate leadership decisions added.
 - Section 10 preserved after Section 9.
 - Commit pushed to origin main: `149ae4d`.
+## STEP 4 - Patch Segment 4 - Closing Note and Global Tone / Risky-Language Cleanup
+
+Local checkpoint time:
+- `2026-06-14T19:51:14.1968634-05:00`
+
+Patch Segment 4 applied and pushed.
+
+Validation:
+- Closing Note replaced with the Segment 4 partner-ready conclusion.
+- Global tone cleanup applied for software-sales, retail, overclaiming, and generic consulting vocabulary.
+- Report begins with the formal title page.
+- Revised Executive Summary remains present.
+- Strategic Pillars for Implementation remains before Section 8.
+- Visibility risk remains the central diagnosis.
+- Signature entry points plus integrated full-service Saudi legal platform remains the core strategic model.
+- China Desk is framed as the China-Saudi Corridor strategy.
+- Al-Khobar is framed as a sector platform, not a limitation.
+- Section 9 remains a partner-led action plan with ownership, KPIs, and implementation discipline.
+- Commit pushed to origin main: `ee9024c`.
