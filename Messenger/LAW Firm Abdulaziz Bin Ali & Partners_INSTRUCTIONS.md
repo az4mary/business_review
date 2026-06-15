@@ -64,3 +64,12 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 2. Validate that `â€™` no longer appears in the English report.
 3. Preserve all substantive content, heading structure, tables, and the completed bullet-spacing cleanup.
 4. Resend the completed English report to the messenger for final confirmation before requesting Arabic translation.
+
+STEP 8 - Arabic Translation Retry as Downloadable Markdown File
+
+Send the messenger a short instruction to create the complete Arabic translation as a downloadable Markdown file:
+
+1. Request a complete Arabic translation as a downloadable `.md` file, not as a pasted chat response.
+2. Preserve all headings, tables, bullets, numbering, and structure.
+3. Do not request or provide Chinese translation in this step.
+4. Do not request additional English changes.
