@@ -66,7 +66,7 @@ A more accurate and tactical report would require human-led review of internal i
 - pricing and billing data;
 - technology systems;
 - internal workflow;
-- marketing performance;
+- market visibility performance;
 - referral relationships;
 - sector growth priorities.
 
@@ -1299,7 +1299,7 @@ The firm should also consider creating a list of China-related advisory pathways
 
 Each pathway should identify the responsible lawyer, supporting practice groups, expected deliverables, and escalation points into broader firm support.
 
-This would help the China Desk become more than a profile page. It would become a clear channel for client acquisition, referral work, and cross-border legal support.
+This would help the China Desk become more than a profile page. It would become a clear channel for matter origination, referral work, and cross-border legal support.
 
 ## 8.4 Arbitration and Disputes Positioning
 
@@ -1517,7 +1517,7 @@ This would help the firm strengthen referral relationships and international vis
 
 ## 8.8 Internal Execution Requirements
 
-The initiatives above require internal ownership. They should not be treated as marketing ideas only. Each initiative should have a responsible partner, a supporting practice group, and a clear implementation timetable.
+The initiatives above require internal ownership. They should not be treated as external communications ideas only. Each initiative should have a responsible partner, a supporting practice group, and a clear implementation timetable.
 
 The firm should consider creating cross-practice working groups for the highest-priority initiatives, such as:
 
@@ -1584,7 +1584,7 @@ The recommendations in this report should be implemented in stages. The firm sho
 
 The action plan below is based on the firm’s public profile and visible market position. Before implementation, the firm should validate priorities through internal review, including leadership input, client feedback, staffing capacity, client development goals, matter profitability, and partner availability.
 
-The action plan should be treated as a partner-led execution program, not a general marketing exercise. Each priority should have an executive sponsor, responsible practice group, supporting lawyers or staff, defined output, and review date.
+The action plan should be treated as a partner-led execution program, not a general visibility exercise. Each priority should have an executive sponsor, responsible practice group, supporting lawyers or staff, defined output, and review date.
 
 ## 9.1 First 90 Days: Clarify Positioning and Strengthen Core Materials
 
@@ -1743,7 +1743,7 @@ By the end of the first 90 days, the firm should have:
 | Output | Owner | Purpose |
 | --- | --- | --- |
 | Approved signature entry points | Founding partner / senior management | Establish market focus |
-| Updated firm positioning statement | Leadership and responsible marketing support | Create consistent external message |
+| Updated firm positioning statement | Leadership and responsible communications support | Create consistent external message |
 | Priority lawyer profiles updated | Practice leads and individual lawyers | Improve client confidence |
 | Representative Experience Bank started | Designated partner or senior lawyer | Build proof of experience |
 | Core origination materials prepared | Partner sponsor and support team | Support client meetings and referrals |
@@ -2066,7 +2066,7 @@ The review should consider:
 
 - whether administrative systems support responsiveness and client service;
 
-- whether non-lawyer support is needed for marketing, legal operations, client tracking, or project coordination.
+- whether non-lawyer support is needed for communications, legal operations, client tracking, or project coordination.
 
 This is important because stronger visibility can create new demand. If the firm increases market visibility without matching delivery capacity, responsiveness and service quality may suffer. Growth should therefore be matched with staffing discipline, workflow discipline, and leadership oversight.
 
@@ -2322,7 +2322,7 @@ If the firm decides to conduct a deeper internal review, the following sources w
 - legal directory submissions;
 - anonymized representative matter list;
 - referral relationship map;
-- marketing and website analytics.
+- website and market visibility analytics.
 
 These internal sources would allow the firm to move from an external diagnostic to a more detailed implementation plan.
 
