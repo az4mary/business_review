@@ -105,3 +105,19 @@ Validation:
 - Heading structure and Section 10 / Closing Note order checked after cleanup.
 - Completed English report is ready to resend to the messenger for final double-check.
 - Commit pushed to origin main: `dba16e7`.
+
+## STEP 8 - Encoding Artifact Cleanup Before Translation
+
+Local checkpoint time:
+- `2026-06-14T21:29:04.5629717-05:00`
+
+Encoding artifact cleanup applied and pushed.
+
+Validation:
+- Replaced global mojibake apostrophe artifact `â€™` with straight apostrophe `'`.
+- Artifact count before cleanup: `106`.
+- Artifact count after cleanup: `0`.
+- Blank spacer lines between consecutive bullet items remain: `0`.
+- Heading structure and Section 10 / Closing Note order checked after cleanup.
+- Completed English report is ready to resend to the messenger for final confirmation before Arabic translation.
+- Commit pushed to origin main: `bee5138`.
