@@ -739,3 +739,412 @@ AI Deployments & Automation; Operational Audit; Enterprise Growth Systems.
 
 **Refund / scope notes:**
 Non-refundable once analysis begins. Does not include custom software, model training, legal compliance certification, or live automation deployment unless separately purchased.
+
+## Phase 5 — Product connection plan for Report 1
+
+I reviewed the final product URLs you attached. The catalog now has all 12 product URLs needed for Report 1 connection. 
+
+The current Report 1 page already has the right structure for this: hero CTAs, utility/download section, full report body, sidebar ToC, and a pathway-card section near the bottom. The next change should be **strategic CTA wiring**, not another layout rebuild.
+
+---
+
+# 1. Products to connect to Report 1
+
+Use all 12 products, but not all with equal visual weight.
+
+| Priority | Product                  | URL                                                    | Role                                                            |
+| -------: | ------------------------ | ------------------------------------------------------ | --------------------------------------------------------------- |
+|        1 | **Executive Briefing**   | `https://stan.store/ZYNE_store/p/executive-briefing`   | Primary next step after reading the report                      |
+|        2 | **Competitor Readiness** | `https://stan.store/ZYNE_store/p/competitor-readiness` | “Order this type of report” product                             |
+|        3 | **Growth Roadmap**       | `https://stan.store/ZYNE_store/p/growth-roadmap`       | Converts recommendations into execution                         |
+|        4 | **Visibility Audit**     | `https://stan.store/ZYNE_store/p/visibility-audit`     | Directly tied to the report’s central visibility-risk diagnosis |
+|        5 | **Market Positioning**   | `https://stan.store/ZYNE_store/p/market-positioning`   | Tied to signature entry points and positioning clarity          |
+|        6 | **Experience Bank**      | `https://stan.store/ZYNE_store/p/experience-bank`      | Tied to proof-of-experience gaps                                |
+|        7 | **Web Architecture**     | `https://stan.store/ZYNE_store/p/web-architecture`     | Tied to practice pages, sector pages, website pathways          |
+|        8 | **Origination System**   | `https://stan.store/ZYNE_store/p/origination-system`   | Tied to legal updates and thought leadership                    |
+|        9 | **Referral Kit**         | `https://stan.store/ZYNE_store/p/referral-kit`         | Tied to foreign law firm / referral counsel strategy            |
+|       10 | **Sector Authority**     | `https://stan.store/ZYNE_store/p/sector-authority`     | Tied to sector-focused advisory platforms                       |
+|       11 | **Operational Audit**    | `https://stan.store/ZYNE_store/p/operational-audit`    | Tied to validating public findings internally                   |
+|       12 | **AI Integration**       | `https://stan.store/ZYNE_store/p/ai-integration`       | Tied to technology-enabled legal delivery pressure              |
+
+---
+
+# 2. CTA placement strategy
+
+Do **not** overload the top of the page with all 12 products. The best structure is:
+
+1. **Hero CTAs** — only high-level actions.
+2. **Executive Summary CTA** — leadership action.
+3. **Contextual section CTAs** — placed after the relevant report sections.
+4. **Bottom pathway cards** — all major implementation routes.
+5. **Closing CTA** — final conversion point.
+
+---
+
+# 3. Exact CTA placements
+
+## A. Hero section
+
+Current hero has:
+
+* View Full Report;
+* Executive Summary;
+* Print / Save PDF;
+* Download Markdown.
+
+Keep these. Add **one commercial CTA** only.
+
+### Recommended hero CTA
+
+| Placement                                  | Product            | CTA text                    | URL                                                  |
+| ------------------------------------------ | ------------------ | --------------------------- | ---------------------------------------------------- |
+| Hero action row, after “Executive Summary” | Executive Briefing | **Book Executive Briefing** | `https://stan.store/ZYNE_store/p/executive-briefing` |
+
+### Why
+
+The reader is on a client-specific strategic report. The most natural next action is not “buy everything.” It is:
+
+> “Brief leadership on the findings.”
+
+This also works on mobile if added to the hero button stack.
+
+---
+
+## B. Report status / utility section
+
+The utility section should remain mostly informational. Do **not** add too many sales links here.
+
+### Recommended utility CTA
+
+| Placement                  | Product              | CTA text                                | URL                                                    |
+| -------------------------- | -------------------- | --------------------------------------- | ------------------------------------------------------ |
+| Under “Report Status” card | Competitor Readiness | **Order a Competitor Readiness Report** | `https://stan.store/ZYNE_store/p/competitor-readiness` |
+
+### Why
+
+This section explains what the page is. That is the right place to let other visitors order the same type of report.
+
+---
+
+## C. After Section 3 — Executive Summary
+
+Insert a small CTA block immediately after the Executive Summary and before the in-report Table of Contents.
+
+| Placement                    | Product            | CTA text                                 | URL                                                  |
+| ---------------------------- | ------------------ | ---------------------------------------- | ---------------------------------------------------- |
+| After `#3-executive-summary` | Executive Briefing | **Turn This Into a Leadership Briefing** | `https://stan.store/ZYNE_store/p/executive-briefing` |
+| Same block, secondary CTA    | Growth Roadmap     | **Build the Execution Roadmap**          | `https://stan.store/ZYNE_store/p/growth-roadmap`     |
+
+### Why
+
+The Executive Summary is where leadership understands the strategic issue. The correct next step is either a briefing or an execution roadmap.
+
+---
+
+## D. After Section 4.7 — Legal Updates and Thought Leadership
+
+| Placement                                        | Product            | CTA text                                          | URL                                                  |
+| ------------------------------------------------ | ------------------ | ------------------------------------------------- | ---------------------------------------------------- |
+| After `#47-legal-updates-and-thought-leadership` | Origination System | **Build a Thought Leadership Origination System** | `https://stan.store/ZYNE_store/p/origination-system` |
+
+### Why
+
+Section 4.7 explains that legal updates should become business-development assets. This is a direct match.
+
+---
+
+## E. After Section 5.7 — Summary of Current Strengths
+
+| Placement                                | Product            | CTA text                           | URL                                                  |
+| ---------------------------------------- | ------------------ | ---------------------------------- | ---------------------------------------------------- |
+| After `#57-summary-of-current-strengths` | Market Positioning | **Clarify Your Market Position**   | `https://stan.store/ZYNE_store/p/market-positioning` |
+| Same block, secondary CTA                | Experience Bank    | **Build Your Proof of Experience** | `https://stan.store/ZYNE_store/p/experience-bank`    |
+
+### Why
+
+Section 5 identifies what the firm already does well. The commercial opportunity is turning those strengths into clearer positioning and proof.
+
+---
+
+## F. After Section 6.7 — Risk Summary
+
+| Placement                 | Product           | CTA text                          | URL                                                 |
+| ------------------------- | ----------------- | --------------------------------- | --------------------------------------------------- |
+| After `#67-risk-summary`  | Operational Audit | **Validate Readiness Internally** | `https://stan.store/ZYNE_store/p/operational-audit` |
+| Same block, secondary CTA | AI Integration    | **Assess AI Delivery Risk**       | `https://stan.store/ZYNE_store/p/ai-integration`    |
+
+### Why
+
+Section 6 discusses competitive risks. The right CTA is not only external marketing. It is internal readiness and AI/legal-delivery preparedness.
+
+---
+
+## G. After Section 7.8 — Summary of Improvement Areas
+
+| Placement                                | Product          | CTA text                      | URL                                                |
+| ---------------------------------------- | ---------------- | ----------------------------- | -------------------------------------------------- |
+| After `#78-summary-of-improvement-areas` | Visibility Audit | **Audit Public Visibility**   | `https://stan.store/ZYNE_store/p/visibility-audit` |
+| Same block, secondary CTA                | Web Architecture | **Plan the Website Pathways** | `https://stan.store/ZYNE_store/p/web-architecture` |
+
+### Why
+
+Section 7 is where the report identifies practical improvement areas. Visibility and web architecture are the most directly connected products.
+
+---
+
+## H. After Strategic Pillars for Implementation
+
+| Placement                                     | Product        | CTA text                           | URL                                              |
+| --------------------------------------------- | -------------- | ---------------------------------- | ------------------------------------------------ |
+| After `#strategic-pillars-for-implementation` | Growth Roadmap | **Convert Pillars Into a Roadmap** | `https://stan.store/ZYNE_store/p/growth-roadmap` |
+
+### Why
+
+This is a natural bridge between strategy and execution. One CTA is enough.
+
+---
+
+## I. After Section 8.2 — Sector-Focused Advisory Platforms
+
+| Placement                                     | Product          | CTA text                         | URL                                                |
+| --------------------------------------------- | ---------------- | -------------------------------- | -------------------------------------------------- |
+| After `#82-sector-focused-advisory-platforms` | Sector Authority | **Build Sector Authority Pages** | `https://stan.store/ZYNE_store/p/sector-authority` |
+
+### Why
+
+This is the exact section that explains the need for sector-focused platforms.
+
+---
+
+## J. After Section 8.3 — China-Saudi Corridor Strategy
+
+| Placement                                 | Product            | CTA text                           | URL                                                  |
+| ----------------------------------------- | ------------------ | ---------------------------------- | ---------------------------------------------------- |
+| After `#83-china-saudi-corridor-strategy` | Market Positioning | **Position the Corridor Strategy** | `https://stan.store/ZYNE_store/p/market-positioning` |
+| Same block, secondary CTA                 | Referral Kit       | **Prepare Referral Materials**     | `https://stan.store/ZYNE_store/p/referral-kit`       |
+
+### Why
+
+The China-Saudi strategy needs both positioning and referral-readiness materials.
+
+---
+
+## K. After Section 8.7 — Partner-Led Origination Materials
+
+| Placement                                     | Product         | CTA text                              | URL                                               |
+| --------------------------------------------- | --------------- | ------------------------------------- | ------------------------------------------------- |
+| After `#87-partner-led-origination-materials` | Referral Kit    | **Build a Referral Kit**              | `https://stan.store/ZYNE_store/p/referral-kit`    |
+| Same block, secondary CTA                     | Experience Bank | **Package Representative Experience** | `https://stan.store/ZYNE_store/p/experience-bank` |
+
+### Why
+
+This section directly discusses firm overview profiles, practice summaries, China Desk profile, lawyer bio pack, experience bank, proposal template, and referral guide.
+
+---
+
+## L. After Section 9.7 — Immediate Leadership Decisions
+
+| Placement                                  | Product            | CTA text                     | URL                                                  |
+| ------------------------------------------ | ------------------ | ---------------------------- | ---------------------------------------------------- |
+| After `#97-immediate-leadership-decisions` | Growth Roadmap     | **Start the Growth Roadmap** | `https://stan.store/ZYNE_store/p/growth-roadmap`     |
+| Same block, secondary CTA                  | Executive Briefing | **Book Executive Briefing**  | `https://stan.store/ZYNE_store/p/executive-briefing` |
+
+### Why
+
+This is the strongest final decision point inside the report body.
+
+---
+
+## M. Existing bottom pathway cards
+
+The bottom “From Analysis to Execution” pathway cards should become clickable. This is where the page can show the most product links without cluttering the report body.
+
+Use these six cards:
+
+| Card label           | Product            | CTA inside card                |
+| -------------------- | ------------------ | ------------------------------ |
+| Visibility risk      | Visibility Audit   | **Explore Visibility Audit →** |
+| Proof gap            | Experience Bank    | **Build Experience Bank →**    |
+| Website clarity      | Web Architecture   | **Plan Web Architecture →**    |
+| Thought leadership   | Origination System | **Build Origination System →** |
+| Execution discipline | Growth Roadmap     | **Start Growth Roadmap →**     |
+| AI delivery pressure | AI Integration     | **Assess AI Integration →**    |
+
+### Replace current “Enterprise Growth Systems” card
+
+Since the final URL list does not include Enterprise Growth Systems, use **Growth Roadmap** instead.
+
+---
+
+# 4. Recommended HTML structure for product cards
+
+Use clickable cards:
+
+```html
+<a class="pathway-card" href="https://stan.store/ZYNE_store/p/visibility-audit" target="_blank" rel="noopener">
+  <span>Visibility risk</span>
+  <strong>Visibility Audit</strong>
+  <p>Audit how clearly the firm appears to clients, competitors, referral partners, and decision-makers.</p>
+  <em>Explore Visibility Audit →</em>
+</a>
+```
+
+Add CSS:
+
+```css
+.pathway-card em {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--gold-bright);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pathway-card:hover,
+.pathway-card:focus-visible {
+  border-color: rgba(246,217,120,0.72);
+  background: rgba(217,167,47,0.08);
+  transform: translateY(-2px);
+}
+```
+
+Because `.pathway-card` will become an `<a>`, keep it visually consistent with the current card design.
+
+---
+
+# 5. Recommended inline CTA block
+
+For section-level CTAs, use a reusable block like this:
+
+```html
+<div class="report-cta">
+  <span>Recommended ZYNE pathway</span>
+  <strong>Turn this finding into action.</strong>
+  <p>Use the relevant ZYNE product to convert this report finding into a practical deliverable.</p>
+  <div class="report-cta-actions">
+    <a class="button primary" href="https://stan.store/ZYNE_store/p/growth-roadmap" target="_blank" rel="noopener">Start Growth Roadmap</a>
+    <a class="button" href="https://stan.store/ZYNE_store/p/executive-briefing" target="_blank" rel="noopener">Book Executive Briefing</a>
+  </div>
+</div>
+```
+
+Add CSS:
+
+```css
+.report-cta {
+  margin: 34px 0;
+  padding: 22px;
+  border: 1px solid rgba(217,167,47,0.32);
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(217,167,47,0.08), rgba(255,255,255,0.018));
+}
+
+.report-cta span {
+  display: block;
+  color: var(--dim);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.report-cta strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold-bright);
+  font-size: 1.05rem;
+}
+
+.report-cta p {
+  margin-top: 8px;
+}
+
+.report-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .report-cta-actions {
+    display: grid;
+  }
+}
+```
+
+---
+
+# 6. CTA density rule
+
+Use no more than:
+
+* **1 commercial CTA in the hero**;
+* **1 product CTA in utility area**;
+* **7–9 contextual CTA blocks inside the report**;
+* **6 clickable bottom pathway cards**;
+* **1 final CTA after Closing Note**.
+
+This keeps the page commercial without making it feel like a sales page.
+
+---
+
+# 7. Final requested code changes
+
+Also make these changes:
+
+1. Add **Book Executive Briefing** to the hero action row using:
+   `https://stan.store/ZYNE_store/p/executive-briefing`
+
+2. Add **Order a Competitor Readiness Report** in the Report Status utility card using:
+   `https://stan.store/ZYNE_store/p/competitor-readiness`
+
+3. Convert bottom `.pathway-card` elements from static `<div>` cards into clickable `<a>` cards.
+
+4. Replace the current Enterprise Growth Systems card with **Growth Roadmap**.
+
+5. Add reusable `.report-cta` blocks after these anchors:
+
+   * `#3-executive-summary`
+   * `#47-legal-updates-and-thought-leadership`
+   * `#57-summary-of-current-strengths`
+   * `#67-risk-summary`
+   * `#78-summary-of-improvement-areas`
+   * `#strategic-pillars-for-implementation`
+   * `#82-sector-focused-advisory-platforms`
+   * `#83-china-saudi-corridor-strategy`
+   * `#87-partner-led-origination-materials`
+   * `#97-immediate-leadership-decisions`
+
+6. Use `target="_blank"` and `rel="noopener"` for all Stan Store product links.
+
+7. Add `data-product` attributes to every product CTA for future analytics, for example:
+
+```html
+<a class="button primary"
+   href="https://stan.store/ZYNE_store/p/executive-briefing"
+   target="_blank"
+   rel="noopener"
+   data-product="executive-briefing">
+   Book Executive Briefing
+</a>
+```
+
+8. Keep the footer email-only contact link as-is.
+
+---
+
+# Final
+
+The strategic product connections are now clear. Thi implementation should wire the 12 Stan Store product URLs into:
+
+1. the hero;
+2. the report status area;
+3. section-specific CTA blocks;
+4. clickable pathway cards;
+5. the final report-close CTA.
+
+The highest-priority CTA is **Executive Briefing**. The highest-priority implementation product is **Growth Roadmap**.
