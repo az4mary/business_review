@@ -5,6 +5,7 @@
 * Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, and ask the assistant to provide Image 2 Prompt - assistant already have the requirements.
 * Connect to https://labs.google/fx/tools/flow/project/1eede739-b968-4870-bbb0-ff1e785f6c4a, ensure the Image, 16:9 aspect ratio, 1x image generated, Nano Banana 2 are selected before you paste the Image 2 Prompt into the composer and you click submit button.
 * Go to the stan.store link and upload the downloaded 2K Image 2 into the Checkout section - you already know the workflow.
+* Complete the Product listing and publish.
 * Continue this same workflow from product 1 - 12 below.
 
 Add Below 12 products, filling required fields with the exact content provided without any summary or additions.
