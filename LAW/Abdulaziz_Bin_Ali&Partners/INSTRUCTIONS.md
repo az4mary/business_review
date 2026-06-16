@@ -740,7 +740,7 @@ AI Deployments & Automation; Operational Audit; Enterprise Growth Systems.
 **Refund / scope notes:**
 Non-refundable once analysis begins. Does not include custom software, model training, legal compliance certification, or live automation deployment unless separately purchased.
 
-## Phase 5 — Product connection plan for Report 1
+# Phase 5 — Product connection plan for Report 1
 
 I reviewed the final product URLs you attached. The catalog now has all 12 product URLs needed for Report 1 connection. 
 
