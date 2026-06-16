@@ -270,7 +270,7 @@ The page has the right strategic direction. It feels aligned with ZYNE’s premi
 
 The main issue is implementation-readiness: the page appears to depend heavily on dynamically loading the report and contents. For a formal report page, the full report and table of contents should be durable, accessible, indexable, and readable even if JavaScript fails.
 
-Once you send the code, I would check:
+I want you to also check the code:
 
 * how the Markdown is fetched;
 * whether the ToC is generated client-side only;
