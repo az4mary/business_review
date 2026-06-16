@@ -4,12 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Strategic Competitor-Readiness Report prepared by ZYNE for Abdulaziz Bin Ali & Partners Law Firm.">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="noindex,follow">
   <meta property="og:title" content="Strategic Competitor-Readiness Report | ZYNE">
   <meta property="og:description" content="Positioning Abdulaziz Bin Ali & Partners for the next stage of Saudi legal market growth.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1">
+  <meta property="og:image" content="https://zyne.store/assets/ZYNE%20Logo%20Trans.png">
+  <meta property="og:image:alt" content="ZYNE Strategic Competitor-Readiness Report">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strategic Competitor-Readiness Report | ZYNE">
+  <meta name="twitter:description" content="Positioning Abdulaziz Bin Ali & Partners for the next stage of Saudi legal market growth.">
+  <meta name="twitter:image" content="https://zyne.store/assets/ZYNE%20Logo%20Trans.png">
   <link rel="canonical" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1">
+  <link rel="alternate" hreflang="en" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1/">
+  <link rel="alternate" hreflang="ar" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1_AR.md">
+  <link rel="alternate" hreflang="zh" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1_ZH.md">
   <title>Strategic Competitor-Readiness Report | ZYNE</title>
   <link rel="icon" type="image/svg+xml" href="/assets/ZYNE-favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/ZYNE-favicon.png">
@@ -25,6 +34,8 @@
     body { margin: 0; background: radial-gradient(circle at 76% 4%, rgba(217, 167, 47, 0.16), transparent 26rem), radial-gradient(circle at 0% 34%, rgba(126, 138, 145, 0.1), transparent 30rem), linear-gradient(180deg, #000 0%, #070707 48%, #030303 100%); color: var(--text); font-family: var(--sans); line-height: 1.6; letter-spacing: 0; overflow-x: hidden; }
     body::before { content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(to bottom, rgba(0,0,0,0.72), transparent 74%); }
     a { color: inherit; text-decoration: none; }
+    .skip-link { position: absolute; left: -999px; top: 12px; z-index: 999; }
+    .skip-link:focus { left: 12px; background: #000; color: var(--gold-bright); padding: 10px 14px; border: 1px solid var(--gold); border-radius: 5px; }
     img { display: block; max-width: 100%; }
     .shell { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
     .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(217, 167, 47, 0.2); background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(18px); }
@@ -92,23 +103,26 @@
     .reader-actions { display: flex; gap: 10px; }
     .icon-button { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(217,167,47,0.38); border-radius: 5px; background: transparent; color: var(--gold-bright); cursor: pointer; }
     .icon-button svg { width: 18px; height: 18px; }
-    .report-content { padding: clamp(26px, 5vw, 58px); }
+    .report-content { --reader-scale: 1; padding: clamp(26px, 5vw, 58px); }
     .report-content h2, .report-content h3, .report-content h4, .report-content h5, .report-content h6 { scroll-margin-top: 132px; color: var(--text); line-height: 1.18; }
     .report-content h2 { margin: 0 0 24px; font-family: var(--serif); color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3.8rem); font-weight: 600; text-transform: uppercase; }
     .report-content h3 { margin: 52px 0 18px; padding-top: 24px; border-top: 1px solid rgba(217,167,47,0.22); font-family: var(--serif); color: var(--gold-bright); font-size: clamp(1.45rem, 2.5vw, 2.25rem); font-weight: 600; text-transform: uppercase; }
     .report-content h4 { margin: 34px 0 14px; color: #f4e7c5; font-size: 1.25rem; font-weight: 800; }
     .report-content h5, .report-content h6 { margin: 28px 0 12px; color: var(--gold-bright); font-size: 1rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
-    .report-content p { color: #d5cfc2; font-size: 1rem; }
+    .report-content p { color: #d5cfc2; font-size: calc(1rem * var(--reader-scale)); }
     .report-content p + p { margin-top: 16px; }
     .report-content ul, .report-content ol { margin: 16px 0 22px; padding-left: 24px; color: #d5cfc2; }
-    .report-content li { margin: 8px 0; padding-left: 4px; }
+    .report-content li { margin: 8px 0; padding-left: 4px; font-size: calc(1rem * var(--reader-scale)); }
     .report-content strong { color: #fff1c2; }
     .report-content em { color: #e9ddc7; }
     .report-content code { color: var(--gold-bright); background: rgba(217,167,47,0.08); padding: 0.1em 0.35em; border-radius: 4px; }
     .report-content a { color: var(--gold-bright); border-bottom: 1px solid rgba(217,167,47,0.44); }
     .report-content blockquote { margin: 26px 0; padding: 18px 22px; border-left: 3px solid var(--gold); background: rgba(217,167,47,0.08); color: #e8dfcf; }
     .report-content hr { margin: 42px 0; border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(217,167,47,0.46), transparent); }
-    .report-content table { width: 100%; min-width: 720px; border-collapse: collapse; color: #d5cfc2; font-size: 0.88rem; }
+    .report-content table { width: 100%; min-width: 720px; border-collapse: collapse; color: #d5cfc2; font-size: calc(0.88rem * var(--reader-scale)); }
+    .report-toc-list { margin-top: 18px; }
+    .report-toc-list ol { margin: 8px 0 10px 18px; }
+    .report-toc-list > li { margin: 12px 0; }
     .table-wrap { margin: 22px 0 30px; overflow-x: auto; border: 1px solid rgba(217,167,47,0.24); border-radius: 6px; background: rgba(0,0,0,0.32); }
     .report-content th, .report-content td { padding: 12px 14px; border: 1px solid rgba(255,255,255,0.08); text-align: left; vertical-align: top; }
     .report-content th { color: var(--gold-bright); background: rgba(217,167,47,0.08); font-size: 0.75rem; letter-spacing: 0.07em; text-transform: uppercase; }
@@ -130,12 +144,13 @@
     .footer-center { text-align: center; }
     .socials { display: flex; justify-content: flex-end; gap: 12px; }
     .socials a { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(217,167,47,0.54); border-radius: 999px; color: var(--gold-bright); font-size: 0.8rem; font-weight: 800; }
-    @media print { body { background: #fff; color: #111; } .site-header, .report-hero, .metadata, .utility-band, .toc, .reader-toolbar, .pathway, .site-footer { display: none; } .shell, .report-layout { width: 100%; display: block; padding: 0; } .reader { border: 0; box-shadow: none; background: #fff; } .report-content { padding: 0; } .report-content, .report-content p, .report-content li { color: #111; } .report-content h2, .report-content h3, .report-content h4, .report-content h5, .report-content h6, .report-content strong { color: #111; } .table-wrap { border-color: #ccc; } }
+    @media print { @page { margin: 18mm; } body { background: #fff; color: #111; } .site-header, .report-hero, .metadata, .utility-band, .toc, .reader-toolbar, .pathway, .site-footer, .skip-link { display: none; } .shell, .report-layout { width: 100%; display: block; padding: 0; } .reader { border: 0; box-shadow: none; background: #fff; } .report-content { padding: 0; } .report-content, .report-content p, .report-content li { color: #111; } .report-content h2, .report-content h3, .report-content h4, .report-content h5, .report-content h6, .report-content strong { color: #111; } .report-content table { min-width: 0; width: 100%; font-size: 0.78rem; page-break-inside: avoid; } .table-wrap { overflow: visible; break-inside: avoid; border-color: #ccc; } }
     @media (max-width: 1100px) { .nav .button { display: none; } .report-hero .shell { grid-template-columns: 1fr; } .crest-panel { min-height: 260px; order: -1; } .crest-panel img { width: min(360px, 88%); } .metadata-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .meta-card:nth-child(2) { border-right: 0; } .meta-card:nth-child(n+3) { border-top: 1px solid var(--line); } .utility-grid, .report-layout { grid-template-columns: 1fr; } .toc { position: relative; top: auto; max-height: 360px; } .quick-toc, .pathway-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 760px) { .shell { width: min(100% - 28px, var(--max)); } .site-header { position: fixed; inset: 0 0 auto; } main { padding-top: 76px; } .nav { min-height: 76px; } .brand-mark { width: 38px; height: 38px; } .brand-name { font-size: 1.55rem; } .menu-toggle { display: grid; place-items: center; } .nav-links { position: fixed; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 20px 20px; background: rgba(0, 0, 0, 0.96); border-bottom: 1px solid rgba(217,167,47,0.2); } .nav-links.open { display: flex; } .nav-links a { padding: 15px 0; } .report-hero .shell { min-height: auto; padding: 44px 0 72px; } .hero-title { font-size: clamp(2.15rem, 11vw, 3.7rem); } .hero-client-row { align-items: flex-start; } .hero-client-rule { margin-top: 42px; } .hero-actions, .reader-toolbar, .reader-actions { display: grid; } .button { width: 100%; } .metadata { margin-top: -34px; } .metadata-grid, .quick-toc, .pathway-grid { grid-template-columns: 1fr; } .meta-card, .meta-card:nth-child(2) { border-right: 0; } .meta-card + .meta-card { border-top: 1px solid var(--line); } .reader-toolbar { position: static; } .reader-actions { grid-template-columns: repeat(4, 38px); } .footer-inner { grid-template-columns: 1fr; text-align: center; } .footer-brand, .socials { justify-content: center; } }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#reader">Skip to report</a>
   <header class="site-header" id="top">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="ZYNE home"><span class="brand-mark"><img src="/assets/ZYNE-favicon.svg" alt=""></span><span class="brand-name">ZYNE</span></a>
@@ -146,12 +161,12 @@
   <main id="report">
     <section class="report-hero">
       <div class="shell">
-        <div><p class="eyebrow">Executive Intelligence & Strategic Execution</p><h1 class="hero-title"><span>Strategic</span> Competitor-Readiness Report</h1><div class="gold-rule" aria-hidden="true"></div><p class="hero-copy">Positioning Abdulaziz Bin Ali & Partners for the next stage of Saudi legal market growth through sharper visibility, stronger proof of experience, and disciplined execution.</p><div class="hero-client-row"><div class="hero-client-rule" aria-hidden="true"></div><div class="hero-client-mark"><img src="/LAW/Abdulaziz_Bin_Ali&Partners/binali-new-logo.svg" alt="Abdulaziz Bin Ali & Partners Law Firm logo"></div></div><p class="hero-note">Discuss the report findings, priority actions, and implementation roadmap with ZYNE.</p><div class="hero-actions"><a class="button primary" href="#reader">View Full Report<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a><a class="button" href="#3-executive-summary">Executive Summary</a><button class="button" type="button" id="printHero">Print / Save PDF</button><a class="button" href="/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md" download>Download Markdown</a></div></div>
+        <div><p class="eyebrow">Executive Intelligence & Strategic Execution</p><h1 class="hero-title"><span>Strategic</span> Competitor-Readiness Report</h1><div class="gold-rule" aria-hidden="true"></div><p class="hero-copy">Positioning Abdulaziz Bin Ali & Partners for the next stage of Saudi legal market growth through sharper visibility, stronger proof of experience, and disciplined execution.</p><div class="hero-client-row"><div class="hero-client-rule" aria-hidden="true"></div><div class="hero-client-mark"><img src="/LAW/Abdulaziz_Bin_Ali%26Partners/binali-new-logo.svg" alt="Abdulaziz Bin Ali & Partners Law Firm logo"></div></div><p class="hero-note">Discuss the report findings, priority actions, and implementation roadmap with ZYNE.</p><div class="hero-actions"><a class="button primary" href="#reader">View Full Report<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a><a class="button" href="#3-executive-summary">Executive Summary</a><button class="button" type="button" id="printHero">Print / Save PDF</button><a class="button" href="/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1.md" download>Download Markdown</a></div></div>
         <div class="crest-panel" aria-hidden="true"><img src="/assets/ZYNE Logo Trans.png" alt=""></div>
       </div>
     </section>
     <section class="metadata shell" aria-label="Report metadata"><div class="metadata-grid"><div class="meta-card"><span>Prepared For</span><strong>The Founding Partner and Senior Management</strong></div><div class="meta-card"><span>Client</span><strong>Abdulaziz Bin Ali & Partners Law Firm</strong></div><div class="meta-card"><span>Prepared By</span><strong>ZYNE.store</strong></div><div class="meta-card"><span>Version</span><strong>Report 1 · Source updated June 15, 2026</strong></div></div></section>
-    <section class="utility-band shell" aria-label="Report controls and status"><div class="utility-grid"><div class="utility-card"><h2>Report Status</h2><p>Unlisted client report page prepared from publicly available information. The full report and table of contents are rendered directly in this page for accessibility, indexing, reader mode, and no-JavaScript fallback.</p><div class="pill-row"><span class="pill">Public-source diagnostic</span><span class="pill">English report</span><span class="pill">91 sections</span><span class="pill">11 tables</span></div></div><div class="utility-card"><h2>Language & Downloads</h2><p>Language source files and offline review formats.</p><div class="pill-row"><a class="pill" href="/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md">English</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1_AR.md" lang="ar" dir="rtl">العربية</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1_ZH.md" lang="zh">中文</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.docx">Download DOCX</a></div></div></div><div class="quick-toc" aria-label="Primary report sections"><a class="quick-card" href="#strategic-competitor-readiness-report"><span>Strategic Competitor-Readiness Report</span></a>
+    <section class="utility-band shell" aria-label="Report controls and status"><div class="utility-grid"><div class="utility-card"><h2>Report Status</h2><p>Unlisted client report page prepared from publicly available information. The full report and table of contents are rendered directly in this page for accessibility, indexing, reader mode, and no-JavaScript fallback.</p><div class="pill-row"><span class="pill">Public-source diagnostic</span><span class="pill">English report</span><span class="pill">91 sections</span><span class="pill">11 tables</span></div></div><div class="utility-card"><h2>Language & Downloads</h2><p>Language source files and offline review formats.</p><div class="pill-row"><a class="pill" href="/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1.md">English</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1_AR.md" lang="ar" dir="rtl">العربية</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1_ZH.md" lang="zh">中文</a><a class="pill" href="/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1.docx">Download DOCX</a></div></div></div><div class="quick-toc" aria-label="Primary report sections"><a class="quick-card" href="#strategic-competitor-readiness-report"><span>Strategic Competitor-Readiness Report</span></a>
 <a class="quick-card" href="#1-cover-page"><span>1. Cover Page</span></a>
 <a class="quick-card" href="#2-disclosure-and-basis-of-review"><span>2. Disclosure and Basis of Review</span></a>
 <a class="quick-card" href="#3-executive-summary"><span>3. Executive Summary</span></a>
@@ -336,116 +351,7 @@
 <p>The firm has a good platform. The next stage is to make that platform more focused, more visible, more evidence-backed, and more commercially effective. The objective is not to change the firm's identity. The objective is to make the firm's strongest capabilities easier for clients to understand, easier for referral firms to trust, and easier for partners to convert into sustainable institutional relationships.</p>
 <hr>
 <h2 id="table-of-contents">Table of Contents</h2>
-<ol>
-<li><a href="#1-cover-page">Cover Page</a></li>
-<li><a href="#2-disclosure-and-basis-of-review">Disclosure and Basis of Review</a></li>
-<li><a href="#3-executive-summary">Executive Summary</a></li>
-<li><a href="#4-public-profile-of-the-firm">Public Profile of the Firm</a></li>
-</ol>
-<ul>
-<li><a href="#41-history">4.1 History</a></li>
-<ul>
-<li><a href="#42-location">4.2 Location</a></li>
-<li><a href="#43-practice-areas">4.3 Practice Areas</a></li>
-<li><a href="#44-sectors">4.4 Sectors</a></li>
-<li><a href="#45-team-profile">4.5 Team Profile</a></li>
-<li><a href="#46-client-base">4.6 Client Base</a></li>
-<li><a href="#47-legal-updates-and-thought-leadership">4.7 Legal Updates and Thought Leadership</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#5-what-the-firm-is-doing-well">What the Firm Is Doing Well</a></li>
-</ol>
-<ul>
-<li><a href="#51-full-service-saudi-positioning">5.1 Full-Service Saudi Positioning</a></li>
-<ul>
-<li><a href="#52-strong-disputes-and-arbitration-platform">5.2 Strong Disputes and Arbitration Platform</a></li>
-<li><a href="#53-china-desk-and-international-client-relevance">5.3 China Desk and International Client Relevance</a></li>
-<li><a href="#54-sector-coverage">5.4 Sector Coverage</a></li>
-<li><a href="#55-public-client-credibility">5.5 Public Client Credibility</a></li>
-<li><a href="#56-active-legal-updates-and-thought-leadership">5.6 Active Legal Updates and Thought Leadership</a></li>
-<li><a href="#57-summary-of-current-strengths">5.7 Summary of Current Strengths</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#6-competitive-risks">Competitive Risks</a></li>
-</ol>
-<ul>
-<li><a href="#61-international-firms-entering-or-expanding-in-saudi-arabia">6.1 International Firms Entering or Expanding in Saudi Arabia</a></li>
-<ul>
-<li><a href="#62-riyadh-focused-competitors">6.2 Riyadh-Focused Competitors</a></li>
-<li><a href="#63-larger-saudi-firms-with-stronger-public-profiles">6.3 Larger Saudi Firms with Stronger Public Profiles</a></li>
-<li><a href="#64-alternative-legal-service-providers">6.4 Alternative Legal Service Providers</a></li>
-<li><a href="#65-technology-enabled-legal-delivery">6.5 Technology-Enabled Legal Delivery</a></li>
-<li><a href="#66-specialist-boutiques">6.6 Specialist Boutiques</a></li>
-<li><a href="#67-risk-summary">6.7 Risk Summary</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#7-improvement-areas">Improvement Areas</a></li>
-</ol>
-<ul>
-<li><a href="#71-sharper-market-positioning">7.1 Sharper Market Positioning</a></li>
-<ul>
-<li><a href="#72-stronger-lawyer-profiles">7.2 Stronger Lawyer Profiles</a></li>
-<li><a href="#73-better-proof-of-experience">7.3 Better Proof of Experience</a></li>
-<li><a href="#74-clearer-sector-focused-advisory-platforms">7.4 Clearer Sector-Focused Advisory Platforms</a></li>
-<li><a href="#75-more-visible-riyadh-and-national-coverage">7.5 More Visible Riyadh and National Coverage</a></li>
-<li><a href="#76-stronger-practice-group-market-visibility">7.6 Stronger Practice Group Market Visibility</a></li>
-<li><a href="#77-more-structured-integrated-advisory-offerings">7.7 More Structured Integrated Advisory Offerings</a></li>
-<li><a href="#78-summary-of-improvement-areas">7.8 Summary of Improvement Areas</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#strategic-pillars-for-implementation">Strategic Pillars for Implementation</a></li>
-<li><a href="#8-recommended-strategic-initiatives">Recommended Strategic Initiatives</a></li>
-</ol>
-<ul>
-<li><a href="#81-institutional-client-matrix">8.1 Institutional Client Matrix</a></li>
-<ul>
-<li><a href="#82-sector-focused-advisory-platforms">8.2 Sector-Focused Advisory Platforms</a></li>
-<li><a href="#83-china-saudi-corridor-strategy">8.3 China-Saudi Corridor Strategy</a></li>
-<li><a href="#84-arbitration-and-disputes-positioning">8.4 Arbitration and Disputes Positioning</a></li>
-<li><a href="#85-pdpl-and-data-protection-advisory-mandate">8.5 PDPL and Data Protection Advisory Mandate</a></li>
-<li><a href="#86-legal-updates-and-thought-leadership-distribution">8.6 Legal Updates and Thought Leadership Distribution</a></li>
-<li><a href="#87-partner-led-origination-materials">8.7 Partner-Led Origination Materials</a></li>
-<li><a href="#88-internal-execution-requirements">8.8 Internal Execution Requirements</a></li>
-<li><a href="#89-summary-of-strategic-initiatives">8.9 Summary of Strategic Initiatives</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#9-90-day-6-month-and-12-month-partner-led-action-plan">90-Day, 6-Month, and 12-Month Partner-Led Action Plan</a></li>
-</ol>
-<ul>
-<li><a href="#91-first-90-days-clarify-positioning-and-strengthen-core-materials">9.1 First 90 Days: Clarify Positioning and Strengthen Core Materials</a></li>
-<ul>
-<li><a href="#92-first-6-months-build-advisory-pathways-and-sector-platforms">9.2 First 6 Months: Build Advisory Pathways and Sector Platforms</a></li>
-<li><a href="#93-first-12-months-build-a-sustainable-competitive-platform">9.3 First 12 Months: Build a Sustainable Competitive Platform</a></li>
-<li><a href="#94-partner-ownership-and-accountability-table">9.4 Partner Ownership and Accountability Table</a></li>
-<li><a href="#95-suggested-law-firm-kpis">9.5 Suggested Law-Firm KPIs</a></li>
-<li><a href="#96-action-plan-summary">9.6 Action Plan Summary</a></li>
-<li><a href="#97-immediate-leadership-decisions">9.7 Immediate Leadership Decisions</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#10-appendix-sources-reviewed">Appendix: Sources Reviewed</a></li>
-</ol>
-<ul>
-<li><a href="#101-firm-website-and-public-materials">10.1 Firm Website and Public Materials</a></li>
-<ul>
-<li><a href="#102-practice-area-information-reviewed">10.2 Practice Area Information Reviewed</a></li>
-<li><a href="#103-sector-information-reviewed">10.3 Sector Information Reviewed</a></li>
-<li><a href="#104-team-and-leadership-information-reviewed">10.4 Team and Leadership Information Reviewed</a></li>
-<li><a href="#105-client-and-market-positioning-information-reviewed">10.5 Client and Market Positioning Information Reviewed</a></li>
-<li><a href="#106-legal-updates-and-thought-leadership-reviewed">10.6 Legal Updates and Thought Leadership Reviewed</a></li>
-<li><a href="#107-external-market-context-considered">10.7 External Market Context Considered</a></li>
-<li><a href="#108-limitations-of-sources">10.8 Limitations of Sources</a></li>
-<li><a href="#109-recommended-internal-sources-for-future-review">10.9 Recommended Internal Sources for Future Review</a></li>
-</ul>
-</ul>
-<ol>
-<li><a href="#closing-note">Closing Note</a></li>
-</ol>
+<ol class="report-toc-list"><li><a href="#strategic-competitor-readiness-report">Strategic Competitor-Readiness Report</a><ol><li><a href="#positioning-abdulaziz-bin-ali-and-partners-for-the-next-stage-of-saudi-legal-market-growth">Positioning Abdulaziz Bin Ali &amp; Partners for the Next Stage of Saudi Legal Market Growth</a></li></ol></li><li><a href="#1-cover-page">1. Cover Page</a><ol><li><a href="#strategic-competitor-readiness-report-1">Strategic Competitor-Readiness Report</a><ol><li><a href="#positioning-abdulaziz-bin-ali-and-partners-for-the-next-stage-of-saudi-legal-market-growth-1">Positioning Abdulaziz Bin Ali &amp; Partners for the Next Stage of Saudi Legal Market Growth</a></li></ol></li></ol></li><li><a href="#2-disclosure-and-basis-of-review">2. Disclosure and Basis of Review</a></li><li><a href="#3-executive-summary">3. Executive Summary</a></li><li><a href="#4-public-profile-of-the-firm">4. Public Profile of the Firm</a><ol><li><a href="#41-history">4.1 History</a></li><li><a href="#42-location">4.2 Location</a></li><li><a href="#43-practice-areas">4.3 Practice Areas</a></li><li><a href="#44-sectors">4.4 Sectors</a></li><li><a href="#45-team-profile">4.5 Team Profile</a></li><li><a href="#46-client-base">4.6 Client Base</a></li><li><a href="#47-legal-updates-and-thought-leadership">4.7 Legal Updates and Thought Leadership</a></li></ol></li><li><a href="#5-what-the-firm-is-doing-well">5. What the Firm Is Doing Well</a><ol><li><a href="#51-full-service-saudi-positioning">5.1 Full-Service Saudi Positioning</a></li><li><a href="#52-strong-disputes-and-arbitration-platform">5.2 Strong Disputes and Arbitration Platform</a></li><li><a href="#53-china-desk-and-international-client-relevance">5.3 China Desk and International Client Relevance</a></li><li><a href="#54-sector-coverage">5.4 Sector Coverage</a></li><li><a href="#55-public-client-credibility">5.5 Public Client Credibility</a></li><li><a href="#56-active-legal-updates-and-thought-leadership">5.6 Active Legal Updates and Thought Leadership</a></li><li><a href="#57-summary-of-current-strengths">5.7 Summary of Current Strengths</a></li></ol></li><li><a href="#6-competitive-risks">6. Competitive Risks</a><ol><li><a href="#61-international-firms-entering-or-expanding-in-saudi-arabia">6.1 International Firms Entering or Expanding in Saudi Arabia</a></li><li><a href="#62-riyadh-focused-competitors">6.2 Riyadh-Focused Competitors</a></li><li><a href="#63-larger-saudi-firms-with-stronger-public-profiles">6.3 Larger Saudi Firms with Stronger Public Profiles</a></li><li><a href="#64-alternative-legal-service-providers">6.4 Alternative Legal Service Providers</a></li><li><a href="#65-technology-enabled-legal-delivery">6.5 Technology-Enabled Legal Delivery</a></li><li><a href="#66-specialist-boutiques">6.6 Specialist Boutiques</a></li><li><a href="#67-risk-summary">6.7 Risk Summary</a></li></ol></li><li><a href="#7-improvement-areas">7. Improvement Areas</a><ol><li><a href="#71-sharper-market-positioning">7.1 Sharper Market Positioning</a></li><li><a href="#72-stronger-lawyer-profiles">7.2 Stronger Lawyer Profiles</a></li><li><a href="#73-better-proof-of-experience">7.3 Better Proof of Experience</a></li><li><a href="#74-clearer-sector-focused-advisory-platforms">7.4 Clearer Sector-Focused Advisory Platforms</a></li><li><a href="#75-more-visible-riyadh-and-national-coverage">7.5 More Visible Riyadh and National Coverage</a></li><li><a href="#76-stronger-practice-group-market-visibility">7.6 Stronger Practice Group Market Visibility</a></li><li><a href="#77-more-structured-integrated-advisory-offerings">7.7 More Structured Integrated Advisory Offerings</a></li><li><a href="#78-summary-of-improvement-areas">7.8 Summary of Improvement Areas</a></li></ol></li><li><a href="#strategic-pillars-for-implementation">Strategic Pillars for Implementation</a></li><li><a href="#8-recommended-strategic-initiatives">8. Recommended Strategic Initiatives</a><ol><li><a href="#81-institutional-client-matrix">8.1 Institutional Client Matrix</a></li><li><a href="#82-sector-focused-advisory-platforms">8.2 Sector-Focused Advisory Platforms</a></li><li><a href="#83-china-saudi-corridor-strategy">8.3 China-Saudi Corridor Strategy</a></li><li><a href="#84-arbitration-and-disputes-positioning">8.4 Arbitration and Disputes Positioning</a></li><li><a href="#85-pdpl-and-data-protection-advisory-mandate">8.5 PDPL and Data Protection Advisory Mandate</a></li><li><a href="#86-legal-updates-and-thought-leadership-distribution">8.6 Legal Updates and Thought Leadership Distribution</a></li><li><a href="#87-partner-led-origination-materials">8.7 Partner-Led Origination Materials</a></li><li><a href="#88-internal-execution-requirements">8.8 Internal Execution Requirements</a></li><li><a href="#89-summary-of-strategic-initiatives">8.9 Summary of Strategic Initiatives</a></li></ol></li><li><a href="#9-90-day-6-month-and-12-month-partner-led-action-plan">9. 90-Day, 6-Month, and 12-Month Partner-Led Action Plan</a><ol><li><a href="#91-first-90-days-clarify-positioning-and-strengthen-core-materials">9.1 First 90 Days: Clarify Positioning and Strengthen Core Materials</a><ol><li><a href="#priority-1-confirm-the-firms-signature-entry-points">Priority 1: Confirm the firm's signature entry points</a></li><li><a href="#priority-2-confirm-the-firms-core-positioning-statement">Priority 2: Confirm the firm's core positioning statement</a></li><li><a href="#priority-3-update-priority-lawyer-profiles">Priority 3: Update priority lawyer profiles</a></li><li><a href="#priority-4-build-the-representative-experience-bank">Priority 4: Build the Representative Experience Bank</a></li><li><a href="#priority-5-prepare-core-partner-led-origination-materials">Priority 5: Prepare core partner-led origination materials</a></li><li><a href="#priority-6-build-a-90-day-legal-updates-calendar">Priority 6: Build a 90-day legal updates calendar</a></li><li><a href="#90-day-outputs">90-Day Outputs</a></li></ol></li><li><a href="#92-first-6-months-build-advisory-pathways-and-sector-platforms">9.2 First 6 Months: Build Advisory Pathways and Sector Platforms</a><ol><li><a href="#priority-1-create-defined-advisory-mandates">Priority 1: Create defined advisory mandates</a></li><li><a href="#priority-2-strengthen-priority-sector-pages">Priority 2: Strengthen priority sector pages</a></li><li><a href="#priority-3-develop-the-china-saudi-corridor-platform">Priority 3: Develop the China-Saudi Corridor platform</a></li><li><a href="#priority-4-strengthen-disputes-and-arbitration-positioning">Priority 4: Strengthen disputes and arbitration positioning</a></li><li><a href="#priority-5-improve-practice-group-market-visibility">Priority 5: Improve practice group market visibility</a></li><li><a href="#6-month-outputs">6-Month Outputs</a></li></ol></li><li><a href="#93-first-12-months-build-a-sustainable-competitive-platform">9.3 First 12 Months: Build a Sustainable Competitive Platform</a><ol><li><a href="#priority-1-build-an-annual-partner-led-client-development-plan">Priority 1: Build an annual partner-led client-development plan</a></li><li><a href="#priority-2-create-a-client-and-referral-tracking-system">Priority 2: Create a client and referral tracking system</a></li><li><a href="#priority-3-build-a-stronger-legal-directory-and-ranking-strategy">Priority 3: Build a stronger legal directory and ranking strategy</a></li><li><a href="#priority-4-develop-multilingual-client-communication">Priority 4: Develop multilingual client communication</a></li><li><a href="#priority-5-introduce-client-feedback-and-service-quality-review">Priority 5: Introduce client feedback and service quality review</a></li><li><a href="#priority-6-review-staffing-and-capacity-against-strategy">Priority 6: Review staffing and capacity against strategy</a></li><li><a href="#12-month-outputs">12-Month Outputs</a></li></ol></li><li><a href="#94-partner-ownership-and-accountability-table">9.4 Partner Ownership and Accountability Table</a></li><li><a href="#95-suggested-law-firm-kpis">9.5 Suggested Law-Firm KPIs</a></li><li><a href="#96-action-plan-summary">9.6 Action Plan Summary</a></li><li><a href="#97-immediate-leadership-decisions">9.7 Immediate Leadership Decisions</a></li></ol></li><li><a href="#10-appendix-sources-reviewed">10. Appendix: Sources Reviewed</a><ol><li><a href="#101-firm-website-and-public-materials">10.1 Firm Website and Public Materials</a></li><li><a href="#102-practice-area-information-reviewed">10.2 Practice Area Information Reviewed</a></li><li><a href="#103-sector-information-reviewed">10.3 Sector Information Reviewed</a></li><li><a href="#104-team-and-leadership-information-reviewed">10.4 Team and Leadership Information Reviewed</a></li><li><a href="#105-client-and-market-positioning-information-reviewed">10.5 Client and Market Positioning Information Reviewed</a></li><li><a href="#106-legal-updates-and-thought-leadership-reviewed">10.6 Legal Updates and Thought Leadership Reviewed</a></li><li><a href="#107-external-market-context-considered">10.7 External Market Context Considered</a></li><li><a href="#108-limitations-of-sources">10.8 Limitations of Sources</a></li><li><a href="#109-recommended-internal-sources-for-future-review">10.9 Recommended Internal Sources for Future Review</a></li></ol></li><li><a href="#closing-note">Closing Note</a></li></ol>
 <hr>
 <h2 id="4-public-profile-of-the-firm">4. Public Profile of the Firm</h2>
 <h3 id="41-history">4.1 History</h3>
@@ -2301,7 +2207,7 @@
 <p>The firm should begin with focused implementation rather than broad activity. A smaller number of well-executed initiatives will create more value than a long list of recommendations with no clear owner. The objective is to make the firm's strongest capabilities more visible, more evidence-backed, and more directly connected to sustainable institutional client relationships.</p></div></article></div>
     <section class="pathway" id="implementation-pathway"><div class="shell"><h2>From Report Finding to ZYNE Execution</h2><p>Report 1 naturally leads into targeted implementation support. These pathways convert strategic visibility risks into practical assets and systems.</p><div class="pathway-grid"><div class="pathway-card"><span>Visibility risk</span><strong>Public Profile & Visibility Audit</strong><p>Sharper public positioning, priority service pages, and evidence-backed credibility signals.</p></div><div class="pathway-card"><span>Proof gap</span><strong>Representative Experience Bank</strong><p>Structured matter examples for proposals, bios, directories, and referral counsel materials.</p></div><div class="pathway-card"><span>Website clarity</span><strong>Conversion-Ready Web Architecture</strong><p>Client-facing service pathways, stronger calls to action, and clearer practice/sector navigation.</p></div><div class="pathway-card"><span>Thought leadership</span><strong>Origination System</strong><p>Legal updates connected to target clients, risks, responsible lawyers, and instruction pathways.</p></div><div class="pathway-card"><span>Execution discipline</span><strong>Enterprise Growth Systems</strong><p>Quarterly review mechanics, ownership tables, KPI tracking, and client-development routines.</p></div><div class="pathway-card"><span>AI delivery pressure</span><strong>AI Integration Report</strong><p>Practical roadmap for legal delivery automation, workflow improvement, and operational leverage.</p></div></div></div></section>
   </main>
-  <footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><img src="/assets/ZYNE-favicon.svg" alt=""><div><strong>ZYNE</strong><span>Elite Insight. Sovereign Delivery.</span></div></div><div class="footer-center">Executive Intelligence &nbsp; | &nbsp; Operational Assurance &nbsp; | &nbsp; Strategic Execution<br>&copy; 2026 ZYNE. All rights reserved.</div><div class="socials" aria-label="Social links"><a href="mailto:contact@zyne.store" aria-label="LinkedIn">in</a><a href="mailto:contact@zyne.store" aria-label="X / Twitter">x</a><a href="mailto:contact@zyne.store" aria-label="Email">@</a></div></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><img src="/assets/ZYNE-favicon.svg" alt=""><div><strong>ZYNE</strong><span>Elite Insight. Sovereign Delivery.</span></div></div><div class="footer-center">Executive Intelligence &nbsp; | &nbsp; Operational Assurance &nbsp; | &nbsp; Strategic Execution<br>&copy; 2026 ZYNE. All rights reserved.</div><div class="socials" aria-label="Contact link"><a href="mailto:contact@zyne.store" aria-label="Email ZYNE">@</a></div></div></footer>
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const links = document.querySelector('#navLinks');
@@ -2309,11 +2215,11 @@
     let readerScale = 1;
     toggle.addEventListener('click', () => { const isOpen = links.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(isOpen)); toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation'); });
     links.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation'); }); });
-    document.querySelector('#increaseText').addEventListener('click', () => { readerScale = Math.min(1.18, readerScale + 0.06); reportContent.style.fontSize = readerScale + 'rem'; });
-    document.querySelector('#decreaseText').addEventListener('click', () => { readerScale = Math.max(0.88, readerScale - 0.06); reportContent.style.fontSize = readerScale + 'rem'; });
+    document.querySelector('#increaseText').addEventListener('click', () => { readerScale = Math.min(1.18, readerScale + 0.06); reportContent.style.setProperty('--reader-scale', readerScale); });
+    document.querySelector('#decreaseText').addEventListener('click', () => { readerScale = Math.max(0.88, readerScale - 0.06); reportContent.style.setProperty('--reader-scale', readerScale); });
     document.querySelector('#printReport').addEventListener('click', () => window.print());
     document.querySelector('#printHero').addEventListener('click', () => window.print());
-    document.querySelector('#copyLink').addEventListener('click', async () => { await navigator.clipboard.writeText(location.href); document.querySelector('#readerStatus').textContent = 'Report link copied to clipboard'; });
+    document.querySelector('#copyLink').addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); document.querySelector('#readerStatus').textContent = 'Report link copied to clipboard'; } catch { document.querySelector('#readerStatus').textContent = 'Copy failed. Please copy the URL from the address bar.'; } });
   </script>
 </body>
 </html>
