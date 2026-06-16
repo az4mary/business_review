@@ -1,4 +1,13 @@
-Below is the Stan Store-ready content.
+# START - be patient and wait for each steps - set a 5 mins heartbeat so you can go offline whenever there is too much delay.
+* Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, copy and paste Product 1 Competitor Readiness content into the composer and ask the assistant to provide Image 1 Prompt - assistant already have the requirements.
+* Connect to https://labs.google/fx/tools/flow/project/1eede739-b968-4870-bbb0-ff1e785f6c4a, ensure the Image, 1:1 aspect ratio, 1x image generated, Nano Banana 2 are selected before you paste the Image 1 Prompt into the composer and  you click submit button.
+* Go to the stan.store link and upload the generated Image 1 into the Thumnail section - you already know the workflow.
+* Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, and ask the assistant to provide Image 2 Prompt - assistant already have the requirements.
+* Connect to https://labs.google/fx/tools/flow/project/1eede739-b968-4870-bbb0-ff1e785f6c4a, ensure the Image, 1:1 aspect ratio, 1x image generated, Nano Banana 2 are selected before you paste the Image 2 Prompt into the composer and you click submit button.
+* Go to the stan.store link and upload the generated Image 2 into the Checkout section - you already know the workflow.
+* Continue this same workflow from product 1 - 12 below.
+
+Add Below 12 products, filling required fields with the exact content provided without any summary or additions.
 
 ---
 
