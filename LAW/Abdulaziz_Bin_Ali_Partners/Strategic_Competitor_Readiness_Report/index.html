@@ -153,13 +153,254 @@
     .footer-center { text-align: center; }
     .socials { display: flex; justify-content: flex-end; gap: 12px; }
     .socials a { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(217,167,47,0.54); border-radius: 999px; color: var(--gold-bright); font-size: 0.8rem; font-weight: 800; }
-    .print-cover { display: none; }
-    @media print { @page { size: A4 portrait; margin: 16mm 15mm 18mm; background: #fff; } @page:first { margin: 0; background: #050505; } *, *::before, *::after { box-shadow: none !important; text-shadow: none !important; } html, body { background: #fff !important; color: #111 !important; overflow: visible !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } body::before { display: none !important; } main { padding: 0 !important; background: #fff !important; } .site-header, .report-hero, main > .metadata, main > .utility-band, .utility-grid, .utility-card, .quick-toc, .toc, .reader-toolbar, .pathway, .site-footer, .skip-link, .hero-actions, .nav-actions, .report-preamble, .report-cta { display: none !important; } .print-cover { display: flex !important; flex-direction: column; justify-content: center; width: 210mm; height: 297mm; min-height: 0; padding: 28mm; background: #050505 !important; color: #f6f1e8 !important; border: 1.5mm solid #d9a72f; page-break-after: always; break-after: page; } .print-cover .eyebrow { color: #f6d978 !important; font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 800; margin: 0 0 18mm; } .print-cover h1 { color: #fff !important; font-family: Helvetica, Arial, sans-serif; font-size: 32pt; line-height: 1.08; margin: 0 0 10mm; text-transform: uppercase; } .print-cover .gold-rule { width: 46mm; height: 1.2mm; background: #d9a72f !important; margin: 0 0 16mm; } .print-cover p { color: #d7d0c4 !important; font-size: 11pt; line-height: 1.55; max-width: 150mm; margin: 0 0 18mm; } .print-cover dl { display: grid; grid-template-columns: 34mm 1fr; gap: 5mm 8mm; margin: 0; } .print-cover dt { color: #8f877b !important; font-size: 7pt; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; } .print-cover dd { color: #f6d978 !important; font-size: 10pt; font-weight: 800; margin: 0; } .shell.report-layout { width: 100% !important; max-width: none !important; display: block !important; padding: 0 !important; margin: 0 !important; background: #fff !important; } .reader { display: block !important; border: 0 !important; box-shadow: none !important; background: #fff !important; } .report-content { display: block !important; padding: 0 !important; background: #fff !important; } .report-content, .report-content p, .report-content li { color: #111 !important; font-size: 10pt !important; line-height: 1.45 !important; } .report-content p, .report-content li { orphans: 3; widows: 3; } .report-content h2, .report-content h3, .report-content h4, .report-content h5, .report-content h6 { color: #111 !important; page-break-after: avoid; break-after: avoid-page; break-inside: avoid-page; } .report-content h2 { font-family: Helvetica, Arial, sans-serif !important; font-size: 18pt !important; margin: 0 0 8mm !important; padding: 0 !important; border: 0 !important; } .report-content h2[id] { page-break-before: always; break-before: page; } .report-content h2#2-disclosure-and-basis-of-review { page-break-before: auto; break-before: auto; } .report-content h2#table-of-contents { display: none !important; } .report-content .report-toc-list { display: none !important; } .report-content h3 { font-size: 14pt !important; margin: 10mm 0 4mm !important; padding-top: 0 !important; border-top: 0 !important; } .report-content h4 { font-size: 11.5pt !important; margin: 7mm 0 3mm !important; } .report-content strong { color: #111 !important; } .report-content a { color: #111 !important; border-bottom: 0 !important; } .report-content table { min-width: 0 !important; width: 100% !important; font-size: 7.5pt !important; page-break-inside: avoid; break-inside: avoid-page; } .report-content th, .report-content td { color: #111 !important; padding: 5pt !important; border: 0.5pt solid #c9b77a !important; } .report-content th { background: #f3e7c0 !important; } .table-wrap, blockquote, ul, ol { overflow: visible !important; break-inside: avoid-page; page-break-inside: avoid; border-color: #ccc !important; } hr { page-break-after: avoid; border: 0 !important; height: 0 !important; margin: 6mm 0 !important; } }
+    .print-cover, .print-page-template, .print-page-title, .print-page-footer, .print-page-numbers { display: none; }
+    @media print {
+      @page { size: A4 portrait; margin: 0; }
+      *, *::before, *::after { box-shadow: none !important; text-shadow: none !important; }
+      html, body {
+        background: #fff !important;
+        color: #111 !important;
+        overflow: visible !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      body::before { display: none !important; }
+      main { padding: 0 !important; background: transparent !important; }
+      .site-header, .report-hero, main > .metadata, main > .utility-band,
+      .utility-grid, .utility-card, .quick-toc, .toc, .reader-toolbar,
+      .pathway, .site-footer, .skip-link, .hero-actions, .nav-actions,
+      .report-preamble, .report-cta { display: none !important; }
+      .print-page-template {
+        display: block !important;
+        position: fixed;
+        inset: 0;
+        width: 210mm;
+        height: 297mm;
+        background: #fff url("/assets/ZYNE_report_page_template.png") center / 210mm 297mm no-repeat !important;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .print-page-title {
+        display: block !important;
+        position: fixed;
+        z-index: 1;
+        top: 18mm;
+        right: 18mm;
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 8.5pt;
+        font-weight: 700;
+        line-height: 1;
+        pointer-events: none;
+      }
+      .print-page-footer {
+        display: block !important;
+        position: fixed;
+        z-index: 1;
+        left: 11mm;
+        bottom: 7.5mm;
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 7.5pt;
+        line-height: 1;
+        pointer-events: none;
+      }
+      .print-page-numbers {
+        display: block !important;
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 0;
+        height: 0;
+        z-index: 4;
+        pointer-events: none;
+      }
+      .print-page-numbers span {
+        position: absolute;
+        left: 166mm;
+        width: 33mm;
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 7.5pt;
+        line-height: 1;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .print-cover {
+        display: block !important;
+        position: relative;
+        z-index: 3;
+        box-sizing: border-box;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #fff url("/assets/ZYNE_cover_page_template_filled.png") center / 210mm 297mm no-repeat !important;
+        page-break-after: always;
+        break-after: page;
+      }
+      .print-cover p {
+        position: absolute;
+        left: 22mm;
+        width: 142mm;
+        margin: 0;
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 10.5pt;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+      .print-cover .cover-prepared-for { top: 164mm; }
+      .print-cover .cover-prepared-by { top: 201mm; }
+      .print-cover .cover-date { top: 238mm; }
+      .shell.report-layout {
+        position: relative;
+        z-index: 2;
+        width: 100% !important;
+        max-width: none !important;
+        display: block !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+      }
+      .reader {
+        display: block !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+      .report-content {
+        display: block !important;
+        box-sizing: border-box !important;
+        width: 210mm !important;
+        padding: 43mm 18mm 27mm !important;
+        background: transparent !important;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
+      .report-content, .report-content p, .report-content li {
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: 10pt !important;
+        line-height: 1.48 !important;
+      }
+      .report-content p, .report-content li {
+        orphans: 3;
+        widows: 3;
+        page-break-inside: avoid;
+        break-inside: avoid-page;
+      }
+      .report-content p { margin: 0 0 4mm !important; }
+      .report-content p + p { margin-top: 0 !important; }
+      .report-content ul, .report-content ol {
+        margin: 3mm 0 5mm !important;
+        padding-left: 6mm !important;
+      }
+      .report-content li {
+        margin: 1.4mm 0 !important;
+        padding-left: 1mm !important;
+      }
+      .report-content h2, .report-content h3, .report-content h4,
+      .report-content h5, .report-content h6 {
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif !important;
+        page-break-after: avoid;
+        break-after: avoid-page;
+        break-inside: avoid-page;
+      }
+      .report-content h2 {
+        font-size: 20pt !important;
+        line-height: 1.12 !important;
+        margin: 0 0 9mm !important;
+        padding: 0 !important;
+        border: 0 !important;
+        background: none !important;
+      }
+      .report-content h2::first-letter { color: #bf7e0a !important; }
+      .report-content h2::after {
+        content: "";
+        display: block;
+        width: 28mm;
+        height: 2.5mm;
+        margin-top: 6mm;
+        background:
+          linear-gradient(#bf7e0a, #bf7e0a) left center / 27mm 0.35mm no-repeat,
+          linear-gradient(45deg, transparent 36%, #bf7e0a 37% 63%, transparent 64%) right center / 2.5mm 2.5mm no-repeat !important;
+      }
+      .report-content h2[id] { page-break-before: always; break-before: page; }
+      .report-content h2#2-disclosure-and-basis-of-review {
+        page-break-before: auto;
+        break-before: auto;
+      }
+      .report-content h2#table-of-contents,
+      .report-content .report-toc-list { display: none !important; }
+      .report-content h3 {
+        font-size: 14pt !important;
+        line-height: 1.2 !important;
+        margin: 9mm 0 4mm !important;
+        padding-top: 0 !important;
+        border-top: 0 !important;
+      }
+      .report-content h4 {
+        font-size: 11.5pt !important;
+        margin: 7mm 0 3mm !important;
+      }
+      .report-content h2 + p,
+      .report-content h3 + p,
+      .report-content h4 + p,
+      .report-content p:has(+ p > strong),
+      .report-content p:has(+ ul),
+      .report-content p:has(+ ol),
+      .report-content p:has(+ .table-wrap),
+      .report-content p:has(+ blockquote) {
+        page-break-after: avoid;
+        break-after: avoid-page;
+      }
+      .report-content strong, .report-content a { color: #17120b !important; }
+      .report-content a { border-bottom: 0 !important; }
+      .report-content table {
+        min-width: 0 !important;
+        width: 100% !important;
+        font-size: 7.2pt !important;
+        page-break-inside: avoid;
+        break-inside: avoid-page;
+      }
+      .report-content th, .report-content td {
+        color: #17120b !important;
+        padding: 4.5pt !important;
+        border: 0.5pt solid #c9b77a !important;
+      }
+      .report-content th { background: #f3e7c0 !important; }
+      .report-content blockquote {
+        color: #17120b !important;
+        font-family: Georgia, "Times New Roman", serif !important;
+        font-size: 10pt !important;
+        line-height: 1.48 !important;
+      }
+      .table-wrap, blockquote, ul, ol {
+        overflow: visible !important;
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+        border-color: #c9b77a !important;
+      }
+      li > ul, li > ol { break-inside: auto; }
+      hr {
+        page-break-after: avoid;
+        border: 0 !important;
+        height: 0 !important;
+        margin: 5mm 0 !important;
+      }
+    }
     @media (max-width: 1100px) { .nav .button { display: none; } .report-hero .shell { grid-template-columns: 1fr; } .crest-panel { min-height: 260px; order: -1; } .crest-panel img { width: min(360px, 88%); } .metadata-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .meta-card:nth-child(2) { border-right: 0; } .meta-card:nth-child(n+3) { border-top: 1px solid var(--line); } .utility-grid, .report-layout { grid-template-columns: 1fr; } .toc { position: relative; top: auto; max-height: 360px; } .quick-toc, .pathway-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 760px) { .shell { width: min(100% - 28px, var(--max)); } .site-header { position: fixed; inset: 0 0 auto; } main { padding-top: 76px; } .nav { min-height: 76px; } .brand-mark { width: 38px; height: 38px; } .brand-name { font-size: 1.55rem; } .menu-toggle { display: grid; place-items: center; } .nav-links { position: fixed; top: 76px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 20px 20px; background: rgba(0, 0, 0, 0.96); border-bottom: 1px solid rgba(217,167,47,0.2); } .nav-links.open { display: flex; } .nav-links a { padding: 15px 0; } .report-hero .shell { min-height: auto; padding: 44px 0 72px; } .hero-title { font-size: clamp(2.15rem, 11vw, 3.7rem); } .hero-client-row { align-items: flex-start; } .hero-client-rule { margin-top: 42px; } .hero-actions, .reader-toolbar, .reader-actions { display: grid; } .button { width: 100%; } .metadata { margin-top: -34px; } .metadata-grid, .quick-toc, .pathway-grid { grid-template-columns: 1fr; } .report-cta-actions { display: grid; } .meta-card, .meta-card:nth-child(2) { border-right: 0; } .meta-card + .meta-card { border-top: 1px solid var(--line); } .reader-toolbar { position: static; } .reader-actions { grid-template-columns: repeat(4, 38px); } .footer-inner { grid-template-columns: 1fr; text-align: center; } .footer-brand, .socials { justify-content: center; } }
   </style>
 </head>
 <body>
+  <div class="print-page-template" aria-hidden="true"></div>
+  <div class="print-page-title" aria-hidden="true">Strategic Competitor-Readiness Report</div>
+  <div class="print-page-footer" aria-hidden="true">Prepared for Abdulaziz Bin Ali &amp; Partners Law Firm</div>
+  <div class="print-page-numbers" id="printPageNumbers" aria-hidden="true"></div>
   <a class="skip-link" href="#reader">Skip to report</a>
   <header class="site-header" id="top">
     <nav class="nav shell" aria-label="Main navigation">
@@ -170,16 +411,9 @@
   </header>
   <main id="report">
     <section class="print-cover" aria-hidden="true">
-      <p class="eyebrow">Executive Intelligence &amp; Strategic Execution</p>
-      <h1>Strategic Competitor-Readiness Report</h1>
-      <div class="gold-rule" aria-hidden="true"></div>
-      <p>Positioning Abdulaziz Bin Ali &amp; Partners for the next stage of Saudi legal market growth through sharper visibility, stronger proof of experience, and disciplined execution.</p>
-      <dl>
-        <dt>Prepared For</dt><dd>The Founding Partner and Senior Management</dd>
-        <dt>Client</dt><dd>Abdulaziz Bin Ali &amp; Partners Law Firm</dd>
-        <dt>Prepared By</dt><dd>ZYNE.store</dd>
-        <dt>Version</dt><dd>Report 1 - Updated June 17, 2026</dd>
-      </dl>
+      <p class="cover-prepared-for">The Founding Partner and Senior Management<br>Abdulaziz Bin Ali &amp; Partners Law Firm</p>
+      <p class="cover-prepared-by">ZYNE Intelligence<br>zyne.store</p>
+      <p class="cover-date">June 17, 2026</p>
     </section>
     <section class="report-hero">
       <div class="shell">
@@ -2244,7 +2478,15 @@
     const toggle = document.querySelector('.menu-toggle');
     const links = document.querySelector('#navLinks');
     const reportContent = document.querySelector('#reportContent');
+    const printPageNumbers = document.querySelector('#printPageNumbers');
+    const printPageTotal = 68;
     let readerScale = 1;
+    for (let pageNumber = 2; pageNumber <= printPageTotal; pageNumber += 1) {
+      const label = document.createElement('span');
+      label.style.top = `${(pageNumber * 297.105) - 10.5}mm`;
+      label.textContent = `Page ${pageNumber} of ${printPageTotal}`;
+      printPageNumbers.append(label);
+    }
     toggle.addEventListener('click', () => { const isOpen = links.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(isOpen)); toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation'); });
     links.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation'); }); });
     document.querySelector('#increaseText').addEventListener('click', () => { readerScale = Math.min(1.18, readerScale + 0.06); reportContent.style.setProperty('--reader-scale', readerScale); });
