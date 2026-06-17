@@ -1,7 +1,7 @@
-
+﻿
 STEP 1 - Patch Segment 1 - Front Matter, Executive Summary, and Strategic Pillar Bridge
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
 1. Remove the internal planning-outline material before the formal title page so the client-facing report begins with `# Strategic Competitor-Readiness Report`.
 2. Replace Section 3 Executive Summary with the Patch Segment 1 Executive Summary provided in the extracted messenger response.
@@ -10,7 +10,7 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 2 - Patch Segment 2 - Section 7 and Section 8 Terminology Upgrades
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
 1. Replace Section 7 with the Segment 2 upgraded Improvement Areas text.
 2. Replace Section 8 with the Segment 2 upgraded Recommended Strategic Initiatives text.
@@ -19,7 +19,7 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 3 - Patch Segment 3 - Section 9 Action Plan, Ownership, KPIs, and Execution Discipline
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
 1. Replace Section 9 with the Segment 3 partner-led action plan text.
 2. Rename Section 9 to `90-Day, 6-Month, and 12-Month Partner-Led Action Plan`.
@@ -28,7 +28,7 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 4 - Patch Segment 4 - Closing Note and Global Tone / Risky-Language Cleanup
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
 1. Replace the Closing Note with the Segment 4 replacement closing note.
 2. Apply the global tone cleanup rules across the report, using law-firm leadership language and preserving the integrated full-service Saudi platform model.
@@ -37,7 +37,7 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 5 - English Quality-Control Review and Final Cleanup
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` only if the English quality-control review identifies issues:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` only if the English quality-control review identifies issues:
 
 1. Check heading continuity and numbering.
 2. Remove or reduce duplicate language introduced by patched sections.
@@ -49,7 +49,7 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 6 - Minor Formatting Cleanup and Final English Double-Check
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
 1. Remove optional blank spacer lines between consecutive bullet items.
 2. Preserve Markdown content, heading structure, section order, tables, and paragraph spacing outside consecutive bullet lists.
@@ -58,10 +58,10 @@ Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md
 
 STEP 7 - Encoding Artifact Cleanup Before Translation
 
-Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1.md` as follows:
+Patch `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report.md` as follows:
 
-1. Replace the mojibake apostrophe artifact `â€™` globally with the straight apostrophe `'`.
-2. Validate that `â€™` no longer appears in the English report.
+1. Replace the mojibake apostrophe artifact `Ã¢â‚¬â„¢` globally with the straight apostrophe `'`.
+2. Validate that `Ã¢â‚¬â„¢` no longer appears in the English report.
 3. Preserve all substantive content, heading structure, tables, and the completed bullet-spacing cleanup.
 4. Resend the completed English report to the messenger for final confirmation before requesting Arabic translation.
 

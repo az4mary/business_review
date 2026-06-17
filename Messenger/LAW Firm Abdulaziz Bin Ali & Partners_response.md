@@ -1,4 +1,4 @@
-Below is **Patch Segment 1** for Option B. It covers:
+﻿Below is **Patch Segment 1** for Option B. It covers:
 
 * front-matter cleanup;
 * revised Section 3 Executive Summary;
@@ -6,7 +6,7 @@ Below is **Patch Segment 1** for Option B. It covers:
 
 This is **draft replacement text**, not yet `FIND / REPLACE` format.
 
-# Patch Segment 1 — Front Matter, Executive Summary, and Strategic Pillar Bridge
+# Patch Segment 1 â€” Front Matter, Executive Summary, and Strategic Pillar Bridge
 
 ## 1A. Front-Matter Cleanup
 
@@ -44,9 +44,9 @@ No internal planning notes, proposed structure, or drafting instructions should 
 
 Abdulaziz Bin Ali & Partners Law Firm has a credible public foundation for further growth. The firm presents itself as a full-service Saudi law firm with local market knowledge, international service standards, and a client base that includes government entities, government-owned entities, local and regional companies, international companies, financial institutions, and other law firms.
 
-The firm’s public profile shows several important strengths. These include a clear Saudi identity, an Al-Khobar base, dispute resolution and arbitration capability, corporate and commercial services, sector coverage across important areas of the Saudi economy, and a visible China Desk. These strengths are relevant because the Saudi legal market is becoming more competitive, more international, and more focused on sector knowledge, client service, and efficient legal delivery.
+The firmâ€™s public profile shows several important strengths. These include a clear Saudi identity, an Al-Khobar base, dispute resolution and arbitration capability, corporate and commercial services, sector coverage across important areas of the Saudi economy, and a visible China Desk. These strengths are relevant because the Saudi legal market is becoming more competitive, more international, and more focused on sector knowledge, client service, and efficient legal delivery.
 
-The central issue identified in this report is not that the firm lacks capability. The public information suggests that the firm has meaningful capability. The central issue is visibility risk. The market must be able to see the firm’s strongest capabilities clearly, quickly, and with enough evidence to support instruction decisions.
+The central issue identified in this report is not that the firm lacks capability. The public information suggests that the firm has meaningful capability. The central issue is visibility risk. The market must be able to see the firmâ€™s strongest capabilities clearly, quickly, and with enough evidence to support instruction decisions.
 
 This matters because sophisticated clients, foreign investors, referral law firms, and institutional clients often assess law firms before direct contact. They review public profiles, lawyer biographies, practice pages, sector pages, legal updates, representative experience, and multilingual materials. If a competitor explains its capability more clearly, it may appear stronger even where the underlying legal capability is similar.
 
@@ -54,7 +54,7 @@ The firm therefore needs to make its strongest capabilities more visible and mor
 
 The recommended strategic model is therefore not to become a narrow boutique. The recommended model is to use signature entry points to bring clients into an integrated Saudi legal platform.
 
-The firm’s most visible signature entry points should include:
+The firmâ€™s most visible signature entry points should include:
 
 1. Saudi commercial disputes and arbitration;
 2. China-Saudi investment and cross-border support;
@@ -64,17 +64,17 @@ The firm’s most visible signature entry points should include:
 6. employment compliance for corporate clients;
 7. foreign law firm Saudi counsel support.
 
-These entry points should not operate as isolated services. They should act as client-facing pathways into the firm’s broader capability. For example, a PDPL compliance review should connect to employment data, technology contracts, privacy policies, data processing arrangements, and corporate governance. A China-Saudi market-entry mandate should connect to company formation, commercial contracts, employment, construction, logistics, disputes, and regulatory support. An arbitration clause review should connect to dispute prevention, contract review, enforcement planning, and settlement strategy.
+These entry points should not operate as isolated services. They should act as client-facing pathways into the firmâ€™s broader capability. For example, a PDPL compliance review should connect to employment data, technology contracts, privacy policies, data processing arrangements, and corporate governance. A China-Saudi market-entry mandate should connect to company formation, commercial contracts, employment, construction, logistics, disputes, and regulatory support. An arbitration clause review should connect to dispute prevention, contract review, enforcement planning, and settlement strategy.
 
-The firm’s China Desk is a particularly important strategic asset. It gives the firm a visible link to Chinese investors and cross-border work connected to Saudi Arabia. It should be treated as more than a profile feature. It should be developed as a China-Saudi corridor into the firm’s wider Saudi law capability. This would allow Chinese clients and foreign referral firms to enter through a clear specialist door while still benefiting from the firm’s full-service Saudi platform.
+The firmâ€™s China Desk is a particularly important strategic asset. It gives the firm a visible link to Chinese investors and cross-border work connected to Saudi Arabia. It should be treated as more than a profile feature. It should be developed as a China-Saudi corridor into the firmâ€™s wider Saudi law capability. This would allow Chinese clients and foreign referral firms to enter through a clear specialist door while still benefiting from the firmâ€™s full-service Saudi platform.
 
-The Al-Khobar base is also strategically important. It should be presented as a sector advantage, not a geographic limitation. The firm’s location gives it a natural connection to the Eastern Province economy, including energy, logistics, construction, industrial services, maritime activity, manufacturing, and cross-border trade. At the same time, the firm should make its national reach and Riyadh relevance clearer so that clients understand that the firm can support matters across the Kingdom and in cross-border contexts.
+The Al-Khobar base is also strategically important. It should be presented as a sector advantage, not a geographic limitation. The firmâ€™s location gives it a natural connection to the Eastern Province economy, including energy, logistics, construction, industrial services, maritime activity, manufacturing, and cross-border trade. At the same time, the firm should make its national reach and Riyadh relevance clearer so that clients understand that the firm can support matters across the Kingdom and in cross-border contexts.
 
-The firm’s public legal updates also create a valuable platform for market visibility. However, legal updates should not operate only as standalone legal commentary. They should become partner-led origination assets. Each update should connect to a target client group, a practical legal risk, a relevant practice area, a responsible lawyer, and a clear instruction pathway.
+The firmâ€™s public legal updates also create a valuable platform for market visibility. However, legal updates should not operate only as standalone legal commentary. They should become partner-led origination assets. Each update should connect to a target client group, a practical legal risk, a relevant practice area, a responsible lawyer, and a clear instruction pathway.
 
 This report therefore recommends that the firm focus on the following strategic priorities:
 
-1. define a sharper market position around signature entry points and the firm’s integrated full-service Saudi platform;
+1. define a sharper market position around signature entry points and the firmâ€™s integrated full-service Saudi platform;
 2. strengthen lawyer and team profiles with clearer evidence of experience, sector knowledge, languages, publications, and representative matters;
 3. build a representative experience bank that can support the website, proposals, legal directories, referral counsel materials, and client presentations;
 4. convert selected practice and sector strengths into defined advisory mandates, with clear scope, deliverables, responsible lawyers, and escalation pathways into related practice areas;
@@ -84,13 +84,13 @@ This report therefore recommends that the firm focus on the following strategic 
 8. prepare for stronger competition from Saudi firms, international firms, specialist boutiques, alternative legal service providers, and technology-enabled legal service providers;
 9. create internal execution mechanics, including partner sponsorship, cross-practice working groups, shared collaboration incentives where appropriate, and quarterly leadership review.
 
-The firm has a good platform. The next stage is to make that platform more focused, more visible, more evidence-backed, and more commercially effective. The objective is not to change the firm’s identity. The objective is to make the firm’s strongest capabilities easier for clients to understand, easier for referral firms to trust, and easier for partners to convert into sustainable institutional relationships.
+The firm has a good platform. The next stage is to make that platform more focused, more visible, more evidence-backed, and more commercially effective. The objective is not to change the firmâ€™s identity. The objective is to make the firmâ€™s strongest capabilities easier for clients to understand, easier for referral firms to trust, and easier for partners to convert into sustainable institutional relationships.
 
 ---
 
 ## Insert Before Section 8: Strategic Pillars for Implementation
 
-The recommendations in this report should not be treated as separate tasks. They should be organized around strategic pillars that connect the firm’s strengths, market risks, client needs, and implementation actions.
+The recommendations in this report should not be treated as separate tasks. They should be organized around strategic pillars that connect the firmâ€™s strengths, market risks, client needs, and implementation actions.
 
 This approach is important because senior law-firm leadership does not only need a list of improvements. It needs a practical view of where the firm should place management attention, partner time, and business development effort.
 
@@ -120,7 +120,7 @@ This segment makes the report more partner-ready by introducing:
 * legal updates as **origination assets**;
 * the need for **partner sponsorship and cross-practice execution**.
 
-Next segment should cover **Section 7 and Section 8 terminology upgrades**, especially replacing “client segmentation,” “service packages,” and “sector packages” with law-firm-calibrated language.
+Next segment should cover **Section 7 and Section 8 terminology upgrades**, especially replacing â€œclient segmentation,â€ â€œservice packages,â€ and â€œsector packagesâ€ with law-firm-calibrated language.
 
 ---
 
@@ -136,14 +136,14 @@ Next segment should cover **Section 7 and Section 8 terminology upgrades**, espe
 Below is Patch Segment 2. It replaces and upgrades the language in Section 7 and Section 8 so the report reads more like a senior law-firm leadership memorandum and less like a generic business-development plan.
 
 Edit
-Patch Segment 2 — Section 7 and Section 8 Terminology Upgrades
+Patch Segment 2 â€” Section 7 and Section 8 Terminology Upgrades
 7. Improvement Areas
 
 The firm has a credible public platform, but several areas can be improved to make its market position clearer, stronger, and more commercially effective. These improvement areas do not suggest that the firm lacks capability. Rather, they show where the firm can present its capability more clearly, support partner-led origination, strengthen institutional client relationships, and prepare for stronger competition.
 
 The main improvement need is clarity. The firm should make it easier for clients, referral law firms, foreign investors, and institutional decision-makers to understand what the firm does best, who leads each area, what types of matters it handles, and why it is the right choice for specific client needs.
 
-The firm should not abandon its full-service identity. That identity remains valuable. However, the firm should lead with clearer signature entry points. These entry points should bring clients into the firm’s broader Saudi legal platform, not isolate the firm into narrow boutique-style offerings.
+The firm should not abandon its full-service identity. That identity remains valuable. However, the firm should lead with clearer signature entry points. These entry points should bring clients into the firmâ€™s broader Saudi legal platform, not isolate the firm into narrow boutique-style offerings.
 
 7.1 Sharper Market Positioning
 
@@ -181,7 +181,7 @@ This type of message is more specific than a general full-service description. I
 
 7.2 Stronger Lawyer Profiles
 
-The public team page shows that the firm has a layered team. This is positive. However, the lawyer profiles can be strengthened to give clients more confidence in the team’s experience.
+The public team page shows that the firm has a layered team. This is positive. However, the lawyer profiles can be strengthened to give clients more confidence in the teamâ€™s experience.
 
 Sophisticated clients often review lawyer profiles before making an instruction. They want to know:
 
@@ -227,7 +227,7 @@ The profiles should be written in a clear and practical way. They should avoid o
 
 7.3 Better Proof of Experience
 
-The firm’s public client page and practice pages show credibility, but the firm can make its experience more persuasive by adding more proof.
+The firmâ€™s public client page and practice pages show credibility, but the firm can make its experience more persuasive by adding more proof.
 
 Clients do not only want to know that a firm offers a service. They want to know that the firm has handled similar issues before.
 
@@ -249,7 +249,7 @@ supported a client on data protection obligations;
 
 assisted in arbitration or enforcement-related matters.
 
-These examples do not need to include client names, financial values, or sensitive facts. Even short examples can make the firm’s experience easier to understand.
+These examples do not need to include client names, financial values, or sensitive facts. Even short examples can make the firmâ€™s experience easier to understand.
 
 The firm should create an internal Representative Experience Bank. This would be a controlled internal record of anonymized matter examples that can support:
 
@@ -275,7 +275,7 @@ This would reduce the risk that competitors appear stronger simply because they 
 
 7.4 Clearer Sector-Focused Advisory Platforms
 
-The firm has useful sector coverage, but the sector pages should be made more practical. Each sector page should explain how the firm helps clients in that sector and how the firm’s practice groups work together around sector-specific legal risk.
+The firm has useful sector coverage, but the sector pages should be made more practical. Each sector page should explain how the firm helps clients in that sector and how the firmâ€™s practice groups work together around sector-specific legal risk.
 
 The firm should avoid presenting sector pages only as general descriptions. They should become sector-focused advisory platforms that support partner-led origination and client confidence.
 
@@ -355,9 +355,9 @@ This would make the sector pages more useful and more likely to convert visitors
 
 7.5 More Visible Riyadh and National Coverage
 
-The firm’s Al-Khobar base is an important strength. It connects the firm to the Eastern Province and to major industrial, energy, construction, logistics, and infrastructure activity.
+The firmâ€™s Al-Khobar base is an important strength. It connects the firm to the Eastern Province and to major industrial, energy, construction, logistics, and infrastructure activity.
 
-However, the firm should also make its national coverage more visible. Many international companies, government-linked projects, financial institutions, and regional headquarters discussions are associated with Riyadh. If the firm’s public profile appears too local, some clients may assume that the firm is less relevant for national or Riyadh-based matters.
+However, the firm should also make its national coverage more visible. Many international companies, government-linked projects, financial institutions, and regional headquarters discussions are associated with Riyadh. If the firmâ€™s public profile appears too local, some clients may assume that the firm is less relevant for national or Riyadh-based matters.
 
 The firm can address this without reducing the value of its Al-Khobar identity.
 
@@ -431,7 +431,7 @@ This would help convert thought leadership into client engagement and partner-le
 
 7.7 More Structured Integrated Advisory Offerings
 
-The firm’s public materials list many services. The next step is to organize selected services into clearer integrated advisory offerings that are easier for clients to understand and easier for partners to introduce.
+The firmâ€™s public materials list many services. The next step is to organize selected services into clearer integrated advisory offerings that are easier for clients to understand and easier for partners to introduce.
 
 Clients often do not know the full legal process. They need the firm to help define the problem, the steps, the expected output, and the value.
 
@@ -457,7 +457,7 @@ China-Saudi Investment Support;
 
 Foreign Law Firm Saudi Counsel Support.
 
-These should not be treated as isolated products. They should operate as defined entry-point mandates into the firm’s broader advisory platform.
+These should not be treated as isolated products. They should operate as defined entry-point mandates into the firmâ€™s broader advisory platform.
 
 For example:
 
@@ -489,11 +489,11 @@ related practice groups;
 
 escalation pathway into broader support.
 
-This would make the firm easier to instruct, especially for international clients, new clients, and referral law firms, without weakening the firm’s full-service identity.
+This would make the firm easier to instruct, especially for international clients, new clients, and referral law firms, without weakening the firmâ€™s full-service identity.
 
 7.8 Summary of Improvement Areas
 
-The firm’s main improvement areas can be summarized as follows:
+The firmâ€™s main improvement areas can be summarized as follows:
 
 Improvement area	Why it matters	Suggested action
 Sharper market positioning	Helps clients understand the firm faster	Lead with signature entry points, supported by the full-service Saudi platform
@@ -504,13 +504,13 @@ National and Riyadh visibility	Reduces the risk of being seen as only local	Show
 Practice group market visibility	Turns public assets into instruction pathways	Improve website pathways, legal updates, and lawyer contact visibility
 Integrated advisory offerings	Makes services easier to instruct	Build defined entry-point mandates connected to broader firm capability
 
-The firm’s public profile is already credible. The improvement opportunity is to make that credibility more precise, more visible, and more connected to client decisions.
+The firmâ€™s public profile is already credible. The improvement opportunity is to make that credibility more precise, more visible, and more connected to client decisions.
 
 8. Recommended Strategic Initiatives
 
-The firm should focus on a small number of practical initiatives that strengthen its market position and improve conversion from public visibility to client instructions. These initiatives should be realistic, measurable, and connected to the firm’s existing strengths.
+The firm should focus on a small number of practical initiatives that strengthen its market position and improve conversion from public visibility to client instructions. These initiatives should be realistic, measurable, and connected to the firmâ€™s existing strengths.
 
-The recommended initiatives below are designed to support the firm’s next stage of growth without changing its core identity. The firm should not become a narrow boutique. It should use signature entry points to make its integrated full-service Saudi platform easier for clients and referral law firms to understand.
+The recommended initiatives below are designed to support the firmâ€™s next stage of growth without changing its core identity. The firm should not become a narrow boutique. It should use signature entry points to make its integrated full-service Saudi platform easier for clients and referral law firms to understand.
 
 8.1 Institutional Client Matrix
 
@@ -548,7 +548,7 @@ source of origination;
 
 follow-up responsibility.
 
-Based on the public profile, the firm’s priority client groups may include:
+Based on the public profile, the firmâ€™s priority client groups may include:
 
 Saudi companies;
 
@@ -586,7 +586,7 @@ The Institutional Client Matrix should help the firm focus partner time and avoi
 
 8.2 Sector-Focused Advisory Platforms
 
-The firm should convert selected sector pages into practical sector-focused advisory platforms. This would make the firm’s sector knowledge easier for clients to understand and easier for partners to present in client meetings.
+The firm should convert selected sector pages into practical sector-focused advisory platforms. This would make the firmâ€™s sector knowledge easier for clients to understand and easier for partners to present in client meetings.
 
 Priority sector platforms could include:
 
@@ -658,13 +658,13 @@ employment and contractor issues;
 
 dispute support.
 
-Sector platforms would help the firm speak the language of the client’s business, not only the language of legal practice areas.
+Sector platforms would help the firm speak the language of the clientâ€™s business, not only the language of legal practice areas.
 
 8.3 China-Saudi Corridor Strategy
 
-The China Desk should be treated as a strategic growth platform. It is one of the firm’s most visible differentiators and should be developed into a stronger cross-border origination channel.
+The China Desk should be treated as a strategic growth platform. It is one of the firmâ€™s most visible differentiators and should be developed into a stronger cross-border origination channel.
 
-The China Desk should be positioned as a specialist entry point into the firm’s broader Saudi legal platform. It should not be presented only as a translation or communication feature. Its value is that it can help Chinese clients and referral law firms enter the Saudi legal environment through a clear, culturally aware, bilingual channel, while still giving them access to the firm’s wider corporate, employment, construction, logistics, data protection, disputes, and arbitration capability.
+The China Desk should be positioned as a specialist entry point into the firmâ€™s broader Saudi legal platform. It should not be presented only as a translation or communication feature. Its value is that it can help Chinese clients and referral law firms enter the Saudi legal environment through a clear, culturally aware, bilingual channel, while still giving them access to the firmâ€™s wider corporate, employment, construction, logistics, data protection, disputes, and arbitration capability.
 
 The firm should consider a China-Saudi corridor strategy built around:
 
@@ -726,7 +726,7 @@ This would help the China Desk become more than a profile page. It would become 
 
 8.4 Arbitration and Disputes Positioning
 
-Disputes and arbitration should be one of the firm’s main signature strengths. The firm should build a clearer public position around this area.
+Disputes and arbitration should be one of the firmâ€™s main signature strengths. The firm should build a clearer public position around this area.
 
 The firm should consider creating a dedicated disputes and arbitration positioning strategy that includes:
 
@@ -764,7 +764,7 @@ Enforcement of Awards and Judgments Overview;
 
 Settlement Strategy Guide for Commercial Disputes;
 
-SCCA Arbitration Client Guide, where supported by the firm’s experience.
+SCCA Arbitration Client Guide, where supported by the firmâ€™s experience.
 
 These materials would show clients that the firm understands not only legal theory, but also dispute process, evidence, strategy, cost, timing, and enforcement.
 
@@ -918,7 +918,7 @@ client update template;
 
 foreign law firm referral guide.
 
-These materials should use consistent language, design, and structure. They should make it easy for a partner or lawyer to explain the firm’s value in a client meeting.
+These materials should use consistent language, design, and structure. They should make it easy for a partner or lawyer to explain the firmâ€™s value in a client meeting.
 
 The firm should also prepare materials specifically for foreign law firms. These materials should explain:
 
@@ -976,7 +976,7 @@ progress indicators;
 
 quarterly leadership review.
 
-Where consistent with the firm’s existing compensation and governance model, leadership should also consider how collaboration, cross-referrals, and shared origination credit are recognized. Integrated advisory work will be difficult to sustain if lawyers are expected to collaborate across practice groups without clear ownership, recognition, or accountability.
+Where consistent with the firmâ€™s existing compensation and governance model, leadership should also consider how collaboration, cross-referrals, and shared origination credit are recognized. Integrated advisory work will be difficult to sustain if lawyers are expected to collaborate across practice groups without clear ownership, recognition, or accountability.
 
 The purpose is not to create bureaucracy. The purpose is to ensure that strategic initiatives move from paper to execution.
 
@@ -994,7 +994,7 @@ Legal Updates and Thought Leadership Distribution	Make thought leadership system
 Partner-Led Origination Materials	Improve proposals, meetings, and referral discussions	Higher conversion from interest to instruction
 Internal Execution Requirements	Assign ownership and improve collaboration	Better implementation discipline
 
-These initiatives are practical and connected to the firm’s existing platform. They do not require the firm to change its identity. They require the firm to present its strengths more clearly, organize its advisory pathways more effectively, and communicate with target clients in a more structured way.
+These initiatives are practical and connected to the firmâ€™s existing platform. They do not require the firm to change its identity. They require the firm to present its strengths more clearly, organize its advisory pathways more effectively, and communicate with target clients in a more structured way.
 
 The most important objective is to move from general visibility to targeted client engagement. This means making each public asset serve a strategic purpose: the website, lawyer profiles, legal updates, sector pages, practice pages, China Desk materials, and proposal documents should all help clients understand why the firm is the right choice.
 
@@ -1002,15 +1002,15 @@ Segment 2 notes
 
 This patch segment upgrades the vocabulary and framing by replacing:
 
-“client segmentation” with Institutional Client Matrix;
+â€œclient segmentationâ€ with Institutional Client Matrix;
 
-“sector packages” with Sector-Focused Advisory Platforms;
+â€œsector packagesâ€ with Sector-Focused Advisory Platforms;
 
-“service packages” with Integrated Advisory Offerings / Defined Advisory Mandates;
+â€œservice packagesâ€ with Integrated Advisory Offerings / Defined Advisory Mandates;
 
-“digital business development” with Practice Group Market Visibility / Thought Leadership Distribution;
+â€œdigital business developmentâ€ with Practice Group Market Visibility / Thought Leadership Distribution;
 
-“business development materials” with Partner-Led Origination Materials.
+â€œbusiness development materialsâ€ with Partner-Led Origination Materials.
 
 It also adds the Debate safeguard: the firm should use signature entry points without weakening the integrated full-service platform.
 
@@ -1027,17 +1027,17 @@ It also adds the Debate safeguard: the firm should use signature entry points wi
 
 Checkpoint noted: Segment 2 was applied and pushed, with Section 7 and Section 8 replaced and the upgraded terminology preserved. 
 
-LAW Firm Abdulaziz Bin Ali & Pa…
+LAW Firm Abdulaziz Bin Ali & Paâ€¦
 
 Below is Patch Segment 3. It upgrades Section 9 into a more tactical, partner-owned action plan with execution owners, outputs, KPIs, and capacity controls.
 
 Edit
-Patch Segment 3 — Section 9 Action Plan, Ownership, KPIs, and Execution Discipline
+Patch Segment 3 â€” Section 9 Action Plan, Ownership, KPIs, and Execution Discipline
 9. 90-Day, 6-Month, and 12-Month Partner-Led Action Plan
 
 The recommendations in this report should be implemented in stages. The firm should avoid trying to complete every initiative at the same time. A phased approach will allow leadership to focus on the most important actions first, test what works, and then build a more structured long-term platform for market visibility, institutional client relationships, referral counsel work, and matter origination.
 
-The action plan below is based on the firm’s public profile and visible market position. Before implementation, the firm should validate priorities through internal review, including leadership input, client feedback, staffing capacity, business development goals, matter profitability, and partner availability.
+The action plan below is based on the firmâ€™s public profile and visible market position. Before implementation, the firm should validate priorities through internal review, including leadership input, client feedback, staffing capacity, business development goals, matter profitability, and partner availability.
 
 The action plan should be treated as a partner-led execution program, not a general marketing exercise. Each priority should have an executive sponsor, responsible practice group, supporting lawyers or staff, defined output, and review date.
 
@@ -1045,7 +1045,7 @@ The action plan should be treated as a partner-led execution program, not a gene
 
 The first 90 days should focus on clarity, ownership, and proof of capability. The firm should make its public profile easier to understand, easier to trust, and easier for partners to use in client conversations.
 
-Priority 1: Confirm the firm’s signature entry points
+Priority 1: Confirm the firmâ€™s signature entry points
 
 The firm should agree on a small number of signature entry points that will guide public messaging, website content, proposal materials, legal updates, referral counsel materials, and practice group visibility.
 
@@ -1067,11 +1067,11 @@ employment compliance for corporate clients;
 
 foreign law firm Saudi counsel support.
 
-The purpose is not to reduce the firm’s full-service identity. The purpose is to make that identity more memorable, more evidence-backed, and more commercially focused.
+The purpose is not to reduce the firmâ€™s full-service identity. The purpose is to make that identity more memorable, more evidence-backed, and more commercially focused.
 
-Priority 2: Confirm the firm’s core positioning statement
+Priority 2: Confirm the firmâ€™s core positioning statement
 
-The firm should update its core description so that it explains the firm’s value more clearly.
+The firm should update its core description so that it explains the firmâ€™s value more clearly.
 
 A possible positioning statement is:
 
@@ -1204,7 +1204,7 @@ Core origination materials prepared	Partner sponsor and support team	Support cli
 Legal updates calendar prepared	Responsible lawyer and content coordinator	Turn thought leadership into instruction pathways
 9.2 First 6 Months: Build Advisory Pathways and Sector Platforms
 
-The next six months should focus on converting the firm’s strengths into structured advisory pathways and sector-focused platforms. This stage should make it easier for clients and referral law firms to understand what the firm can do, how to instruct the firm, and how each entry-point mandate connects to the broader full-service platform.
+The next six months should focus on converting the firmâ€™s strengths into structured advisory pathways and sector-focused platforms. This stage should make it easier for clients and referral law firms to understand what the firm can do, how to instruct the firm, and how each entry-point mandate connects to the broader full-service platform.
 
 Priority 1: Create defined advisory mandates
 
@@ -1250,7 +1250,7 @@ related practice groups;
 
 escalation pathway into broader legal support.
 
-The firm should avoid presenting these mandates as isolated products. They should be framed as defined entry points into the firm’s wider advisory platform.
+The firm should avoid presenting these mandates as isolated products. They should be framed as defined entry points into the firmâ€™s wider advisory platform.
 
 Priority 2: Strengthen priority sector pages
 
@@ -1312,7 +1312,7 @@ prepare materials for Chinese companies in construction, energy, logistics, manu
 
 create a process for tracking China-related inquiries and referrals.
 
-The objective is to make the China Desk a visible and practical growth platform, while connecting it to the firm’s broader corporate, employment, disputes, logistics, construction, data protection, and arbitration capability.
+The objective is to make the China Desk a visible and practical growth platform, while connecting it to the firmâ€™s broader corporate, employment, disputes, logistics, construction, data protection, and arbitration capability.
 
 Priority 4: Strengthen disputes and arbitration positioning
 
@@ -1360,7 +1360,7 @@ consider China-facing content channels;
 
 prepare downloadable client guides.
 
-The goal is to make it easier for clients to move from reading the firm’s content to contacting the responsible lawyer.
+The goal is to make it easier for clients to move from reading the firmâ€™s content to contacting the responsible lawyer.
 
 6-Month Outputs
 
@@ -1577,7 +1577,7 @@ To begin implementation, the leadership team should make several practical decis
 
 The most important decisions are:
 
-Which 4 to 6 signature entry points should define the firm’s public positioning?
+Which 4 to 6 signature entry points should define the firmâ€™s public positioning?
 
 Which client groups should receive priority attention?
 
@@ -1621,7 +1621,7 @@ capacity warning;
 
 immediate leadership decisions.
 
-Next segment should be Patch Segment 4 — Closing Note and Global Tone Cleanup / Risky Language Cleanup.
+Next segment should be Patch Segment 4 â€” Closing Note and Global Tone Cleanup / Risky Language Cleanup.
 
 ---
 
@@ -1636,26 +1636,26 @@ Next segment should be Patch Segment 4 — Closing Note and Global Tone Cleanup 
 
 Checkpoint noted: Segment 3 was applied and pushed, with Section 9 replaced and the ownership/KPI/action-plan material added. 
 
-LAW Firm Abdulaziz Bin Ali & Pa…
+LAW Firm Abdulaziz Bin Ali & Paâ€¦
 
 Below is Patch Segment 4. It covers the Closing Note and the global tone / risky-language cleanup rules to apply across the report.
 
 Edit
-Patch Segment 4 — Closing Note and Global Tone / Risky-Language Cleanup
+Patch Segment 4 â€” Closing Note and Global Tone / Risky-Language Cleanup
 4A. Replacement Closing Note
 Closing Note
 
-Abdulaziz Bin Ali & Partners Law Firm has a credible public platform and visible strengths that can support further growth. The firm’s Saudi identity, Al-Khobar base, disputes and arbitration capability, China Desk, sector coverage, public client profile, and legal updates all provide a strong foundation for the next stage of market positioning.
+Abdulaziz Bin Ali & Partners Law Firm has a credible public platform and visible strengths that can support further growth. The firmâ€™s Saudi identity, Al-Khobar base, disputes and arbitration capability, China Desk, sector coverage, public client profile, and legal updates all provide a strong foundation for the next stage of market positioning.
 
-The firm does not need to change its core identity. It should not abandon its full-service Saudi platform, and it should not reposition itself as a narrow boutique. The stronger approach is to make the firm’s signature entry points more visible while connecting those entry points to the firm’s broader advisory capability.
+The firm does not need to change its core identity. It should not abandon its full-service Saudi platform, and it should not reposition itself as a narrow boutique. The stronger approach is to make the firmâ€™s signature entry points more visible while connecting those entry points to the firmâ€™s broader advisory capability.
 
-The main strategic issue is visibility risk. The firm’s capability must be easier for clients, foreign investors, institutional clients, and referral law firms to understand, verify, and trust. This requires clearer lawyer profiles, stronger proof of experience, more focused sector pages, better China Desk materials, more structured advisory pathways, and legal updates that connect directly to client risks and instruction opportunities.
+The main strategic issue is visibility risk. The firmâ€™s capability must be easier for clients, foreign investors, institutional clients, and referral law firms to understand, verify, and trust. This requires clearer lawyer profiles, stronger proof of experience, more focused sector pages, better China Desk materials, more structured advisory pathways, and legal updates that connect directly to client risks and instruction opportunities.
 
-The recommended next step is for the founding partner and senior management to select a small number of priorities for immediate implementation. These should include the firm’s signature entry points, the Representative Experience Bank, priority lawyer-profile updates, the China-Saudi Corridor strategy, disputes and arbitration positioning, and the legal updates calendar.
+The recommended next step is for the founding partner and senior management to select a small number of priorities for immediate implementation. These should include the firmâ€™s signature entry points, the Representative Experience Bank, priority lawyer-profile updates, the China-Saudi Corridor strategy, disputes and arbitration positioning, and the legal updates calendar.
 
 Execution discipline will be essential. Each initiative should have an executive sponsor, responsible practice lead, defined output, timeline, and review cadence. Where the initiative requires collaboration across practice groups, leadership should make ownership, recognition, and accountability clear.
 
-The firm should begin with focused implementation rather than broad activity. A smaller number of well-executed initiatives will create more value than a long list of recommendations with no clear owner. The objective is to make the firm’s strongest capabilities more visible, more evidence-backed, and more directly connected to sustainable institutional client relationships.
+The firm should begin with focused implementation rather than broad activity. A smaller number of well-executed initiatives will create more value than a long list of recommendations with no clear owner. The objective is to make the firmâ€™s strongest capabilities more visible, more evidence-backed, and more directly connected to sustainable institutional client relationships.
 
 4B. Global Tone Cleanup Rules
 
@@ -1689,23 +1689,23 @@ signature entry points supported by an integrated full-service Saudi legal platf
 
 Preferred framing:
 
-“The firm should lead with visible signature strengths while preserving its full-service Saudi identity.”
+â€œThe firm should lead with visible signature strengths while preserving its full-service Saudi identity.â€
 
-“Each advisory mandate should operate as an entry point into broader firm capability.”
+â€œEach advisory mandate should operate as an entry point into broader firm capability.â€
 
-“The China Desk should be positioned as a specialist corridor into the firm’s wider Saudi law platform.”
+â€œThe China Desk should be positioned as a specialist corridor into the firmâ€™s wider Saudi law platform.â€
 
-“The firm should present Al-Khobar as a sector advantage, not a geographic constraint.”
+â€œThe firm should present Al-Khobar as a sector advantage, not a geographic constraint.â€
 
 Avoid:
 
-“The firm should become a boutique.”
+â€œThe firm should become a boutique.â€
 
-“The firm should narrow its practice.”
+â€œThe firm should narrow its practice.â€
 
-“The firm should productize all services.”
+â€œThe firm should productize all services.â€
 
-“The firm should sell legal products.”
+â€œThe firm should sell legal products.â€
 
 3. Avoid overclaiming
 
@@ -1714,12 +1714,12 @@ The report should remain credible and defensible. Avoid claims that require inte
 Avoid or qualify:
 
 Risky wording	Safer wording
-“The firm is a leading authority on SCCA arbitration”	“The firm should strengthen visible arbitration capability, including SCCA-related client materials where supported by experience”
-“The firm has deep Riyadh relationships”	“The firm should make Riyadh-linked and national capability more visible where supported by experience”
-“The firm’s China Desk dominates China-Saudi work”	“The China Desk is a visible differentiator that can be developed into a stronger China-Saudi corridor”
-“The firm has best-in-market expertise”	“The firm should make its relevant experience easier to verify”
-“The firm’s compensation model discourages collaboration”	“Leadership should review how collaboration, cross-referrals, and shared origination are recognized, where relevant to the firm’s existing model”
-“The firm must restructure internally”	“The firm should consider clearer ownership, working groups, and review cadence for cross-practice initiatives”
+â€œThe firm is a leading authority on SCCA arbitrationâ€	â€œThe firm should strengthen visible arbitration capability, including SCCA-related client materials where supported by experienceâ€
+â€œThe firm has deep Riyadh relationshipsâ€	â€œThe firm should make Riyadh-linked and national capability more visible where supported by experienceâ€
+â€œThe firmâ€™s China Desk dominates China-Saudi workâ€	â€œThe China Desk is a visible differentiator that can be developed into a stronger China-Saudi corridorâ€
+â€œThe firm has best-in-market expertiseâ€	â€œThe firm should make its relevant experience easier to verifyâ€
+â€œThe firmâ€™s compensation model discourages collaborationâ€	â€œLeadership should review how collaboration, cross-referrals, and shared origination are recognized, where relevant to the firmâ€™s existing modelâ€
+â€œThe firm must restructure internallyâ€	â€œThe firm should consider clearer ownership, working groups, and review cadence for cross-practice initiativesâ€
 4. Keep AI references controlled
 
 The report may acknowledge that the review was AI-assisted, but it should not sound like an AI sales pitch or software implementation proposal.
@@ -1738,7 +1738,7 @@ Avoid:
 
 exaggerated AI claims;
 
-“AI will transform everything” language;
+â€œAI will transform everythingâ€ language;
 
 implying that AI replaces lawyer judgment;
 
@@ -1746,17 +1746,17 @@ implying that the firm should automate sensitive legal work without controls.
 
 Preferred framing:
 
-“technology-enabled legal delivery”;
+â€œtechnology-enabled legal deliveryâ€;
 
-“controlled use of legal technology”;
+â€œcontrolled use of legal technologyâ€;
 
-“lawyer-led review”;
+â€œlawyer-led reviewâ€;
 
-“source verification”;
+â€œsource verificationâ€;
 
-“confidentiality and professional safeguards”;
+â€œconfidentiality and professional safeguardsâ€;
 
-“process discipline for repeatable work.”
+â€œprocess discipline for repeatable work.â€
 
 5. Use client-confidence language
 
@@ -1764,35 +1764,35 @@ Where the report discusses advisory mandates, use language that explains why str
 
 Preferred phrases:
 
-“instruction clarity”;
+â€œinstruction clarityâ€;
 
-“defined scope”;
+â€œdefined scopeâ€;
 
-“clear deliverables”;
+â€œclear deliverablesâ€;
 
-“responsible lawyer”;
+â€œresponsible lawyerâ€;
 
-“expected timeline”;
+â€œexpected timelineâ€;
 
-“client confidence”;
+â€œclient confidenceâ€;
 
-“escalation pathway into broader legal support”;
+â€œescalation pathway into broader legal supportâ€;
 
-“relationship partner”;
+â€œrelationship partnerâ€;
 
-“practice group support.”
+â€œpractice group support.â€
 
 Avoid language that makes legal work sound like a commodity:
 
-“off-the-shelf product”;
+â€œoff-the-shelf productâ€;
 
-“buy now”;
+â€œbuy nowâ€;
 
-“sales package”;
+â€œsales packageâ€;
 
-“legal product”;
+â€œlegal productâ€;
 
-“retail-style offering.”
+â€œretail-style offering.â€
 
 6. Make ownership practical
 
@@ -1818,11 +1818,11 @@ quarterly leadership review.
 
 Avoid generic phrasing such as:
 
-“the firm should improve this” without owner;
+â€œthe firm should improve thisâ€ without owner;
 
-“the firm should consider” without next step;
+â€œthe firm should considerâ€ without next step;
 
-“management should review” without output.
+â€œmanagement should reviewâ€ without output.
 
 7. Keep the tone senior and measured
 
@@ -1830,31 +1830,31 @@ The critique and transcript files use strong language, analogies, and dramatic f
 
 Avoid phrases such as:
 
-“existential threat” unless used sparingly;
+â€œexistential threatâ€ unless used sparingly;
 
-“adapt or die”;
+â€œadapt or dieâ€;
 
-“software sales deck”;
+â€œsoftware sales deckâ€;
 
-“productization” as a headline;
+â€œproductizationâ€ as a headline;
 
-“catastrophic visibility failure”;
+â€œcatastrophic visibility failureâ€;
 
-“robots are coming for the work.”
+â€œrobots are coming for the work.â€
 
 Use instead:
 
-“competitive pressure”;
+â€œcompetitive pressureâ€;
 
-“visibility risk”;
+â€œvisibility riskâ€;
 
-“market legibility”;
+â€œmarket legibilityâ€;
 
-“technology-enabled pressure”;
+â€œtechnology-enabled pressureâ€;
 
-“repeatable work may face pricing pressure”;
+â€œrepeatable work may face pricing pressureâ€;
 
-“the firm should strengthen proof of experience.”
+â€œthe firm should strengthen proof of experience.â€
 
 4C. Global Risky-Language Cleanup Checklist
 
@@ -1887,21 +1887,21 @@ includes the revised Executive Summary;
 
 includes the Strategic Pillars for Implementation before Section 8;
 
-uses “visibility risk” as the central diagnosis;
+uses â€œvisibility riskâ€ as the central diagnosis;
 
-uses “signature entry points + integrated full-service Saudi legal platform” as the core strategic model;
+uses â€œsignature entry points + integrated full-service Saudi legal platformâ€ as the core strategic model;
 
 avoids software-sales, retail, or generic consulting vocabulary;
 
-preserves the firm’s full-service identity;
+preserves the firmâ€™s full-service identity;
 
 elevates the China Desk into the China-Saudi Corridor strategy;
 
 frames Al-Khobar as a sector platform, not a limitation;
 
-replaces “client segmentation” with “Institutional Client Matrix”;
+replaces â€œclient segmentationâ€ with â€œInstitutional Client Matrixâ€;
 
-replaces “service packages” with “defined advisory mandates” or “integrated advisory offerings”;
+replaces â€œservice packagesâ€ with â€œdefined advisory mandatesâ€ or â€œintegrated advisory offeringsâ€;
 
 upgrades Section 9 into a partner-led action plan;
 
@@ -1921,7 +1921,7 @@ risky-language cleanup checklist;
 
 final consistency checks.
 
-After this, the next logical step is to convert approved Segments 1–4 into precise FIND / REPLACE patch instructions.
+After this, the next logical step is to convert approved Segments 1â€“4 into precise FIND / REPLACE patch instructions.
 
 ---
 
@@ -1944,9 +1944,9 @@ Segment 2	Section 7 and Section 8 Terminology Upgrades	Applied	54c1dfa
 Segment 3	Section 9 Action Plan, Ownership, KPIs, Execution Discipline	Applied	149ae4d
 Segment 4	Closing Note and Global Tone / Risky-Language Cleanup	Applied	ee9024c
 
-The latest checkpoint confirms that the report now includes the revised Executive Summary, strategic pillars, upgraded Sections 7–9, partner-ready Closing Note, and global tone cleanup. 
+The latest checkpoint confirms that the report now includes the revised Executive Summary, strategic pillars, upgraded Sections 7â€“9, partner-ready Closing Note, and global tone cleanup. 
 
-LAW Firm Abdulaziz Bin Ali & Pa…
+LAW Firm Abdulaziz Bin Ali & Paâ€¦
 
 Next required step
 
@@ -1960,9 +1960,9 @@ duplicate language introduced by patched sections;
 
 remaining instances of risky vocabulary;
 
-consistency of “China Desk” vs “China-Saudi Corridor”;
+consistency of â€œChina Deskâ€ vs â€œChina-Saudi Corridorâ€;
 
-consistency of “advisory mandate / advisory offering / advisory pathway”;
+consistency of â€œadvisory mandate / advisory offering / advisory pathwayâ€;
 
 whether Section 10 still matches the upgraded report;
 
@@ -1983,7 +1983,7 @@ Confirmation
 
 I read the full final Markdown file directly from the mounted sandbox path, not by chunk search:
 
-/mnt/data/Strategic_Competitor_Readiness_Report_1(1).md
+/mnt/data/Strategic_Competitor_Readiness_Report(1).md
 
 Validation details:
 
@@ -1996,23 +1996,23 @@ SHA-256	d50549b8ddb54bd4515b8f161fd7af35b4a5228a516429a6a1a558a225bb30a8
 
 I also compared the final file against the recommendation checklist derived from the Critique, Deep Dive, and Debate files. 
 
-Critique - Report 1 Strategic C…
+Critique - Report 1 Strategic Câ€¦
 
  
 
-Deep Dive - Report 1 Strategic …
+Deep Dive - Report 1 Strategic â€¦
 
  
 
-Debate - Report 1 Strategic Com…
+Debate - Report 1 Strategic Comâ€¦
 
  The final report file reviewed is the attached final English report. 
 
-Strategic_Competitor_Readiness_…
+Strategic_Competitor_Readiness_â€¦
 
 Main finding
 
-Yes — the material recommendations from the Critique, Deep Dive, and Debate have been successfully applied.
+Yes â€” the material recommendations from the Critique, Deep Dive, and Debate have been successfully applied.
 
 No further substantive patch is required before Arabic translation.
 
@@ -2020,9 +2020,9 @@ Validation by recommendation area
 1. Critique recommendations
 Critique recommendation	Final report status
 Replace generic corporate-consulting vocabulary with law-firm leadership language	Applied
-Avoid “software sales deck” tone	Applied
-Replace “client segmentation” style language with law-firm relationship language	Applied
-Reframe “service packages” into more professional advisory language	Applied
+Avoid â€œsoftware sales deckâ€ tone	Applied
+Replace â€œclient segmentationâ€ style language with law-firm relationship language	Applied
+Reframe â€œservice packagesâ€ into more professional advisory language	Applied
 Organize findings around strategic themes / pillars	Applied
 Address internal partnership execution hurdles	Applied
 Add ownership, cross-practice coordination, and partner accountability	Applied
@@ -2032,7 +2032,7 @@ The report now uses terms such as Institutional Client Matrix, defined advisory 
 
 2. Deep Dive recommendations
 Deep Dive recommendation	Final report status
-Make “visibility risk” the central diagnosis	Applied
+Make â€œvisibility riskâ€ the central diagnosis	Applied
 Treat Al-Khobar as a strategic sector platform, not merely a location	Applied
 Recognize Riyadh / national visibility risk	Applied
 Elevate China Desk into a China-Saudi Corridor strategy	Applied
@@ -2043,7 +2043,7 @@ Add structured advisory pathways with scope, deliverables, owners, and escalatio
 Add phased implementation: 90 days, 6 months, 12 months	Applied
 Add capacity and operational-support warning	Applied
 
-The report now explicitly uses visibility risk as the core issue and explains that the firm’s strongest capabilities must be made clearer, more specific, and more evidence-backed.
+The report now explicitly uses visibility risk as the core issue and explains that the firmâ€™s strongest capabilities must be made clearer, more specific, and more evidence-backed.
 
 3. Debate recommendations
 Debate recommendation	Final report status
@@ -2051,7 +2051,7 @@ Do not over-specialize the firm into a narrow boutique	Applied
 Preserve the full-service Saudi platform	Applied
 Use signature strengths as entry points, not silos	Applied
 Position China Desk as a front door into broader firm capability	Applied
-Avoid commoditizing legal work through retail-style “products”	Applied
+Avoid commoditizing legal work through retail-style â€œproductsâ€	Applied
 Use structured mandates without weakening integrated legal support	Applied
 Link PDPL, China-Saudi, arbitration, and sector offerings to broader practice support	Applied
 Present thought leadership as both proof of expertise and instruction pathway	Applied
@@ -2060,7 +2060,7 @@ The final strategic model is now clear:
 
 Signature entry points supported by an integrated full-service Saudi legal platform.
 
-That directly resolves the Debate’s core tension between specialization and full-service strength.
+That directly resolves the Debateâ€™s core tension between specialization and full-service strength.
 
 Full-file structural validation
 
@@ -2068,20 +2068,20 @@ The final report preserves the correct structure:
 
 Structure item	Status
 Formal title page at start	Confirmed
-Section 1 — Cover Page	Confirmed
-Section 2 — Disclosure and Basis of Review	Confirmed
-Section 3 — Executive Summary	Confirmed, upgraded
-Section 4 — Public Profile of the Firm	Confirmed
-Section 5 — What the Firm Is Doing Well	Confirmed
-Section 6 — Competitive Risks	Confirmed
-Section 7 — Improvement Areas	Confirmed, upgraded
+Section 1 â€” Cover Page	Confirmed
+Section 2 â€” Disclosure and Basis of Review	Confirmed
+Section 3 â€” Executive Summary	Confirmed, upgraded
+Section 4 â€” Public Profile of the Firm	Confirmed
+Section 5 â€” What the Firm Is Doing Well	Confirmed
+Section 6 â€” Competitive Risks	Confirmed
+Section 7 â€” Improvement Areas	Confirmed, upgraded
 Strategic Pillars for Implementation before Section 8	Confirmed
-Section 8 — Recommended Strategic Initiatives	Confirmed, upgraded
-Section 9 — Partner-Led Action Plan	Confirmed, upgraded
-Section 10 — Appendix: Sources Reviewed	Confirmed
+Section 8 â€” Recommended Strategic Initiatives	Confirmed, upgraded
+Section 9 â€” Partner-Led Action Plan	Confirmed, upgraded
+Section 10 â€” Appendix: Sources Reviewed	Confirmed
 Closing Note	Confirmed, upgraded
 
-The standalone heading “Strategic Pillars for Implementation” appears intentionally between Sections 7 and 8. It is structurally acceptable. No blocking issue.
+The standalone heading â€œStrategic Pillars for Implementationâ€ appears intentionally between Sections 7 and 8. It is structurally acceptable. No blocking issue.
 
 Risky-language validation
 
@@ -2156,7 +2156,7 @@ Final double-check result
 
 I read the full attached Markdown file directly from the mounted sandbox path:
 
-/mnt/data/Strategic_Competitor_Readiness_Report_1(2).md
+/mnt/data/Strategic_Competitor_Readiness_Report(2).md
 
 I did not rely on chunk search for the validation.
 
@@ -2172,7 +2172,7 @@ Consecutive bullet items separated by blank lines	0 found
 
 The uploaded file is the latest final English report for this check. 
 
-Strategic_Competitor_Readiness_…
+Strategic_Competitor_Readiness_â€¦
 
 Recommendation application check
 
@@ -2222,27 +2222,27 @@ The report structure is intact:
 
 Title page
 
-Section 1 — Cover Page
+Section 1 â€” Cover Page
 
-Section 2 — Disclosure and Basis of Review
+Section 2 â€” Disclosure and Basis of Review
 
-Section 3 — Executive Summary
+Section 3 â€” Executive Summary
 
-Section 4 — Public Profile of the Firm
+Section 4 â€” Public Profile of the Firm
 
-Section 5 — What the Firm Is Doing Well
+Section 5 â€” What the Firm Is Doing Well
 
-Section 6 — Competitive Risks
+Section 6 â€” Competitive Risks
 
-Section 7 — Improvement Areas
+Section 7 â€” Improvement Areas
 
 Strategic Pillars for Implementation
 
-Section 8 — Recommended Strategic Initiatives
+Section 8 â€” Recommended Strategic Initiatives
 
-Section 9 — Partner-Led Action Plan
+Section 9 â€” Partner-Led Action Plan
 
-Section 10 — Appendix: Sources Reviewed
+Section 10 â€” Appendix: Sources Reviewed
 
 Closing Note
 
@@ -2251,15 +2251,15 @@ One issue found: encoding artifact
 There is one technical cleanup issue before translation/final distribution:
 
 Artifact	Count
-â€™	106
+Ã¢â‚¬â„¢	106
 
 Example shown in the file:
 
-firmâ€™s
+firmÃ¢â‚¬â„¢s
 
-Saudi Arabiaâ€™s
+Saudi ArabiaÃ¢â‚¬â„¢s
 
-teamâ€™s
+teamÃ¢â‚¬â„¢s
 
 This is mojibake from a curly apostrophe. It should be corrected globally.
 
@@ -2267,11 +2267,11 @@ Required final cleanup
 
 Replace:
 
-â€™
+Ã¢â‚¬â„¢
 
 with either:
 
-’
+â€™
 
 or, safer for Markdown portability:
 
@@ -2283,7 +2283,7 @@ Final conclusion
 
 The report is substantively complete and recommendation-compliant. The bullet-spacing cleanup succeeded.
 
-Before Arabic translation, fix the â€™ encoding artifact globally. After that, the English source will be ready for complete Arabic translation.
+Before Arabic translation, fix the Ã¢â‚¬â„¢ encoding artifact globally. After that, the English source will be ready for complete Arabic translation.
 
 ---
 
@@ -2300,11 +2300,11 @@ Final confirmation
 
 I read the full file directly from the mounted sandbox path:
 
-/mnt/data/Strategic_Competitor_Readiness_Report_1(3).md
+/mnt/data/Strategic_Competitor_Readiness_Report(3).md
 
 Attached final English file reviewed: 
 
-Strategic_Competitor_Readiness_…
+Strategic_Competitor_Readiness_â€¦
 
 Full-file validation results
 Check	Result
@@ -2316,35 +2316,35 @@ SHA-256	9b8cf76868289fbd033c483e3bc6a10feab5a92d855b8efc105feeb6f55175d4
 Bullet-spacing cleanup	Passed
 Blank lines between consecutive bullets	0
 Blank lines between consecutive numbered items	0
-Apostrophe mojibake â€™	0
-Other mojibake markers Â, Ã, â, �	0
+Apostrophe mojibake Ã¢â‚¬â„¢	0
+Other mojibake markers Ã‚, Ãƒ, Ã¢, ï¿½	0
 Structural confirmation
 
 The report structure is intact:
 
 Title page
 
-Section 1 — Cover Page
+Section 1 â€” Cover Page
 
-Section 2 — Disclosure and Basis of Review
+Section 2 â€” Disclosure and Basis of Review
 
-Section 3 — Executive Summary
+Section 3 â€” Executive Summary
 
-Section 4 — Public Profile of the Firm
+Section 4 â€” Public Profile of the Firm
 
-Section 5 — What the Firm Is Doing Well
+Section 5 â€” What the Firm Is Doing Well
 
-Section 6 — Competitive Risks
+Section 6 â€” Competitive Risks
 
-Section 7 — Improvement Areas
+Section 7 â€” Improvement Areas
 
 Strategic Pillars for Implementation
 
-Section 8 — Recommended Strategic Initiatives
+Section 8 â€” Recommended Strategic Initiatives
 
-Section 9 — 90-Day, 6-Month, and 12-Month Partner-Led Action Plan
+Section 9 â€” 90-Day, 6-Month, and 12-Month Partner-Led Action Plan
 
-Section 10 — Appendix: Sources Reviewed
+Section 10 â€” Appendix: Sources Reviewed
 
 Closing Note
 
@@ -2440,9 +2440,9 @@ Retry
 
 No additional logs are needed.
 
-The progress file is sufficient. It confirms the issue was not with the English report or the patching process; the block happened at STEP 11, where the Arabic-only translation response timed out with: “Message delivery timed out. Please try again.” It also confirms that no Arabic Markdown translation was received and that the Chinese translation was not sent. 
+The progress file is sufficient. It confirms the issue was not with the English report or the patching process; the block happened at STEP 11, where the Arabic-only translation response timed out with: â€œMessage delivery timed out. Please try again.â€ It also confirms that no Arabic Markdown translation was received and that the Chinese translation was not sent. 
 
-LAW Firm Abdulaziz Bin Ali & Pa…
+LAW Firm Abdulaziz Bin Ali & Paâ€¦
 
 Likely cause
 
@@ -2483,10 +2483,10 @@ That should avoid the timeout issue.
 
 Created the complete Arabic-only Markdown translation from the attached final English report.
 
-Strategic_Competitor_Readiness_…
+Strategic_Competitor_Readiness_â€¦
 
 Download it here:
 
-Strategic_Competitor_Readiness_Report_1_AR.md
+Strategic_Competitor_Readiness_Report_AR.md
 
 I preserved the Markdown heading levels, numbering, bullets, tables, and report structure. No Chinese translation was included.

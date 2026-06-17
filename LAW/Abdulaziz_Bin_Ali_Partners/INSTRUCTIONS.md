@@ -1,4 +1,4 @@
-# START - be patient and wait for each steps - set a 5 mins heartbeat so you can go offline whenever there is too much delay.
+﻿# START - be patient and wait for each steps - set a 5 mins heartbeat so you can go offline whenever there is too much delay.
 * Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, copy and paste Product 1 Competitor Readiness content into the composer and ask the assistant to provide Image 1 Prompt - assistant already have the requirements.
 * Connect to https://labs.google/fx/tools/flow/project/1eede739-b968-4870-bbb0-ff1e785f6c4a, ensure the Image, 1:1 aspect ratio, 1x image generated, Nano Banana 2 are selected before you paste the Image 1 Prompt into the composer and  you click submit button. Upscale to 2K before download.
 * Go to the stan.store link and upload the downloaded 2K Image 1 into the Thumbnail section - you already know the workflow.
@@ -35,16 +35,16 @@ A strategic competitor-readiness report that shows where your business stands, w
 **Short Description**
 A strategic external diagnostic that reviews your market position, visible strengths, competitor pressure, public proof assets, and growth-readiness gaps. Built for leadership teams that need a clear view of where they stand and what should be improved next.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Professional services firms, law firms, consultants, agencies, B2B companies, and leadership teams preparing for stronger competition or market repositioning.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Strategic competitor-readiness report.
 * Public-profile review.
@@ -96,16 +96,16 @@ A leadership-ready briefing that turns a strategic report into clear decisions, 
 **Short Description**
 A concise executive briefing prepared from a strategic report, audit, or diagnostic. It turns dense findings into a leadership-ready summary with key issues, recommended decisions, and immediate action points.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Founders, managing partners, executives, senior management teams, board members, and decision-makers who need a faster way to review strategic findings.
 
 **Delivery Timeline**
-3–5 business days.
+3â€“5 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Executive summary briefing.
 * Key findings.
@@ -156,16 +156,16 @@ A public-profile audit that shows how your business appears to clients, competit
 **Short Description**
 A strategic audit of your public-facing business presence. It reviews how clearly your expertise, services, leadership, proof, and market position appear to outside decision-makers.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Law firms, consultants, professional services firms, agencies, founders, and B2B companies that rely on trust before a client makes contact.
 
 **Delivery Timeline**
-5–7 business days.
+5â€“7 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Public-profile audit.
 * Website and service-page review.
@@ -216,16 +216,16 @@ A strategic positioning package that defines your strongest message, audience, p
 **Short Description**
 A positioning package that defines how your business should present itself to the market. It clarifies your strongest offer, target audience, proof points, differentiation, and messaging direction.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Professional services firms, advisory businesses, law firms, consultants, agencies, B2B companies, and founders repositioning for higher-value clients.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Positioning statement.
 * Signature strengths.
@@ -277,16 +277,16 @@ A proof-of-experience asset bank that turns past work into usable credibility fo
 **Short Description**
 A structured internal library of approved experience examples, case summaries, proof points, and capability statements that can be reused across marketing, proposals, profiles, and client-development materials.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Law firms, consultants, agencies, advisory firms, B2B service providers, and organizations with valuable experience that is not clearly documented.
 
 **Delivery Timeline**
-5–8 business days after source material is provided.
+5â€“8 business days after source material is provided.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Experience-bank framework.
 * Anonymized experience examples.
@@ -338,16 +338,16 @@ A conversion-ready website structure that turns strategy, services, proof, and C
 **Short Description**
 A strategic website-architecture package that maps your core pages, service pathways, proof sections, CTAs, and user journey so visitors can understand your value and take the next action.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Professional services firms, agencies, consultants, law firms, B2B companies, and founders whose website does not clearly convert expertise into inquiries.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Recommended website structure.
 * Page hierarchy.
@@ -399,16 +399,16 @@ A thought-leadership system that turns articles, updates, and insights into clie
 **Short Description**
 A content-to-origination system that maps expert updates, client risks, service pathways, responsible experts, and CTAs into a practical thought-leadership engine.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Law firms, consultants, agencies, B2B experts, advisory firms, and professional services teams that publish content but do not convert it into inquiries.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Thought-leadership strategy map.
 * 90-day topic calendar.
@@ -460,16 +460,16 @@ A referral-readiness package that helps partners, firms, and institutional conta
 **Short Description**
 A practical referral-readiness package that prepares your business to receive, explain, and convert referral opportunities from partners, professional networks, international firms, or institutional contacts.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Law firms, consultants, professional services firms, agencies, advisory businesses, and B2B providers that rely on referrals or strategic partner networks.
 
 **Delivery Timeline**
-5–7 business days.
+5â€“7 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Referral profile.
 * Capability one-pager.
@@ -521,16 +521,16 @@ A sector-positioning package that shows clients you understand their industry, r
 **Short Description**
 A sector-authority package that builds industry-specific positioning, service pathways, proof points, and content angles for the sectors your business wants to win.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Law firms, consultants, agencies, B2B companies, industrial service providers, healthcare suppliers, logistics firms, construction businesses, and technology providers.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Sector positioning map.
 * Sector risk summary.
@@ -582,16 +582,16 @@ An internal-readiness audit that checks whether your operations can support your
 **Short Description**
 An internal-readiness audit that reviews how your team, workflows, systems, client-development process, and execution structure support your strategic goals.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Founders, managing partners, executives, professional services firms, agencies, and B2B businesses preparing for growth, repositioning, or operational improvement.
 
 **Delivery Timeline**
-10–15 business days after source material is provided.
+10â€“15 business days after source material is provided.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Operational-readiness review.
 * Internal workflow observations.
@@ -643,16 +643,16 @@ A phased execution roadmap that converts strategic recommendations into owners, 
 **Short Description**
 A practical implementation roadmap that turns strategic findings into sequenced actions, ownership, timelines, KPIs, and review points.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Leadership teams, founders, managing partners, executives, and organizations that already have a strategy report but need execution discipline.
 
 **Delivery Timeline**
-5–7 business days.
+5â€“7 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * Phased roadmap.
 * Priority action list.
@@ -704,16 +704,16 @@ An AI-readiness report that identifies where AI can improve delivery, speed, qua
 **Short Description**
 A strategic AI-readiness and integration report that reviews where AI can support operations, content, research, workflow, client service, or delivery while protecting quality and control.
 
-**Who It’s For**
+**Who Itâ€™s For**
 Professional services firms, agencies, consultants, law firms, B2B companies, and leadership teams exploring AI adoption without losing governance or quality.
 
 **Delivery Timeline**
-7–10 business days.
+7â€“10 business days.
 
 **Revisions**
 1 revision round included.
 
-**What’s in the Box**
+**Whatâ€™s in the Box**
 
 * AI-readiness assessment.
 * Workflow opportunity map.
@@ -740,7 +740,7 @@ AI Deployments & Automation; Operational Audit; Enterprise Growth Systems.
 **Refund / scope notes:**
 Non-refundable once analysis begins. Does not include custom software, model training, legal compliance certification, or live automation deployment unless separately purchased.
 
-# Phase 5 — Product connection plan for Report 1
+# Phase 5 â€” Product connection plan for Report 1
 
 I reviewed the final product URLs you attached. The catalog now has all 12 product URLs needed for Report 1 connection. 
 
@@ -755,9 +755,9 @@ Use all 12 products, but not all with equal visual weight.
 | Priority | Product                  | URL                                                    | Role                                                            |
 | -------: | ------------------------ | ------------------------------------------------------ | --------------------------------------------------------------- |
 |        1 | **Executive Briefing**   | `https://stan.store/ZYNE_store/p/executive-briefing`   | Primary next step after reading the report                      |
-|        2 | **Competitor Readiness** | `https://stan.store/ZYNE_store/p/competitor-readiness` | “Order this type of report” product                             |
+|        2 | **Competitor Readiness** | `https://stan.store/ZYNE_store/p/competitor-readiness` | â€œOrder this type of reportâ€ product                             |
 |        3 | **Growth Roadmap**       | `https://stan.store/ZYNE_store/p/growth-roadmap`       | Converts recommendations into execution                         |
-|        4 | **Visibility Audit**     | `https://stan.store/ZYNE_store/p/visibility-audit`     | Directly tied to the report’s central visibility-risk diagnosis |
+|        4 | **Visibility Audit**     | `https://stan.store/ZYNE_store/p/visibility-audit`     | Directly tied to the reportâ€™s central visibility-risk diagnosis |
 |        5 | **Market Positioning**   | `https://stan.store/ZYNE_store/p/market-positioning`   | Tied to signature entry points and positioning clarity          |
 |        6 | **Experience Bank**      | `https://stan.store/ZYNE_store/p/experience-bank`      | Tied to proof-of-experience gaps                                |
 |        7 | **Web Architecture**     | `https://stan.store/ZYNE_store/p/web-architecture`     | Tied to practice pages, sector pages, website pathways          |
@@ -773,11 +773,11 @@ Use all 12 products, but not all with equal visual weight.
 
 Do **not** overload the top of the page with all 12 products. The best structure is:
 
-1. **Hero CTAs** — only high-level actions.
-2. **Executive Summary CTA** — leadership action.
-3. **Contextual section CTAs** — placed after the relevant report sections.
-4. **Bottom pathway cards** — all major implementation routes.
-5. **Closing CTA** — final conversion point.
+1. **Hero CTAs** â€” only high-level actions.
+2. **Executive Summary CTA** â€” leadership action.
+3. **Contextual section CTAs** â€” placed after the relevant report sections.
+4. **Bottom pathway cards** â€” all major implementation routes.
+5. **Closing CTA** â€” final conversion point.
 
 ---
 
@@ -798,13 +798,13 @@ Keep these. Add **one commercial CTA** only.
 
 | Placement                                  | Product            | CTA text                    | URL                                                  |
 | ------------------------------------------ | ------------------ | --------------------------- | ---------------------------------------------------- |
-| Hero action row, after “Executive Summary” | Executive Briefing | **Book Executive Briefing** | `https://stan.store/ZYNE_store/p/executive-briefing` |
+| Hero action row, after â€œExecutive Summaryâ€ | Executive Briefing | **Book Executive Briefing** | `https://stan.store/ZYNE_store/p/executive-briefing` |
 
 ### Why
 
-The reader is on a client-specific strategic report. The most natural next action is not “buy everything.” It is:
+The reader is on a client-specific strategic report. The most natural next action is not â€œbuy everything.â€ It is:
 
-> “Brief leadership on the findings.”
+> â€œBrief leadership on the findings.â€
 
 This also works on mobile if added to the hero button stack.
 
@@ -818,7 +818,7 @@ The utility section should remain mostly informational. Do **not** add too many 
 
 | Placement                  | Product              | CTA text                                | URL                                                    |
 | -------------------------- | -------------------- | --------------------------------------- | ------------------------------------------------------ |
-| Under “Report Status” card | Competitor Readiness | **Order a Competitor Readiness Report** | `https://stan.store/ZYNE_store/p/competitor-readiness` |
+| Under â€œReport Statusâ€ card | Competitor Readiness | **Order a Competitor Readiness Report** | `https://stan.store/ZYNE_store/p/competitor-readiness` |
 
 ### Why
 
@@ -826,7 +826,7 @@ This section explains what the page is. That is the right place to let other vis
 
 ---
 
-## C. After Section 3 — Executive Summary
+## C. After Section 3 â€” Executive Summary
 
 Insert a small CTA block immediately after the Executive Summary and before the in-report Table of Contents.
 
@@ -841,7 +841,7 @@ The Executive Summary is where leadership understands the strategic issue. The c
 
 ---
 
-## D. After Section 4.7 — Legal Updates and Thought Leadership
+## D. After Section 4.7 â€” Legal Updates and Thought Leadership
 
 | Placement                                        | Product            | CTA text                                          | URL                                                  |
 | ------------------------------------------------ | ------------------ | ------------------------------------------------- | ---------------------------------------------------- |
@@ -853,7 +853,7 @@ Section 4.7 explains that legal updates should become business-development asset
 
 ---
 
-## E. After Section 5.7 — Summary of Current Strengths
+## E. After Section 5.7 â€” Summary of Current Strengths
 
 | Placement                                | Product            | CTA text                           | URL                                                  |
 | ---------------------------------------- | ------------------ | ---------------------------------- | ---------------------------------------------------- |
@@ -866,7 +866,7 @@ Section 5 identifies what the firm already does well. The commercial opportunity
 
 ---
 
-## F. After Section 6.7 — Risk Summary
+## F. After Section 6.7 â€” Risk Summary
 
 | Placement                 | Product           | CTA text                          | URL                                                 |
 | ------------------------- | ----------------- | --------------------------------- | --------------------------------------------------- |
@@ -879,7 +879,7 @@ Section 6 discusses competitive risks. The right CTA is not only external market
 
 ---
 
-## G. After Section 7.8 — Summary of Improvement Areas
+## G. After Section 7.8 â€” Summary of Improvement Areas
 
 | Placement                                | Product          | CTA text                      | URL                                                |
 | ---------------------------------------- | ---------------- | ----------------------------- | -------------------------------------------------- |
@@ -904,7 +904,7 @@ This is a natural bridge between strategy and execution. One CTA is enough.
 
 ---
 
-## I. After Section 8.2 — Sector-Focused Advisory Platforms
+## I. After Section 8.2 â€” Sector-Focused Advisory Platforms
 
 | Placement                                     | Product          | CTA text                         | URL                                                |
 | --------------------------------------------- | ---------------- | -------------------------------- | -------------------------------------------------- |
@@ -916,7 +916,7 @@ This is the exact section that explains the need for sector-focused platforms.
 
 ---
 
-## J. After Section 8.3 — China-Saudi Corridor Strategy
+## J. After Section 8.3 â€” China-Saudi Corridor Strategy
 
 | Placement                                 | Product            | CTA text                           | URL                                                  |
 | ----------------------------------------- | ------------------ | ---------------------------------- | ---------------------------------------------------- |
@@ -929,7 +929,7 @@ The China-Saudi strategy needs both positioning and referral-readiness materials
 
 ---
 
-## K. After Section 8.7 — Partner-Led Origination Materials
+## K. After Section 8.7 â€” Partner-Led Origination Materials
 
 | Placement                                     | Product         | CTA text                              | URL                                               |
 | --------------------------------------------- | --------------- | ------------------------------------- | ------------------------------------------------- |
@@ -942,7 +942,7 @@ This section directly discusses firm overview profiles, practice summaries, Chin
 
 ---
 
-## L. After Section 9.7 — Immediate Leadership Decisions
+## L. After Section 9.7 â€” Immediate Leadership Decisions
 
 | Placement                                  | Product            | CTA text                     | URL                                                  |
 | ------------------------------------------ | ------------------ | ---------------------------- | ---------------------------------------------------- |
@@ -957,20 +957,20 @@ This is the strongest final decision point inside the report body.
 
 ## M. Existing bottom pathway cards
 
-The bottom “From Analysis to Execution” pathway cards should become clickable. This is where the page can show the most product links without cluttering the report body.
+The bottom â€œFrom Analysis to Executionâ€ pathway cards should become clickable. This is where the page can show the most product links without cluttering the report body.
 
 Use these six cards:
 
 | Card label           | Product            | CTA inside card                |
 | -------------------- | ------------------ | ------------------------------ |
-| Visibility risk      | Visibility Audit   | **Explore Visibility Audit →** |
-| Proof gap            | Experience Bank    | **Build Experience Bank →**    |
-| Website clarity      | Web Architecture   | **Plan Web Architecture →**    |
-| Thought leadership   | Origination System | **Build Origination System →** |
-| Execution discipline | Growth Roadmap     | **Start Growth Roadmap →**     |
-| AI delivery pressure | AI Integration     | **Assess AI Integration →**    |
+| Visibility risk      | Visibility Audit   | **Explore Visibility Audit â†’** |
+| Proof gap            | Experience Bank    | **Build Experience Bank â†’**    |
+| Website clarity      | Web Architecture   | **Plan Web Architecture â†’**    |
+| Thought leadership   | Origination System | **Build Origination System â†’** |
+| Execution discipline | Growth Roadmap     | **Start Growth Roadmap â†’**     |
+| AI delivery pressure | AI Integration     | **Assess AI Integration â†’**    |
 
-### Replace current “Enterprise Growth Systems” card
+### Replace current â€œEnterprise Growth Systemsâ€ card
 
 Since the final URL list does not include Enterprise Growth Systems, use **Growth Roadmap** instead.
 
@@ -985,7 +985,7 @@ Use clickable cards:
   <span>Visibility risk</span>
   <strong>Visibility Audit</strong>
   <p>Audit how clearly the firm appears to clients, competitors, referral partners, and decision-makers.</p>
-  <em>Explore Visibility Audit →</em>
+  <em>Explore Visibility Audit â†’</em>
 </a>
 ```
 
@@ -1084,7 +1084,7 @@ Use no more than:
 
 * **1 commercial CTA in the hero**;
 * **1 product CTA in utility area**;
-* **7–9 contextual CTA blocks inside the report**;
+* **7â€“9 contextual CTA blocks inside the report**;
 * **6 clickable bottom pathway cards**;
 * **1 final CTA after Closing Note**.
 
@@ -1157,51 +1157,51 @@ The highest-priority CTA is **Executive Briefing**. The highest-priority impleme
 
 ### Publicly Available 36 Realistic Portraits
 
-1. **James B.** — `[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d)`
-2. **Sarah M.** — `[https://images.unsplash.com/photo-1494790108377-be9c29b29330](https://images.unsplash.com/photo-1494790108377-be9c29b29330)`
-3. **David K.** — `[https://images.unsplash.com/photo-1500648767791-00dcc994a43e](https://images.unsplash.com/photo-1500648767791-00dcc994a43e)`
-4. **Elena R.** — `[https://images.unsplash.com/photo-1438761681033-6461ffad8d80](https://images.unsplash.com/photo-1438761681033-6461ffad8d80)`
-5. **Marcus T.** — `[https://images.unsplash.com/photo-1539571696357-5a69c17a67c6](https://images.unsplash.com/photo-1539571696357-5a69c17a67c6)`
-6. **Chloe W.** — `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
-7. **Robert P.** — `[https://images.unsplash.com/photo-1522075469751-3a6694fb2f61](https://images.unsplash.com/photo-1522075469751-3a6694fb2f61)`
-8. **Maya L.** — `[https://images.unsplash.com/photo-1534528741775-53994a69daeb](https://images.unsplash.com/photo-1534528741775-53994a69daeb)`
-9. **Daniel G.** — `[https://images.unsplash.com/photo-1519085360753-af0119f7cbe7](https://images.unsplash.com/photo-1519085360753-af0119f7cbe7)`
-10. **Olivia S.** — `[https://images.unsplash.com/photo-1488426862026-3ee34a7d66df](https://images.unsplash.com/photo-1488426862026-3ee34a7d66df)`
+1. **James B.** â€” `[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d)`
+2. **Sarah M.** â€” `[https://images.unsplash.com/photo-1494790108377-be9c29b29330](https://images.unsplash.com/photo-1494790108377-be9c29b29330)`
+3. **David K.** â€” `[https://images.unsplash.com/photo-1500648767791-00dcc994a43e](https://images.unsplash.com/photo-1500648767791-00dcc994a43e)`
+4. **Elena R.** â€” `[https://images.unsplash.com/photo-1438761681033-6461ffad8d80](https://images.unsplash.com/photo-1438761681033-6461ffad8d80)`
+5. **Marcus T.** â€” `[https://images.unsplash.com/photo-1539571696357-5a69c17a67c6](https://images.unsplash.com/photo-1539571696357-5a69c17a67c6)`
+6. **Chloe W.** â€” `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
+7. **Robert P.** â€” `[https://images.unsplash.com/photo-1522075469751-3a6694fb2f61](https://images.unsplash.com/photo-1522075469751-3a6694fb2f61)`
+8. **Maya L.** â€” `[https://images.unsplash.com/photo-1534528741775-53994a69daeb](https://images.unsplash.com/photo-1534528741775-53994a69daeb)`
+9. **Daniel G.** â€” `[https://images.unsplash.com/photo-1519085360753-af0119f7cbe7](https://images.unsplash.com/photo-1519085360753-af0119f7cbe7)`
+10. **Olivia S.** â€” `[https://images.unsplash.com/photo-1488426862026-3ee34a7d66df](https://images.unsplash.com/photo-1488426862026-3ee34a7d66df)`
 
 ---
 
-11. **Andrew F.** — `[https://images.unsplash.com/photo-1506794778202-cad84cf45f1d](https://images.unsplash.com/photo-1506794778202-cad84cf45f1d)`
-12. **Sophia H.** — `[https://images.unsplash.com/photo-1544005313-94ddf0286df2](https://images.unsplash.com/photo-1544005313-94ddf0286df2)`
-13. **Joseph C.** — `[https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4](https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4)`
-14. **Amara N.** — `[https://images.unsplash.com/photo-1524504388940-b1c1722653e1](https://images.unsplash.com/photo-1524504388940-b1c1722653e1)`
-15. **William E.** — `[https://images.unsplash.com/photo-1492562080023-ab3db95bfbce](https://images.unsplash.com/photo-1492562080023-ab3db95bfbce)`
-16. **Isabella V.** — `[https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e](https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e)`
-17. **Michael J.** — `[https://images.unsplash.com/photo-1501196354995-cbb51c65aaea](https://images.unsplash.com/photo-1501196354995-cbb51c65aaea)`
-18. **Nina Q.** — `[https://images.unsplash.com/photo-1531746020798-e6953c6e8e04](https://images.unsplash.com/photo-1531746020798-e6953c6e8e04)`
-19. **Lucas A.** — `[https://images.unsplash.com/photo-1560250097-0b93528c311a](https://images.unsplash.com/photo-1560250097-0b93528c311a)`
-20. **Zoe Y.** — `[https://images.unsplash.com/photo-1554151228-14d9def656e4](https://images.unsplash.com/photo-1554151228-14d9def656e4)`
+11. **Andrew F.** â€” `[https://images.unsplash.com/photo-1506794778202-cad84cf45f1d](https://images.unsplash.com/photo-1506794778202-cad84cf45f1d)`
+12. **Sophia H.** â€” `[https://images.unsplash.com/photo-1544005313-94ddf0286df2](https://images.unsplash.com/photo-1544005313-94ddf0286df2)`
+13. **Joseph C.** â€” `[https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4](https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4)`
+14. **Amara N.** â€” `[https://images.unsplash.com/photo-1524504388940-b1c1722653e1](https://images.unsplash.com/photo-1524504388940-b1c1722653e1)`
+15. **William E.** â€” `[https://images.unsplash.com/photo-1492562080023-ab3db95bfbce](https://images.unsplash.com/photo-1492562080023-ab3db95bfbce)`
+16. **Isabella V.** â€” `[https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e](https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e)`
+17. **Michael J.** â€” `[https://images.unsplash.com/photo-1501196354995-cbb51c65aaea](https://images.unsplash.com/photo-1501196354995-cbb51c65aaea)`
+18. **Nina Q.** â€” `[https://images.unsplash.com/photo-1531746020798-e6953c6e8e04](https://images.unsplash.com/photo-1531746020798-e6953c6e8e04)`
+19. **Lucas A.** â€” `[https://images.unsplash.com/photo-1560250097-0b93528c311a](https://images.unsplash.com/photo-1560250097-0b93528c311a)`
+20. **Zoe Y.** â€” `[https://images.unsplash.com/photo-1554151228-14d9def656e4](https://images.unsplash.com/photo-1554151228-14d9def656e4)`
 
 ---
 
-21. **Christopher B.** — `[https://images.unsplash.com/photo-1472099645785-5658abf4ff4e](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e)`
-22. **Lily X.** — `[https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91](https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91)`
-23. **Gabriel M.** — `[https://images.unsplash.com/photo-1566492031773-4f4e44671857](https://images.unsplash.com/photo-1566492031773-4f4e44671857)`
-24. **Grace T.** — `[https://images.unsplash.com/photo-1551836022-d5d88e9218df](https://images.unsplash.com/photo-1551836022-d5d88e9218df)`
-25. **Ryan O.** — `[https://images.unsplash.com/photo-1500048993953-d23a436266cf](https://images.unsplash.com/photo-1500048993953-d23a436266cf)`
-26. **Mia K.** — `[https://images.unsplash.com/photo-1573496359142-b8d87734a5a2](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2)`
-27. **Alexander R.** — `[https://images.unsplash.com/photo-1547425260-76bcadfb4f2c](https://images.unsplash.com/photo-1547425260-76bcadfb4f2c)`
-28. **Emily D.** — `[https://images.unsplash.com/photo-1548142813-c348350df52b](https://images.unsplash.com/photo-1548142813-c348350df52b)`
-29. **Benjamin S.** — `[https://images.unsplash.com/photo-1537368910025-700350fe46c7](https://images.unsplash.com/photo-1537368910025-700350fe46c7)`
-30. **Natalie F.** — `[https://images.unsplash.com/photo-1567532939604-b6b5b0db2604](https://images.unsplash.com/photo-1567532939604-b6b5b0db2604)`
+21. **Christopher B.** â€” `[https://images.unsplash.com/photo-1472099645785-5658abf4ff4e](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e)`
+22. **Lily X.** â€” `[https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91](https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91)`
+23. **Gabriel M.** â€” `[https://images.unsplash.com/photo-1566492031773-4f4e44671857](https://images.unsplash.com/photo-1566492031773-4f4e44671857)`
+24. **Grace T.** â€” `[https://images.unsplash.com/photo-1551836022-d5d88e9218df](https://images.unsplash.com/photo-1551836022-d5d88e9218df)`
+25. **Ryan O.** â€” `[https://images.unsplash.com/photo-1500048993953-d23a436266cf](https://images.unsplash.com/photo-1500048993953-d23a436266cf)`
+26. **Mia K.** â€” `[https://images.unsplash.com/photo-1573496359142-b8d87734a5a2](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2)`
+27. **Alexander R.** â€” `[https://images.unsplash.com/photo-1547425260-76bcadfb4f2c](https://images.unsplash.com/photo-1547425260-76bcadfb4f2c)`
+28. **Emily D.** â€” `[https://images.unsplash.com/photo-1548142813-c348350df52b](https://images.unsplash.com/photo-1548142813-c348350df52b)`
+29. **Benjamin S.** â€” `[https://images.unsplash.com/photo-1537368910025-700350fe46c7](https://images.unsplash.com/photo-1537368910025-700350fe46c7)`
+30. **Natalie F.** â€” `[https://images.unsplash.com/photo-1567532939604-b6b5b0db2604](https://images.unsplash.com/photo-1567532939604-b6b5b0db2604)`
 
 ---
 
-31. **Samuel P.** — `[https://images.unsplash.com/photo-1500649763356-043a19d6d7b4](https://images.unsplash.com/photo-1500649763356-043a19d6d7b4)`
-32. **Hannah G.** — `[https://images.unsplash.com/photo-1580489944761-15a19d654956](https://images.unsplash.com/photo-1580489944761-15a19d654956)`
-33. **Anthony Z.** — `[https://images.unsplash.com/photo-1534308983496-4fabb1a015ee](https://images.unsplash.com/photo-1534308983496-4fabb1a015ee)`
-34. **Victoria E.** — `[https://images.unsplash.com/photo-1531123897727-8f129e1688ce](https://images.unsplash.com/photo-1531123897727-8f129e1688ce)`
-35. **Jonathan L.** — `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
-36. **Elena N.** — `[https://images.unsplash.com/photo-1542206395-9feb3edaa68d](https://images.unsplash.com/photo-1542206395-9feb3edaa68d)`
+31. **Samuel P.** â€” `[https://images.unsplash.com/photo-1500649763356-043a19d6d7b4](https://images.unsplash.com/photo-1500649763356-043a19d6d7b4)`
+32. **Hannah G.** â€” `[https://images.unsplash.com/photo-1580489944761-15a19d654956](https://images.unsplash.com/photo-1580489944761-15a19d654956)`
+33. **Anthony Z.** â€” `[https://images.unsplash.com/photo-1534308983496-4fabb1a015ee](https://images.unsplash.com/photo-1534308983496-4fabb1a015ee)`
+34. **Victoria E.** â€” `[https://images.unsplash.com/photo-1531123897727-8f129e1688ce](https://images.unsplash.com/photo-1531123897727-8f129e1688ce)`
+35. **Jonathan L.** â€” `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
+36. **Elena N.** â€” `[https://images.unsplash.com/photo-1542206395-9feb3edaa68d](https://images.unsplash.com/photo-1542206395-9feb3edaa68d)`
 
 *Note: All 36 endpoints are now unique and lead directly to active high-resolution portrait assets.*
 
@@ -1209,18 +1209,18 @@ The highest-priority CTA is **Executive Briefing**. The highest-priority impleme
 
 | Product                  |  Testimonial                                                                                       |  Testimonial                                                                                       |  Testimonial                                                                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Competitor Readiness** | ★★★★★ “This gave us a clear picture of where we stood against competitors and what needed attention first.” | ★★★★★ “The report helped us see risks we had been discussing informally but had never structured properly.” | ★★★★★ “Useful, direct, and practical. It turned competitor pressure into a clear action list.”           |
-| **Executive Briefing**   | ★★★★★ “The briefing made a long strategic report easy for leadership to understand and act on.”             | ★★★★★ “It gave our management team the key decisions without losing the depth of the original report.”      | ★★★★★ “Exactly what we needed before presenting the findings to senior stakeholders.”                    |
-| **Visibility Audit**     | ★★★★★ “This showed us how clients may see us before they ever contact us.”                                  | ★★★★★ “The audit exposed gaps in our website, proof, and positioning that we had overlooked.”               | ★★★★★ “Clear, practical, and immediately useful for improving our public presence.”                      |
-| **Market Positioning**   | ★★★★★ “This helped us finally explain what we do in a sharper and more memorable way.”                      | ★★★★★ “The positioning work clarified our strongest message and gave us better language for clients.”       | ★★★★★ “It turned scattered strengths into a focused market position we can actually use.”                |
-| **Experience Bank**      | ★★★★★ “We had strong experience, but this helped us turn it into usable proof for proposals and profiles.”  | ★★★★★ “The anonymized examples made our capability much easier to explain.”                                 | ★★★★★ “This gave us a reusable library of credibility assets we should have built earlier.”              |
-| **Web Architecture**     | ★★★★★ “The website structure finally made our services easier to understand and navigate.”                  | ★★★★★ “It gave us a clear page strategy before spending money on design or development.”                    | ★★★★★ “Very useful for turning strategy into a better website journey and stronger CTAs.”                |
-| **Origination System**   | ★★★★★ “This helped us connect thought leadership to actual client-development opportunities.”               | ★★★★★ “Our content now has a clearer purpose, audience, and next step.”                                     | ★★★★★ “It turned articles and updates into a more structured business development system.”               |
-| **Referral Kit**         | ★★★★★ “The referral materials made it easier for partners to understand when and why to send work to us.”   | ★★★★★ “It gave us a professional way to explain our services, proof, and process to referral contacts.”     | ★★★★★ “This reduced friction in referral conversations and made our capabilities clearer.”               |
-| **Sector Authority**     | ★★★★★ “This helped us speak more directly to the industries we want to serve.”                              | ★★★★★ “The sector pathways made our services feel more relevant to specific client problems.”               | ★★★★★ “A strong bridge between general capability and industry-specific trust.”                          |
-| **Operational Audit**    | ★★★★★ “The audit helped us see whether our internal systems could actually support our strategy.”           | ★★★★★ “It identified execution gaps that would have slowed us down later.”                                  | ★★★★★ “Useful for turning strategic ambition into operational reality.”                                  |
-| **Growth Roadmap**       | ★★★★★ “The roadmap turned recommendations into owners, timelines, and clear next steps.”                    | ★★★★★ “This helped us avoid strategy drift after the report was delivered.”                                 | ★★★★★ “Practical, structured, and easy for leadership to use as an execution plan.”                      |
-| **AI Integration**       | ★★★★★ “This showed us where AI could help without creating unnecessary risk.”                               | ★★★★★ “The report gave us a controlled path from AI interest to practical use cases.”                       | ★★★★★ “Helpful for identifying realistic AI opportunities while keeping quality and oversight in place.” |
+| **Competitor Readiness** | â˜…â˜…â˜…â˜…â˜… â€œThis gave us a clear picture of where we stood against competitors and what needed attention first.â€ | â˜…â˜…â˜…â˜…â˜… â€œThe report helped us see risks we had been discussing informally but had never structured properly.â€ | â˜…â˜…â˜…â˜…â˜… â€œUseful, direct, and practical. It turned competitor pressure into a clear action list.â€           |
+| **Executive Briefing**   | â˜…â˜…â˜…â˜…â˜… â€œThe briefing made a long strategic report easy for leadership to understand and act on.â€             | â˜…â˜…â˜…â˜…â˜… â€œIt gave our management team the key decisions without losing the depth of the original report.â€      | â˜…â˜…â˜…â˜…â˜… â€œExactly what we needed before presenting the findings to senior stakeholders.â€                    |
+| **Visibility Audit**     | â˜…â˜…â˜…â˜…â˜… â€œThis showed us how clients may see us before they ever contact us.â€                                  | â˜…â˜…â˜…â˜…â˜… â€œThe audit exposed gaps in our website, proof, and positioning that we had overlooked.â€               | â˜…â˜…â˜…â˜…â˜… â€œClear, practical, and immediately useful for improving our public presence.â€                      |
+| **Market Positioning**   | â˜…â˜…â˜…â˜…â˜… â€œThis helped us finally explain what we do in a sharper and more memorable way.â€                      | â˜…â˜…â˜…â˜…â˜… â€œThe positioning work clarified our strongest message and gave us better language for clients.â€       | â˜…â˜…â˜…â˜…â˜… â€œIt turned scattered strengths into a focused market position we can actually use.â€                |
+| **Experience Bank**      | â˜…â˜…â˜…â˜…â˜… â€œWe had strong experience, but this helped us turn it into usable proof for proposals and profiles.â€  | â˜…â˜…â˜…â˜…â˜… â€œThe anonymized examples made our capability much easier to explain.â€                                 | â˜…â˜…â˜…â˜…â˜… â€œThis gave us a reusable library of credibility assets we should have built earlier.â€              |
+| **Web Architecture**     | â˜…â˜…â˜…â˜…â˜… â€œThe website structure finally made our services easier to understand and navigate.â€                  | â˜…â˜…â˜…â˜…â˜… â€œIt gave us a clear page strategy before spending money on design or development.â€                    | â˜…â˜…â˜…â˜…â˜… â€œVery useful for turning strategy into a better website journey and stronger CTAs.â€                |
+| **Origination System**   | â˜…â˜…â˜…â˜…â˜… â€œThis helped us connect thought leadership to actual client-development opportunities.â€               | â˜…â˜…â˜…â˜…â˜… â€œOur content now has a clearer purpose, audience, and next step.â€                                     | â˜…â˜…â˜…â˜…â˜… â€œIt turned articles and updates into a more structured business development system.â€               |
+| **Referral Kit**         | â˜…â˜…â˜…â˜…â˜… â€œThe referral materials made it easier for partners to understand when and why to send work to us.â€   | â˜…â˜…â˜…â˜…â˜… â€œIt gave us a professional way to explain our services, proof, and process to referral contacts.â€     | â˜…â˜…â˜…â˜…â˜… â€œThis reduced friction in referral conversations and made our capabilities clearer.â€               |
+| **Sector Authority**     | â˜…â˜…â˜…â˜…â˜… â€œThis helped us speak more directly to the industries we want to serve.â€                              | â˜…â˜…â˜…â˜…â˜… â€œThe sector pathways made our services feel more relevant to specific client problems.â€               | â˜…â˜…â˜…â˜…â˜… â€œA strong bridge between general capability and industry-specific trust.â€                          |
+| **Operational Audit**    | â˜…â˜…â˜…â˜…â˜… â€œThe audit helped us see whether our internal systems could actually support our strategy.â€           | â˜…â˜…â˜…â˜…â˜… â€œIt identified execution gaps that would have slowed us down later.â€                                  | â˜…â˜…â˜…â˜…â˜… â€œUseful for turning strategic ambition into operational reality.â€                                  |
+| **Growth Roadmap**       | â˜…â˜…â˜…â˜…â˜… â€œThe roadmap turned recommendations into owners, timelines, and clear next steps.â€                    | â˜…â˜…â˜…â˜…â˜… â€œThis helped us avoid strategy drift after the report was delivered.â€                                 | â˜…â˜…â˜…â˜…â˜… â€œPractical, structured, and easy for leadership to use as an execution plan.â€                      |
+| **AI Integration**       | â˜…â˜…â˜…â˜…â˜… â€œThis showed us where AI could help without creating unnecessary risk.â€                               | â˜…â˜…â˜…â˜…â˜… â€œThe report gave us a controlled path from AI interest to practical use cases.â€                       | â˜…â˜…â˜…â˜…â˜… â€œHelpful for identifying realistic AI opportunities while keeping quality and oversight in place.â€ |
 
 # Patch instructions
 ## Correct standard going forward
@@ -1252,7 +1252,7 @@ No old `%26` path. No old `_Report_1` path. No fallback options.
 In the Report 1 HTML file, replace every instance of:
 
 ```text
-/LAW/Abdulaziz_Bin_Ali%26Partners/
+/LAW/Abdulaziz_Bin_Ali_Partners/
 ```
 
 with:
@@ -1266,7 +1266,7 @@ with:
 Replace every instance of:
 
 ```text
-https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1
+https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report
 ```
 
 with:
@@ -1295,8 +1295,8 @@ Use these exact links in the Language & Downloads section and hero download butt
 
 ```html
 <a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.md">English</a>
-<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_AR.md" lang="ar" dir="rtl">العربية</a>
-<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_ZH.md" lang="zh">中文</a>
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_AR.md" lang="ar" dir="rtl">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</a>
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_ZH.md" lang="zh">ä¸­æ–‡</a>
 <a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.pdf">Download PDF</a>
 ```
 
@@ -1360,11 +1360,11 @@ Paste this exact code:
 Search the repository for these strings:
 
 ```text
-Abdulaziz_Bin_Ali%26Partners
+Abdulaziz_Bin_Ali_Partners
 ```
 
 ```text
-Strategic_Competitor_Readiness_Report_1
+Strategic_Competitor_Readiness_Report
 ```
 
 There should be **0 matches** in the live Report 1 files after the rename.
@@ -1399,8 +1399,8 @@ https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness
 https://zyne.store/report/binali-lawfirm
 
 3. Search results:
-- Abdulaziz_Bin_Ali%26Partners: 0 matches
-- Strategic_Competitor_Readiness_Report_1: 0 matches
+- Abdulaziz_Bin_Ali_Partners: 0 matches
+- Strategic_Competitor_Readiness_Report: 0 matches
 
 4. File checks:
 - client logo: working
@@ -1414,5 +1414,5 @@ https://zyne.store/report/binali-lawfirm
 None / [describe issue]
 ```
 
-Once you report back in that format, I’ll validate the live page and then continue the Phase 5 review.
+Once you report back in that format, Iâ€™ll validate the live page and then continue the Phase 5 review.
 

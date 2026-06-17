@@ -1,4 +1,4 @@
-
+﻿
 ## STEP 1 - Patch Segment 1 - Front Matter, Executive Summary, and Strategic Pillar Bridge
 
 Local checkpoint time:
@@ -114,7 +114,7 @@ Local checkpoint time:
 Encoding artifact cleanup applied and pushed.
 
 Validation:
-- Replaced global mojibake apostrophe artifact `â€™` with straight apostrophe `'`.
+- Replaced global mojibake apostrophe artifact `Ã¢â‚¬â„¢` with straight apostrophe `'`.
 - Artifact count before cleanup: `106`.
 - Artifact count after cleanup: `0`.
 - Blank spacer lines between consecutive bullet items remain: `0`.
@@ -166,7 +166,7 @@ Fixed English confirmation upload sent to messenger.
 
 Validation:
 - Composer-scoped upload helper flow used.
-- Corrected final English report uploaded as `Strategic_Competitor_Readiness_Report_1(3).md`.
+- Corrected final English report uploaded as `Strategic_Competitor_Readiness_Report(3).md`.
 - Short prompt sent: `Completed English report after apostrophe encoding cleanup is attached for final confirmation.`
 - New messenger user message confirmed after submission.
 
@@ -196,7 +196,7 @@ Local checkpoint time:
 Arabic translation received and recorded.
 
 Validation:
-- Downloaded Arabic Markdown file saved at `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_1_AR.md`.
+- Downloaded Arabic Markdown file saved at `LAW/Abdulaziz_Bin_Ali&Partners/Strategic_Competitor_Readiness_Report_AR.md`.
 - File size: `173,017` bytes.
 - Lines: `1,937`.
 - Arabic character count: `77,308`.
@@ -214,6 +214,6 @@ Chinese translation request sent to messenger.
 Validation:
 - Arabic translation was received and recorded before this request.
 - Composer-scoped upload helper flow used.
-- Final English report uploaded as `Strategic_Competitor_Readiness_Report_1(5).md`.
+- Final English report uploaded as `Strategic_Competitor_Readiness_Report(5).md`.
 - Short prompt sent: `Please translate the attached final English report into Chinese only. Preserve the Markdown structure and headings. Do not make additional English changes.`
 - New messenger user message confirmed after submission.
