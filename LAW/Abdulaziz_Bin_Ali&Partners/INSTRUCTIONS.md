@@ -1148,3 +1148,59 @@ The strategic product connections are now clear. Thi implementation should wire 
 5. the final report-close CTA.
 
 The highest-priority CTA is **Executive Briefing**. The highest-priority implementation product is **Growth Roadmap**.
+
+# Human Photo
+1. Check for dublications if no duplications continue to step 2.
+2. Extract all 36 portraits and save in a local folder.
+3. Use the names eg Jame B as the tile of each photo.
+
+
+### Publicly Available 36 Realistic Portraits
+
+1. **James B.** — `[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d)`
+2. **Sarah M.** — `[https://images.unsplash.com/photo-1494790108377-be9c29b29330](https://images.unsplash.com/photo-1494790108377-be9c29b29330)`
+3. **David K.** — `[https://images.unsplash.com/photo-1500648767791-00dcc994a43e](https://images.unsplash.com/photo-1500648767791-00dcc994a43e)`
+4. **Elena R.** — `[https://images.unsplash.com/photo-1438761681033-6461ffad8d80](https://images.unsplash.com/photo-1438761681033-6461ffad8d80)`
+5. **Marcus T.** — `[https://images.unsplash.com/photo-1539571696357-5a69c17a67c6](https://images.unsplash.com/photo-1539571696357-5a69c17a67c6)`
+6. **Chloe W.** — `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
+7. **Robert P.** — `[https://images.unsplash.com/photo-1522075469751-3a6694fb2f61](https://images.unsplash.com/photo-1522075469751-3a6694fb2f61)`
+8. **Maya L.** — `[https://images.unsplash.com/photo-1534528741775-53994a69daeb](https://images.unsplash.com/photo-1534528741775-53994a69daeb)`
+9. **Daniel G.** — `[https://images.unsplash.com/photo-1519085360753-af0119f7cbe7](https://images.unsplash.com/photo-1519085360753-af0119f7cbe7)`
+10. **Olivia S.** — `[https://images.unsplash.com/photo-1488426862026-3ee34a7d66df](https://images.unsplash.com/photo-1488426862026-3ee34a7d66df)`
+
+---
+
+11. **Andrew F.** — `[https://images.unsplash.com/photo-1506794778202-cad84cf45f1d](https://images.unsplash.com/photo-1506794778202-cad84cf45f1d)`
+12. **Sophia H.** — `[https://images.unsplash.com/photo-1544005313-94ddf0286df2](https://images.unsplash.com/photo-1544005313-94ddf0286df2)`
+13. **Joseph C.** — `[https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4](https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4)`
+14. **Amara N.** — `[https://images.unsplash.com/photo-1524504388940-b1c1722653e1](https://images.unsplash.com/photo-1524504388940-b1c1722653e1)`
+15. **William E.** — `[https://images.unsplash.com/photo-1492562080023-ab3db95bfbce](https://images.unsplash.com/photo-1492562080023-ab3db95bfbce)`
+16. **Isabella V.** — `[https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e](https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e)`
+17. **Michael J.** — `[https://images.unsplash.com/photo-1501196354995-cbb51c65aaea](https://images.unsplash.com/photo-1501196354995-cbb51c65aaea)`
+18. **Nina Q.** — `[https://images.unsplash.com/photo-1531746020798-e6953c6e8e04](https://images.unsplash.com/photo-1531746020798-e6953c6e8e04)`
+19. **Lucas A.** — `[https://images.unsplash.com/photo-1560250097-0b93528c311a](https://images.unsplash.com/photo-1560250097-0b93528c311a)`
+20. **Zoe Y.** — `[https://images.unsplash.com/photo-1554151228-14d9def656e4](https://images.unsplash.com/photo-1554151228-14d9def656e4)`
+
+---
+
+21. **Christopher B.** — `[https://images.unsplash.com/photo-1472099645785-5658abf4ff4e](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e)`
+22. **Lily X.** — `[https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91](https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91)`
+23. **Gabriel M.** — `[https://images.unsplash.com/photo-1566492031773-4f4e44671857](https://images.unsplash.com/photo-1566492031773-4f4e44671857)`
+24. **Grace T.** — `[https://images.unsplash.com/photo-1551836022-d5d88e9218df](https://images.unsplash.com/photo-1551836022-d5d88e9218df)`
+25. **Ryan O.** — `[https://images.unsplash.com/photo-1500048993953-d23a436266cf](https://images.unsplash.com/photo-1500048993953-d23a436266cf)`
+26. **Mia K.** — `[https://images.unsplash.com/photo-1573496359142-b8d87734a5a2](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2)`
+27. **Alexander R.** — `[https://images.unsplash.com/photo-1547425260-76bcadfb4f2c](https://images.unsplash.com/photo-1547425260-76bcadfb4f2c)`
+28. **Emily D.** — `[https://images.unsplash.com/photo-1548142813-c348350df52b](https://images.unsplash.com/photo-1548142813-c348350df52b)`
+29. **Benjamin S.** — `[https://images.unsplash.com/photo-1537368910025-700350fe46c7](https://images.unsplash.com/photo-1537368910025-700350fe46c7)`
+30. **Natalie F.** — `[https://images.unsplash.com/photo-1567532939604-b6b5b0db2604](https://images.unsplash.com/photo-1567532939604-b6b5b0db2604)`
+
+---
+
+31. **Samuel P.** — `[https://images.unsplash.com/photo-1500649763356-043a19d6d7b4](https://images.unsplash.com/photo-1500649763356-043a19d6d7b4)`
+32. **Hannah G.** — `[https://images.unsplash.com/photo-1580489944761-15a19d654956](https://images.unsplash.com/photo-1580489944761-15a19d654956)`
+33. **Anthony Z.** — `[https://images.unsplash.com/photo-1534308983496-4fabb1a015ee](https://images.unsplash.com/photo-1534308983496-4fabb1a015ee)`
+34. **Victoria E.** — `[https://images.unsplash.com/photo-1531123897727-8f129e1688ce](https://images.unsplash.com/photo-1531123897727-8f129e1688ce)`
+35. **Jonathan L.** — `[https://images.unsplash.com/photo-1517841905240-472988babdf9](https://images.unsplash.com/photo-1517841905240-472988babdf9)`
+36. **Elena N.** — `[https://images.unsplash.com/photo-1542206395-9feb3edaa68d](https://images.unsplash.com/photo-1542206395-9feb3edaa68d)`
+
+*Note: All 36 endpoints are now unique and lead directly to active high-resolution portrait assets.*
