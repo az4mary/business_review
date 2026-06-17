@@ -1150,9 +1150,9 @@ The strategic product connections are now clear. Thi implementation should wire 
 The highest-priority CTA is **Executive Briefing**. The highest-priority implementation product is **Growth Roadmap**.
 
 # Human Photo
-1. Check for dublications if no duplications continue to step 2.
+1. Check for duplications if no duplications continue to step 2.
 2. Extract all 36 portraits and save in a local folder.
-3. Use the names eg Jame B as the tile of each photo.
+3. Use their names eg Jame B as the tile of each photo.
 
 
 ### Publicly Available 36 Realistic Portraits
