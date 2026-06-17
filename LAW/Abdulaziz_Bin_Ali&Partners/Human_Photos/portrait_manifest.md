@@ -1,0 +1,47 @@
+﻿# Human Photo Portrait Manifest
+
+Source: INSTRUCTIONS.md, Human Photo section, line 1152.
+
+Duplicate/source check:
+- Original list had one duplicate URL: Chloe W and Jonathan L.
+- Original Samuel P endpoint returned 404 during extraction.
+- Jonathan L and Samuel P were assigned distinct active replacement portraits so this extracted folder has 36 unique usable portrait files.
+
+| No. | Title | File | Source | Note |
+|---:|---|---|---|---|
+| 1 | James B | `01 - James B.jpg` | https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d |  |
+| 2 | Sarah M | `02 - Sarah M.jpg` | https://images.unsplash.com/photo-1494790108377-be9c29b29330 |  |
+| 3 | David K | `03 - David K.jpg` | https://images.unsplash.com/photo-1500648767791-00dcc994a43e |  |
+| 4 | Elena R | `04 - Elena R.jpg` | https://images.unsplash.com/photo-1438761681033-6461ffad8d80 |  |
+| 5 | Marcus T | `05 - Marcus T.jpg` | https://images.unsplash.com/photo-1539571696357-5a69c17a67c6 |  |
+| 6 | Chloe W | `06 - Chloe W.jpg` | https://images.unsplash.com/photo-1517841905240-472988babdf9 |  |
+| 7 | Robert P | `07 - Robert P.jpg` | https://images.unsplash.com/photo-1522075469751-3a6694fb2f61 |  |
+| 8 | Maya L | `08 - Maya L.jpg` | https://images.unsplash.com/photo-1534528741775-53994a69daeb |  |
+| 9 | Daniel G | `09 - Daniel G.jpg` | https://images.unsplash.com/photo-1519085360753-af0119f7cbe7 |  |
+| 10 | Olivia S | `10 - Olivia S.jpg` | https://images.unsplash.com/photo-1488426862026-3ee34a7d66df |  |
+| 11 | Andrew F | `11 - Andrew F.jpg` | https://images.unsplash.com/photo-1506794778202-cad84cf45f1d |  |
+| 12 | Sophia H | `12 - Sophia H.jpg` | https://images.unsplash.com/photo-1544005313-94ddf0286df2 |  |
+| 13 | Joseph C | `13 - Joseph C.jpg` | https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4 |  |
+| 14 | Amara N | `14 - Amara N.jpg` | https://images.unsplash.com/photo-1524504388940-b1c1722653e1 |  |
+| 15 | William E | `15 - William E.jpg` | https://images.unsplash.com/photo-1492562080023-ab3db95bfbce |  |
+| 16 | Isabella V | `16 - Isabella V.jpg` | https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e |  |
+| 17 | Michael J | `17 - Michael J.jpg` | https://images.unsplash.com/photo-1501196354995-cbb51c65aaea |  |
+| 18 | Nina Q | `18 - Nina Q.jpg` | https://images.unsplash.com/photo-1531746020798-e6953c6e8e04 |  |
+| 19 | Lucas A | `19 - Lucas A.jpg` | https://images.unsplash.com/photo-1560250097-0b93528c311a |  |
+| 20 | Zoe Y | `20 - Zoe Y.jpg` | https://images.unsplash.com/photo-1554151228-14d9def656e4 |  |
+| 21 | Christopher B | `21 - Christopher B.jpg` | https://images.unsplash.com/photo-1472099645785-5658abf4ff4e |  |
+| 22 | Lily X | `22 - Lily X.jpg` | https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91 |  |
+| 23 | Gabriel M | `23 - Gabriel M.jpg` | https://images.unsplash.com/photo-1566492031773-4f4e44671857 |  |
+| 24 | Grace T | `24 - Grace T.jpg` | https://images.unsplash.com/photo-1551836022-d5d88e9218df |  |
+| 25 | Ryan O | `25 - Ryan O.jpg` | https://images.unsplash.com/photo-1500048993953-d23a436266cf |  |
+| 26 | Mia K | `26 - Mia K.jpg` | https://images.unsplash.com/photo-1573496359142-b8d87734a5a2 |  |
+| 27 | Alexander R | `27 - Alexander R.jpg` | https://images.unsplash.com/photo-1547425260-76bcadfb4f2c |  |
+| 28 | Emily D | `28 - Emily D.jpg` | https://images.unsplash.com/photo-1548142813-c348350df52b |  |
+| 29 | Benjamin S | `29 - Benjamin S.jpg` | https://images.unsplash.com/photo-1537368910025-700350fe46c7 |  |
+| 30 | Natalie F | `30 - Natalie F.jpg` | https://images.unsplash.com/photo-1567532939604-b6b5b0db2604 |  |
+| 31 | Samuel P | `31 - Samuel P.jpg` | https://images.unsplash.com/photo-1507591064344-4c6ce005b128 | Replacement: original endpoint returned 404 |
+| 32 | Hannah G | `32 - Hannah G.jpg` | https://images.unsplash.com/photo-1580489944761-15a19d654956 |  |
+| 33 | Anthony Z | `33 - Anthony Z.jpg` | https://images.unsplash.com/photo-1534308983496-4fabb1a015ee |  |
+| 34 | Victoria E | `34 - Victoria E.jpg` | https://images.unsplash.com/photo-1531123897727-8f129e1688ce |  |
+| 35 | Jonathan L | `35 - Jonathan L.jpg` | https://images.unsplash.com/photo-1527980965255-d3b416303d12 | Replacement: original duplicated Chloe W URL |
+| 36 | Elena N | `36 - Elena N.jpg` | https://images.unsplash.com/photo-1542206395-9feb3edaa68d |  |
