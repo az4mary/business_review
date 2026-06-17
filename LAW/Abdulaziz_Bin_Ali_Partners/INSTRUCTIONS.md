@@ -1221,3 +1221,200 @@ The highest-priority CTA is **Executive Briefing**. The highest-priority impleme
 | **Operational Audit**    | ★★★★★ “The audit helped us see whether our internal systems could actually support our strategy.”           | ★★★★★ “It identified execution gaps that would have slowed us down later.”                                  | ★★★★★ “Useful for turning strategic ambition into operational reality.”                                  |
 | **Growth Roadmap**       | ★★★★★ “The roadmap turned recommendations into owners, timelines, and clear next steps.”                    | ★★★★★ “This helped us avoid strategy drift after the report was delivered.”                                 | ★★★★★ “Practical, structured, and easy for leadership to use as an execution plan.”                      |
 | **AI Integration**       | ★★★★★ “This showed us where AI could help without creating unnecessary risk.”                               | ★★★★★ “The report gave us a controlled path from AI interest to practical use cases.”                       | ★★★★★ “Helpful for identifying realistic AI opportunities while keeping quality and oversight in place.” |
+
+# Patch instructions
+## Correct standard going forward
+
+Use only this base path:
+
+```text
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/
+```
+
+Use only this full URL:
+
+```text
+https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/
+```
+
+Use only this email short path:
+
+```text
+https://zyne.store/report/binali-lawfirm
+```
+
+No old `%26` path. No old `_Report_1` path. No fallback options.
+
+---
+
+# Patch instructions
+
+## 1. Replace old folder references
+
+In the Report 1 HTML file, replace every instance of:
+
+```text
+/LAW/Abdulaziz_Bin_Ali%26Partners/
+```
+
+with:
+
+```text
+/LAW/Abdulaziz_Bin_Ali_Partners/
+```
+
+## 2. Replace old report URL references
+
+Replace every instance of:
+
+```text
+https://zyne.store/LAW/Abdulaziz_Bin_Ali%26Partners/Strategic_Competitor_Readiness_Report_1
+```
+
+with:
+
+```text
+https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/
+```
+
+## 3. Update canonical, OG, and English hreflang
+
+These three must match exactly:
+
+```html
+<meta property="og:url" content="https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/">
+<link rel="canonical" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/">
+<link rel="alternate" hreflang="en" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/">
+```
+
+## 4. Update source-file links
+
+Use these exact links in the Language & Downloads section and hero download button:
+
+```html
+<a class="button" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.md" download>Download Markdown</a>
+```
+
+```html
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.md">English</a>
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_AR.md" lang="ar" dir="rtl">العربية</a>
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_ZH.md" lang="zh">中文</a>
+<a class="pill" href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.pdf">Download PDF</a>
+```
+
+Do not use DOCX unless you are actually uploading a DOCX to that folder. For email delivery, PDF is more useful.
+
+## 5. Update Arabic and Chinese hreflang
+
+Use these exact lines:
+
+```html
+<link rel="alternate" hreflang="ar" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_AR.md">
+<link rel="alternate" hreflang="zh" href="https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_ZH.md">
+```
+
+## 6. Update client logo path
+
+Use this exact line:
+
+```html
+<img src="/LAW/Abdulaziz_Bin_Ali_Partners/binali-new-logo.svg" alt="Abdulaziz Bin Ali & Partners Law Firm logo">
+```
+
+## 7. Create the short email path
+
+Create this file:
+
+```text
+/report/binali-lawfirm/index.html
+```
+
+Paste this exact code:
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opening Strategic Report | ZYNE</title>
+  <link rel="canonical" href="https://zyne.store/report/binali-lawfirm">
+  <meta http-equiv="refresh" content="0; url=/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/">
+</head>
+<body>
+  <p>
+    Opening report:
+    <a href="/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/">
+      https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/
+    </a>
+  </p>
+
+  <script>
+    window.location.replace("/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/");
+  </script>
+</body>
+</html>
+```
+
+## 8. Remove old-path references completely
+
+Search the repository for these strings:
+
+```text
+Abdulaziz_Bin_Ali%26Partners
+```
+
+```text
+Strategic_Competitor_Readiness_Report_1
+```
+
+There should be **0 matches** in the live Report 1 files after the rename.
+
+---
+
+# Required files in the new directory
+
+Confirm these files exist:
+
+```text
+/LAW/Abdulaziz_Bin_Ali_Partners/binali-new-logo.svg
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/index.html
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.md
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_AR.md
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report_ZH.md
+/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report.pdf
+/report/binali-lawfirm/index.html
+```
+
+---
+
+# Report back to me in this exact format
+
+```text
+Patch implemented.
+
+1. New report URL:
+https://zyne.store/LAW/Abdulaziz_Bin_Ali_Partners/Strategic_Competitor_Readiness_Report/
+
+2. Short email URL:
+https://zyne.store/report/binali-lawfirm
+
+3. Search results:
+- Abdulaziz_Bin_Ali%26Partners: 0 matches
+- Strategic_Competitor_Readiness_Report_1: 0 matches
+
+4. File checks:
+- client logo: working
+- English Markdown: working
+- Arabic Markdown: working
+- Chinese Markdown: working
+- PDF: working
+- short email URL: working
+
+5. Remaining issue:
+None / [describe issue]
+```
+
+Once you report back in that format, I’ll validate the live page and then continue the Phase 5 review.
+
