@@ -1247,8 +1247,6 @@ No old `%26` path. No old `_Report_1` path. No fallback options.
 
 ---
 
-# Patch instructions
-
 ## 1. Replace old folder references
 
 In the Report 1 HTML file, replace every instance of:
