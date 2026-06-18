@@ -50,6 +50,7 @@
     .button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; padding: 0 22px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--gold-bright); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease; }
     .button svg { width: 16px; height: 16px; flex: 0 0 auto; }
     .button:hover, .button:focus-visible { transform: translateY(-1px); border-color: var(--gold-bright); background: rgba(217, 167, 47, 0.1); color: #fff4c9; }
+    .button:disabled, .icon-button:disabled { cursor: wait; opacity: 0.62; transform: none; }
     .button.primary { border-color: transparent; background: linear-gradient(135deg, #f4d474 0%, #d39c24 52%, #875b0e 100%); color: #050505; box-shadow: 0 12px 28px rgba(217, 167, 47, 0.18); }
     .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 6px; background: #050505; color: var(--gold-bright); cursor: pointer; }
     .menu-toggle svg { width: 22px; height: 22px; }
@@ -153,7 +154,7 @@
     .footer-center { text-align: center; }
     .socials { display: flex; justify-content: flex-end; gap: 12px; }
     .socials a { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(217,167,47,0.54); border-radius: 999px; color: var(--gold-bright); font-size: 0.8rem; font-weight: 800; }
-    .print-cover, .print-page-template, .print-page-title, .print-page-footer, .print-page-numbers { display: none; }
+    .print-cover, .print-cover-template, .print-page-template, .print-page-title, .print-page-footer, .print-page-numbers { display: none; }
     @media print {
       @page { size: A4 portrait; margin: 0; }
       *, *::before, *::after { box-shadow: none !important; text-shadow: none !important; }
@@ -176,14 +177,14 @@
         inset: 0;
         width: 210mm;
         height: 297mm;
-        background: #fff url("/assets/ZYNE_report_page_template.png") center / 210mm 297mm no-repeat !important;
+        object-fit: fill;
         z-index: 0;
         pointer-events: none;
       }
       .print-page-title {
         display: block !important;
         position: fixed;
-        z-index: 1;
+        z-index: 5;
         top: 18mm;
         right: 18mm;
         color: #17120b !important;
@@ -193,18 +194,7 @@
         line-height: 1;
         pointer-events: none;
       }
-      .print-page-footer {
-        display: block !important;
-        position: fixed;
-        z-index: 1;
-        left: 11mm;
-        bottom: 7.5mm;
-        color: #17120b !important;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 7.5pt;
-        line-height: 1;
-        pointer-events: none;
-      }
+      .print-page-footer { display: none !important; }
       .print-page-numbers {
         display: block !important;
         position: absolute;
@@ -236,12 +226,23 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background: #fff url("/assets/ZYNE_cover_page_template_filled.png") center / 210mm 297mm no-repeat !important;
+        background: #fff !important;
         page-break-after: always;
         break-after: page;
       }
+      .print-cover-template {
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 210mm;
+        height: 297mm;
+        object-fit: fill;
+        z-index: 0;
+        pointer-events: none;
+      }
       .print-cover p {
         position: absolute;
+        z-index: 1;
         left: 22mm;
         width: 142mm;
         margin: 0;
@@ -415,7 +416,7 @@
   </style>
 </head>
 <body>
-  <div class="print-page-template" aria-hidden="true"></div>
+  <img class="print-page-template" src="/assets/ZYNE_report_page_template_client.png" alt="" aria-hidden="true">
   <div class="print-page-title" aria-hidden="true">Strategic Competitor-Readiness Report</div>
   <div class="print-page-footer" aria-hidden="true">Prepared for Abdulaziz Bin Ali &amp; Partners Law Firm</div>
   <div class="print-page-numbers" id="printPageNumbers" aria-hidden="true"></div>
@@ -429,6 +430,7 @@
   </header>
   <main id="report">
     <section class="print-cover" aria-hidden="true">
+      <img class="print-cover-template" src="/assets/ZYNE_cover_page_template_filled.png" alt="">
       <p class="cover-prepared-for">The Founding Partner and Senior Management<br>Abdulaziz Bin Ali &amp; Partners Law Firm</p>
       <p class="cover-prepared-by">ZYNE Intelligence<br>zyne.store</p>
       <p class="cover-date">June 17, 2026</p>
@@ -2497,8 +2499,52 @@
     const links = document.querySelector('#navLinks');
     const reportContent = document.querySelector('#reportContent');
     const printPageNumbers = document.querySelector('#printPageNumbers');
+    const readerStatus = document.querySelector('#readerStatus');
+    const printButtons = [document.querySelector('#printHero'), document.querySelector('#printReport')];
+    const printTemplateUrls = [
+      '/assets/ZYNE_cover_page_template_filled.png',
+      '/assets/ZYNE_report_page_template_client.png'
+    ];
     const printPageTotal = 68;
     let readerScale = 1;
+    const preloadImage = (url) => new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = async () => {
+        try {
+          if (image.decode) await image.decode();
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      };
+      image.onerror = () => reject(new Error(`Unable to load print template: ${url}`));
+      image.src = url;
+    });
+    const printTemplatesReady = Promise.all(printTemplateUrls.map(preloadImage));
+    const printAssetsReady = Promise.all([
+      printTemplatesReady,
+      document.fonts ? document.fonts.ready : Promise.resolve()
+    ]);
+    const printReport = async () => {
+      printButtons.forEach((button) => {
+        button.disabled = true;
+        button.setAttribute('aria-busy', 'true');
+      });
+      readerStatus.textContent = 'Preparing branded print templates...';
+      try {
+        await printAssetsReady;
+        readerStatus.textContent = 'Branded print templates ready';
+        window.print();
+      } catch (error) {
+        console.error(error);
+        readerStatus.textContent = 'Print templates could not be loaded. Please refresh and try again.';
+      } finally {
+        printButtons.forEach((button) => {
+          button.disabled = false;
+          button.removeAttribute('aria-busy');
+        });
+      }
+    };
     for (let pageNumber = 2; pageNumber <= printPageTotal; pageNumber += 1) {
       const label = document.createElement('span');
       label.style.top = `${(pageNumber * 297.105) - 10.5}mm`;
@@ -2509,8 +2555,8 @@
     links.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation'); }); });
     document.querySelector('#increaseText').addEventListener('click', () => { readerScale = Math.min(1.18, readerScale + 0.06); reportContent.style.setProperty('--reader-scale', readerScale); });
     document.querySelector('#decreaseText').addEventListener('click', () => { readerScale = Math.max(0.88, readerScale - 0.06); reportContent.style.setProperty('--reader-scale', readerScale); });
-    document.querySelector('#printReport').addEventListener('click', () => window.print());
-    document.querySelector('#printHero').addEventListener('click', () => window.print());
+    document.querySelector('#printReport').addEventListener('click', printReport);
+    document.querySelector('#printHero').addEventListener('click', printReport);
     document.querySelector('#copyLink').addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); document.querySelector('#readerStatus').textContent = 'Report link copied to clipboard'; } catch { document.querySelector('#readerStatus').textContent = 'Copy failed. Please copy the URL from the address bar.'; } });
   </script>
 </body>
