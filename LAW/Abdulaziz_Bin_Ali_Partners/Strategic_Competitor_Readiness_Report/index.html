@@ -369,9 +369,22 @@
       .report-content th, .report-content td {
         color: #17120b !important;
         padding: 4.5pt !important;
-        border: 0.5pt solid #c9b77a !important;
+        border: 0.5pt solid #c69a3a !important;
       }
-      .report-content th { background: #f3e7c0 !important; }
+      .report-content th {
+        color: #f6d978 !important;
+        background: #211b11 !important;
+      }
+      .report-content td { background: #fffdf8 !important; }
+      .report-content tbody tr:nth-child(even) td { background: #f5efe2 !important; }
+      .report-content .strategic-pillars-table table { font-size: 6.8pt !important; }
+      .report-content .strategic-pillars-table th,
+      .report-content .strategic-pillars-table td { padding: 3.5pt !important; }
+      .report-content h3[id="102-practice-area-information-reviewed"] {
+        page-break-before: always;
+        break-before: page;
+        margin-top: 0 !important;
+      }
       .report-content blockquote {
         color: #17120b !important;
         font-family: Georgia, "Times New Roman", serif !important;
@@ -383,6 +396,11 @@
         break-inside: avoid-page;
         page-break-inside: avoid;
         border-color: #c9b77a !important;
+      }
+      .table-wrap {
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
       }
       li > ul, li > ol { break-inside: auto; }
       hr {
@@ -1365,7 +1383,7 @@
 <p>The recommendations in this report should not be treated as separate tasks. They should be organized around strategic pillars that connect the firm's strengths, market risks, client needs, and implementation actions.</p>
 <p>This approach is important because senior law-firm leadership does not only need a list of improvements. It needs a practical view of where the firm should place management attention, partner time, and client development effort.</p>
 <p>The recommended strategic pillars are:</p>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap strategic-pillars-table"><table><thead><tr>
 <th>Strategic pillar</th>
 <th>Current strength</th>
 <th>Market pressure</th>
@@ -2350,7 +2368,7 @@
 <li>data protection;</li>
 <li>international arbitration.</li>
 </ul>
-<p>These pages were reviewed to understand the firm's visible service coverage, public positioning, and potential areas for stronger client-facing presentation.</p>
+<p class="appendix-section-summary">These pages were reviewed to understand the firm's visible service coverage, public positioning, and potential areas for stronger client-facing presentation.</p>
 <h3 id="103-sector-information-reviewed">10.3 Sector Information Reviewed</h3>
 <p>The review considered the firm's public sector pages, including:</p>
 <ul>
