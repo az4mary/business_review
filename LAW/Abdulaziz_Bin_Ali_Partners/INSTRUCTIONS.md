@@ -1,9 +1,9 @@
 ﻿# START - be patient and wait for each steps - set a 5 mins heartbeat so you can go offline whenever there is too much delay.
 * Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, copy and paste Product 1 Competitor Readiness content into the composer and ask the assistant to provide Image 1 Prompt - assistant already have the requirements.
-* Connect to https://gemini.google.com/app/2ee3d8279c882ed6,and paste the Image 1 Prompt into the composer and  you click submit button. 
+* Connect to https://gemini.google.com/app/738a58c651502e8e,and paste the Image 1 Prompt into the composer and  you click submit button. 
 * Go to the stan.store link and upload the downloaded 2K Image 1 into the Thumbnail section - you already know the workflow.
 * Connect to https://chatgpt.com/c/6a3179c9-fbec-83ea-846c-e8337010e7ee, and ask the assistant to provide Image 2 Prompt - assistant already have the requirements.
-* Connect to https://gemini.google.com/app/2ee3d8279c882ed6, and paste the Image 2 Prompt into the composer and you click submit button.
+* Connect to https://gemini.google.com/app/738a58c651502e8e, and paste the Image 2 Prompt into the composer and you click submit button.
 * Go to the stan.store link and upload the downloaded 2K Image 2 into the Checkout section - you already know the workflow.
 * Complete the Product listing and publish.
 * Repeat the same workflow from product 1 - 12 below.
