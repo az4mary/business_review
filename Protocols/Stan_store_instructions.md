@@ -1,4 +1,4 @@
-# Change Image
+# Change Image and Validate Live Desktop and Mobile view.
 
 Product images - "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\product_images”
 
@@ -23,5 +23,5 @@ Control https://admin.stan.store/stores?tab=details via the already open Edge br
 17. Locate live Product 1 card
 18. Inspect live Product 1 card
 19. Open live Product 1 checkout
-20. Validate the view for both Desktop and mobile.
+20. Validate the view for both Desktop and Mobile.
 21. Report back to me.
