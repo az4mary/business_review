@@ -8,5 +8,5 @@ Control https://admin.stan.store/stores?tab=details via the already open Edge br
 4. Change the Image in the checkout section of the edit page to Image 2.
 5. Use the Crop, Move or Zoom tools to ensure it fits and present well in the preview.
 6. Click the Publish Button.
-7. Visit the live url to verify the new images and presentation.
+7. Visit the live url to verify the new images and presentation on both mobile and desktop view.
 8. Report back to me.
