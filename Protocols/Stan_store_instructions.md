@@ -23,5 +23,5 @@ Control https://admin.stan.store/stores?tab=details via the already open Edge br
 17. Locate live Product 1 card
 18. Inspect live Product 1 card
 19. Open live Product 1 checkout
-20. Validate the view for both Desktop and Mobile.
+20. Validate the view for both Desktop and Mobile by inspections and screenshots.
 21. Report back to me.
