@@ -2,7 +2,7 @@
 
 Product images - "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\product_images”
 
-Control https://admin.stan.store/stores?tab=details via the already open Edge browser via remote-debugging connection.
+Control https://admin.stan.store/stores?tab=details via the already open Edge browser via remote-debugging connection or launch edge browser if session not found. Open maximum of 2 tabs only.
 
 1. Search for Product 1 to edit it. 
 2. Change the thumbnail in the thumbnail section of the edit page to Image 1
