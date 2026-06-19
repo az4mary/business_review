@@ -1,3 +1,5 @@
+# Change Image
+
 Product images - "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\product_images”
 
 Control https://admin.stan.store/stores?tab=details via the already open Edge browser via remote-debugging connection.
