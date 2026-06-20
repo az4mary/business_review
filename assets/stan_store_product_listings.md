@@ -1,31 +1,89 @@
 # Product type by buyer intent
 
-Grow My Visibility
-├── GBP
-├── Social Media
-├── Websites
+## Grow My Visibility
 
-Build My Brand
-├── Brand Kits
-├── Market Positioning
-├── Sector Authority
+### GBP
 
-Improve My Business
-├── Competitor Readiness
-├── Operational Audit
-├── Growth Roadmap
-├── Executive Briefing
+- Google BP Mini Audit
+- Google BP Quick Fix
+- Google BP Optimization
+- Google BP Management
+- Google BP Enterprise
 
-Use AI
-├── AI Integration
-├── AI Chatbots
-├── Realtor GPT
+### Social Media
 
-Convert More Clients
-├── Experience Bank
-├── Referral Kit
-├── Origination System
-├── Web Architecture
+- Social Media Quick Audit
+- Social Media Profile Fix
+- Social Media Starter Kit
+- Social Media Growth Kit
+- Social Media Premium Kit
+- Social Media Enterprise
+
+### Websites
+
+- Website Quick-Win Audit
+- Homepage Fix Pack
+- Website Starter Kit
+- Website Growth Kit
+- Website Premium Kit
+- Website Enterprise Kit
+
+### Visibility Strategy
+
+- Visibility Audit
+
+## Build My Brand
+
+### Brand Kits
+
+- Starter Brand Kit
+- Growth Brand Kit
+- Premium Brand Kit
+- Enterprise Brand Kit
+
+### Market Positioning
+
+- Market Positioning
+
+### Sector Authority
+
+- Sector Authority
+
+## Improve My Business
+
+- Competitor Readiness
+- Operational Audit
+- Growth Roadmap
+- Executive Briefing
+
+## Use AI
+
+### AI Integration
+
+- AI Integration
+
+### AI Chatbots
+
+- Starter AI Chatbot Kit
+- Growth AI Chatbot Kit
+- Premium AI Chatbot Kit
+
+### Realtor GPT
+
+- Realtor® GPT Starter Kit
+- Realtor® GPT Growth Kit
+- Realtor® GPT Premium Kit
+
+## Convert More Clients
+
+- Experience Bank
+- Referral Kit
+- Origination System
+- Web Architecture
+
+## Other
+
+- SYSTEM FILES
 
 # Stan Store Product Listings
 
