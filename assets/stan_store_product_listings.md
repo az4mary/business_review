@@ -1,7 +1,7 @@
 ﻿# Product type by buyer intent
 
 ```text
-Grow My Visibility
+📍 Grow My Visibility
 ├── Google BP Mini Audit
 ├── Google BP Quick Fix
 ├── Google BP Optimization
