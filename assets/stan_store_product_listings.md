@@ -1,5 +1,6 @@
 ﻿# Product type by buyer intent
 
+```text
 Grow My Visibility
 ├── Google BP Mini Audit
 ├── Google BP Quick Fix
@@ -48,6 +49,7 @@ Convert More Clients
 ├── Referral Kit
 ├── Origination System
 ├── Web Architecture
+```
 
 # Stan Store Product Listings
 
