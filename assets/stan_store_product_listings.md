@@ -41,10 +41,10 @@
 - AI Integration
 
 # PRODUCT DETAILS
-- **SYSTEM FILES**
+## **SYSTEM FILES**
   - Price: $24.99
 
-- **Google BP Mini Audit**
+## **Google BP Mini Audit**
   - Fast profile check + expert fix roadmap to improve trust, completeness, and local visibility
   - Price: $49.99
 
