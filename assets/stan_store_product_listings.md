@@ -1,5 +1,4 @@
 # Stan Store Product Listings
-
 - SYSTEM FILES
 - Google BP Mini Audit
 - Google BP Quick Fix
@@ -42,15 +41,12 @@
 - AI Integration
 
 # PRODUCT DETAILS
-
-- **SYSTEM FILES**
+## - **SYSTEM FILES**
   - Price: $24.99
 
 - **Google BP Mini Audit**
   - Fast profile check + expert fix roadmap to improve trust, completeness, and local visibility
   - Price: $49.99
-**Short Description**
-A budget-friendly entry service for small businesses that want expert eyes on their Google Business Profile without paying for full local SEO. Google Business Profile is free to use, but setup quality still affects how credible and complete your listing looks on Search and Maps.
 
 - **Google BP Quick Fix**
   - Audit + light optimization for small businesses that want a stronger profile fast
