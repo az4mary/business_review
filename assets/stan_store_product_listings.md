@@ -42,11 +42,11 @@
 
 # PRODUCT DETAILS
 ## **SYSTEM FILES**
-  - Price: $24.99
+**Price:** $24.99
 
 ## **Google BP Mini Audit**
-  - Fast profile check + expert fix roadmap to improve trust, completeness, and local visibility
-  - Price: $49.99
+**Price:** $49.99
+Fast profile check + expert fix roadmap to improve trust, completeness, and local visibility
 
 - **Google BP Quick Fix**
   - Audit + light optimization for small businesses that want a stronger profile fast
