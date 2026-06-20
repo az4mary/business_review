@@ -131,7 +131,7 @@ export const premiumProducts = [
   ["Origination System", "$1,950", "For experts who need a repeatable path from attention to opportunity.", "origination-system", "Origination_System_Image_1.jpg"],
   ["Web Architecture", "$2,500", "For businesses rebuilding their digital conversion infrastructure.", "web-architecture", "Web_Architecture_Image_1.jpg"],
   ["Operational Audit", "$2,500", "For leadership teams addressing friction, readiness, and scale.", "operational-audit", "Operational_Audit_Image_1.jpg"],
-  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness", "Competitor_Readiness_Image_2.png"]
+  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness", "Competitor_Readiness_Image_2.webp"]
 ];
 
 export const industries = [
