@@ -18,6 +18,8 @@ CRITICAL ENFORCEMENT:
 
 All rules are treated as **hard constraints**.
 
+---
+
 ## **Google BP Mini Audit**
 
 **Price:** $49.99
@@ -56,6 +58,8 @@ New profiles, under-optimized profiles, service businesses, and owners wanting a
 1 photo gap review, 
 1 service-area review, 
 5 prioritized fixes.
+
+---
 
 ## **Google BP Quick Fix**
 
@@ -96,6 +100,8 @@ Small businesses, service-area businesses, and owners with incomplete or outdate
 1 photo gap review, 
 up to 3 direct profile edits, 
 1 prioritized next-steps list.
+
+---
 
 ## **Google BP Optimization**
 
@@ -139,6 +145,8 @@ Q&A suggestions,
 up to 10 direct profile edits, 
 1 next-steps PDF.
 
+---
+
 ## **Google BP Management**
 
 **Price:** $599.99
@@ -176,6 +184,8 @@ up to 5 profile edits,
 1 photo review, 
 1 category/services check, 
 1 monthly summary.
+
+---
 
 ## **Google BP Enterprise**
 
@@ -216,6 +226,8 @@ monthly posts,
 reporting dashboard, 
 strategy calls.
 
+---
+
 ## **Starter Brand Kit**
 
 **Price:** $400.00
@@ -251,6 +263,8 @@ Startups, solopreneurs, service providers, and creatives launching a new brand.
 1 brand board PDF, 
 1 color palette PDF, 
 1 typography guide PDF.
+
+---
 
 ## **Growth Brand Kit**
 
@@ -294,6 +308,8 @@ Established startups, service businesses, and creators ready for a more scalable
 - 1 x Typography Guide — PDF
 - 1 x Mini Brand Guide — PDF
 - 1 x Social Profile Image Set — PNG (profile) + JPG (cover/banner, if applicable)
+
+---
 
 ## **Premium Brand Kit**
 
@@ -339,6 +355,8 @@ Established businesses, personal brands, creators, and service providers ready f
 - 1 x Profile Image Set - PNG
 - 1 x Cover/Banner Set - JPG
 
+---
+
 ## **Enterprise Brand Kit**
 
 **Price:** $2,600.00
@@ -380,6 +398,8 @@ Strategic brand system for businesses that need stakeholder-ready branding and r
 
 This delivery window fits the added discovery, stakeholder feedback, and rollout assets.
 
+---
+
 ## **Website Quick-Win Audit**
 
 **Price:** $49.99
@@ -419,6 +439,8 @@ Revisions
 1 Loom walkthrough, 
 5–10 prioritized fixes.
 
+---
+
 ## **Homepage Fix Pack**
 
 **Price:** $149.99
@@ -455,6 +477,8 @@ Small businesses with an existing website that needs improvement, not a full red
 3 section edits, 
 1 mobile cleanup pass, 
 1 final summary of completed changes
+
+---
 
 ## **Website Starter Kit**
 
@@ -493,6 +517,8 @@ contact form,
 CTA setup, 
 basic on-page SEO, 
 domain/connect assistance
+
+---
 
 ## **Website Growth Kit**
 
@@ -534,6 +560,8 @@ blog setup,
 booking/chat integration, 
 domain connection help
 
+---
+
 ## **Website Premium Kit**
 
 **Price:** $2,999.99
@@ -574,6 +602,8 @@ blog setup,
 basic SEO, 
 domain connection help
 
+---
+
 ## **Website Enterprise Kit**
 
 **Price:** $7,500.00
@@ -612,6 +642,8 @@ custom functionality,
 integrations, 
 scalable site structure, 
 launch support
+
+---
 
 ## **Social Media Quick Audit**
 
@@ -654,6 +686,8 @@ branding consistency check,
 2 competitor snapshots, 
 1 PDF report or 1 Loom video.
 
+---
+
 ## **Social Media Profile Fix**
 
 **Price:** $149.99
@@ -695,6 +729,8 @@ branding consistency fixes,
 hashtag guidance, 
 1 PDF handoff.
 
+---
+
 ## **Social Media Starter Kit**
 
 **Price:** $497.00
@@ -731,6 +767,8 @@ Up to **2 content calendar revisions** per month based on client feedback.
 - 8–12 × Scheduled Posts (Graphics + Captions)
 - 1 × Monthly Analytics Report (PDF)
 - 1 × Basic Engagement Summary (PDF)
+
+---
 
 ## **Social Media Growth Kit**
 
@@ -775,6 +813,8 @@ Up to **3 content calendar revisions per month** based on client feedback.
 - 1 × Engagement Summary Report (PDF)
 - 1 × Analytics + Insights Report (PDF)
 
+---
+
 ## **Social Media Premium Kit**
 
 **Price:** $3,000.00
@@ -813,6 +853,8 @@ Up to **3 rounds** of revisions per month.
 - 3 x managed social platforms
 - 1 x monthly analytics report (PDF)
 - 1 x community management summary (PDF)
+
+---
 
 ## **Social Media Enterprise**
 
@@ -853,6 +895,8 @@ Up to **4 revision cycles** per month; custom adjustments available based on ent
 - Dedicated Account Manager Access
 - Community & Engagement Summaries (PDF)
 
+---
+
 ## **Starter AI Chatbot Kit**
 
 **Price:** $4,200.00
@@ -891,6 +935,8 @@ Design a production-ready AI chatbot system that reduces support costs.
 - Conversation Design Framework (tone, guardrails, flows)
 - Cost & Scaling Model (tokens, infra, performance)
 - Step-by-Step Build Roadmap (ready for implementation)
+
+---
 
 ## **Growth AI Chatbot Kit**
 
@@ -931,6 +977,8 @@ Move from strategy to a fully functional AI chatbot system - trained on your dat
 - Response Logic + Guardrails (accuracy + tone control)
 - Deployment Setup (web or internal use)
 
+---
+
 ## **Premium AI Chatbot Kit**
 
 **Price:** $12,000.00
@@ -970,6 +1018,8 @@ Deploy a fully featured, production-grade AI system with advanced workflows, and
 - Monitoring + Optimization Layer (performance tuning)
 - QA Testing + Deployment Support
 
+---
+
 ## **Realtor® GPT Starter Kit**
 
 **Price:** $500.00
@@ -1001,6 +1051,8 @@ Solo agents and small teams who want faster response times and better lead captu
 Delivery: **3 business days**.
 
 Revisions: **1 optimization pass**.
+
+---
 
 ## **Realtor® GPT Growth Kit**
 
@@ -1034,6 +1086,8 @@ Delivery: **4–5 business days**.
 
 Revisions: **2 optimization passes**.
 
+---
+
 ## **Realtor® GPT Premium Kit**
 
 **Price:** $1,700.00
@@ -1065,6 +1119,8 @@ Everything in Growth, plus custom branching flows, branded templates, advanced e
 Delivery: **5–7 business days**.
 
 Revisions: **2 optimization passes**.
+
+---
 
 ## **Competitor Readiness**
 
@@ -1115,6 +1171,8 @@ Executive Briefing; Visibility Audit; Market Positioning; Growth Roadmap.
 **Refund / scope notes**
 Non-refundable once research begins. Based on public and client-provided information only. Does not include confidential investigation, legal advice, financial audit, or paid database research unless separately agreed.
 
+---
+
 ## **Executive Briefing**
 
 **Price:** $750.00
@@ -1163,6 +1221,8 @@ Growth Roadmap; Market Positioning; Operational Audit.
 **Refund / scope notes**
 Non-refundable once briefing preparation begins. Requires an existing report, diagnostic, or source document.
 
+---
+
 ## **Visibility Audit**
 
 **Price:** $950.00
@@ -1210,6 +1270,8 @@ Web Architecture; Experience Bank; Market Positioning.
 
 **Refund / scope notes**
 Non-refundable once review begins. Does not include website redesign, SEO implementation, paid advertising, or technical development.
+
+---
 
 ## **Market Positioning**
 
@@ -1260,6 +1322,8 @@ Brand Identity Systems; Web Architecture; Executive Briefing.
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include logo design, full brand identity, website build, or copywriting implementation unless purchased separately.
 
+---
+
 ## **Experience Bank**
 
 **Price:** $1,250.00
@@ -1308,6 +1372,8 @@ Web Architecture; Referral Kit; Market Positioning.
 
 **Refund / scope notes**
 Client must provide source material. ZYNE does not verify confidential claims unless source evidence is provided. Client remains responsible for confidentiality, consent, and professional-use approval.
+
+---
 
 ## **Web Architecture**
 
@@ -1358,6 +1424,8 @@ Visibility Audit; Market Positioning; Experience Bank; Website Enterprise Kit.
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include full website design, development, hosting, custom code, or CMS implementation unless separately purchased.
 
+---
+
 ## **Origination System**
 
 **Price:** $1,950.00
@@ -1406,6 +1474,8 @@ Strategic Social Optimization; Executive Briefing; Sector Authority.
 
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include ongoing posting, design, copywriting production, email marketing software setup, or paid promotion unless separately purchased.
+
+---
 
 ## **Referral Kit**
 
@@ -1456,6 +1526,8 @@ Experience Bank; Executive Briefing; Market Positioning.
 **Refund / scope notes**
 Client must provide accurate service, experience, and contact details. ZYNE does not verify professional credentials or confidential claims unless documentation is provided.
 
+---
+
 ## **Sector Authority**
 
 **Price:** $1,950.00
@@ -1504,6 +1576,8 @@ Web Architecture; Origination System; Visibility Audit.
 
 **Refund / scope notes**
 Non-refundable once work begins. Includes up to 3 priority sectors. Additional sectors require expanded scope.
+
+---
 
 ## **Operational Audit**
 
@@ -1554,6 +1628,8 @@ Growth Roadmap; AI Integration; Enterprise Growth Systems.
 **Refund / scope notes**
 Requires client-provided internal information. Not a financial audit, legal audit, HR audit, or compliance certification.
 
+---
+
 ## **Growth Roadmap**
 
 **Price:** $1,500.00
@@ -1602,6 +1678,8 @@ Enterprise Growth Systems; Executive Briefing; Operational Audit.
 
 **Refund / scope notes**
 Requires an existing report, audit, or strategic source document. Does not include project management, implementation, or ongoing advisory support unless separately purchased.
+
+---
 
 ## **AI Integration**
 
