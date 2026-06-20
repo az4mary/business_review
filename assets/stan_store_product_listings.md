@@ -41,7 +41,7 @@
 - AI Integration
 
 # PRODUCT DETAILS
-## - **SYSTEM FILES**
+- **SYSTEM FILES**
   - Price: $24.99
 
 - **Google BP Mini Audit**
