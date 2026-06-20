@@ -1,4 +1,5 @@
 # Product type by buyer intent
+
 Grow My Visibility
 ├── GBP
 ├── Social Media
@@ -26,34 +27,8 @@ Convert More Clients
 ├── Origination System
 ├── Web Architecture
 
-# PRODUCT DETAILS
 # Stan Store Product Listings
-Grow My Visibility
-├── GBP
-├── Social Media
-├── Websites
 
-Build My Brand
-├── Brand Kits
-├── Market Positioning
-├── Sector Authority
-
-Improve My Business
-├── Competitor Readiness
-├── Operational Audit
-├── Growth Roadmap
-├── Executive Briefing
-
-Use AI
-├── AI Integration
-├── AI Chatbots
-├── Realtor GPT
-
-Convert More Clients
-├── Experience Bank
-├── Referral Kit
-├── Origination System
-├── Web Architecture
 ## **SYSTEM FILES**
 
 - Price: $24.99
