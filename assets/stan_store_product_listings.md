@@ -21,7 +21,7 @@
 ├── Website Enterprise Kit
 ├── Visibility Audit
 
-Build My Brand
+✦ Build My Brand
 ├── Starter Brand Kit
 ├── Growth Brand Kit
 ├── Premium Brand Kit
@@ -29,13 +29,13 @@ Build My Brand
 ├── Market Positioning
 ├── Sector Authority
 
-Improve My Business
+⚙️ Improve My Business
 ├── Competitor Readiness
 ├── Operational Audit
 ├── Growth Roadmap
 ├── Executive Briefing
 
-Use AI
+◇ Use AI
 ├── AI Integration
 ├── Starter AI Chatbot Kit
 ├── Growth AI Chatbot Kit
@@ -44,7 +44,7 @@ Use AI
 ├── Realtor® GPT Growth Kit
 ├── Realtor® GPT Premium Kit
 
-Convert More Clients
+⟶ Convert More Clients
 ├── Experience Bank
 ├── Referral Kit
 ├── Origination System
