@@ -126,12 +126,12 @@ export const intelligenceProducts = [
 ];
 
 export const premiumProducts = [
-  ["Market Positioning", "$1,750", "For businesses that need a sharper market angle and stronger authority.", "market-positioning"],
-  ["AI Integration", "$1,750", "For teams that need a practical, commercially useful AI plan.", "ai-integration"],
-  ["Origination System", "$1,950", "For experts who need a repeatable path from attention to opportunity.", "origination-system"],
-  ["Web Architecture", "$2,500", "For businesses rebuilding their digital conversion infrastructure.", "web-architecture"],
-  ["Operational Audit", "$2,500", "For leadership teams addressing friction, readiness, and scale.", "operational-audit"],
-  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness"]
+  ["Market Positioning", "$1,750", "For businesses that need a sharper market angle and stronger authority.", "market-positioning", "Market_Positioning_Image_1.jpg"],
+  ["AI Integration", "$1,750", "For teams that need a practical, commercially useful AI plan.", "ai-integration", "AI_Integration_Image_2.jpg"],
+  ["Origination System", "$1,950", "For experts who need a repeatable path from attention to opportunity.", "origination-system", "Origination_System_Image_1.jpg"],
+  ["Web Architecture", "$2,500", "For businesses rebuilding their digital conversion infrastructure.", "web-architecture", "Web_Architecture_Image_1.jpg"],
+  ["Operational Audit", "$2,500", "For leadership teams addressing friction, readiness, and scale.", "operational-audit", "Operational_Audit_Image_1.jpg"],
+  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness", "Competitor_Readiness_Image_2.png"]
 ];
 
 export const industries = [

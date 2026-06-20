@@ -126,7 +126,7 @@ app.innerHTML = `
         <p>Higher-value services for businesses ready to resolve structural constraints and build stronger systems.</p>
       </div>
       <div class="premium-grid">
-        ${premiumProducts.map(([name, price, text, slug]) => `<article><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ↗</a></article>`).join("")}
+        ${premiumProducts.map(([name, price, text, slug, image]) => `<article><img src="/assets/products/${image}" alt="" loading="lazy" width="640" height="420" /><div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ↗</a></div></article>`).join("")}
       </div>
     </section>
     <section class="section industries" id="industries">
