@@ -43,8 +43,6 @@
 
 # PRODUCT DETAILS
 
-# Stan Store Product Listings
-
 - **SYSTEM FILES**
 
 - **Google BP Mini Audit**
