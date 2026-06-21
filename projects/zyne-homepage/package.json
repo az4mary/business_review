@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "build": "npm run validate:catalog && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
