@@ -28,12 +28,19 @@ const requiredProductFields = [
   "category",
   "productType",
   "price",
+  "priceValue",
+  "currency",
   "description",
+  "shortDescription",
   "bestFor",
   "timeline",
+  "imageAlt",
   "internalUrl",
   "checkoutStatus",
-  "directCheckoutEnabled"
+  "directCheckoutEnabled",
+  "seoTitle",
+  "seoDescription",
+  "schemaType"
 ];
 
 const requiredFlags = [
@@ -79,6 +86,10 @@ for (const product of catalogProducts) {
     if (typeof product[flag] !== "boolean") {
       errors.push(`${product.id}: ${flag} must be boolean`);
     }
+  }
+
+  if (typeof product.priceValue !== "number" || Number.isNaN(product.priceValue)) {
+    errors.push(`${product.id}: priceValue must be numeric`);
   }
 
   if (productIds.has(product.id)) errors.push(`Duplicate product id: ${product.id}`);
