@@ -114,6 +114,8 @@ New profiles, under-optimized profiles, service businesses, and owners wanting a
 1 service-area review, 
 5 prioritized fixes.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/google-business-profile-mini-audit
+
 ---
 
 ## **Google BP Quick Fix**
