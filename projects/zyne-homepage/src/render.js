@@ -36,7 +36,7 @@ export const renderHomePage = () => `
     </section>
     <section class="section" id="growth-paths">
       <div class="section-heading">
-        <div><p class="eyebrow">Start with the constraint</p><h2>Choose Your <em>Growth Path</em></h2></div>
+        <div><p class="eyebrow">Start with the constraint</p><h2 aria-label="Choose Your Growth Path">Choose Your <em>Growth Path</em></h2></div>
         <p>Select the area where your business needs stronger visibility, authority, systems, or conversion.</p>
       </div>
       <div class="path-grid">
