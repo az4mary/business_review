@@ -71,6 +71,8 @@ CRITICAL ENFORCEMENT:
 
 All rules are treated as **hard constraints**.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/system-files
+
 ---
 
 ## **Google BP Mini Audit**
