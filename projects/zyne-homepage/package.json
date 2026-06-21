@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "validate:catalog": "node scripts/validate-catalog.mjs",
+    "validate:catalog:strict": "ENFORCE_CANONICAL_ASSETS=true node scripts/validate-catalog.mjs",
     "report:catalog-migration": "node scripts/report-catalog-migration.mjs",
     "build": "npm run validate:catalog && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs",
     "preview": "vite preview"
