@@ -1,0 +1,14 @@
+node_modules/
+dist/
+
+# Local browser and visual-QA artifacts
+.edge-*/
+.qa-*/
+.grid-*/
+.homepage-*/
+.measure-*/
+*-qa.png
+qa-*.png
+catalog-*.png
+amazon-*.png
+live-*-audit.png
