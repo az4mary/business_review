@@ -1,6 +1,7 @@
 const productUrl = (slug) => `/services/${slug}/`;
+const parsePriceValue = (price) => Number(String(price).replace(/[^0-9.]/g, ""));
 
-const categoryIds = {
+export const categoryIds = {
   visibility: "grow-my-visibility",
   brand: "build-my-brand",
   business: "improve-my-business",
@@ -16,12 +17,17 @@ const product = ({
   category,
   productType,
   price,
+  priceValue = parsePriceValue(price),
+  currency = "USD",
   description,
+  shortDescription = description,
   bestFor,
   timeline,
   revisions = null,
   image = null,
+  imageAlt = `${name} product package`,
   stanCheckoutUrl,
+  checkoutStatus = stanCheckoutUrl ? "live" : "pending",
   featured = false,
   homepageVisible = false,
   categoryVisible = true,
@@ -29,10 +35,13 @@ const product = ({
   premiumOffer = false,
   intelligenceOffer = false,
   deliveryOffer = false,
+  directCheckoutEnabled = false,
+  relatedProductIds = [],
   intelligenceDescription = null,
   premiumDescription = null,
   seoTitle = null,
-  seoDescription = null
+  seoDescription = null,
+  schemaType = "Service"
 }) => ({
   id,
   slug,
@@ -41,17 +50,21 @@ const product = ({
   category,
   productType,
   price,
+  priceValue,
+  currency,
   originalPrice: null,
   description,
+  shortDescription,
   bestFor,
   timeline,
   revisions,
   image,
+  imageAlt,
   thumbnail: image,
   internalUrl: productUrl(slug),
   stanCheckoutUrl,
-  checkoutStatus: stanCheckoutUrl ? "live" : "pending",
-  directCheckoutEnabled: false,
+  checkoutStatus,
+  directCheckoutEnabled,
   featured,
   homepageVisible,
   categoryVisible,
@@ -59,10 +72,12 @@ const product = ({
   premiumOffer,
   intelligenceOffer,
   deliveryOffer,
+  relatedProductIds,
   intelligenceDescription,
   premiumDescription,
   seoTitle: seoTitle || `${name} | ZYNE`,
-  seoDescription: seoDescription || description
+  seoDescription: seoDescription || shortDescription || description,
+  schemaType
 });
 
 export const catalogProducts = [
@@ -109,7 +124,7 @@ export const growthPaths = categories.map((category) => ({ ...category, products
 export const intelligenceProductIds = ["executive-briefing", "visibility-audit", "growth-roadmap", "market-positioning", "ai-integration", "competitor-readiness", "operational-audit"];
 export const intelligenceProducts = intelligenceProductIds.map((id) => { const item = getProduct(id); return [item.name, item.price, item.intelligenceDescription || item.description, item.internalUrl]; });
 export const premiumProductIds = ["market-positioning", "ai-integration", "origination-system", "web-architecture", "operational-audit", "competitor-readiness"];
-export const premiumProducts = premiumProductIds.map((id) => { const item = getProduct(id); return [item.name, item.price, item.premiumDescription || item.bestFor || item.description, item.slug, item.thumbnail]; });
+export const premiumProducts = premiumProductIds.map((id) => { const item = getProduct(id); return [item.name, item.price, item.premiumDescription || item.bestFor || item.description, item.slug, item.thumbnail, item.imageAlt]; });
 
 export const deliveryFamilies = [
   { id: "brand-identity-kits", name: "Brand Identity Kits", description: "Identity systems designed to make authority visible.", icon: "◇", url: "/build-my-brand/", productIds: ["starter-brand-kit", "growth-brand-kit", "premium-brand-kit"] },
