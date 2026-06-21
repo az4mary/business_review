@@ -1,41 +1,292 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { catalogProducts } from "../src/data/products.js";
+import {
+  catalogProducts,
+  categories,
+  deliveryFamilies,
+  getProduct,
+  intelligenceProductIds
+} from "../src/data/products.js";
 
-const routes = [
-  ["services", "ZYNE Paid Services", "Browse fixed-price services for visibility, branding, AI, websites, intelligence, and client conversion."],
-  ["grow-my-visibility", "Grow My Visibility", "Google Business Profile, social presence, website, and public-visibility services."],
-  ["build-my-brand", "Build My Brand", "Brand identity, positioning, and sector-authority services."],
-  ["improve-my-business", "Improve My Business", "Strategic briefings, audits, roadmaps, and competitor intelligence."],
-  ["use-ai", "Use AI", "AI integration, chatbot, and Realtor GPT systems."],
-  ["use-ai/realtor-gpt", "Realtor GPT Products", "Purpose-built AI assistants for real estate professionals."],
-  ["convert-more-clients", "Convert More Clients", "Proof, referral, origination, and web-architecture services."],
-  ["intelligence", "ZYNE Intelligence", "Paid strategic reports, audits, and executive briefings."],
-  ["delivery", "ZYNE Delivery", "Done-for-you brand, website, AI, and conversion systems."],
-  ["privacy", "Privacy Policy", "ZYNE privacy information is being prepared for publication."],
-  ["terms", "Terms", "ZYNE Terms are being prepared for publication."],
-  ["refund-policy", "Refund Policy", "Product-specific refund and scope terms are provided before checkout."]
+const siteUrl = "https://zyne.store";
+const arrow = "&#8599;";
+
+const escapeHtml = (value = "") => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#39;");
+
+const normalizePath = (path) => path.endsWith("/") ? path : `${path}/`;
+const absoluteUrl = (url) => url.startsWith("http") ? url : `${siteUrl}${normalizePath(url)}`;
+const productRoute = (product) => product.internalUrl || `/services/${product.slug}/`;
+const productList = (ids = []) => ids.map(getProduct).filter(Boolean);
+const uniqueProducts = (items = []) => Array.from(new Map(items.filter(Boolean).map((item) => [item.id, item])).values());
+const byPrice = (a, b) => (a.priceValue || 0) - (b.priceValue || 0);
+const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+
+const defaultDeliverables = (product) => [
+  `${product.shortName || product.name} scope and implementation notes`,
+  "Clear prioritized recommendations or finished service assets",
+  "Delivery timeline, next steps, and post-purchase intake guidance"
 ];
 
-const baseStyles = `*{box-sizing:border-box}body{margin:0;background:#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}header{height:82px;padding:0 6vw;display:flex;align-items:center;border-bottom:1px solid #302815;background:#070706ee}header img{width:110px}header a:last-child{margin-left:auto}.button{display:inline-block;padding:1rem 1.25rem;background:#c9a967;color:#080807;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:700;border:1px solid #c9a967}main{padding:6vw}.card,.layout{max-width:1180px;margin:auto}.card{padding:clamp(2rem,6vw,5rem);border:1px solid rgba(201,169,103,.3);background:#10100e}.layout{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr) 330px;gap:3vw}.visual{background:#e9e3d9;color:#171511;min-height:460px;display:grid;place-items:stretch;padding:0;text-align:center;text-transform:uppercase;letter-spacing:.12em;overflow:hidden}.visual img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center center}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.65rem}h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1;margin:.5rem 0 1rem;font-weight:500}p,li{color:#b4aea3;line-height:1.7}.price{color:#c9a967;font:2rem Georgia,serif}.buybox{border:1px solid #4a3d20;background:#10100e;padding:1.5rem}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#302815;border:1px solid #302815}.facts div{background:#0d0d0b;padding:1rem}.facts span{display:block;color:#746f67;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em}.note{font-size:.75rem;color:#777168;margin-top:1rem}@media(max-width:950px){.layout{grid-template-columns:1fr}.visual{min-height:280px}.visual img{min-height:280px}}`;
+const defaultBuyerResponsibilities = [
+  "Complete the required intake form after checkout.",
+  "Provide accurate business context, access, files, or examples needed for delivery.",
+  "Review delivered materials inside the stated revision window."
+];
 
-const page = ({ title, description, price, checkout }) => `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070706"><title>${title} | ZYNE</title><style>${baseStyles}</style></head><body><header><a href="/"><img src="/assets/zyne-logo.png" alt="ZYNE"></a><a href="/" class="button">Back to homepage</a></header><main><section class="card"><div class="eyebrow">ZYNE · Paid productized service</div><h1>${title}</h1>${price ? `<strong class="price">${price}</strong>` : ""}<p>${description}</p>${checkout ? `<a class="button" href="${checkout}" target="_blank" rel="noopener noreferrer external">Checkout on Stan Store</a><div class="note">Secure checkout opens in a new tab through Stan Store.</div>` : `<a class="button" href="/#services">Explore available services</a><div class="note">Full product details and checkout access are being finalized.</div>`}</section></main></body></html>`;
+const defaultExclusions = [
+  "Ongoing consulting, management, or implementation outside the purchased scope.",
+  "Paid advertising spend, third-party software fees, or platform charges.",
+  "Guaranteed revenue, ranking, traffic, or lead-generation outcomes."
+];
 
-const listItems = (items, fallback) => (items?.length ? items : fallback).map((item) => `<li>${item}</li>`).join("");
-const defaultDeliverables = ["Clear scope and transparent fixed pricing before checkout.", "Actionable deliverables designed for practical implementation.", "Defined timeline and guided post-purchase intake."];
+const baseStyles = `
+*{box-sizing:border-box}html{background:#070706;color:#f1eadc}body{margin:0;background:radial-gradient(circle at top right,rgba(201,169,103,.14),transparent 34rem),#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid #c9a967;outline-offset:4px}header{min-height:82px;padding:0 6vw;display:flex;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(201,169,103,.22);background:#070706ee;position:sticky;top:0;z-index:10;backdrop-filter:blur(18px)}header img{width:110px;height:auto}nav{display:flex;gap:1rem;flex-wrap:wrap;margin-left:auto}nav a{color:#b4aea3;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:1rem 1.2rem;background:#c9a967;color:#080807;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800;border:1px solid #c9a967}.button.ghost{background:transparent;color:#f1eadc}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;font-weight:800}.skip-link{position:absolute;left:-999px;top:1rem}.skip-link:focus{left:1rem;z-index:99;background:#c9a967;color:#080807;padding:.8rem 1rem}.container{width:min(1180px,88vw);margin:0 auto}.hero{padding:clamp(4rem,9vw,8rem) 0}.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(2rem,5vw,5rem);align-items:center}.panel,.card,.buybox,.table-wrap{border:1px solid rgba(201,169,103,.26);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));box-shadow:0 24px 80px rgba(0,0,0,.22)}.panel{padding:clamp(2rem,5vw,4rem)}h1{font-size:clamp(2.7rem,6.4vw,5.6rem);line-height:.95;margin:.65rem 0 1rem;font-weight:500;letter-spacing:-.055em}h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:0 0 1rem;font-weight:500;letter-spacing:-.04em}h3{font-size:1.15rem;margin:.2rem 0 .65rem}p,li,dd{color:#b4aea3;line-height:1.72}.lede{font-size:1.15rem;max-width:68ch}.section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid rgba(201,169,103,.12)}.section-heading{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:2rem}.section-heading>p{max-width:52ch}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:1.35rem;min-height:100%}.card strong,.price{color:#c9a967}.card .meta{display:flex;gap:.7rem;flex-wrap:wrap;margin:.9rem 0}.tag{display:inline-flex;border:1px solid rgba(201,169,103,.25);color:#c9a967;padding:.28rem .5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#302815;border:1px solid #302815;margin:1.25rem 0}.facts div{background:#0d0d0b;padding:1rem}.facts span{display:block;color:#746f67;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em}.visual{background:#e9e3d9;color:#171511;min-height:460px;display:grid;place-items:stretch;text-align:center;text-transform:uppercase;letter-spacing:.12em;overflow:hidden}.visual img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center}.product-layout{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(320px,1.1fr) 340px;gap:2rem;align-items:start}.buybox{padding:1.4rem;position:sticky;top:106px}.note{font-size:.78rem;color:#8a8378}.comparison{width:100%;border-collapse:collapse}.comparison th,.comparison td{border-bottom:1px solid rgba(201,169,103,.18);text-align:left;padding:1rem;vertical-align:top}.comparison th{color:#c9a967;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}.ladder{counter-reset:step}.ladder li{list-style:none;position:relative;padding-left:3rem;margin:1rem 0}.ladder li:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1rem;color:#c9a967}.fine-print{border-top:1px solid rgba(201,169,103,.18);margin-top:1rem;padding-top:1rem}.cta-strip{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;border:1px solid rgba(201,169,103,.26);padding:1.4rem;background:#10100e}.footer{padding:2rem 6vw;color:#8f887c;border-top:1px solid rgba(201,169,103,.18)}details{border-top:1px solid rgba(201,169,103,.18);padding:1rem 0}summary{cursor:pointer;color:#f1eadc;font-weight:700}@media(max-width:1000px){.hero-grid,.product-layout,.grid,.grid.two{grid-template-columns:1fr}.buybox{position:static}.section-heading{display:block}.visual,.visual img{min-height:300px}nav{display:none}}`;
 
-const productPage = (item) => `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070706"><title>${item.seoTitle || `${item.name} | ZYNE`}</title><meta name="description" content="${item.seoDescription || item.description}"><style>${baseStyles}</style></head><body><header><a href="/"><img src="/assets/zyne-logo.png" alt="ZYNE"></a><a href="/#services">Services</a></header><main><div class="layout"><section class="visual">${item.image ? `<img src="/assets/${item.image}" alt="${item.imageAlt || `${item.name} product package`}">` : `<strong>ZYNE</strong><br>${item.name}`}</section><section><div class="eyebrow">Fixed-price strategic service</div><h1>${item.name}</h1><strong class="price">${item.price}</strong><p>${item.shortDescription || item.description}</p><p><strong>Best for:</strong> ${item.bestFor}</p><ul>${listItems(item.deliverables, defaultDeliverables)}</ul><div class="facts"><div><span>Delivery</span><strong>${item.timeline}</strong></div><div><span>Format</span><strong>Digital service</strong></div><div><span>Checkout</span><strong>Stan Store</strong></div></div></section><aside class="buybox"><div class="eyebrow">Purchase this service</div><strong class="price">${item.price}</strong><p>Review service details on ZYNE, then continue to secure checkout.</p>${item.checkoutStatus === "live" && item.stanCheckoutUrl ? `<a class="button" href="${item.stanCheckoutUrl}" target="_blank" rel="noopener noreferrer external">Checkout on Stan Store</a><div class="note">Secure checkout is completed through Stan Store.</div>` : `<a class="button" href="/#services">View available services</a><div class="note">Checkout is not currently active for this product.</div>`}</aside></div></main></body></html>`;
+const schemaScript = (schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
 
-for (const [route, title, description] of routes) {
+const layout = ({ title, description, main, schema }) => `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070706">
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(description)}">
+<link rel="canonical" href="${absoluteUrl(schema?.url || "/")}">
+<style>${baseStyles}</style>
+${schema ? schemaScript(schema) : ""}
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
+  <a href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo.png" alt="ZYNE"></a>
+  <nav aria-label="Main navigation">
+    <a href="/services/">Services</a>
+    <a href="/grow-my-visibility/">Visibility</a>
+    <a href="/build-my-brand/">Brand</a>
+    <a href="/improve-my-business/">Business</a>
+    <a href="/use-ai/">AI</a>
+    <a href="/convert-more-clients/">Conversion</a>
+    <a href="/intelligence/">Intelligence</a>
+    <a href="/delivery/">Delivery</a>
+  </nav>
+</header>
+<main id="main-content">${main}</main>
+<footer class="footer">Product education, service details, comparison logic, and buyer qualification are provided by ZYNE. Secure checkout is completed through Stan Store.</footer>
+</body>
+</html>`;
+
+const productCard = (product) => `<article class="card">
+  <p class="eyebrow">${escapeHtml(product.category.replaceAll("-", " "))}</p>
+  <h3>${escapeHtml(product.name)}</h3>
+  <strong class="price">${escapeHtml(product.price)}</strong>
+  <p>${escapeHtml(product.shortDescription || product.description)}</p>
+  <div class="meta"><span class="tag">${escapeHtml(product.timeline)}</span><span class="tag">${escapeHtml(product.productType)}</span></div>
+  <p><strong>Best for:</strong> ${escapeHtml(product.bestFor)}</p>
+  <a class="button ghost" href="${productRoute(product)}" data-event="product_card_view_product_click" data-product="${escapeHtml(product.id)}">View Product ${arrow}</a>
+</article>`;
+
+const comparisonTable = (products) => `<div class="table-wrap"><table class="comparison">
+  <thead><tr><th>Product</th><th>Best for</th><th>Timeline</th><th>Price</th><th>Next step</th></tr></thead>
+  <tbody>${products.map((product) => `<tr><td><strong>${escapeHtml(product.name)}</strong><br><span>${escapeHtml(product.shortDescription || product.description)}</span></td><td>${escapeHtml(product.bestFor)}</td><td>${escapeHtml(product.timeline)}</td><td>${escapeHtml(product.price)}</td><td><a href="${productRoute(product)}">View details ${arrow}</a></td></tr>`).join("")}</tbody>
+</table></div>`;
+
+const pageSchema = ({ type = "CollectionPage", title, description, url, products = [] }) => ({
+  "@context": "https://schema.org",
+  "@type": type,
+  "name": title,
+  "description": description,
+  "url": absoluteUrl(url),
+  "mainEntity": products.length ? {
+    "@type": "ItemList",
+    "itemListElement": products.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": product.schemaType || "Service",
+        "name": product.name,
+        "description": product.description,
+        "url": absoluteUrl(productRoute(product)),
+        "offers": {
+          "@type": "Offer",
+          "price": product.priceValue,
+          "priceCurrency": product.currency || "USD",
+          "availability": product.checkoutStatus === "live" ? "https://schema.org/InStock" : "https://schema.org/PreOrder"
+        }
+      }
+    }))
+  } : undefined
+});
+
+const categoryFaq = (category) => [
+  [`Which ${category.shortTitle.toLowerCase()} product should I start with?`, `Start with ${getProduct(category.recommendedStarterProductId)?.name || "the recommended starting point"} if you need the fastest diagnostic or foundational move.`],
+  ["Can I compare services before checkout?", "Yes. Product education, fit, price, timeline, and internal product pages are available on ZYNE before any Stan Store checkout step."],
+  ["Where does payment happen?", "Secure checkout is completed through Stan Store after you have reviewed the relevant ZYNE product details."]
+];
+
+const categoryPage = (category, products = productList(category.productIds)) => {
+  const recommended = getProduct(category.recommendedStarterProductId) || products[0];
+  const relatedCategories = categories.filter((item) => item.id !== category.id).slice(0, 3);
+  const title = category.seoTitle || `${category.title} | ZYNE`;
+  const description = category.seoDescription || category.description;
+  return layout({
+    title,
+    description,
+    schema: pageSchema({ title, description, url: category.url, products }),
+    main: `
+<section class="hero"><div class="container hero-grid"><div class="panel">
+  <p class="eyebrow">Growth path ${escapeHtml(category.number)}</p>
+  <h1>${escapeHtml(category.title)}</h1>
+  <p class="lede">${escapeHtml(category.description)}</p>
+  <p><strong>Buyer problem:</strong> ${escapeHtml(category.problemStatement)}</p>
+  <div class="cta-strip"><span>Recommended starting point: <strong>${escapeHtml(recommended?.name || "View products")}</strong></span><a class="button" href="${recommended ? productRoute(recommended) : "/services/"}">Start here ${arrow}</a></div>
+</div><aside class="card"><p class="eyebrow">Product ladder</p><ol class="ladder">${products.slice().sort(byPrice).map((product) => `<li><a href="${productRoute(product)}"><strong>${escapeHtml(product.name)}</strong></a><br><span>${escapeHtml(product.price)} · ${escapeHtml(product.timeline)}</span></li>`).join("")}</ol></aside></div></section>
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Compare offers</p><h2>${escapeHtml(category.shortTitle)} product comparison</h2></div><p>Compare fit, timeline, and price before choosing an internal product detail page.</p></div>${comparisonTable(products)}</div></section>
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Available services</p><h2>Choose the right fixed-price service</h2></div></div><div class="grid">${products.map(productCard).join("")}</div></div></section>
+<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">FAQ</p>${categoryFaq(category).map(([question, answer]) => `<details><summary>${escapeHtml(question)}</summary><p>${escapeHtml(answer)}</p></details>`).join("")}</div><div class="card"><p class="eyebrow">Related growth paths</p>${relatedCategories.map((item) => `<p><a href="${item.url}"><strong>${escapeHtml(item.title)}</strong> ${arrow}</a><br>${escapeHtml(item.description)}</p>`).join("")}<p class="fine-print">Secure checkout is completed through Stan Store only after the buyer reviews ZYNE service details.</p></div></div></section>`
+  });
+};
+
+const collectionPage = ({ url, title, eyebrow, description, products, sections = [], cta = "/services/" }) => layout({
+  title: `${title} | ZYNE`,
+  description,
+  schema: pageSchema({ title: `${title} | ZYNE`, description, url, products }),
+  main: `
+<section class="hero"><div class="container hero-grid"><div class="panel"><p class="eyebrow">${escapeHtml(eyebrow)}</p><h1>${escapeHtml(title)}</h1><p class="lede">${escapeHtml(description)}</p><a class="button" href="${cta}">View recommended services ${arrow}</a></div><aside class="card"><p class="eyebrow">What this page helps you do</p><ul>${listItems(sections.length ? sections : ["Compare relevant ZYNE offers.", "Review fit, timeline, and price before checkout.", "Move from education to internal product detail pages."])}</ul></aside></div></section>
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Product comparison</p><h2>Relevant offers</h2></div><p>Every product links to a ZYNE detail page before external checkout.</p></div>${comparisonTable(products)}</div></section>
+<section class="section"><div class="container grid">${products.map(productCard).join("")}</div></section>`
+});
+
+const productSchema = (product) => ({
+  "@context": "https://schema.org",
+  "@type": product.schemaType || "Service",
+  "name": product.name,
+  "description": product.description,
+  "url": absoluteUrl(productRoute(product)),
+  "image": product.image ? absoluteUrl(`/assets/${product.image}`) : undefined,
+  "offers": {
+    "@type": "Offer",
+    "price": product.priceValue,
+    "priceCurrency": product.currency || "USD",
+    "availability": product.checkoutStatus === "live" ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
+    "url": product.stanCheckoutUrl || absoluteUrl(productRoute(product))
+  }
+});
+
+const productFaq = () => [
+  ["Where does checkout happen?", "Secure checkout is completed through Stan Store after you review product details on ZYNE."],
+  ["What happens after purchase?", "After checkout, you complete the intake process and provide the context or materials required for delivery."],
+  ["Are results guaranteed?", "No. ZYNE provides strategic services, assets, audits, and recommendations, but does not guarantee revenue, rankings, traffic, or leads."]
+];
+
+const productPage = (product) => {
+  const category = categories.find((item) => item.id === product.category);
+  const related = uniqueProducts([
+    ...productList(product.relatedProductIds),
+    ...productList(category?.productIds || []).filter((item) => item.id !== product.id)
+  ]).slice(0, 3);
+  const deliverables = product.deliverables?.length ? product.deliverables : defaultDeliverables(product);
+  const responsibilities = product.buyerResponsibilities?.length ? product.buyerResponsibilities : defaultBuyerResponsibilities;
+  const exclusions = product.exclusions?.length ? product.exclusions : defaultExclusions;
+  return layout({
+    title: product.seoTitle || `${product.name} | ZYNE`,
+    description: product.seoDescription || product.shortDescription || product.description,
+    schema: productSchema(product),
+    main: `
+<section class="hero"><div class="container product-layout"><section class="visual">${product.image ? `<img src="/assets/${product.image}" alt="${escapeHtml(product.imageAlt || `${product.name} product package`)}">` : `<strong>ZYNE</strong><br>${escapeHtml(product.name)}`}</section><section class="panel"><p class="eyebrow">Fixed-price ${escapeHtml(product.productType.replaceAll("-", " "))}</p><h1>${escapeHtml(product.name)}</h1><strong class="price">${escapeHtml(product.price)}</strong><p class="lede">${escapeHtml(product.shortDescription || product.description)}</p><p><strong>Who it is for:</strong> ${escapeHtml(product.bestFor)}</p><div class="facts"><div><span>Timeline</span><strong>${escapeHtml(product.timeline)}</strong></div><div><span>Revisions</span><strong>${escapeHtml(product.revisions || "Defined by scope")}</strong></div><div><span>Category</span><strong>${escapeHtml(category?.shortTitle || product.category)}</strong></div></div><h2>What is included</h2><ul>${listItems(deliverables)}</ul></section><aside class="buybox"><p class="eyebrow">Purchase this service</p><strong class="price">${escapeHtml(product.price)}</strong><p>Review the scope on ZYNE, then continue to secure checkout.</p>${product.checkoutStatus === "live" && product.stanCheckoutUrl ? `<a class="button" href="${product.stanCheckoutUrl}" target="_blank" rel="noopener noreferrer external" data-event="product_buy_now_click" data-product="${escapeHtml(product.id)}">Checkout on Stan Store</a><div class="note">Secure checkout is completed through Stan Store.</div>` : `<a class="button ghost" href="/services/">View available services</a><div class="note">Checkout is not currently active for this product.</div>`}</aside></div></section>
+<section class="section"><div class="container grid two"><article class="card"><p class="eyebrow">Buyer responsibilities</p><ul>${listItems(responsibilities)}</ul></article><article class="card"><p class="eyebrow">Scope exclusions</p><ul>${listItems(exclusions)}</ul><p class="fine-print">Refund and scope handling depends on the purchased service and the work already performed. Product-specific checkout terms should be reviewed before purchase.</p></article></div></section>
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Related products</p><h2>Compare before checkout</h2></div><p>ZYNE owns product education and buyer qualification before Stan Store checkout.</p></div><div class="grid">${related.map(productCard).join("")}</div></div></section>
+<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">FAQ</p>${productFaq(product).map(([question, answer]) => `<details><summary>${escapeHtml(question)}</summary><p>${escapeHtml(answer)}</p></details>`).join("")}</div><div class="card"><p class="eyebrow">Policy note</p><p>Payment is processed externally through Stan Store. ZYNE controls service education, product scope, fulfillment expectations, and buyer-facing service information on this site.</p><a href="/refund-policy/">Review refund and scope policy ${arrow}</a></div></div></section>`
+  });
+};
+
+const legalPage = ({ url, title, description, points }) => layout({
+  title: `${title} | ZYNE`,
+  description,
+  schema: pageSchema({ type: "WebPage", title: `${title} | ZYNE`, description, url }),
+  main: `<section class="hero"><div class="container"><div class="panel"><p class="eyebrow">Legal and checkout clarity</p><h1>${escapeHtml(title)}</h1><p class="lede">${escapeHtml(description)}</p><ul>${listItems(points)}</ul><p class="fine-print">This page provides operational policy information for ZYNE productized services. Secure checkout is completed through Stan Store.</p></div></div></section>`
+});
+
+const writeRoute = async (route, html) => {
   const dir = join("dist", route);
   await mkdir(dir, { recursive: true });
-  await writeFile(join(dir, "index.html"), page({ title, description }));
+  await writeFile(join(dir, "index.html"), html);
+};
+
+await writeRoute("services", collectionPage({
+  url: "/services/",
+  title: "ZYNE Paid Services",
+  eyebrow: "All fixed-price services",
+  description: "Browse fixed-price ZYNE services for visibility, brand authority, business improvement, AI systems, and client conversion.",
+  products: catalogProducts,
+  sections: ["Compare every active ZYNE productized service.", "Use category pages to narrow the problem area.", "Open product detail pages before checkout."]
+}));
+
+for (const category of categories) {
+  await writeRoute(category.slug, categoryPage(category));
 }
 
-for (const item of catalogProducts) {
-  const dir = join("dist", "services", item.slug);
-  await mkdir(dir, { recursive: true });
-  await writeFile(join(dir, "index.html"), productPage(item));
+await writeRoute("intelligence", collectionPage({
+  url: "/intelligence/",
+  title: "ZYNE Intelligence",
+  eyebrow: "Strategic reports, audits, and briefings",
+  description: "Paid strategic services that clarify constraints, reveal opportunities, and define the next commercial move before execution.",
+  products: productList(intelligenceProductIds),
+  sections: ["Clarify constraints and priorities.", "Compare strategic services by price and timeline.", "Choose a product page before checkout."]
+}));
+
+await writeRoute("delivery", collectionPage({
+  url: "/delivery/",
+  title: "ZYNE Delivery",
+  eyebrow: "Done-for-you systems and kits",
+  description: "Implementation-oriented services for brand presence, websites, AI automation, proof systems, referrals, and conversion infrastructure.",
+  products: uniqueProducts(deliveryFamilies.flatMap((family) => productList(family.productIds))),
+  sections: deliveryFamilies.map((family) => `${family.name}: ${family.description}`)
+}));
+
+await writeRoute("use-ai/realtor-gpt", collectionPage({
+  url: "/use-ai/realtor-gpt/",
+  title: "Realtor GPT Products",
+  eyebrow: "Real estate AI systems",
+  description: "Purpose-built AI assistant kits for real estate agents and teams that need practical workflow support without generic automation.",
+  products: catalogProducts.filter((product) => product.id.includes("realtor-gpt")),
+  sections: ["Compare Realtor GPT starter and growth options.", "Review fit and delivery timelines.", "Move to the right internal product page before checkout."],
+  cta: "/use-ai/"
+}));
+
+await writeRoute("privacy", legalPage({
+  url: "/privacy/",
+  title: "Privacy Policy",
+  description: "How ZYNE handles information submitted for productized services, intake, fulfillment, and support.",
+  points: ["ZYNE uses submitted business information to evaluate, fulfill, and support purchased services.", "Payment information is handled by Stan Store or its payment processors, not by ZYNE-hosted pages.", "Client materials should be limited to what is necessary for the purchased service scope."]
+}));
+
+await writeRoute("terms", legalPage({
+  url: "/terms/",
+  title: "Terms of Service",
+  description: "Core service terms for fixed-price ZYNE productized services and external checkout flow.",
+  points: ["Each purchase is governed by the service scope, deliverables, timeline, exclusions, and buyer responsibilities shown before checkout.", "ZYNE does not guarantee financial results, rankings, leads, traffic, or platform outcomes.", "Secure checkout is completed through Stan Store after product details are reviewed on ZYNE."]
+}));
+
+await writeRoute("refund-policy", legalPage({
+  url: "/refund-policy/",
+  title: "Refund and Scope Policy",
+  description: "How ZYNE frames service scope, buyer responsibilities, revisions, and refund expectations for productized services.",
+  points: ["Fixed-price services begin from a defined scope and require timely buyer intake.", "Completed strategy work, audits, digital deliverables, and started fulfillment work may not be refundable once delivery has begun.", "Revision handling is limited to the revision terms stated on the product detail page or checkout flow."]
+}));
+
+for (const product of catalogProducts) {
+  await writeRoute(join("services", product.slug), productPage(product));
 }
 
-await writeFile(join("dist", "404.html"), page({ title: "Page in progress", description: "This ZYNE page is being prepared. Return to the homepage to explore currently available paid services." }));
+await writeFile(join("dist", "404.html"), layout({
+  title: "Page in progress | ZYNE",
+  description: "This ZYNE page is being prepared. Return to the services index to explore currently available paid services.",
+  schema: pageSchema({ type: "WebPage", title: "Page in progress | ZYNE", description: "This ZYNE page is being prepared.", url: "/404/" }),
+  main: `<section class="hero"><div class="container"><div class="panel"><p class="eyebrow">Page in progress</p><h1>This ZYNE page is being prepared.</h1><p class="lede">Return to the services index to compare fixed-price services and internal product detail pages.</p><a class="button" href="/services/">View services ${arrow}</a></div></div></section>`
+}));
