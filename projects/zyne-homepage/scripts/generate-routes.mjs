@@ -18,21 +18,21 @@ const routes = [
 
 const products = [
   ["google-business-profile-mini-audit", "Google Business Profile Mini Audit", "$49.99", "https://stan.store/ZYNE_store/p/google-business-profile-mini-audit"],
-  ["website-quick-win-audit", "Website Quick-Win Audit", "$49.99"],
-  ["social-media-quick-audit", "Social Media Quick Audit", "$49.99"],
-  ["homepage-fix-pack", "Homepage Fix Pack", "$149.99"],
-  ["starter-brand-kit", "Starter Brand Kit", "$400"],
-  ["realtor-gpt-starter-kit", "Realtor GPT Starter Kit", "$500"],
-  ["executive-briefing", "Executive Briefing", "$750"],
-  ["visibility-audit", "Visibility Audit", "$950"],
-  ["growth-roadmap", "Growth Roadmap", "$1,500"],
-  ["market-positioning", "Market Positioning", "$1,750"],
-  ["ai-integration", "AI Integration", "$1,750"],
-  ["origination-system", "Origination System", "$1,950"],
-  ["sector-authority", "Sector Authority", "$1,950"],
-  ["web-architecture", "Web Architecture", "$2,500"],
-  ["operational-audit", "Operational Audit", "$2,500"],
-  ["competitor-readiness", "Competitor Readiness", "$2,950"]
+  ["website-quick-win-audit", "Website Quick-Win Audit", "$49.99", "https://stan.store/ZYNE_store/p/website-quickwin-audit"],
+  ["social-media-quick-audit", "Social Media Quick Audit", "$49.99", "https://stan.store/ZYNE_store/p/social-media-quick-audit"],
+  ["homepage-fix-pack", "Homepage Fix Pack", "$149.99", "https://stan.store/ZYNE_store/p/homepage-fix-pack"],
+  ["starter-brand-kit", "Starter Brand Kit", "$400", "https://stan.store/ZYNE_store/p/starter-brand-kit-14zdq78a"],
+  ["realtor-gpt-starter-kit", "Realtor GPT Starter Kit", "$500", "https://stan.store/ZYNE_store/p/realtor-gpt-starter-kit"],
+  ["executive-briefing", "Executive Briefing", "$750", "https://stan.store/ZYNE_store/p/executive-briefing"],
+  ["visibility-audit", "Visibility Audit", "$950", "https://stan.store/ZYNE_store/p/visibility-audit"],
+  ["growth-roadmap", "Growth Roadmap", "$1,500", "https://stan.store/ZYNE_store/p/growth-roadmap"],
+  ["market-positioning", "Market Positioning", "$1,750", "https://stan.store/ZYNE_store/p/market-positioning"],
+  ["ai-integration", "AI Integration", "$1,750", "https://stan.store/ZYNE_store/p/ai-integration"],
+  ["origination-system", "Origination System", "$1,950", "https://stan.store/ZYNE_store/p/origination-system"],
+  ["sector-authority", "Sector Authority", "$1,950", "https://stan.store/ZYNE_store/p/sector-authority"],
+  ["web-architecture", "Web Architecture", "$2,500", "https://stan.store/ZYNE_store/p/web-architecture"],
+  ["operational-audit", "Operational Audit", "$2,500", "https://stan.store/ZYNE_store/p/operational-audit"],
+  ["competitor-readiness", "Competitor Readiness", "$2,950", "https://stan.store/ZYNE_store/p/competitor-readiness"]
 ];
 
 const shell = ({ title, description, price, checkout }) => `<!doctype html>

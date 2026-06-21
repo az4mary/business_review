@@ -10,7 +10,7 @@ export const products = [
     bestFor: "New or under-optimized profiles",
     timeline: "2 business days",
     internalUrl: "/services/google-business-profile-mini-audit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/google-business-profile-mini-audit",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -24,7 +24,7 @@ export const products = [
     bestFor: "Websites that feel stuck",
     timeline: "2 business days",
     internalUrl: "/services/website-quick-win-audit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/website-quickwin-audit",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -38,7 +38,7 @@ export const products = [
     bestFor: "Businesses refining social credibility",
     timeline: "2 business days",
     internalUrl: "/services/social-media-quick-audit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/social-media-quick-audit",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -52,7 +52,7 @@ export const products = [
     bestFor: "Service businesses with traffic but weak response",
     timeline: "3 business days",
     internalUrl: "/services/homepage-fix-pack/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/homepage-fix-pack",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -66,7 +66,7 @@ export const products = [
     bestFor: "New and evolving brands",
     timeline: "5–7 business days",
     internalUrl: "/services/starter-brand-kit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/starter-brand-kit-14zdq78a",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -80,7 +80,7 @@ export const products = [
     bestFor: "Agents ready to work faster with AI",
     timeline: "5–7 business days",
     internalUrl: "/services/realtor-gpt-starter-kit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/realtor-gpt-starter-kit",
     featured: true,
     starterOffer: true,
     premiumOffer: false
@@ -94,7 +94,7 @@ export const products = [
     bestFor: "Leaders making a consequential decision",
     timeline: "5 business days",
     internalUrl: "/services/executive-briefing/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/executive-briefing",
     featured: true,
     starterOffer: true,
     premiumOffer: true
@@ -108,7 +108,7 @@ export const products = [
     bestFor: "Businesses that need a visibility plan",
     timeline: "7–10 business days",
     internalUrl: "/services/visibility-audit/",
-    stanCheckoutUrl: "TO_BE_PROVIDED",
+    stanCheckoutUrl: "https://stan.store/ZYNE_store/p/visibility-audit",
     featured: true,
     starterOffer: true,
     premiumOffer: true
