@@ -126,7 +126,7 @@ app.innerHTML = `
         <p>Higher-value services for businesses ready to resolve structural constraints and build stronger systems.</p>
       </div>
       <div class="premium-grid">
-        ${premiumProducts.map(([name, price, text, slug, image]) => `<article class="${image ? "has-product-image" : "product-image-pending"}">${image ? `<img src="/assets/${image}" alt="${name} boxed service package" loading="lazy" width="640" height="420" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ↗</a></div></article>`).join("")}
+        ${premiumProducts.map(([name, price, text, slug, image]) => `<article class="${image ? "has-product-image" : "product-image-pending"}">${image ? `<img src="/assets/${image}" alt="${name} boxed service package" loading="eager" decoding="async" width="1200" height="1200" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ↗</a></div></article>`).join("")}
       </div>
     </section>
     <section class="section industries" id="industries">
@@ -182,6 +182,17 @@ document.addEventListener("click", (event) => {
   });
 });
 
+document.querySelectorAll('a[href*="stan.store"]').forEach((link) => {
+  link.dataset.event = "stan_store_redirect_click";
+  link.addEventListener("click", () => {
+    track("product_buy_now_click", {
+      product_id: link.dataset.product,
+      destination_type: "stan_checkout",
+      destination_url: link.href
+    });
+  });
+});
+
 document.querySelectorAll("#main-navigation a").forEach((item) => {
   item.addEventListener("click", () => {
     document.querySelector(".menu-toggle").setAttribute("aria-expanded", "false");
@@ -208,6 +219,12 @@ document.querySelectorAll('a[href^="http"]').forEach((link) => {
 });
 
 track("homepage_view");
+
+window.addEventListener("error", (event) => {
+  const image = event.target;
+  if (!(image instanceof HTMLImageElement) || !image.closest(".premium-grid")) return;
+  image.closest("article")?.classList.add("image-load-failed");
+}, true);
 
 const schema = {
   "@context": "https://schema.org",
