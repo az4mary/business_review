@@ -46,7 +46,7 @@ main{min-height:calc(100vh - 82px);display:grid;place-items:center;padding:8vw}.
 .eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.22em;font-size:.68rem}h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:1;margin:.5rem 0 1.5rem;font-weight:500}p{color:#aaa59c;line-height:1.8;font-size:1.05rem}.price{display:block;color:#c9a967;font-family:Georgia,serif;font-size:2rem;margin:1rem 0 2rem}.note{font-size:.75rem;color:#716d65;margin-top:1rem}
 </style></head><body><header><a href="/"><img src="/assets/zyne-logo.png" alt="ZYNE"></a><a href="/" class="button">Back to homepage</a></header>
 <main><section class="card"><div class="eyebrow">ZYNE · Paid productized service</div><h1>${title}</h1>${price ? `<strong class="price">${price}</strong>` : ""}<p>${description}</p>
-${checkout ? `<a class="button" href="${checkout}">Checkout on Stan Store ↗</a><div class="note">Secure checkout is completed through Stan Store.</div>` : `<a class="button" href="/#services">Explore available services</a><div class="note">Full product details and checkout access are being finalized.</div>`}
+${checkout ? `<a class="button" href="${checkout}" target="_blank" rel="noopener noreferrer external">Checkout on Stan Store ↗</a><div class="note">Secure checkout opens in a new tab through Stan Store.</div>` : `<a class="button" href="/#services">Explore available services</a><div class="note">Full product details and checkout access are being finalized.</div>`}
 </section></main></body></html>`;
 
 for (const [route, title, description] of routes) {

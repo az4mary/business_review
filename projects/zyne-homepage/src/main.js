@@ -201,6 +201,12 @@ document.querySelectorAll("details").forEach((detail) => {
   });
 });
 
+document.querySelectorAll('a[href^="http"]').forEach((link) => {
+  if (new URL(link.href).origin === window.location.origin) return;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer external";
+});
+
 track("homepage_view");
 
 const schema = {
