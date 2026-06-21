@@ -43,6 +43,23 @@ const requiredProductFields = [
   "schemaType"
 ];
 
+const requiredCategoryFields = [
+  "id",
+  "slug",
+  "number",
+  "icon",
+  "title",
+  "shortTitle",
+  "description",
+  "problemStatement",
+  "url",
+  "ctaLabel",
+  "productIds",
+  "recommendedStarterProductId",
+  "seoTitle",
+  "seoDescription"
+];
+
 const requiredFlags = [
   "homepageVisible",
   "categoryVisible",
@@ -141,11 +158,19 @@ for (const product of catalogProducts) {
 }
 
 for (const category of categories) {
-  if (!category.id || !category.title || !category.url || !Array.isArray(category.productIds)) {
-    errors.push(`${category.id || "unknown-category"}: category is missing required fields`);
+  for (const field of requiredCategoryFields) {
+    if (category[field] === undefined || category[field] === null || category[field] === "") {
+      errors.push(`${category.id || "unknown-category"}: missing required category field ${field}`);
+    }
+  }
+  if (!Array.isArray(category.productIds)) {
+    errors.push(`${category.id || "unknown-category"}: productIds must be an array`);
   }
   for (const id of category.productIds || []) {
     if (!productIds.has(id)) errors.push(`${category.id}: references missing product ${id}`);
+  }
+  if (category.recommendedStarterProductId && !productIds.has(category.recommendedStarterProductId)) {
+    errors.push(`${category.id}: recommendedStarterProductId does not exist`);
   }
 }
 
