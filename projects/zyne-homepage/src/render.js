@@ -5,7 +5,7 @@ const slugify = (value) => value.toLowerCase().replaceAll("?", "").replaceAll("&
 export const renderHomePage = () => `
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo.png" alt="ZYNE" /></a>
+    <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><b>Menu</b></button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a href="#services">Services</a><a href="#growth-paths">Growth Paths</a>
@@ -146,7 +146,7 @@ export const renderHomePage = () => `
     </section>
   </main>
   <footer>
-    <div class="footer-brand"><img src="/assets/zyne-logo.png" alt="ZYNE" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div>
+    <div class="footer-brand"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div>
     <div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div>
     <div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div>
     <div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div>
@@ -162,7 +162,7 @@ export const buildSchema = () => ({
       "@id": "/#organization",
       name: "ZYNE",
       url: "/",
-      logo: "/assets/zyne-logo.png"
+      logo: "/assets/zyne-logo-optimized.webp"
     },
     {
       "@type": "WebSite",
