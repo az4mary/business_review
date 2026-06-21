@@ -126,12 +126,12 @@ export const intelligenceProducts = [
 ];
 
 export const premiumProducts = [
-  ["Market Positioning", "$1,750", "For businesses that need a sharper market angle and stronger authority.", "market-positioning", "Market_Positioning_thumbnail.jpg"],
-  ["AI Integration", "$1,750", "For teams that need a practical, commercially useful AI plan.", "ai-integration", "AI_Integration_thumbnail.jpg"],
-  ["Origination System", "$1,950", "For experts who need a repeatable path from attention to opportunity.", "origination-system", "Origination_System_thumbnail.jpg"],
-  ["Web Architecture", "$2,500", "For businesses rebuilding their digital conversion infrastructure.", "web-architecture", "Web_Architecture_thumbnail.jpg"],
-  ["Operational Audit", "$2,500", "For leadership teams addressing friction, readiness, and scale.", "operational-audit", "Operational_Audit_thumbnail.jpg"],
-  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness", "Competitor_Readiness_thumnail.png"]
+  ["Market Positioning", "$1,750", "For businesses that need a sharper market angle and stronger authority.", "market-positioning", "catalog/Market_Positioning_thumbnail.webp"],
+  ["AI Integration", "$1,750", "For teams that need a practical, commercially useful AI plan.", "ai-integration", "catalog/AI_Integration_thumbnail.webp"],
+  ["Origination System", "$1,950", "For experts who need a repeatable path from attention to opportunity.", "origination-system", "catalog/Origination_System_thumbnail.webp"],
+  ["Web Architecture", "$2,500", "For businesses rebuilding their digital conversion infrastructure.", "web-architecture", "catalog/Web_Architecture_thumbnail.webp"],
+  ["Operational Audit", "$2,500", "For leadership teams addressing friction, readiness, and scale.", "operational-audit", "catalog/Operational_Audit_thumbnail.webp"],
+  ["Competitor Readiness", "$2,950", "For businesses preparing to defend or expand their market position.", "competitor-readiness", "catalog/Competitor_Readiness_thumnail.webp"]
 ];
 
 export const industries = [
