@@ -1,4 +1,4 @@
-# **crawler/AI extraction fix**.
+# **Crawler/AI extraction fix**.
 
 ```txt
 Move homepage markup into reusable render.js
