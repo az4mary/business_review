@@ -16,24 +16,20 @@ const productCard = (product) => `
   <article class="product-card">
     <p class="product-category">${product.category.replaceAll("-", " ")}</p>
     <h3>${product.name}</h3><strong>${product.price}</strong>
-    <p>${product.description}</p>
+    <p>${product.shortDescription || product.description}</p>
     <dl><div><dt>Best for</dt><dd>${product.bestFor}</dd></div><div><dt>Timeline</dt><dd>${product.timeline}</dd></div></dl>
     <a href="${product.internalUrl}" data-event="product_card_view_product_click" data-product="${product.id}">View Product <span>${arrow}</span></a>
   </article>`;
 
-const intelligenceLink = ([name, price, description], index) => `
-  <a href="/services/${slugify(name)}/">
+const intelligenceLink = ([name, price, description, url], index) => `
+  <a href="${url || `/services/${slugify(name)}/`}">
     <span>0${index + 1}</span><div><h3>${name}</h3><p>${description}</p></div><strong>${price}</strong><b>${arrow}</b>
   </a>`;
 
 const deliveryCard = ({ name, description, icon, url }) => `<a class="family-card" href="${url}"><b>${icon}</b><h3>${name}</h3><p>${description}</p><span>Explore ${arrow}</span></a>`;
-
 const processCard = ([name, text], index) => `<article><span>0${index + 1}</span><h3>${name}</h3><p>${text}</p></article>`;
-
-const premiumCard = ([name, price, text, slug, image]) => `<article class="${image ? "has-product-image" : "product-image-pending"}">${image ? `<img src="/assets/${image}" alt="${name} boxed service package" loading="lazy" decoding="async" width="1200" height="1200" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ${arrow}</a></div></article>`;
-
+const premiumCard = ([name, price, text, slug, image, imageAlt]) => `<article class="${image ? "has-product-image" : "product-image-pending"}">${image ? `<img src="/assets/${image}" alt="${imageAlt || `${name} boxed service package`}" loading="lazy" decoding="async" width="1200" height="1200" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a href="/services/${slug}/">View Product ${arrow}</a></div></article>`;
 const industryCard = ([name, text], index) => `<article class="${name === "Real Estate" ? "featured-industry" : ""}"><span>0${index + 1}</span><h3>${name}</h3><p>${text}</p>${name === "Real Estate" ? `<a href="/use-ai/realtor-gpt/">View Realtor GPT Products ${arrow}</a>` : ""}</article>`;
-
 const faqItem = ([question, answer], index) => `<details><summary><span>0${index + 1}</span>${question}<b>+</b></summary><p>${answer}</p></details>`;
 
 export const renderHomePage = () => `
@@ -65,7 +61,7 @@ export const buildSchema = () => ({
   "@graph": [
     { "@type": "Organization", "@id": "/#organization", name: "ZYNE", url: "/", logo: "/assets/zyne-logo-optimized.webp" },
     { "@type": "WebSite", "@id": "/#website", url: "/", name: "ZYNE", publisher: { "@id": "/#organization" } },
-    { "@type": "ItemList", name: "Featured ZYNE services", itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": "Service", name: product.name, description: product.description, url: product.internalUrl, offers: { "@type": "Offer", price: product.price.replace("$", "").replace(",", ""), priceCurrency: "USD", availability: "https://schema.org/InStock" } } })) },
+    { "@type": "ItemList", name: "Featured ZYNE services", itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": product.schemaType || "Service", name: product.name, description: product.description, url: product.internalUrl, offers: { "@type": "Offer", price: product.priceValue, priceCurrency: product.currency || "USD", availability: product.checkoutStatus === "live" ? "https://schema.org/InStock" : "https://schema.org/PreOrder" } } })) },
     { "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) }
   ]
 });
