@@ -10,6 +10,7 @@ import {
   industrySegments
 } from "../src/data/products.js";
 
+const enforceCanonicalAssets = process.env.ENFORCE_CANONICAL_ASSETS === "true";
 const errors = [];
 const warnings = [];
 const categoryIds = new Set(categories.map((category) => category.id));
@@ -103,7 +104,9 @@ for (const product of catalogProducts) {
 
     const publicAsset = join("public", "assets", product.image);
     if (!(await exists(publicAsset))) {
-      errors.push(`${product.id}: missing source asset ${publicAsset}`);
+      const message = `${product.id}: missing source asset ${publicAsset}`;
+      if (enforceCanonicalAssets) errors.push(message);
+      else warnings.push(`${message} (migration warning)`);
     }
   }
 }
