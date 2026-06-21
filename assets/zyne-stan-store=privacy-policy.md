@@ -22,7 +22,7 @@ ZYNE is a provider of paid productized services, strategic reports, audits, bran
 
 For privacy questions, requests, or concerns, contact us at:
 
-**Email:** [contact@zyne.store](mailto:contact@zyne.store)
+**Email:** [lisibeth@zyne.store](mailto:lisibeth@zyne.store)
 
 If ZYNE later designates a separate privacy contact, this Privacy Policy may be updated to include that contact.
 
@@ -319,7 +319,7 @@ We may share information when you direct us to do so or give us permission.
 
 If you provide your email address or contact information, ZYNE may send you service-related messages and, where permitted, marketing or product updates.
 
-You may opt out of marketing emails by using the unsubscribe link in the email, if available, or by contacting us at [contact@zyne.store](mailto:contact@zyne.store).
+You may opt out of marketing emails by using the unsubscribe link in the email, if available, or by contacting us at [lisibeth@zyne.store](mailto:lisibeth@zyne.store).
 
 Even if you opt out of marketing, we may still send transactional or administrative messages related to purchases, service delivery, legal notices, policy updates, or support.
 
@@ -331,7 +331,7 @@ ZYNE may use analytics and advertising technologies to understand website perfor
 
 If ZYNE enables advertising pixels or retargeting technologies, third-party advertising platforms may use information collected from zyne.store to help measure or display ads. Depending on applicable law, certain advertising or analytics activities may be considered “sharing,” “selling,” or “targeted advertising.”
 
-You may control cookies through your browser settings. You may also contact us at [contact@zyne.store](mailto:contact@zyne.store) to ask about available privacy choices.
+You may control cookies through your browser settings. You may also contact us at [lisibeth@zyne.store](mailto:lisibeth@zyne.store) to ask about available privacy choices.
 
 If required by applicable law, ZYNE may provide additional opt-out tools or notices.
 
@@ -399,7 +399,7 @@ Depending on where you live, you may have certain rights regarding your personal
 
 To submit a privacy request, contact us at:
 
-**[contact@zyne.store](mailto:contact@zyne.store)**
+**[lisibeth@zyne.store](mailto:lisibeth@zyne.store)**
 
 We may need to verify your identity before responding. We may also deny or limit requests where permitted by law, such as where information is needed to complete a transaction, comply with legal obligations, protect rights, maintain security, or resolve disputes.
 
@@ -415,7 +415,7 @@ ZYNE does not sell personal information for money. However, if ZYNE uses adverti
 
 If applicable, you may request to opt out of such activities by contacting:
 
-**[contact@zyne.store](mailto:contact@zyne.store)**
+**[lisibeth@zyne.store](mailto:lisibeth@zyne.store)**
 
 If ZYNE later implements a dedicated “Do Not Sell or Share My Personal Information” mechanism or cookie-management tool, this Privacy Policy will be updated accordingly.
 
@@ -433,7 +433,7 @@ Data protection laws in those jurisdictions may differ from the laws where you l
 
 ZYNE services are intended for businesses and adults. ZYNE does not knowingly collect personal information from children under 16.
 
-If you believe a child under 16 has provided personal information to ZYNE, contact us at [contact@zyne.store](mailto:contact@zyne.store) and we will take reasonable steps to delete the information where required.
+If you believe a child under 16 has provided personal information to ZYNE, contact us at [lisibeth@zyne.store](mailto:lisibeth@zyne.store) and we will take reasonable steps to delete the information where required.
 
 ---
 
@@ -461,7 +461,7 @@ For privacy questions, requests, or concerns, contact:
 
 **ZYNE**
 Website: [https://zyne.store](https://zyne.store)
-Email: [contact@zyne.store](mailto:contact@zyne.store)
+Email: [lisibeth@zyne.store](mailto:lisibeth@zyne.store)
 
 If a legal mailing address, registered company name, or designated privacy contact is required, ZYNE may update this section accordingly.
 
