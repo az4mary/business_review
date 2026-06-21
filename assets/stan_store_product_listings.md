@@ -158,6 +158,8 @@ Small businesses, service-area businesses, and owners with incomplete or outdate
 up to 3 direct profile edits, 
 1 prioritized next-steps list.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/google-bp-quick-fix
+
 ---
 
 ## **Google BP Optimization**
@@ -202,6 +204,8 @@ Q&A suggestions,
 up to 10 direct profile edits, 
 1 next-steps PDF.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/google-bp-optimization
+
 ---
 
 ## **Google BP Management**
@@ -241,6 +245,8 @@ up to 5 profile edits,
 1 photo review, 
 1 category/services check, 
 1 monthly summary.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/google-bp-management
 
 ---
 
@@ -283,6 +289,8 @@ monthly posts,
 reporting dashboard, 
 strategy calls.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/google-bp-enterprise
+
 ---
 
 ## **Starter Brand Kit**
@@ -320,6 +328,8 @@ Startups, solopreneurs, service providers, and creatives launching a new brand.
 1 brand board PDF, 
 1 color palette PDF, 
 1 typography guide PDF.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/starter-brand-kit-14zdq78a
 
 ---
 
@@ -365,6 +375,8 @@ Established startups, service businesses, and creators ready for a more scalable
 - 1 x Typography Guide — PDF
 - 1 x Mini Brand Guide — PDF
 - 1 x Social Profile Image Set — PNG (profile) + JPG (cover/banner, if applicable)
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/growth-brand-kit
 
 ---
 
@@ -412,6 +424,8 @@ Established businesses, personal brands, creators, and service providers ready f
 - 1 x Profile Image Set - PNG
 - 1 x Cover/Banner Set - JPG
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/premium-brand-kit
+
 ---
 
 ## **Enterprise Brand Kit**
@@ -455,6 +469,8 @@ Strategic brand system for businesses that need stakeholder-ready branding and r
 
 This delivery window fits the added discovery, stakeholder feedback, and rollout assets.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/enterprise-brand-kit
+
 ---
 
 ## **Website Quick-Win Audit**
@@ -496,6 +512,8 @@ Revisions
 1 Loom walkthrough, 
 5–10 prioritized fixes.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/website-quickwin-audit
+
 ---
 
 ## **Homepage Fix Pack**
@@ -534,6 +552,8 @@ Small businesses with an existing website that needs improvement, not a full red
 3 section edits, 
 1 mobile cleanup pass, 
 1 final summary of completed changes
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/homepage-fix-pack
 
 ---
 
@@ -574,6 +594,8 @@ contact form,
 CTA setup, 
 basic on-page SEO, 
 domain/connect assistance
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/website-starter-kit
 
 ---
 
@@ -617,6 +639,8 @@ blog setup,
 booking/chat integration, 
 domain connection help
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/website-growth-kit
+
 ---
 
 ## **Website Premium Kit**
@@ -659,6 +683,8 @@ blog setup,
 basic SEO, 
 domain connection help
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/website-premium-kit
+
 ---
 
 ## **Website Enterprise Kit**
@@ -699,6 +725,8 @@ custom functionality,
 integrations, 
 scalable site structure, 
 launch support
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/website-enterprise-kit
 
 ---
 
@@ -743,6 +771,8 @@ branding consistency check,
 2 competitor snapshots, 
 1 PDF report or 1 Loom video.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-quick-audit
+
 ---
 
 ## **Social Media Profile Fix**
@@ -786,6 +816,8 @@ branding consistency fixes,
 hashtag guidance, 
 1 PDF handoff.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-profile-fix
+
 ---
 
 ## **Social Media Starter Kit**
@@ -824,6 +856,8 @@ Up to **2 content calendar revisions** per month based on client feedback.
 - 8–12 × Scheduled Posts (Graphics + Captions)
 - 1 × Monthly Analytics Report (PDF)
 - 1 × Basic Engagement Summary (PDF)
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-starter-kit-vreothl7
 
 ---
 
@@ -870,6 +904,8 @@ Up to **3 content calendar revisions per month** based on client feedback.
 - 1 × Engagement Summary Report (PDF)
 - 1 × Analytics + Insights Report (PDF)
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-growth-kit
+
 ---
 
 ## **Social Media Premium Kit**
@@ -910,6 +946,8 @@ Up to **3 rounds** of revisions per month.
 - 3 x managed social platforms
 - 1 x monthly analytics report (PDF)
 - 1 x community management summary (PDF)
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-premium-kit
 
 ---
 
@@ -952,6 +990,8 @@ Up to **4 revision cycles** per month; custom adjustments available based on ent
 - Dedicated Account Manager Access
 - Community & Engagement Summaries (PDF)
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/social-media-enterprise
+
 ---
 
 ## **Starter AI Chatbot Kit**
@@ -992,6 +1032,8 @@ Design a production-ready AI chatbot system that reduces support costs.
 - Conversation Design Framework (tone, guardrails, flows)
 - Cost & Scaling Model (tokens, infra, performance)
 - Step-by-Step Build Roadmap (ready for implementation)
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/starter-ai-chatbot-kit
 
 ---
 
@@ -1034,6 +1076,8 @@ Move from strategy to a fully functional AI chatbot system - trained on your dat
 - Response Logic + Guardrails (accuracy + tone control)
 - Deployment Setup (web or internal use)
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/growth-ai-chatbot-kit
+
 ---
 
 ## **Premium AI Chatbot Kit**
@@ -1075,6 +1119,8 @@ Deploy a fully featured, production-grade AI system with advanced workflows, and
 - Monitoring + Optimization Layer (performance tuning)
 - QA Testing + Deployment Support
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/premium-ai-chatbot-kit
+
 ---
 
 ## **Realtor® GPT Starter Kit**
@@ -1108,6 +1154,8 @@ Solo agents and small teams who want faster response times and better lead captu
 Delivery: **3 business days**.
 
 Revisions: **1 optimization pass**.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/realtor-gpt-starter-kit
 
 ---
 
@@ -1143,6 +1191,8 @@ Delivery: **4–5 business days**.
 
 Revisions: **2 optimization passes**.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/realtor-gpt-growth-kit
+
 ---
 
 ## **Realtor® GPT Premium Kit**
@@ -1176,6 +1226,8 @@ Everything in Growth, plus custom branching flows, branded templates, advanced e
 Delivery: **5–7 business days**.
 
 Revisions: **2 optimization passes**.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/realtor-gpt-premium-kit
 
 ---
 
@@ -1228,6 +1280,8 @@ Executive Briefing; Visibility Audit; Market Positioning; Growth Roadmap.
 **Refund / scope notes**
 Non-refundable once research begins. Based on public and client-provided information only. Does not include confidential investigation, legal advice, financial audit, or paid database research unless separately agreed.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/competitor-readiness
+
 ---
 
 ## **Executive Briefing**
@@ -1278,6 +1332,8 @@ Growth Roadmap; Market Positioning; Operational Audit.
 **Refund / scope notes**
 Non-refundable once briefing preparation begins. Requires an existing report, diagnostic, or source document.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/executive-briefing
+
 ---
 
 ## **Visibility Audit**
@@ -1327,6 +1383,8 @@ Web Architecture; Experience Bank; Market Positioning.
 
 **Refund / scope notes**
 Non-refundable once review begins. Does not include website redesign, SEO implementation, paid advertising, or technical development.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/visibility-audit
 
 ---
 
@@ -1379,6 +1437,8 @@ Brand Identity Systems; Web Architecture; Executive Briefing.
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include logo design, full brand identity, website build, or copywriting implementation unless purchased separately.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/market-positioning
+
 ---
 
 ## **Experience Bank**
@@ -1429,6 +1489,8 @@ Web Architecture; Referral Kit; Market Positioning.
 
 **Refund / scope notes**
 Client must provide source material. ZYNE does not verify confidential claims unless source evidence is provided. Client remains responsible for confidentiality, consent, and professional-use approval.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/experience-bank
 
 ---
 
@@ -1481,6 +1543,8 @@ Visibility Audit; Market Positioning; Experience Bank; Website Enterprise Kit.
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include full website design, development, hosting, custom code, or CMS implementation unless separately purchased.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/web-architecture
+
 ---
 
 ## **Origination System**
@@ -1531,6 +1595,8 @@ Strategic Social Optimization; Executive Briefing; Sector Authority.
 
 **Refund / scope notes**
 Non-refundable once strategy work begins. Does not include ongoing posting, design, copywriting production, email marketing software setup, or paid promotion unless separately purchased.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/origination-system
 
 ---
 
@@ -1583,6 +1649,8 @@ Experience Bank; Executive Briefing; Market Positioning.
 **Refund / scope notes**
 Client must provide accurate service, experience, and contact details. ZYNE does not verify professional credentials or confidential claims unless documentation is provided.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/referral-kit
+
 ---
 
 ## **Sector Authority**
@@ -1633,6 +1701,8 @@ Web Architecture; Origination System; Visibility Audit.
 
 **Refund / scope notes**
 Non-refundable once work begins. Includes up to 3 priority sectors. Additional sectors require expanded scope.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/sector-authority
 
 ---
 
@@ -1685,6 +1755,8 @@ Growth Roadmap; AI Integration; Enterprise Growth Systems.
 **Refund / scope notes**
 Requires client-provided internal information. Not a financial audit, legal audit, HR audit, or compliance certification.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/operational-audit
+
 ---
 
 ## **Growth Roadmap**
@@ -1736,6 +1808,8 @@ Enterprise Growth Systems; Executive Briefing; Operational Audit.
 **Refund / scope notes**
 Requires an existing report, audit, or strategic source document. Does not include project management, implementation, or ongoing advisory support unless separately purchased.
 
+#### **Product URL:** https://stan.store/ZYNE_store/p/growth-roadmap
+
 ---
 
 ## **AI Integration**
@@ -1786,4 +1860,6 @@ AI Deployments & Automation; Operational Audit; Enterprise Growth Systems.
 
 **Refund / scope notes**
 Non-refundable once analysis begins. Does not include custom software, model training, legal compliance certification, or live automation deployment unless separately purchased.
+
+#### **Product URL:** https://stan.store/ZYNE_store/p/ai-integration
 
