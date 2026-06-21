@@ -9,6 +9,8 @@ import {
   deliveryFamilies,
   industrySegments
 } from "../src/data/products.js";
+import { catalogAssetPolicy } from "../src/data/catalog-standards.js";
+import { canonicalImageByProductId, productImageMigrationMap } from "../src/data/catalog-image-map.js";
 
 const enforceCanonicalAssets = process.env.ENFORCE_CANONICAL_ASSETS === "true";
 const errors = [];
@@ -16,6 +18,7 @@ const warnings = [];
 const categoryIds = new Set(categories.map((category) => category.id));
 const productIds = new Set();
 const slugs = new Set();
+const imageMapIds = new Set(productImageMigrationMap.map((item) => item.id));
 
 const requiredProductFields = [
   "id",
@@ -61,6 +64,10 @@ const exists = async (path) => {
   }
 };
 
+const hasForbiddenImageFragment = (imagePath) => {
+  return catalogAssetPolicy.forbiddenFragments.some((fragment) => imagePath.includes(fragment));
+};
+
 for (const product of catalogProducts) {
   for (const field of requiredProductFields) {
     if (product[field] === undefined || product[field] === null || product[field] === "") {
@@ -96,11 +103,22 @@ for (const product of catalogProducts) {
     warnings.push(`${product.id}: Stan checkout URL does not use https://stan.store/`);
   }
 
+  if (!imageMapIds.has(product.id)) {
+    warnings.push(`${product.id}: missing image migration map entry`);
+  }
+
   if (!product.image) {
     errors.push(`${product.id}: missing product image`);
   } else {
-    if (product.image.includes("thumnail")) errors.push(`${product.id}: image path contains misspelling thumnail`);
-    if (!product.image.startsWith("catalog/")) warnings.push(`${product.id}: image should use canonical catalog/ path`);
+    if (hasForbiddenImageFragment(product.image)) errors.push(`${product.id}: image path contains forbidden thumbnail fragment`);
+    if (!product.image.startsWith(catalogAssetPolicy.imagePathPrefix)) warnings.push(`${product.id}: image should use canonical catalog/ path`);
+
+    const canonicalImage = canonicalImageByProductId[product.id];
+    if (canonicalImage && product.image !== canonicalImage) {
+      const message = `${product.id}: image is not yet canonical (${product.image} -> ${canonicalImage})`;
+      if (enforceCanonicalAssets) errors.push(message);
+      else warnings.push(`${message} (migration warning)`);
+    }
 
     const publicAsset = join("public", "assets", product.image);
     if (!(await exists(publicAsset))) {
