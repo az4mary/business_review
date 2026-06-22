@@ -7,13 +7,25 @@ const track = (event, properties = {}) => {
   window.dataLayer.push({ event, ...properties });
 };
 
-
 const app = document.querySelector("#app");
-
 
 if (app && !app.innerHTML.trim()) {
   app.innerHTML = renderHomePage();
 }
+
+const updateMobileStickyCta = () => {
+  const stickyCta = document.querySelector(".mobile-sticky-cta");
+  const hero = document.querySelector(".hero");
+  if (!stickyCta || !hero) return;
+
+  const mobileViewport = window.matchMedia("(max-width: 640px)").matches;
+  const heroTrigger = hero.offsetTop + hero.offsetHeight * 0.55;
+  document.body.classList.toggle("show-mobile-sticky-cta", mobileViewport && window.scrollY > heroTrigger);
+};
+
+window.addEventListener("scroll", updateMobileStickyCta, { passive: true });
+window.addEventListener("resize", updateMobileStickyCta);
+updateMobileStickyCta();
 
 document.addEventListener("click", (event) => {
   const menu = event.target.closest(".menu-toggle");
@@ -78,7 +90,6 @@ window.addEventListener("error", (event) => {
   if (!(image instanceof HTMLImageElement) || !image.closest(".premium-grid")) return;
   image.closest("article")?.classList.add("image-load-failed");
 }, true);
-
 
 if (!document.querySelector('script[type="application/ld+json"]')) {
   const schemaScript = document.createElement("script");
