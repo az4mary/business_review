@@ -1,0 +1,53 @@
+name: ZYNE Homepage Validation
+
+on:
+  push:
+    paths:
+      - "projects/zyne-homepage/**"
+      - "assets/catalog/**"
+      - "assets/zyne-website-PRD-2-product-data-model.md"
+      - "assets/zyne-website-PRD-2-asset-migration-map.md"
+      - ".github/workflows/zyne-homepage-validation.yml"
+  pull_request:
+    paths:
+      - "projects/zyne-homepage/**"
+      - "assets/catalog/**"
+      - "assets/zyne-website-PRD-2-product-data-model.md"
+      - "assets/zyne-website-PRD-2-asset-migration-map.md"
+      - ".github/workflows/zyne-homepage-validation.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-homepage:
+    name: Validate PRD catalog and build
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: projects/zyne-homepage
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: projects/zyne-homepage/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate catalog
+        run: npm run validate:catalog
+
+      - name: Report catalog migration status
+        run: npm run report:catalog-migration
+
+      - name: Build and validate routes
+        run: npm run build
+
+      - name: Strict catalog validation
+        run: npm run validate:catalog:strict
