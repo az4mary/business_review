@@ -85,6 +85,8 @@ const htmlFiles = async (dir) => {
   return files.flat();
 };
 
+const footerPattern = /<footer\b[^>]*>[\s\S]*?<\/footer>/;
+
 for (const policy of policies) {
   const dir = join(distDir, policy.route);
   await mkdir(dir, { recursive: true });
@@ -93,7 +95,7 @@ for (const policy of policies) {
 
 for (const path of await htmlFiles(distDir)) {
   const html = await readFile(path, 'utf8');
-  const next = html.replace(/<footer class=['"]footer['"]>[\s\S]*?<\/footer>/, legalFooter);
+  const next = footerPattern.test(html) ? html.replace(footerPattern, legalFooter) : `${html}${legalFooter}`;
   await writeFile(path, next);
 }
 
