@@ -7,6 +7,7 @@ import {
   getProduct,
   intelligenceProductIds
 } from "../src/data/products.js";
+import { categoryPageContent, collectionPageContent } from "../src/data/category-content.js";
 
 const siteUrl = "https://zyne.store";
 const arrow = "&#8599;";
@@ -25,6 +26,7 @@ const productList = (ids = []) => ids.map(getProduct).filter(Boolean);
 const uniqueProducts = (items = []) => Array.from(new Map(items.filter(Boolean).map((item) => [item.id, item])).values());
 const byPrice = (a, b) => (a.priceValue || 0) - (b.priceValue || 0);
 const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+const categoryById = Object.fromEntries(categories.map((category) => [category.id, category]));
 
 const defaultDeliverables = (product) => [
   `${product.shortName || product.name} scope and implementation notes`,
@@ -45,7 +47,7 @@ const defaultExclusions = [
 ];
 
 const baseStyles = `
-*{box-sizing:border-box}html{background:#070706;color:#f1eadc}body{margin:0;background:radial-gradient(circle at top right,rgba(201,169,103,.14),transparent 34rem),#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid #c9a967;outline-offset:4px}header{min-height:82px;padding:0 6vw;display:flex;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(201,169,103,.22);background:#070706ee;position:sticky;top:0;z-index:10;backdrop-filter:blur(18px)}header img{width:110px;height:auto}nav{display:flex;gap:1rem;flex-wrap:wrap;margin-left:auto}nav a{color:#b4aea3;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:1rem 1.2rem;background:#c9a967;color:#080807;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800;border:1px solid #c9a967}.button.ghost{background:transparent;color:#f1eadc}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;font-weight:800}.skip-link{position:absolute;left:-999px;top:1rem}.skip-link:focus{left:1rem;z-index:99;background:#c9a967;color:#080807;padding:.8rem 1rem}.container{width:min(1180px,88vw);margin:0 auto}.hero{padding:clamp(4rem,9vw,8rem) 0}.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(2rem,5vw,5rem);align-items:center}.panel,.card,.buybox,.table-wrap{border:1px solid rgba(201,169,103,.26);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));box-shadow:0 24px 80px rgba(0,0,0,.22)}.panel{padding:clamp(2rem,5vw,4rem)}h1{font-size:clamp(2.7rem,6.4vw,5.6rem);line-height:.95;margin:.65rem 0 1rem;font-weight:500;letter-spacing:-.055em}h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:0 0 1rem;font-weight:500;letter-spacing:-.04em}h3{font-size:1.15rem;margin:.2rem 0 .65rem}p,li,dd{color:#b4aea3;line-height:1.72}.lede{font-size:1.15rem;max-width:68ch}.section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid rgba(201,169,103,.12)}.section-heading{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:2rem}.section-heading>p{max-width:52ch}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:1.35rem;min-height:100%}.card strong,.price{color:#c9a967}.card .meta{display:flex;gap:.7rem;flex-wrap:wrap;margin:.9rem 0}.tag{display:inline-flex;border:1px solid rgba(201,169,103,.25);color:#c9a967;padding:.28rem .5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#302815;border:1px solid #302815;margin:1.25rem 0}.facts div{background:#0d0d0b;padding:1rem}.facts span{display:block;color:#746f67;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em}.visual{background:#e9e3d9;color:#171511;min-height:460px;display:grid;place-items:stretch;text-align:center;text-transform:uppercase;letter-spacing:.12em;overflow:hidden}.visual img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center}.product-layout{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(320px,1.1fr) 340px;gap:2rem;align-items:start}.buybox{padding:1.4rem;position:sticky;top:106px}.note{font-size:.78rem;color:#8a8378}.comparison{width:100%;border-collapse:collapse}.comparison th,.comparison td{border-bottom:1px solid rgba(201,169,103,.18);text-align:left;padding:1rem;vertical-align:top}.comparison th{color:#c9a967;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}.ladder{counter-reset:step}.ladder li{list-style:none;position:relative;padding-left:3rem;margin:1rem 0}.ladder li:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1rem;color:#c9a967}.fine-print{border-top:1px solid rgba(201,169,103,.18);margin-top:1rem;padding-top:1rem}.cta-strip{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;border:1px solid rgba(201,169,103,.26);padding:1.4rem;background:#10100e}.footer{padding:2rem 6vw;color:#8f887c;border-top:1px solid rgba(201,169,103,.18)}details{border-top:1px solid rgba(201,169,103,.18);padding:1rem 0}summary{cursor:pointer;color:#f1eadc;font-weight:700}@media(max-width:1000px){.hero-grid,.product-layout,.grid,.grid.two{grid-template-columns:1fr}.buybox{position:static}.section-heading{display:block}.visual,.visual img{min-height:300px}nav{display:none}}`;
+*{box-sizing:border-box}html{background:#070706;color:#f1eadc}body{margin:0;background:radial-gradient(circle at top right,rgba(201,169,103,.14),transparent 34rem),#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid #c9a967;outline-offset:4px}header{min-height:82px;padding:0 6vw;display:flex;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(201,169,103,.22);background:#070706ee;position:sticky;top:0;z-index:10;backdrop-filter:blur(18px)}header img{width:110px;height:auto}nav{display:flex;gap:1rem;flex-wrap:wrap;margin-left:auto}nav a{color:#b4aea3;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.button{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:1rem 1.2rem;background:#c9a967;color:#080807;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800;border:1px solid #c9a967}.button.ghost{background:transparent;color:#f1eadc}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;font-weight:800}.skip-link{position:absolute;left:-999px;top:1rem}.skip-link:focus{left:1rem;z-index:99;background:#c9a967;color:#080807;padding:.8rem 1rem}.container{width:min(1180px,88vw);margin:0 auto}.hero{padding:clamp(4rem,9vw,8rem) 0}.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(2rem,5vw,5rem);align-items:center}.panel,.card,.buybox,.table-wrap{border:1px solid rgba(201,169,103,.26);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));box-shadow:0 24px 80px rgba(0,0,0,.22)}.panel{padding:clamp(2rem,5vw,4rem)}h1{font-size:clamp(2.7rem,6.4vw,5.6rem);line-height:.95;margin:.65rem 0 1rem;font-weight:500;letter-spacing:-.055em}h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:0 0 1rem;font-weight:500;letter-spacing:-.04em}h3{font-size:1.15rem;margin:.2rem 0 .65rem}p,li,dd{color:#b4aea3;line-height:1.72}.lede{font-size:1.15rem;max-width:68ch}.section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid rgba(201,169,103,.12)}.section-heading{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:2rem}.section-heading>p{max-width:52ch}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:1.35rem;min-height:100%}.card strong,.price{color:#c9a967}.card .meta{display:flex;gap:.7rem;flex-wrap:wrap;margin:.9rem 0}.tag{display:inline-flex;border:1px solid rgba(201,169,103,.25);color:#c9a967;padding:.28rem .5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#302815;border:1px solid #302815;margin:1.25rem 0}.facts div{background:#0d0d0b;padding:1rem}.facts span{display:block;color:#746f67;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em}.visual{background:#e9e3d9;color:#171511;min-height:460px;display:grid;place-items:stretch;text-align:center;text-transform:uppercase;letter-spacing:.12em;overflow:hidden}.visual img{display:block;width:100%;height:100%;min-height:460px;object-fit:cover;object-position:center}.product-layout{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(320px,1.1fr) 340px;gap:2rem;align-items:start}.buybox{padding:1.4rem;position:sticky;top:106px}.note{font-size:.78rem;color:#8a8378}.comparison{width:100%;border-collapse:collapse}.comparison th,.comparison td{border-bottom:1px solid rgba(201,169,103,.18);text-align:left;padding:1rem;vertical-align:top}.comparison th{color:#c9a967;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}.ladder{counter-reset:step}.ladder li{list-style:none;position:relative;padding-left:3rem;margin:1rem 0}.ladder li:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:0;top:.1rem;color:#c9a967}.fine-print{border-top:1px solid rgba(201,169,103,.18);margin-top:1rem;padding-top:1rem}.cta-strip{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;border:1px solid rgba(201,169,103,.26);padding:1.4rem;background:#10100e}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin:1.4rem 0}.step-label{display:block;color:#c9a967;text-transform:uppercase;letter-spacing:.12em;font-size:.62rem;font-weight:800}.footer{padding:2rem 6vw;color:#8f887c;border-top:1px solid rgba(201,169,103,.18)}details{border-top:1px solid rgba(201,169,103,.18);padding:1rem 0}summary{cursor:pointer;color:#f1eadc;font-weight:700}@media(max-width:1000px){.hero-grid,.product-layout,.grid,.grid.two{grid-template-columns:1fr}.buybox{position:static}.section-heading{display:block}.visual,.visual img{min-height:300px}nav{display:none}.cta-strip{display:block}.hero-actions .button{width:100%}}`;
 
 const schemaScript = (schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
 
@@ -96,6 +98,8 @@ const comparisonTable = (products) => `<div class="table-wrap"><table class="com
   <tbody>${products.map((product) => `<tr><td><strong>${escapeHtml(product.name)}</strong><br><span>${escapeHtml(product.shortDescription || product.description)}</span></td><td>${escapeHtml(product.bestFor)}</td><td>${escapeHtml(product.timeline)}</td><td>${escapeHtml(product.price)}</td><td><a href="${productRoute(product)}">View details ${arrow}</a></td></tr>`).join("")}</tbody>
 </table></div>`;
 
+const faqBlock = (items = []) => items.map(([question, answer]) => `<details><summary>${escapeHtml(question)}</summary><p>${escapeHtml(answer)}</p></details>`).join("");
+
 const pageSchema = ({ type = "CollectionPage", title, description, url, products = [] }) => ({
   "@context": "https://schema.org",
   "@type": type,
@@ -123,17 +127,23 @@ const pageSchema = ({ type = "CollectionPage", title, description, url, products
   } : undefined
 });
 
-const categoryFaq = (category) => [
-  [`Which ${category.shortTitle.toLowerCase()} product should I start with?`, `Start with ${getProduct(category.recommendedStarterProductId)?.name || "the recommended starting point"} if you need the fastest diagnostic or foundational move.`],
-  ["Can I compare services before checkout?", "Yes. Product education, fit, price, timeline, and internal product pages are available on ZYNE before any Stan Store checkout step."],
-  ["Where does payment happen?", "Secure checkout is completed through Stan Store after you have reviewed the relevant ZYNE product details."]
+const sharedCategoryFaq = (category, recommended) => [
+  [`Which ${category.shortTitle.toLowerCase()} product should I start with?`, `Start with ${recommended?.name || "the recommended starting point"} if you need the fastest focused diagnostic or foundational service in this path.`],
+  ["Are these free consultations?", "No. ZYNE services are paid productized offers with defined price, scope, timeline, and internal product detail pages."],
+  ["Where does checkout happen?", "Secure checkout is completed through Stan Store after you have reviewed the relevant ZYNE product details."],
+  ["Can I compare services before buying?", "Yes. Compare fit, price, timeline, best-for labels, and internal product detail pages before checkout."],
+  ["What happens after purchase?", "After checkout, the buyer follows the intake and fulfillment process for the selected product."]
 ];
 
-const categoryPage = (category, products = productList(category.productIds)) => {
+const categoryPage = (category) => {
+  const content = categoryPageContent[category.id] || {};
+  const products = productList(category.productIds);
   const recommended = getProduct(category.recommendedStarterProductId) || products[0];
-  const relatedCategories = categories.filter((item) => item.id !== category.id).slice(0, 3);
+  const sortedProducts = products.slice().sort(byPrice);
+  const relatedCategories = (content.relatedCategoryIds?.length ? content.relatedCategoryIds.map((id) => categoryById[id]).filter(Boolean) : categories.filter((item) => item.id !== category.id).slice(0, 3));
   const title = category.seoTitle || `${category.title} | ZYNE`;
   const description = category.seoDescription || category.description;
+  const faqItems = [...sharedCategoryFaq(category, recommended), ...(content.faqs || [])];
   return layout({
     title,
     description,
@@ -143,24 +153,39 @@ const categoryPage = (category, products = productList(category.productIds)) => 
   <p class="eyebrow">Growth path ${escapeHtml(category.number)}</p>
   <h1>${escapeHtml(category.title)}</h1>
   <p class="lede">${escapeHtml(category.description)}</p>
+  <p>${escapeHtml(content.positioning || category.description)}</p>
   <p><strong>Buyer problem:</strong> ${escapeHtml(category.problemStatement)}</p>
-  <div class="cta-strip"><span>Recommended starting point: <strong>${escapeHtml(recommended?.name || "View products")}</strong></span><a class="button" href="${recommended ? productRoute(recommended) : "/services/"}">Start here ${arrow}</a></div>
-</div><aside class="card"><p class="eyebrow">Product ladder</p><ol class="ladder">${products.slice().sort(byPrice).map((product) => `<li><a href="${productRoute(product)}"><strong>${escapeHtml(product.name)}</strong></a><br><span>${escapeHtml(product.price)} · ${escapeHtml(product.timeline)}</span></li>`).join("")}</ol></aside></div></section>
-<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Compare offers</p><h2>${escapeHtml(category.shortTitle)} product comparison</h2></div><p>Compare fit, timeline, and price before choosing an internal product detail page.</p></div>${comparisonTable(products)}</div></section>
-<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Available services</p><h2>Choose the right fixed-price service</h2></div></div><div class="grid">${products.map(productCard).join("")}</div></div></section>
-<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">FAQ</p>${categoryFaq(category).map(([question, answer]) => `<details><summary>${escapeHtml(question)}</summary><p>${escapeHtml(answer)}</p></details>`).join("")}</div><div class="card"><p class="eyebrow">Related growth paths</p>${relatedCategories.map((item) => `<p><a href="${item.url}"><strong>${escapeHtml(item.title)}</strong> ${arrow}</a><br>${escapeHtml(item.description)}</p>`).join("")}<p class="fine-print">Secure checkout is completed through Stan Store only after the buyer reviews ZYNE service details.</p></div></div></section>`
+  <div class="hero-actions"><a class="button" href="#product-comparison">Compare Products</a><a class="button ghost" href="${recommended ? productRoute(recommended) : "/services/"}">View Recommended Starting Point ${arrow}</a></div>
+  <p class="note">Secure checkout is completed through Stan Store after you review ZYNE product details.</p>
+</div><aside class="card"><p class="eyebrow">Recommended starting point:</p><h2>${escapeHtml(recommended?.name || "View Services")}</h2><strong class="price">${escapeHtml(recommended?.price || "")}</strong><p>${escapeHtml(recommended?.shortDescription || recommended?.description || "Compare the fixed-price services in this path.")}</p><p><strong>Best for:</strong> ${escapeHtml(recommended?.bestFor || "Buyers choosing a first step")}</p><p><strong>Timeline:</strong> ${escapeHtml(recommended?.timeline || "Defined by scope")}</p><a class="button" href="${recommended ? productRoute(recommended) : "/services/"}">View Product ${arrow}</a></aside></div></section>
+<section class="section"><div class="container grid two"><article class="card"><p class="eyebrow">Diagnostic context</p><h2>What this path solves</h2>${(content.diagnosticContext || [category.problemStatement]).map((item) => `<p>${escapeHtml(item)}</p>`).join("")}</article><article class="card"><p class="eyebrow">How to choose</p><h2>Choose by current constraint</h2><ul>${listItems(content.decisionGuide || [`Start with ${recommended?.name || "the recommended service"}.`, "Move to higher-value services when the scope requires deeper strategy or implementation."])}</ul></article></div></section>
+<section id="product-comparison" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Compare offers</p><h2>${escapeHtml(category.shortTitle)} Product comparison</h2></div><p>Compare fit, timeline, and price before choosing an internal product detail page.</p></div>${comparisonTable(products)}</div></section>
+<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">Product ladder</p><h2>From first step to deeper buildout</h2><ol class="ladder">${sortedProducts.map((product, index) => `<li><span class="step-label">${escapeHtml(content.ladderLabels?.[index] || `Step ${index + 1}`)}</span><a href="${productRoute(product)}"><strong>${escapeHtml(product.name)}</strong></a><br><span>${escapeHtml(product.price)} · ${escapeHtml(product.timeline)}</span><p>${escapeHtml(product.bestFor)}</p></li>`).join("")}</ol></div><div class="card"><p class="eyebrow">Internal routing</p><h2>Review details before checkout</h2><p>Category pages educate and compare. Product pages explain scope, buyer responsibilities, exclusions, and checkout details before the buyer leaves ZYNE.</p><a class="button ghost" href="/services/">View All Paid Services ${arrow}</a>${content.subpageCta ? `<p class="fine-print"><a href="${content.subpageCta.url}">${escapeHtml(content.subpageCta.label)} ${arrow}</a></p>` : ""}</div></div></section>
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Available services</p><h2>Choose the right fixed-price service</h2></div><p>Every product card routes to an internal ZYNE product detail page first.</p></div><div class="grid">${products.map(productCard).join("")}</div></div></section>
+<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">Category FAQ</p><h2>Common questions</h2>${faqBlock(faqItems)}</div><div class="card"><p class="eyebrow">Related growth paths</p><h2>Explore adjacent constraints</h2>${relatedCategories.map((item) => `<p><a href="${item.url}"><strong>${escapeHtml(item.title)}</strong> ${arrow}</a><br>${escapeHtml(item.description)}</p>`).join("")}<p class="fine-print">Secure checkout is completed through Stan Store only after the buyer reviews ZYNE service details.</p></div></div></section>`
   });
 };
 
-const collectionPage = ({ url, title, eyebrow, description, products, sections = [], cta = "/services/" }) => layout({
-  title: `${title} | ZYNE`,
-  description,
-  schema: pageSchema({ title: `${title} | ZYNE`, description, url, products }),
-  main: `
-<section class="hero"><div class="container hero-grid"><div class="panel"><p class="eyebrow">${escapeHtml(eyebrow)}</p><h1>${escapeHtml(title)}</h1><p class="lede">${escapeHtml(description)}</p><a class="button" href="${cta}">View recommended services ${arrow}</a></div><aside class="card"><p class="eyebrow">What this page helps you do</p><ul>${listItems(sections.length ? sections : ["Compare relevant ZYNE offers.", "Review fit, timeline, and price before checkout.", "Move from education to internal product detail pages."])}</ul></aside></div></section>
-<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Product comparison</p><h2>Relevant offers</h2></div><p>Every product links to a ZYNE detail page before external checkout.</p></div>${comparisonTable(products)}</div></section>
-<section class="section"><div class="container grid">${products.map(productCard).join("")}</div></section>`
-});
+const collectionFaq = (key) => collectionPageContent[key]?.faq || [
+  ["Where does checkout happen?", "Secure checkout is completed through Stan Store after the buyer reviews ZYNE product details."],
+  ["Are these free consultations?", "No. ZYNE services are paid productized offers with defined scope, price, and timelines."],
+  ["How should I choose?", "Use the comparison grid and internal product detail pages before checkout."]
+];
+
+const collectionPage = ({ url, title, eyebrow, description, products, sections = [], cta = "/services/", key = "services", families = [] }) => {
+  const content = collectionPageContent[key] || {};
+  return layout({
+    title: `${title} | ZYNE`,
+    description,
+    schema: pageSchema({ title: `${title} | ZYNE`, description, url, products }),
+    main: `
+<section class="hero"><div class="container hero-grid"><div class="panel"><p class="eyebrow">${escapeHtml(eyebrow)}</p><h1>${escapeHtml(title)}</h1><p class="lede">${escapeHtml(description)}</p><div class="hero-actions"><a class="button" href="#product-comparison">Compare Products</a><a class="button ghost" href="${cta}">View recommended services ${arrow}</a></div><p class="note">Secure checkout is completed through Stan Store after product education on ZYNE.</p></div><aside class="card"><p class="eyebrow">What this page helps you do</p><ul>${listItems(sections.length ? sections : ["Compare relevant ZYNE offers.", "Review fit, timeline, and price before checkout.", "Move from education to internal product detail pages."])}</ul></aside></div></section>
+<section id="product-comparison" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Product comparison</p><h2>Relevant offers</h2></div><p>Every product links to a ZYNE detail page before external checkout.</p></div>${comparisonTable(products)}</div></section>
+${families.length ? `<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Service families</p><h2>${escapeHtml(content.sequenceTitle || "Service families")}</h2></div><p>Delivery families route into internal category or product pages before checkout.</p></div><div class="grid">${families.map((family) => `<article class="card"><p class="eyebrow">${escapeHtml(family.icon)}</p><h3>${escapeHtml(family.name)}</h3><p>${escapeHtml(family.description)}</p><a class="button ghost" href="${family.url}">Explore family ${arrow}</a></article>`).join("")}</div></div></section>` : `<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">Recommended sequence</p><h2>${escapeHtml(content.sequenceTitle || "Recommended sequence")}</h2><ol class="ladder">${(content.sequence || sections).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ol></div><div class="card"><p class="eyebrow">How to choose</p><h2>Start with the clearest constraint</h2><p>Use Intelligence when the central constraint is unclear. Use Delivery when the build path is already defined.</p><a class="button ghost" href="/delivery/">Compare Delivery ${arrow}</a></div></div></section>`}
+<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Available services</p><h2>Internal product pages</h2></div><p>Review service details on ZYNE before Stan Store checkout.</p></div><div class="grid">${products.map(productCard).join("")}</div></div></section>
+<section class="section"><div class="container grid two"><div class="card"><p class="eyebrow">FAQ</p><h2>Collection questions</h2>${faqBlock(collectionFaq(key))}</div><div class="card"><p class="eyebrow">Checkout disclosure</p><h2>Education before payment</h2><p>ZYNE owns the education, comparison, routing, and buyer qualification layer. Secure checkout is completed through Stan Store after product details are reviewed.</p><a href="/services/">View All Paid Services ${arrow}</a></div></div></section>`
+  });
+};
 
 const productSchema = (product) => ({
   "@context": "https://schema.org",
@@ -234,19 +259,24 @@ for (const category of categories) {
 await writeRoute("intelligence", collectionPage({
   url: "/intelligence/",
   title: "ZYNE Intelligence",
-  eyebrow: "Strategic reports, audits, and briefings",
+  eyebrow: "Before execution comes intelligence.",
   description: "Paid strategic services that clarify constraints, reveal opportunities, and define the next commercial move before execution.",
   products: productList(intelligenceProductIds),
-  sections: ["Clarify constraints and priorities.", "Compare strategic services by price and timeline.", "Choose a product page before checkout."]
+  sections: ["Clarify constraints and priorities.", "Compare strategic services by price and timeline.", "Choose a product page before checkout."],
+  key: "intelligence",
+  cta: "/improve-my-business/"
 }));
 
 await writeRoute("delivery", collectionPage({
   url: "/delivery/",
   title: "ZYNE Delivery",
-  eyebrow: "Done-for-you systems and kits",
+  eyebrow: "From strategy to execution.",
   description: "Implementation-oriented services for brand presence, websites, AI automation, proof systems, referrals, and conversion infrastructure.",
   products: uniqueProducts(deliveryFamilies.flatMap((family) => productList(family.productIds))),
-  sections: deliveryFamilies.map((family) => `${family.name}: ${family.description}`)
+  sections: deliveryFamilies.map((family) => `${family.name}: ${family.description}`),
+  key: "delivery",
+  families: deliveryFamilies,
+  cta: "/services/"
 }));
 
 await writeRoute("use-ai/realtor-gpt", collectionPage({
