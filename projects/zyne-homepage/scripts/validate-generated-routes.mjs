@@ -45,12 +45,17 @@ const assertNoForbiddenPhrases = (html, route) => {
   }
 };
 
+const assertSchema = (html, route, snippets = []) => {
+  assertIncludes(html, route, ["application/ld+json", ...snippets]);
+};
+
 const allRouteHtml = [];
 
 for (const category of categories) {
   const html = await assertFile(category.slug);
   allRouteHtml.push([category.slug, html]);
   assertOneH1(html, category.slug);
+  assertSchema(html, category.slug, ["CollectionPage", "ItemList"]);
   assertIncludes(html, category.slug, [
     category.title,
     category.description,
@@ -73,12 +78,8 @@ for (const category of categories) {
 
   for (const productId of category.productIds) {
     const product = catalogProducts.find((item) => item.id === productId);
-    if (product && !html.includes(product.name)) {
-      errors.push(`/${category.slug}/ missing category product: ${product.name}`);
-    }
-    if (product && !html.includes(product.internalUrl)) {
-      errors.push(`/${category.slug}/ missing internal product link: ${product.internalUrl}`);
-    }
+    if (product && !html.includes(product.name)) errors.push(`/${category.slug}/ missing category product: ${product.name}`);
+    if (product && !html.includes(product.internalUrl)) errors.push(`/${category.slug}/ missing internal product link: ${product.internalUrl}`);
   }
 
   if (category.id === "use-ai") {
@@ -89,11 +90,13 @@ for (const category of categories) {
 const services = await assertFile("services");
 allRouteHtml.push(["services", services]);
 assertOneH1(services, "services");
+assertSchema(services, "services", ["CollectionPage", "ItemList"]);
 assertIncludes(services, "services", ["ZYNE Paid Services", "Product comparison", "Every product links to a ZYNE detail page", "Secure checkout is completed through Stan Store"]);
 
 const intelligence = await assertFile("intelligence");
 allRouteHtml.push(["intelligence", intelligence]);
 assertOneH1(intelligence, "intelligence");
+assertSchema(intelligence, "intelligence", ["CollectionPage", "ItemList"]);
 assertIncludes(intelligence, "intelligence", ["ZYNE Intelligence", "Before execution comes intelligence.", "Product comparison", "Recommended Intelligence Sequence", "Collection questions", "Secure checkout is completed through Stan Store"]);
 for (const productId of intelligenceProductIds) {
   const product = catalogProducts.find((item) => item.id === productId);
@@ -103,6 +106,7 @@ for (const productId of intelligenceProductIds) {
 const delivery = await assertFile("delivery");
 allRouteHtml.push(["delivery", delivery]);
 assertOneH1(delivery, "delivery");
+assertSchema(delivery, "delivery", ["CollectionPage", "ItemList"]);
 assertIncludes(delivery, "delivery", ["ZYNE Delivery", "From strategy to execution.", "Product comparison", "Service families", "Delivery Service Families", "Collection questions", "Secure checkout is completed through Stan Store"]);
 for (const family of deliveryFamilies) {
   if (!delivery.includes(family.name)) errors.push(`/delivery/ missing delivery family: ${family.name}`);
@@ -111,6 +115,7 @@ for (const family of deliveryFamilies) {
 const realtorGpt = await assertFile(join("use-ai", "realtor-gpt"));
 allRouteHtml.push([join("use-ai", "realtor-gpt"), realtorGpt]);
 assertOneH1(realtorGpt, join("use-ai", "realtor-gpt"));
+assertSchema(realtorGpt, join("use-ai", "realtor-gpt"), ["CollectionPage", "ItemList"]);
 assertIncludes(realtorGpt, "use-ai/realtor-gpt", ["Realtor GPT Products", "real estate agents and teams", "Product comparison", "Secure checkout is completed through Stan Store"]);
 
 for (const product of catalogProducts) {
@@ -118,21 +123,60 @@ for (const product of catalogProducts) {
   const html = await assertFile(route);
   allRouteHtml.push([route, html]);
   assertOneH1(html, route);
+  assertSchema(html, route, ["Offer", String(product.priceValue), product.currency || "USD"]);
   assertIncludes(html, route, [
     product.name,
     product.price,
+    product.timeline,
+    "Product positioning:",
+    "Who it is for:",
+    product.bestFor,
+    "Buyer problem:",
+    "Purchase this service",
     "What is included",
+    "Deliverables",
+    "What you receive",
+    "Decision outcomes",
+    "Timeline and revisions",
     "Buyer responsibilities",
+    "What you need to provide",
     "Scope exclusions",
+    "What is not included",
+    "Refund and scope handling",
+    "/refund-policy/",
     "Related products",
-    "Secure checkout is completed through Stan Store"
+    "Product FAQ",
+    "Common purchase questions",
+    "Where does checkout happen?",
+    "What happens after purchase?",
+    "Are results guaranteed?",
+    "What does the buyer need to provide?",
+    "How do revisions work?",
+    "Final checkout note",
+    "Secure checkout is completed through Stan Store",
+    "data-event=\"product_page_view\"",
+    "data-event=\"refund_policy_click\""
   ]);
+
+  if (product.checkoutStatus === "live" && product.stanCheckoutUrl) {
+    assertIncludes(html, route, [
+      "Checkout on Stan Store",
+      "Purchase This Service",
+      product.stanCheckoutUrl,
+      "data-event=\"product_buy_now_click\"",
+      "data-event=\"stan_store_redirect_click\"",
+      "data-destination-type=\"stan_checkout\""
+    ]);
+  } else if (html.includes("Checkout on Stan Store") || html.includes("stan_store_redirect_click")) {
+    errors.push(`/${route}/ renders external checkout controls while checkout is not live`);
+  }
 }
 
 for (const route of ["privacy", "terms", "refund-policy"]) {
   const html = await assertFile(route);
   allRouteHtml.push([route, html]);
   assertOneH1(html, route);
+  assertSchema(html, route, ["WebPage"]);
   assertIncludes(html, route, ["Legal and checkout clarity", "Secure checkout is completed through Stan Store"]);
 }
 
