@@ -7,6 +7,20 @@ on:
       - "projects/zyne-homepage/**"
       - "assets/catalog/**"
       - ".github/workflows/zyne-homepage-pages.yml"
+      - "index.html"
+      - "404.html"
+      - "services/**"
+      - "grow-my-visibility/**"
+      - "build-my-brand/**"
+      - "improve-my-business/**"
+      - "use-ai/**"
+      - "convert-more-clients/**"
+      - "intelligence/**"
+      - "delivery/**"
+      - "privacy/**"
+      - "terms/**"
+      - "refund-policy/**"
+      - "cookie-policy/**"
   workflow_dispatch:
 
 permissions:
@@ -16,7 +30,7 @@ permissions:
 
 concurrency:
   group: zyne-homepage-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -31,6 +45,31 @@ jobs:
           node-version: "22"
       - run: npm install
       - run: npm run build
+      - name: Verify PRD 1.1 publish artifact
+        run: |
+          node <<'NODE'
+          const { readFileSync } = require('node:fs');
+          const html = readFileSync('dist/index.html', 'utf8');
+          const required = [
+            'mobile-sticky-cta',
+            'hero_find_growth_path_click',
+            'Best local visibility starter',
+            'Search / map discovery signal',
+            'Intelligence tells you what to build',
+            'CollectionPage'
+          ];
+          const missing = required.filter((marker) => !html.includes(marker));
+          const findGrowthPath = html.indexOf('hero_find_growth_path_click');
+          const shopServices = html.indexOf('hero_shop_services_click');
+          if (missing.length || findGrowthPath === -1 || shopServices === -1 || findGrowthPath > shopServices) {
+            console.error('PRD 1.1 publish artifact verification failed.');
+            if (missing.length) console.error(`Missing markers: ${missing.join(', ')}`);
+            console.error(`hero_find_growth_path_click index: ${findGrowthPath}`);
+            console.error(`hero_shop_services_click index: ${shopServices}`);
+            process.exit(1);
+          }
+          console.log('PRD 1.1 publish artifact verification passed.');
+          NODE
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
