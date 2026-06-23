@@ -4,6 +4,9 @@ import { join } from 'node:path';
 const distDir = 'dist';
 const siteUrl = 'https://zyne.store';
 const privacyPolicySource = join('..', '..', 'assets', 'zyne-stan-store-privacy-policy.md');
+const termsPolicySource = join('..', '..', 'assets', 'zyne-stan-store-terms-and-conditions.md');
+const refundPolicySource = join('..', '..', 'assets', 'zyne-stan-store-refund-and-scope-policy.md');
+const cookiePolicySource = join('..', '..', 'assets', 'zyne-stan-store-cookie-policy.md');
 
 const legalLinks = [
   ['Privacy Policy', '/privacy/'],
@@ -27,31 +30,34 @@ const policies = [
   {
     route: 'terms',
     title: 'Terms of Service',
-    description: 'Core service terms for fixed-price ZYNE productized services and external Stan Store checkout flow.',
-    sections: [
-      ['Paid productized services', ['ZYNE offers paid productized services. There are no free consultations implied by the website.', 'Each purchase is governed by its product scope, deliverables, timeline, exclusions, and buyer responsibilities.']],
-      ['ZYNE and Stan Store roles', ['ZYNE provides service education, product scope, fulfillment expectations, and buyer-facing service information. Stan Store provides the external checkout and payment layer.', 'Buyers leave zyne.store when they continue to Stan Store checkout.']],
-      ['No-results guarantee', ['ZYNE does not guarantee revenue, rankings, traffic, leads, conversion rates, platform approvals, AI output perfection, or third-party platform performance.', 'Third-party software, ad spend, or platform fees are not included unless explicitly stated in the purchased product scope.']]
+    description: 'Core service terms for fixed-price ZYNE productized services, Houston Texas venue, and external Stan Store checkout flow.',
+    source: termsPolicySource,
+    requiredNotice: [
+      'ZYNE offers paid productized services. There are no free consultations implied by the website.',
+      'ZYNE does not guarantee revenue, rankings, traffic, leads, conversion rates, platform approvals, AI output perfection, business outcomes, or third-party platform performance.',
+      'These Terms are governed by the laws of the State of Texas, with venue in Harris County, Texas where permitted by law.'
     ]
   },
   {
     route: 'refund-policy',
     title: 'Refund and Scope Policy',
-    description: 'How ZYNE frames service scope, buyer responsibilities, revisions, and refund expectations for productized services.',
-    sections: [
-      ['Defined service scope', ['Fixed-price services begin from a defined scope and require timely buyer intake.', 'Scope changes, additional implementation, or work not listed in the purchased product may require a separate product purchase.']],
-      ['Refund handling', ['Refund and scope handling depends on the purchased service, the stated scope, and the work already performed.', 'Completed strategy work, audits, digital deliverables, or started fulfillment work may be non-refundable once delivery has begun.']],
-      ['Revisions and outcomes', ['Revision handling is limited to the revision terms stated on the product detail page or checkout flow.', 'ZYNE does not guarantee financial, ranking, traffic, lead, platform, or conversion outcomes.']]
+    description: 'How ZYNE frames service scope, buyer responsibilities, revisions, cancellations, and refund expectations for productized services.',
+    source: refundPolicySource,
+    requiredNotice: [
+      'Refund and scope handling depends on the purchased service, the stated scope, the checkout terms, and the work already performed.',
+      'Completed strategy work, audits, digital deliverables, started fulfillment work, completed reports, prepared materials, AI planning, chatbot structuring, brand files, website strategy, or delivered service components may be non-refundable once work has begun or delivery has occurred.',
+      'Revision handling is limited to the revision terms stated on the purchased product page, checkout flow, or written service notes.'
     ]
   },
   {
     route: 'cookie-policy',
     title: 'Cookie Policy',
-    description: 'How ZYNE may use essential cookies, local browser storage, analytics readiness, and third-party checkout technologies.',
-    sections: [
-      ['Site functionality', ['ZYNE may use essential cookies or local browser storage for basic site functionality, performance, security, or user experience.', 'Users may control cookies through browser settings.']],
-      ['Analytics and tracking readiness', ['Analytics, advertising, or tracking scripts should not be activated unless tracking IDs are provided.', 'Future analytics providers may include GA4, Meta Pixel, TikTok Pixel, LinkedIn Insight Tag, or custom dataLayer events.']],
-      ['Stan Store checkout', ['Stan Store checkout may use separate cookies, tracking, or payment technologies that are not controlled by zyne.store.', 'Third-party checkout on Stan Store may be governed by Stan Store policies and payment processor technologies.']]
+    description: 'How ZYNE may use essential cookies, local browser storage, analytics readiness, advertising technologies, Stan Store checkout cookies, and third-party tracking tools.',
+    source: cookiePolicySource,
+    requiredNotice: [
+      'Analytics, advertising, or tracking scripts should not be activated unless tracking IDs are provided.',
+      'Future analytics providers may include GA4, Meta Pixel, TikTok Pixel, LinkedIn Insight Tag, or custom dataLayer events.',
+      'Stan Store checkout may use separate cookies, tracking, or payment technologies that are not controlled by zyne.store.'
     ]
   }
 ];
@@ -146,7 +152,7 @@ const schema = (policy) => ({
 
 const policyBody = async (policy) => {
   const requiredNotice = policy.requiredNotice?.length
-    ? `<section class="section"><div class="container"><article class="card"><p class="eyebrow">Policy and checkout notice</p><h2>ZYNE, Stan Store, and AI service materials</h2><ul>${policy.requiredNotice.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></article></div></section>`
+    ? `<section class="section"><div class="container"><article class="card"><p class="eyebrow">Policy and checkout notice</p><h2>ZYNE, Stan Store, and service terms</h2><ul>${policy.requiredNotice.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></article></div></section>`
     : '';
 
   if (policy.source) {
