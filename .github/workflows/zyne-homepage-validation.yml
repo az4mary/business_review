@@ -62,8 +62,14 @@ jobs:
       - name: Generate SEO layer
         run: node scripts/generate-seo-layer.mjs
 
-      - name: Validate generated routes and policy layers
-        run: npm run validate:routes
+      - name: Validate generated route content
+        run: node scripts/validate-generated-routes.mjs
+
+      - name: Validate legal layer
+        run: node scripts/validate-legal-layer.mjs
+
+      - name: Validate SEO layer
+        run: node scripts/validate-seo-layer.mjs
 
       - name: Strict catalog validation
         run: npm run validate:catalog:strict
