@@ -1,4 +1,4 @@
-name: Capture ZYNE Homepage Screenshot
+name: Capture ZYNE Homepage Screenshots
 
 on:
   push:
@@ -17,7 +17,7 @@ permissions:
 jobs:
   capture:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
           npm install --save-dev playwright
           npx playwright install --with-deps chromium
 
-      - name: Capture full-page desktop screenshot
+      - name: Capture responsive homepage screenshots
         run: |
           mkdir -p assets/PRD-1.1-images
           node <<'NODE'
@@ -45,7 +45,34 @@ jobs:
 
           const url = 'https://zyne.store/';
           const outputDir = 'assets/PRD-1.1-images';
-          const outputPath = path.join(outputDir, 'Desktop.png');
+
+          const captures = [
+            {
+              name: 'Desktop',
+              file: 'Desktop.png',
+              viewport: { width: 1440, height: 1200 },
+              fullPage: true,
+            },
+            {
+              name: 'Tablet',
+              file: 'Tablet.png',
+              viewport: { width: 768, height: 1024 },
+              fullPage: true,
+            },
+            {
+              name: 'Mobile',
+              file: 'Mobile.png',
+              viewport: { width: 390, height: 844 },
+              fullPage: true,
+            },
+            {
+              name: 'Mobile Menu',
+              file: 'Mobile-Menu.png',
+              viewport: { width: 390, height: 844 },
+              fullPage: false,
+              openMobileMenu: true,
+            },
+          ];
 
           async function autoScroll(page) {
             await page.evaluate(async () => {
@@ -84,6 +111,7 @@ jobs:
             await page.evaluate(() => {
               document.documentElement.style.scrollBehavior = 'auto';
               document.body.style.scrollBehavior = 'auto';
+              document.body.classList.remove('show-mobile-sticky-cta');
               if (document.activeElement instanceof HTMLElement) {
                 document.activeElement.blur();
               }
@@ -94,31 +122,54 @@ jobs:
             await page.waitForTimeout(500);
           }
 
-          (async () => {
-            fs.mkdirSync(outputDir, { recursive: true });
-            const browser = await chromium.launch();
+          async function captureViewport(browser, capture) {
+            const outputPath = path.join(outputDir, capture.file);
             const context = await browser.newContext({
-              viewport: { width: 1440, height: 1200 },
+              viewport: capture.viewport,
               deviceScaleFactor: 1,
+              isMobile: capture.viewport.width <= 430,
+              hasTouch: capture.viewport.width <= 430,
             });
             const page = await context.newPage();
             const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
             await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
-            await autoScroll(page);
+
+            if (capture.fullPage) {
+              await autoScroll(page);
+            }
+
             await prepareForScreenshot(page);
-            await page.screenshot({ path: outputPath, fullPage: true });
+
+            if (capture.openMobileMenu) {
+              await page.locator('.menu-toggle').click({ timeout: 10000 });
+              await page.waitForTimeout(500);
+            }
+
+            await page.screenshot({ path: outputPath, fullPage: capture.fullPage });
             const title = await page.title();
             const size = await page.evaluate(() => ({
               width: document.documentElement.scrollWidth,
               height: document.documentElement.scrollHeight,
               scrollY: window.scrollY,
             }));
-            console.log(`Captured ${outputPath}`);
+
+            console.log(`Captured ${capture.name}: ${outputPath}`);
             console.log(`URL: ${url}`);
             console.log(`HTTP status: ${response ? response.status() : 'unknown'}`);
             console.log(`Title: ${title}`);
+            console.log(`Viewport: ${capture.viewport.width}x${capture.viewport.height}`);
             console.log(`Document size: ${size.width}x${size.height}`);
             console.log(`Scroll position before screenshot: ${size.scrollY}`);
+
+            await context.close();
+          }
+
+          (async () => {
+            fs.mkdirSync(outputDir, { recursive: true });
+            const browser = await chromium.launch();
+            for (const capture of captures) {
+              await captureViewport(browser, capture);
+            }
             await browser.close();
           })().catch((error) => {
             console.error(error);
@@ -126,23 +177,31 @@ jobs:
           });
           NODE
 
-      - name: Commit screenshot to repository
+      - name: Commit screenshots to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/PRD-1.1-images/Desktop.png
+          git add \
+            assets/PRD-1.1-images/Desktop.png \
+            assets/PRD-1.1-images/Tablet.png \
+            assets/PRD-1.1-images/Mobile.png \
+            assets/PRD-1.1-images/Mobile-Menu.png
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
           else
-            git commit -m "Capture desktop homepage screenshot"
+            git commit -m "Capture responsive homepage screenshots"
             git push
           fi
 
       - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zyne-desktop-homepage-screenshot
-          path: assets/PRD-1.1-images/Desktop.png
+          name: zyne-responsive-homepage-screenshots
+          path: |
+            assets/PRD-1.1-images/Desktop.png
+            assets/PRD-1.1-images/Tablet.png
+            assets/PRD-1.1-images/Mobile.png
+            assets/PRD-1.1-images/Mobile-Menu.png
           if-no-files-found: error
 
-# trigger: 2026-06-23T00:05:00Z
+# trigger: 2026-06-23T00:06:00Z
