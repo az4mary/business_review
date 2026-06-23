@@ -1,4 +1,11 @@
 LATEST LOG:
+
+## **Render full Stan Store privacy policy page #43**
+
+https://github.com/az4mary/zyne.store/actions/runs/28033249796
+
+---
+
 ## **Harden homepage Pages publish workflow #11**
 
 https://github.com/az4mary/zyne.store/actions/runs/28030333629
