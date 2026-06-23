@@ -55,19 +55,65 @@ const breadcrumbSchema = (route, title) => {
   };
 };
 
-const seoTags = ({ route, title, description, canonical }) => `
-<meta name="keywords" content="${escapeHtml(getSeoKeywords(route))}">
-<meta property="og:title" content="${escapeHtml(title)}">
-<meta property="og:description" content="${escapeHtml(description)}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="${escapeHtml(canonical)}">
-<meta property="og:site_name" content="ZYNE">
-<meta property="og:image" content="${defaultImage}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${escapeHtml(title)}">
-<meta name="twitter:description" content="${escapeHtml(description)}">
-<meta name="twitter:image" content="${defaultImage}">
-<script type="application/ld+json">${JSON.stringify(breadcrumbSchema(route, title))}</script>`;
+const tagDefinitions = ({ route, title, description, canonical }) => [
+  {
+    marker: 'name="keywords"',
+    tag: `<meta name="keywords" content="${escapeHtml(getSeoKeywords(route))}">`
+  },
+  {
+    marker: 'property="og:title"',
+    tag: `<meta property="og:title" content="${escapeHtml(title)}">`
+  },
+  {
+    marker: 'property="og:description"',
+    tag: `<meta property="og:description" content="${escapeHtml(description)}">`
+  },
+  {
+    marker: 'property="og:type"',
+    tag: '<meta property="og:type" content="website">'
+  },
+  {
+    marker: 'property="og:url"',
+    tag: `<meta property="og:url" content="${escapeHtml(canonical)}">`
+  },
+  {
+    marker: 'property="og:site_name"',
+    tag: '<meta property="og:site_name" content="ZYNE">'
+  },
+  {
+    marker: 'property="og:image"',
+    tag: `<meta property="og:image" content="${defaultImage}">`
+  },
+  {
+    marker: 'name="twitter:card"',
+    tag: '<meta name="twitter:card" content="summary_large_image">'
+  },
+  {
+    marker: 'name="twitter:title"',
+    tag: `<meta name="twitter:title" content="${escapeHtml(title)}">`
+  },
+  {
+    marker: 'name="twitter:description"',
+    tag: `<meta name="twitter:description" content="${escapeHtml(description)}">`
+  },
+  {
+    marker: 'name="twitter:image"',
+    tag: `<meta name="twitter:image" content="${defaultImage}">`
+  }
+];
+
+const injectMissingHeadTags = (html, context) => {
+  const missingTags = tagDefinitions(context)
+    .filter(({ marker }) => !html.includes(marker))
+    .map(({ tag }) => tag);
+
+  if (!html.includes('BreadcrumbList')) {
+    missingTags.push(`<script type="application/ld+json">${JSON.stringify(breadcrumbSchema(context.route, context.title))}</script>`);
+  }
+
+  if (!missingTags.length) return html;
+  return html.replace('</head>', `${missingTags.join('\n')}\n</head>`);
+};
 
 const importantRoutes = Object.keys(seoKeywordMap).sort();
 const files = await htmlFiles(distDir);
@@ -81,9 +127,7 @@ for (const file of files) {
   const description = descriptionOf(html);
   const canonical = canonicalOf(html, route);
 
-  if (!html.includes('property="og:title"')) {
-    html = html.replace('</head>', `${seoTags({ route, title, description, canonical })}\n</head>`);
-  }
+  html = injectMissingHeadTags(html, { route, title, description, canonical });
   await writeFile(file, html);
 }
 
