@@ -3,6 +3,7 @@ import { join } from 'node:path';
 
 const distDir = 'dist';
 const siteUrl = 'https://zyne.store';
+const privacyPolicySource = join('..', '..', 'assets', 'zyne-stan-store-privacy-policy.md');
 
 const legalLinks = [
   ['Privacy Policy', '/privacy/'],
@@ -15,11 +16,12 @@ const policies = [
   {
     route: 'privacy',
     title: 'Privacy Policy',
-    description: 'How ZYNE handles information submitted for productized services, intake, fulfillment, support, and AI-related service work.',
-    sections: [
-      ['Information ZYNE may collect', ['ZYNE may collect buyer name, email, business details, website links, profile links, brand assets, service context, intake responses, and support messages when needed to evaluate, fulfill, or support a purchased service.', 'Client materials should be limited to what is necessary for the purchased service scope.']],
-      ['Payment processing', ['Payment information is processed by Stan Store or its payment processors. ZYNE does not host payment checkout on zyne.store.', 'Secure checkout is completed through Stan Store after product details are reviewed on ZYNE.']],
-      ['AI and service materials', ['AI-related services may use provided business context, workflows, examples, service information, or client-facing materials to structure AI systems, prompts, or automation plans.', 'Buyers should not provide sensitive regulated information unless explicitly required and approved for the purchased scope.', 'ZYNE does not promise that AI systems will produce perfect or error-free outputs.']]
+    description: 'How ZYNE handles information submitted for productized services, intake, fulfillment, support, Stan Store checkout, and AI-related service work.',
+    source: privacyPolicySource,
+    requiredNotice: [
+      'Payment information is processed by Stan Store or its payment processors. ZYNE does not host payment checkout on zyne.store.',
+      'AI-related services may use provided business context, workflows, examples, service information, or client-facing materials to structure AI systems, prompts, or automation plans.',
+      'Product details are provided by ZYNE. Secure checkout is completed through Stan Store.'
     ]
   },
   {
@@ -61,9 +63,78 @@ const escapeHtml = (value = '') => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll('\'', '&#39;');
 
+const inlineMarkdown = (value = '') => escapeHtml(value)
+  .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label, url) => `<a href="${escapeHtml(url)}">${label}</a>`);
+
+const markdownToHtml = (markdown = '') => {
+  const publicMarkdown = markdown
+    .split('\n## Quick implementation notes')[0]
+    .split('\n[1]:')[0]
+    .trim();
+  const lines = publicMarkdown.split(/\r?\n/);
+  const html = [];
+  let paragraph = [];
+  let list = [];
+
+  const flushParagraph = () => {
+    if (!paragraph.length) return;
+    html.push(`<p>${inlineMarkdown(paragraph.join(' '))}</p>`);
+    paragraph = [];
+  };
+
+  const flushList = () => {
+    if (!list.length) return;
+    html.push(`<ul>${list.map((item) => `<li>${inlineMarkdown(item)}</li>`).join('')}</ul>`);
+    list = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line || line === '---') {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    if (line.startsWith('# ')) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    if (line.startsWith('## ')) {
+      flushParagraph();
+      flushList();
+      html.push(`<h2>${inlineMarkdown(line.replace(/^##\s+/, ''))}</h2>`);
+      continue;
+    }
+
+    if (line.startsWith('### ')) {
+      flushParagraph();
+      flushList();
+      html.push(`<h3>${inlineMarkdown(line.replace(/^###\s+/, ''))}</h3>`);
+      continue;
+    }
+
+    if (line.startsWith('* ')) {
+      flushParagraph();
+      list.push(line.replace(/^\*\s+/, ''));
+      continue;
+    }
+
+    flushList();
+    paragraph.push(line);
+  }
+
+  flushParagraph();
+  flushList();
+  return html.join('');
+};
+
 const legalFooter = `<footer class="footer"><p>Product education and service details are provided on ZYNE. Secure checkout is completed through Stan Store.</p><p>ZYNE controls service education, product scope, fulfillment expectations, and buyer-facing service information. Stan Store provides the external checkout and payment layer.</p><nav class="footer-links" aria-label="Legal links">${legalLinks.map(([label, url]) => `<a href="${url}">${label}</a>`).join('')}</nav></footer>`;
 
-const styles = `*{box-sizing:border-box}html{background:#070706;color:#f1eadc}body{margin:0;background:#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #c9a967;outline-offset:4px}header{min-height:82px;padding:0 6vw;display:flex;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(201,169,103,.22);background:#070706ee}header img{width:110px;height:auto}nav{display:flex;gap:1rem;flex-wrap:wrap;margin-left:auto}nav a{color:#b4aea3;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.container{width:min(1180px,88vw);margin:0 auto}.hero{padding:clamp(4rem,9vw,8rem) 0}.section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid rgba(201,169,103,.12)}.panel,.card{border:1px solid rgba(201,169,103,.26);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));box-shadow:0 24px 80px rgba(0,0,0,.22);padding:clamp(1.35rem,4vw,3rem)}h1{font-size:clamp(2.7rem,6vw,5.4rem);line-height:.95;margin:.65rem 0 1rem;font-weight:500;letter-spacing:-.055em}h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;margin:0 0 1rem;font-weight:500}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;font-weight:800}p,li{color:#b4aea3;line-height:1.72}.lede{font-size:1.15rem;max-width:68ch}.fine-print{border-top:1px solid rgba(201,169,103,.18);margin-top:1rem;padding-top:1rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.footer{padding:2rem 6vw;color:#8f887c;border-top:1px solid rgba(201,169,103,.18)}.footer-links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.footer-links a{color:#c9a967}@media(max-width:900px){.grid{grid-template-columns:1fr}nav{display:none}}`;
+const styles = `*{box-sizing:border-box}html{background:#070706;color:#f1eadc}body{margin:0;background:#070706;color:#f1eadc;font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #c9a967;outline-offset:4px}header{min-height:82px;padding:0 6vw;display:flex;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(201,169,103,.22);background:#070706ee}header img{width:110px;height:auto}nav{display:flex;gap:1rem;flex-wrap:wrap;margin-left:auto}nav a{color:#b4aea3;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.container{width:min(1180px,88vw);margin:0 auto}.hero{padding:clamp(4rem,9vw,8rem) 0}.section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid rgba(201,169,103,.12)}.panel,.card{border:1px solid rgba(201,169,103,.26);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));box-shadow:0 24px 80px rgba(0,0,0,.22);padding:clamp(1.35rem,4vw,3rem)}.policy-body{display:grid;gap:1.25rem}.policy-body h2{margin-top:2rem}.policy-body h3{margin:.75rem 0 .15rem;color:#f1eadc;font-size:1.08rem}.policy-body ul{margin:.25rem 0 .75rem;padding-left:1.2rem}.policy-body a,.card a{color:#c9a967;text-decoration:underline;text-underline-offset:.18em}h1{font-size:clamp(2.7rem,6vw,5.4rem);line-height:.95;margin:.65rem 0 1rem;font-weight:500;letter-spacing:-.055em}h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;margin:0 0 1rem;font-weight:500}.eyebrow{color:#c9a967;text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;font-weight:800}p,li{color:#b4aea3;line-height:1.72}.lede{font-size:1.15rem;max-width:68ch}.fine-print{border-top:1px solid rgba(201,169,103,.18);margin-top:1rem;padding-top:1rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.footer{padding:2rem 6vw;color:#8f887c;border-top:1px solid rgba(201,169,103,.18)}.footer-links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}.footer-links a{color:#c9a967}@media(max-width:900px){.grid{grid-template-columns:1fr}nav{display:none}}`;
 
 const schema = (policy) => ({
   '@context': 'https://schema.org',
@@ -73,7 +144,20 @@ const schema = (policy) => ({
   url: `${siteUrl}/${policy.route}/`
 });
 
-const legalPage = (policy) => `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070706"><title>${escapeHtml(policy.title)} | ZYNE</title><meta name="description" content="${escapeHtml(policy.description)}"><link rel="canonical" href="${siteUrl}/${policy.route}/"><style>${styles}</style><script type="application/ld+json">${JSON.stringify(schema(policy))}</script></head><body><header><a href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo.png" alt="ZYNE"></a><nav aria-label="Main navigation"><a href="/services/">Services</a><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI</a><a href="/convert-more-clients/">Conversion</a></nav></header><main><section class="hero"><div class="container"><div class="panel"><p class="eyebrow">Legal and checkout clarity</p><h1>${escapeHtml(policy.title)}</h1><p class="lede">${escapeHtml(policy.description)}</p><p class="fine-print">This page provides operational policy information for ZYNE productized services. It is not legal advice. Secure checkout is completed through Stan Store.</p></div></div></section>${policy.sections.map(([heading, points]) => `<section class="section"><div class="container"><article class="card"><p class="eyebrow">Policy detail</p><h2>${escapeHtml(heading)}</h2><ul>${points.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></article></div></section>`).join('')}<section class="section"><div class="container grid"><article class="card"><p class="eyebrow">Relationship disclosure</p><h2>ZYNE and Stan Store responsibilities</h2><p>ZYNE controls product education, service scope, fulfillment expectations, and buyer-facing service information. Stan Store controls the external checkout and payment layer.</p></article><article class="card"><p class="eyebrow">Legal links</p><h2>Review related policies</h2>${legalLinks.map(([label, url]) => `<p><a href="${url}">${label} &#8599;</a></p>`).join('')}</article></div></section></main>${legalFooter}</body></html>`;
+const policyBody = async (policy) => {
+  const requiredNotice = policy.requiredNotice?.length
+    ? `<section class="section"><div class="container"><article class="card"><p class="eyebrow">Policy and checkout notice</p><h2>ZYNE, Stan Store, and AI service materials</h2><ul>${policy.requiredNotice.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></article></div></section>`
+    : '';
+
+  if (policy.source) {
+    const markdown = await readFile(policy.source, 'utf8');
+    return `${requiredNotice}<section class="section"><div class="container"><article class="card policy-body">${markdownToHtml(markdown)}</article></div></section>`;
+  }
+
+  return `${requiredNotice}${policy.sections.map(([heading, points]) => `<section class="section"><div class="container"><article class="card"><p class="eyebrow">Policy detail</p><h2>${escapeHtml(heading)}</h2><ul>${points.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></article></div></section>`).join('')}`;
+};
+
+const legalPage = async (policy) => `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070706"><title>${escapeHtml(policy.title)} | ZYNE</title><meta name="description" content="${escapeHtml(policy.description)}"><link rel="canonical" href="${siteUrl}/${policy.route}/"><style>${styles}</style><script type="application/ld+json">${JSON.stringify(schema(policy))}</script></head><body><header><a href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo.png" alt="ZYNE"></a><nav aria-label="Main navigation"><a href="/services/">Services</a><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI</a><a href="/convert-more-clients/">Conversion</a></nav></header><main><section class="hero"><div class="container"><div class="panel"><p class="eyebrow">Legal and checkout clarity</p><h1>${escapeHtml(policy.title)}</h1><p class="lede">${escapeHtml(policy.description)}</p><p class="fine-print">This page provides operational policy information for ZYNE productized services. It is not legal advice. Secure checkout is completed through Stan Store.</p></div></div></section>${await policyBody(policy)}<section class="section"><div class="container grid"><article class="card"><p class="eyebrow">Relationship disclosure</p><h2>ZYNE and Stan Store responsibilities</h2><p>ZYNE controls product education, service scope, fulfillment expectations, and buyer-facing service information. Stan Store controls the external checkout and payment layer.</p></article><article class="card"><p class="eyebrow">Legal links</p><h2>Review related policies</h2>${legalLinks.map(([label, url]) => `<p><a href="${url}">${label} &#8599;</a></p>`).join('')}</article></div></section></main>${legalFooter}</body></html>`;
 
 const htmlFiles = async (dir) => {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -90,7 +174,7 @@ const footerPattern = /<footer\b[^>]*>[\s\S]*?<\/footer>/;
 for (const policy of policies) {
   const dir = join(distDir, policy.route);
   await mkdir(dir, { recursive: true });
-  await writeFile(join(dir, 'index.html'), legalPage(policy));
+  await writeFile(join(dir, 'index.html'), await legalPage(policy));
 }
 
 for (const path of await htmlFiles(distDir)) {
