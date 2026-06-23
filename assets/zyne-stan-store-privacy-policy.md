@@ -1,9 +1,3 @@
-I tried the live extraction again. I can access the live root and confirm the new title, but the web extraction still returns **0 readable body lines**, and text searches for “Choose Your Growth Path,” “Secure checkout is completed through Stan Store,” and “Google Business Profile Mini Audit” return no matches. ([Zyne][1])
-
-For the privacy draft below, I used the uploaded source/project context, product catalog, Stan privacy policy, and your T&C draft. The key legal/commercial point is that Stan’s policy says customer information may be made available to Creators after purchases, and Creator use is governed by the Creator’s own policy.  The ZYNE homepage implementation also includes Stan Store checkout disclosure and analytics hooks, while checkout URLs and analytics provider IDs are still pending. 
-
-This is a strong publishable draft, but it should be reviewed by counsel before going live.
-
 # ZYNE Privacy Policy
 
 **Last Updated:** June 21, 2026
