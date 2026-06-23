@@ -1,4 +1,10 @@
-LATEST:
+LATEST LOG:
+## **Harden homepage Pages publish workflow #11**
+
+https://github.com/az4mary/zyne.store/actions/runs/28030333629
+
+---
+
 ## **pages build and deployment #423**
 
 https://github.com/az4mary/zyne.store/actions/runs/28019348952
