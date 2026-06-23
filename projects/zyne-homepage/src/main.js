@@ -1,4 +1,5 @@
 import "./styles/main.css";
+import "./styles/header-hero-alignment.css";
 import "./styles/mobile-sticky-cta.css";
 import { products } from "./data/products.js";
 import { buildSchema, renderHomePage } from "./render.js";
