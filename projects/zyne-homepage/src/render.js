@@ -91,12 +91,37 @@ export const renderHomePage = () => `
   <footer><div class="footer-brand"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div><div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
 `;
 
-export const buildSchema = () => ({
-  "@context": "https://schema.org",
-  "@graph": [
-    { "@type": "Organization", "@id": "/#organization", name: "ZYNE", url: "/", logo: "/assets/zyne-logo-optimized.webp" },
-    { "@type": "WebSite", "@id": "/#website", url: "/", name: "ZYNE", publisher: { "@id": "/#organization" } },
-    { "@type": "ItemList", name: "Featured ZYNE services", itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": product.schemaType || "Service", name: product.name, description: product.description, url: product.internalUrl, offers: { "@type": "Offer", price: product.priceValue, priceCurrency: product.currency || "USD", availability: product.checkoutStatus === "live" ? "https://schema.org/InStock" : "https://schema.org/PreOrder" } } })) },
-    { "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) }
-  ]
+const featuredServiceList = () => ({
+  "@type": "ItemList",
+  name: "Featured ZYNE services",
+  itemListElement: products.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": product.schemaType || "Service",
+      name: product.name,
+      description: product.description,
+      url: product.internalUrl,
+      offers: {
+        "@type": "Offer",
+        price: product.priceValue,
+        priceCurrency: product.currency || "USD",
+        availability: product.checkoutStatus === "live" ? "https://schema.org/InStock" : "https://schema.org/PreOrder"
+      }
+    }
+  }))
 });
+
+export const buildSchema = () => {
+  const featuredServices = featuredServiceList();
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "/#organization", name: "ZYNE", url: "/", logo: "/assets/zyne-logo-optimized.webp" },
+      { "@type": "WebSite", "@id": "/#website", url: "/", name: "ZYNE", publisher: { "@id": "/#organization" } },
+      { "@type": "CollectionPage", "@id": "/#homepage", name: "ZYNE Premium Growth Services", url: "/", description: "Fixed-price ZYNE growth services for visibility, authority, automation, and client conversion.", mainEntity: featuredServices },
+      featuredServices,
+      { "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) }
+    ]
+  };
+};
