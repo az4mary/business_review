@@ -22,6 +22,8 @@ Use these files as the active project source:
 | Catalog image migration map | `projects/zyne-homepage/src/data/catalog-image-map.js` |
 | Build and route generation | `projects/zyne-homepage/scripts/*.mjs` |
 | Public deploy assets | `projects/zyne-homepage/public/` |
+| Deployment automation | `.github/workflows/zyne-homepage-pages.yml` |
+| Validation automation | `.github/workflows/zyne-homepage-validation.yml` |
 
 ## Scattered Project-Related Files Found Outside `projects/zyne-homepage`
 
@@ -33,24 +35,30 @@ Use these files as the active project source:
 | `assets/zyne-website-PRD-*-validation-result.md` | Historical validation records | Keep as audit trail. Future validation should be generated or documented under `projects/zyne-homepage/docs/` when project-specific. |
 | `assets/stan_store_product_urls.md` | Source/reference URL list | Keep as reference until the full live catalog is normalized into structured product data. Do not duplicate under `public/`. |
 | `assets/stan_store_product_listings.md` | Live product listing reference | Keep as catalog-reference source until the full product catalog is migrated into structured data. |
-| `patches/zyne-crawler-enabled.md` | Implemented patch instruction | Consolidated into `projects/zyne-homepage/docs/crawler-seo-rendering.md`; root patch file can be removed. |
+| `patches/zyne-crawler-enabled.md` | Implemented patch instruction | Consolidated into `projects/zyne-homepage/docs/crawler-seo-rendering.md` and removed. |
+| `assets/index_zyne_homepage_1.html` | Obsolete standalone homepage artifact | Removed because it was publicly servable and not part of the current source/build pipeline. |
+| `assets/index_redirect_stan_store.html` | Obsolete standalone Stan Store redirect artifact | Removed because direct redirect artifacts conflict with the product-education-first model. |
 | `About us.md` | Brand/background note | Keep outside runtime until an About page PRD exists. Do not deploy automatically. |
 | `Protocols/` and `LAW/` | Non-homepage operational/legal workspaces | Out of homepage scope. Do not import into `projects/zyne-homepage` unless a later PRD requires it. |
 
-## Cleanup Already Applied
+## Cleanup Applied
 
 - Added `projects/zyne-homepage/public/CNAME` so built GitHub Pages artifacts preserve the `zyne.store` custom domain.
 - Added `projects/zyne-homepage/public/.nojekyll` so GitHub Pages serves generated static assets without Jekyll processing.
+- Added `.github/workflows/zyne-homepage-pages.yml` to build `projects/zyne-homepage` and deploy the generated `dist` artifact to GitHub Pages.
 - Removed the duplicate public artifact `projects/zyne-homepage/public/assets/stan_store_product_urls.md` because it duplicated `assets/stan_store_product_urls.md` and would be published as a public static file.
 - Consolidated crawler/AI extraction guidance into `projects/zyne-homepage/docs/crawler-seo-rendering.md`.
+- Removed root `patches/zyne-crawler-enabled.md` after consolidation.
+- Removed obsolete public standalone HTML artifacts under `assets/` that were not part of the current build.
+- Updated `projects/zyne-homepage/README.md` and `projects/zyne-homepage/PRD_COMPLIANCE.md` to reflect the current source-of-truth model.
 
 ## Recommended Cleanup Still Pending
 
-1. Configure GitHub Pages to deploy from GitHub Actions using the built `projects/zyne-homepage/dist` artifact.
-2. Stop treating root generated HTML as editable source.
-3. After GitHub Actions deployment is confirmed, remove or archive stale root generated artifacts from the working source path if they are no longer used by Pages.
-4. Migrate the full Stan Store live catalog into structured data rather than relying on Markdown URL/listing reference files.
-5. Add a catalog-sync validation that checks product count, product IDs, Stan URLs, category assignment, and required homepage/category flags against the live catalog reference.
+1. Confirm GitHub Pages is set to deploy from GitHub Actions, not manually from the root folder.
+2. After GitHub Actions deployment is confirmed, stop relying on stale root generated HTML as the live source.
+3. Migrate the full Stan Store live catalog into structured data rather than relying on Markdown URL/listing reference files.
+4. Add a catalog-sync validation that checks product count, product IDs, Stan URLs, category assignment, and required homepage/category flags against the live catalog reference.
+5. Consider a later root cleanup PR that removes generated root artifacts only after the Pages deployment path is confirmed stable.
 
 ## Operating Rule Going Forward
 
