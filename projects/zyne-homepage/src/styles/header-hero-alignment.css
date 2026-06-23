@@ -1,0 +1,14 @@
+:root {
+  --homepage-rail: clamp(1.5rem, 5vw, 5rem);
+}
+
+@media (min-width: 641px) {
+  .site-header {
+    padding-inline: var(--homepage-rail);
+  }
+
+  .hero {
+    padding-inline: var(--homepage-rail);
+    column-gap: clamp(2rem, 4vw, 5rem);
+  }
+}
