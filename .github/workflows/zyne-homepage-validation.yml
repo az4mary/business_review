@@ -44,8 +44,26 @@ jobs:
       - name: Report catalog migration status
         run: npm run report:catalog-migration
 
-      - name: Build and validate routes
-        run: npm run build
+      - name: Validate PRD 1.1 homepage UX
+        run: npm run validate:prd1.1
+
+      - name: Build Vite bundle
+        run: npx vite build
+
+      - name: Prerender crawler-readable homepage
+        run: node scripts/prerender.mjs
+
+      - name: Generate category and product routes
+        run: node scripts/generate-routes.mjs
+
+      - name: Generate legal layer
+        run: node scripts/generate-legal-layer.mjs
+
+      - name: Generate SEO layer
+        run: node scripts/generate-seo-layer.mjs
+
+      - name: Validate generated routes and policy layers
+        run: npm run validate:routes
 
       - name: Strict catalog validation
         run: npm run validate:catalog:strict
