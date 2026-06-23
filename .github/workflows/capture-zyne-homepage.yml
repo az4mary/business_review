@@ -96,3 +96,5 @@ jobs:
           name: zyne-homepage-screenshot
           path: zyne-screenshots/
           if-no-files-found: error
+
+# trigger: 2026-06-23T00:00:00Z
