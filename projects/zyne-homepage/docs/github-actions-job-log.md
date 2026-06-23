@@ -1,4 +1,4 @@
-LASTEST
+LATEST
 ## **pages build and deployment #423**
 
 https://github.com/az4mary/zyne.store/actions/runs/28019348952
