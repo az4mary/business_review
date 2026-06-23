@@ -33,17 +33,17 @@ jobs:
           npm install --save-dev playwright
           npx playwright install --with-deps chromium
 
-      - name: Capture full-page screenshot
+      - name: Capture full-page desktop screenshot
         run: |
-          mkdir -p zyne-screenshots
+          mkdir -p assets/PRD-1.1-images
           node <<'NODE'
           const { chromium } = require('playwright');
           const fs = require('fs');
           const path = require('path');
 
-          const url = 'https://zyne.store/project/homepage';
-          const outputDir = 'zyne-screenshots';
-          const outputPath = path.join(outputDir, 'zyne-project-homepage-fullpage-desktop.png');
+          const url = 'https://zyne.store/';
+          const outputDir = 'assets/PRD-1.1-images';
+          const outputPath = path.join(outputDir, 'Desktop.png');
 
           async function autoScroll(page) {
             await page.evaluate(async () => {
@@ -99,19 +99,19 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add zyne-screenshots/zyne-project-homepage-fullpage-desktop.png
+          git add assets/PRD-1.1-images/Desktop.png
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
           else
-            git commit -m "Capture project homepage screenshot"
+            git commit -m "Capture desktop homepage screenshot"
             git push
           fi
 
       - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zyne-project-homepage-screenshot
-          path: zyne-screenshots/
+          name: zyne-desktop-homepage-screenshot
+          path: assets/PRD-1.1-images/Desktop.png
           if-no-files-found: error
 
-# trigger: 2026-06-23T00:02:00Z
+# trigger: 2026-06-23T00:03:00Z
