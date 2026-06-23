@@ -39,9 +39,9 @@ jobs:
           const fs = require('fs');
           const path = require('path');
 
-          const url = 'https://zyne.store/';
+          const url = 'https://zyne.store/project/homepage';
           const outputDir = 'zyne-screenshots';
-          const outputPath = path.join(outputDir, 'zyne-homepage-fullpage-desktop.png');
+          const outputPath = path.join(outputDir, 'zyne-project-homepage-fullpage-desktop.png');
 
           async function autoScroll(page) {
             await page.evaluate(async () => {
@@ -93,8 +93,8 @@ jobs:
       - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zyne-homepage-screenshot
+          name: zyne-project-homepage-screenshot
           path: zyne-screenshots/
           if-no-files-found: error
 
-# trigger: 2026-06-23T00:00:00Z
+# trigger: 2026-06-23T00:01:00Z
