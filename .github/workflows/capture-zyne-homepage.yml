@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 jobs:
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -72,7 +74,8 @@ jobs:
               deviceScaleFactor: 1,
             });
             const page = await context.newPage();
-            await page.goto(url, { waitUntil: 'networkidle', timeout: 90000 });
+            const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+            await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
             await autoScroll(page);
             await page.screenshot({ path: outputPath, fullPage: true });
             const title = await page.title();
@@ -81,6 +84,8 @@ jobs:
               height: document.documentElement.scrollHeight,
             }));
             console.log(`Captured ${outputPath}`);
+            console.log(`URL: ${url}`);
+            console.log(`HTTP status: ${response ? response.status() : 'unknown'}`);
             console.log(`Title: ${title}`);
             console.log(`Document size: ${size.width}x${size.height}`);
             await browser.close();
@@ -90,6 +95,18 @@ jobs:
           });
           NODE
 
+      - name: Commit screenshot to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add zyne-screenshots/zyne-project-homepage-fullpage-desktop.png
+          if git diff --cached --quiet; then
+            echo "No screenshot changes to commit."
+          else
+            git commit -m "Capture project homepage screenshot"
+            git push
+          fi
+
       - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
         with:
@@ -97,4 +114,4 @@ jobs:
           path: zyne-screenshots/
           if-no-files-found: error
 
-# trigger: 2026-06-23T00:01:00Z
+# trigger: 2026-06-23T00:02:00Z
