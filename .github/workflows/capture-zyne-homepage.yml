@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - ".github/workflows/capture-zyne-homepage.yml"
+      - "projects/zyne-homepage/src/main.js"
+      - "projects/zyne-homepage/src/styles/**"
   workflow_dispatch:
 
 permissions:
@@ -114,4 +116,4 @@ jobs:
           path: assets/PRD-1.1-images/Desktop.png
           if-no-files-found: error
 
-# trigger: 2026-06-23T00:03:00Z
+# trigger: 2026-06-23T00:04:00Z
