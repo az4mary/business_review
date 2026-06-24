@@ -7,6 +7,8 @@ on:
     paths:
       - ".github/workflows/capture-zyne-homepage.yml"
       - "projects/zyne-homepage/src/main.js"
+      - "projects/zyne-homepage/src/render.js"
+      - "projects/zyne-homepage/src/data/**"
       - "projects/zyne-homepage/src/styles/**"
   workflow_dispatch:
 
@@ -47,31 +49,12 @@ jobs:
           const outputDir = 'assets/PRD-1.1-images';
 
           const captures = [
-            {
-              name: 'Desktop',
-              file: 'Desktop.png',
-              viewport: { width: 1440, height: 1200 },
-              fullPage: true,
-            },
-            {
-              name: 'Tablet',
-              file: 'Tablet.png',
-              viewport: { width: 768, height: 1024 },
-              fullPage: true,
-            },
-            {
-              name: 'Mobile',
-              file: 'Mobile.png',
-              viewport: { width: 390, height: 844 },
-              fullPage: true,
-            },
-            {
-              name: 'Mobile Menu',
-              file: 'Mobile-Menu.png',
-              viewport: { width: 390, height: 844 },
-              fullPage: false,
-              openMobileMenu: true,
-            },
+            { name: 'Desktop', file: 'Desktop.png', viewport: { width: 1440, height: 1200 }, fullPage: true },
+            { name: 'Tablet', file: 'Tablet.png', viewport: { width: 768, height: 1024 }, fullPage: true },
+            { name: 'Mobile', file: 'Mobile.png', viewport: { width: 390, height: 844 }, fullPage: true },
+            { name: 'Mobile Menu', file: 'Mobile-Menu.png', viewport: { width: 390, height: 844 }, fullPage: false, openMobileMenu: true },
+            { name: 'Mobile Sticky CTA', file: 'Mobile-Sticky-CTA.png', viewport: { width: 390, height: 844 }, fullPage: false, showMobileStickyCta: true },
+            { name: 'Mobile Diagnostic Result', file: 'Mobile-Diagnostic-Result.png', viewport: { width: 390, height: 844 }, fullPage: false, diagnosticRoute: 'website-conversion' },
           ];
 
           async function autoScroll(page) {
@@ -134,14 +117,27 @@ jobs:
             const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
             await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
 
-            if (capture.fullPage) {
-              await autoScroll(page);
-            }
+            if (capture.fullPage) await autoScroll(page);
 
             await prepareForScreenshot(page);
 
             if (capture.openMobileMenu) {
               await page.locator('.menu-toggle').click({ timeout: 10000 });
+              await page.waitForTimeout(500);
+            }
+
+            if (capture.showMobileStickyCta) {
+              await page.evaluate(() => {
+                const target = document.querySelector('#services') || document.querySelector('#growth-paths');
+                window.scrollTo(0, target ? target.getBoundingClientRect().top + window.scrollY : 900);
+                document.body.classList.add('show-mobile-sticky-cta');
+              });
+              await page.waitForTimeout(500);
+            }
+
+            if (capture.diagnosticRoute) {
+              await page.selectOption('#diagnostic-select', capture.diagnosticRoute);
+              await page.locator('.diagnostic-submit').click({ timeout: 10000 });
               await page.waitForTimeout(500);
             }
 
@@ -167,9 +163,7 @@ jobs:
           (async () => {
             fs.mkdirSync(outputDir, { recursive: true });
             const browser = await chromium.launch();
-            for (const capture of captures) {
-              await captureViewport(browser, capture);
-            }
+            for (const capture of captures) await captureViewport(browser, capture);
             await browser.close();
           })().catch((error) => {
             console.error(error);
@@ -185,7 +179,9 @@ jobs:
             assets/PRD-1.1-images/Desktop.png \
             assets/PRD-1.1-images/Tablet.png \
             assets/PRD-1.1-images/Mobile.png \
-            assets/PRD-1.1-images/Mobile-Menu.png
+            assets/PRD-1.1-images/Mobile-Menu.png \
+            assets/PRD-1.1-images/Mobile-Sticky-CTA.png \
+            assets/PRD-1.1-images/Mobile-Diagnostic-Result.png
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
           else
@@ -202,6 +198,6 @@ jobs:
             assets/PRD-1.1-images/Tablet.png
             assets/PRD-1.1-images/Mobile.png
             assets/PRD-1.1-images/Mobile-Menu.png
+            assets/PRD-1.1-images/Mobile-Sticky-CTA.png
+            assets/PRD-1.1-images/Mobile-Diagnostic-Result.png
           if-no-files-found: error
-
-# trigger: 2026-06-23T00:06:00Z
