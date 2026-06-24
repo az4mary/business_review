@@ -1,0 +1,145 @@
+name: Convert PRD 1.1 Presentation for Visual QA
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/convert-prd-presentation.yml"
+      - "assets/zyne-website-PRD-1.1-presentation.pdf"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install conversion tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
+      - name: Convert PDF pages to PNG images
+        run: |
+          set -euo pipefail
+          PDF_PATH="assets/zyne-website-PRD-1.1-presentation.pdf"
+          OUTPUT_DIR="assets/PRD-1.1-images/presentation"
+          DPI="200"
+
+          rm -rf "$OUTPUT_DIR"
+          mkdir -p "$OUTPUT_DIR/pages"
+
+          test -f "$PDF_PATH"
+          pdfinfo "$PDF_PATH" | tee "$OUTPUT_DIR/pdfinfo.txt"
+          pdftoppm -png -r "$DPI" "$PDF_PATH" "$OUTPUT_DIR/pages/page"
+
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          import json
+          import math
+          import os
+
+          output_dir = Path("assets/PRD-1.1-images/presentation")
+          pages_dir = output_dir / "pages"
+          dpi = 200
+
+          original_pages = sorted(pages_dir.glob("page-*.png"))
+          normalized_pages = []
+
+          for index, src in enumerate(original_pages, start=1):
+              dst = pages_dir / f"page-{index:03d}.png"
+              if src != dst:
+                  src.rename(dst)
+              normalized_pages.append(dst)
+
+          if not normalized_pages:
+              raise SystemExit("No PNG pages were generated from the PDF.")
+
+          page_records = []
+          thumbnails = []
+          thumb_width = 320
+          label_height = 34
+          padding = 18
+          columns = 3
+
+          try:
+              font = ImageFont.load_default()
+          except Exception:
+              font = None
+
+          for index, page_path in enumerate(normalized_pages, start=1):
+              with Image.open(page_path) as image:
+                  width, height = image.size
+                  page_records.append({
+                      "page": index,
+                      "file": str(page_path),
+                      "width": width,
+                      "height": height,
+                      "dpi": dpi,
+                  })
+                  thumb_height = max(1, round(height * (thumb_width / width)))
+                  thumb = image.convert("RGB").resize((thumb_width, thumb_height), Image.Resampling.LANCZOS)
+                  tile = Image.new("RGB", (thumb_width, thumb_height + label_height), "#11110f")
+                  tile.paste(thumb, (0, label_height))
+                  draw = ImageDraw.Draw(tile)
+                  draw.text((8, 9), f"Page {index:03d} · {width}×{height}", fill="#f1eadc", font=font)
+                  thumbnails.append(tile)
+
+          rows = math.ceil(len(thumbnails) / columns)
+          max_tile_height = max(tile.height for tile in thumbnails)
+          sheet_width = columns * thumb_width + (columns + 1) * padding
+          sheet_height = rows * max_tile_height + (rows + 1) * padding
+          sheet = Image.new("RGB", (sheet_width, sheet_height), "#070706")
+
+          for index, tile in enumerate(thumbnails):
+              row = index // columns
+              col = index % columns
+              x = padding + col * (thumb_width + padding)
+              y = padding + row * (max_tile_height + padding)
+              sheet.paste(tile, (x, y))
+
+          sheet.save(output_dir / "contact-sheet.png", optimize=True)
+
+          manifest = {
+              "source_pdf": "assets/zyne-website-PRD-1.1-presentation.pdf",
+              "output_dir": str(output_dir),
+              "conversion": "pdftoppm PNG",
+              "dpi": dpi,
+              "page_count": len(page_records),
+              "pages": page_records,
+              "contact_sheet": str(output_dir / "contact-sheet.png"),
+          }
+          (output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+          print(json.dumps(manifest, indent=2))
+          PY
+
+      - name: Commit converted presentation assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/PRD-1.1-images/presentation
+          if git diff --cached --quiet; then
+            echo "No presentation conversion changes to commit."
+          else
+            git commit -m "Convert PRD 1.1 presentation for visual QA"
+            git push
+          fi
+
+      - name: Upload converted presentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prd-1-1-presentation-visual-qa-images
+          path: assets/PRD-1.1-images/presentation
+          if-no-files-found: error
