@@ -3,6 +3,35 @@
 
 # ASSISTANT
 
+Implemented.
+
+Created GitHub Actions workflow:
+
+- `.github/workflows/capture-top-ecommerce-sites.yml`
+
+What it does:
+
+- Reads the top-10 website list from `assets/articles/top-10-websites-2026.md`.
+- Captures the homepage / first page for the 10 ranked e-commerce sites.
+- Captures three device profiles:
+  - Desktop: `1920x1080`, device scale factor `2`
+  - Tablet: `1024x1366`, device scale factor `2`
+  - Mobile: `430x932`, device scale factor `3`
+- Uses Playwright Chromium with full-page screenshots for high-resolution visual QA inspection.
+- Saves output in:
+  - `assets/top-ecommerce-website-screenshots/`
+- Writes supporting QA metadata:
+  - `assets/top-ecommerce-website-screenshots/capture-manifest.json`
+  - `assets/top-ecommerce-website-screenshots/capture-failures.json`
+- Commits generated screenshots back to the repository when screenshot output changes.
+- Uploads the screenshot folder as a GitHub Actions artifact named `top-ecommerce-website-screenshots`.
+- Keeps the workflow manually runnable through `workflow_dispatch` and automatically runnable when the workflow or source article changes.
+
+Notes:
+
+- I reviewed the existing `capture-zyne-homepage.yml` workflow pattern and reused its Playwright / commit-back / artifact-upload approach.
+- External e-commerce sites can return bot checks, geolocation redirects, cookie banners, or blocked pages. The workflow records HTTP status, page title, viewport, device scale factor, and failure details in the manifest/failure JSON files so QA can diagnose those cases.
+
 </aside>
 
 ---
