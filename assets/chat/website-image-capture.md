@@ -3,6 +3,48 @@
 
 # ASSISTANT
 
+Updated the screenshot workflow to address the latest QA findings.
+
+Changed workflow:
+
+- `.github/workflows/capture-top-ecommerce-sites.yml`
+
+What changed:
+
+- Replaced generic country-selector URLs with concrete regional storefront URLs where the original URL commonly lands on a country-selection page:
+  - Shopee now targets `https://shopee.sg/`
+  - Mercado Libre now targets `https://www.mercadolibre.com.mx/`
+  - Zalando now targets `https://www.zalando.co.uk/`
+  - Amazon and Temu now include locale/currency/region URL hints.
+- Added region-aligned browser context settings per site:
+  - `locale`
+  - `Accept-Language`
+  - `timezoneId`
+  - `geolocation`
+  - geolocation permission
+- Added stronger load readiness before screenshots:
+  - waits for `load`
+  - waits for `networkidle`
+  - waits for fonts
+  - waits for images
+  - waits for stable document height / image count / busy indicators
+  - auto-scrolls to trigger lazy-loaded content
+  - returns to the top before the final screenshot
+- Added generic popup/cookie/modal dismissal for common controls:
+  - accept cookies
+  - close modals
+  - no thanks / not now / skip
+  - continue / continue shopping
+  - several Spanish, Chinese, and Japanese consent labels
+- Added human-verification detection for pages containing CAPTCHA / bot-check / “not a robot” / “not an AI” / unusual-traffic / access-denied indicators.
+- Added diagnostic screenshot output when human verification is detected:
+  - `assets/top-ecommerce-website-screenshots/<site>/<site>-human-verification-diagnostic.png`
+- Updated manifest/failure reporting so QA can see requested URL, final URL, HTTP status, title, device, locale, timezone, output path, and verification diagnostics.
+
+Important boundary:
+
+- The workflow does **not** bypass CAPTCHA, “not a robot,” or “not an AI” controls. Those are anti-abuse / human-verification systems. The workflow now detects and reports them instead of silently capturing invalid blocked pages. The correct production-grade resolution is to use a vendor-approved test path, an allowlisted CI runner/IP, a permitted authenticated storage-state file, or a staging/test environment from the site owner.
+
 </aside>
 
 ---
