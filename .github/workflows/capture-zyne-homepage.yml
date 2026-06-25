@@ -1,4 +1,4 @@
-name: Capture PRD 1.2A Homepage Screenshots
+name: Capture ZYNE Homepage Screenshots
 
 on:
   push:
@@ -7,14 +7,8 @@ on:
     paths:
       - ".github/workflows/capture-zyne-homepage.yml"
       - "projects/zyne-homepage/src/main.js"
-      - "projects/zyne-homepage/src/render.js"
-      - "projects/zyne-homepage/src/data/**"
       - "projects/zyne-homepage/src/styles/**"
   workflow_dispatch:
-
-concurrency:
-  group: capture-prd-1-2a-homepage-screenshots-main
-  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -29,7 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -42,24 +35,43 @@ jobs:
           npm install --save-dev playwright
           npx playwright install --with-deps chromium
 
-      - name: Capture PRD 1.2A responsive homepage screenshots
+      - name: Capture responsive homepage screenshots
         run: |
-          mkdir -p assets/PRD-1.2A-images
+          mkdir -p assets/PRD-1.1-images
           node <<'NODE'
           const { chromium } = require('playwright');
           const fs = require('fs');
           const path = require('path');
 
           const url = 'https://zyne.store/';
-          const outputDir = 'assets/PRD-1.2A-images';
+          const outputDir = 'assets/PRD-1.1-images';
 
           const captures = [
-            { name: 'Desktop', file: 'Desktop.png', viewport: { width: 1440, height: 1200 }, fullPage: true },
-            { name: 'Tablet', file: 'Tablet.png', viewport: { width: 768, height: 1024 }, fullPage: true },
-            { name: 'Mobile', file: 'Mobile.png', viewport: { width: 390, height: 844 }, fullPage: true },
-            { name: 'Mobile Menu', file: 'Mobile-Menu.png', viewport: { width: 390, height: 844 }, fullPage: false, openMobileMenu: true },
-            { name: 'Mobile Sticky CTA', file: 'Mobile-Sticky-CTA.png', viewport: { width: 390, height: 844 }, fullPage: false, showMobileStickyCta: true },
-            { name: 'Mobile Diagnostic Result', file: 'Mobile-Diagnostic-Result.png', viewport: { width: 390, height: 844 }, fullPage: false, diagnosticRoute: 'website-conversion' },
+            {
+              name: 'Desktop',
+              file: 'Desktop.png',
+              viewport: { width: 1440, height: 1200 },
+              fullPage: true,
+            },
+            {
+              name: 'Tablet',
+              file: 'Tablet.png',
+              viewport: { width: 768, height: 1024 },
+              fullPage: true,
+            },
+            {
+              name: 'Mobile',
+              file: 'Mobile.png',
+              viewport: { width: 390, height: 844 },
+              fullPage: true,
+            },
+            {
+              name: 'Mobile Menu',
+              file: 'Mobile-Menu.png',
+              viewport: { width: 390, height: 844 },
+              fullPage: false,
+              openMobileMenu: true,
+            },
           ];
 
           async function autoScroll(page) {
@@ -122,27 +134,14 @@ jobs:
             const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
             await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
 
-            if (capture.fullPage) await autoScroll(page);
+            if (capture.fullPage) {
+              await autoScroll(page);
+            }
 
             await prepareForScreenshot(page);
 
             if (capture.openMobileMenu) {
               await page.locator('.menu-toggle').click({ timeout: 10000 });
-              await page.waitForTimeout(500);
-            }
-
-            if (capture.showMobileStickyCta) {
-              await page.evaluate(() => {
-                const target = document.querySelector('#services') || document.querySelector('#growth-paths');
-                window.scrollTo(0, target ? target.getBoundingClientRect().top + window.scrollY : 900);
-                document.body.classList.add('show-mobile-sticky-cta');
-              });
-              await page.waitForTimeout(500);
-            }
-
-            if (capture.diagnosticRoute) {
-              await page.selectOption('#diagnostic-select', capture.diagnosticRoute);
-              await page.locator('.diagnostic-submit').click({ timeout: 10000 });
               await page.waitForTimeout(500);
             }
 
@@ -168,7 +167,9 @@ jobs:
           (async () => {
             fs.mkdirSync(outputDir, { recursive: true });
             const browser = await chromium.launch();
-            for (const capture of captures) await captureViewport(browser, capture);
+            for (const capture of captures) {
+              await captureViewport(browser, capture);
+            }
             await browser.close();
           })().catch((error) => {
             console.error(error);
@@ -176,44 +177,31 @@ jobs:
           });
           NODE
 
-      - name: Commit PRD 1.2A screenshots to repository
+      - name: Commit screenshots to repository
         run: |
-          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
-            assets/PRD-1.2A-images/Desktop.png \
-            assets/PRD-1.2A-images/Tablet.png \
-            assets/PRD-1.2A-images/Mobile.png \
-            assets/PRD-1.2A-images/Mobile-Menu.png \
-            assets/PRD-1.2A-images/Mobile-Sticky-CTA.png \
-            assets/PRD-1.2A-images/Mobile-Diagnostic-Result.png
+            assets/PRD-1.1-images/Desktop.png \
+            assets/PRD-1.1-images/Tablet.png \
+            assets/PRD-1.1-images/Mobile.png \
+            assets/PRD-1.1-images/Mobile-Menu.png
           if git diff --cached --quiet; then
-            echo "No PRD 1.2A screenshot changes to commit."
-            exit 0
+            echo "No screenshot changes to commit."
+          else
+            git commit -m "Capture responsive homepage screenshots"
+            git push
           fi
-          git commit -m "Capture PRD 1.2A responsive homepage screenshots"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push failed on attempt ${attempt}; retrying after refetch."
-            sleep 5
-          done
-          echo "Unable to push PRD 1.2A screenshot commit after 3 attempts."
-          exit 1
 
-      - name: Upload PRD 1.2A screenshot artifact
+      - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: prd-1-2a-responsive-homepage-screenshots
+          name: zyne-responsive-homepage-screenshots
           path: |
-            assets/PRD-1.2A-images/Desktop.png
-            assets/PRD-1.2A-images/Tablet.png
-            assets/PRD-1.2A-images/Mobile.png
-            assets/PRD-1.2A-images/Mobile-Menu.png
-            assets/PRD-1.2A-images/Mobile-Sticky-CTA.png
-            assets/PRD-1.2A-images/Mobile-Diagnostic-Result.png
+            assets/PRD-1.1-images/Desktop.png
+            assets/PRD-1.1-images/Tablet.png
+            assets/PRD-1.1-images/Mobile.png
+            assets/PRD-1.1-images/Mobile-Menu.png
           if-no-files-found: error
+
+# trigger: 2026-06-23T00:06:00Z
