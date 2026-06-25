@@ -1,5 +1,4 @@
-import { deliveryFamilies, faqs, growthPaths, industries, intelligenceProducts, premiumProducts, products, getProduct } from "./data/products.js";
-import { diagnosticRoutes } from "./data/diagnostics.js";
+import { deliveryFamilies, faqs, growthPaths, industries, intelligenceProducts, premiumProducts, products } from "./data/products.js";
 
 const slugify = (value) => value.toLowerCase().replaceAll("?", "").replaceAll("&", "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const arrow = "&#8599;";
@@ -35,7 +34,6 @@ const industryCtaByName = {
 };
 
 const categoryLabel = (category) => category.replaceAll("-", " ");
-const sourceAttr = (section) => `data-source-section="${section}"`;
 
 const growthPathCard = (path) => `
   <article class="path-card" data-cue="${path.id}">
@@ -44,7 +42,7 @@ const growthPathCard = (path) => `
     <h3>${path.title}</h3><p>${path.description}</p>
     <h4>Popular starting points</h4>
     <ul>${path.products.map((item) => `<li>${item}</li>`).join("")}</ul>
-    <a class="card-cta" href="${path.url}" ${sourceAttr("growth-paths")} data-event="growth_path_card_click" data-category="${path.id}">${path.ctaLabel || "View Products"} <span>${arrow}</span></a>
+    <a class="card-cta" href="${path.url}" data-event="growth_path_card_click" data-category="${path.id}">${path.ctaLabel || "View Products"} <span>${arrow}</span></a>
   </article>`;
 
 const productCard = (product) => `
@@ -54,81 +52,43 @@ const productCard = (product) => `
     <h3>${product.name}</h3><strong>${product.price}</strong>
     <p>${product.shortDescription || product.description}</p>
     <dl class="product-meta"><div><dt>Best for</dt><dd>${product.bestFor}</dd></div><div><dt>Timeline</dt><dd>${product.timeline}</dd></div></dl>
-    <a class="card-cta" href="${product.internalUrl}" ${sourceAttr("services")} data-event="product_card_view_product_click" data-product="${product.id}">View Product <span>${arrow}</span></a>
+    <a class="card-cta" href="${product.internalUrl}" data-event="product_card_view_product_click" data-product="${product.id}">View Product <span>${arrow}</span></a>
   </article>`;
 
 const intelligenceLink = ([name, price, description, url], index) => `
-  <a href="${url || `/services/${slugify(name)}/`}" ${sourceAttr("intelligence")}>
+  <a href="${url || `/services/${slugify(name)}/`}">
     <span>0${index + 1}</span><div><h3>${name}</h3><p>${description}</p></div><strong>${price}</strong><b>${arrow}</b>
   </a>`;
 
-const deliveryCard = ({ name, description, icon, url }) => `<a class="family-card" href="${url}" ${sourceAttr("delivery")}><b aria-hidden="true">${icon}</b><h3>${name}</h3><p>${description}</p><span>Explore ${arrow}</span></a>`;
+const deliveryCard = ({ name, description, icon, url }) => `<a class="family-card" href="${url}"><b aria-hidden="true">${icon}</b><h3>${name}</h3><p>${description}</p><span>Explore ${arrow}</span></a>`;
 const processCard = ([name, text], index) => `<article><span>0${index + 1}</span><h3>${name}</h3><p>${text}</p></article>`;
-const premiumCard = ([name, price, text, slug, image, imageAlt], index) => `<article class="${image ? "has-product-image" : "product-image-pending"} ${index === 0 ? "premium-feature-card" : "premium-compact-card"}">${image ? `<img src="/assets/${image}" alt="${imageAlt || `${name} boxed service package`}" loading="lazy" decoding="async" width="1200" height="1200" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a class="card-cta" href="/services/${slug}/" ${sourceAttr("strategic-services")}>View Product ${arrow}</a></div></article>`;
-const industryCard = ([name, text], index) => { const cta = industryCtaByName[name] || { label: "View Services", url: "/services/" }; return `<article class="${name === "Real Estate" ? "featured-industry" : ""}"><span>0${index + 1}</span><h3>${name}</h3><p>${text}</p><a href="${cta.url}" ${sourceAttr("industries")} data-event="industry_cta_click" data-category="${slugify(name)}">${cta.label} ${arrow}</a></article>`; };
+const premiumCard = ([name, price, text, slug, image, imageAlt], index) => `<article class="${image ? "has-product-image" : "product-image-pending"} ${index === 0 ? "premium-feature-card" : "premium-compact-card"}">${image ? `<img src="/assets/${image}" alt="${imageAlt || `${name} boxed service package`}" loading="lazy" decoding="async" width="1200" height="1200" />` : `<div class="image-placeholder" aria-hidden="true"><span>ZYNE</span><b>${name}</b><small>Product image coming soon</small></div>`}<div><p>Strategic service</p><h3>${name}</h3><strong>${price}</strong><span>${text}</span><a class="card-cta" href="/services/${slug}/">View Product ${arrow}</a></div></article>`;
+const industryCard = ([name, text], index) => { const cta = industryCtaByName[name] || { label: "View Services", url: "/services/" }; return `<article class="${name === "Real Estate" ? "featured-industry" : ""}"><span>0${index + 1}</span><h3>${name}</h3><p>${text}</p><a href="${cta.url}" data-event="industry_cta_click" data-category="${slugify(name)}">${cta.label} ${arrow}</a></article>`; };
 const faqItem = ([question, answer], index) => `<details class="${index < 2 ? "trust-objection" : ""}"><summary><span>0${index + 1}</span>${question}<b>+</b></summary><p>${answer}</p></details>`;
-
-const diagnosticProductLink = (productId) => {
-  const product = getProduct(productId);
-  if (!product) return "";
-  return `<a class="diagnostic-product" href="${product.internalUrl}" ${sourceAttr("diagnostic-search")} data-event="diagnostic_product_click" data-product="${product.id}"><span>${categoryLabel(product.category)}</span><b>${product.name}</b><small>${product.price} · ${product.timeline}</small></a>`;
-};
-
-const diagnosticRouteCard = (route) => {
-  const starter = getProduct(route.starterProductId);
-  const diagnostic = getProduct(route.diagnosticProductId);
-  return `
-    <article class="diagnostic-result-card" data-diagnostic-result="${route.id}" hidden>
-      <p class="eyebrow">Curated recommendation</p>
-      <h3>${route.resultTitle}</h3>
-      <p>${route.why}</p>
-      <dl class="diagnostic-meta">
-        <div><dt>Likely path</dt><dd><a href="${route.pathUrl}" ${sourceAttr("diagnostic-search")}>${route.pathTitle}</a></dd></div>
-        <div><dt>Start here</dt><dd><a href="${starter?.internalUrl || route.pathUrl}" ${sourceAttr("diagnostic-search")}>${starter?.name || "Recommended starter"}</a></dd></div>
-        <div><dt>If unsure</dt><dd><a href="${diagnostic?.internalUrl || route.pathUrl}" ${sourceAttr("diagnostic-search")}>${diagnostic?.name || "Paid diagnostic"}</a></dd></div>
-      </dl>
-      <div class="diagnostic-products" aria-label="Relevant products">${route.relatedProductIds.map(diagnosticProductLink).join("")}</div>
-      <p class="diagnostic-next"><strong>Next action:</strong> ${route.nextAction}</p>
-      <div class="actions diagnostic-actions"><a class="button" href="${starter?.internalUrl || route.pathUrl}" ${sourceAttr("diagnostic-search")} data-event="diagnostic_primary_recommendation_click" data-product="${starter?.id || ""}">View Starting Point <span>${arrow}</span></a><a class="button button-ghost" href="${route.pathUrl}" ${sourceAttr("diagnostic-search")} data-event="diagnostic_path_click" data-category="${route.pathUrl}">View Path</a></div>
-    </article>`;
-};
-
-const diagnosticSection = () => `
-  <section class="diagnostic-section section" id="diagnostic-search" aria-labelledby="diagnostic-title">
-    <div class="section-heading diagnostic-heading"><div><p class="eyebrow">Reduce the guesswork</p><h2 id="diagnostic-title">Find the Right <em>ZYNE Service</em></h2></div><p>Start with the business symptom. ZYNE will show a curated path, starter product, diagnostic option, and next step without requiring you to read the full catalog first.</p></div>
-    <form class="diagnostic-search" data-diagnostic-search>
-      <label for="diagnostic-select">What do you need help with?</label>
-      <div class="diagnostic-controls"><select id="diagnostic-select" name="diagnostic"><option value="">Select your biggest bottleneck</option>${diagnosticRoutes.map((route) => `<option value="${route.id}">${route.symptom}</option>`).join("")}</select><button class="button diagnostic-submit" type="submit">Find My Solution</button></div>
-      <p class="diagnostic-helper">Recommendations use approved ZYNE catalog data. If the problem is unclear, the route points to a paid diagnostic instead of a free call.</p>
-    </form>
-    <div class="diagnostic-results" data-diagnostic-results hidden aria-live="polite">${diagnosticRoutes.map(diagnosticRouteCard).join("")}<button class="diagnostic-reset" type="button" data-diagnostic-reset>Show full homepage</button></div>
-  </section>`;
 
 export const renderHomePage = () => `
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><b>Menu</b></button>
-    <nav id="main-navigation" aria-label="Main navigation"><a href="#services">Services</a><a href="#growth-paths">Growth Paths</a><a href="#intelligence">Intelligence</a><a href="#delivery">Delivery</a><a href="#industries">Industries</a><a href="#faq">FAQ</a><span class="mobile-menu-actions"><a class="button" href="#diagnostic-search" data-event="mobile_menu_find_growth_path_click">Find My Growth Path</a><a class="button button-ghost" href="/services/" ${sourceAttr("mobile-menu") } data-event="mobile_menu_shop_services_click">Shop Services</a></span></nav>
-    <a class="button button-small" href="/services/" ${sourceAttr("header")} data-event="header_shop_services_click">Shop Services</a>
+    <nav id="main-navigation" aria-label="Main navigation"><a href="#services">Services</a><a href="#growth-paths">Growth Paths</a><a href="#intelligence">Intelligence</a><a href="#delivery">Delivery</a><a href="#industries">Industries</a><a href="#faq">FAQ</a></nav>
+    <a class="button button-small" href="/services/" data-event="header_shop_services_click">Shop Services</a>
   </header>
-  <nav class="mobile-sticky-cta" aria-label="Mobile conversion actions"><a class="button" href="#diagnostic-search" data-event="mobile_sticky_find_growth_path_click">Find My Growth Path</a><a class="button button-ghost" href="/services/" ${sourceAttr("mobile-sticky-cta")} data-event="mobile_sticky_shop_services_click">Shop Services</a></nav>
-  <div class="return-context" data-return-context hidden role="status" aria-live="polite"><p>Continue where you left off?</p><button type="button" data-return-action>Return to section</button><button type="button" data-return-dismiss aria-label="Dismiss return prompt">×</button></div>
+  <nav class="mobile-sticky-cta" aria-label="Mobile conversion actions"><a class="button" href="#growth-paths" data-event="mobile_sticky_find_growth_path_click">Find My Growth Path</a><a class="button button-ghost" href="/services/" data-event="mobile_sticky_shop_services_click">Shop Services</a></nav>
   <main id="main-content">
-    <section class="hero" id="hero"><div class="hero-glow"></div><div class="hero-copy"><p class="eyebrow">Growth intelligence · Strategic execution</p><h1>Premium Growth Services for <em>Visibility, Authority, Automation,</em> and Client Conversion.</h1><p class="lede">ZYNE helps ambitious service businesses strengthen visibility, build authority, deploy practical AI systems, and convert more clients through fixed-price strategic services.</p><div class="actions"><a class="button" href="#diagnostic-search" data-event="hero_find_growth_path_click">Find My Growth Path <span>${arrow}</span></a><a class="button button-ghost" href="/services/" ${sourceAttr("hero")} data-event="hero_shop_services_click">Shop Paid Services</a></div><p class="disclosure">Review full service details on ZYNE. Secure checkout is completed through Stan Store.</p></div><div class="hero-mark" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="monogram">Z</div><small>Intelligence<br/>in motion</small></div></section>
+    <section class="hero"><div class="hero-glow"></div><div class="hero-copy"><p class="eyebrow">Growth intelligence · Strategic execution</p><h1>Premium Growth Services for <em>Visibility, Authority, Automation,</em> and Client Conversion.</h1><p class="lede">ZYNE helps ambitious service businesses strengthen visibility, build authority, deploy practical AI systems, and convert more clients through fixed-price strategic services.</p><div class="actions"><a class="button" href="#growth-paths" data-event="hero_find_growth_path_click">Find My Growth Path <span>${arrow}</span></a><a class="button button-ghost" href="/services/" data-event="hero_shop_services_click">Shop Paid Services</a></div><p class="disclosure">Review full service details on ZYNE. Secure checkout is completed through Stan Store.</p></div><div class="hero-mark" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="monogram">Z</div><small>Intelligence<br/>in motion</small></div></section>
     <section class="trust-strip" aria-label="Service assurances">${["Fixed-price services", "Clear deliverables", "Defined timelines", "Secure Stan Store checkout"].map((item, i) => `<div><span>0${i + 1}</span>${item}</div>`).join("")}</section>
-    ${diagnosticSection()}
     <section class="section" id="growth-paths"><div class="section-heading"><div><p class="eyebrow">Start with the constraint</p><h2 aria-label="Choose Your Growth Path">Choose Your <em>Growth Path</em></h2></div><p>Select the area where your business needs stronger visibility, authority, systems, or conversion.</p></div><div class="path-grid">${growthPaths.map(growthPathCard).join("")}</div></section>
     <section class="section products" id="services"><div class="section-heading"><div><p class="eyebrow">Focused offers · Clear scope</p><h2>Start With a <em>Fixed-Price</em> Growth Service</h2></div><p>Choose a focused starting point with defined deliverables, a transparent price, and a clear first-step recommendation.</p></div><div class="product-grid">${products.map(productCard).join("")}</div></section>
-    <section class="split-section section" id="intelligence"><div class="split-intro"><p class="eyebrow">Before execution comes intelligence</p><h2>ZYNE <em>Intelligence</em></h2><p>Strategic reports, audits, and briefings that identify constraints, clarify priorities, and reveal what to build next.</p><a class="button button-ghost" href="/intelligence/" ${sourceAttr("intelligence")}>View Intelligence Products</a></div><div class="service-list">${intelligenceProducts.map(intelligenceLink).join("")}</div></section>
+    <section class="split-section section" id="intelligence"><div class="split-intro"><p class="eyebrow">Before execution comes intelligence</p><h2>ZYNE <em>Intelligence</em></h2><p>Strategic reports, audits, and briefings that identify constraints, clarify priorities, and reveal what to build next.</p><a class="button button-ghost" href="/intelligence/">View Intelligence Products</a></div><div class="service-list">${intelligenceProducts.map(intelligenceLink).join("")}</div></section>
     <section class="section delivery" id="delivery"><div class="section-heading"><div><p class="eyebrow">From strategy to execution</p><h2>ZYNE <em>Delivery</em></h2></div><p>Done-for-you kits and systems for brand presence, websites, AI automation, and client acquisition infrastructure.</p></div><p class="bridge-copy">Intelligence tells you what to build. Delivery helps you build the assets, systems, and pathways.</p><div class="family-grid">${deliveryFamilies.map(deliveryCard).join("")}</div></section>
-    <section class="section process" id="process"><div class="section-heading"><div><p class="eyebrow">A disciplined operating model</p><h2>How ZYNE <em>Works</em></h2></div><p>Five connected stages move the business from diagnosis to stronger conversion.</p></div><div class="process-grid">${[["Diagnose", "Identify visibility, positioning, operational, or conversion constraints through paid diagnostic products."], ["Position", "Clarify message, authority, market angle, and service pathways."], ["Build", "Create brand assets, websites, proof systems, and client-facing infrastructure."], ["Automate", "Deploy AI systems, chatbot frameworks, and workflow automation where appropriate."], ["Convert", "Strengthen the path from attention to trust, referral, inquiry, and purchase."]].map(processCard).join("")}</div></section>
-    <section class="section premium" id="strategic-services"><div class="section-heading"><div><p class="eyebrow">For consequential growth decisions</p><h2>Featured <em>Strategic Services</em></h2></div><p>Higher-value services for businesses ready to resolve structural constraints and build stronger systems.</p></div><div class="premium-grid">${premiumProducts.map(premiumCard).join("")}</div></section>
+    <section class="section process"><div class="section-heading"><div><p class="eyebrow">A disciplined operating model</p><h2>How ZYNE <em>Works</em></h2></div><p>Five connected stages move the business from diagnosis to stronger conversion.</p></div><div class="process-grid">${[["Diagnose", "Identify visibility, positioning, operational, or conversion constraints through paid diagnostic products."], ["Position", "Clarify message, authority, market angle, and service pathways."], ["Build", "Create brand assets, websites, proof systems, and client-facing infrastructure."], ["Automate", "Deploy AI systems, chatbot frameworks, and workflow automation where appropriate."], ["Convert", "Strengthen the path from attention to trust, referral, inquiry, and purchase."]].map(processCard).join("")}</div></section>
+    <section class="section premium"><div class="section-heading"><div><p class="eyebrow">For consequential growth decisions</p><h2>Featured <em>Strategic Services</em></h2></div><p>Higher-value services for businesses ready to resolve structural constraints and build stronger systems.</p></div><div class="premium-grid">${premiumProducts.map(premiumCard).join("")}</div></section>
     <section class="section industries" id="industries"><div class="section-heading"><div><p class="eyebrow">Built for expertise-led growth</p><h2>Service-Based and <em>Growth-Focused</em> Businesses</h2></div><p>Designed for businesses where trust, authority, and a clear buyer journey shape commercial performance.</p></div><div class="industry-grid">${industries.map(industryCard).join("")}</div></section>
     <section class="section faq" id="faq"><div class="section-heading"><div><p class="eyebrow">Clarity before checkout</p><h2>Frequently Asked <em>Questions</em></h2></div></div><div class="faq-list">${faqs.map(faqItem).join("")}</div></section>
-    <section class="final-cta" id="final-cta"><p class="eyebrow">Your next move can be clear</p><h2>Lead with clarity.<br/><em>Execute with confidence.</em></h2><p>Browse fixed-price services for visibility, brand authority, AI systems, websites, and client conversion. Review details on ZYNE, then check out securely through Stan Store.</p><div class="actions"><a class="button" href="/services/" ${sourceAttr("final-cta")} data-event="final_cta_shop_services_click">Shop Paid Services ${arrow}</a><a class="button button-ghost" href="#diagnostic-search" data-event="final_cta_find_growth_path_click">Find My Growth Path</a></div></section>
+    <section class="final-cta"><p class="eyebrow">Your next move can be clear</p><h2>Lead with clarity.<br/><em>Execute with confidence.</em></h2><p>Browse fixed-price services for visibility, brand authority, AI systems, websites, and client conversion. Review details on ZYNE, then check out securely through Stan Store.</p><div class="actions"><a class="button" href="/services/" data-event="final_cta_shop_services_click">Shop Paid Services ${arrow}</a><a class="button button-ghost" href="#growth-paths" data-event="final_cta_find_growth_path_click">Find My Growth Path</a></div></section>
   </main>
-  <footer><div class="footer-brand"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/" ${sourceAttr("footer")}>Visibility</a><a href="/build-my-brand/" ${sourceAttr("footer")}>Brand</a><a href="/improve-my-business/" ${sourceAttr("footer")}>Business</a><a href="/use-ai/" ${sourceAttr("footer")}>AI Systems</a><a href="/convert-more-clients/" ${sourceAttr("footer")}>Conversion</a></div><div><h3>Explore</h3><a href="/services/" ${sourceAttr("footer")}>Services</a><a href="/intelligence/" ${sourceAttr("footer")}>Intelligence</a><a href="/delivery/" ${sourceAttr("footer")}>Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a><a href="/cookie-policy/">Cookie policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
+  <footer><div class="footer-brand"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div><div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
 `;
 
 const featuredServiceList = () => ({
