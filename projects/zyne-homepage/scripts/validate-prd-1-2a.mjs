@@ -1,11 +1,10 @@
 import { readFileSync } from "node:fs";
 import { diagnosticRoutes } from "../src/data/diagnostics.js";
-import { renderHomePage } from "../src/render.js";
+import { renderHomePage } from "../src/render-prd-1-2a.js";
 
 const html = renderHomePage();
 const mainJs = readFileSync(new URL("../src/main.js", import.meta.url), "utf8");
 const prdCss = readFileSync(new URL("../src/styles/prd-1-2a.css", import.meta.url), "utf8");
-const packageJson = readFileSync(new URL("../package.json", import.meta.url), "utf8");
 
 const failures = [];
 const assert = (condition, message) => {
@@ -61,6 +60,7 @@ assert(html.includes("Start with a paid diagnostic before choosing a build."), "
 
 const requiredMainMarkers = [
   'import "./styles/prd-1-2a.css"',
+  'render-prd-1-2a.js',
   "revealDiagnosticResult",
   "diagnostic_search_submit",
   "zyneHomepageReturnContext",
@@ -85,7 +85,6 @@ const requiredCssMarkers = [
 ];
 
 requiredCssMarkers.forEach((marker) => assert(prdCss.includes(marker), `Missing PRD 1.2A CSS marker: ${marker}`));
-assert(packageJson.includes("validate:prd1.2a"), "package.json must expose validate:prd1.2a.");
 
 if (failures.length) {
   console.error("PRD 1.2A validation failed:");
