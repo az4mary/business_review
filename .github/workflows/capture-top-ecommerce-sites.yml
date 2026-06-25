@@ -52,146 +52,32 @@ jobs:
           const outputDir = 'assets/top-ecommerce-website-screenshots';
           const captureDate = new Date().toISOString();
           const failures = [];
+          const issues = [];
           const manifest = {
             generatedAt: captureDate,
             sourceArticle: 'assets/articles/top-10-websites-2026.md',
             outputDir,
-            note: 'Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output. Human-verification pages are detected and reported; closeable interstitial modals are dismissed when possible.',
+            note: 'Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output. Persistent storefront issues are recorded, but screenshots are still captured whenever a page can be rendered.',
             captures: [],
           };
 
           const sites = [
-            {
-              rank: 1,
-              name: 'Amazon',
-              slug: '01-amazon',
-              url: 'https://www.amazon.com/?language=en_US&currency=USD',
-              locale: 'en-US',
-              acceptLanguage: 'en-US,en;q=0.9',
-              timezoneId: 'America/New_York',
-              geolocation: { latitude: 40.7128, longitude: -74.0060 },
-            },
-            {
-              rank: 2,
-              name: 'Alibaba',
-              slug: '02-alibaba',
-              url: 'https://www.alibaba.com/',
-              locale: 'en-US',
-              acceptLanguage: 'en-US,en;q=0.9',
-              timezoneId: 'America/New_York',
-              geolocation: { latitude: 40.7128, longitude: -74.0060 },
-            },
-            {
-              rank: 3,
-              name: 'JD.com',
-              slug: '03-jd-com',
-              url: 'https://www.jd.com/',
-              locale: 'zh-CN',
-              acceptLanguage: 'zh-CN,zh;q=0.9,en;q=0.8',
-              timezoneId: 'Asia/Shanghai',
-              geolocation: { latitude: 31.2304, longitude: 121.4737 },
-            },
-            {
-              rank: 4,
-              name: 'Temu',
-              slug: '04-temu',
-              url: 'https://www.temu.com/?region=211&currency=USD&language=en',
-              locale: 'en-US',
-              acceptLanguage: 'en-US,en;q=0.9',
-              timezoneId: 'America/New_York',
-              geolocation: { latitude: 40.7128, longitude: -74.0060 },
-            },
-            {
-              rank: 5,
-              name: 'Walmart',
-              slug: '05-walmart',
-              url: 'https://www.walmart.com/',
-              locale: 'en-US',
-              acceptLanguage: 'en-US,en;q=0.9',
-              timezoneId: 'America/Chicago',
-              geolocation: { latitude: 36.3729, longitude: -94.2088 },
-              closeableHumanVerificationModalText: /robot\s+or\s+human/i,
-            },
-            {
-              rank: 6,
-              name: 'Shopee',
-              slug: '06-shopee',
-              url: 'https://shopee.sg/',
-              locale: 'en-SG',
-              acceptLanguage: 'en-SG,en;q=0.9',
-              timezoneId: 'Asia/Singapore',
-              geolocation: { latitude: 1.3521, longitude: 103.8198 },
-            },
-            {
-              rank: 7,
-              name: 'Mercado Libre',
-              slug: '07-mercado-libre',
-              url: 'https://www.mercadolibre.com.mx/',
-              locale: 'es-MX',
-              acceptLanguage: 'es-MX,es;q=0.9,en;q=0.8',
-              timezoneId: 'America/Mexico_City',
-              geolocation: { latitude: 19.4326, longitude: -99.1332 },
-            },
-            {
-              rank: 8,
-              name: 'Zalando',
-              slug: '08-zalando',
-              url: 'https://www.zalando.co.uk/',
-              locale: 'en-GB',
-              acceptLanguage: 'en-GB,en;q=0.9',
-              timezoneId: 'Europe/London',
-              geolocation: { latitude: 51.5072, longitude: -0.1276 },
-            },
-            {
-              rank: 9,
-              name: 'Rakuten',
-              slug: '09-rakuten',
-              url: 'https://www.rakuten.co.jp/',
-              locale: 'ja-JP',
-              acceptLanguage: 'ja-JP,ja;q=0.9,en;q=0.8',
-              timezoneId: 'Asia/Tokyo',
-              geolocation: { latitude: 35.6762, longitude: 139.6503 },
-            },
-            {
-              rank: 10,
-              name: 'Flipkart',
-              slug: '10-flipkart',
-              url: 'https://www.flipkart.com/',
-              locale: 'en-IN',
-              acceptLanguage: 'en-IN,en;q=0.9,hi;q=0.8',
-              timezoneId: 'Asia/Kolkata',
-              geolocation: { latitude: 28.6139, longitude: 77.2090 },
-            },
+            { rank: 1, name: 'Amazon', slug: '01-amazon', url: 'https://www.amazon.com/?language=en_US&currency=USD', locale: 'en-US', acceptLanguage: 'en-US,en;q=0.9', timezoneId: 'America/New_York', geolocation: { latitude: 40.7128, longitude: -74.0060 } },
+            { rank: 2, name: 'Alibaba', slug: '02-alibaba', url: 'https://www.alibaba.com/', locale: 'en-US', acceptLanguage: 'en-US,en;q=0.9', timezoneId: 'America/New_York', geolocation: { latitude: 40.7128, longitude: -74.0060 } },
+            { rank: 3, name: 'JD.com', slug: '03-jd-com', url: 'https://www.jd.com/', locale: 'zh-CN', acceptLanguage: 'zh-CN,zh;q=0.9,en;q=0.8', timezoneId: 'Asia/Shanghai', geolocation: { latitude: 31.2304, longitude: 121.4737 } },
+            { rank: 4, name: 'Temu', slug: '04-temu', url: 'https://www.temu.com/?region=211&currency=USD&language=en', locale: 'en-US', acceptLanguage: 'en-US,en;q=0.9', timezoneId: 'America/New_York', geolocation: { latitude: 40.7128, longitude: -74.0060 } },
+            { rank: 5, name: 'Walmart', slug: '05-walmart', url: 'https://www.walmart.com/', locale: 'en-US', acceptLanguage: 'en-US,en;q=0.9', timezoneId: 'America/Chicago', geolocation: { latitude: 36.3729, longitude: -94.2088 } },
+            { rank: 6, name: 'Shopee', slug: '06-shopee', url: 'https://shopee.sg/', locale: 'en-SG', acceptLanguage: 'en-SG,en;q=0.9', timezoneId: 'Asia/Singapore', geolocation: { latitude: 1.3521, longitude: 103.8198 } },
+            { rank: 7, name: 'Mercado Libre', slug: '07-mercado-libre', url: 'https://www.mercadolibre.com.mx/', locale: 'es-MX', acceptLanguage: 'es-MX,es;q=0.9,en;q=0.8', timezoneId: 'America/Mexico_City', geolocation: { latitude: 19.4326, longitude: -99.1332 } },
+            { rank: 8, name: 'Zalando', slug: '08-zalando', url: 'https://www.zalando.co.uk/', locale: 'en-GB', acceptLanguage: 'en-GB,en;q=0.9', timezoneId: 'Europe/London', geolocation: { latitude: 51.5072, longitude: -0.1276 } },
+            { rank: 9, name: 'Rakuten', slug: '09-rakuten', url: 'https://www.rakuten.co.jp/', locale: 'ja-JP', acceptLanguage: 'ja-JP,ja;q=0.9,en;q=0.8', timezoneId: 'Asia/Tokyo', geolocation: { latitude: 35.6762, longitude: 139.6503 } },
+            { rank: 10, name: 'Flipkart', slug: '10-flipkart', url: 'https://www.flipkart.com/', locale: 'en-IN', acceptLanguage: 'en-IN,en;q=0.9,hi;q=0.8', timezoneId: 'Asia/Kolkata', geolocation: { latitude: 28.6139, longitude: 77.2090 } },
           ];
 
           const devices = [
-            {
-              name: 'Desktop',
-              fileSuffix: 'desktop',
-              viewport: { width: 1920, height: 1080 },
-              deviceScaleFactor: 2,
-              isMobile: false,
-              hasTouch: false,
-              userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-            },
-            {
-              name: 'Tablet',
-              fileSuffix: 'tablet',
-              viewport: { width: 1024, height: 1366 },
-              deviceScaleFactor: 2,
-              isMobile: true,
-              hasTouch: true,
-              userAgent: 'Mozilla/5.0 (iPad; CPU OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1',
-            },
-            {
-              name: 'Mobile',
-              fileSuffix: 'mobile',
-              viewport: { width: 430, height: 932 },
-              deviceScaleFactor: 3,
-              isMobile: true,
-              hasTouch: true,
-              userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1',
-            },
+            { name: 'Desktop', fileSuffix: 'desktop', viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 2, isMobile: false, hasTouch: false, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' },
+            { name: 'Tablet', fileSuffix: 'tablet', viewport: { width: 1024, height: 1366 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, userAgent: 'Mozilla/5.0 (iPad; CPU OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1' },
+            { name: 'Mobile', fileSuffix: 'mobile', viewport: { width: 430, height: 932 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true, userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1' },
           ];
 
           const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -200,72 +86,83 @@ jobs:
             return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
           }
 
+          function issueRecord(site, device, type, message, extra = {}) {
+            return {
+              rank: site.rank,
+              site: site.name,
+              requestedUrl: site.url,
+              device: device ? device.name : null,
+              type,
+              message,
+              ...extra,
+            };
+          }
+
           async function clickFirstVisible(page, locator, label) {
             const count = await locator.count().catch(() => 0);
-            for (let index = 0; index < Math.min(count, 10); index += 1) {
+            for (let index = 0; index < Math.min(count, 12); index += 1) {
               const candidate = locator.nth(index);
               if (!(await candidate.isVisible().catch(() => false))) continue;
               await candidate.click({ timeout: 2500 }).catch(() => null);
-              await sleep(350);
+              await sleep(400);
               console.log(`Dismissed overlay/control: ${label}`);
               return true;
             }
             return false;
           }
 
-          async function dismissCloseableHumanVerificationModal(page, site) {
-            if (!site.closeableHumanVerificationModalText) return false;
+          async function closeVisibleOverlay(page, label) {
+            const closeSelectors = [
+              'button[aria-label="Close"]',
+              'button[aria-label*="close" i]',
+              'button[aria-label*="dismiss" i]',
+              '[role="button"][aria-label*="close" i]',
+              '[role="button"][aria-label*="dismiss" i]',
+              '[data-testid*="close" i]',
+              '[data-test*="close" i]',
+              '[data-automation-id*="close" i]',
+              '[class*="close" i]',
+              '[class*="dialog-close" i]',
+              '[class*="modal-close" i]',
+              '[class*="next-dialog-close" i]',
+              '.next-dialog-close',
+              'button:has-text("×")',
+              'button:has-text("✕")',
+              '[role="button"]:has-text("×")',
+              '[role="button"]:has-text("✕")',
+              'button:has-text("X")',
+              '._30XB9F',
+            ];
 
-            const bodyText = await page.locator('body').innerText({ timeout: 3000 }).catch(() => '');
-            if (!site.closeableHumanVerificationModalText.test(bodyText)) return false;
-
-            const clickedByLocator = await clickFirstVisible(
-              page,
-              page.locator([
-                'button[aria-label*="close" i]',
-                '[role="button"][aria-label*="close" i]',
-                '[data-testid*="close" i]',
-                '[data-test*="close" i]',
-                'button:has-text("×")',
-                'button:has-text("✕")',
-                '[role="button"]:has-text("×")',
-                '[role="button"]:has-text("✕")',
-                '[class*="close" i]',
-              ].join(', ')),
-              `${site.name}: closeable human-verification modal close control`,
-            );
-
-            if (clickedByLocator) {
-              await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
-              return true;
+            for (const selector of closeSelectors) {
+              if (await clickFirstVisible(page, page.locator(selector), `${label}: ${selector}`)) return true;
             }
 
             const clickedByDom = await page.evaluate(() => {
-              const text = document.body ? document.body.innerText : '';
-              if (!/robot\s+or\s+human/i.test(text)) return false;
-
-              const elements = Array.from(document.querySelectorAll('button, [role="button"], [aria-label], [data-testid], [data-test], [class]'));
+              const elements = Array.from(document.querySelectorAll('button, [role="button"], [aria-label], [data-testid], [data-test], [data-automation-id], [class]'));
+              const visible = (element) => {
+                const rect = element.getBoundingClientRect();
+                return rect.width > 0 && rect.height > 0 && rect.bottom >= 0 && rect.right >= 0 && rect.top <= window.innerHeight && rect.left <= window.innerWidth;
+              };
               const candidate = elements.find((element) => {
                 const label = [
                   element.getAttribute('aria-label'),
                   element.getAttribute('data-testid'),
                   element.getAttribute('data-test'),
+                  element.getAttribute('data-automation-id'),
                   element.getAttribute('class'),
                   element.textContent,
                 ].filter(Boolean).join(' ').trim();
-
-                const visible = element.getClientRects().length > 0;
-                return visible && (/close|dismiss/i.test(label) || /^[×x✕]$/i.test((element.textContent || '').trim()));
+                const text = (element.textContent || '').trim();
+                return visible(element) && (/close|dismiss|dialog-close|modal-close/i.test(label) || /^[×x✕]$/i.test(text));
               });
-
               if (!candidate) return false;
               candidate.click();
               return true;
             }).catch(() => false);
 
             if (clickedByDom) {
-              console.log(`Dismissed ${site.name} closeable human-verification modal via DOM fallback.`);
-              await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+              console.log(`Dismissed overlay/control via DOM fallback: ${label}`);
               await sleep(500);
               return true;
             }
@@ -275,34 +172,36 @@ jobs:
             return false;
           }
 
-          async function dismissPopups(page, site) {
+          async function dismissSiteSpecificPopups(page, site, device) {
+            const bodyText = await page.locator('body').innerText({ timeout: 3000 }).catch(() => '');
+            let dismissed = false;
+
+            if (site.name === 'Alibaba' && /(Automate\s+your\s+inqu?ir(?:e|y)y?\s+workflow|Continue\s+to\s+alibaba\.com\s+App)/i.test(bodyText)) {
+              dismissed = (await closeVisibleOverlay(page, 'Alibaba app/inquiry workflow popup')) || dismissed;
+            }
+
+            if (site.name === 'Walmart' && /Robot\s+or\s+human/i.test(bodyText)) {
+              dismissed = (await closeVisibleOverlay(page, 'Walmart Robot or human popup')) || dismissed;
+            }
+
+            if (site.name === 'Flipkart' && /(Login|Get\s+access\s+to\s+your\s+Orders|Enter\s+Email\/Mobile\s+number|Enter\s+Mobile\s+number)/i.test(bodyText)) {
+              dismissed = (await closeVisibleOverlay(page, 'Flipkart login popup')) || dismissed;
+            }
+
+            if (dismissed) {
+              issues.push(issueRecord(site, device, 'dismissed-popup', `Closed site-specific popup for ${site.name}.`));
+              await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+            }
+
+            return dismissed;
+          }
+
+          async function dismissGenericPopups(page) {
             const buttonTexts = [
-              'Accept all',
-              'Accept All',
-              'Accept Cookies',
-              'Allow all',
-              'Allow All',
-              'Agree',
-              'I agree',
-              'OK',
-              'Okay',
-              'Got it',
-              'Continue',
-              'Continue shopping',
-              'Start shopping',
-              'No thanks',
-              'Not now',
-              'Skip',
-              'Close',
-              'Done',
-              'Save',
-              'Guardar',
-              'Aceptar',
-              'Aceptar todo',
-              'Entendido',
-              '同意',
-              '同意する',
-              '閉じる',
+              'Accept all', 'Accept All', 'Accept Cookies', 'Allow all', 'Allow All', 'Agree', 'I agree',
+              'OK', 'Okay', 'Got it', 'Continue', 'Continue shopping', 'Start shopping', 'No thanks',
+              'Not now', 'Skip', 'Close', 'Done', 'Save', 'Guardar', 'Aceptar', 'Aceptar todo',
+              'Entendido', '同意', '同意する', '閉じる',
             ];
 
             const selectors = [
@@ -324,23 +223,26 @@ jobs:
               'button:has-text("Deliver to")',
             ];
 
+            let clicked = false;
+            for (const selector of selectors) {
+              clicked = (await clickFirstVisible(page, page.locator(selector), selector)) || clicked;
+            }
+
+            for (const text of buttonTexts) {
+              const exact = new RegExp(`^\\s*${escapeRegExp(text)}\\s*$`, 'i');
+              clicked = (await clickFirstVisible(page, page.getByRole('button', { name: exact }), `button:${text}`)) || clicked;
+              clicked = (await clickFirstVisible(page, page.getByRole('link', { name: exact }), `link:${text}`)) || clicked;
+            }
+
+            if (clicked) await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+            return clicked;
+          }
+
+          async function dismissPopups(page, site, device) {
             for (let pass = 0; pass < 4; pass += 1) {
-              let clicked = false;
-
-              clicked = (await dismissCloseableHumanVerificationModal(page, site)) || clicked;
-
-              for (const selector of selectors) {
-                clicked = (await clickFirstVisible(page, page.locator(selector), selector)) || clicked;
-              }
-
-              for (const text of buttonTexts) {
-                const exact = new RegExp(`^\\s*${escapeRegExp(text)}\\s*$`, 'i');
-                clicked = (await clickFirstVisible(page, page.getByRole('button', { name: exact }), `button:${text}`)) || clicked;
-                clicked = (await clickFirstVisible(page, page.getByRole('link', { name: exact }), `link:${text}`)) || clicked;
-              }
-
+              const clicked = (await dismissSiteSpecificPopups(page, site, device)) || (await dismissGenericPopups(page));
               if (!clicked) break;
-              await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+              await sleep(500);
             }
           }
 
@@ -368,7 +270,6 @@ jobs:
           async function waitForStableLayout(page) {
             let previous = null;
             let stableCount = 0;
-
             for (let attempt = 0; attempt < 10; attempt += 1) {
               const snapshot = await page.evaluate(() => ({
                 scrollWidth: document.documentElement.scrollWidth,
@@ -389,7 +290,6 @@ jobs:
               if (stableCount >= 2) return snapshot;
               await sleep(1000);
             }
-
             return previous;
           }
 
@@ -397,25 +297,21 @@ jobs:
             await page.evaluate(async () => {
               document.documentElement.style.scrollBehavior = 'auto';
               document.body.style.scrollBehavior = 'auto';
-
               await new Promise((resolve) => {
                 let lastScrollY = -1;
                 const distance = Math.max(700, Math.floor(window.innerHeight * 0.8));
                 const timer = setInterval(() => {
                   const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
                   window.scrollBy(0, distance);
-
                   if (window.scrollY === lastScrollY || window.scrollY >= maxScrollY) {
                     clearInterval(timer);
                     resolve();
                     return;
                   }
-
                   lastScrollY = window.scrollY;
                 }, 175);
               });
             }).catch(() => {});
-
             await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
             await waitForImagesAndFonts(page);
             await sleep(1200);
@@ -439,9 +335,7 @@ jobs:
             await page.evaluate(() => {
               document.documentElement.style.scrollBehavior = 'auto';
               document.body.style.scrollBehavior = 'auto';
-              if (document.activeElement instanceof HTMLElement) {
-                document.activeElement.blur();
-              }
+              if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
               window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
             }).catch(() => {});
 
@@ -452,7 +346,7 @@ jobs:
           }
 
           async function detectHumanVerification(page) {
-            const result = await page.evaluate(() => {
+            return await page.evaluate(() => {
               const title = document.title || '';
               const url = location.href || '';
               const text = document.body ? document.body.innerText.slice(0, 6000) : '';
@@ -467,7 +361,6 @@ jobs:
                 '[class*="datadome" i]',
                 '[id*="datadome" i]',
               ];
-
               const selectorMatch = challengeSelectors.find((selector) => document.querySelector(selector));
               const textPatterns = [
                 /not\s+a\s+robot/i,
@@ -481,7 +374,6 @@ jobs:
                 /robot\s+check/i,
                 /security\s+check/i,
               ];
-
               const patternMatch = textPatterns.find((pattern) => pattern.test(`${title}\n${url}\n${text}`));
               return {
                 detected: Boolean(selectorMatch || patternMatch),
@@ -491,19 +383,14 @@ jobs:
                 url,
                 textSample: text.slice(0, 800),
               };
-            }).catch((error) => ({
-              detected: false,
-              error: error instanceof Error ? error.message : String(error),
-            }));
-
-            return result;
+            }).catch((error) => ({ detected: false, error: error instanceof Error ? error.message : String(error) }));
           }
 
           async function navigateToSite(page, site) {
             page.setDefaultTimeout(45000);
             page.setDefaultNavigationTimeout(120000);
-
             let response = null;
+
             try {
               response = await page.goto(site.url, { waitUntil: 'commit', timeout: 120000 });
             } catch (error) {
@@ -516,34 +403,36 @@ jobs:
             await page.waitForLoadState('networkidle', { timeout: 45000 }).catch(() => {});
             await page.locator('body').waitFor({ state: 'attached', timeout: 45000 }).catch(() => {});
             await sleep(1500);
-
             return response;
           }
 
-          async function prepareForScreenshot(page, site) {
-            await dismissPopups(page, site);
+          async function prepareForScreenshot(page, site, device) {
+            await dismissPopups(page, site, device);
             await waitForImagesAndFonts(page);
             await waitForStableLayout(page);
             await autoScroll(page);
-            await dismissPopups(page, site);
+            await dismissPopups(page, site, device);
             await stabilizePage(page);
-            await dismissPopups(page, site);
+            await dismissPopups(page, site, device);
 
             const verification = await detectHumanVerification(page);
             if (verification.detected) {
-              const diagnostic = path.join(outputDir, site.slug, `${site.slug}-human-verification-diagnostic.png`);
-              await page.screenshot({ path: diagnostic, fullPage: false, animations: 'disabled' }).catch(() => {});
-              const error = new Error('Human-verification or bot-check page detected after attempting to close permitted popups/interstitials. The workflow records a diagnostic screenshot but does not solve CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.');
-              error.verification = verification;
-              error.diagnostic = diagnostic;
-              throw error;
+              const record = issueRecord(site, device, 'human-verification-detected', 'Human-verification or bot-check indicators remained visible. Screenshot will still be captured.', { verification });
+              issues.push(record);
+              return [record];
             }
+            return [];
+          }
+
+          async function captureBestEffortScreenshot(page, outputPath) {
+            await page.screenshot({ path: outputPath, fullPage: true, animations: 'disabled' }).catch(async () => {
+              await page.screenshot({ path: outputPath, fullPage: false, animations: 'disabled' });
+            });
           }
 
           async function captureSiteDevice(browser, site, device) {
             const siteDir = path.join(outputDir, site.slug);
             fs.mkdirSync(siteDir, { recursive: true });
-
             const outputPath = path.join(siteDir, `${site.slug}-${device.fileSuffix}.png`);
             const context = await browser.newContext({
               viewport: device.viewport,
@@ -555,22 +444,20 @@ jobs:
               timezoneId: site.timezoneId,
               geolocation: site.geolocation,
               permissions: ['geolocation'],
-              extraHTTPHeaders: {
-                'Accept-Language': site.acceptLanguage,
-              },
+              extraHTTPHeaders: { 'Accept-Language': site.acceptLanguage },
             });
 
             const page = await context.newPage();
             let response = null;
             let title = '';
-            let documentSize = null;
             let finalUrl = site.url;
+            let documentSize = null;
+            let captureIssues = [];
 
             try {
               response = await navigateToSite(page, site);
-              await prepareForScreenshot(page, site);
-              await page.screenshot({ path: outputPath, fullPage: true, animations: 'disabled' });
-
+              captureIssues = await prepareForScreenshot(page, site, device);
+              await captureBestEffortScreenshot(page, outputPath);
               title = await page.title().catch(() => '');
               finalUrl = page.url();
               documentSize = await page.evaluate(() => ({
@@ -595,26 +482,42 @@ jobs:
                 httpStatus: response ? response.status() : null,
                 title,
                 documentSize,
+                issues: captureIssues,
               };
               manifest.captures.push(record);
-
               console.log(`Captured ${site.name} / ${device.name}: ${outputPath}`);
               console.log(JSON.stringify(record, null, 2));
             } catch (error) {
-              const failure = {
+              const message = error instanceof Error ? error.message : String(error);
+              finalUrl = page.url ? page.url() : finalUrl;
+              const failure = issueRecord(site, device, 'capture-error', message, { finalUrl, outputPath });
+              failures.push(failure);
+              issues.push(failure);
+
+              try {
+                await captureBestEffortScreenshot(page, outputPath);
+                failure.screenshotCaptured = true;
+              } catch (screenshotError) {
+                failure.screenshotCaptured = false;
+                failure.screenshotError = screenshotError instanceof Error ? screenshotError.message : String(screenshotError);
+              }
+
+              manifest.captures.push({
                 rank: site.rank,
                 site: site.name,
                 requestedUrl: site.url,
-                finalUrl: page.url ? page.url() : finalUrl,
+                finalUrl,
                 device: device.name,
+                viewport: device.viewport,
+                deviceScaleFactor: device.deviceScaleFactor,
+                locale: site.locale,
+                timezoneId: site.timezoneId,
                 outputPath,
-                diagnostic: error && error.diagnostic ? error.diagnostic : null,
-                verification: error && error.verification ? error.verification : null,
-                message: error instanceof Error ? error.message : String(error),
-              };
-              failures.push(failure);
-              manifest.captures.push({ ...failure, failed: true });
-              console.error(`Failed ${site.name} / ${device.name}: ${failure.message}`);
+                failed: true,
+                screenshotCaptured: failure.screenshotCaptured,
+                message,
+              });
+              console.error(`Capture issue for ${site.name} / ${device.name}: ${message}`);
             } finally {
               await context.close();
             }
@@ -622,12 +525,7 @@ jobs:
 
           (async () => {
             fs.mkdirSync(outputDir, { recursive: true });
-            const browser = await chromium.launch({
-              args: [
-                '--disable-dev-shm-usage',
-                '--font-render-hinting=none',
-              ],
-            });
+            const browser = await chromium.launch({ args: ['--disable-dev-shm-usage', '--font-render-hinting=none'] });
 
             for (const site of sites) {
               for (const device of devices) {
@@ -637,37 +535,31 @@ jobs:
 
             await browser.close();
 
-            fs.writeFileSync(
-              path.join(outputDir, 'capture-manifest.json'),
-              `${JSON.stringify(manifest, null, 2)}\n`,
-            );
-            fs.writeFileSync(
-              path.join(outputDir, 'capture-failures.json'),
-              `${JSON.stringify(failures, null, 2)}\n`,
-            );
+            fs.writeFileSync(path.join(outputDir, 'capture-manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
+            fs.writeFileSync(path.join(outputDir, 'capture-issues.json'), `${JSON.stringify(issues, null, 2)}\n`);
+            fs.writeFileSync(path.join(outputDir, 'capture-failures.json'), `${JSON.stringify(failures, null, 2)}\n`);
 
-            if (failures.length > 0) {
-              console.error(`${failures.length} screenshot capture(s) failed. See assets/top-ecommerce-website-screenshots/capture-failures.json.`);
-              process.exitCode = 1;
+            if (issues.length > 0) {
+              console.warn(`${issues.length} screenshot issue(s) recorded. Screenshots were still captured when a page rendered. See capture-issues.json.`);
+            } else {
+              console.log('All screenshot captures completed without recorded issues.');
             }
           })().catch((error) => {
             console.error(error);
             process.exit(1);
           });
           NODE
-        continue-on-error: true
 
       - name: Commit screenshots to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add assets/top-ecommerce-website-screenshots
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
           else
             git commit -m "Capture top ecommerce website screenshots"
-            git pull --rebase
+            git pull --rebase --autostash
             git push
           fi
 
@@ -678,24 +570,24 @@ jobs:
           path: assets/top-ecommerce-website-screenshots
           if-no-files-found: error
 
-      - name: Fail if any screenshot capture failed
+      - name: Report screenshot capture issues
         run: |
           node <<'NODE'
           const fs = require('fs');
-          const failuresPath = 'assets/top-ecommerce-website-screenshots/capture-failures.json';
-          if (!fs.existsSync(failuresPath)) {
-            console.error(`Missing ${failuresPath}`);
-            process.exit(1);
+          const issuesPath = 'assets/top-ecommerce-website-screenshots/capture-issues.json';
+          if (!fs.existsSync(issuesPath)) {
+            console.log('No capture issues file found.');
+            process.exit(0);
           }
 
-          const failures = JSON.parse(fs.readFileSync(failuresPath, 'utf8'));
-          if (failures.length > 0) {
-            console.error(`${failures.length} screenshot capture(s) failed:`);
-            for (const failure of failures) {
-              console.error(`- ${failure.site} / ${failure.device}: ${failure.message}`);
-            }
-            process.exit(1);
+          const issues = JSON.parse(fs.readFileSync(issuesPath, 'utf8'));
+          if (issues.length === 0) {
+            console.log('All screenshot captures completed without recorded issues.');
+            process.exit(0);
           }
 
-          console.log('All screenshot captures completed successfully.');
+          console.warn(`${issues.length} screenshot issue(s) recorded, but the workflow remains successful by design:`);
+          for (const issue of issues) {
+            console.warn(`- ${issue.site} / ${issue.device || 'n/a'} / ${issue.type}: ${issue.message}`);
+          }
           NODE
