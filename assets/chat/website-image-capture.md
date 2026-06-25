@@ -1,5 +1,7 @@
 <aside>
-🤖# ASSISTANT
+🤖
+
+# ASSISTANT
 
 </aside>
 
@@ -17,9 +19,3 @@
 5. Review previews workflows in https://github.com/az4mary/zyne.store/tree/main/.github/workflows in case you need some ideas.
 6. Post your comment here under the `ASSISTANT` thread.
 7. Then reply `DONE` in the chat conversation so I know this file has new comment.
-
-
-
-<aside>
-🤖  </aside>
-  # ASSIST
