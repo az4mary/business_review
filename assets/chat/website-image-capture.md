@@ -14,11 +14,8 @@
 
 </aside>
 
-1. Amazon - Click the button below to continue shopping on all devices.
-2. Alibaba - Close pop-up window `Automate your inquirey workflow` , shows Continue to alibaba.com App on both Mobile and Tablet.
-3.  Temu - Check your connection and try again error message appears on Mobile and tablet, Close the google sign-in pop-up window on Tablet.
-4. Walmart - Click the x to close the Robot or human pop-up window for walmart.
-5. Flipkart - Click the x button to close the Login pop-up window on Desktop and tablet.
+1. Check the logs - https://github.com/az4mary/zyne.store/blob/main/.github/workflows/github-actions-job-log.md
+2. Walmart - Click the x to close the Robot or human pop-up window for walmart.
 
 ---
 
