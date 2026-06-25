@@ -1,578 +1,677 @@
 {
-  "generatedAt": "2026-06-25T08:51:59.282Z",
+  "generatedAt": "2026-06-25T09:19:35.367Z",
   "sourceArticle": "assets/articles/top-10-websites-2026.md",
   "outputDir": "assets/top-ecommerce-website-screenshots",
-  "note": "Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output.",
+  "note": "Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output. Human-verification pages are detected and reported, not bypassed.",
   "captures": [
     {
       "rank": 1,
       "site": "Amazon",
-      "url": "https://www.amazon.com/",
+      "requestedUrl": "https://www.amazon.com/?language=en_US&currency=USD",
+      "finalUrl": "https://www.amazon.com/?language=en_US&currency=USD",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/01-amazon/01-amazon-desktop.png",
       "httpStatus": 200,
-      "title": "Amazon.com",
+      "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
         "width": 1920,
-        "height": 1080,
-        "scrollY": 0
+        "height": 4478,
+        "scrollY": 0,
+        "imageCount": 229,
+        "completeImageCount": 229
       }
     },
     {
       "rank": 1,
       "site": "Amazon",
-      "url": "https://www.amazon.com/",
+      "requestedUrl": "https://www.amazon.com/?language=en_US&currency=USD",
+      "finalUrl": "https://www.amazon.com/?language=en_US&currency=USD",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/01-amazon/01-amazon-tablet.png",
       "httpStatus": 200,
-      "title": "Amazon.com",
+      "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
         "width": 1024,
-        "height": 1366,
-        "scrollY": 0
+        "height": 4478,
+        "scrollY": 0,
+        "imageCount": 229,
+        "completeImageCount": 229
       }
     },
     {
       "rank": 1,
       "site": "Amazon",
-      "url": "https://www.amazon.com/",
+      "requestedUrl": "https://www.amazon.com/?language=en_US&currency=USD",
+      "finalUrl": "https://www.amazon.com/?language=en_US&currency=USD",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/01-amazon/01-amazon-mobile.png",
       "httpStatus": 200,
-      "title": "Amazon.com",
+      "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
-        "width": 430,
-        "height": 932,
-        "scrollY": 0
+        "width": 1000,
+        "height": 4478,
+        "scrollY": 0,
+        "imageCount": 229,
+        "completeImageCount": 229
       }
     },
     {
       "rank": 2,
       "site": "Alibaba",
-      "url": "https://www.alibaba.com/",
+      "requestedUrl": "https://www.alibaba.com/",
+      "finalUrl": "https://www.alibaba.com/",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/02-alibaba/02-alibaba-desktop.png",
       "httpStatus": 200,
       "title": "Alibaba.com: Manufacturers, Suppliers, Exporters & Importers from the world's largest online B2B marketplace",
       "documentSize": {
         "width": 1920,
         "height": 9875,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 811,
+        "completeImageCount": 729
       }
     },
     {
       "rank": 2,
       "site": "Alibaba",
-      "url": "https://www.alibaba.com/",
+      "requestedUrl": "https://www.alibaba.com/",
+      "finalUrl": "https://www.alibaba.com/",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/02-alibaba/02-alibaba-tablet.png",
       "httpStatus": 200,
       "title": "Alibaba.com: Manufacturers, Suppliers, Exporters & Importers from the world's largest online B2B marketplace",
       "documentSize": {
         "width": 1024,
         "height": 7443,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 388,
+        "completeImageCount": 388
       }
     },
     {
       "rank": 2,
       "site": "Alibaba",
-      "url": "https://www.alibaba.com/",
+      "requestedUrl": "https://www.alibaba.com/",
+      "finalUrl": "https://www.alibaba.com/",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/02-alibaba/02-alibaba-mobile.png",
       "httpStatus": 200,
       "title": "Alibaba.com: Manufacturers, Suppliers, Exporters & Importers from the world's largest online B2B marketplace",
       "documentSize": {
         "width": 430,
         "height": 11729,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 388,
+        "completeImageCount": 388
       }
     },
     {
       "rank": 3,
       "site": "JD.com",
-      "url": "https://www.jd.com/",
+      "requestedUrl": "https://www.jd.com/",
+      "finalUrl": "https://corporate.jd.com/home",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "zh-CN",
+      "timezoneId": "Asia/Shanghai",
       "outputPath": "assets/top-ecommerce-website-screenshots/03-jd-com/03-jd-com-desktop.png",
       "httpStatus": 200,
       "title": "JD.com, Inc.",
       "documentSize": {
         "width": 1920,
         "height": 1430,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 6,
+        "completeImageCount": 6
       }
     },
     {
       "rank": 3,
       "site": "JD.com",
-      "url": "https://www.jd.com/",
+      "requestedUrl": "https://www.jd.com/",
+      "finalUrl": "https://corporate.jd.com/home",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "zh-CN",
+      "timezoneId": "Asia/Shanghai",
       "outputPath": "assets/top-ecommerce-website-screenshots/03-jd-com/03-jd-com-tablet.png",
       "httpStatus": 200,
       "title": "JD.com, Inc.",
       "documentSize": {
         "width": 1024,
         "height": 1430,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 6,
+        "completeImageCount": 6
       }
     },
     {
       "rank": 3,
       "site": "JD.com",
-      "url": "https://www.jd.com/",
+      "requestedUrl": "https://www.jd.com/",
+      "finalUrl": "https://corporate.jd.com/home",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "zh-CN",
+      "timezoneId": "Asia/Shanghai",
       "outputPath": "assets/top-ecommerce-website-screenshots/03-jd-com/03-jd-com-mobile.png",
       "httpStatus": 200,
       "title": "JD.com, Inc.",
       "documentSize": {
         "width": 430,
-        "height": 2109,
-        "scrollY": 0
+        "height": 2089,
+        "scrollY": 0,
+        "imageCount": 6,
+        "completeImageCount": 6
       }
     },
     {
       "rank": 4,
       "site": "Temu",
-      "url": "https://www.temu.com/",
+      "requestedUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
+      "finalUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/04-temu/04-temu-desktop.png",
       "httpStatus": 200,
       "title": "Temu | Explore the Latest Clothing, Beauty, Home, Jewelry & More",
       "documentSize": {
         "width": 1920,
         "height": 5286,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 158,
+        "completeImageCount": 158
       }
     },
     {
       "rank": 4,
       "site": "Temu",
-      "url": "https://www.temu.com/",
+      "requestedUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
+      "finalUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/04-temu/04-temu-tablet.png",
       "httpStatus": 200,
       "title": "Temu | Explore the Latest Clothing, Beauty, Home, Jewelry & More",
       "documentSize": {
         "width": 1028,
         "height": 5887,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 158,
+        "completeImageCount": 158
       }
     },
     {
       "rank": 4,
       "site": "Temu",
-      "url": "https://www.temu.com/",
+      "requestedUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
+      "finalUrl": "https://www.temu.com/?region=211&currency=USD&language=en",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/New_York",
       "outputPath": "assets/top-ecommerce-website-screenshots/04-temu/04-temu-mobile.png",
       "httpStatus": 200,
       "title": "Temu | Explore the Latest Clothing, Beauty, Home, Jewelry & More",
       "documentSize": {
         "width": 430,
-        "height": 5073,
-        "scrollY": 0
+        "height": 5022,
+        "scrollY": 0,
+        "imageCount": 78,
+        "completeImageCount": 78
       }
     },
     {
       "rank": 5,
       "site": "Walmart",
-      "url": "https://www.walmart.com/",
+      "requestedUrl": "https://www.walmart.com/",
+      "finalUrl": "https://www.walmart.com/",
       "device": "Desktop",
-      "viewport": {
-        "width": 1920,
-        "height": 1080
-      },
-      "deviceScaleFactor": 2,
       "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-desktop.png",
-      "httpStatus": 200,
-      "title": "Walmart | Save Money. Live better.",
-      "documentSize": {
-        "width": 1920,
-        "height": 5108,
-        "scrollY": 0
-      }
+      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
+      "verification": {
+        "detected": true,
+        "selectorMatch": "[id*=\"captcha\" i]",
+        "patternMatch": null,
+        "title": "Walmart | Save Money. Live better.",
+        "url": "https://www.walmart.com/",
+        "textSample": "Skip to Main Content\nDepartments\nServices\nReorder\nMy Items\nSign In\nAccount\n$0.00\nHow do you want your items?\nWalmart | Save Money. Live better.\n\nBoom! Up to 50% off Deals is on.\n\nShop Deals\nShop Deals\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nShop all Deals & more\nUp to 50% off\nView all\n(6 pack) Folgers Half Caff Medium Roast Coffee, 22.6 oz Canister\nDeal\n$68.40\ncurrent price $68.40\nMore options from $14.96\n(6 pack) Folgers Half Caff Medium Roast Coffee, 22.6 oz Canister\nAdd\nMountain Dew Kickstart Flavored Juice Drink Energizing Orange Citrus, 12 pack, 16 fl oz cans\nDeal\n$13.50\ncurrent price $13.50, Was $19.29\n$19.29\nMountain Dew Kickstart Flavored Juice Drink Energizing Orange Citrus, 12 pack, 16 fl oz cans\nOptions\nEnergizer MAX (8 pack), Triple A Al"
+      },
+      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
+      "failed": true
     },
     {
       "rank": 5,
       "site": "Walmart",
-      "url": "https://www.walmart.com/",
+      "requestedUrl": "https://www.walmart.com/",
+      "finalUrl": "https://www.walmart.com/",
       "device": "Tablet",
-      "viewport": {
-        "width": 1024,
-        "height": 1366
-      },
-      "deviceScaleFactor": 2,
       "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-tablet.png",
-      "httpStatus": 200,
-      "title": "Walmart | Save Money. Live better.",
-      "documentSize": {
-        "width": 1024,
-        "height": 6224,
-        "scrollY": 0
-      }
+      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
+      "verification": {
+        "detected": true,
+        "selectorMatch": "[id*=\"captcha\" i]",
+        "patternMatch": null,
+        "title": "Walmart | Save Money. Live better.",
+        "url": "https://www.walmart.com/",
+        "textSample": "Skip to Main Content\nPickup or delivery?\nPhoenix, 85036\n•\nPhoenix E Thomas Rd Supercenter\nNow available!Ship to another country\nPhoenix, 85036\n•\nPhoenix E Thomas Rd Supercenter\nReorder\nMy Items\nSign In\nAccount\n$0.00\nDepartments\nServices\nDeals & More\n4th of July\nGet it Fast\nPharmacy\nNew & Trending\nWalmart+\nMore\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n30\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nDeals on premium beauty\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\nBeauty deals & more\nHousehold Essentials Deals & "
+      },
+      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
+      "failed": true
     },
     {
       "rank": 5,
       "site": "Walmart",
-      "url": "https://www.walmart.com/",
+      "requestedUrl": "https://www.walmart.com/",
+      "finalUrl": "https://www.walmart.com/",
       "device": "Mobile",
-      "viewport": {
-        "width": 430,
-        "height": 932
-      },
-      "deviceScaleFactor": 3,
       "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-mobile.png",
-      "httpStatus": 200,
-      "title": "Walmart | Save Money. Live better.",
-      "documentSize": {
-        "width": 430,
-        "height": 4387,
-        "scrollY": 0
-      }
+      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
+      "verification": {
+        "detected": true,
+        "selectorMatch": "[id*=\"captcha\" i]",
+        "patternMatch": null,
+        "title": "Walmart | Save Money. Live better.",
+        "url": "https://www.walmart.com/",
+        "textSample": "Skip to Main Content\nCancel\n$0.00\nPickup or delivery?\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n40\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nUp to 25% off computers\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\nBeauty deals & more\nHousehold Essentials Deals & More\nTech deals & more\nToys deals & more\nHome deals & more\nFashion deals & more\n\nWe’d love to hear what you think!\n\nGive feedback\nAll Departments\nStore Directory\nCareers\nOur Company\nSell on Walmart.com\nHelp\nProduct Recalls\nAccessibility\nTax Exempt Program\nGe"
+      },
+      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
+      "failed": true
     },
     {
       "rank": 6,
       "site": "Shopee",
-      "url": "https://shopee.com/",
+      "requestedUrl": "https://shopee.sg/",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=841d345c161-04b7-4cf5-895b-25e5a0b94739&type=4",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "en-SG",
+      "timezoneId": "Asia/Singapore",
       "outputPath": "assets/top-ecommerce-website-screenshots/06-shopee/06-shopee-desktop.png",
       "httpStatus": 200,
-      "title": "Leading Online Shopping Platform In Southeast Asia & Taiwan | Shopee",
+      "title": "Shopee Singapore | Cheaper, Faster On Shopee",
       "documentSize": {
         "width": 1920,
-        "height": 1433,
-        "scrollY": 0
+        "height": 1080,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
       }
     },
     {
       "rank": 6,
       "site": "Shopee",
-      "url": "https://shopee.com/",
+      "requestedUrl": "https://shopee.sg/",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=4403e5a0d76-ffae-4912-bdb2-9298edd04b18&type=4",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "en-SG",
+      "timezoneId": "Asia/Singapore",
       "outputPath": "assets/top-ecommerce-website-screenshots/06-shopee/06-shopee-tablet.png",
       "httpStatus": 200,
-      "title": "Leading Online Shopping Platform In Southeast Asia & Taiwan | Shopee",
+      "title": "Shopee Singapore | Cheaper, Faster On Shopee",
       "documentSize": {
-        "width": 1380,
-        "height": 1433,
-        "scrollY": 0
+        "width": 1240,
+        "height": 1655,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
       }
     },
     {
       "rank": 6,
       "site": "Shopee",
-      "url": "https://shopee.com/",
+      "requestedUrl": "https://shopee.sg/",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&tracking_id=3281f9ce895-393b-474e-bcbe-11e96d5bf73c",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "en-SG",
+      "timezoneId": "Asia/Singapore",
       "outputPath": "assets/top-ecommerce-website-screenshots/06-shopee/06-shopee-mobile.png",
       "httpStatus": 200,
-      "title": "Leading Online Shopping Platform In Southeast Asia & Taiwan | Shopee",
+      "title": "Shopee Singapore | Cheaper, Faster On Shopee",
       "documentSize": {
         "width": 430,
         "height": 932,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
       }
     },
     {
       "rank": 7,
       "site": "Mercado Libre",
-      "url": "https://www.mercadolibre.com/",
+      "requestedUrl": "https://www.mercadolibre.com.mx/",
+      "finalUrl": "https://www.mercadolibre.com.mx/",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "es-MX",
+      "timezoneId": "America/Mexico_City",
       "outputPath": "assets/top-ecommerce-website-screenshots/07-mercado-libre/07-mercado-libre-desktop.png",
       "httpStatus": 200,
-      "title": "Mercado Libre - Envíos Gratis en el día",
+      "title": "Mercado Libre México - Envíos Gratis en el día",
       "documentSize": {
         "width": 1920,
-        "height": 1100,
-        "scrollY": 0
+        "height": 4212,
+        "scrollY": 0,
+        "imageCount": 79,
+        "completeImageCount": 79
       }
     },
     {
       "rank": 7,
       "site": "Mercado Libre",
-      "url": "https://www.mercadolibre.com/",
+      "requestedUrl": "https://www.mercadolibre.com.mx/",
+      "finalUrl": "https://www.mercadolibre.com.mx/",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "es-MX",
+      "timezoneId": "America/Mexico_City",
       "outputPath": "assets/top-ecommerce-website-screenshots/07-mercado-libre/07-mercado-libre-tablet.png",
       "httpStatus": 200,
-      "title": "Mercado Libre - Envíos Gratis en el día",
+      "title": "Mercado Libre México - Envíos Gratis en el día",
       "documentSize": {
-        "width": 1024,
-        "height": 1386,
-        "scrollY": 0
+        "width": 1044,
+        "height": 4103,
+        "scrollY": 0,
+        "imageCount": 77,
+        "completeImageCount": 77
       }
     },
     {
       "rank": 7,
       "site": "Mercado Libre",
-      "url": "https://www.mercadolibre.com/",
+      "requestedUrl": "https://www.mercadolibre.com.mx/",
+      "finalUrl": "https://www.mercadolibre.com.mx/?skipInApp=true",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "es-MX",
+      "timezoneId": "America/Mexico_City",
       "outputPath": "assets/top-ecommerce-website-screenshots/07-mercado-libre/07-mercado-libre-mobile.png",
       "httpStatus": 200,
-      "title": "Mercado Libre - Envíos Gratis en el día",
+      "title": "fechas-dobles",
       "documentSize": {
         "width": 430,
-        "height": 1080,
-        "scrollY": 0
+        "height": 7420,
+        "scrollY": 0,
+        "imageCount": 156,
+        "completeImageCount": 128
       }
     },
     {
       "rank": 8,
       "site": "Zalando",
-      "url": "https://www.zalando.com/",
+      "requestedUrl": "https://www.zalando.co.uk/",
+      "finalUrl": "about:blank",
       "device": "Desktop",
-      "viewport": {
-        "width": 1920,
-        "height": 1080
-      },
-      "deviceScaleFactor": 2,
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-desktop.png",
-      "httpStatus": 200,
-      "title": "Zalando - Shoes and Fashion Online",
-      "documentSize": {
-        "width": 1950,
-        "height": 1080,
-        "scrollY": 0
-      }
+      "diagnostic": null,
+      "verification": null,
+      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.zalando.co.uk/\", waiting until \"domcontentloaded\"\n",
+      "failed": true
     },
     {
       "rank": 8,
       "site": "Zalando",
-      "url": "https://www.zalando.com/",
+      "requestedUrl": "https://www.zalando.co.uk/",
+      "finalUrl": "https://www.zalando.co.uk/",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "en-GB",
+      "timezoneId": "Europe/London",
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-tablet.png",
-      "httpStatus": 200,
-      "title": "Zalando - Shoes and Fashion Online",
+      "httpStatus": 403,
+      "title": "",
       "documentSize": {
-        "width": 1054,
-        "height": 1407,
-        "scrollY": 0
+        "width": 1024,
+        "height": 1366,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
       }
     },
     {
       "rank": 8,
       "site": "Zalando",
-      "url": "https://www.zalando.com/",
+      "requestedUrl": "https://www.zalando.co.uk/",
+      "finalUrl": "https://www.zalando.co.uk/",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "en-GB",
+      "timezoneId": "Europe/London",
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-mobile.png",
-      "httpStatus": 200,
-      "title": "Zalando - Shoes and Fashion Online",
+      "httpStatus": 403,
+      "title": "",
       "documentSize": {
-        "width": 460,
-        "height": 2028,
-        "scrollY": 0
+        "width": 430,
+        "height": 932,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
       }
     },
     {
       "rank": 9,
       "site": "Rakuten",
-      "url": "https://www.rakuten.co.jp/",
+      "requestedUrl": "https://www.rakuten.co.jp/",
+      "finalUrl": "https://www.rakuten.co.jp/",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "ja-JP",
+      "timezoneId": "Asia/Tokyo",
       "outputPath": "assets/top-ecommerce-website-screenshots/09-rakuten/09-rakuten-desktop.png",
       "httpStatus": 200,
       "title": "【楽天市場】Shopping is Entertainment! ： インターネット最大級の通信販売、通販オンラインショッピングコミュニティ",
       "documentSize": {
         "width": 1920,
         "height": 6025,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 412,
+        "completeImageCount": 412
       }
     },
     {
       "rank": 9,
       "site": "Rakuten",
-      "url": "https://www.rakuten.co.jp/",
+      "requestedUrl": "https://www.rakuten.co.jp/",
+      "finalUrl": "https://www.rakuten.co.jp/",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
         "height": 1366
       },
       "deviceScaleFactor": 2,
+      "locale": "ja-JP",
+      "timezoneId": "Asia/Tokyo",
       "outputPath": "assets/top-ecommerce-website-screenshots/09-rakuten/09-rakuten-tablet.png",
       "httpStatus": 200,
       "title": "【楽天市場】Shopping is Entertainment! ： インターネット最大級の通信販売、通販オンラインショッピングコミュニティ",
       "documentSize": {
         "width": 1024,
         "height": 6116,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 370,
+        "completeImageCount": 370
       }
     },
     {
       "rank": 9,
       "site": "Rakuten",
-      "url": "https://www.rakuten.co.jp/",
+      "requestedUrl": "https://www.rakuten.co.jp/",
+      "finalUrl": "https://www.rakuten.co.jp/",
       "device": "Mobile",
       "viewport": {
         "width": 430,
         "height": 932
       },
       "deviceScaleFactor": 3,
+      "locale": "ja-JP",
+      "timezoneId": "Asia/Tokyo",
       "outputPath": "assets/top-ecommerce-website-screenshots/09-rakuten/09-rakuten-mobile.png",
       "httpStatus": 200,
       "title": "楽天市場",
       "documentSize": {
         "width": 430,
         "height": 7380,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 331,
+        "completeImageCount": 331
       }
     },
     {
       "rank": 10,
       "site": "Flipkart",
-      "url": "https://www.flipkart.com/",
+      "requestedUrl": "https://www.flipkart.com/",
+      "finalUrl": "https://www.flipkart.com/",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
         "height": 1080
       },
       "deviceScaleFactor": 2,
+      "locale": "en-IN",
+      "timezoneId": "Asia/Kolkata",
       "outputPath": "assets/top-ecommerce-website-screenshots/10-flipkart/10-flipkart-desktop.png",
       "httpStatus": 200,
       "title": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
       "documentSize": {
         "width": 1920,
         "height": 3843,
-        "scrollY": 0
+        "scrollY": 0,
+        "imageCount": 89,
+        "completeImageCount": 73
       }
     },
     {
       "rank": 10,
       "site": "Flipkart",
-      "url": "https://www.flipkart.com/",
+      "requestedUrl": "https://www.flipkart.com/",
+      "finalUrl": "about:blank",
       "device": "Tablet",
-      "viewport": {
-        "width": 1024,
-        "height": 1366
-      },
-      "deviceScaleFactor": 2,
       "outputPath": "assets/top-ecommerce-website-screenshots/10-flipkart/10-flipkart-tablet.png",
-      "httpStatus": 200,
-      "title": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
-      "documentSize": {
-        "width": 1024,
-        "height": 5059,
-        "scrollY": 0
-      }
+      "diagnostic": null,
+      "verification": null,
+      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.flipkart.com/\", waiting until \"domcontentloaded\"\n",
+      "failed": true
     },
     {
       "rank": 10,
       "site": "Flipkart",
-      "url": "https://www.flipkart.com/",
+      "requestedUrl": "https://www.flipkart.com/",
+      "finalUrl": "about:blank",
       "device": "Mobile",
-      "viewport": {
-        "width": 430,
-        "height": 932
-      },
-      "deviceScaleFactor": 3,
       "outputPath": "assets/top-ecommerce-website-screenshots/10-flipkart/10-flipkart-mobile.png",
-      "httpStatus": 200,
-      "title": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
-      "documentSize": {
-        "width": 430,
-        "height": 3079,
-        "scrollY": 0
-      }
+      "diagnostic": null,
+      "verification": null,
+      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.flipkart.com/\", waiting until \"domcontentloaded\"\n",
+      "failed": true
     }
   ]
 }
