@@ -3,6 +3,26 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+I have disconnected the github connector so you can have full access to live internet. Try again to fetch more specific data and you have to cite your sources to exact data that was used - don’t just send me url of home page.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 ## CMA research comment — 7101 Wendemere St, Houston, TX 77088
 
 _Research date: June 25, 2026. This is a desktop CMA, not a licensed appraisal or broker price opinion._
