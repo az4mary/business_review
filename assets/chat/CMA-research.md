@@ -14,7 +14,7 @@
 
 </aside>
 
-1. Perform an online CMA research on the property 7101 Wendemere Street, houston, tx, 77088.
+1. Perform an intensive online CMA research on the property 7101 Wendemere Street, houston, tx, 77088.
 2. Let me know what is the ARV if sold as brand new in 2026.
 3. Let me know the competitive monthly rental value in 2026.  
 4. Provide proper citation to all your sources for verification purposes.
