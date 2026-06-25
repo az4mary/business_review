@@ -1,7 +1,5 @@
 <aside>
-🤖
-
-# ASSISTANT
+🤖# ASSISTANT
 
 </aside>
 
