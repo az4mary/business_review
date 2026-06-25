@@ -65,7 +65,7 @@ Commit created:
 <aside>
 👤
 
-# ARCHITECH
+# ARCHITECT
 
 </aside>
 
@@ -128,7 +128,7 @@ Commit created:
 <aside>
 👤
 
-# ARCHITECH
+# ARCHITECT
 
 </aside>
 
@@ -191,7 +191,7 @@ Important boundary:
 <aside>
 👤
 
-# ARCHITECH
+# ARCHITECT
 
 </aside>
 
