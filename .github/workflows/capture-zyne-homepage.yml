@@ -1,4 +1,4 @@
-name: Capture ZYNE Homepage Screenshots
+name: Capture PRD 1.2A Homepage Screenshots
 
 on:
   push:
@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: capture-zyne-homepage-screenshots-main
+  group: capture-prd-1-2a-homepage-screenshots-main
   cancel-in-progress: false
 
 permissions:
@@ -42,16 +42,16 @@ jobs:
           npm install --save-dev playwright
           npx playwright install --with-deps chromium
 
-      - name: Capture responsive homepage screenshots
+      - name: Capture PRD 1.2A responsive homepage screenshots
         run: |
-          mkdir -p assets/PRD-1.1-images
+          mkdir -p assets/PRD-1.2A-images
           node <<'NODE'
           const { chromium } = require('playwright');
           const fs = require('fs');
           const path = require('path');
 
           const url = 'https://zyne.store/';
-          const outputDir = 'assets/PRD-1.1-images';
+          const outputDir = 'assets/PRD-1.2A-images';
 
           const captures = [
             { name: 'Desktop', file: 'Desktop.png', viewport: { width: 1440, height: 1200 }, fullPage: true },
@@ -176,23 +176,23 @@ jobs:
           });
           NODE
 
-      - name: Commit screenshots to repository
+      - name: Commit PRD 1.2A screenshots to repository
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
-            assets/PRD-1.1-images/Desktop.png \
-            assets/PRD-1.1-images/Tablet.png \
-            assets/PRD-1.1-images/Mobile.png \
-            assets/PRD-1.1-images/Mobile-Menu.png \
-            assets/PRD-1.1-images/Mobile-Sticky-CTA.png \
-            assets/PRD-1.1-images/Mobile-Diagnostic-Result.png
+            assets/PRD-1.2A-images/Desktop.png \
+            assets/PRD-1.2A-images/Tablet.png \
+            assets/PRD-1.2A-images/Mobile.png \
+            assets/PRD-1.2A-images/Mobile-Menu.png \
+            assets/PRD-1.2A-images/Mobile-Sticky-CTA.png \
+            assets/PRD-1.2A-images/Mobile-Diagnostic-Result.png
           if git diff --cached --quiet; then
-            echo "No screenshot changes to commit."
+            echo "No PRD 1.2A screenshot changes to commit."
             exit 0
           fi
-          git commit -m "Capture responsive homepage screenshots"
+          git commit -m "Capture PRD 1.2A responsive homepage screenshots"
           for attempt in 1 2 3; do
             git fetch origin main
             git rebase origin/main
@@ -202,18 +202,18 @@ jobs:
             echo "Push failed on attempt ${attempt}; retrying after refetch."
             sleep 5
           done
-          echo "Unable to push screenshot commit after 3 attempts."
+          echo "Unable to push PRD 1.2A screenshot commit after 3 attempts."
           exit 1
 
-      - name: Upload screenshot artifact
+      - name: Upload PRD 1.2A screenshot artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zyne-responsive-homepage-screenshots
+          name: prd-1-2a-responsive-homepage-screenshots
           path: |
-            assets/PRD-1.1-images/Desktop.png
-            assets/PRD-1.1-images/Tablet.png
-            assets/PRD-1.1-images/Mobile.png
-            assets/PRD-1.1-images/Mobile-Menu.png
-            assets/PRD-1.1-images/Mobile-Sticky-CTA.png
-            assets/PRD-1.1-images/Mobile-Diagnostic-Result.png
+            assets/PRD-1.2A-images/Desktop.png
+            assets/PRD-1.2A-images/Tablet.png
+            assets/PRD-1.2A-images/Mobile.png
+            assets/PRD-1.2A-images/Mobile-Menu.png
+            assets/PRD-1.2A-images/Mobile-Sticky-CTA.png
+            assets/PRD-1.2A-images/Mobile-Diagnostic-Result.png
           if-no-files-found: error
