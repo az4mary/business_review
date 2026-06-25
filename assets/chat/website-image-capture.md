@@ -3,6 +3,45 @@
 
 # ASSISTANT
 
+Updated after reviewing the saved job log.
+
+Checked log:
+
+- `.github/workflows/github-actions-job-log.md`
+
+The latest workflow run showed these failures:
+
+- Walmart failed on Desktop, Tablet, and Mobile because the page was detected as a human-verification / bot-check state.
+- Zalando Desktop timed out during navigation.
+- Flipkart Tablet and Mobile timed out during navigation.
+
+Changed workflow:
+
+- `.github/workflows/capture-top-ecommerce-sites.yml`
+
+What changed:
+
+- Added a Walmart-specific handler for the closeable `Robot or human` interstitial:
+  - Detects the Walmart `Robot or human` modal text.
+  - Attempts to click the visible `x` / close / dismiss control.
+  - Uses multiple selector strategies plus a DOM fallback for close controls.
+  - Falls back to `Escape` only if no close control is found.
+- Kept the safety boundary intact:
+  - The workflow closes a closeable pop-up window.
+  - It still does **not** solve CAPTCHA, complete human checks, or bypass verification systems.
+  - If verification remains after the close attempt, the workflow records a diagnostic screenshot and fails that capture explicitly.
+- Hardened navigation for slow-loading sites:
+  - Switched initial navigation to `waitUntil: 'commit'` so the script does not fail just because `domcontentloaded` is delayed by a slow external storefront.
+  - Added a fallback `domcontentloaded` navigation attempt.
+  - Increased default navigation timeout to `120000ms`.
+  - Kept best-effort waits for `domcontentloaded`, `load`, `networkidle`, `body`, fonts, images, and stable layout before screenshot.
+- Increased the job timeout from `45` to `50` minutes to absorb slower storefronts.
+- Added `git pull --rebase` before staging generated screenshots to reduce push conflicts from concurrent repository updates.
+
+Commit created:
+
+- `27e2fc1a7105e51e7ace12387901f55322c62f43`
+
 </aside>
 
 ---
