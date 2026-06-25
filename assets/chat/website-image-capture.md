@@ -3,6 +3,30 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECH
+
+</aside>
+
+1. Amazon - Click the button below to continue shopping on all devices.
+2. Alibaba - Close pop-up window `Automate your inquirey workflow` , shows Continue to alibaba.com App on both Mobile and Tablet.
+3.  Temu - Check your connection and try again error message appears on Mobile and tablet, Close the google sign-in pop-up window on Tablet.
+4. Walmart - Click the x to close the Robot or human pop-up window for walmart.
+5. Flipkart - Click the x button to close the Login pop-up window on Desktop and tablet.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Updated the screenshot workflow to address the latest QA findings.
 
 Changed workflow:
