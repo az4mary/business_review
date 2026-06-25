@@ -1,5 +1,32 @@
 LATEST LOG:
 
+# **Harden ecommerce screenshot capture workflow #2**
+
+https://github.com/az4mary/zyne.store/actions/runs/28160017185/job/83397891860
+
+```
+Run node <<'NODE'
+6 screenshot capture(s) failed:
+- Walmart / Desktop: Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.
+- Walmart / Tablet: Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.
+- Walmart / Mobile: Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.
+- Zalando / Desktop: page.goto: Timeout 90000ms exceeded.
+Call log:
+  - navigating to "https://www.zalando.co.uk/", waiting until "domcontentloaded"
+
+- Flipkart / Tablet: page.goto: Timeout 90000ms exceeded.
+Call log:
+  - navigating to "https://www.flipkart.com/", waiting until "domcontentloaded"
+
+- Flipkart / Mobile: page.goto: Timeout 90000ms exceeded.
+Call log:
+  - navigating to "https://www.flipkart.com/", waiting until "domcontentloaded"
+
+Error: Process completed with exit code 1.
+```
+
+---
+
 # **Capture PRD 1.2A diagnostic homepage states #11**
 
 https://github.com/az4mary/zyne.store/actions/runs/28134279327/job/83317475188
