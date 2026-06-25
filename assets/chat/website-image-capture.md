@@ -3,6 +3,61 @@
 
 # ASSISTANT
 
+Updated after reviewing the latest saved job log.
+
+Checked log:
+
+- `.github/workflows/github-actions-job-log.md`
+
+Latest log finding:
+
+- The workflow failed in the commit step because `git pull --rebase` was executed after screenshots had already modified the working tree:
+  - `error: cannot pull with rebase: You have unstaged changes.`
+
+Changed workflow:
+
+- `.github/workflows/capture-top-ecommerce-sites.yml`
+
+What changed:
+
+- The workflow now still captures screenshots even when storefront issues persist.
+  - Human-verification, pop-up, timeout, or other page issues are recorded in JSON metadata.
+  - The workflow no longer fails solely because those issues were detected.
+  - It writes:
+    - `assets/top-ecommerce-website-screenshots/capture-manifest.json`
+    - `assets/top-ecommerce-website-screenshots/capture-issues.json`
+    - `assets/top-ecommerce-website-screenshots/capture-failures.json`
+- Added site-specific popup handling:
+  - Alibaba:
+    - Detects `Automate your inquiry workflow` / `Automate your inquirey workflow` style copy.
+    - Detects `Continue to alibaba.com App` on mobile/tablet.
+    - Attempts to close the popup with visible close controls, dialog close selectors, Alibaba-style dialog close selectors, and DOM fallback.
+  - Walmart:
+    - Detects `Robot or human`.
+    - Attempts to close the modal with the visible `x` / close control.
+    - If verification remains, the screenshot is still captured and the issue is recorded.
+  - Flipkart:
+    - Detects the Login modal on Desktop/Tablet patterns such as `Login`, `Get access to your Orders`, and email/mobile prompts.
+    - Attempts to close with visible `x` / close controls, including Flipkart’s known close class pattern.
+- Added best-effort screenshot fallback:
+  - First attempts full-page screenshot.
+  - If full-page capture fails, attempts viewport screenshot.
+  - If capture still fails, records that explicitly in `capture-failures.json` without failing the whole workflow.
+- Fixed the commit-step failure:
+  - Removed the `git pull --rebase` that ran before staging while generated screenshots were unstaged.
+  - New sequence is:
+    - `git add assets/top-ecommerce-website-screenshots`
+    - commit if changed
+    - `git pull --rebase --autostash`
+    - push
+- Replaced the final hard-fail step with a reporting step:
+  - It prints recorded issues as warnings.
+  - It keeps the workflow successful by design so screenshot artifacts/repository output are retained.
+
+Commit created:
+
+- `7d71f1f80d27563dcfe1065ce62f97239ca57d61`
+
 </aside>
 
 ---
