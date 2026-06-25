@@ -10,7 +10,7 @@
 <aside>
 👤
 
-# ARCHITECH
+# ARCHITECT
 
 </aside>
 
