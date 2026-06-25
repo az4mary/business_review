@@ -3,7 +3,7 @@ import "./styles/header-hero-alignment.css";
 import "./styles/mobile-sticky-cta.css";
 import "./styles/prd-1-2a.css";
 import { products } from "./data/products.js";
-import { buildSchema, renderHomePage } from "./render.js";
+import { buildSchema, renderHomePage } from "./render-prd-1-2a.js";
 
 const track = (event, properties = {}) => {
   window.dataLayer = window.dataLayer || [];
