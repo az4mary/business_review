@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-25T09:19:35.367Z",
+  "generatedAt": "2026-06-25T11:50:12.376Z",
   "sourceArticle": "assets/articles/top-10-websites-2026.md",
   "outputDir": "assets/top-ecommerce-website-screenshots",
-  "note": "Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output. Human-verification pages are detected and reported, not bypassed.",
+  "note": "Full-page homepage captures for visual pixel-level QA. Device scale factors are set above 1 for high-resolution output. Persistent storefront issues are recorded, but screenshots are still captured whenever a page can be rendered.",
   "captures": [
     {
       "rank": 1,
@@ -22,11 +22,12 @@
       "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
         "width": 1920,
-        "height": 4478,
+        "height": 5073,
         "scrollY": 0,
-        "imageCount": 229,
-        "completeImageCount": 229
-      }
+        "imageCount": 174,
+        "completeImageCount": 174
+      },
+      "issues": []
     },
     {
       "rank": 1,
@@ -45,12 +46,13 @@
       "httpStatus": 200,
       "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
-        "width": 1024,
-        "height": 4478,
+        "width": 1000,
+        "height": 5545,
         "scrollY": 0,
-        "imageCount": 229,
-        "completeImageCount": 229
-      }
+        "imageCount": 174,
+        "completeImageCount": 174
+      },
+      "issues": []
     },
     {
       "rank": 1,
@@ -69,12 +71,13 @@
       "httpStatus": 200,
       "title": "Amazon.com. Spend less. Smile more.",
       "documentSize": {
-        "width": 1000,
-        "height": 4478,
+        "width": 430,
+        "height": 6192,
         "scrollY": 0,
-        "imageCount": 229,
-        "completeImageCount": 229
-      }
+        "imageCount": 162,
+        "completeImageCount": 162
+      },
+      "issues": []
     },
     {
       "rank": 2,
@@ -94,11 +97,12 @@
       "title": "Alibaba.com: Manufacturers, Suppliers, Exporters & Importers from the world's largest online B2B marketplace",
       "documentSize": {
         "width": 1920,
-        "height": 9875,
+        "height": 6121,
         "scrollY": 0,
-        "imageCount": 811,
-        "completeImageCount": 729
-      }
+        "imageCount": 517,
+        "completeImageCount": 441
+      },
+      "issues": []
     },
     {
       "rank": 2,
@@ -118,11 +122,12 @@
       "title": "Alibaba.com: Manufacturers, Suppliers, Exporters & Importers from the world's largest online B2B marketplace",
       "documentSize": {
         "width": 1024,
-        "height": 7443,
+        "height": 9485,
         "scrollY": 0,
-        "imageCount": 388,
-        "completeImageCount": 388
-      }
+        "imageCount": 495,
+        "completeImageCount": 495
+      },
+      "issues": []
     },
     {
       "rank": 2,
@@ -144,9 +149,10 @@
         "width": 430,
         "height": 11729,
         "scrollY": 0,
-        "imageCount": 388,
-        "completeImageCount": 388
-      }
+        "imageCount": 387,
+        "completeImageCount": 387
+      },
+      "issues": []
     },
     {
       "rank": 3,
@@ -170,7 +176,8 @@
         "scrollY": 0,
         "imageCount": 6,
         "completeImageCount": 6
-      }
+      },
+      "issues": []
     },
     {
       "rank": 3,
@@ -194,7 +201,8 @@
         "scrollY": 0,
         "imageCount": 6,
         "completeImageCount": 6
-      }
+      },
+      "issues": []
     },
     {
       "rank": 3,
@@ -218,7 +226,8 @@
         "scrollY": 0,
         "imageCount": 6,
         "completeImageCount": 6
-      }
+      },
+      "issues": []
     },
     {
       "rank": 4,
@@ -240,9 +249,10 @@
         "width": 1920,
         "height": 5286,
         "scrollY": 0,
-        "imageCount": 158,
-        "completeImageCount": 158
-      }
+        "imageCount": 156,
+        "completeImageCount": 156
+      },
+      "issues": []
     },
     {
       "rank": 4,
@@ -262,11 +272,12 @@
       "title": "Temu | Explore the Latest Clothing, Beauty, Home, Jewelry & More",
       "documentSize": {
         "width": 1028,
-        "height": 5887,
+        "height": 5837,
         "scrollY": 0,
-        "imageCount": 158,
-        "completeImageCount": 158
-      }
+        "imageCount": 156,
+        "completeImageCount": 156
+      },
+      "issues": []
     },
     {
       "rank": 4,
@@ -286,11 +297,12 @@
       "title": "Temu | Explore the Latest Clothing, Beauty, Home, Jewelry & More",
       "documentSize": {
         "width": 430,
-        "height": 5022,
+        "height": 4925,
         "scrollY": 0,
-        "imageCount": 78,
-        "completeImageCount": 78
-      }
+        "imageCount": 81,
+        "completeImageCount": 81
+      },
+      "issues": []
     },
     {
       "rank": 5,
@@ -298,18 +310,24 @@
       "requestedUrl": "https://www.walmart.com/",
       "finalUrl": "https://www.walmart.com/",
       "device": "Desktop",
-      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-desktop.png",
-      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
-      "verification": {
-        "detected": true,
-        "selectorMatch": "[id*=\"captcha\" i]",
-        "patternMatch": null,
-        "title": "Walmart | Save Money. Live better.",
-        "url": "https://www.walmart.com/",
-        "textSample": "Skip to Main Content\nDepartments\nServices\nReorder\nMy Items\nSign In\nAccount\n$0.00\nHow do you want your items?\nWalmart | Save Money. Live better.\n\nBoom! Up to 50% off Deals is on.\n\nShop Deals\nShop Deals\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nShop all Deals & more\nUp to 50% off\nView all\n(6 pack) Folgers Half Caff Medium Roast Coffee, 22.6 oz Canister\nDeal\n$68.40\ncurrent price $68.40\nMore options from $14.96\n(6 pack) Folgers Half Caff Medium Roast Coffee, 22.6 oz Canister\nAdd\nMountain Dew Kickstart Flavored Juice Drink Energizing Orange Citrus, 12 pack, 16 fl oz cans\nDeal\n$13.50\ncurrent price $13.50, Was $19.29\n$19.29\nMountain Dew Kickstart Flavored Juice Drink Energizing Orange Citrus, 12 pack, 16 fl oz cans\nOptions\nEnergizer MAX (8 pack), Triple A Al"
+      "viewport": {
+        "width": 1920,
+        "height": 1080
       },
-      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
-      "failed": true
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-desktop.png",
+      "httpStatus": 200,
+      "title": "",
+      "documentSize": {
+        "width": 1920,
+        "height": 1080,
+        "scrollY": 0,
+        "imageCount": 1,
+        "completeImageCount": 1
+      },
+      "issues": []
     },
     {
       "rank": 5,
@@ -317,18 +335,41 @@
       "requestedUrl": "https://www.walmart.com/",
       "finalUrl": "https://www.walmart.com/",
       "device": "Tablet",
-      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-tablet.png",
-      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
-      "verification": {
-        "detected": true,
-        "selectorMatch": "[id*=\"captcha\" i]",
-        "patternMatch": null,
-        "title": "Walmart | Save Money. Live better.",
-        "url": "https://www.walmart.com/",
-        "textSample": "Skip to Main Content\nPickup or delivery?\nPhoenix, 85036\n•\nPhoenix E Thomas Rd Supercenter\nNow available!Ship to another country\nPhoenix, 85036\n•\nPhoenix E Thomas Rd Supercenter\nReorder\nMy Items\nSign In\nAccount\n$0.00\nDepartments\nServices\nDeals & More\n4th of July\nGet it Fast\nPharmacy\nNew & Trending\nWalmart+\nMore\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n30\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nDeals on premium beauty\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\nBeauty deals & more\nHousehold Essentials Deals & "
+      "viewport": {
+        "width": 1024,
+        "height": 1366
       },
-      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
-      "failed": true
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-tablet.png",
+      "httpStatus": 200,
+      "title": "Walmart | Save Money. Live better.",
+      "documentSize": {
+        "width": 1024,
+        "height": 6240,
+        "scrollY": 66,
+        "imageCount": 30,
+        "completeImageCount": 24
+      },
+      "issues": [
+        {
+          "rank": 5,
+          "site": "Walmart",
+          "requestedUrl": "https://www.walmart.com/",
+          "device": "Tablet",
+          "type": "human-verification-detected",
+          "message": "Human-verification or bot-check indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[id*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Walmart | Save Money. Live better.",
+            "url": "https://www.walmart.com/",
+            "textSample": "Skip to Main Content\nPickup or delivery?\nWashington, 22747\n•\nFront Royal Supercenter\nNow available!Ship to another country\nWashington, 22747\n•\nFront Royal Supercenter\nReorder\nMy Items\nSign In\nAccount\n0\n$0.00\nDepartments\nServices\nDeals & More\n4th of July\nGet it Fast\nPharmacy\nNew & Trending\nWalmart+\nMore\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n40\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\nUp to\n15\n%\noff\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nUp to 30% off camping\n\nShop now\nShop now\n\nUp to 25% off computers\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\n"
+          }
+        }
+      ]
     },
     {
       "rank": 5,
@@ -336,24 +377,47 @@
       "requestedUrl": "https://www.walmart.com/",
       "finalUrl": "https://www.walmart.com/",
       "device": "Mobile",
-      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-mobile.png",
-      "diagnostic": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-human-verification-diagnostic.png",
-      "verification": {
-        "detected": true,
-        "selectorMatch": "[id*=\"captcha\" i]",
-        "patternMatch": null,
-        "title": "Walmart | Save Money. Live better.",
-        "url": "https://www.walmart.com/",
-        "textSample": "Skip to Main Content\nCancel\n$0.00\nPickup or delivery?\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n40\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nUp to 25% off computers\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\nBeauty deals & more\nHousehold Essentials Deals & More\nTech deals & more\nToys deals & more\nHome deals & more\nFashion deals & more\n\nWe’d love to hear what you think!\n\nGive feedback\nAll Departments\nStore Directory\nCareers\nOur Company\nSell on Walmart.com\nHelp\nProduct Recalls\nAccessibility\nTax Exempt Program\nGe"
+      "viewport": {
+        "width": 430,
+        "height": 932
       },
-      "message": "Human-verification or bot-check page detected. The workflow records a diagnostic screenshot but does not bypass CAPTCHA / human-verification controls. Use an approved test environment, vendor allowlist, or manually resolved session storage if the site permits it.",
-      "failed": true
+      "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/top-ecommerce-website-screenshots/05-walmart/05-walmart-mobile.png",
+      "httpStatus": 200,
+      "title": "Walmart | Save Money. Live better.",
+      "documentSize": {
+        "width": 430,
+        "height": 4387,
+        "scrollY": 0,
+        "imageCount": 20,
+        "completeImageCount": 18
+      },
+      "issues": [
+        {
+          "rank": 5,
+          "site": "Walmart",
+          "requestedUrl": "https://www.walmart.com/",
+          "device": "Mobile",
+          "type": "human-verification-detected",
+          "message": "Human-verification or bot-check indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[id*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Walmart | Save Money. Live better.",
+            "url": "https://www.walmart.com/",
+            "textSample": "Skip to Main Content\nCancel\n$0.00\nPickup or delivery?\nWalmart | Save Money. Live better.\n\nLimited time\n\nDon’t miss 50% off an annual membership!\n\nClaim offer\nClaim offer\nUp to\n40\n%\noff\n\nUp to 45% off Dyson hair tools\n\nShop now\nShop now\n\nUp to 40% off LEGO\n\nShop now\nShop now\n\nUp to 30% off trampolines, swing sets & more\n\nShop now\nShop now\n\nUp to 40% off cook and dine\n\nShop now\nShop now\n\nUp to 25% off computers\n\nShop now\nShop now\nShop Deals & more by category\nView all\nDeals & more\nTop 100+\nBeauty deals & more\nHousehold Essentials Deals & More\nTech deals & more\nToys deals & more\nHome deals & more\nFashion deals & more\n\nWe’d love to hear what you think!\n\nGive feedback\nAll Departments\nStore Directory\nCareers\nOur Company\nSell on Walmart.com\nHelp\nProduct Recalls\nAccessibility\nTax Exempt Program\nGe"
+          }
+        }
+      ]
     },
     {
       "rank": 6,
       "site": "Shopee",
       "requestedUrl": "https://shopee.sg/",
-      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=841d345c161-04b7-4cf5-895b-25e5a0b94739&type=4",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=69dc3bcdb2-ffe9-4418-b2ef-a40fca5d6fa5&type=4",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
@@ -371,13 +435,14 @@
         "scrollY": 0,
         "imageCount": 0,
         "completeImageCount": 0
-      }
+      },
+      "issues": []
     },
     {
       "rank": 6,
       "site": "Shopee",
       "requestedUrl": "https://shopee.sg/",
-      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=4403e5a0d76-ffae-4912-bdb2-9298edd04b18&type=4",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&next=https%3A%2F%2Fshopee.sg%2F&tracking_id=1571765ee39-8771-4954-943e-52895169ffdf&type=4",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
@@ -395,13 +460,14 @@
         "scrollY": 0,
         "imageCount": 0,
         "completeImageCount": 0
-      }
+      },
+      "issues": []
     },
     {
       "rank": 6,
       "site": "Shopee",
       "requestedUrl": "https://shopee.sg/",
-      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&tracking_id=3281f9ce895-393b-474e-bcbe-11e96d5bf73c",
+      "finalUrl": "https://shopee.sg/verify/traffic/error?home_url=https%3A%2F%2Fshopee.sg&is_logged_in=false&tracking_id=85644a5a078-6533-47f8-99fe-764b25ab2476",
       "device": "Mobile",
       "viewport": {
         "width": 430,
@@ -419,7 +485,8 @@
         "scrollY": 0,
         "imageCount": 0,
         "completeImageCount": 0
-      }
+      },
+      "issues": []
     },
     {
       "rank": 7,
@@ -436,14 +503,15 @@
       "timezoneId": "America/Mexico_City",
       "outputPath": "assets/top-ecommerce-website-screenshots/07-mercado-libre/07-mercado-libre-desktop.png",
       "httpStatus": 200,
-      "title": "Mercado Libre México - Envíos Gratis en el día",
+      "title": "fechas-dobles",
       "documentSize": {
-        "width": 1920,
-        "height": 4212,
+        "width": 1905,
+        "height": 7021,
         "scrollY": 0,
-        "imageCount": 79,
-        "completeImageCount": 79
-      }
+        "imageCount": 157,
+        "completeImageCount": 133
+      },
+      "issues": []
     },
     {
       "rank": 7,
@@ -467,7 +535,8 @@
         "scrollY": 0,
         "imageCount": 77,
         "completeImageCount": 77
-      }
+      },
+      "issues": []
     },
     {
       "rank": 7,
@@ -487,23 +556,37 @@
       "title": "fechas-dobles",
       "documentSize": {
         "width": 430,
-        "height": 7420,
+        "height": 7459,
         "scrollY": 0,
         "imageCount": 156,
         "completeImageCount": 128
-      }
+      },
+      "issues": []
     },
     {
       "rank": 8,
       "site": "Zalando",
       "requestedUrl": "https://www.zalando.co.uk/",
-      "finalUrl": "about:blank",
+      "finalUrl": "https://www.zalando.co.uk/",
       "device": "Desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-GB",
+      "timezoneId": "Europe/London",
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-desktop.png",
-      "diagnostic": null,
-      "verification": null,
-      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.zalando.co.uk/\", waiting until \"domcontentloaded\"\n",
-      "failed": true
+      "httpStatus": 403,
+      "title": "",
+      "documentSize": {
+        "width": 1920,
+        "height": 1080,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
+      },
+      "issues": []
     },
     {
       "rank": 8,
@@ -519,15 +602,16 @@
       "locale": "en-GB",
       "timezoneId": "Europe/London",
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-tablet.png",
-      "httpStatus": 403,
-      "title": "",
+      "httpStatus": null,
+      "title": "Error Page",
       "documentSize": {
         "width": 1024,
         "height": 1366,
         "scrollY": 0,
         "imageCount": 0,
         "completeImageCount": 0
-      }
+      },
+      "issues": []
     },
     {
       "rank": 8,
@@ -543,15 +627,16 @@
       "locale": "en-GB",
       "timezoneId": "Europe/London",
       "outputPath": "assets/top-ecommerce-website-screenshots/08-zalando/08-zalando-mobile.png",
-      "httpStatus": 403,
-      "title": "",
+      "httpStatus": null,
+      "title": "Error Page",
       "documentSize": {
-        "width": 430,
-        "height": 932,
+        "width": 980,
+        "height": 2124,
         "scrollY": 0,
         "imageCount": 0,
         "completeImageCount": 0
-      }
+      },
+      "issues": []
     },
     {
       "rank": 9,
@@ -575,7 +660,8 @@
         "scrollY": 0,
         "imageCount": 412,
         "completeImageCount": 412
-      }
+      },
+      "issues": []
     },
     {
       "rank": 9,
@@ -599,7 +685,8 @@
         "scrollY": 0,
         "imageCount": 370,
         "completeImageCount": 370
-      }
+      },
+      "issues": []
     },
     {
       "rank": 9,
@@ -623,7 +710,8 @@
         "scrollY": 0,
         "imageCount": 331,
         "completeImageCount": 331
-      }
+      },
+      "issues": []
     },
     {
       "rank": 10,
@@ -643,35 +731,62 @@
       "title": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
       "documentSize": {
         "width": 1920,
-        "height": 3843,
+        "height": 3875,
         "scrollY": 0,
         "imageCount": 89,
         "completeImageCount": 73
-      }
+      },
+      "issues": []
     },
     {
       "rank": 10,
       "site": "Flipkart",
       "requestedUrl": "https://www.flipkart.com/",
-      "finalUrl": "about:blank",
+      "finalUrl": "chrome-error://chromewebdata/",
       "device": "Tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-IN",
+      "timezoneId": "Asia/Kolkata",
       "outputPath": "assets/top-ecommerce-website-screenshots/10-flipkart/10-flipkart-tablet.png",
-      "diagnostic": null,
-      "verification": null,
-      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.flipkart.com/\", waiting until \"domcontentloaded\"\n",
-      "failed": true
+      "httpStatus": null,
+      "title": "",
+      "documentSize": {
+        "width": 1024,
+        "height": 1366,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
+      },
+      "issues": []
     },
     {
       "rank": 10,
       "site": "Flipkart",
       "requestedUrl": "https://www.flipkart.com/",
-      "finalUrl": "about:blank",
+      "finalUrl": "chrome-error://chromewebdata/",
       "device": "Mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "locale": "en-IN",
+      "timezoneId": "Asia/Kolkata",
       "outputPath": "assets/top-ecommerce-website-screenshots/10-flipkart/10-flipkart-mobile.png",
-      "diagnostic": null,
-      "verification": null,
-      "message": "page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.flipkart.com/\", waiting until \"domcontentloaded\"\n",
-      "failed": true
+      "httpStatus": null,
+      "title": "",
+      "documentSize": {
+        "width": 980,
+        "height": 2124,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
+      },
+      "issues": []
     }
   ]
 }
