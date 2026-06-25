@@ -12,6 +12,10 @@ on:
       - "projects/zyne-homepage/src/styles/**"
   workflow_dispatch:
 
+concurrency:
+  group: capture-zyne-homepage-screenshots-main
+  cancel-in-progress: false
+
 permissions:
   contents: write
   actions: read
@@ -25,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -173,6 +178,7 @@ jobs:
 
       - name: Commit screenshots to repository
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
@@ -184,10 +190,20 @@ jobs:
             assets/PRD-1.1-images/Mobile-Diagnostic-Result.png
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
-          else
-            git commit -m "Capture responsive homepage screenshots"
-            git push
+            exit 0
           fi
+          git commit -m "Capture responsive homepage screenshots"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push failed on attempt ${attempt}; retrying after refetch."
+            sleep 5
+          done
+          echo "Unable to push screenshot commit after 3 attempts."
+          exit 1
 
       - name: Upload screenshot artifact
         uses: actions/upload-artifact@v4
