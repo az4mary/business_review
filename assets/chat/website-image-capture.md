@@ -3,6 +3,30 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECH
+
+</aside>
+
+1. Check the logs - https://github.com/az4mary/zyne.store/blob/main/.github/workflows/github-actions-job-log.md
+2. Still take the screenshots even if any of the issues persist.
+3. Alibaba - Close pop-up window `Automate your inquirey workflow` , shows Continue to alibaba.com App on both Mobile and Tablet.
+4. Walmart - Click the x to close the Robot or human pop-up window for walmart.
+5. Flipkart - Click the x button to close the Login pop-up window on Desktop and tablet.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Updated after reviewing the saved job log.
 
 Checked log:
