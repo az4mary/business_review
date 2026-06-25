@@ -85,6 +85,10 @@ Mobile sticky CTA primary action routes to the diagnostic search.
 
 Added PRD 1.2A styles to reduce section spacing, improve product metadata readability, improve muted copy contrast, tighten mobile cards, and force the mobile footer into one column.
 
+### 6. Build integration
+
+The app entry now uses the PRD 1.2A render wrapper, and the prerender script uses the same wrapper so the static homepage artifact includes PRD 1.2A.
+
 ## Validation
 
 Validator file added:
@@ -92,6 +96,14 @@ Validator file added:
 ```txt
 projects/zyne-homepage/scripts/validate-prd-1-2a.mjs
 ```
+
+Package scripts expose:
+
+```txt
+npm run validate:prd1.2a
+```
+
+`prebuild` runs PRD 1.2A validation before the existing build command.
 
 The validator checks:
 
@@ -113,9 +125,13 @@ projects/zyne-homepage/src/data/diagnostics.js
 projects/zyne-homepage/src/render-prd-1-2a.js
 projects/zyne-homepage/src/main.js
 projects/zyne-homepage/src/styles/prd-1-2a.css
+projects/zyne-homepage/scripts/prerender.mjs
 projects/zyne-homepage/scripts/validate-prd-1-2a.mjs
+projects/zyne-homepage/package.json
 assets/zyne-website-PRD-1.2A-implementation-result.md
 ```
+
+No screenshot workflow file is part of PRD 1.2A implementation.
 
 ## Images needed from owner
 
