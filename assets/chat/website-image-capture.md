@@ -3,6 +3,25 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECH
+
+</aside>
+
+The pages were not fully loaded before screenshot was taken, some websites require `not an AI` , some have pop-up and some require change site country so figure out how to resolve these issues before the screenshot is taken.
+
+---
+<aside>
+🤖
+
+# ASSISTANT
+
 Implemented.
 
 Created GitHub Actions workflow:
