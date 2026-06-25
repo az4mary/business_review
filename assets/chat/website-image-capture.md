@@ -1,14 +1,14 @@
 <aside>
 🤖
 
-ASSISTANT
+# ASSISTANT
 
 </aside>
 
 <aside>
 👤
 
-ARCHITECH
+# ARCHITECH
 
 </aside>
 
