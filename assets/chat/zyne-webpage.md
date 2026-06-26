@@ -3,6 +3,28 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Again I said use exact same exact same exact same footer you used for other product page.
+2. I think sending you design concepts is a waste of time because you do not really use it, you just use the easy way for everything to make your life easy and make me frustrated.
+3. I will provide about 5 images for the house so check how you can organize the image gallery so it can be clicked in open gallery for zoomed view just like every property listing website does.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Updated the property route generator to use the exact same header and footer markup as the normal generated product pages.
 
 Changed:
