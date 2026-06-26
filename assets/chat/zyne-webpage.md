@@ -3,6 +3,18 @@
 
 # ASSISTANT
 
+Updated the Wendemere property route generator again.
+
+Changed:
+
+- Kept the exact same generated product-page footer text.
+- Kept the exact same generated product-page header/nav structure.
+- Added a five-slot property gallery scaffold for the images the architect will provide next.
+- Gallery layout uses a large featured image slot plus four supporting image slots.
+- Each gallery tile opens a lightbox-style zoom overlay.
+- Lightbox supports Close, Previous, Next, Escape, and left/right arrow navigation.
+- The gallery is ready for the five real house images to be wired in once provided.
+
 </aside>
 
 ---
