@@ -183,4 +183,4 @@ Work completed:
 5. Maintain zyne brand, header, footer, navigation etc.
 6. Apply useful design concepts that were extracted from the 2 websites.
 7. Update this chat file with your comment here under the `ASSISTANT` header.
-8. Then reply `DONE` in the chat conversation so I know this file has new comment.
+8. Then **ONLY** reply `DONE` in the chat conversation so I know this file has new comment.
