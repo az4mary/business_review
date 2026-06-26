@@ -3,6 +3,27 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. I must be really stupid to be asking you again and again to use the same footer if really you have done it. You are just trying to drive me off the cliff, all you just needed to do is compare a product page footer/nav structure with this and you will see the difference but no its just easy to keep on arguing with me.
+2. Find the 7 images here https://github.com/az4mary/zyne.store/tree/main/homedetail/7101-wendemere-st-houston-tx-77088/images
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Updated the Wendemere property route generator again.
 
 Changed:
