@@ -3,6 +3,17 @@
 
 # ASSISTANT
 
+Resolved the current property route problems after re-reading the rules of engagement.
+
+Changed:
+
+- Reworked `projects/zyne-homepage/scripts/generate-property-route.mjs` so the route uses the same product-page shell order: skip link, header, `main id="main-content"`, then footer.
+- Kept the exact product-page header/nav markup and exact product-page footer text.
+- Moved the gallery lightbox markup inside `main` so custom property markup no longer sits between `main` and the footer.
+- Replaced guessed image-only fallback behavior with build-time discovery of the actual image files in `homedetail/7101-wendemere-st-houston-tx-77088/images`.
+- Copies the discovered property images into `dist/homedetail/7101-wendemere-st-houston-tx-77088/images` during build so the live GitHub Pages route can load them.
+- Updated `.github/workflows/zyne-homepage-pages.yml` to include `homedetail/**` in the deploy trigger so property image changes can redeploy the site.
+
 </aside>
 
 ---
@@ -150,5 +161,5 @@ Work completed:
 4. Make this page live without making folders and content public.
 5. Maintain zyne brand, header, footer, navigation etc.
 6. Apply useful design concepts that were extracted from the 2 websites.
-7. Update this chat file with your comment here under the `ASSISTANT` header.
-8. Then reply `DONE` in the chat conversation so I know this file has new comment.
+7. Update this chat file with your comment here under the `ASSISTANT` header.
+8. Then reply `DONE` in the chat conversation so I know this file has new comment.
