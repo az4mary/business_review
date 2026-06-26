@@ -3,6 +3,118 @@
 
 # ASSISTANT
 
+Implemented.
+
+Added local screenshot capture support so the screenshots can be taken from your own machine/browser instead of from GitHub Actions.
+
+Created:
+
+- `scripts/capture-property-listings-local.mjs`
+- `package.json`
+
+Updated:
+
+- `.gitignore`
+
+Why this should avoid the repeated `confirm you are a human` problem:
+
+- The script runs in a visible, headful browser on your local machine.
+- It uses a persistent local Playwright profile:
+  - `.playwright-local-profile/property-listings`
+- It pauses before every screenshot so you can manually resolve human checks, close popups, sign in, or adjust the page state before capture.
+- The same local profile is reused between captures, so accepted cookies / resolved checks / login state can persist locally.
+
+Default output folder:
+
+- `assets/property-listing-screenshots-local/`
+
+On your machine, when run from:
+
+```powershell
+D:\PROJECTS\GITHUB\az4mary\zyne.store
+```
+
+that resolves to:
+
+```powershell
+D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\property-listing-screenshots-local
+```
+
+Run locally from PowerShell:
+
+```powershell
+cd /d D:\PROJECTS\GITHUB\az4mary\zyne.store
+npm install
+npx playwright install chromium
+npm run capture:property-local
+```
+
+What it captures:
+
+- HAR listing:
+  - `https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299`
+- Zillow listing:
+  - `https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/`
+- Devices:
+  - Desktop: `1920x1080`, device scale factor `2`
+  - Tablet: `1024x1366`, device scale factor `2`
+  - Mobile: `430x932`, device scale factor `3`
+
+Output files:
+
+```text
+assets/property-listing-screenshots-local/01-har/01-har-desktop.png
+assets/property-listing-screenshots-local/01-har/01-har-tablet.png
+assets/property-listing-screenshots-local/01-har/01-har-mobile.png
+assets/property-listing-screenshots-local/02-zillow/02-zillow-desktop.png
+assets/property-listing-screenshots-local/02-zillow/02-zillow-tablet.png
+assets/property-listing-screenshots-local/02-zillow/02-zillow-mobile.png
+assets/property-listing-screenshots-local/capture-manifest.json
+```
+
+Manual process:
+
+1. Run the npm command.
+2. A visible browser opens for the first URL/device.
+3. Resolve any `confirm you are human`, login, consent, or popup state manually.
+4. Return to the terminal and press Enter.
+5. The script scrolls the page to load lazy content, returns to the top, and pauses again for final review.
+6. Press Enter again to save the screenshot.
+7. Repeat for each device/page.
+
+Optional custom output folder:
+
+```powershell
+$env:OUTPUT_DIR="D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\property-listing-screenshots-local"
+npm run capture:property-local
+```
+
+Optional use installed Chrome/Edge channel:
+
+```powershell
+$env:PW_CHANNEL="chrome"
+npm run capture:property-local
+```
+
+Optional custom URLs:
+
+```powershell
+npm run capture:property-local -- "https://example.com/page-1" "https://example.com/page-2"
+```
+
+Web search / implementation references used:
+
+- Official Playwright screenshots documentation confirms `page.screenshot({ fullPage: true })` for full-page screenshots.
+- Official Playwright BrowserType documentation supports persistent browser contexts, which is why the script uses a persistent local profile for cookies/session state.
+- Official Playwright locator documentation recommends resilient user-facing locators such as role/text locators, which the script uses for close/consent controls.
+
+Commits created:
+
+- `4e7bba4065c697d6eb2cde45bf40e4c304cfcf30` — added the local capture script.
+- `246c96ae6fa20851ac5b3510631a4f14b7dfed66` — changed default local output to the `assets` folder.
+- `01a26ef4fef74506e3727c0c6bc8e2bce2486a9b` — added the npm script and Playwright dependency.
+- `c41b6bce582d81210856c3362d26d444743a5876` — ignored local browser profile / local capture artifacts.
+
 </aside>
 
 ---
@@ -288,7 +400,7 @@ Important boundary:
 <aside>
 👤
 
-# ARCHITECT
+# ARCHITECH
 
 </aside>
 
