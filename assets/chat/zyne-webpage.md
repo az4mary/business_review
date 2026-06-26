@@ -3,6 +3,27 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Use exact same header and footer you use for normal product page.
+2. I will provide the images next.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Implemented the 7101 Wendemere St property detail page as a generated live route at `/homedetail/7101-wendemere-st-houston-tx-77088/`.
 
 Work completed:
