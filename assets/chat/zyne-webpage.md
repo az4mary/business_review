@@ -3,6 +3,27 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Read this  chat End of Page to Line 1, adhere to the rules of engagement and let me know if you can resolve the pending issues. Start by listing the pending unresolved request from Architect.
+2. zyne.store is hosted on github pages and the main project files are deployed from here https://github.com/az4mary/zyne.store/tree/main/projects/zyne-homepage
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Resolved the current property route problems after re-reading the rules of engagement.
 
 Changed:
