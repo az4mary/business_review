@@ -6,6 +6,7 @@ on:
     paths:
       - "projects/zyne-homepage/**"
       - "assets/catalog/**"
+      - "homedetail/**"
       - ".github/workflows/zyne-homepage-pages.yml"
       - "index.html"
       - "404.html"
