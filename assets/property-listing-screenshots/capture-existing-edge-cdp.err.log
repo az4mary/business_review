@@ -1,0 +1,9 @@
+file:///D:/PROJECTS/GITHUB/az4mary/zyne.store/scripts/capture-property-listings-local.mjs:245
+      throw new Error(`No existing tab matched ${target.url}`);
+            ^
+
+Error: No existing tab matched https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299
+    at captureOne (file:///D:/PROJECTS/GITHUB/az4mary/zyne.store/scripts/capture-property-listings-local.mjs:245:13)
+    at async file:///D:/PROJECTS/GITHUB/az4mary/zyne.store/scripts/capture-property-listings-local.mjs:356:7
+
+Node.js v24.14.0
