@@ -3,6 +3,19 @@
 
 # ASSISTANT
 
+Compared the property route shell against the normal generated product-page shell and updated the property generator again.
+
+Changed:
+
+- Product-page shell structure now matches the generated product-page layout: skip link, header, `main id="main-content"`, and footer placement.
+- Header markup now matches the product-page header/nav structure exactly.
+- Footer markup now matches the product-page footer text exactly.
+- Expanded the gallery from five slots to seven slots for the seven house images under `/homedetail/7101-wendemere-st-houston-tx-77088/images/`.
+- Added a listing-style gallery layout with one large featured image and six supporting tiles.
+- Added click-to-open lightbox behavior for zoomed viewing.
+- Added Close, Previous, Next, Escape, and left/right keyboard support.
+- Added filename fallback candidates for common image naming patterns so the gallery can resolve the seven provided files from the images directory during page load.
+
 </aside>
 
 ---
