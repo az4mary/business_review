@@ -58,7 +58,10 @@ const devices = [
   },
 ];
 
-const outputDir = process.env.OUTPUT_DIR || 'local-captures/property-listing-screenshots';
+// Default local output is inside the repo assets folder.
+// From D:\PROJECTS\GITHUB\az4mary\zyne.store, this resolves to:
+// D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\property-listing-screenshots-local
+const outputDir = process.env.OUTPUT_DIR || 'assets/property-listing-screenshots-local';
 const profileDir = process.env.PLAYWRIGHT_PROFILE_DIR || '.playwright-local-profile/property-listings';
 const manualMode = process.env.AUTO !== '1';
 const browserChannel = process.env.PW_CHANNEL || undefined;
