@@ -3,6 +3,57 @@
 
 # ASSISTANT
 
+Implemented.
+
+Created a new GitHub Actions workflow:
+
+- `.github/workflows/capture-property-listing-screenshots.yml`
+
+What it does:
+
+- Captures screenshots for both requested listing URLs:
+  - `https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299`
+  - `https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/`
+- Captures three device profiles:
+  - Desktop: `1920x1080`, device scale factor `2`
+  - Tablet: `1024x1366`, device scale factor `2`
+  - Mobile: `430x932`, device scale factor `3`
+- Saves output in a new assets folder:
+  - `assets/property-listing-screenshots/`
+- Writes screenshots by source/device:
+  - `assets/property-listing-screenshots/01-har/01-har-desktop.png`
+  - `assets/property-listing-screenshots/01-har/01-har-tablet.png`
+  - `assets/property-listing-screenshots/01-har/01-har-mobile.png`
+  - `assets/property-listing-screenshots/02-zillow/02-zillow-desktop.png`
+  - `assets/property-listing-screenshots/02-zillow/02-zillow-tablet.png`
+  - `assets/property-listing-screenshots/02-zillow/02-zillow-mobile.png`
+- Writes QA metadata:
+  - `assets/property-listing-screenshots/capture-manifest.json`
+  - `assets/property-listing-screenshots/capture-issues.json`
+  - `assets/property-listing-screenshots/capture-failures.json`
+- Commits generated screenshots back to the repository when output changes.
+- Uploads the screenshot folder as a GitHub Actions artifact named:
+  - `property-listing-screenshots`
+
+Web search / implementation references used:
+
+- Playwright screenshot documentation confirms `page.screenshot({ fullPage: true })` for full-page screenshots.
+- Playwright locator documentation recommends resilient locators such as role and text locators for interacting with visible page controls.
+- The workflow uses `actions/upload-artifact@v4` to retain generated screenshot output as a workflow artifact.
+
+Workflow behavior:
+
+- Uses full-page screenshots first, then falls back to viewport screenshots if full-page capture fails.
+- Uses Houston-aligned locale, timezone, geolocation, and `Accept-Language` settings for both pages.
+- Waits for page commit, DOM readiness, load/network idle, fonts, images, layout stability, and lazy-loaded content before final screenshot.
+- Attempts to close common overlays such as sign-in, app prompts, cookie/consent modals, close buttons, `x` buttons, and verification/access-control overlays when they are closeable.
+- Still captures screenshots whenever a page renders, even if a persistent popup, login prompt, verification state, or access-control state remains visible.
+- Records persistent issues as warnings/metadata instead of failing the workflow solely because the page state is imperfect.
+
+Commit created:
+
+- `9cd8d76a4e6a7111633755e6574c9d76a0496625`
+
 </aside>
 
 ---
