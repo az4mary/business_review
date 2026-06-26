@@ -11,6 +11,7 @@
     "validate:prd1.1": "node scripts/validate-prd-1-1.mjs",
     "validate:prd1.2a": "node scripts/validate-prd-1-2a.mjs",
     "prebuild": "npm run validate:prd1.2a",
+    "postbuild": "node scripts/generate-property-route.mjs",
     "report:catalog-migration": "node scripts/report-catalog-migration.mjs",
     "build": "npm run validate:catalog && npm run validate:prd1.1 && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs && node scripts/generate-legal-layer.mjs && node scripts/generate-seo-layer.mjs && npm run validate:routes",
     "preview": "vite preview"
