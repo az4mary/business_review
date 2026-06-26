@@ -1,0 +1,8 @@
+﻿Set-Location 'D:\PROJECTS\GITHUB\az4mary\zyne.store'
+$env:OUTPUT_DIR='assets/property-listing-screenshots'
+$env:DEVICE='desktop'
+$env:CDP_ENDPOINT='http://127.0.0.1:9222'
+$env:SLOW_SCROLL='1'
+$env:SETTLE_MS='12000'
+$env:AUTO='1'
+& 'C:\Users\USER\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' scripts/capture-property-listings-local.mjs 'https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299'
