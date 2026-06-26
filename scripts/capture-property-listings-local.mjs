@@ -65,6 +65,12 @@ const outputDir = process.env.OUTPUT_DIR || 'assets/property-listing-screenshots
 const profileDir = process.env.PLAYWRIGHT_PROFILE_DIR || '.playwright-local-profile/property-listings';
 const manualMode = process.env.AUTO !== '1';
 const browserChannel = process.env.PW_CHANNEL || undefined;
+const cdpEndpoint = process.env.CDP_ENDPOINT || undefined;
+const settleMs = Number.parseInt(process.env.SETTLE_MS || '5000', 10);
+const deviceFilter = process.env.DEVICE;
+const selectedDevices = deviceFilter
+  ? devices.filter((device) => device.suffix === deviceFilter || device.name.toLowerCase() === deviceFilter.toLowerCase())
+  : devices;
 const rl = readline.createInterface({ input, output });
 const manifest = {
   generatedAt: new Date().toISOString(),
@@ -72,6 +78,7 @@ const manifest = {
   profileDir,
   manualMode,
   targets,
+  devices: selectedDevices.map((device) => device.name),
   captures: [],
   issues: [],
 };
@@ -185,7 +192,7 @@ async function autoScroll(page) {
           return;
         }
         lastScrollY = window.scrollY;
-      }, 175);
+      }, process.env.SLOW_SCROLL === '1' ? 1200 : 175);
     });
   }).catch(() => {});
   await waitForImagesAndFonts(page);
@@ -224,7 +231,26 @@ async function captureOne(target, device) {
   fs.mkdirSync(targetDir, { recursive: true });
 
   const outputPath = path.join(targetDir, `${target.slug}-${device.suffix}.png`);
-  const context = await chromium.launchPersistentContext(profileDir, {
+  let browser = null;
+  let context = null;
+  let page = null;
+
+  if (cdpEndpoint) {
+    browser = await chromium.connectOverCDP(cdpEndpoint);
+    const pages = browser.contexts().flatMap((candidateContext) => candidateContext.pages());
+    page = pages.find((candidatePage) => candidatePage.url() === target.url)
+      || pages.find((candidatePage) => candidatePage.url().includes(new URL(target.url).pathname))
+      || pages[0];
+
+    if (!page) {
+      throw new Error('No existing Edge tab was available through CDP');
+    }
+
+    context = page.context();
+    await page.bringToFront();
+    await page.setViewportSize(device.viewport);
+  } else {
+    context = await chromium.launchPersistentContext(profileDir, {
     headless: false,
     channel: browserChannel,
     viewport: device.viewport,
@@ -237,18 +263,24 @@ async function captureOne(target, device) {
     geolocation: { latitude: 29.7604, longitude: -95.3698 },
     permissions: ['geolocation'],
     extraHTTPHeaders: { 'Accept-Language': 'en-US,en;q=0.9' },
-  });
+    });
 
-  const page = context.pages()[0] || await context.newPage();
+    page = context.pages()[0] || await context.newPage();
+  }
   page.setDefaultTimeout(45000);
   page.setDefaultNavigationTimeout(120000);
 
   try {
     console.log(`\nOpening ${target.name} / ${device.name}: ${target.url}`);
-    const response = await page.goto(target.url, { waitUntil: 'commit', timeout: 120000 }).catch((error) => {
-      manifest.issues.push({ site: target.name, device: device.name, type: 'navigation-warning', message: error.message });
-      return null;
-    });
+    let response = null;
+    if (!cdpEndpoint || page.url() !== target.url) {
+      response = await page.goto(target.url, { waitUntil: 'commit', timeout: 120000 }).catch((error) => {
+        manifest.issues.push({ site: target.name, device: device.name, type: 'navigation-warning', message: error.message });
+        return null;
+      });
+    } else {
+      console.log(`Using existing Edge tab: ${page.url()}`);
+    }
 
     await page.waitForLoadState('domcontentloaded', { timeout: 45000 }).catch(() => {});
     await page.waitForLoadState('load', { timeout: 60000 }).catch(() => {});
@@ -259,7 +291,11 @@ async function captureOne(target, device) {
 
     await waitForImagesAndFonts(page);
     await autoScroll(page);
+    await sleep(Number.isFinite(settleMs) ? settleMs : 5000);
+    await waitForImagesAndFonts(page);
     await stabilizeAtTop(page);
+    await sleep(Number.isFinite(settleMs) ? settleMs : 5000);
+    await waitForImagesAndFonts(page);
 
     await prompt(`Final check for ${target.name} ${device.name}. Leave the page exactly as it should be captured.`);
 
@@ -297,7 +333,9 @@ async function captureOne(target, device) {
     manifest.issues.push(issue);
     console.error(`Capture failed for ${target.name} / ${device.name}: ${issue.message}`);
   } finally {
-    await context.close();
+    if (!cdpEndpoint) {
+      await context.close();
+    }
   }
 }
 
@@ -308,10 +346,14 @@ try {
   console.log('Local property listing screenshot capture');
   console.log(`Output directory: ${outputDir}`);
   console.log(`Persistent browser profile: ${profileDir}`);
+  console.log(`CDP endpoint: ${cdpEndpoint || 'off'}`);
   console.log(`Manual mode: ${manualMode ? 'on' : 'off'}\n`);
+  if (deviceFilter && selectedDevices.length === 0) {
+    throw new Error(`No devices matched DEVICE=${deviceFilter}`);
+  }
 
   for (const target of targets) {
-    for (const device of devices) {
+    for (const device of selectedDevices) {
       await captureOne(target, device);
     }
   }
