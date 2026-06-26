@@ -1,0 +1,247 @@
+{
+  "generatedAt": "2026-06-26T16:36:50.801Z",
+  "outputDir": "assets/property-listing-screenshots",
+  "note": "High-resolution responsive first-page/full-page captures for HAR and Zillow listing pages. Persistent popups, app banners, login walls, or verification states are recorded while screenshots are still captured whenever rendering is possible.",
+  "captures": [
+    {
+      "site": "HAR",
+      "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "finalUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "device": "Desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/01-har/01-har-desktop.png",
+      "httpStatus": 403,
+      "title": "Access to this page has been denied",
+      "documentSize": {
+        "width": 1920,
+        "height": 1080,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
+      },
+      "issues": [
+        {
+          "site": "HAR",
+          "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+          "device": "Desktop",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[class*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Access to this page has been denied",
+            "url": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+            "textSample": "Before we continue...\nPress & Hold to confirm you are\na human (and not a bot).\nReference ID 3cac6509-717d-11f1-a458-c055cfcc4aff"
+          }
+        }
+      ]
+    },
+    {
+      "site": "HAR",
+      "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "finalUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "device": "Tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/01-har/01-har-tablet.png",
+      "httpStatus": 200,
+      "title": "7101 Wendemere St, Houston, TX 77088 - HAR.com",
+      "documentSize": {
+        "width": 1024,
+        "height": 13197,
+        "scrollY": 6,
+        "imageCount": 175,
+        "completeImageCount": 156
+      },
+      "issues": [
+        {
+          "site": "HAR",
+          "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+          "device": "Tablet",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[class*=\"captcha\" i]",
+            "patternMatch": "/verify/i",
+            "title": "7101 Wendemere St, Houston, TX 77088 - HAR.com",
+            "url": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+            "textSample": "Privacy Promise\n\nWelcome! We’re glad you’re here and want you to know that we respect your privacy and your right to control how we collect, use, and share your personal data. Please read our Privacy Policy to learn about our privacy practices.\n\nConfirm\nCustomize Settings\nReject All\nBuy/Rent\nHome Values\nExplore\nAgents\nMortgage\nMore...\n0 \nSign In \nInfo/audio Map Lot Neighborhood Analytics School Broker\nTexasHarrisHouston77088Highland Acre HomesDetails\nShow all photos\n7 photos\n$1,495/month\nFor Rent\nActive\n7101 Wendemere St, Houston, TX 77088 View Map, Get Directions\nCurrency converter\nRental Application\nSTART NOW\n3 Bedroom(s)\n1 Full Bath(s)\n1,064 Sqft\n7,250 Lot Sqft\nRental - Single Family Detached\n24 Day(s) on Market\nlarge lotno HOAnear schoolsclose to amenitiesspacious bedroomswalk-in close"
+          }
+        }
+      ]
+    },
+    {
+      "site": "HAR",
+      "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "finalUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+      "device": "Mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/01-har/01-har-mobile.png",
+      "httpStatus": 403,
+      "title": "Access to this page has been denied",
+      "documentSize": {
+        "width": 430,
+        "height": 932,
+        "scrollY": 0,
+        "imageCount": 0,
+        "completeImageCount": 0
+      },
+      "issues": [
+        {
+          "site": "HAR",
+          "requestedUrl": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+          "device": "Mobile",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[class*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Access to this page has been denied",
+            "url": "https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299",
+            "textSample": "Before we continue...\nPress & Hold to confirm you are\na human (and not a bot).\nReference ID d5b26a1b-717d-11f1-9ee6-c055cfcc4aff"
+          }
+        }
+      ]
+    },
+    {
+      "site": "Zillow",
+      "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "finalUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "device": "Desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/02-zillow/02-zillow-desktop.png",
+      "httpStatus": 403,
+      "title": "Access to this page has been denied",
+      "documentSize": {
+        "width": 1920,
+        "height": 1080,
+        "scrollY": 0,
+        "imageCount": 1,
+        "completeImageCount": 1
+      },
+      "issues": [
+        {
+          "site": "Zillow",
+          "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+          "device": "Desktop",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[class*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Access to this page has been denied",
+            "url": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+            "textSample": "Press & Hold to confirm you are\na human (and not a bot).\nReference ID fe7b0ed5-717d-11f1-982a-a3a13a68d0ea"
+          }
+        }
+      ]
+    },
+    {
+      "site": "Zillow",
+      "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "finalUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "device": "Tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/02-zillow/02-zillow-tablet.png",
+      "httpStatus": 200,
+      "title": "7101 Wendemere St, Houston, TX 77088 | Zillow",
+      "documentSize": {
+        "width": 1024,
+        "height": 1366,
+        "scrollY": 0,
+        "imageCount": 34,
+        "completeImageCount": 34
+      },
+      "issues": [
+        {
+          "site": "Zillow",
+          "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+          "device": "Tablet",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "iframe[src*=\"recaptcha\" i]",
+            "patternMatch": null,
+            "title": "7101 Wendemere St, Houston, TX 77088 | Zillow",
+            "url": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+            "textSample": "Back to search\nSave\nShare\nHide\nMore\nHouse for rent\nSee all 7 photos\n$1,495/mo\n\nFees may apply\n\n7101 Wendemere St, Houston, TX 77088\n3\nbeds\n1\nbaths\n1,064\nsqft\n\nPrice may not include required fees and charges.\nLearn more\n|\nCost calculator\n\nSinglefamily\nAvailable now\nElectric, ceiling fan\nNatural gas\nContact manager for more details about this home.\nWhat's special\nTEXAS-SIZE LOT\nCOVERED PORCH\nCozy bungalow situated on a Texas-size lot with NO HOA & conveniently located near Winzer Park, Drew Academy, Anderson Academy, tons of shopping/dining, & offers quick access to I45. This home needs cosmetic work and is ready for a new owner or investors personal touch. A covered porch leads inside the home and find spacious bedrooms w/ walk in closets, a primary bedroom w/ an en-suite bathroom, open kit"
+          }
+        }
+      ]
+    },
+    {
+      "site": "Zillow",
+      "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "finalUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+      "device": "Mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "locale": "en-US",
+      "timezoneId": "America/Chicago",
+      "outputPath": "assets/property-listing-screenshots/02-zillow/02-zillow-mobile.png",
+      "httpStatus": 403,
+      "title": "Access to this page has been denied",
+      "documentSize": {
+        "width": 430,
+        "height": 932,
+        "scrollY": 0,
+        "imageCount": 1,
+        "completeImageCount": 1
+      },
+      "issues": [
+        {
+          "site": "Zillow",
+          "requestedUrl": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+          "device": "Mobile",
+          "type": "verification-detected",
+          "message": "Verification or access-control indicators remained visible. Screenshot will still be captured.",
+          "verification": {
+            "detected": true,
+            "selectorMatch": "[class*=\"captcha\" i]",
+            "patternMatch": null,
+            "title": "Access to this page has been denied",
+            "url": "https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/",
+            "textSample": "Press & Hold to confirm you are\na human (and not a bot).\nReference ID 4fd39e2f-717e-11f1-8b5a-48cbc9ecc8e8"
+          }
+        }
+      ]
+    }
+  ]
+}
