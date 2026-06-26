@@ -3,6 +3,16 @@
 
 # ASSISTANT
 
+Updated the property route generator to use the exact same header and footer markup as the normal generated product pages.
+
+Changed:
+
+- Header logo now uses `/assets/zyne-logo.png`.
+- Header navigation now matches product-page navigation: Services, Visibility, Brand, Business, AI, Conversion, Intelligence, Delivery.
+- Footer now matches the product-page footer text exactly.
+- Kept the property page generated into `/homedetail/7101-wendemere-st-houston-tx-77088/` during build.
+- Waiting for the property images the architect said will be provided next.
+
 </aside>
 
 ---
