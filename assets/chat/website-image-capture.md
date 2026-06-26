@@ -3,6 +3,26 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. I dont understand why you always run into these `confirm you are a human` , I guess you perform too many action at once - you should know better. Anyways provide me the scripts/code or something to take the screenshots locally from my end.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Implemented.
 
 Created a new GitHub Actions workflow:
