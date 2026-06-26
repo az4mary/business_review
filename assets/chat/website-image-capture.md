@@ -3,6 +3,32 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. URLS
+    - https://www.har.com/homedetail/7101-wendemere-st-houston-tx-77088/11143299
+    - https://www.zillow.com/homedetails/7101-Wendemere-St-Houston-TX-77088/27755092_zpid/
+2. Create a new github workflow that will take screenshots of the **first page** of both websites in the list.
+3. **Devices** - Desktop, Mobile and Tablet.
+4. The images will be used for Visual **pixel-level** QA Pass/Inspection so they should be high resolution.
+5. Create and save them in a new folder in https://github.com/az4mary/zyne.store/tree/main/assets
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Updated after reviewing the latest saved job log.
 
 Checked log:
