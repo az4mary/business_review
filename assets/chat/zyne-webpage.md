@@ -14,7 +14,7 @@
 
 </aside>
 
-1. Read this chat including the rules of engagement and let me know if you can resolve the current problems.
+1. Read this chat including the rules of engagement, adhere to rules and let me know if you can resolve the current problems.
 2. zyne.store is hosted on github pages and the main project files are deployed from here https://github.com/az4mary/zyne.store/tree/main/projects/zyne-homepage
 
 ---
