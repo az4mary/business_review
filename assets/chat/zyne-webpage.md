@@ -3,26 +3,6 @@
 
 # ASSISTANT
 
-Pending unresolved request from Architect:
-
-1. Verify against the actual deployed project source at `projects/zyne-homepage`, not root assumptions.
-2. Read the thread from the bottom to the top before acting.
-3. Confirm whether the Wendemere property page is using the same product-page shell order, header/navigation markup, and footer text as the normal generated product pages.
-4. Confirm the seven property images under `homedetail/7101-wendemere-st-houston-tx-77088/images` are discovered at build time and copied into the GitHub Pages artifact.
-5. Confirm the property route stays live through the GitHub Pages build without committing generated `dist` content.
-6. Confirm the gallery uses a property-listing layout with zoom/lightbox controls.
-
-Can resolve: yes.
-
-Verification made before changing anything:
-
-- `projects/zyne-homepage/scripts/generate-routes.mjs` uses the product shell order: skip link, header, `main id="main-content"`, footer.
-- `projects/zyne-homepage/scripts/generate-property-route.mjs` currently uses the same shell order and matching product-page header/footer text, with the lightbox kept inside `main`.
-- The property generator discovers image files from `../../homedetail/7101-wendemere-st-houston-tx-77088/images`, copies them into `dist/homedetail/7101-wendemere-st-houston-tx-77088/images`, and renders up to seven sorted images.
-- `.github/workflows/zyne-homepage-pages.yml` includes `homedetail/**` in the deploy trigger and uploads `projects/zyne-homepage/dist`.
-
-No additional code change is required from the files inspected. The remaining safe action here is to keep this chat comment updated and avoid reworking the route without first comparing it to `generate-routes.mjs`.
-
 </aside>
 
 ---
