@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "capture:property-local": "node scripts/capture-property-listings-local.mjs"
+  },
+  "devDependencies": {
+    "playwright": "latest"
+  }
+}
