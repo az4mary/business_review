@@ -1,0 +1,6 @@
+Local property listing screenshot capture
+Output directory: assets/property-listing-screenshots
+Persistent browser profile: .playwright-local-profile/property-listings
+CDP endpoint: http://127.0.0.1:9222
+Manual mode: off
+
