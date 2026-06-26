@@ -7,6 +7,8 @@ dist/
 .grid-*/
 .homepage-*/
 .measure-*/
+.playwright-local-profile/
+local-captures/
 *-qa.png
 qa-*.png
 catalog-*.png
