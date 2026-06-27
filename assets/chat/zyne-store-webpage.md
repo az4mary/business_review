@@ -15,6 +15,145 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Compare and contrast both images and make the necessary changes - attached.
+2. Do you have problems with obtaining similar icons? 
+
+The icons in the mockup are **conceptual**, not actual exported icon files. You should not try to “extract” them from the mockup image. Best practice is to rebuild them using a consistent SVG icon library.
+
+I recommend using **Lucide Icons** because they are clean, modern, lightweight, and easy to style in gold.
+
+Use:
+
+```bash
+npm install lucide-react
+```
+
+Then in React/Next.js:
+
+```tsx
+import {
+  Bed,
+  Bath,
+  Ruler,
+  Map,
+  CalendarCheck,
+  Fan,
+  Flame,
+  Home,
+  ShieldCheck,
+  GraduationCap,
+  KeyRound,
+  WashingMachine,
+  Grid2X2,
+  MapPin,
+  Heart,
+  Share2,
+  Printer,
+  ArrowRight
+} from "lucide-react";
+```
+
+Example icon styling:
+
+```tsx
+<Bed
+  size={28}
+  strokeWidth={1.6}
+  color="#C99A2E"
+/>
+```
+
+## Icon mapping for the property page
+
+Use these:
+
+| Page Item | Recommended Icon |
+| --- | --- |
+| Bedrooms | `Bed` |
+| Baths | `Bath` |
+| Interior sqft | `Ruler` |
+| Lot sqft | `Map` or `Grid2X2` |
+| Property type | `Home` |
+| Available now | `CalendarCheck` |
+| Electric ceiling fan | `Fan` |
+| Natural gas | `Flame` |
+| Large lot | `Grid2X2` |
+| No HOA | `ShieldCheck` |
+| Covered porch | `Home` |
+| Near schools | `GraduationCap` |
+| Walk-in closets | `KeyRound` |
+| Open layout | `Grid2X2` |
+| Washer / dryer hookups | `WashingMachine` |
+| Address/location | `MapPin` |
+| Save | `Heart` |
+| Share | `Share2` |
+| Print | `Printer` |
+| CTA arrow | `ArrowRight` |
+
+## Best practice for ZYNE
+
+Use **one icon system only** across the website. Do not mix random icon packs.
+
+Recommended style:
+
+```css
+.icon {
+  color: #C99A2E;
+  stroke-width: 1.5;
+}
+
+.icon-box {
+  border: 1px solid rgba(201, 154, 46, 0.35);
+  background: rgba(201, 154, 46, 0.06);
+}
+```
+
+Gold color palette:
+
+```css
+--zyne-gold: #C99A2E;
+--zyne-gold-light: #F1D37A;
+--zyne-gold-dark: #8A6118;
+--zyne-black: #050505;
+--zyne-panel: #0D0D0D;
+```
+
+## Better than screenshots
+
+You should implement icons as **inline SVG components**, not PNGs. SVG icons are better because they:
+
+- stay sharp on mobile and desktop
+- can change color with CSS
+- load faster
+- are accessible
+- scale cleanly across cards, buttons, and tables
+
+So the best workflow is:
+
+**Mockup → Lucide icon mapping → React SVG components → gold ZYNE styling**
+
+That will give you a consistent, premium icon system across the entire site. 
+
+Let me know if you need more guidance on using similar icons.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Action taken.
 
 - Read and followed the updated rules: I did not modify the rules and did not delete existing chat history/content.
