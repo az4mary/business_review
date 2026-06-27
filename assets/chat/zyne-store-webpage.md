@@ -15,6 +15,32 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Every space needs to be intentional - Compare and contrast the images again and make the necessary changes - attached.
+2. Stop stating the obvious and do not overwhelm me with useless or repeated  info.
+
+> 
+> 
+> - Did not install `lucide-react` and did not trigger/depend on a chat-side build; GitHub Actions should handle generated-artifact verification as noted.
+> - Preserved PRD 1.2A wiring and did not delete chat history or existing content.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Action taken.
 
 - Compared the two attached images again before changing code.
