@@ -28,7 +28,7 @@
 3. Validate that deployment of this property page is correctly configured against the PRD.
 4. Verify that ZYNE brand styling, favicon, header/nav urls, footer/nav urls, navigation language, and dark premium visual system in this property page are consistent with a normal product page e.g - https://zyne.store/services/executive-briefing/ (I just noticed that favicon is missing from this product page).
 5. Verify that useful design concepts/conversion/visitor education from popular property listing websites were taken into consideration in the design of this rental property page.
-6. Fix all these issues if they are available or just reply back if they already exist.
+6. Fix all these issues if they exist or just reply back if the property page aligns with the PRD.
 
 ---
 
