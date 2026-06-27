@@ -64,6 +64,9 @@ jobs:
       - name: Generate property route
         run: node scripts/generate-property-route.mjs
 
+      - name: Refine generated route
+        run: node scripts/polish-route.mjs
+
       - name: Generate SEO and crawler layer
         run: node scripts/generate-seo-layer.mjs
 
