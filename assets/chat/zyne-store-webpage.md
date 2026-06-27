@@ -12,6 +12,31 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Put a PAUSE to PRD 1.2A until further notice.
+2. A page was created for this rental property here https://github.com/az4mary/zyne.store/tree/main/homedetail/7101-wendemere-st-houston-tx-77088
+3. Validate that deployment of this property page is correctly configured based on PRD. 
+4. Verify that ZYNE brand styling, favicon, header/nav urls, footer/nav urls, navigation language, and dark premium visual system in this property page are consistent with a normal product page e.g - https://zyne.store/services/executive-briefing/ (I just noticed that favicon is missing from this product page).
+5. Verify that useful design concepts/conversion/visitor education from popular property listing websites were taken into consideration in the design of this rental property page.
+6. Fix all these issues if they are available or just reply back if they already exist.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Reviewed `zyne.store` and `projects/zyne-homepage`.
 
 Current understanding:
