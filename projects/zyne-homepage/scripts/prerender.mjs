@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { buildSchema, renderHomePage } from "../src/render.js";
+import { buildSchema, renderHomePage } from "../src/render-prd-1-2a.js";
 
 const path = new URL("../dist/index.html", import.meta.url);
 let html = await readFile(path, "utf8");
