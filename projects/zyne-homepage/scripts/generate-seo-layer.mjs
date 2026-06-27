@@ -57,6 +57,10 @@ const breadcrumbSchema = (route, title) => {
 
 const tagDefinitions = ({ route, title, description, canonical }) => [
   {
+    marker: 'name="robots"',
+    tag: '<meta name="robots" content="index,follow,max-image-preview:large">'
+  },
+  {
     marker: 'name="keywords"',
     tag: `<meta name="keywords" content="${escapeHtml(getSeoKeywords(route))}">`
   },
@@ -139,10 +143,11 @@ ${sitemapRoutes.map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`).joi
 `;
 await writeFile(join(distDir, 'sitemap.xml'), sitemap);
 await writeFile(join(distDir, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`);
+await writeFile(join(distDir, 'llms.txt'), `# ZYNE\n\nZYNE publishes crawlable, canonical, structured HTML pages for growth services, strategic intelligence, delivery services, and property detail pages.\n\nSitemap: ${siteUrl}/sitemap.xml\n\nCore pages:\n${sitemapRoutes.slice(0, 120).map((route) => `- ${siteUrl}${route}`).join('\n')}\n`);
 
 const missingImportantRoutes = importantRoutes.filter((route) => !sitemapRoutes.includes(route));
 if (missingImportantRoutes.length) {
   console.warn(`SEO keyword routes not currently generated: ${missingImportantRoutes.join(', ')}`);
 }
 
-console.log(`SEO layer generated: ${sitemapRoutes.length} sitemap URLs, robots.txt, social metadata, breadcrumbs, and keyword metadata.`);
+console.log(`SEO layer generated: ${sitemapRoutes.length} sitemap URLs, robots.txt, llms.txt, social metadata, breadcrumbs, and keyword metadata.`);
