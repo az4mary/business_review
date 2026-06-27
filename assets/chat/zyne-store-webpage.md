@@ -1,9 +1,9 @@
 ---
 
-# !!! MANDATORY RULES:
+# ⚠️ MANDATORY RULES:
 1. Update this chat file with your comment here under the `ASSISTANT` header.
 2. Then **ONLY** reply `DONE` and nothing else in the chat conversation so I know this file has been updated with your comment.
-3. Any deviation from this rule will lead to your termination without warning at anytime.
+3. Be 🎯 because any deviation from this rule will lead to your termination without warning at anytime.
 
 ---
 
