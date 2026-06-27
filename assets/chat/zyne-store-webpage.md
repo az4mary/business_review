@@ -15,6 +15,31 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Compare and contrast both images and make the necessary changes - attached.
+
+This is by design and not a bug so allow GitHub Actions to do its job: 
+
+> I updated repository source only. I cannot run the full GitHub Pages build/deploy from this chat environment. GitHub Actions/publish from `main` remains the final generated-artifact verification.
+> 
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Action taken.
 
 - Followed the required order: compared and contrasted the two attached images before making code changes.
