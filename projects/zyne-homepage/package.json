@@ -14,7 +14,7 @@
     "prebuild": "echo \"PRD 1.2A is paused until further notice; skipping PRD 1.2A prebuild validation.\"",
     "postbuild": "echo \"Build completed with PRD 1.2A paused.\"",
     "report:catalog-migration": "node scripts/report-catalog-migration.mjs",
-    "build": "npm run validate:catalog && npm run validate:prd1.1 && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs && node scripts/generate-legal-layer.mjs && node scripts/generate-property-route.mjs && node scripts/generate-seo-layer.mjs && node scripts/patch-generated-favicons.mjs && npm run validate:routes && npm run validate:property-route",
+    "build": "npm run validate:catalog && npm run validate:prd1.1 && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs && node scripts/generate-legal-layer.mjs && node scripts/generate-property-route.mjs && node scripts/polish-route.mjs && node scripts/generate-seo-layer.mjs && node scripts/patch-generated-favicons.mjs && npm run validate:routes && npm run validate:property-route",
     "preview": "vite preview"
   },
   "devDependencies": {
