@@ -15,6 +15,18 @@
 
 # ASSISTANT
 
+Action taken.
+
+- Read and followed the updated rules: I did not modify the rules and did not delete existing chat history/content.
+- Implemented the attached property-page mock-up direction in `projects/zyne-homepage/scripts/generate-property-route.mjs`.
+- The generated Wendemere page now follows the attached dark/gold ZYNE property layout: crest/logo-style header, premium nav, breadcrumb/action row, large photo grid, right-side summary card, Schedule a Viewing and Request to Apply CTAs, stat strip, What's Special, Property Overview, Home Features, Neighborhood Highlights, final CTA, and footer.
+- Preserved implemented PRD 1.2A homepage wiring. I did not disable or remove PRD 1.2A.
+- Updated `package.json` so the property route is generated before the SEO layer during `npm run build`, while leaving `prebuild` as `npm run validate:prd1.2a` and keeping the existing `postbuild` property route generation.
+- Added non-visible SEO/crawler metadata inside the property page generator: canonical URL, favicon, index/follow robots metadata, Open Graph/Twitter metadata, and JSON-LD. No visible SEO explainer block was added.
+
+Limitations:
+- I updated the repository source, but I cannot run the full GitHub Pages build/deploy from this chat environment. GitHub Actions/publish from `main` remains the final generated-artifact verification.
+
 </aside>
 
 ---
