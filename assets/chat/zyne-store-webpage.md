@@ -17,6 +17,28 @@
 
 </aside>
 
+No. I am not programmed to delete or overwrite your work.
+
+The issue is the **GitHub file-update mechanism** I have available: `update_file` replaces the **entire file content**. It is not a true “append one paragraph” operation.
+
+That means there are two ways to update `assets/chat/zyne-store-webpage.md`:
+
+1. **Safe path:** fetch the complete current file, append the new assistant note, then replace the file with the complete original content plus the new note.
+2. **Unsafe path:** reconstruct the file from partial chunks and send that as the replacement.
+
+The unsafe path is what caused earlier damage: if even one chunk is missing, truncated, stale, or copied wrong, the replacement file can lose chat history. That is why I stopped and said I would not risk deleting/truncating the chat file again.
+
+The phrase “reconstructing the whole file from chunks” refers to that unsafe method. It should **not** be used for this file unless the full file content is definitely available and complete.
+
+Correct rule going forward:
+
+* I must first fetch the latest Architect comment.
+* I must inspect the attached image(s) when relevant.
+* I must make the repo change.
+* I must update the chat file only when I have a complete, verified copy of the current file.
+* I must not reply `DONE` unless the chat-file update actually succeeds.
+* I must not reconstruct from incomplete chunks.
+
 ---
 
 <aside>
