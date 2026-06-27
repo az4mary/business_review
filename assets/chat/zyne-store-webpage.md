@@ -15,6 +15,22 @@
 
 # ASSISTANT
 
+Action taken.
+
+- Updated the generated Wendemere route flow so the product-page-style footer/legal nav is restored instead of the custom three-column property footer.
+- Removed the visible `SEO and AI crawler readiness` block.
+- Removed the visible `Verification note` block.
+- Added `scripts/polish-route.mjs` to correct the gallery after generation.
+- Corrected the gallery labels to match the visible sorted image order: Bathroom, Bedroom, Living room, Dining area, Front exterior, Kitchen, Bedroom.
+- Adjusted lightbox controls so desktop controls sit outside the image frame, with mobile overrides.
+- Wired `polish-route.mjs` into `npm run build` after `generate-property-route.mjs` and before SEO generation.
+- Wired the same polish step into the validation workflow before SEO generation.
+- Updated `validate-property-route.mjs` to catch regressions: required product footer text/legal links, corrected gallery labels, and forbidden visible SEO/verification/custom-footer copy.
+- Removed temporary test scripts created during connector write troubleshooting.
+
+Limitation:
+- I could update the repository source and validation rules, but I cannot run the full GitHub Pages build from this chat environment. The GitHub Actions validation/publish run from `main` is still the final artifact check.
+
 </aside>
 
 ---
