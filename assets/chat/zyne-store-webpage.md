@@ -15,6 +15,28 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. OMG! You love to delete rather than making progress even though I am still trying to fix your incomplete work, you are deleting stuff behind my back. Why did you delete this chat history? Are you so dumb and don’t understand the need for chat history to be maintained??????????????
+2. When I said put a PAUSE to PRD 1.2A I didn’t say delete already implemented PRD 1.2A, what I meant was let us do something else for now and we will come back to complete PRD 1.2A. How the hell do you reason??????????
+3. Make a complete list of everything you have deleted and restore them back immediately - restore everything back to when you made your 1st commit.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Action taken.
 
 - Updated the generated Wendemere route flow so the product-page-style footer/legal nav is restored instead of the custom three-column property footer.
