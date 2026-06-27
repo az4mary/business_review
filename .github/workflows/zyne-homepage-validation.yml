@@ -5,6 +5,7 @@ on:
     paths:
       - "projects/zyne-homepage/**"
       - "assets/catalog/**"
+      - "homedetail/**"
       - "assets/zyne-website-PRD-2-product-data-model.md"
       - "assets/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"
@@ -12,6 +13,7 @@ on:
     paths:
       - "projects/zyne-homepage/**"
       - "assets/catalog/**"
+      - "homedetail/**"
       - "assets/zyne-website-PRD-2-product-data-model.md"
       - "assets/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"
@@ -19,7 +21,7 @@ on:
 
 jobs:
   validate-homepage:
-    name: Validate PRD catalog and build
+    name: Validate catalog, build, SEO, and property route
     runs-on: ubuntu-latest
 
     defaults:
@@ -59,8 +61,14 @@ jobs:
       - name: Generate legal layer
         run: node scripts/generate-legal-layer.mjs
 
-      - name: Generate SEO layer
+      - name: Generate property route
+        run: node scripts/generate-property-route.mjs
+
+      - name: Generate SEO and crawler layer
         run: node scripts/generate-seo-layer.mjs
+
+      - name: Patch generated favicons
+        run: node scripts/patch-generated-favicons.mjs
 
       - name: Validate generated route content
         run: node scripts/validate-generated-routes.mjs
@@ -70,6 +78,9 @@ jobs:
 
       - name: Validate SEO layer
         run: node scripts/validate-seo-layer.mjs
+
+      - name: Validate property route
+        run: npm run validate:property-route
 
       - name: Strict catalog validation
         run: npm run validate:catalog:strict
