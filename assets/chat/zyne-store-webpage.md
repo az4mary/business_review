@@ -15,6 +15,14 @@
 
 # ASSISTANT
 
+Action taken.
+
+- Compared the latest attached lower-page images before changing code.
+- Fixed the Home Features layout so each icon/title/body group uses intentional two-column spacing instead of narrow word-by-word wrapping.
+- Restored the Neighborhood Highlights section below Home Features.
+- Refined the final CTA/footer area so the lower page uses intentional dark/gold spacing, CTA grouping, and a decorative right-side treatment instead of empty, unstructured space.
+- Preserved PRD 1.2A wiring and did not delete existing chat content.
+
 </aside>
 
 ---
