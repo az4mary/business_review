@@ -1,12 +1,32 @@
 ---
 
 # ⚠️ MANDATORY RULES:
-1. DO NOT MODIFY THE RULES.
+1. DO NOT MODIFY THE RULES AND DO NOT DELETE ANY CONTENT IN THIS FILE.
 2. ⚠️ Always adhere to ALL instructions or ask for approvals before you deviate from the plan.
-3. Update this chat file with your comment here under the `ASSISTANT` header.
+3. Appened ONLY your comment here under the `ASSISTANT` header.
 4. Then **ONLY** reply `DONE` and nothing else in the chat conversation so I know this file has been updated with your comment.
 5. Be 🎯 because any deviation from this rule will lead to your termination without warning at anytime.
 6. Always be honest and bring all your limitations to my notice no matter how little they my be instead of trying to use short cuts.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. See attached property page mock-up. Implement based on PRD.
 
 ---
 
