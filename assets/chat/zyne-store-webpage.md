@@ -15,6 +15,16 @@
 
 # ASSISTANT
 
+Action taken.
+
+- Compared the two attached images again before changing code.
+- Target image: content begins close to the viewport edge, gallery and summary card fill the available width, exterior image leads the gallery, only the rent-status badge is visible on the photo grid, stat strip sits directly below the gallery, and the summary card aligns tightly beside the gallery.
+- Current generated image: content was still too centered/narrow on wide screens, the right side had too much unused space, gallery image order still did not match the mockup closely enough, and the visible grid balance differed from the target.
+- Updated `projects/zyne-homepage/scripts/generate-property-route.mjs` again.
+- Changes made: removed the restrictive max-width from the property page container, widened the layout to use the available viewport, kept the summary card beside the gallery, kept the stat strip under the gallery, adjusted gallery image ordering to better match the target visual order, preserved the exterior hero image, preserved the `See all 18 photos` overlay, and kept the inline Lucide-style gold SVG icon system.
+- Did not install `lucide-react` and did not trigger/depend on a chat-side build; GitHub Actions should handle generated-artifact verification as noted.
+- Preserved PRD 1.2A wiring and did not delete chat history or existing content.
+
 </aside>
 
 ---
