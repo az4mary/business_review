@@ -17,6 +17,26 @@
 
 </aside>
 
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. Compare and contrast the images again and make the necessary changes - attached.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
+</aside>
+
 I checked the latest Architect comment and updated `projects/zyne-homepage/scripts/generate-property-route.mjs`.
 
 I cannot truthfully reply `DONE` because the required chat-file append was blocked by the tool safety check.
