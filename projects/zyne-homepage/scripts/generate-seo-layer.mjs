@@ -56,54 +56,17 @@ const breadcrumbSchema = (route, title) => {
 };
 
 const tagDefinitions = ({ route, title, description, canonical }) => [
-  {
-    marker: 'name="robots"',
-    tag: '<meta name="robots" content="index,follow,max-image-preview:large">'
-  },
-  {
-    marker: 'name="keywords"',
-    tag: `<meta name="keywords" content="${escapeHtml(getSeoKeywords(route))}">`
-  },
-  {
-    marker: 'property="og:title"',
-    tag: `<meta property="og:title" content="${escapeHtml(title)}">`
-  },
-  {
-    marker: 'property="og:description"',
-    tag: `<meta property="og:description" content="${escapeHtml(description)}">`
-  },
-  {
-    marker: 'property="og:type"',
-    tag: '<meta property="og:type" content="website">'
-  },
-  {
-    marker: 'property="og:url"',
-    tag: `<meta property="og:url" content="${escapeHtml(canonical)}">`
-  },
-  {
-    marker: 'property="og:site_name"',
-    tag: '<meta property="og:site_name" content="ZYNE">'
-  },
-  {
-    marker: 'property="og:image"',
-    tag: `<meta property="og:image" content="${defaultImage}">`
-  },
-  {
-    marker: 'name="twitter:card"',
-    tag: '<meta name="twitter:card" content="summary_large_image">'
-  },
-  {
-    marker: 'name="twitter:title"',
-    tag: `<meta name="twitter:title" content="${escapeHtml(title)}">`
-  },
-  {
-    marker: 'name="twitter:description"',
-    tag: `<meta name="twitter:description" content="${escapeHtml(description)}">`
-  },
-  {
-    marker: 'name="twitter:image"',
-    tag: `<meta name="twitter:image" content="${defaultImage}">`
-  }
+  { marker: 'name="keywords"', tag: `<meta name="keywords" content="${escapeHtml(getSeoKeywords(route))}">` },
+  { marker: 'property="og:title"', tag: `<meta property="og:title" content="${escapeHtml(title)}">` },
+  { marker: 'property="og:description"', tag: `<meta property="og:description" content="${escapeHtml(description)}">` },
+  { marker: 'property="og:type"', tag: '<meta property="og:type" content="website">' },
+  { marker: 'property="og:url"', tag: `<meta property="og:url" content="${escapeHtml(canonical)}">` },
+  { marker: 'property="og:site_name"', tag: '<meta property="og:site_name" content="ZYNE">' },
+  { marker: 'property="og:image"', tag: `<meta property="og:image" content="${defaultImage}">` },
+  { marker: 'name="twitter:card"', tag: '<meta name="twitter:card" content="summary_large_image">' },
+  { marker: 'name="twitter:title"', tag: `<meta name="twitter:title" content="${escapeHtml(title)}">` },
+  { marker: 'name="twitter:description"', tag: `<meta name="twitter:description" content="${escapeHtml(description)}">` },
+  { marker: 'name="twitter:image"', tag: `<meta name="twitter:image" content="${defaultImage}">` }
 ];
 
 const injectMissingHeadTags = (html, context) => {
@@ -130,7 +93,6 @@ for (const file of files) {
   const title = titleOf(html);
   const description = descriptionOf(html);
   const canonical = canonicalOf(html, route);
-
   html = injectMissingHeadTags(html, { route, title, description, canonical });
   await writeFile(file, html);
 }
@@ -143,11 +105,7 @@ ${sitemapRoutes.map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`).joi
 `;
 await writeFile(join(distDir, 'sitemap.xml'), sitemap);
 await writeFile(join(distDir, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`);
-await writeFile(join(distDir, 'llms.txt'), `# ZYNE\n\nZYNE publishes crawlable, canonical, structured HTML pages for growth services, strategic intelligence, delivery services, and property detail pages.\n\nSitemap: ${siteUrl}/sitemap.xml\n\nCore pages:\n${sitemapRoutes.slice(0, 120).map((route) => `- ${siteUrl}${route}`).join('\n')}\n`);
 
 const missingImportantRoutes = importantRoutes.filter((route) => !sitemapRoutes.includes(route));
-if (missingImportantRoutes.length) {
-  console.warn(`SEO keyword routes not currently generated: ${missingImportantRoutes.join(', ')}`);
-}
-
-console.log(`SEO layer generated: ${sitemapRoutes.length} sitemap URLs, robots.txt, llms.txt, social metadata, breadcrumbs, and keyword metadata.`);
+if (missingImportantRoutes.length) console.warn(`SEO keyword routes not currently generated: ${missingImportantRoutes.join(', ')}`);
+console.log(`SEO layer generated: ${sitemapRoutes.length} sitemap URLs, robots.txt, social metadata, breadcrumbs, and keyword metadata.`);
