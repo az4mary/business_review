@@ -1,3 +1,4 @@
+---
 
 # MANDATORY RULES:
 1. Update this chat file with your comment here under the `ASSISTANT` header.
