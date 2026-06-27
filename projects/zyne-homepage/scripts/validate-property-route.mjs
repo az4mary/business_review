@@ -15,12 +15,23 @@ const required = [
   "Renter decision guide",
   "Visitor checklist",
   "data-lightbox",
+  "Bathroom",
+  "Front exterior",
+  "Product education and service details are provided on ZYNE",
+  "Privacy Policy",
+  "Cookie Policy",
   "href=\"/services/\"",
   "href=\"/privacy/\"",
   "href=\"/cookie-policy/\""
 ];
+const forbidden = [
+  "SEO and AI crawler readiness",
+  "Verification note",
+  "Premium property presentation and strategic execution"
+];
 
 const missing = required.filter((marker) => !html.includes(marker));
+for (const marker of forbidden) if (html.includes(marker)) missing.push(`remove ${marker}`);
 if (html.includes("noindex")) missing.push("remove noindex");
 if (!imageFiles.some((file) => [".jpg", ".jpeg", ".png", ".webp", ".avif"].some((ext) => file.toLowerCase().endsWith(ext)))) missing.push("property images");
 
