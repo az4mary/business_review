@@ -45,10 +45,10 @@ jobs:
           RUN_ATTEMPT: ${{ github.run_attempt }}
           COMMIT_SHA: ${{ github.sha }}
         run: |
-          node <<'NODE'
-          const { chromium } = require("playwright");
-          const { mkdirSync, writeFileSync } = require("node:fs");
-          const path = require("node:path");
+          node --input-type=module <<'NODE'
+          import { chromium } from "playwright";
+          import { mkdirSync, writeFileSync } from "node:fs";
+          import path from "node:path";
 
           const targetUrl = process.env.TARGET_URL || "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/";
           const waitSeconds = Number(process.env.WAIT_SECONDS || 300);
