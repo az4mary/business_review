@@ -1,15 +1,16 @@
 Action taken.
 
-Review files:
-1. projects/zyne-homepage/scripts/generate-property-route.mjs
-2. projects/zyne-homepage/dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
-3. projects/zyne-homepage/scripts/property-icons.mjs
-4. homedetail/7101-wendemere-st-houston-tx-77088/images/
+Updated property icon polish in source.
+
+Files:
+- projects/zyne-homepage/scripts/generate-property-route.mjs
+- projects/zyne-homepage/scripts/property-icons.mjs
+
+Review output path:
+- projects/zyne-homepage/dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
 
 Notes:
-- Static Node generator remains the main architecture.
-- Inline SVG icon helper is used.
-- The gallery is wired directly in the generator.
-- Lightbox controls are generated directly.
-- No regex repair script is used.
-- CSS and listing data remain embedded in the generator for now.
+- Added refined inline SVG icons.
+- Updated section icon styling.
+- Updated neighborhood and feature icon mappings.
+- Final visual check still depends on the generated build artifact.
