@@ -16,7 +16,7 @@
 
 # PATCH 1
 # Concrete patch
-
+"D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\scripts"
 In `validate-generated-routes.mjs`, add this block **after the Realtor GPT validation block** and before the product loop:
 
 ```js
