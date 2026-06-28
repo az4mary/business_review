@@ -14,6 +14,8 @@
 
 ---
 
+# PATCH 1
+
 The only part to patch is the embedded CTA CSS inside `generate-property-route.mjs`. The file currently creates the CTA decoration using `repeating-linear-gradient(...)` in `.cta::after` . Replace that with the real pillar image asset.
 
 ## Concrete patch
@@ -210,3 +212,145 @@ Output:
 * Any console errors:
 
 ## 7. Questions for Review
+
+---
+
+# PATCH 2
+
+Use this patch in `projects/zyne-homepage/scripts/generate-property-route.mjs`.
+
+Replace the existing `.cta`, `.cta::after`, `.cta > *`, `.cta h2`, and `.cta p` CSS blocks with this:
+
+```css
+.cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 360px 210px;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  padding: 1.65rem 2rem;
+  margin: 1.5rem 0;
+  min-height: 150px;
+  background:
+    radial-gradient(circle at right center, rgba(201,154,46,.16), transparent 20rem),
+    linear-gradient(90deg, rgba(32,24,9,.72), rgba(12,12,10,.96) 55%, rgba(6,6,6,.98));
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 230px;
+  height: 100%;
+  background-image: url("/assets/decor/zyne-gold-pillars.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  opacity: .86;
+  pointer-events: none;
+}
+
+.cta > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cta h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--gold2);
+  font-size: 1.85rem;
+  line-height: 1.08;
+  text-transform: uppercase;
+  letter-spacing: .035em;
+  margin: 0 0 .55rem;
+}
+
+.cta p {
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+```
+
+Then add/replace this CTA button-specific CSS:
+
+```css
+.cta .button {
+  min-height: 50px;
+  font-size: .68rem;
+  letter-spacing: .15em;
+}
+
+.cta .button.secondary {
+  margin-top: .75rem;
+}
+```
+
+Update the mobile rule inside `@media (max-width: 900px)` from:
+
+```css
+.cta {
+  grid-template-columns: 1fr;
+}
+```
+
+to:
+
+```css
+.cta {
+  grid-template-columns: 1fr;
+  padding: 1.5rem;
+}
+
+.cta::after {
+  width: 155px;
+  opacity: .28;
+}
+```
+
+Also remove or override this old mobile rule if it exists:
+
+```css
+.cta::after {
+  opacity: .25;
+}
+```
+
+Use this instead inside `@media (max-width: 760px)`:
+
+```css
+.cta {
+  min-height: 180px;
+}
+
+.cta::after {
+  width: 135px;
+  opacity: .22;
+}
+
+.cta h2 {
+  font-size: 1.45rem;
+}
+
+.cta .button {
+  min-height: 48px;
+}
+```
+
+Run:
+
+```bash
+node scripts/generate-property-route.mjs
+```
+
+Validate:
+
+```bash
+grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected result: the CTA should become shorter, the buttons should sit center-right like the mockup, and the pillar artwork should sit as a decorative far-right motif rather than overpowering the button area.
