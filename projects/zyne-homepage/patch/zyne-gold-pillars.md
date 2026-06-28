@@ -1,3 +1,17 @@
+---
+
+# ⚠️ MANDATORY RULES:
+
+1. DO NOT MODIFY THE RULES AND DO NOT DELETE/MODIFY ANY CONTENT IN THIS FILE.
+2. ⚠️ Always adhere to ALL instructions/steps/format or ask for approvals before you deviate from the plan.
+3. Find/Replace/edit ONLY (NOTHING ELSE) requested blocks exactly as in the Patch Instructions.
+4. Follow the steps of the task and just report as-is even if it was not the expected outcome. 
+5. Then **ONLY** reply `DONE` and nothing else in the chat conversation so I know the required file has been updated with your comment/report.
+6. Be 🎯 because any deviation from this rule will lead to your termination without warning at anytime.
+7. Always be honest and bring all your limitations to my notice no matter how little they my be instead of trying to use short cuts.
+
+---
+
 The only part to patch is the embedded CTA CSS inside `generate-property-route.mjs`. The file currently creates the CTA decoration using `repeating-linear-gradient(...)` in `.cta::after` . Replace that with the real pillar image asset.
 
 ## Concrete patch
