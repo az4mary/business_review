@@ -24,6 +24,15 @@ const property = {
     "Three-bedroom Houston bungalow with a covered porch, Texas-size lot, no HOA, spacious bedrooms, walk-in closets, and open kitchen/dining flow."
 };
 
+const agent = {
+  name: "Carissa Weber",
+  badge: "PLATINUM",
+  brokerage: "Better Homes and Gardens Real Estate",
+  market: "Gary Greene - Sugar Land",
+  profileUrl: "https://www.har.com/carissa-weber/agent_WEBERC",
+  photo: "/assets/agents/carissa-weber.png"
+};
+
 const navItems = [
   ["Services", "/services/"],
   ["Visibility", "/grow-my-visibility/"],
@@ -311,7 +320,7 @@ p {
 
 .page {
   width: calc(100% - 3rem);
-  max-width: 1500px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
@@ -448,8 +457,8 @@ p {
 }
 
 h1 {
-  font-size: clamp(3.45rem, 5vw, 5.2rem);
-  line-height: .92;
+  font-size: clamp(3.2rem, 4.4vw, 4.65rem);
+  line-height: .95;
   letter-spacing: -.055em;
   margin: .8rem 0 .35rem;
   font-weight: 500;
@@ -564,6 +573,84 @@ h1 {
   font-weight: 850;
 }
 
+.agent-card {
+  margin-top: 1.45rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(201,154,46,.18);
+}
+
+.agent-card h2 {
+  margin: 0 0 1rem;
+  font-size: .95rem;
+  color: var(--gold2);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+.agent-profile {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.agent-profile img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.agent-profile h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.agent-badge {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: .12rem .42rem;
+  border: 1px solid #3f66ff;
+  background: #03117a;
+  color: #fff;
+  font-size: .62rem;
+  font-style: italic;
+  letter-spacing: .08em;
+  vertical-align: middle;
+}
+
+.agent-profile p {
+  margin: .25rem 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.agent-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.agent-actions a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold2);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.agent-actions a:hover {
+  background: rgba(201,154,46,.09);
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -636,7 +723,7 @@ h1 {
 
 .feature-grid article {
   text-align: center;
-  padding: 1.25rem 1rem;
+  padding: 1.6rem 1.15rem;
   border-right: 1px solid rgba(201,154,46,.2);
 }
 
@@ -656,19 +743,24 @@ h1 {
 .feature-grid h3 {
   color: var(--gold2);
   text-transform: uppercase;
-  font-size: .85rem;
+  font-size: .92rem;
   line-height: 1.35;
 }
 
 .feature-grid p {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.65;
 }
 
 .overview {
   display: grid;
   grid-template-columns: 1fr 1.12fr;
   gap: 2rem;
+}
+
+.overview p {
+  max-width: 560px;
+  font-size: 15.5px;
 }
 
 .overview-table {
@@ -736,9 +828,9 @@ h1 {
   align-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  padding: 1.65rem 2rem;
+  padding: 1.85rem 2.25rem;
   margin: 1.5rem 0;
-  min-height: 150px;
+  min-height: 165px;
   background:
     radial-gradient(circle at right center, rgba(201,154,46,.16), transparent 20rem),
     linear-gradient(90deg, rgba(32,24,9,.72), rgba(12,12,10,.96) 55%, rgba(6,6,6,.98));
@@ -749,7 +841,7 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 230px;
+  width: 255px;
   height: 100%;
   background-image: url("/assets/decor/zyne-gold-pillars.png");
   background-repeat: no-repeat;
@@ -767,7 +859,7 @@ h1 {
 .cta h2 {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--gold2);
-  font-size: 1.85rem;
+  font-size: 2rem;
   line-height: 1.08;
   text-transform: uppercase;
   letter-spacing: .035em;
@@ -776,7 +868,7 @@ h1 {
 
 .cta p {
   max-width: 640px;
-  font-size: 14px;
+  font-size: 14.5px;
   line-height: 1.55;
   margin: 0;
 }
@@ -1121,6 +1213,33 @@ const summary = `
       ${tag("Near schools")}
       ${tag("Available now")}
     </div>
+
+    <div class="agent-card">
+      <h2>Listing Agent</h2>
+
+      <div class="agent-profile">
+        <img src="${agent.photo}" alt="${agent.name}, listing agent">
+
+        <div>
+          <h3>
+            ${agent.name}
+            <span class="agent-badge">${agent.badge}</span>
+          </h3>
+          <p>${agent.brokerage}</p>
+          <p>${agent.market}</p>
+        </div>
+      </div>
+
+      <div class="agent-actions">
+        <a href="${agent.profileUrl}" target="_blank" rel="noopener noreferrer">
+          View Profile
+        </a>
+
+        <a href="${agent.profileUrl}" target="_blank" rel="noopener noreferrer">
+          Contact Agent
+        </a>
+      </div>
+    </div>
   </aside>
 `;
 
@@ -1161,7 +1280,8 @@ const overview = `
         This three-bedroom bungalow offers comfort, space, and convenience with
         a covered front porch, large lot, and open kitchen/dining connection.
         With no HOA and easy access to major roads, schools, and shopping, this
-        home is ready for you.
+        home is ready for immediate move-in consideration. The layout is practical,
+        bright, and well-suited for everyday living.
       </p>
 
       <div class="overview-table">
