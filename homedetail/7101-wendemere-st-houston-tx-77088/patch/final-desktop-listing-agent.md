@@ -1,3 +1,19 @@
+---
+
+# ⚠️ MANDATORY RULES:
+
+1. DO NOT MODIFY THE RULES AND DO NOT DELETE/MODIFY ANY CONTENT IN THIS FILE.
+2. ⚠️ Always adhere to ALL instructions/steps/format or ask for approvals before you deviate from the plan.
+3. READ complete file without skipping/search chunk from top to bottom before you start the task so you can understand the correct sequence to execute the task.
+4. Find/Replace/edit ONLY (NOTHING ELSE) requested blocks exactly as in the Patch Instructions.
+5. Follow the steps of the task and just report as-is even if it was not the expected outcome.
+6. Commit changes regularly - Push to github origin via the existing MAIN branch. 
+7. Then **ONLY** reply `DONE` and nothing else in the chat conversation so I know the required file has been updated with your comment/report.
+8. Be 🎯 because any deviation from this rule will lead to your termination without warning at anytime.
+9. Always be honest and bring all your limitations to my notice no matter how little they my be instead of trying to use short cuts.
+
+---
+
 Below is the **final concrete desktop-production patch** for the property page.
 
 This patch adds the **Listing Agent / Platinum Agent contact card**, includes the HAR URL, and applies final desktop polish based on the mockup.
