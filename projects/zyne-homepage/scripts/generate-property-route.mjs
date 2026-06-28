@@ -320,7 +320,7 @@ p {
 
 .page {
   width: calc(100% - 3rem);
-  max-width: 1360px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -359,7 +359,7 @@ p {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(420px, .95fr);
+  grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr);
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -445,7 +445,7 @@ p {
   border: 1px solid var(--line);
   background:
     linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.012));
-  padding: 2.8rem 2.5rem;
+  padding: 2.6rem 2.35rem;
 }
 
 .eyebrow {
@@ -457,9 +457,9 @@ p {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 4.4vw, 4.65rem);
-  line-height: .95;
-  letter-spacing: -.055em;
+  font-size: clamp(3rem, 4vw, 4.25rem);
+  line-height: .96;
+  letter-spacing: -.052em;
   margin: .8rem 0 .35rem;
   font-weight: 500;
 }
@@ -481,7 +481,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid var(--line);
-  margin: 1.55rem 0;
+  margin: 1.35rem 0;
 }
 
 .metrics article {
@@ -556,10 +556,10 @@ h1 {
 
 .tags {
   display: flex;
-  gap: .55rem;
+  gap: .5rem;
   flex-wrap: wrap;
-  margin-top: 1.45rem;
-  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
   border-top: 1px solid rgba(201,154,46,.18);
 }
 
@@ -574,36 +574,39 @@ h1 {
 }
 
 .agent-card {
-  margin-top: 1.45rem;
-  padding-top: 1.35rem;
-  border-top: 1px solid rgba(201,154,46,.18);
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201,154,46,.28);
 }
 
 .agent-card h2 {
   margin: 0 0 1rem;
-  font-size: .95rem;
+  font-size: .78rem;
   color: var(--gold2);
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: .18em;
+  font-weight: 950;
 }
 
 .agent-profile {
   display: grid;
-  grid-template-columns: 76px 1fr;
+  grid-template-columns: 88px 1fr;
   gap: 1rem;
   align-items: center;
 }
 
 .agent-profile img {
-  width: 76px;
-  height: 76px;
+  width: 88px;
+  height: 88px;
   object-fit: cover;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(201,154,46,.45);
+  background: #090909;
 }
 
 .agent-profile h3 {
   margin: 0;
   font-size: 1rem;
+  line-height: 1.25;
   color: var(--text);
 }
 
@@ -614,16 +617,16 @@ h1 {
   border: 1px solid #3f66ff;
   background: #03117a;
   color: #fff;
-  font-size: .62rem;
+  font-size: .58rem;
   font-style: italic;
   letter-spacing: .08em;
   vertical-align: middle;
 }
 
 .agent-profile p {
-  margin: .25rem 0 0;
-  font-size: 13px;
-  line-height: 1.45;
+  margin: .22rem 0 0;
+  font-size: 12.5px;
+  line-height: 1.35;
   color: var(--muted);
 }
 
@@ -635,7 +638,7 @@ h1 {
 }
 
 .agent-actions a {
-  min-height: 42px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -643,8 +646,8 @@ h1 {
   color: var(--gold2);
   text-transform: uppercase;
   letter-spacing: .12em;
-  font-size: .68rem;
-  font-weight: 900;
+  font-size: .62rem;
+  font-weight: 950;
 }
 
 .agent-actions a:hover {
@@ -723,7 +726,7 @@ h1 {
 
 .feature-grid article {
   text-align: center;
-  padding: 1.6rem 1.15rem;
+  padding: 1.75rem 1.2rem;
   border-right: 1px solid rgba(201,154,46,.2);
 }
 
@@ -732,12 +735,12 @@ h1 {
 }
 
 .feature-grid .zyne-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   margin: 0 auto 1rem;
-  padding: 7px;
-  border: 1px solid rgba(201,154,46,.26);
-  background: rgba(201,154,46,.045);
+  padding: 8px;
+  border: 1px solid rgba(201,154,46,.30);
+  background: rgba(201,154,46,.055);
 }
 
 .feature-grid h3 {
@@ -745,6 +748,7 @@ h1 {
   text-transform: uppercase;
   font-size: .92rem;
   line-height: 1.35;
+  margin: .75rem 0 .45rem;
 }
 
 .feature-grid p {
@@ -754,13 +758,15 @@ h1 {
 
 .overview {
   display: grid;
-  grid-template-columns: 1fr 1.12fr;
-  gap: 2rem;
+  grid-template-columns: .95fr 1.15fr;
+  gap: 2.25rem;
+  align-items: start;
 }
 
 .overview p {
-  max-width: 560px;
+  max-width: 580px;
   font-size: 15.5px;
+  line-height: 1.75;
 }
 
 .overview-table {
@@ -823,14 +829,14 @@ h1 {
 .cta {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 360px 210px;
+  grid-template-columns: 1fr 350px 220px;
   gap: 2rem;
   align-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  padding: 1.85rem 2.25rem;
+  padding: 1.75rem 2.25rem;
   margin: 1.5rem 0;
-  min-height: 165px;
+  min-height: 160px;
   background:
     radial-gradient(circle at right center, rgba(201,154,46,.16), transparent 20rem),
     linear-gradient(90deg, rgba(32,24,9,.72), rgba(12,12,10,.96) 55%, rgba(6,6,6,.98));
@@ -841,7 +847,7 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 255px;
+  width: 245px;
   height: 100%;
   background-image: url("/assets/decor/zyne-gold-pillars.png");
   background-repeat: no-repeat;
