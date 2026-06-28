@@ -731,16 +731,17 @@ h1 {
 .cta {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 360px 210px;
   gap: 2rem;
   align-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  padding: 2.5rem 2.75rem;
-  margin: 1.75rem 0;
+  padding: 1.65rem 2rem;
+  margin: 1.5rem 0;
+  min-height: 150px;
   background:
-    radial-gradient(circle at right bottom, rgba(201,154,46,.18), transparent 19rem),
-    linear-gradient(135deg, rgba(201,154,46,.10), rgba(255,255,255,.01));
+    radial-gradient(circle at right center, rgba(201,154,46,.16), transparent 20rem),
+    linear-gradient(90deg, rgba(32,24,9,.72), rgba(12,12,10,.96) 55%, rgba(6,6,6,.98));
 }
 
 .cta::after {
@@ -748,34 +749,46 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 245px;
+  width: 230px;
   height: 100%;
-  background-image:
-    linear-gradient(90deg, transparent 0%, rgba(5,5,5,.15) 35%, rgba(5,5,5,.30) 100%),
-    url("/assets/decor/zyne-gold-pillars.png");
+  background-image: url("/assets/decor/zyne-gold-pillars.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  opacity: .88;
+  opacity: .86;
   pointer-events: none;
 }
 
 .cta > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .cta h2 {
   font-family: Georgia, "Times New Roman", serif;
   color: var(--gold2);
-  font-size: 2.25rem;
+  font-size: 1.85rem;
+  line-height: 1.08;
   text-transform: uppercase;
-  margin: 0 0 .5rem;
+  letter-spacing: .035em;
+  margin: 0 0 .55rem;
 }
 
 .cta p {
-  max-width: 680px;
-  font-size: 15px;
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.cta .button {
+  min-height: 50px;
+  font-size: .68rem;
+  letter-spacing: .15em;
+}
+
+.cta .button.secondary {
+  margin-top: .75rem;
 }
 
 .footer {
@@ -906,9 +919,18 @@ h1 {
   .highlight-grid,
   .home-features .highlight-grid,
   .overview,
-  .cta,
   .footer {
     grid-template-columns: 1fr;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .cta::after {
+    width: 155px;
+    opacity: .28;
   }
 
   .footer-nav {
@@ -984,9 +1006,21 @@ h1 {
     font-size: 1.45rem;
   }
 
+  .cta {
+    min-height: 180px;
+  }
+
   .cta::after {
-    width: 165px;
-    opacity: .28;
+    width: 135px;
+    opacity: .22;
+  }
+
+  .cta h2 {
+    font-size: 1.45rem;
+  }
+
+  .cta .button {
+    min-height: 48px;
   }
 
   .lightbox-prev,

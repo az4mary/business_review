@@ -53,3 +53,12 @@ Output:
 
 ## 7. Questions for Review
 * Please confirm the final CTA composition in the deployment preview at desktop and mobile widths.
+
+## 8. Patch 2
+- CTA layout updated to `1fr 360px 210px` with a shorter 150px minimum height and tighter spacing.
+- Button sizing and spacing updated for the center-right action area.
+- Pillar artwork reduced to a 230px far-right decorative motif without the overlay gradient.
+- Responsive CTA rules added at 900px and 760px breakpoints.
+- Dry run output: `Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html with 7 copied image(s)`
+- Validation output: `590:background-image: url("/assets/decor/zyne-gold-pillars.png");`
+- Issues: None from the generator or requested text validation.
