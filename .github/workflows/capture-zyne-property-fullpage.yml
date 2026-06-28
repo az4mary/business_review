@@ -1,0 +1,327 @@
+name: Capture Zyne Property Full-Page Screenshots
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/capture-zyne-property-fullpage.yml"
+      - "assets/chat/website-image-capture.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: zyne-property-fullpage-screenshots
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    name: Capture Zyne property responsive full-page screenshots
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Capture full-page screenshots
+        run: |
+          rm -rf assets/zyne-property-fullpage-screenshots
+          mkdir -p assets/zyne-property-fullpage-screenshots
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const path = require('path');
+
+          const outputDir = 'assets/zyne-property-fullpage-screenshots';
+          const target = {
+            name: 'Zyne Property Detail',
+            slug: 'zyne-property-detail',
+            url: 'https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/',
+            locale: 'en-US',
+            acceptLanguage: 'en-US,en;q=0.9',
+            timezoneId: 'America/Chicago',
+            geolocation: { latitude: 29.7604, longitude: -95.3698 },
+          };
+
+          const devices = [
+            {
+              name: 'Desktop',
+              fileSuffix: 'desktop',
+              viewport: { width: 1920, height: 1080 },
+              deviceScaleFactor: 2,
+              isMobile: false,
+              hasTouch: false,
+              userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+            },
+            {
+              name: 'Tablet',
+              fileSuffix: 'tablet',
+              viewport: { width: 1024, height: 1366 },
+              deviceScaleFactor: 2,
+              isMobile: true,
+              hasTouch: true,
+              userAgent: 'Mozilla/5.0 (iPad; CPU OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1',
+            },
+            {
+              name: 'Mobile',
+              fileSuffix: 'mobile',
+              viewport: { width: 430, height: 932 },
+              deviceScaleFactor: 3,
+              isMobile: true,
+              hasTouch: true,
+              userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1',
+            },
+          ];
+
+          const manifest = {
+            generatedAt: new Date().toISOString(),
+            outputDir,
+            target,
+            note: 'High-resolution full-page responsive screenshots for visual pixel-level QA inspection.',
+            captures: [],
+            issues: [],
+          };
+
+          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+          async function waitForImagesAndFonts(page) {
+            await page.evaluate(async () => {
+              const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+              if (document.fonts && document.fonts.ready) {
+                await Promise.race([document.fonts.ready, timeout(5000)]);
+              }
+
+              const images = Array.from(document.images || []);
+              await Promise.race([
+                Promise.all(images.map((image) => {
+                  if (image.complete) return Promise.resolve();
+                  return new Promise((resolve) => {
+                    image.addEventListener('load', resolve, { once: true });
+                    image.addEventListener('error', resolve, { once: true });
+                  });
+                })),
+                timeout(12000),
+              ]);
+            }).catch(() => {});
+          }
+
+          async function waitForStableLayout(page) {
+            let previous = null;
+            let stableCount = 0;
+
+            for (let attempt = 0; attempt < 10; attempt += 1) {
+              const snapshot = await page.evaluate(() => ({
+                scrollWidth: document.documentElement.scrollWidth,
+                scrollHeight: document.documentElement.scrollHeight,
+                bodyTextLength: document.body ? document.body.innerText.length : 0,
+                imageCount: document.images ? document.images.length : 0,
+                completeImageCount: document.images ? Array.from(document.images).filter((image) => image.complete).length : 0,
+                busyCount: document.querySelectorAll('[aria-busy="true"], [data-loading="true"], .loading, .spinner, .skeleton').length,
+              })).catch(() => null);
+
+              if (previous && snapshot && JSON.stringify(snapshot) === JSON.stringify(previous) && snapshot.busyCount === 0) {
+                stableCount += 1;
+              } else {
+                stableCount = 0;
+              }
+
+              previous = snapshot;
+              if (stableCount >= 2) return snapshot;
+              await sleep(1000);
+            }
+
+            return previous;
+          }
+
+          async function autoScroll(page) {
+            await page.evaluate(async () => {
+              document.documentElement.style.scrollBehavior = 'auto';
+              document.body.style.scrollBehavior = 'auto';
+
+              await new Promise((resolve) => {
+                let lastScrollY = -1;
+                const distance = Math.max(700, Math.floor(window.innerHeight * 0.8));
+                const timer = setInterval(() => {
+                  const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+                  window.scrollBy(0, distance);
+
+                  if (window.scrollY === lastScrollY || window.scrollY >= maxScrollY) {
+                    clearInterval(timer);
+                    resolve();
+                    return;
+                  }
+
+                  lastScrollY = window.scrollY;
+                }, 175);
+              });
+            }).catch(() => {});
+
+            await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+            await waitForImagesAndFonts(page);
+            await sleep(1000);
+          }
+
+          async function stabilizePage(page) {
+            await page.addStyleTag({
+              content: `
+                *, *::before, *::after {
+                  animation-delay: -1ms !important;
+                  animation-duration: 1ms !important;
+                  animation-iteration-count: 1 !important;
+                  caret-color: transparent !important;
+                  transition-delay: 0s !important;
+                  transition-duration: 0s !important;
+                }
+                html, body { scroll-behavior: auto !important; }
+              `,
+            }).catch(() => {});
+
+            await page.evaluate(() => {
+              document.documentElement.style.scrollBehavior = 'auto';
+              document.body.style.scrollBehavior = 'auto';
+              if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur();
+              }
+              window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }).catch(() => {});
+
+            await page.waitForFunction(() => window.scrollY === 0 && window.scrollX === 0, null, { timeout: 10000 }).catch(() => {});
+            await waitForImagesAndFonts(page);
+            await waitForStableLayout(page);
+            await sleep(750);
+          }
+
+          async function captureDevice(browser, device) {
+            const outputPath = path.join(outputDir, `${target.slug}-${device.fileSuffix}.png`);
+            const context = await browser.newContext({
+              viewport: device.viewport,
+              deviceScaleFactor: device.deviceScaleFactor,
+              isMobile: device.isMobile,
+              hasTouch: device.hasTouch,
+              userAgent: device.userAgent,
+              locale: target.locale,
+              timezoneId: target.timezoneId,
+              geolocation: target.geolocation,
+              permissions: ['geolocation'],
+              extraHTTPHeaders: {
+                'Accept-Language': target.acceptLanguage,
+              },
+            });
+
+            const page = await context.newPage();
+            page.setDefaultTimeout(45000);
+            page.setDefaultNavigationTimeout(120000);
+
+            try {
+              const response = await page.goto(target.url, { waitUntil: 'commit', timeout: 120000 });
+              await page.waitForLoadState('domcontentloaded', { timeout: 45000 }).catch(() => {});
+              await page.waitForLoadState('load', { timeout: 60000 }).catch(() => {});
+              await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+              await page.locator('body').waitFor({ state: 'attached', timeout: 45000 }).catch(() => {});
+              await waitForImagesAndFonts(page);
+              await waitForStableLayout(page);
+              await autoScroll(page);
+              await stabilizePage(page);
+
+              await page.screenshot({ path: outputPath, fullPage: true, animations: 'disabled' });
+
+              const record = {
+                site: target.name,
+                requestedUrl: target.url,
+                finalUrl: page.url(),
+                device: device.name,
+                viewport: device.viewport,
+                deviceScaleFactor: device.deviceScaleFactor,
+                outputPath,
+                httpStatus: response ? response.status() : null,
+                title: await page.title().catch(() => ''),
+                documentSize: await page.evaluate(() => ({
+                  width: document.documentElement.scrollWidth,
+                  height: document.documentElement.scrollHeight,
+                  imageCount: document.images ? document.images.length : 0,
+                  completeImageCount: document.images ? Array.from(document.images).filter((image) => image.complete).length : 0,
+                })).catch(() => null),
+              };
+
+              manifest.captures.push(record);
+              console.log(`Captured ${target.name} / ${device.name}: ${outputPath}`);
+              console.log(JSON.stringify(record, null, 2));
+            } catch (error) {
+              const issue = {
+                site: target.name,
+                requestedUrl: target.url,
+                finalUrl: page.url ? page.url() : target.url,
+                device: device.name,
+                outputPath,
+                type: 'capture-error',
+                message: error instanceof Error ? error.message : String(error),
+              };
+
+              manifest.issues.push(issue);
+              console.error(`Capture failed for ${target.name} / ${device.name}: ${issue.message}`);
+              throw error;
+            } finally {
+              await context.close();
+            }
+          }
+
+          (async () => {
+            fs.mkdirSync(outputDir, { recursive: true });
+            const browser = await chromium.launch({
+              args: [
+                '--disable-dev-shm-usage',
+                '--font-render-hinting=none',
+              ],
+            });
+
+            for (const device of devices) {
+              await captureDevice(browser, device);
+            }
+
+            await browser.close();
+
+            fs.writeFileSync(path.join(outputDir, 'capture-manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
+            console.log('All Zyne property full-page screenshots captured successfully.');
+          })().catch((error) => {
+            fs.writeFileSync(path.join(outputDir, 'capture-manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Commit screenshots to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/zyne-property-fullpage-screenshots
+          if git diff --cached --quiet; then
+            echo "No screenshot changes to commit."
+          else
+            git commit -m "Capture Zyne property full-page screenshots"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Upload screenshot artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zyne-property-fullpage-screenshots
+          path: assets/zyne-property-fullpage-screenshots
+          if-no-files-found: error
