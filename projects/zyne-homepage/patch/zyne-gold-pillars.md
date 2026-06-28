@@ -190,29 +190,9 @@ Output:
 ```text
 ```
 
-## 6. Screenshots
-
-Attach screenshots for:
-
-* Desktop full page
-* Desktop CTA section close-up
-* Mobile hero section
-* Mobile CTA section
-* Lightbox open state
-
-## 7. Notes / Issues
-
-* Anything that looks different from the mockup:
-* Any asset-loading issues:
-* Any mobile layout concerns:
+## 6. Notes / Issues
 * Any console errors:
 
-## 8. Questions for Review
+## 7. Questions for Review
 
 *
-
-```
-
-Most important attachments: **desktop full page**, **CTA close-up**, and the updated `generate-property-route.mjs` if anything changed beyond the CSS patch.
-```
-
