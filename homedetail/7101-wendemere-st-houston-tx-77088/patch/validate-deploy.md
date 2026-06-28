@@ -14,52 +14,7 @@
 
 ---
 
-Yes — this confirms the gap.
-
-## What works
-
-`package.json` is doing what the README promised. The build command already runs the property generator:
-
-```json
-"build": "... && node scripts/generate-property-route.mjs && ..."
-```
-
-and `postbuild` runs it again after build. 
-
-So the property route **should** be generated during GitHub Pages deployment.
-
-## What is broken / missing
-
-`validate-generated-routes.mjs` does **not validate the property listing route at all**.
-
-It validates:
-
-* category routes
-* services route
-* intelligence route
-* delivery route
-* Realtor GPT route
-* product detail routes
-* legal routes
-
-But there is no validation for:
-
-```text
-/homedetail/7101-wendemere-st-houston-tx-77088/
-```
-
-The validator loops through product/category/legal routes, but never calls `assertFile("homedetail/7101-wendemere-st-houston-tx-77088")`. 
-
-So the deployment can pass even if the property detail route is stale, missing key desktop CSS, missing the HAR URL, or missing the agent card.
-
-## Does this relate to the issue?
-
-Yes.
-
-The build probably generates the route, but the validation layer does not prove that the generated route contains the current desktop patch. That allows version mismatch confusion.
-
-The safest next action is to add a property route validation block to `validate-generated-routes.mjs`.
-
+# PATCH 1
 # Concrete patch
 
 In `validate-generated-routes.mjs`, add this block **after the Realtor GPT validation block** and before the product loop:
