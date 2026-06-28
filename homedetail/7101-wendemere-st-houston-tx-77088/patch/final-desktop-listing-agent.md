@@ -14,6 +14,8 @@
 
 ---
 
+# PATCH 1
+
 Below is the **final concrete desktop-production patch** for the property page.
 "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\scripts\generate-property-route.mjs"
 
@@ -559,4 +561,633 @@ Output:
 ```
 
 After this patch, the desktop version should be ready for final design review before moving to tablet/mobile.
+```
+
+# PATCH 2
+
+Below is the **desktop-only production-readiness patch**. Do **not** change header/footer.
+
+# Patch Steps
+
+## 1. Desktop page width: restore premium balance
+
+In `projects/zyne-homepage/scripts/generate-property-route.mjs`, find:
+
+```css
+.page {
+  width: calc(100% - 3rem);
+  max-width: 1360px;
+  margin: 0 auto;
+}
+```
+
+Replace with:
+
+```css
+.page {
+  width: calc(100% - 3rem);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+```
+
+This gives the page more breathing room without returning to the overly stretched `1500px`.
+
+---
+
+## 2. Improve hero card width and prevent bad title wrapping
+
+Find:
+
+```css
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(420px, .95fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+```
+
+Replace with:
+
+```css
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+```
+
+Find:
+
+```css
+h1 {
+  font-size: clamp(3.2rem, 4.4vw, 4.65rem);
+  line-height: .95;
+  letter-spacing: -.055em;
+  margin: .8rem 0 .35rem;
+  font-weight: 500;
+}
+```
+
+Replace with:
+
+```css
+h1 {
+  font-size: clamp(3rem, 4vw, 4.25rem);
+  line-height: .96;
+  letter-spacing: -.052em;
+  margin: .8rem 0 .35rem;
+  font-weight: 500;
+}
+```
+
+Goal:
+
+```text
+7101
+Wendemere St
+```
+
+not:
+
+```text
+7101
+Wendemere
+St
+```
+
+---
+
+## 3. Make summary card feel less crowded
+
+Find:
+
+```css
+.summary {
+  height: 100%;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.012));
+  padding: 2.8rem 2.5rem;
+}
+```
+
+Replace with:
+
+```css
+.summary {
+  height: 100%;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.012));
+  padding: 2.6rem 2.35rem;
+}
+```
+
+Find:
+
+```css
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--line);
+  margin: 1.55rem 0;
+}
+```
+
+Replace with:
+
+```css
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--line);
+  margin: 1.35rem 0;
+}
+```
+
+Find:
+
+```css
+.tags {
+  display: flex;
+  gap: .55rem;
+  flex-wrap: wrap;
+  margin-top: 1.45rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201,154,46,.18);
+}
+```
+
+Replace with:
+
+```css
+.tags {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(201,154,46,.18);
+}
+```
+
+---
+
+## 4. Upgrade the agent card so it feels integrated
+
+Find your existing `.agent-card`, `.agent-profile`, `.agent-profile img`, `.agent-actions`, and related agent CSS. Replace the whole agent CSS block with this:
+
+```css
+.agent-card {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201,154,46,.28);
+}
+
+.agent-card h2 {
+  margin: 0 0 1rem;
+  font-size: .78rem;
+  color: var(--gold2);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-weight: 950;
+}
+
+.agent-profile {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.agent-profile img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border: 1px solid rgba(201,154,46,.45);
+  background: #090909;
+}
+
+.agent-profile h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.agent-badge {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: .12rem .42rem;
+  border: 1px solid #3f66ff;
+  background: #03117a;
+  color: #fff;
+  font-size: .58rem;
+  font-style: italic;
+  letter-spacing: .08em;
+  vertical-align: middle;
+}
+
+.agent-profile p {
+  margin: .22rem 0 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.agent-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.agent-actions a {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold2);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .62rem;
+  font-weight: 950;
+}
+
+.agent-actions a:hover {
+  background: rgba(201,154,46,.09);
+}
+```
+
+This keeps the agent card compact but more premium.
+
+---
+
+## 5. Strengthen “What’s Special”
+
+Find:
+
+```css
+.feature-grid article {
+  text-align: center;
+  padding: 1.6rem 1.15rem;
+  border-right: 1px solid rgba(201,154,46,.2);
+}
+```
+
+Replace with:
+
+```css
+.feature-grid article {
+  text-align: center;
+  padding: 1.75rem 1.2rem;
+  border-right: 1px solid rgba(201,154,46,.2);
+}
+```
+
+Find:
+
+```css
+.feature-grid .zyne-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 1rem;
+  padding: 7px;
+  border: 1px solid rgba(201,154,46,.26);
+  background: rgba(201,154,46,.045);
+}
+```
+
+Replace with:
+
+```css
+.feature-grid .zyne-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  padding: 8px;
+  border: 1px solid rgba(201,154,46,.30);
+  background: rgba(201,154,46,.055);
+}
+```
+
+Find:
+
+```css
+.feature-grid h3 {
+  color: var(--gold2);
+  text-transform: uppercase;
+  font-size: .92rem;
+  line-height: 1.35;
+}
+```
+
+Replace with:
+
+```css
+.feature-grid h3 {
+  color: var(--gold2);
+  text-transform: uppercase;
+  font-size: .92rem;
+  line-height: 1.35;
+  margin: .75rem 0 .45rem;
+}
+```
+
+---
+
+## 6. Improve Property Overview balance
+
+Find:
+
+```css
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  gap: 2rem;
+}
+```
+
+Replace with:
+
+```css
+.overview {
+  display: grid;
+  grid-template-columns: .95fr 1.15fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+```
+
+Add directly after that:
+
+```css
+.overview p {
+  max-width: 580px;
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+```
+
+Update the overview paragraph to:
+
+```html
+<p>
+  This three-bedroom bungalow offers comfort, space, and convenience with
+  a covered front porch, large lot, and open kitchen/dining connection.
+  With no HOA and easy access to major roads, schools, and shopping, this
+  home is ready for immediate move-in consideration. The layout is practical,
+  bright, and well-suited for everyday living.
+</p>
+```
+
+---
+
+## 7. Keep CTA design, only polish size
+
+Find:
+
+```css
+.cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 360px 210px;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  padding: 1.85rem 2.25rem;
+  margin: 1.5rem 0;
+  min-height: 165px;
+```
+
+Replace only these lines:
+
+```css
+  grid-template-columns: 1fr 350px 220px;
+  gap: 2rem;
+  padding: 1.75rem 2.25rem;
+  margin: 1.5rem 0;
+  min-height: 160px;
+```
+
+Find:
+
+```css
+.cta::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 255px;
+```
+
+Replace width only:
+
+```css
+  width: 245px;
+```
+
+This keeps the pillar motif visible but prevents it from overpowering the CTA.
+
+---
+
+# Dry Run
+
+From:
+
+```bash
+projects/zyne-homepage
+```
+
+Run:
+
+```bash
+node scripts/generate-property-route.mjs
+```
+
+Expected output:
+
+```text
+Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html with 7 copied image(s)
+```
+
+---
+
+# Validation
+
+Run:
+
+```bash
+grep -n "max-width: 1440px" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected: one match.
+
+Run:
+
+```bash
+grep -n "grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr)" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected: one match.
+
+Run:
+
+```bash
+grep -n "agent-profile" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected: CSS and HTML matches.
+
+Run:
+
+```bash
+grep -n "https://www.har.com/carissa-weber/agent_WEBERC" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected: two matches, one for `View Profile`, one for `Contact Agent`.
+
+Run:
+
+```bash
+grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Expected: one match inside CTA CSS.
+
+---
+
+# Desktop Visual QA
+
+Check these desktop widths only:
+
+```text
+1440 × 900
+1536 × 864
+1920 × 1080
+```
+
+Confirm:
+
+* Header/footer unchanged.
+* Hero title displays as `7101 / Wendemere St`, not `7101 / Wendemere / St`.
+* Summary card does not feel cramped after agent card.
+* Agent image is visible and premium-looking.
+* Agent buttons open the HAR profile URL.
+* What’s Special section has stronger icons and better spacing.
+* Property Overview no longer feels empty on the left.
+* CTA pillar remains bottom-right and does not interfere with buttons.
+* Gallery and lightbox still work.
+
+---
+
+# Final Report Format
+
+Send back:
+
+````md
+# Desktop Production Readiness Report
+
+## 1. Branch / Commit
+- Branch:
+- Commit hash:
+- Local preview URL:
+- Deployment URL:
+
+## 2. Files Changed
+- `scripts/generate-property-route.mjs`
+- `public/assets/agents/carissa-weber.png`
+- `public/assets/decor/zyne-gold-pillars.png`
+
+## 3. Implementation Summary
+- Header/footer left unchanged:
+- Desktop max-width updated to 1440px:
+- Hero summary width adjusted:
+- Hero title wrapping fixed:
+- Agent card refined:
+- HAR profile URL retained:
+- What’s Special section strengthened:
+- Property Overview balanced:
+- CTA pillar retained and polished:
+
+## 4. Dry Run Output
+
+```bash
+node scripts/generate-property-route.mjs
+````
+
+Output:
+
+```text
+```
+
+## 5. Validation Output
+
+```bash
+grep -n "max-width: 1440px" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+```
+
+```bash
+grep -n "agent-profile" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+```
+
+```bash
+grep -n "https://www.har.com/carissa-weber/agent_WEBERC" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+```
+
+```bash
+grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+```
+
+## 6. Desktop Screenshots
+
+Attach:
+
+* Full desktop page
+* Hero section close-up
+* Summary card with agent card
+* What’s Special section
+* CTA close-up
+* Lightbox open state
+
+## 7. Issues / Notes
+
+* Console errors:
+* Image loading issues:
+* Agent card issues:
+* CTA issues:
+* Other:
+
+## 8. Desktop Status
+
+* Ready for production review: Yes / No
+
+```
+
+This patch keeps your header/footer untouched and focuses only on getting the desktop body layout closer to the mockup.
 ```
