@@ -1063,33 +1063,9 @@ Expected: one match inside CTA CSS.
 
 ---
 
-# Desktop Visual QA
-
-Check these desktop widths only:
-
-```text
-1440 × 900
-1536 × 864
-1920 × 1080
-```
-
-Confirm:
-
-* Header/footer unchanged.
-* Hero title displays as `7101 / Wendemere St`, not `7101 / Wendemere / St`.
-* Summary card does not feel cramped after agent card.
-* Agent image is visible and premium-looking.
-* Agent buttons open the HAR profile URL.
-* What’s Special section has stronger icons and better spacing.
-* Property Overview no longer feels empty on the left.
-* CTA pillar remains bottom-right and does not interfere with buttons.
-* Gallery and lightbox still work.
-
----
-
 # Final Report Format
 
-Send back:
+Update file D:\PROJECTS\GITHUB\az4mary\zyne.store\homedetail\7101-wendemere-st-houston-tx-77088\patch\final-desktop-listing-agent-report.md:
 
 ````md
 # Desktop Production Readiness Report
@@ -1165,28 +1141,10 @@ Output:
 ```text
 ```
 
-## 6. Desktop Screenshots
-
-Attach:
-
-* Full desktop page
-* Hero section close-up
-* Summary card with agent card
-* What’s Special section
-* CTA close-up
-* Lightbox open state
-
-## 7. Issues / Notes
+## 6. Issues / Notes
 
 * Console errors:
-* Image loading issues:
-* Agent card issues:
-* CTA issues:
 * Other:
-
-## 8. Desktop Status
-
-* Ready for production review: Yes / No
 
 ```
 
