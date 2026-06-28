@@ -17,6 +17,244 @@
 
 </aside>
 
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+Yes — this is now the **right direction**. You are doing the correct thing by keeping the static Node generator and using a local inline SVG helper instead of `lucide-react`.
+
+The current architecture already shows that:
+
+- `generate-property-route.mjs` imports `Icons` from `property-icons.mjs`
+- `property-icons.mjs` defines a reusable `iconSvg()` helper with `currentColor`, `fill="none"`, and consistent stroke settings
+- the generator renders icons directly in sections like metrics, stats, features, neighborhood, CTA, header actions, and gallery controls
+
+So the approach is good. No regex repair script is needed.
+
+## Main issue I see
+
+The icons are technically correct, but visually they are still too generic compared to the mockup. The mockup used more “luxury pictogram” styling, while the current inline SVGs are basic line icons.
+
+The fix is not architectural. It is mostly **icon design and CSS polish**.
+
+## What to adjust
+
+### 1. Keep `property-icons.mjs`
+
+Do not remove it. This is the right file for icon control.
+
+But improve the helper slightly:
+
+```jsx
+const iconSvg = (path, className = "") => `
+  <svg
+    class="zyne-icon ${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    ${path}
+  </svg>
+`;
+```
+
+Then allow special sizing classes if needed:
+
+```jsx
+route: iconSvg('...', 'icon-route'),
+home: iconSvg('...', 'icon-home'),
+grid: iconSvg('...', 'icon-grid'),
+```
+
+---
+
+### 2. Update the base icon CSS
+
+Current `.zyne-icon` is close, but make it feel more premium:
+
+```css
+.zyne-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--gold);
+  flex: 0 0 auto;
+  filter:
+    drop-shadow(0 0 6px rgba(201,154,46,.20))
+    drop-shadow(0 0 14px rgba(201,154,46,.08));
+}
+```
+
+For smaller utility icons:
+
+```css
+.actions .zyne-icon,
+.button .zyne-icon,
+.see-all .zyne-icon {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  filter: none;
+}
+```
+
+---
+
+### 3. Improve the Neighborhood section icons
+
+The current mapping uses:
+
+```jsx
+Easy Access: Icons.route
+Local Amenities: Icons.grid
+Community: Icons.home
+```
+
+That works, but it does not match the mockup’s premium feel.
+
+Use these instead:
+
+```jsx
+Easy Access: Icons.mapPin
+Local Amenities: Icons.compass
+Community: Icons.community
+```
+
+Add these to `property-icons.mjs`:
+
+```jsx
+compass: iconSvg(`
+  <circle cx="12" cy="12" r="8"/>
+  <path d="m15 9-2 6-4 2 2-6 4-2Z"/>
+  <circle cx="12" cy="12" r="1"/>
+`),
+
+community: iconSvg(`
+  <path d="M4 20V9l8-6 8 6v11"/>
+  <path d="M8 20v-7h8v7"/>
+  <path d="M10 13h4"/>
+  <path d="M12 13v7"/>
+  <path d="M7 9h.01"/>
+  <path d="M17 9h.01"/>
+`)
+```
+
+Then change the neighborhood section:
+
+```jsx
+const neighborhood = `
+<section class="section neighborhood">
+  <div class="title"><h2>Neighborhood Highlights</h2></div>
+  <div class="highlight-grid">
+    ${item(Icons.mapPin, "Easy Access", "Quick access to major highways and commuting routes")}
+    ${item(Icons.compass, "Local Amenities", "Close to shopping, dining, and everyday conveniences")}
+    ${item(Icons.community, "Community", "Established neighborhood with local schools nearby")}
+  </div>
+</section>`;
+```
+
+---
+
+### 4. Add icon badge styling for sections like the mockup
+
+Right now the icons sit directly beside text. To make them feel closer to the mockup, wrap them visually with CSS.
+
+Add:
+
+```css
+.highlight-item .zyne-icon {
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  border: 1px solid rgba(201,154,46,.28);
+  background: rgba(201,154,46,.045);
+}
+```
+
+For the “What’s Special” cards:
+
+```css
+.feature-grid .zyne-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 1rem;
+  padding: 7px;
+  border: 1px solid rgba(201,154,46,.26);
+  background: rgba(201,154,46,.045);
+}
+```
+
+---
+
+### 5. Do not use `Icons.grid` for too many unrelated ideas
+
+Currently `Icons.grid` is doing too much: lot size, local amenities, open layout, hardwood/carpet, etc. That makes the page feel repetitive.
+
+Add more specific icons:
+
+```jsx
+doorOpen: iconSvg(`
+  <path d="M13 4h5v16h-5"/>
+  <path d="M13 20H6V4h7"/>
+  <path d="M10 12h.01"/>
+`),
+
+layers: iconSvg(`
+  <path d="m12 2 9 5-9 5-9-5 9-5Z"/>
+  <path d="m3 12 9 5 9-5"/>
+  <path d="m3 17 9 5 9-5"/>
+`),
+
+shoppingBag: iconSvg(`
+  <path d="M6 8h12l-1 13H7L6 8Z"/>
+  <path d="M9 8a3 3 0 0 1 6 0"/>
+`)
+```
+
+Then map:
+
+```jsx
+Open layout: Icons.doorOpen
+Hardwood & carpet: Icons.layers
+Local Amenities: Icons.shoppingBag or Icons.compass
+```
+
+---
+
+## Final recommendation
+
+Keep the current architecture.
+
+Do this:
+
+1. Keep `property-icons.mjs`
+2. Add a few more custom inline SVG icons
+3. Update the CSS for `.zyne-icon`
+4. Stop overusing `Icons.grid`
+5. Use icon badge styling to make icons feel premium
+6. Do not add `lucide-react`
+7. Do not use a regex post-process script
+
+The implementation is structurally correct now. It just needs icon refinement and styling polish.
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
+</aside>
+
 Action taken.
 
 Review files:
