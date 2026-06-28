@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T12:10:40.891Z",
+  "generatedAt": "2026-06-28T14:17:05.938Z",
   "outputDir": "assets/zyne-property-fullpage-screenshots",
   "target": {
     "name": "Zyne Property Detail",
@@ -30,9 +30,9 @@
       "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
       "documentSize": {
         "width": 1920,
-        "height": 3043,
-        "imageCount": 9,
-        "completeImageCount": 9
+        "height": 3300,
+        "imageCount": 10,
+        "completeImageCount": 10
       }
     },
     {
@@ -50,9 +50,9 @@
       "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
       "documentSize": {
         "width": 1098,
-        "height": 3787,
-        "imageCount": 9,
-        "completeImageCount": 9
+        "height": 4055,
+        "imageCount": 10,
+        "completeImageCount": 10
       }
     },
     {
@@ -70,9 +70,9 @@
       "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
       "documentSize": {
         "width": 430,
-        "height": 6150,
-        "imageCount": 9,
-        "completeImageCount": 9
+        "height": 6484,
+        "imageCount": 10,
+        "completeImageCount": 10
       }
     }
   ],
