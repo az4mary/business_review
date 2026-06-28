@@ -13,6 +13,49 @@
 
 # ASSISTANT
 
+Implemented.
+
+Created GitHub Actions workflow:
+
+- `.github/workflows/capture-zyne-property-fullpage.yml`
+
+What it does:
+
+- Captures the full page for:
+  - `https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/`
+- Captures three high-resolution device profiles:
+  - Desktop: `1920x1080`, device scale factor `2`
+  - Tablet: `1024x1366`, device scale factor `2`
+  - Mobile: `430x932`, device scale factor `3`
+- Saves output in:
+  - `assets/zyne-property-fullpage-screenshots/`
+- Writes screenshots:
+  - `assets/zyne-property-fullpage-screenshots/zyne-property-detail-desktop.png`
+  - `assets/zyne-property-fullpage-screenshots/zyne-property-detail-tablet.png`
+  - `assets/zyne-property-fullpage-screenshots/zyne-property-detail-mobile.png`
+- Writes QA metadata:
+  - `assets/zyne-property-fullpage-screenshots/capture-manifest.json`
+- Uploads the screenshot folder as a GitHub Actions artifact named:
+  - `zyne-property-fullpage-screenshots`
+- Commits generated screenshot output back to the repository when files change.
+
+Workflow behavior:
+
+- Uses Playwright Chromium.
+- Waits for page commit, DOM readiness, load/network idle, body attachment, fonts, images, and layout stability.
+- Scrolls through the page to trigger lazy-loaded content.
+- Returns to the top before the final full-page screenshot.
+- Disables animations/transitions/caret rendering for more stable pixel-level QA captures.
+- Uses Houston-aligned locale, timezone, geolocation, and `Accept-Language` settings.
+
+Commit created:
+
+- `0eb2edc0c18be9c96029cc823e6719d8863812ff`
+
+Limitation:
+
+- I created and verified the workflow file structure, but I did not manually run the workflow from GitHub Actions in this chat session.
+
 </aside>
 
 ---
