@@ -194,5 +194,3 @@ Output:
 * Any console errors:
 
 ## 7. Questions for Review
-
-*
