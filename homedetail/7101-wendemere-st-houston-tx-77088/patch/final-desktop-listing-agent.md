@@ -483,32 +483,6 @@ Expected: one match inside the summary card.
 
 ---
 
-# Desktop Visual QA
-
-Check only desktop for now.
-
-Viewport recommendations:
-
-```text
-1440 × 900
-1536 × 864
-1920 × 1080
-```
-
-Confirm:
-
-* Hero title reads cleanly and does not break `St` onto its own line.
-* Right summary card includes the listing agent card below the tags.
-* Agent image loads.
-* “View Profile” and “Contact Agent” both open:
-  `https://www.har.com/carissa-weber/agent_WEBERC`
-* Gallery still opens lightbox.
-* CTA pillar artwork remains bottom-right and does not cover the CTA buttons.
-* Page feels less stretched after reducing max-width to `1360px`.
-* Footer remains visually aligned.
-
----
-
 # Final Report Format
 
 Send back:
@@ -576,27 +550,10 @@ Output:
 ```text
 ```
 
-## 6. Desktop Screenshots
-
-Attach:
-
-* Full desktop page
-* Hero section close-up
-* Summary card with agent card
-* CTA section close-up
-* Lightbox open state
-
-## 7. Issues / Notes
+## 6. Issues / Notes
 
 * Console errors:
-* Image loading issues:
-* CTA issues:
-* Agent card issues:
 * Other:
-
-## 8. Ready for Mobile/Tablet Phase?
-
-* Yes / No
 
 ```
 
