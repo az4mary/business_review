@@ -739,8 +739,8 @@ h1 {
   padding: 2.5rem 2.75rem;
   margin: 1.75rem 0;
   background:
-    radial-gradient(circle at right bottom, rgba(201,154,46,.20), transparent 18rem),
-    linear-gradient(135deg, rgba(201,154,46,.1), rgba(255,255,255,.01));
+    radial-gradient(circle at right bottom, rgba(201,154,46,.18), transparent 19rem),
+    linear-gradient(135deg, rgba(201,154,46,.10), rgba(255,255,255,.01));
 }
 
 .cta::after {
@@ -748,16 +748,16 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 240px;
+  width: 245px;
   height: 100%;
-  background:
-    linear-gradient(90deg, transparent, rgba(201,154,46,.10)),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 27px,
-      rgba(201,154,46,.30) 28px 34px
-    );
-  opacity: .9;
+  background-image:
+    linear-gradient(90deg, transparent 0%, rgba(5,5,5,.15) 35%, rgba(5,5,5,.30) 100%),
+    url("/assets/decor/zyne-gold-pillars.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  opacity: .88;
+  pointer-events: none;
 }
 
 .cta > * {
@@ -985,7 +985,8 @@ h1 {
   }
 
   .cta::after {
-    opacity: .25;
+    width: 165px;
+    opacity: .28;
   }
 
   .lightbox-prev,
