@@ -88,6 +88,4 @@ grep -n "https://www.har.com/carissa-weber/agent_WEBERC" dist/homedetail/7101-we
 grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
 ```
 
-# Bottom line
-
-The workflow/build is not obviously broken. The missing piece is that **the property route has no guardrail in validation**. Add this validator block before making more visual/design changes. Then we will know whether the live/deployed page is truly using the intended generated output.
+Post update: D:\PROJECTS\GITHUB\az4mary\zyne.store\homedetail\7101-wendemere-st-houston-tx-77088\patch\validate-deploy-report.md 
