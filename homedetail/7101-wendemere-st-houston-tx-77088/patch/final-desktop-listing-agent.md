@@ -562,6 +562,7 @@ Output:
 
 After this patch, the desktop version should be ready for final design review before moving to tablet/mobile.
 ```
+---
 
 # PATCH 2
 
