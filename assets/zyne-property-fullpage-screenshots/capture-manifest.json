@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-06-28T01:01:46.624Z",
+  "outputDir": "assets/zyne-property-fullpage-screenshots",
+  "target": {
+    "name": "Zyne Property Detail",
+    "slug": "zyne-property-detail",
+    "url": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+    "locale": "en-US",
+    "acceptLanguage": "en-US,en;q=0.9",
+    "timezoneId": "America/Chicago",
+    "geolocation": {
+      "latitude": 29.7604,
+      "longitude": -95.3698
+    }
+  },
+  "note": "High-resolution full-page responsive screenshots for visual pixel-level QA inspection.",
+  "captures": [
+    {
+      "site": "Zyne Property Detail",
+      "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "device": "Desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "outputPath": "assets/zyne-property-fullpage-screenshots/zyne-property-detail-desktop.png",
+      "httpStatus": 200,
+      "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
+      "documentSize": {
+        "width": 1920,
+        "height": 2798,
+        "imageCount": 8,
+        "completeImageCount": 8
+      }
+    },
+    {
+      "site": "Zyne Property Detail",
+      "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "device": "Tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "outputPath": "assets/zyne-property-fullpage-screenshots/zyne-property-detail-tablet.png",
+      "httpStatus": 200,
+      "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
+      "documentSize": {
+        "width": 1098,
+        "height": 3628,
+        "imageCount": 8,
+        "completeImageCount": 8
+      }
+    },
+    {
+      "site": "Zyne Property Detail",
+      "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
+      "device": "Mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "outputPath": "assets/zyne-property-fullpage-screenshots/zyne-property-detail-mobile.png",
+      "httpStatus": 200,
+      "title": "7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail",
+      "documentSize": {
+        "width": 486,
+        "height": 6351,
+        "imageCount": 8,
+        "completeImageCount": 8
+      }
+    }
+  ],
+  "issues": []
+}
