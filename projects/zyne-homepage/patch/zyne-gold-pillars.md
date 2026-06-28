@@ -138,3 +138,81 @@ Also verify the asset loads directly:
 ```
 
 If the page is opened from `file://`, absolute `/assets/...` may not resolve. Test through your local server/build preview instead.
+
+---
+
+Use this format when you send the completed report back to me:
+
+````md
+# ZYNE Property Page Implementation Report
+
+## 1. Branch / Commit
+- Branch:
+- Commit hash:
+- Deployment URL:
+- Local preview URL:
+
+## 2. Files Changed
+- `projects/zyne-homepage/scripts/generate-property-route.mjs`
+- `projects/zyne-homepage/scripts/property-icons.mjs`
+- `projects/zyne-homepage/assets/decor/zyne-gold-pillars.png`
+- Any other files changed:
+
+## 3. What Was Implemented
+- CTA pillar image added:
+- Inline SVG icons retained:
+- Gallery/lightbox still working:
+- Static Node generator still used:
+- No regex post-processing used:
+
+## 4. Dry Run Output
+Paste terminal output:
+
+```bash
+node scripts/generate-property-route.mjs
+````
+
+Output:
+
+```text
+```
+
+## 5. Validation Checks
+
+Paste results:
+
+```bash
+grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+```
+
+## 6. Screenshots
+
+Attach screenshots for:
+
+* Desktop full page
+* Desktop CTA section close-up
+* Mobile hero section
+* Mobile CTA section
+* Lightbox open state
+
+## 7. Notes / Issues
+
+* Anything that looks different from the mockup:
+* Any asset-loading issues:
+* Any mobile layout concerns:
+* Any console errors:
+
+## 8. Questions for Review
+
+*
+
+```
+
+Most important attachments: **desktop full page**, **CTA close-up**, and the updated `generate-property-route.mjs` if anything changed beyond the CSS patch.
+```
+
