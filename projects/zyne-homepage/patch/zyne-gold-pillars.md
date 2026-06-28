@@ -141,7 +141,7 @@ If the page is opened from `file://`, absolute `/assets/...` may not resolve. Te
 
 ---
 
-Use this format when you send the completed report back to me:
+Use this format to complete report file D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\zyne-gold-pillars-report.md:
 
 ````md
 # ZYNE Property Page Implementation Report
