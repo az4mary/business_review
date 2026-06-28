@@ -15,6 +15,7 @@
 ---
 
 Below is the **final concrete desktop-production patch** for the property page.
+"D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\scripts\generate-property-route.mjs"
 
 This patch adds the **Listing Agent / Platinum Agent contact card**, includes the HAR URL, and applies final desktop polish based on the mockup.
 
@@ -485,7 +486,7 @@ Expected: one match inside the summary card.
 
 # Final Report Format
 
-Update file https://github.com/az4mary/zyne.store/blob/main/homedetail/7101-wendemere-st-houston-tx-77088/patch/final-desktop-listing-agent-report.md:
+Update file D:\PROJECTS\GITHUB\az4mary\zyne.store\homedetail\7101-wendemere-st-houston-tx-77088\patch\final-desktop-listing-agent-report.md:
 
 ````md
 # Desktop Production Readiness Report
