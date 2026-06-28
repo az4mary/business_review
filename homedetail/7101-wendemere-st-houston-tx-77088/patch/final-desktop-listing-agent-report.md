@@ -2,23 +2,25 @@
 
 ## 1. Branch / Commit
 - Branch: `main`
-- Commit hash: `d56d3d5`
+- Commit hash: `bc8e4e9`
 - Local preview URL: `http://127.0.0.1:4173/homedetail/7101-wendemere-st-houston-tx-77088/`
 - Deployment URL: Not available during local implementation
 
 ## 2. Files Changed
 - `scripts/generate-property-route.mjs`
-- `public/assets/agents/carissa-weber.png` (existing tracked asset retained)
-- `public/assets/decor/zyne-gold-pillars.png` (existing tracked asset retained)
+- `public/assets/agents/carissa-weber.png` (retained; not modified)
+- `public/assets/decor/zyne-gold-pillars.png` (retained; not modified)
 
 ## 3. Implementation Summary
-- Desktop max-width reduced: Yes, from 1500px to 1360px.
-- Agent card added: Yes, including photo, badge, brokerage, market, and actions.
-- HAR profile URL added: Yes, to both agent actions.
-- CTA pillar asset retained: Yes.
-- Hero title wrapping fixed: Yes, with reduced responsive font sizing and adjusted line height.
-- Feature sections polished: Yes.
-- Property overview expanded: Yes.
+- Header/footer left unchanged: Yes
+- Desktop max-width updated to 1440px: Yes
+- Hero summary width adjusted: Yes
+- Hero title wrapping fixed: Yes
+- Agent card refined: Yes
+- HAR profile URL retained: Yes
+- What's Special section strengthened: Yes
+- Property Overview balanced: Yes
+- CTA pillar retained and polished: Yes
 
 ## 4. Dry Run Output
 
@@ -35,15 +37,38 @@ Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html with 7 copied
 ## 5. Validation Output
 
 ```bash
-grep -n "carissa-weber" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+grep -n "max-width: 1440px" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
 ```
 
 Output:
 
 ```text
-1377:<img src="/assets/agents/carissa-weber.png" alt="Carissa Weber, listing agent">
-1390:<a href="https://www.har.com/carissa-weber/agent_WEBERC" target="_blank" rel="noopener noreferrer">
-1394:<a href="https://www.har.com/carissa-weber/agent_WEBERC" target="_blank" rel="noopener noreferrer">
+150:  max-width: 1440px;
+```
+
+```bash
+grep -n "agent-profile" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+418:.agent-profile {
+425:.agent-profile img {
+433:.agent-profile h3 {
+453:.agent-profile p {
+1382:      <div class="agent-profile">
+```
+
+```bash
+grep -n "https://www.har.com/carissa-weber/agent_WEBERC" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
+```
+
+Output:
+
+```text
+1396:<a href="https://www.har.com/carissa-weber/agent_WEBERC" target="_blank" rel="noopener noreferrer">
+1400:<a href="https://www.har.com/carissa-weber/agent_WEBERC" target="_blank" rel="noopener noreferrer">
 ```
 
 ```bash
@@ -53,20 +78,10 @@ grep -n "zyne-gold-pillars.png" dist/homedetail/7101-wendemere-st-houston-tx-770
 Output:
 
 ```text
-673:  background-image: url("/assets/decor/zyne-gold-pillars.png");
-```
-
-```bash
-grep -n "Listing Agent" dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html
-```
-
-Output:
-
-```text
-1374:      <h2>Listing Agent</h2>
+679:  background-image: url("/assets/decor/zyne-gold-pillars.png");
 ```
 
 ## 6. Issues / Notes
 
 * Console errors: None from the generator or requested validations.
-* Other: The agent and CTA artwork files were already tracked at the requested public asset paths, so they required no binary changes.
+* Other: The agent and pillar assets were already tracked at the requested paths and required no changes.
