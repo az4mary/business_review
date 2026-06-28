@@ -118,6 +118,35 @@ assertOneH1(realtorGpt, join("use-ai", "realtor-gpt"));
 assertSchema(realtorGpt, join("use-ai", "realtor-gpt"), ["CollectionPage", "ItemList"]);
 assertIncludes(realtorGpt, "use-ai/realtor-gpt", ["Realtor GPT Products", "real estate agents and teams", "Product comparison", "Secure checkout is completed through Stan Store"]);
 
+const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");
+const propertyDetail = await assertFile(propertyRoute);
+allRouteHtml.push([propertyRoute, propertyDetail]);
+
+assertOneH1(propertyDetail, propertyRoute);
+assertSchema(propertyDetail, propertyRoute, ["SingleFamilyResidence", "Offer"]);
+
+assertIncludes(propertyDetail, propertyRoute, [
+  "7101 Wendemere St",
+  "Houston, TX 77088",
+  "$1,495/month",
+  "For Rent · Active",
+  "Schedule a Viewing",
+  "Request to Apply",
+  "Listing Agent",
+  "Carissa Weber",
+  "PLATINUM",
+  "Better Homes and Gardens Real Estate",
+  "Gary Greene - Sugar Land",
+  "https://www.har.com/carissa-weber/agent_WEBERC",
+  "/assets/agents/carissa-weber.png",
+  "/assets/decor/zyne-gold-pillars.png",
+  "See all 18 photos",
+  "max-width: 1440px",
+  "grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr)",
+  "width: 88px",
+  "Wendemere St"
+]);
+
 for (const product of catalogProducts) {
   const route = join("services", product.slug);
   const html = await assertFile(route);
