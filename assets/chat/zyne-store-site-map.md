@@ -53,6 +53,8 @@ Please provide direct answers to the following five questions using the exact re
 
 **Direct Question:** What is the structural layout of the repository? Please map out the file tree from the root directory down to two levels deep, explicitly showing where the build generation scripts, source assets, and output directories reside.
 
+⚠️ ADD ONLY directories/files that are important to the website developer so they do not have to go looking for them or duplicating them because they were thinking they do not exist.
+
 **Required Reply Format:**
 
 ```
