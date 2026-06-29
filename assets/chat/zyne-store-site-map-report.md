@@ -219,7 +219,7 @@ The separate root automation manifest defines `"capture:property-local": "node s
 
 ## Question 4: CI/CD Workflow Configuration
 
-The complete primary automation-test workflow, `.github/workflows/zyne-homepage-validation.yml`, is:
+The main automation-test workflow, `.github/workflows/zyne-homepage-validation.yml`, is:
 
 ```yaml
 name: ZYNE Homepage Validation
@@ -300,7 +300,7 @@ jobs:
 ```
 
 The manual page capture workflow, `.github/workflows/capture-zyne-property-fullpage.yml`, is:
-```
+```yaml
 name: Capture ZYNE Property Current Full Page
 
 on:
