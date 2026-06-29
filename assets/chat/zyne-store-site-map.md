@@ -12,7 +12,7 @@
 8. Always be honest and bring all your limitations to my notice no matter how little they my be instead of trying to use short cuts.
 
 ---
-
+# TASK 1
 Quick Scan and Inspect the files and structure of the local repo for this project:
 
 1. D:\PROJECTS\GITHUB\az4mary\zyne.store\sitemap.xml
