@@ -33,3 +33,46 @@ The `Publish ZYNE Homepage` GitHub Actions workflow runs on changes to `main` af
 ## Quick conclusion
 
 The customer-facing site is a prerendered static application with light client-side enhancements. Content and route generation are centralized under `projects/zyne-homepage`; `dist` is the deployable result; GitHub Actions rebuilds and publishes it. The architecture supports fast static delivery and crawlable pages while keeping product/catalog content structured and checkout delegated to Stan Store.
+
+---
+
+# Task 2 — File Structure and Organization Summary
+
+## Organization completed
+
+Non-customer-facing files that were loose at the repository root or mixed into an operational folder were reorganized by relationship:
+
+- GitHub Actions run documentation moved from `.github/workflows/github-actions-job-log.md` to `docs/automation/github-actions-job-log.md`, leaving the workflow directory for executable workflow definitions.
+- The loose brand note `About us.md` moved to `docs/brand/about-us.md`.
+- Property administration documents moved to `docs/property/lease-repair-terms.md` and `docs/property/repair-schedule.md`.
+- City Suites research/output was consolidated under `archive/city-suites/`, including its audit PDF, guest review, tracker, and HTML report.
+- Historical standalone prototypes from `main/`, `mobile/`, `mobilev1/`, `template/`, `view/`, and `working/` were grouped under `archive/legacy-site-prototypes/` while retaining their individual subfolders and `index.html` files.
+- Temporary address/script/delete test files were grouped under `archive/test-artifacts/` instead of remaining at the root.
+- The loose homepage mockup moved to `assets/mockups/zyne-store-homepage-mockup.png`.
+
+All moves were recorded as Git renames, preserving file contents and history.
+
+## Website-critical structure preserved
+
+The active site source and all build inputs stayed at their established paths:
+
+- `projects/zyne-homepage/src`, `scripts`, and `public`
+- `assets/catalog`, policy Markdown, catalog reference data, and active design assets
+- `homedetail/7101-wendemere-st-houston-tx-77088` property source and images
+- `.github/workflows/zyne-homepage-pages.yml` and validation/capture workflows
+- Root generated customer routes such as `services/`, growth-path folders, legal routes, `404.html`, `robots.txt`, and `sitemap.xml`
+
+`LAW/`, `Messenger/`, and `Protocols/` were also left in place. They are already grouped as distinct operational workspaces, and `LAW/` contains hard-coded path/URL references that could be broken by a folder move. Existing untracked ZIP archives were not modified or included.
+
+## Validation result
+
+After the reorganization, the complete production build succeeded. Validation confirmed:
+
+- 22 catalog products and 5 growth paths/categories
+- PRD 1.1 and PRD 1.2A homepage requirements
+- 4 generated legal policy pages
+- 36 validated generated routes and a 37-URL sitemap
+- SEO metadata, schema, breadcrumbs, keyword mapping, and image alternative text
+- The property-detail route with all 7 listing images
+
+The customer-facing website build and route-generation pipeline remained intact after the file moves.
