@@ -128,7 +128,7 @@ projects/zyne-homepage/src/styles/prd-1-2a.css
 projects/zyne-homepage/scripts/prerender.mjs
 projects/zyne-homepage/scripts/validate-prd-1-2a.mjs
 projects/zyne-homepage/package.json
-assets/zyne-website-PRD-1.2A-implementation-result.md
+assets/project-docs/prd/zyne-website-PRD-1.2A-implementation-result.md
 ```
 
 No screenshot workflow file is part of PRD 1.2A implementation.

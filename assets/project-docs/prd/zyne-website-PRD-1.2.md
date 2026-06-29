@@ -19,12 +19,12 @@ This revision also:
 
 This PRD consolidates homepage improvement work from:
 
-- `assets/zyne-website-PRD-1.md`
-- `assets/zyne-website-PRD-1.1-validation-result.md`
-- `assets/zyne-website-PRD-1.1-visual-validation-result.md`
-- `assets/zyne-website-PRD-1.1-deep-dive.md`
-- `assets/zyne-website-PRD-1.1-critique.md`
-- `assets/zyne-website-PRD-1.1-debate.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.1-validation-result.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.1-visual-validation-result.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.1-deep-dive.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.1-critique.md`
+- `assets/project-docs/prd/zyne-website-PRD-1.1-debate.md`
 - `assets/zyne-website-PRD-1.1-presentation.pdf`
 - Latest responsive device screenshots in `assets/PRD-1.1-images/` and/or the uploaded PRD 1.1 device capture package.
 

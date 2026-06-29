@@ -76,3 +76,43 @@ After the reorganization, the complete production build succeeded. Validation co
 - The property-detail route with all 7 listing images
 
 The customer-facing website build and route-generation pipeline remained intact after the file moves.
+
+---
+
+# Task 2.1 — Assets Folder Organization Summary
+
+## Organization completed
+
+A second inventory was performed specifically for `assets/`, reviewing filenames, folder relationships, repository references, workflow references, and exact duplicate hashes.
+
+- All 20 loose `zyne-website-PRD-*.md` requirement, implementation, roadmap, critique, and validation documents were consolidated under `assets/project-docs/prd/`.
+- References inside the PRD documents were updated to their new archive paths.
+- `.github/workflows/zyne-homepage-validation.yml` was updated so its PRD 2 path filters follow the moved product-data-model and asset-migration-map documents.
+- `projects/zyne-homepage/docs/repo-cleanup-audit.md` was updated to identify `assets/project-docs/prd/` as the PRD archive.
+- The unreferenced `ZYNE_homepage_desktop_2.0.png` was moved into the existing mockup collection as `assets/mockups/zyne-homepage-desktop-2.0.png`.
+- Existing relationship folders—including `articles/`, `catalog/`, `chat/`, `decor/`, `product_images/`, `products/`, screenshot collections, and presentation/device-image collections—were retained because they are already grouped by purpose.
+
+All content was preserved. The changes are Git renames plus reference updates; no asset, folder, or content was deleted.
+
+## Customer-facing assets deliberately left in place
+
+Loose product thumbnails, logos, favicons, generated `index-*.js`/`index-*.css` bundles, policy Markdown, Stan Store catalog references, report templates, and active design assets were not moved. Repository inspection found that these paths are still used by generated root pages, the build pipeline, or the separate LAW report. Moving them without a dedicated URL migration could break customer-facing or report pages.
+
+The PRD screenshot directories were also kept at their current paths because capture/conversion GitHub Actions write to and publish artifacts from those locations.
+
+## Marked for deletion review — nothing deleted
+
+The following are exact duplicates or likely obsolete generated archives. They are marked for a future deletion decision, not deleted now:
+
+1. `assets/Human Photo/` — all 36 portraits are byte-for-byte duplicates of the same filenames in `LAW/Abdulaziz_Bin_Ali_Partners/Human_Photos/`. Candidate rationale: redundant storage. Prerequisite: update the absolute paths in `testimonial_review_mapping.md` and confirm no external consumer uses the `assets/Human Photo` location.
+2. `assets/design-reference.png` and `assets/mockups/zyne-homepage-desktop-2.0.png` — exact duplicates. Candidate rationale: one canonical mockup is sufficient. Prerequisite: choose the canonical filename and confirm report/design references.
+3. `assets/favicon.svg` and `assets/ZYNE-favicon.svg`; `assets/ZYNE Logo Trans.png` and `assets/zyne-logo.png`; `assets/ZYNE-apple-touch-icon.png` and `assets/ZYNE-favicon.png` — three exact duplicate pairs. Candidate rationale: duplicate brand files. Prerequisite: standardize all HTML/public references on the canonical lowercase web assets.
+4. `assets/product_images/*_Image_1` and matching `assets/products/*_Image_1` files for Market Positioning, Operational Audit, Origination System, and Web Architecture — four exact duplicate pairs. Candidate rationale: overlapping product-image collections. Prerequisite: choose one canonical product image directory and update all consumers.
+5. `assets/AI_Integration_thumbnail.jpg` / `assets/product_images/AI_Integration_Image_1.jpg` and `assets/Competitor_Readiness_thumnail.png` / `assets/product_images/Competitor_Readiness_Image_1.png` — exact duplicate pairs with different roles/names. Candidate rationale: redundant binaries. Prerequisite: verify whether separate semantic filenames are still required by legacy pages.
+6. `assets/Homepage_Fix_Pack_thumbnail.png` / `assets/Website_Quick_Win_Audit_thumbnail.png` and their corresponding `assets/catalog/` files — exact duplicate image pairs. Candidate rationale: the same visual is stored under two product identities. Prerequisite: confirm this is intentional product artwork rather than accidental duplication.
+7. Root `assets/index-*.js` and `assets/index-*.css` files — multiple hashed build generations are present, including one exact duplicate JavaScript pair. Candidate rationale: stale generated bundles can accumulate. Prerequisite: retire root-generated deployment artifacts or identify precisely which hashes current root HTML references.
+8. `assets/property-listing-screenshots.zip`, `assets/top-ecommerce-website-screenshots.zip`, and `homedetail/7101-wendemere-st-houston-tx-77088/images.zip` — untracked archives alongside expanded source folders. Candidate rationale: likely redundant packaged copies. Prerequisite: confirm archive contents/checksums and whether the ZIPs are required for delivery; these existing untracked files were not modified or committed.
+
+## Validation result
+
+After the asset moves and reference updates, the full production build passed. It again validated 22 products, 5 categories/growth paths, PRD 1.1 and 1.2A requirements, 4 legal pages, 36 generated routes, the 37-URL sitemap, SEO/schema/breadcrumb/image-alt checks, and the property route with all 7 listing images. The customer-facing website remains intact.

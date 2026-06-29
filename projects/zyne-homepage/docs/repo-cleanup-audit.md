@@ -31,8 +31,8 @@ Use these files as the active project source:
 |---|---|---|
 | `index.html`, `services/`, category folders, legal folders, `404.html`, root `robots.txt`, root `sitemap.xml` | Generated/deployed site artifacts | Treat as build output only. Do not hand-edit as source. Prefer GitHub Actions publishing from `projects/zyne-homepage/dist`. |
 | `assets/catalog/` | Shared catalog image output | Keep for now because existing root generated pages reference it. Long term, make `projects/zyne-homepage/public/assets/catalog/` canonical and publish via build. |
-| `assets/zyne-website-PRD-*.md` | Requirements archive | Keep as PRD archive. Do not mix these files into runtime code. |
-| `assets/zyne-website-PRD-*-validation-result.md` | Historical validation records | Keep as audit trail. Future validation should be generated or documented under `projects/zyne-homepage/docs/` when project-specific. |
+| `assets/project-docs/prd/zyne-website-PRD-*.md` | Requirements archive | Keep as PRD archive. Do not mix these files into runtime code. |
+| `assets/project-docs/prd/zyne-website-PRD-*-validation-result.md` | Historical validation records | Keep as audit trail. Future validation should be generated or documented under `projects/zyne-homepage/docs/` when project-specific. |
 | `assets/stan_store_product_urls.md` | Source/reference URL list | Keep as reference until the full live catalog is normalized into structured product data. Do not duplicate under `public/`. |
 | `assets/stan_store_product_listings.md` | Live product listing reference | Keep as catalog-reference source until the full product catalog is migrated into structured data. |
 | `patches/zyne-crawler-enabled.md` | Implemented patch instruction | Consolidated into `projects/zyne-homepage/docs/crawler-seo-rendering.md` and removed. |
