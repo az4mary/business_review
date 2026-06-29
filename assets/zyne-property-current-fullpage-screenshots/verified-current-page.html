@@ -3,6 +3,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#050505">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&amp;display=block" rel="stylesheet">
+
   <title>7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail</title>
   <meta name="description" content="Three-bedroom Houston rental with covered porch, large lot, open layout, and clear property details.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -35,20 +39,46 @@
   --line: rgba(201, 154, 46, .34);
 }
 
-* {
+/* ==========================================================================
+   DETERMINISTIC BLUEPRINT CROSS-PLATFORM RESET
+   ========================================================================== */
+
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* Stabilize font rasterization engines across Windows/Linux */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+
+  /* Guarantee numeric widths align identically across platforms */
+  font-variant-numeric: tabular-nums;
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
+  min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Inter', sans-serif; /* Explicitly prioritize the uniform web asset */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -56,8 +86,10 @@ a {
   text-decoration: none;
 }
 
-button {
+button, input, textarea, select {
   font: inherit;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
