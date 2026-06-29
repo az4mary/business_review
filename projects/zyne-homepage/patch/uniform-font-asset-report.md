@@ -15,4 +15,9 @@
 - Bounding box alignment of text strings (No wrapping anomalies found on numbers): Confirmed
 
 #### 4. Developer Notes / Pipeline Observations
-The official Node.js LTS package was installed through Windows Package Manager. The first silent installation appeared to stall while awaiting Windows installer handling; after waiting and retrying interactively, Windows reported the package installed. The native production build then completed successfully through `C:\Program Files\nodejs\npm.cmd run build`: PRD, catalog, generated-route, legal, and SEO validations passed, and the property route generated with 7 copied images. The compiled HTML contains the Inter stylesheet link, strict reset, and explicit `'Inter', sans-serif` body font. The native npm preview returned HTTP 200 at `http://127.0.0.1:4173/homedetail/7101-wendemere-st-houston-tx-77088/`. In-browser verification returned `true` for `document.fonts.check("16px Inter")`; the pricing element computed to `Inter, sans-serif`, rendered `$1,495/month` without overflow, and the property title rendered as `7101` / `Wendemere St` with no overflow.
+- Installed the official Node.js LTS package through Windows Package Manager.
+- Native build passed all PRD, catalog, route, legal, and SEO validations.
+- Property route generated successfully with 7 copied images.
+- Compiled HTML contains the Inter stylesheet, strict reset, and explicit Inter body font.
+- Native preview returned HTTP 200.
+- Browser check confirmed Inter loaded and pricing/title text rendered without overflow.
