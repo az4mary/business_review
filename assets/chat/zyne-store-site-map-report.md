@@ -116,3 +116,194 @@ The following are exact duplicates or likely obsolete generated archives. They a
 ## Validation result
 
 After the asset moves and reference updates, the full production build passed. It again validated 22 products, 5 categories/growth paths, PRD 1.1 and 1.2A requirements, 4 legal pages, 36 generated routes, the 37-URL sitemap, SEO/schema/breadcrumb/image-alt checks, and the property route with all 7 listing images. The customer-facing website remains intact.
+
+---
+
+# Task 3 — Technical Environment & Repository Architecture
+
+## Question 1: Repository Directory Layout
+
+```text
+zyne.store
+├── .github
+│   └── workflows                         # CI, deployment, and screenshot automation
+├── archive
+│   ├── city-suites
+│   ├── legacy-site-prototypes
+│   └── test-artifacts
+├── assets                                # Repository-level content and reference assets
+│   ├── catalog                           # Shared catalog images
+│   ├── chat
+│   ├── decor
+│   ├── mockups
+│   ├── product_images
+│   ├── products
+│   ├── project-docs/prd                  # PRD archive
+│   ├── property-listing-screenshots
+│   ├── top-ecommerce-website-screenshots
+│   └── zyne-stan-store-*.md              # Legal source Markdown used by the build
+├── docs
+│   ├── automation
+│   ├── brand
+│   └── property
+├── homedetail
+│   └── 7101-wendemere-st-houston-tx-77088 # Property source copy and images
+├── projects
+│   └── zyne-homepage                     # Operational website source of truth
+│       ├── src                           # Source renderers, data, styles, browser behavior
+│       ├── scripts                       # Build generators and validators
+│       ├── public                        # Static source assets copied during build
+│       ├── dist                          # Generated deployment output (Git-ignored)
+│       ├── docs
+│       ├── index.html
+│       ├── package.json
+│       ├── pnpm-lock.yaml
+│       └── README.md
+├── scripts                               # Root Playwright/property capture tools
+├── services                              # Root generated route artifacts
+│   ├── ai-integration
+│   ├── competitor-readiness
+│   ├── ...
+│   └── index.html
+├── build-my-brand                        # Root generated collection route
+├── convert-more-clients                  # Root generated collection route
+├── delivery                              # Root generated collection route
+├── grow-my-visibility                    # Root generated collection route
+├── improve-my-business                   # Root generated collection route
+├── intelligence                          # Root generated collection route
+├── privacy                               # Root generated legal route
+├── refund-policy                         # Root generated legal route
+├── terms                                 # Root generated legal route
+├── use-ai                                # Root generated collection/subroutes
+├── 404.html
+├── CNAME
+├── package.json                          # Root Playwright capture manifest
+├── pnpm-lock.yaml
+├── robots.txt
+└── sitemap.xml
+```
+
+## Question 2: Static Asset Management Paths
+
+- **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets; selected repository inputs also come from `assets/catalog/`, `assets/zyne-stan-store-*.md`, and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
+- **Compiled Output Path:** `projects/zyne-homepage/dist/assets/`; the property generator also copies listing images to `projects/zyne-homepage/dist/homedetail/7101-wendemere-st-houston-tx-77088/images/`.
+- **Font Asset Delivery Method:** `None currently loaded` — no local font files, `@font-face`, Google Fonts stylesheet, or other font CDN is present. CSS uses system font stacks.
+
+## Question 3: Package Configuration & Manifest
+
+The generation manifest is `projects/zyne-homepage/package.json`. It has no `dependencies` object, represented below as an empty object so the requested structure remains explicit.
+
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "validate:catalog:strict": "ENFORCE_CANONICAL_ASSETS=true node scripts/validate-catalog.mjs",
+    "validate:routes": "node scripts/validate-generated-routes.mjs && node scripts/validate-legal-layer.mjs && node scripts/validate-seo-layer.mjs",
+    "validate:prd1.1": "node scripts/validate-prd-1-1.mjs",
+    "validate:prd1.2a": "node scripts/validate-prd-1-2a.mjs",
+    "prebuild": "npm run validate:prd1.2a",
+    "postbuild": "node scripts/generate-property-route.mjs",
+    "report:catalog-migration": "node scripts/report-catalog-migration.mjs",
+    "build": "npm run validate:catalog && npm run validate:prd1.1 && vite build && node scripts/prerender.mjs && node scripts/generate-routes.mjs && node scripts/generate-legal-layer.mjs && node scripts/generate-property-route.mjs && node scripts/generate-seo-layer.mjs && npm run validate:routes",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
+```
+
+The separate root automation manifest defines `"capture:property-local": "node scripts/capture-property-listings-local.mjs"` and `"playwright": "latest"` as its only development dependency.
+
+## Question 4: CI/CD Workflow Configuration
+
+The complete primary automation-test workflow, `.github/workflows/zyne-homepage-validation.yml`, is:
+
+```yaml
+name: ZYNE Homepage Validation
+
+on:
+  push:
+    paths:
+      - "projects/zyne-homepage/**"
+      - "assets/catalog/**"
+      - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
+      - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
+      - ".github/workflows/zyne-homepage-validation.yml"
+  pull_request:
+    paths:
+      - "projects/zyne-homepage/**"
+      - "assets/catalog/**"
+      - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
+      - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
+      - ".github/workflows/zyne-homepage-validation.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-homepage:
+    name: Validate PRD catalog and build
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: projects/zyne-homepage
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate catalog
+        run: npm run validate:catalog
+
+      - name: Report catalog migration status
+        run: npm run report:catalog-migration
+
+      - name: Validate PRD 1.1 homepage UX
+        run: npm run validate:prd1.1
+
+      - name: Build Vite bundle
+        run: npx vite build
+
+      - name: Prerender crawler-readable homepage
+        run: node scripts/prerender.mjs
+
+      - name: Generate category and product routes
+        run: node scripts/generate-routes.mjs
+
+      - name: Generate legal layer
+        run: node scripts/generate-legal-layer.mjs
+
+      - name: Generate SEO layer
+        run: node scripts/generate-seo-layer.mjs
+
+      - name: Build and validate generated site
+        run: npm run build
+
+      - name: Validate legal layer
+        run: node scripts/validate-legal-layer.mjs
+
+      - name: Validate SEO layer
+        run: node scripts/validate-seo-layer.mjs
+
+      - name: Strict catalog validation
+        run: npm run validate:catalog:strict
+```
+
+Screenshot-specific automation is separately defined in `capture-zyne-homepage.yml`, `capture-zyne-property-fullpage.yml`, and `capture-top-ecommerce-sites.yml`. Deployment is handled by `zyne-homepage-pages.yml`.
+
+## Question 5: Local Testing & Runtime Parameters
+
+- **Local Developer OS:** `Microsoft Windows 11 Pro, version 10.0.22631, build 22631, 64-bit`
+- **Local Node.js Version:** `Node v24.14.0` from the Codex bundled runtime. The repository CI intentionally uses Node `22`.
+- **Automation/Testing Engine:** `Playwright v1.61.1`; the site build uses installed `Vite v7.3.5`.
+- **Local Preview Method:** `Vite development/preview server` from `projects/zyne-homepage`: standard commands are `npm run dev` and `npm run preview`; on this machine, native `npm` is not on `PATH`, so the working equivalents are bundled `pnpm run dev`, `pnpm run build`, and `pnpm run preview`. The completed local generation tests used bundled pnpm `11.7.0` with a temporary npm-to-pnpm compatibility shim because the build scripts contain nested `npm run` calls.
