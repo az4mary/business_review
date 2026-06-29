@@ -13,6 +13,32 @@
 
 # ASSISTANT
 
+</aside>
+
+---
+
+<aside>
+👤
+
+# ARCHITECT
+
+</aside>
+
+1. URL
+    - https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/
+2. Create a new github workflow that will take screenshots of the **full page** of the website.
+3. Ensure the screenshots are not stale/cached - need current live page.
+4. **Devices** - Desktop, Mobile and Tablet.
+5. The images will be used for Visual **pixel-level** QA Pass/Inspection so they should be high resolution.
+6. Create and save them in a new folder in https://github.com/az4mary/zyne.store/tree/main/assets
+
+---
+
+<aside>
+🤖
+
+# ASSISTANT
+
 Implemented.
 
 Created GitHub Actions workflow:
