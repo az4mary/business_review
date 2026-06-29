@@ -21,7 +21,7 @@ Quick Scan and Inspect the files and structure of the local repo for this projec
 4. D:\PROJECTS\GITHUB\az4mary\zyne.store\homedetail\7101-wendemere-st-houston-tx-77088
 5. D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\README.md
 
-Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\chat\zyne-store-site-map-report.md” and write your quick findings about how this website functions. Reply `DONE` in this conversation after you have updated the file with your comment.
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\chat\zyne-store-site-map-report.md” and write your quick findings about how this website functions. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ---
 
