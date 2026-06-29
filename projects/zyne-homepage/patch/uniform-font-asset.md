@@ -41,7 +41,7 @@ npm -v
 
 **Target File Path:** `projects/zyne-homepage/scripts/generate-property-route.mjs`
 
-Instruct the developer to apply the following two precise code modifications within the script:
+Apply the following two precise code modifications within the script:
 
 ### Part A: CSS Baseline Overhaul
 
@@ -148,7 +148,7 @@ const html = `<!doctype html>
 
 ## 3. Local Dry-Run & Verification Procedure
 
-With native `npm` fully operational on the local machine, the developer must verify execution matching the behavior of the GitHub runner environment:
+With native `npm` fully operational on the local machine, you must verify execution matching the behavior of the GitHub runner environment:
 
 1. **Navigate to the core workspace:**
 ```bash
@@ -183,7 +183,7 @@ document.fonts.check("16px Inter") ? "PASS: Inter loaded" : "FAIL: Inter missing
 
 ## 4. Mandatory Verification Report Format
 
-The developer must fill out and submit this exact verification report upon completing the implementation steps:
+You must fill out and submit this exact verification report upon completing the implementation steps:
 
 ```markdown
 ### [ZYNE-TYPO-01] Verification Report — NPM Migration
