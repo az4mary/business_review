@@ -183,6 +183,8 @@ document.fonts.check("16px Inter") ? "PASS: Inter loaded" : "FAIL: Inter missing
 
 ## 4. Mandatory Verification Report Format
 
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\uniform-font-asset-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+
 You must fill out and submit this exact verification report upon completing the implementation steps:
 
 ```markdown
