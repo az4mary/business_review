@@ -171,7 +171,7 @@ npm run preview
 ```
 
 
-4. **Inspect Layout Engine Font Delivery:** Open the preview link in your browser, launch the Developer Tools Console (`F12`), and execute the following evaluation check:
+4. **Inspect Layout Engine Font Delivery:** Open the preview link in your in-app browser or launch and connect the edge browser with remote debugging enabled connection, launch the Developer Tools Console (`F12`), and execute the following evaluation check:
 ```javascript
 document.fonts.check("16px Inter") ? "PASS: Inter loaded" : "FAIL: Inter missing";
 
