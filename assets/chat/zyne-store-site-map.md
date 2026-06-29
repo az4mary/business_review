@@ -35,6 +35,16 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\chat\zyne-store-site
 
 ---
 
+# TASK 2.1
+
+"D:\PROJECTS\GITHUB\az4mary\zyne.store\assets" - perform another quick read of each file/title and reorganize them into folders by moving based on relationships without breaking the website. 
+
+⚠️ DO NOT Delete any content or file or folder - instead mark them for deletion with rationale in your report.
+
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\assets\chat\zyne-store-site-map-report.md” and write a summary of file structure and organization done. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+
+---
+
 # TASK 3 - Technical Environment & Repository Architecture Request
 
 Please provide direct answers to the following five questions using the exact reply formats specified below. This data is required to align our automated testing environments with the local development build.
