@@ -116,7 +116,7 @@ Because these changes affect the CI/CD environment, the "dry-run" must be execut
 
 ## 3. Mandatory Verification Report Format
 
-You must submit this exact verification report upon completing the merge:
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
 
 ```markdown
 ### [ZYNE-PIPELINE-01] Verification Report — Pipeline Optimization
