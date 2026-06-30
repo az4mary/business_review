@@ -4,12 +4,17 @@ on:
   push:
     branches: [main]
     paths:
-      - "projects/zyne-homepage/**"
+      # 1. EXPLICIT SOURCE & BUILD DIRECTORIES
+      - "projects/zyne-homepage/src/**"
+      - "projects/zyne-homepage/scripts/**"
+      - "projects/zyne-homepage/public/**"
+      # 2. CORE MANIFESTS & ROOT HTML
+      - "projects/zyne-homepage/index.html"
+      - "projects/zyne-homepage/package.json"
+      - "projects/zyne-homepage/package-lock.json"
+      # 3. SHARED REPO ASSETS & GENERATED OUTPUTS
       - "assets/catalog/**"
       - "homedetail/**"
-      - ".github/workflows/zyne-homepage-pages.yml"
-      - "index.html"
-      - "404.html"
       - "services/**"
       - "grow-my-visibility/**"
       - "build-my-brand/**"
@@ -22,6 +27,8 @@ on:
       - "terms/**"
       - "refund-policy/**"
       - "cookie-policy/**"
+      - "404.html"
+      - ".github/workflows/zyne-homepage-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -44,6 +51,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "projects/zyne-homepage/package-lock.json"
       - run: npm install
       - run: npm run build
       - name: Verify PRD 1.1 publish artifact

@@ -1,19 +1,19 @@
 name: ZYNE Homepage Validation
 
 on:
-  push:
-    paths:
-      - "projects/zyne-homepage/**"
-      - "assets/catalog/**"
-      - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
-      - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
-      - ".github/workflows/zyne-homepage-validation.yml"
   pull_request:
     paths:
-      - "projects/zyne-homepage/**"
+      # 1. EXPLICIT SOURCE & BUILD DIRECTORIES
+      - "projects/zyne-homepage/src/**"
+      - "projects/zyne-homepage/scripts/**"
+      - "projects/zyne-homepage/public/**"
+      # 2. CORE MANIFESTS & ROOT HTML
+      - "projects/zyne-homepage/index.html"
+      - "projects/zyne-homepage/package.json"
+      - "projects/zyne-homepage/package-lock.json"
+      # 3. EXTERNAL CATALOG DEPENDENCIES
       - "assets/catalog/**"
-      - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
-      - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
+      # 4. THE WORKFLOW FILE ITSELF
       - ".github/workflows/zyne-homepage-validation.yml"
   workflow_dispatch:
 
@@ -34,42 +34,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "projects/zyne-homepage/package-lock.json"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Validate catalog
-        run: npm run validate:catalog
-
       - name: Report catalog migration status
         run: npm run report:catalog-migration
 
-      - name: Validate PRD 1.1 homepage UX
-        run: npm run validate:prd1.1
-
-      - name: Build Vite bundle
-        run: npx vite build
-
-      - name: Prerender crawler-readable homepage
-        run: node scripts/prerender.mjs
-
-      - name: Generate category and product routes
-        run: node scripts/generate-routes.mjs
-
-      - name: Generate legal layer
-        run: node scripts/generate-legal-layer.mjs
-
-      - name: Generate SEO layer
-        run: node scripts/generate-seo-layer.mjs
-
-      - name: Build and validate generated site
+      - name: Build and validate generated site (Full Suite)
         run: npm run build
-
-      - name: Validate legal layer
-        run: node scripts/validate-legal-layer.mjs
-
-      - name: Validate SEO layer
-        run: node scripts/validate-seo-layer.mjs
 
       - name: Strict catalog validation
         run: npm run validate:catalog:strict
