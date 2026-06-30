@@ -219,29 +219,34 @@ Here are the concrete steps updated to explicitly handle the file creation and c
 
 ## 1. Concrete Code Patches (Updated with Lockfile Generation)
 
-### Patch A: Generate the NPM Lockfile & Cleanup
+### Patch A: The Hard Reset & Lockfile Generation
 
-1. Open a terminal and navigate to the project directory:
+1. **Navigate to the project root:**
 ```bash
 cd projects/zyne-homepage
 
 ```
 
-2. Delete the obsolete pnpm lockfile so the repository doesn't have conflicting package managers:
 
-
+2. **Destroy the conflicting `pnpm` dependency tree:**
 ```bash
-rm pnpm-lock.yaml
+rm -rf node_modules
 
 ```
 
 
-3. Generate the new `package-lock.json` file by running a fresh install using the native `npm` you installed earlier:
+3. **Clear the damaged npm cache (just to be safe):**
+```bash
+npm cache clean --force
+
+```
+
+
+4. **Generate the clean `package-lock.json` and native node_modules:**
 ```bash
 npm install
 
 ```
 
-
-4. Stage the newly created `projects/zyne-homepage/package-lock.json` file and the deletion of the `pnpm-lock.yaml` file to be committed to Git.
+Once this finishes successfully, you can stage the new `package-lock.json` alongside your YAML updates and push them directly to `main`.
 Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\uniform-font-asset-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
