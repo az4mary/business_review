@@ -248,5 +248,4 @@ npm install
 
 ```
 
-Once this finishes successfully, you can stage the new `package-lock.json` alongside your YAML updates and push them directly to `main`.
 Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\uniform-font-asset-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
