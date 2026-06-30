@@ -137,3 +137,54 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 [Enter any pipeline execution warnings or cache miss errors here]
 
 ```
+
+Absolutely. Trunk-based development (committing directly to `main`) is a highly efficient strategy, especially when you commit frequently and have good rollback hygiene. You absolutely do not need to create a branch to implement this patch.
+
+Because of how we structured the YAML files, committing these changes directly to `main` is completely safe. Here is exactly what will happen the moment you push the changes to `main`, and how your developer can verify it without a PR.
+
+---
+
+## What Happens When You Push Directly to `main`
+
+1. **The Publish Workflow Will Fire:** The `Publish ZYNE Homepage` workflow will trigger automatically. This is perfect, because you will instantly see the new `cache: "npm"` step in action during the deployment.
+2. **The Validation Workflow Will Stay Quiet:** The `ZYNE Homepage Validation` workflow will **not** trigger. This instantly proves that Patch A worked, successfully isolating the validation bloat away from your live deployment pushes.
+
+---
+
+## The Trunk-Based Verification Procedure
+
+Since you aren't using a Pull Request to test the validation workflow, your developer will use the **manual trigger** (`workflow_dispatch`) that we explicitly kept in the YAML file to run their dry-run.
+
+Hand them these modified verification steps:
+
+1. **Commit and Push:** Commit both YAML file updates directly to `main` and push.
+2. **Verify the Deployment Cache:** Navigate to the GitHub Actions tab, click on the running `Publish ZYNE Homepage` workflow, and verify that the `Set up Node.js` step successfully creates the npm cache.
+3. **Manually Trigger the Validation Pipeline:** On the left sidebar, click `ZYNE Homepage Validation`. On the right side of the screen, click the **"Run workflow"** dropdown button and run it on the `main` branch.
+4. **Verify the Validation Optimization:** Open that manually triggered run. Confirm that it executes the single `Build and validate generated site (Full Suite)` step instead of the 9 individual scripts, and check that it successfully hits the cache we just created in step 2.
+
+---
+
+## Mandatory Verification Report Format (Direct-to-Main)
+
+Here is the adjusted report format for your developer to submit once they have pushed the changes and run the manual trigger:
+
+```markdown
+### [ZYNE-PIPELINE-01] Verification Report — Direct to Main Optimization
+
+#### 1. Trigger Isolation Check
+- [ ] Verified that pushing to `main` ONLY triggered `Publish ZYNE Homepage`.
+- [ ] `ZYNE Homepage Validation` stayed completely quiet during the push.
+
+#### 2. Caching Implementation
+- [ ] `cache: "npm"` successfully executed in the `Publish ZYNE Homepage` deployment run.
+- [ ] `Set up Node.js` step correctly utilized `projects/zyne-homepage/package-lock.json`.
+
+#### 3. Validation Workflow Reductions (Tested via Manual Dispatch)
+- [ ] Manually triggered `ZYNE Homepage Validation` via `workflow_dispatch`.
+- [ ] Confirmed individual build/generate steps are gone, replaced by the single `npm run build` execution.
+- Runtime Reduction: Decreased from [X] minutes to [Y] minutes.
+
+#### 4. Developer Notes / Anomalies
+[Enter any pipeline execution warnings or cache miss errors here]
+
+```
