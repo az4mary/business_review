@@ -142,3 +142,120 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 [Enter any pipeline execution warnings or cache miss errors here]
 
 ```
+
+## 4. Surgical Triggers
+
+To make the triggers surgical, we will abandon the broad wildcard and explicitly whitelist **only the source code, build scripts, dependency manifests, and static assets**.
+
+Here is the exact patch to implement these strict constraints directly to your `main` branch.
+
+---
+
+## 1. Concrete Code Patches
+
+Instruct your developer to update the `on:` trigger blocks in **both** workflow files to use the explicit whitelist.
+
+### Patch A: Surgical Triggers for Validation Workflow
+
+**File:** `.github/workflows/zyne-homepage-validation.yml`
+
+Update the `on:` block at the top of the file to this exact configuration:
+
+```yaml
+on:
+  pull_request:
+    paths:
+      # 1. EXPLICIT SOURCE & BUILD DIRECTORIES
+      - "projects/zyne-homepage/src/**"
+      - "projects/zyne-homepage/scripts/**"
+      - "projects/zyne-homepage/public/**"
+      # 2. CORE MANIFESTS & ROOT HTML
+      - "projects/zyne-homepage/index.html"
+      - "projects/zyne-homepage/package.json"
+      - "projects/zyne-homepage/package-lock.json"
+      # 3. EXTERNAL CATALOG DEPENDENCIES
+      - "assets/catalog/**"
+      # 4. THE WORKFLOW FILE ITSELF
+      - ".github/workflows/zyne-homepage-validation.yml"
+  workflow_dispatch:
+
+```
+
+*(Note: We removed the PRD documentation paths from the trigger entirely so that modifying your data models or asset maps no longer triggers a build).*
+
+### Patch B: Surgical Triggers for Publish Workflow
+
+**File:** `.github/workflows/zyne-homepage-pages.yml`
+
+Update the `on:` block at the top of the file to replace the broad `projects/zyne-homepage/` catch-all with the same strict whitelist:
+
+```yaml
+on:
+  push:
+    branches: [main]
+    paths:
+      # 1. EXPLICIT SOURCE & BUILD DIRECTORIES
+      - "projects/zyne-homepage/src/**"
+      - "projects/zyne-homepage/scripts/**"
+      - "projects/zyne-homepage/public/**"
+      # 2. CORE MANIFESTS & ROOT HTML
+      - "projects/zyne-homepage/index.html"
+      - "projects/zyne-homepage/package.json"
+      - "projects/zyne-homepage/package-lock.json"
+      # 3. SHARED REPO ASSETS & GENERATED OUTPUTS
+      - "assets/catalog/**"
+      - "homedetail/**"
+      - "services/**"
+      - "grow-my-visibility/**"
+      - "build-my-brand/**"
+      - "improve-my-business/**"
+      - "use-ai/**"
+      - "convert-more-clients/**"
+      - "intelligence/**"
+      - "delivery/**"
+      - "privacy/**"
+      - "terms/**"
+      - "refund-policy/**"
+      - "cookie-policy/**"
+      - "404.html"
+      - ".github/workflows/zyne-homepage-pages.yml"
+  workflow_dispatch:
+
+```
+
+---
+
+## 2. Direct-to-Main Verification Procedure
+
+Because we are targeting documentation ignores, the developer must verify this by explicitly altering a documentation file and ensuring the pipeline *ignores* it.
+
+1. **Apply and Commit the Patches:** Commit the updated YAML files to `main` and push. *(This push will trigger the Publish workflow because the `.yml` files themselves are in the whitelist).*
+2. **Execute the Ignored Path Dry-Run:** Create or modify a markdown file inside the `projects/zyne-homepage/docs/` directory (e.g., add a comment to a PRD). Commit and push this single change to `main`.
+
+
+3. **Verify the Silence:** Navigate to the GitHub Actions tab. Confirm that **neither** `ZYNE Homepage Validation` nor `Publish ZYNE Homepage` triggered.
+4. **Execute the Monitored Path Dry-Run:** Make a minor, reversible change to a CSS or JS file inside `projects/zyne-homepage/src/`. Commit and push to `main`.
+
+
+5. **Verify the Trigger:** Check the Actions tab. Confirm that `Publish ZYNE Homepage` automatically triggers, successfully catching the source-code modification.
+
+---
+
+## 3. Mandatory Verification Report Format
+
+```markdown
+### [ZYNE-PIPELINE-02] Verification Report — Surgical Triggers
+
+#### 1. Trigger Path Replacements
+- [ ] Broad `projects/zyne-homepage/**` wildcard successfully removed from both workflow files.
+- [ ] Explicit whitelists for `src/`, `scripts/`, `public/`, and manifests applied.
+
+#### 2. Ignored Path Verification (The "Silence" Test)
+- Modified File: `projects/zyne-homepage/docs/[filename].md`
+- [ ] Verified that pushing this documentation change to `main` triggered ZERO workflows.
+
+#### 3. Monitored Path Verification (The "Active" Test)
+- Modified File: `projects/zyne-homepage/src/[filename].[ext]`
+- [ ] Verified that pushing this source code change to `main` successfully triggered the `Publish ZYNE Homepage` workflow.
+
+```
