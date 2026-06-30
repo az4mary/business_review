@@ -219,6 +219,8 @@ on:
 
 ```
 
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+
 ---
 
 ## 5. Direct-to-Main Verification Procedure
@@ -238,6 +240,7 @@ Because we are targeting documentation ignores, you must verify this by explicit
 ---
 
 ## 3. Mandatory Verification Report Format
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```markdown
 ### [ZYNE-PIPELINE-02] Verification Report — Surgical Triggers
