@@ -149,10 +149,6 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 
 To make the triggers surgical, we will abandon the broad wildcard and explicitly whitelist **only the source code, build scripts, dependency manifests, and static assets**.
 
-Here is the exact patch to implement these strict constraints directly to your `main` branch.
-
-## 1. Concrete Code Patches
-
 Update the `on:` trigger blocks in **both** workflow files to use the explicit whitelist.
 
 ### Patch A: Surgical Triggers for Validation Workflow
