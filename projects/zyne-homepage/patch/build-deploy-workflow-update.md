@@ -177,7 +177,7 @@ on:
 
 ```
 
-*(Note: We removed the PRD documentation paths from the trigger entirely so that modifying your data models or asset maps no longer triggers a build).*
+*(Note: We removed the PRD documentation paths from the trigger entirely so that modifying data models or asset maps no longer triggers a build).*
 
 ### Patch B: Surgical Triggers for Publish Workflow
 
