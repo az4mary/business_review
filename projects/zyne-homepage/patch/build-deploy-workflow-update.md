@@ -99,6 +99,8 @@ Update the `build` job steps inside `.github/workflows/zyne-homepage-pages.yml`:
 
 ```
 
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
+
 ---
 
 ## 2. The Trunk-Based Verification Procedure
@@ -119,7 +121,6 @@ Use the **manual trigger** (`workflow_dispatch`) that we explicitly kept in the 
 ## 3. Mandatory Verification Report Format (Direct-to-Main)
 
 Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
-Here is the adjusted report format for your developer to submit once they have pushed the changes and run the manual trigger:
 
 ```markdown
 ### [ZYNE-PIPELINE-01] Verification Report — Direct to Main Optimization
