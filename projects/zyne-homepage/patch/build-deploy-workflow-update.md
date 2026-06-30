@@ -221,7 +221,7 @@ on:
 
 ---
 
-## 2. Direct-to-Main Verification Procedure
+## 5. Direct-to-Main Verification Procedure
 
 Because we are targeting documentation ignores, you must verify this by explicitly altering a documentation file and ensuring the pipeline *ignores* it.
 
