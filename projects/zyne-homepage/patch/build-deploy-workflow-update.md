@@ -151,11 +151,9 @@ To make the triggers surgical, we will abandon the broad wildcard and explicitly
 
 Here is the exact patch to implement these strict constraints directly to your `main` branch.
 
----
-
 ## 1. Concrete Code Patches
 
-Instruct your developer to update the `on:` trigger blocks in **both** workflow files to use the explicit whitelist.
+Update the `on:` trigger blocks in **both** workflow files to use the explicit whitelist.
 
 ### Patch A: Surgical Triggers for Validation Workflow
 
@@ -229,7 +227,7 @@ on:
 
 ## 2. Direct-to-Main Verification Procedure
 
-Because we are targeting documentation ignores, the developer must verify this by explicitly altering a documentation file and ensuring the pipeline *ignores* it.
+Because we are targeting documentation ignores, you must verify this by explicitly altering a documentation file and ensuring the pipeline *ignores* it.
 
 1. **Apply and Commit the Patches:** Commit the updated YAML files to `main` and push. *(This push will trigger the Publish workflow because the `.yml` files themselves are in the whitelist).*
 2. **Execute the Ignored Path Dry-Run:** Create or modify a markdown file inside the `projects/zyne-homepage/docs/` directory (e.g., add a comment to a PRD). Commit and push this single change to `main`.
