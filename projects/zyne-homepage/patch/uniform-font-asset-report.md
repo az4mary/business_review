@@ -21,3 +21,10 @@
 - Compiled HTML contains the Inter stylesheet, strict reset, and explicit Inter body font.
 - Native preview returned HTTP 200.
 - Browser check confirmed Inter loaded and pricing/title text rendered without overflow.
+
+#### 5. PATCH 2 — NPM Migration Continued
+- Removed obsolete `projects/zyne-homepage/pnpm-lock.yaml`.
+- Cleared the native npm cache with `npm cache clean --force`.
+- Generated a clean `projects/zyne-homepage/package-lock.json` with native `npm install`.
+- Installation result: 14 packages added, 15 packages audited, and 0 vulnerabilities found.
+- Warning: npm reported that `esbuild@0.28.1` has a postinstall script not yet covered by `allowScripts`.
