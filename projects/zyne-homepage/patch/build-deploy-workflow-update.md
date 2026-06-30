@@ -14,10 +14,6 @@
 
 ---
 
-Here is the concrete implementation plan to eliminate the execution bloat, implement caching, and resolve the redundant double-builds. Hand this directly to your developer.
-
----
-
 # Implementation Plan: CI/CD Pipeline Optimization
 
 **Target Files:**
@@ -120,7 +116,7 @@ Because these changes affect the CI/CD environment, the "dry-run" must be execut
 
 ## 3. Mandatory Verification Report Format
 
-The developer must submit this exact verification report upon completing the merge:
+You must submit this exact verification report upon completing the merge:
 
 ```markdown
 ### [ZYNE-PIPELINE-01] Verification Report — Pipeline Optimization
