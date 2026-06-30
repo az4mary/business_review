@@ -143,6 +143,8 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 
 ```
 
+---
+
 ## 4. Surgical Triggers
 
 To make the triggers surgical, we will abandon the broad wildcard and explicitly whitelist **only the source code, build scripts, dependency manifests, and static assets**.
