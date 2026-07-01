@@ -9,6 +9,17 @@ const outputImageDir = join(outputDir, "images");
 const imageBase = `/${route}/images`;
 const canonical = "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/";
 
+// Custom beautifully stylized thin-line vector highway cloverleaf for Easy Access
+const cloverleafIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="7" r="3" />
+    <circle cx="17" cy="7" r="3" />
+    <circle cx="7" cy="17" r="3" />
+    <circle cx="17" cy="17" r="3" />
+    <path d="M12 2v20M2 12h20" />
+  </svg>
+`;
+
 const property = {
   address: "7101 Wendemere St",
   city: "Houston",
@@ -144,12 +155,13 @@ const stat = (icon, value, label) => `
   </article>
 `;
 
+// Swapped internal node order to put Value on top of Label to align structural layout
 const metric = (icon, label, value) => `
   <article>
     ${icon}
-    <div>
-      <small>${label}</small>
+    <div class="metric-info">
       <b>${value}</b>
+      <small>${label}</small>
     </div>
   </article>
 `;
@@ -241,7 +253,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif; /* Explicitly prioritize the uniform web asset */
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -278,6 +290,13 @@ p {
   filter:
     drop-shadow(0 0 6px rgba(201, 154, 46, .20))
     drop-shadow(0 0 14px rgba(201, 154, 46, .08));
+}
+
+/* Global Icon Hardening: Force fine-line vector profile to erase heavy stroke anomalies */
+.zyne-icon stroke,
+.zyne-icon path,
+.zyne-icon circle {
+  stroke-width: 1.25px !important;
 }
 
 .site-header {
@@ -514,8 +533,9 @@ h1 {
 
 .metrics article {
   display: flex;
-  gap: .85rem;
-  padding: 1.1rem;
+  align-items: center;
+  gap: .95rem;
+  padding: 1.2rem;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -529,11 +549,34 @@ h1 {
 }
 
 .metrics .zyne-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 
-.metrics small,
+/* Sidebar Info Hardening: Align numbers cleanly on top, all-caps label below */
+.metric-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrics b {
+  display: block;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.metrics small {
+  display: block;
+  color: var(--muted-dark);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .62rem;
+  margin-top: .15rem;
+}
+
 .overview span {
   display: block;
   color: var(--muted-dark);
@@ -542,7 +585,6 @@ h1 {
   font-size: .66rem;
 }
 
-.metrics b,
 .overview b {
   display: block;
   color: var(--text);
@@ -739,6 +781,15 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .075em;
   margin: 0;
+  position: relative;
+}
+
+/* Hardened Section Header Accent: Inject Mockup's distinct gold accent bullets dynamically */
+.title h2::after {
+  content: " •";
+  color: var(--gold);
+  margin-left: 0.45rem;
+  font-weight: 900;
 }
 
 .title::after {
@@ -797,19 +848,36 @@ h1 {
   line-height: 1.75;
 }
 
+/* Table Hardening: Wipe out harsh enclosed grid matrix; convert to borderless layout with horizontal row lines */
 .overview-table {
-  border: 1px solid rgba(201,154,46,.24);
+  border: none;
+  width: 100%;
 }
 
 .overview-table div {
   display: grid;
-  grid-template-columns: .48fr 1fr;
-  padding: .78rem 1rem;
-  border-bottom: 1px solid rgba(201,154,46,.18);
+  grid-template-columns: 180px 1fr;
+  padding: .85rem 0;
+  border-bottom: 1px solid rgba(201, 154, 46, .16);
 }
 
 .overview-table div:last-child {
   border-bottom: 0;
+}
+
+.overview-table span {
+  text-transform: uppercase;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  color: var(--gold2);
+  font-weight: 700;
+}
+
+.overview-table b {
+  font-size: .95rem;
+  color: var(--text);
+  font-weight: 400;
+  margin-top: 0;
 }
 
 .highlight-grid {
@@ -854,20 +922,21 @@ h1 {
   gap: 40px 56px;
 }
 
+/* CTA Structural Hardening: Converted layout grid to 2-columns (1fr 320px) to solve stretching and frame gold pillars */
 .cta {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 350px 220px;
-  gap: 2rem;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
   align-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  padding: 1.75rem 2.25rem;
-  margin: 1.5rem 0;
-  min-height: 160px;
+  padding: 2.5rem 3.5rem;
+  margin: 2.5rem 0;
+  min-height: 180px;
   background:
-    radial-gradient(circle at right center, rgba(201,154,46,.16), transparent 20rem),
-    linear-gradient(90deg, rgba(32,24,9,.72), rgba(12,12,10,.96) 55%, rgba(6,6,6,.98));
+    radial-gradient(circle at right center, rgba(201,154,46,.18), transparent 30rem),
+    linear-gradient(90deg, rgba(20,15,6,.85), rgba(10,10,8,.98) 60%, var(--bg));
 }
 
 .cta::after {
@@ -1192,6 +1261,7 @@ const topbar = `
   </div>
 `;
 
+// Dynamic Count Badge Modification: Stripped Mockup value fallback; badge now reflects exact image array metrics
 const gallery = `
   <section class="media">
     <div class="photo-grid">
@@ -1207,7 +1277,7 @@ const gallery = `
             ? `<img src="${visible[5].src}" alt="${visible[5].label} at ${property.address}">`
             : ""
         }
-        <span>${Icons.images} See all ${Math.max(photos.length, 18)} photos</span>
+        <span>${Icons.images} See all ${photos.length} photos</span>
       </button>
     </div>
   </section>
@@ -1349,6 +1419,7 @@ const homeFeatures = `
   </section>
 `;
 
+// Icon Swap Overhaul: Substituted generic mapPin with custom cloverleafIcon for true highway representation
 const neighborhood = `
   <section class="section neighborhood">
     <div class="title">
@@ -1356,7 +1427,7 @@ const neighborhood = `
     </div>
 
     <div class="highlight-grid">
-      ${item(Icons.mapPin, "Easy Access", "Quick access to major highways and commuting routes")}
+      ${item(cloverleafIcon, "Easy Access", "Quick access to major highways and commuting routes")}
       ${item(Icons.compass, "Local Amenities", "Close to shopping, dining, and everyday conveniences")}
       ${item(Icons.community, "Community", "Established neighborhood with local schools nearby")}
     </div>
