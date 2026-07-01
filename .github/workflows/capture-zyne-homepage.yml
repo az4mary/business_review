@@ -43,7 +43,7 @@ jobs:
             {
               name: 'Desktop',
               file: 'Desktop.png',
-              viewport: { width: 1440, height: 1200 },
+              viewport: { width: 1920, height: 1080 },
               fullPage: true,
             },
             {
