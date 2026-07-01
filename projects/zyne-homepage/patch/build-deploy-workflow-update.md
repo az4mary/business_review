@@ -261,13 +261,9 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 
 ---
 
-## 7. Mandatory Verification Report Format — Surgical Triggers
+## 7. The Final Step: Commit & Verify
 
-### The Final Step: Commit & Verify
-
-You are now ready to commit this optimization bundle directly to your `main` branch.
-
-Instruct your developer to execute this final sequence:
+Execute this final sequence if still pending:
 
 #### 1. Stage and Commit the Bundle
 
@@ -280,7 +276,7 @@ Stage the following files, commit them, and push directly to `main`:
 
 #### 2. Verify the Pipeline Behaviors on GitHub
 
-Immediately after pushing to `main`, go to the **Actions** tab in your GitHub repository and verify the following:
+Immediately after pushing to `main`, go to the **Actions** tab in GitHub repository and verify the following:
 
 1. **The Silence Test:** Ensure that the `ZYNE Homepage Validation` workflow **does not** run automatically. (This proves the `push` trigger was successfully isolated to PRs).
 2. **The Cache Test:** Click on the automatically running `Publish ZYNE Homepage` workflow. Open the `build` job and verify that the `Set up Node.js` step logs a successful cache save using the new `package-lock.json`.
@@ -288,9 +284,10 @@ Immediately after pushing to `main`, go to the **Actions** tab in your GitHub re
 
 ---
 
-### Final Verification Report
+## 6. Mandatory Verification Report Format — Final Optimization Verification
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
-Once the push is complete and the GitHub Actions have been verified, please return this final report:
+Once the push is complete and the GitHub Actions have been verified:
 
 ```markdown
 ### [ZYNE-PIPELINE-03] Final Optimization Verification
