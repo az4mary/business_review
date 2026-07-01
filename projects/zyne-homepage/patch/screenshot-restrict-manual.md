@@ -59,7 +59,9 @@ jobs:
 
 ---
 
-## 3. Mandatory Verification Report Format
+## 3. Mandatory Verification Report — Screenshot Workflow Restriction
+
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\screenshot-restrict-manual-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```markdown
 ### [ZYNE-PIPELINE-02B] Verification Report — Screenshot Workflow Restriction
