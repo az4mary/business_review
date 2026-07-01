@@ -1,13 +1,6 @@
 name: Capture ZYNE Homepage Screenshots
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/capture-zyne-homepage.yml"
-      - "projects/zyne-homepage/src/main.js"
-      - "projects/zyne-homepage/src/styles/**"
   workflow_dispatch:
 
 permissions:
