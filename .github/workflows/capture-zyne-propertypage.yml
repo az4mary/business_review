@@ -30,14 +30,14 @@ jobs:
 
       - name: Capture responsive homepage screenshots
         run: |
-          mkdir -p assets/PRD-1.1-images
+          mkdir -p assets/property-images
           node <<'NODE'
           const { chromium } = require('playwright');
           const fs = require('fs');
           const path = require('path');
 
           const url = 'https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/';
-          const outputDir = 'assets/PRD-1.1-images';
+          const outputDir = 'assets/property-images';
 
           const captures = [
             {
@@ -176,10 +176,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
-            assets/PRD-1.1-images/Desktop-HighRes.png \
-            assets/PRD-1.1-images/Tablet.png \
-            assets/PRD-1.1-images/Mobile.png \
-            assets/PRD-1.1-images/Mobile-Menu.png
+            assets/property-images/Desktop-HighRes.png \
+            assets/property-images/Tablet.png \
+            assets/property-images/Mobile.png \
+            assets/property-images/Mobile-Menu.png
           if git diff --cached --quiet; then
             echo "No screenshot changes to commit."
           else
@@ -192,10 +192,10 @@ jobs:
         with:
           name: zyne-responsive-propertypage-screenshots
           path: |
-            assets/PRD-1.1-images/Desktop-HighRes.png
-            assets/PRD-1.1-images/Tablet.png
-            assets/PRD-1.1-images/Mobile.png
-            assets/PRD-1.1-images/Mobile-Menu.png
+            assets/property-images/Desktop-HighRes.png
+            assets/property-images/Tablet.png
+            assets/property-images/Mobile.png
+            assets/property-images/Mobile-Menu.png
           if-no-files-found: error
 
 # trigger: 2026-06-23T00:06:00Z
