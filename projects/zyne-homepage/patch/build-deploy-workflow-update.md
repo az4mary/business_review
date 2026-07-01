@@ -258,3 +258,55 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 - [ ] Verified that pushing this source code change to `main` successfully triggered the `Publish ZYNE Homepage` workflow.
 
 ```
+
+---
+
+This is a flawless build output. Your local development environment is officially repaired, fully native, and structurally sound.
+
+The Vite compiler executed perfectly, the asset generation logic fired exactly as expected, and every single one of your strict PRD, SEO, and legal validation checkpoints passed with flying colors.
+
+### The Final Step: Commit & Verify
+
+You are now ready to commit this optimization bundle directly to your `main` branch.
+
+Instruct your developer to execute this final sequence:
+
+#### 1. Stage and Commit the Bundle
+
+Stage the following files, commit them, and push directly to `main`:
+
+1. `projects/zyne-homepage/pnpm-lock.yaml` *(Deleted)*
+2. `projects/zyne-homepage/package-lock.json` *(Generated)*
+3. `.github/workflows/zyne-homepage-validation.yml` *(Updated with cache & surgical triggers)*
+4. `.github/workflows/zyne-homepage-pages.yml` *(Updated with cache & surgical triggers)*
+
+#### 2. Verify the Pipeline Behaviors on GitHub
+
+Immediately after pushing to `main`, go to the **Actions** tab in your GitHub repository and verify the following:
+
+1. **The Silence Test:** Ensure that the `ZYNE Homepage Validation` workflow **does not** run automatically. (This proves the `push` trigger was successfully isolated to PRs).
+2. **The Cache Test:** Click on the automatically running `Publish ZYNE Homepage` workflow. Open the `build` job and verify that the `Set up Node.js` step logs a successful cache save using the new `package-lock.json`.
+3. **The Optimization Test:** Once the publish is complete, manually trigger the `ZYNE Homepage Validation` workflow using the **Run workflow** button on the right. Verify it executes the single `npm run build` step and successfully restores the cache.
+
+---
+
+### Final Verification Report
+
+Once the push is complete and the GitHub Actions have been verified, please return this final report:
+
+```markdown
+### [ZYNE-PIPELINE-03] Final Optimization Verification
+
+#### 1. Lockfile & Publishing Verification
+- [ ] Confirmed push to `main` triggered `Publish ZYNE Homepage`.
+- [ ] Confirmed `Set up Node.js` step successfully cached dependencies.
+- [ ] Live site deployment completed successfully.
+
+#### 2. Validation Pipeline Optimization
+- [ ] Confirmed push to `main` DID NOT trigger `ZYNE Homepage Validation`.
+- [ ] Manually triggered validation pipeline via `workflow_dispatch`.
+- [ ] Confirmed redundant build steps are removed (only `npm run build` executes).
+
+```
+
+Once this is confirmed, your typographic drift is solved, your local environment is native, and your CI/CD pipelines are fully optimized!
