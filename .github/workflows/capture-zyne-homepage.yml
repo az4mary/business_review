@@ -41,9 +41,10 @@ jobs:
 
           const captures = [
             {
-              name: 'Desktop',
-              file: 'Desktop.png',
+              name: 'Desktop High-Res',
+              file: 'Desktop-HighRes.png',
               viewport: { width: 1920, height: 1080 },
+              deviceScaleFactor: 2,
               fullPage: true,
             },
             {
