@@ -12,3 +12,4 @@
 - Modified File: `projects/zyne-homepage/src/styles/main.css` (commit `7f031f8`)
 - [x] Verified that pushing this source code change to `main` successfully triggered `Publish ZYNE Homepage` run `#163`, which succeeded in 54 seconds.
 - Anomaly: The monitored source change also triggered the separate `Capture ZYNE Homepage Screenshots` workflow, which is outside the two workflows patched by this task.
+- Provide a concrete patch so Screenshot Capture is manual trigger ONLY.
