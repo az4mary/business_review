@@ -31,3 +31,5 @@ npm run build
 
 
 2. **Push Patch:** Commit the changes to `generate-property-route.mjs` and push to `main`.
+3. ⚠️ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-overhaul-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+
