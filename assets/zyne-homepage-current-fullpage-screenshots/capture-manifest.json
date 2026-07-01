@@ -1,0 +1,136 @@
+{
+  "capturedAt": "2026-07-01T16:38:42.842Z",
+  "runId": "28532916475",
+  "runAttempt": "1",
+  "commitSha": "ea87d21c4f59c09b3a9ea90f232b8698c0cedc7b",
+  "targetUrl": "https://zyne.store/",
+  "freshUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+  "outputDir": "assets/zyne-homepage-current-fullpage-screenshots",
+  "cacheFreshnessControls": [
+    "unique _zyne_capture and _ts query parameters per run",
+    "fresh incognito browser context per device",
+    "service workers blocked",
+    "Cache-Control/Pragma/Expires request headers",
+    "route-level cache-bypass headers for every request",
+    "verified-current-page.html saved from the same fresh URL before screenshots"
+  ],
+  "requiredMarkers": [
+    "mobile-sticky-cta",
+    "hero_find_growth_path_click",
+    "Best local visibility starter",
+    "Search / map discovery signal",
+    "Intelligence tells you what to build",
+    "CollectionPage"
+  ],
+  "devices": [
+    {
+      "name": "Desktop",
+      "fileSuffix": "desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "isMobile": false,
+      "hasTouch": false,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    },
+    {
+      "name": "Tablet",
+      "fileSuffix": "tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1"
+    },
+    {
+      "name": "Mobile",
+      "fileSuffix": "mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1"
+    }
+  ],
+  "captures": [
+    {
+      "site": "Zyne Homepage",
+      "requestedUrl": "https://zyne.store/",
+      "freshUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "finalUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "device": "Desktop",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "deviceScaleFactor": 2,
+      "outputPath": "assets/zyne-homepage-current-fullpage-screenshots/zyne-homepage-desktop.png",
+      "httpStatus": 200,
+      "title": "ZYNE | Premium Growth Services for Visibility, AI, Branding & Conversion",
+      "documentSize": {
+        "width": 1920,
+        "height": 11464,
+        "imageCount": 7,
+        "completeImageCount": 7
+      }
+    },
+    {
+      "site": "Zyne Homepage",
+      "requestedUrl": "https://zyne.store/",
+      "freshUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "finalUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "device": "Tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "deviceScaleFactor": 2,
+      "outputPath": "assets/zyne-homepage-current-fullpage-screenshots/zyne-homepage-tablet.png",
+      "httpStatus": 200,
+      "title": "ZYNE | Premium Growth Services for Visibility, AI, Branding & Conversion",
+      "documentSize": {
+        "width": 1102,
+        "height": 11595,
+        "imageCount": 7,
+        "completeImageCount": 7
+      }
+    },
+    {
+      "site": "Zyne Homepage",
+      "requestedUrl": "https://zyne.store/",
+      "freshUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "finalUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+      "device": "Mobile",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "deviceScaleFactor": 3,
+      "outputPath": "assets/zyne-homepage-current-fullpage-screenshots/zyne-homepage-mobile.png",
+      "httpStatus": 200,
+      "title": "ZYNE | Premium Growth Services for Visibility, AI, Branding & Conversion",
+      "documentSize": {
+        "width": 430,
+        "height": 19516,
+        "imageCount": 7,
+        "completeImageCount": 7
+      }
+    }
+  ],
+  "issues": [],
+  "currentPageVerification": {
+    "attempt": 1,
+    "httpStatus": 200,
+    "finalUrl": "https://zyne.store/?_zyne_capture=28532916475-1-1782923922843&_ts=1782923922843",
+    "htmlLength": 54672,
+    "missingMarkers": []
+  }
+}
