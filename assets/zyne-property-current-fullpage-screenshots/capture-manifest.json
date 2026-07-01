@@ -1,10 +1,10 @@
 {
-  "capturedAt": "2026-07-01T15:57:50.110Z",
-  "runId": "28530553258",
+  "capturedAt": "2026-07-01T16:13:08.738Z",
+  "runId": "28531466772",
   "runAttempt": "1",
-  "commitSha": "ff1604652304541382b09f10886fce66e8b18da4",
+  "commitSha": "74621fa87e5844469bf54fdb77cf8da03727c242",
   "targetUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
-  "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
+  "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
   "outputDir": "assets/zyne-property-current-fullpage-screenshots",
   "cacheFreshnessControls": [
     "unique _zyne_capture and _ts query parameters per run",
@@ -66,8 +66,8 @@
     {
       "site": "Zyne Property Detail",
       "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
-      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
-      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
+      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
       "device": "Desktop",
       "viewport": {
         "width": 1920,
@@ -87,8 +87,8 @@
     {
       "site": "Zyne Property Detail",
       "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
-      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
-      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
+      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
       "device": "Tablet",
       "viewport": {
         "width": 1024,
@@ -108,8 +108,8 @@
     {
       "site": "Zyne Property Detail",
       "requestedUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/",
-      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
-      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
+      "freshUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
+      "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
       "device": "Mobile",
       "viewport": {
         "width": 430,
@@ -131,7 +131,7 @@
   "currentPageVerification": {
     "attempt": 1,
     "httpStatus": 200,
-    "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28530553258-1-1782921470110&_ts=1782921470110",
+    "finalUrl": "https://zyne.store/homedetail/7101-wendemere-st-houston-tx-77088/?_zyne_capture=28531466772-1-1782922388738&_ts=1782922388738",
     "htmlLength": 42556,
     "missingMarkers": []
   }
