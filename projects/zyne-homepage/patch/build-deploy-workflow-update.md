@@ -239,7 +239,7 @@ Because we are targeting documentation ignores, you must verify this by explicit
 
 ---
 
-## 6. Mandatory Verification Report Format
+## 6. Mandatory Verification Report Format — Surgical Triggers
 Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\build-deploy-workflow-update-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```markdown
