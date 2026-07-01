@@ -1,23 +1,36 @@
-### [ZYNE-TYPO-01] Verification Report — NPM Migration
+### [ZYNE-PIPELINE-01] Verification Report — Direct to Main Optimization
 
-#### 1. Environmental Alignment
-- Local Host OS: Windows 11 Pro Build 22631
-- Native Local Tooling: Node v24.18.0 / npm v11.16.0
-- Path Status: Confirmed system Node.js installation at `C:\Program Files\nodejs` and machine `PATH` registration. Native `npm.cmd` executes without local shims/wrappers; bare `npm` in PowerShell selects `npm.ps1`, which the current execution policy blocks.
+#### 1. Trigger Isolation Check
+- [x] Verified that pushing workflow commit `b97e14a` to `main` ONLY triggered `Publish ZYNE Homepage` run `#162`.
+- [x] `ZYNE Homepage Validation` stayed completely quiet during the push.
 
-#### 2. Local Asset Verification
-- [x] Verified that `projects/zyne-homepage/scripts/generate-property-route.mjs` has been updated with the strict box-model reset (`*, *::before, *::after`).
-- [x] Verified that the Google Fonts `Inter` link element exists inside the compiled HTML header at `dist/homedetail/7101-wendemere-st-houston-tx-77088/index.html`.
-- [x] Console command `document.fonts.check("16px Inter")` evaluates to `true` during a local native `npm run preview` testing session.
+#### 2. Caching Implementation
+- [x] `cache: "npm"` successfully executed in the `Publish ZYNE Homepage` deployment run; GitHub created a 6.6 MB cache on `main`.
+- [x] `Set up Node.js` is configured to use `projects/zyne-homepage/package-lock.json`.
 
-#### 3. Visual Layout Inspections (Local Browser vs. Cloud Runner)
-- Font rendered for pricing ($1,495/month): Inter
-- Bounding box alignment of text strings (No wrapping anomalies found on numbers): Confirmed
+#### 3. Validation Workflow Reductions (Tested via Manual Dispatch)
+- [x] Manually triggered `ZYNE Homepage Validation` via `workflow_dispatch`; run `#179` succeeded.
+- [x] Confirmed individual build/generate steps are removed and replaced by the single `npm run build` execution.
+- Runtime Reduction: Previous run `#178` completed in 25 seconds; optimized manual run `#179` completed in 29 seconds. No runtime reduction was observed in this sample (+4 seconds).
 
-#### 4. Developer Notes / Pipeline Observations
-- Installed the official Node.js LTS package through Windows Package Manager.
-- Native build passed all PRD, catalog, route, legal, and SEO validations.
-- Property route generated successfully with 7 copied images.
-- Compiled HTML contains the Inter stylesheet, strict reset, and explicit Inter body font.
-- Native preview returned HTTP 200.
-- Browser check confirmed Inter loaded and pricing/title text rendered without overflow.
+#### 4. Developer Notes / Anomalies
+- Workflow patch committed to `main` as `b97e14a`.
+- Native local `npm run build` completed successfully before the workflow commit.
+- Publish run `#162` succeeded in 54 seconds and created the npm cache.
+- Validation run `#179` restored the cache successfully (`Cache Size: ~7 MB`) and completed its full-suite build step successfully.
+- GitHub emitted Node.js 20 deprecation warnings for Actions currently being forced onto Node.js 24.
+
+### [ZYNE-PIPELINE-02] Verification Report — Surgical Triggers
+
+#### 1. Trigger Path Replacements
+- [x] Broad `projects/zyne-homepage/**` wildcard successfully removed from both workflow files.
+- [x] Explicit whitelists for `src/`, `scripts/`, `public/`, and manifests applied.
+
+#### 2. Ignored Path Verification (The "Silence" Test)
+- Modified File: `projects/zyne-homepage/docs/workflow-trigger-silence-test.md` (commit `af7774c`)
+- [x] Verified that pushing this documentation change to `main` triggered ZERO workflows.
+
+#### 3. Monitored Path Verification (The "Active" Test)
+- Modified File: `projects/zyne-homepage/src/styles/main.css` (commit `7f031f8`)
+- [x] Verified that pushing this source code change to `main` successfully triggered `Publish ZYNE Homepage` run `#163`, which succeeded in 54 seconds.
+- Anomaly: The monitored source change also triggered the separate `Capture ZYNE Homepage Screenshots` workflow, which is outside the two workflows patched by this task.
