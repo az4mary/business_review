@@ -77,4 +77,6 @@ jobs:
 #### 3. Manual Dispatch Verification
 - [ ] Successfully triggered `Capture ZYNE Homepage Screenshots` manually via the GitHub UI.
 
+#### 4. Developer Notes / Anomalies
+[Enter any pipeline execution warnings or cache miss errors here]
 ```
