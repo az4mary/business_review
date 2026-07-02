@@ -172,30 +172,12 @@ Drop these strings in, rebuild the file.
 
 ---
 
-# PATCH 2
-This is a fantastic approach. Regenerating 1,600+ lines of code risks introducing regression errors, hallucinated variables, or truncating the file entirely.
-
-A targeted patch is the absolute safest, most professional way to handle this in a production environment.
-
-Here is the comprehensive Developer Blueprint to execute the 11-point Master Hit List we compiled from the high-resolution mockups. Hand this directly to your developer.
-
----
-
-# Technical Blueprint: Property Layout Precision Patch
+# PATCH 2 - Technical Blueprint: Property Layout Precision Patch
 
 **Target File:** `projects/zyne-homepage/scripts/generate-property-route.mjs`
 **Objective:** Resolve 11 specific layout, typography, and vector asset discrepancies derived from high-resolution UI mockups.
 
-## Part 1: Concrete Implementation Steps
-
-1. **Inject Bespoke Assets:** Add the 9 new custom SVG strings into the variable declaration block.
-2. **Update HTML Generators:** Add the `feature()` and `cleanItem()` template literal functions to handle the specific alignments and borderless states of the lower grids.
-3. **Apply Targeted Find-and-Replace:** Overwrite specific constant variables (`special`, `overview`, `topbar`, etc.) to map the new icons, correct the descriptive copy, and fix the CTA button.
-4. **Patch the CSS Block:** Replace specific CSS classes to correct the horizontal title line, the breadcrumb opacity, the sidebar typography, and the overview gutter constraint.
-
----
-
-## Part 2: The Code Patch
+## Part 1: The Code Patch
 
 ### A. Asset Injection
 
@@ -551,9 +533,9 @@ const neighborhood = `
 
 ---
 
-## Part 3: Dry-Run & Validation
+## Part 2: Dry-Run & Validation
 
-1. **Apply the patch.** Ensure the developer removes the obsolete `.title::after` CSS rule, as the line is now handled dynamically by `<div class="title-line"></div>`.
+1. **Apply the patch.** Ensure you remove the obsolete `.title::after` CSS rule, as the line is now handled dynamically by `<div class="title-line"></div>`.
 2. **Execute Local Build:**
 ```powershell
 npm run build
@@ -563,11 +545,12 @@ npm run build
 
 3. **Verify Generation:** Ensure the CLI output ends with "Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html with 9 copied image(s)" (or however many images currently exist).
 4. **Push to CI/CD:** Commit the file to `main` with a descriptive message: `feat(ui): implement 11-point property layout hardening patch`.
-5. **Run Automation:** Execute the `.github/workflows/capture-zyne-property-fullpage.yml` GitHub action manually.
 
-## Part 4: Mandatory Developer Report Format
+---
 
-Have the developer reply back to you using exactly this format upon completion:
+## Part 3: Mandatory Developer Report - Layout Patch Implementation
+
+⚠️ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-overhaul-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```text
 ## Layout Patch Implementation Report
@@ -582,5 +565,3 @@ Have the developer reply back to you using exactly this format upon completion:
 - Notes / Friction points: [Any issues encountered]
 
 ```
-
-This strict methodology ensures we don't accidentally break the node logic, retains the structural integrity of your generator, and meticulously addresses every single detail from our Master Hit List.
