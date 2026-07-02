@@ -205,6 +205,11 @@ p {
   flex-wrap: wrap;
 }
 
+.breadcrumbs .slash {
+  color: var(--muted-dark);
+  opacity: 0.5;
+}
+
 .actions button {
   display: flex;
   gap: .42rem;
@@ -391,21 +396,15 @@ h1 {
   margin: 0;
 }
 
-.metrics small {
+.metrics small,
+.overview span,
+.stat small {
   display: block;
   color: var(--muted-dark);
   text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .62rem;
-  margin-top: .15rem;
-}
-
-.overview span {
-  display: block;
-  color: var(--muted-dark);
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .66rem;
+  letter-spacing: .18em;
+  font-size: .68rem;
+  margin-top: .25rem;
 }
 
 .overview b {
@@ -575,12 +574,6 @@ h1 {
   display: block;
 }
 
-.stat small {
-  display: block;
-  color: var(--muted);
-  margin-top: .35rem;
-}
-
 .section {
   border: 1px solid var(--line);
   background:
@@ -590,9 +583,7 @@ h1 {
 }
 
 .title {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 2rem;
+  display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -604,21 +595,23 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .075em;
   margin: 0;
-  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
-/* Hardened Section Header Accent: Inject Mockup's distinct gold accent bullets dynamically */
 .title h2::after {
   content: " •";
   color: var(--gold);
-  margin-left: 0.45rem;
+  margin-left: 0.65rem;
   font-weight: 900;
 }
 
-.title::after {
-  content: "";
+.title-line {
+  flex: 1;
   height: 1px;
   background: var(--line);
+  margin-left: 1.5rem;
 }
 
 .feature-grid {
@@ -626,47 +619,48 @@ h1 {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.feature-grid article {
+.feature-item {
   text-align: center;
-  padding: 1.75rem 1.2rem;
+  padding: 1.25rem .75rem;
   border-right: 1px solid rgba(201,154,46,.2);
 }
 
-.feature-grid article:last-child {
+.feature-item:last-child {
   border-right: 0;
 }
 
-.feature-grid .zyne-icon {
+.feature-item .zyne-icon {
   width: 48px;
   height: 48px;
-  margin: 0 auto 1rem;
-  padding: 8px;
-  border: 1px solid rgba(201,154,46,.30);
-  background: rgba(201,154,46,.055);
+  margin: 0 auto 1.2rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--gold);
 }
 
-.feature-grid h3 {
+.feature-item h3 {
   color: var(--gold2);
   text-transform: uppercase;
-  font-size: .92rem;
+  font-size: .88rem;
   line-height: 1.35;
-  margin: .75rem 0 .45rem;
+  margin: 0 0 .55rem;
 }
 
-.feature-grid p {
+.feature-item p {
   font-size: 14.5px;
   line-height: 1.65;
 }
 
 .overview {
   display: grid;
-  grid-template-columns: .95fr 1.15fr;
-  gap: 2.25rem;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 4.5rem;
   align-items: start;
 }
 
 .overview p {
-  max-width: 580px;
+  max-width: 520px;
   font-size: 15.5px;
   line-height: 1.75;
 }
@@ -724,6 +718,15 @@ h1 {
   padding: 8px;
   border: 1px solid rgba(201,154,46,.32);
   background: rgba(201,154,46,.055);
+  color: var(--gold);
+}
+
+.clean-icon .zyne-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: var(--gold);
 }
 
@@ -1072,10 +1075,14 @@ h1 {
     
   <div class="topbar">
     <div class="breadcrumbs">
-      <a href="/">← Back to Listings</a>
-      <span>/</span>
+      <a href="/" style="display:flex;align-items:center;">
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-right: 4px;">
+    <path d="M19 12H5M12 19l-7-7 7-7"></path>
+  </svg>
+ Back to Listings</a>
+      <span class="slash">/</span>
       <span>Houston, TX</span>
-      <span>/</span>
+      <span class="slash">/</span>
       <b>7101 Wendemere St</b>
     </div>
 
@@ -1180,14 +1187,8 @@ h1 {
     
   <article class="stat">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <path d="M7 3v4"></path>
-    <path d="M17 3v4"></path>
-    <path d="M4 7h16"></path>
-    <path d="M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"></path>
-    <path d="m9 14 2 2 4-4"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 22V4h12v8H8"></path><path d="M4 22h16"></path><path d="M11 4v-2"></path><path d="M17 4v-2"></path>
   </svg>
 
     <b>Available now</b>
@@ -1237,7 +1238,7 @@ h1 {
 
     <b class="price">$1,495/month</b>
 
-    <p>Three-bedroom Houston bungalow with a covered porch, Texas-size lot, no HOA, spacious bedrooms, walk-in closets, and open kitchen/dining flow.</p>
+    <p>This well-maintained three-bedroom bungalow offers comfort, space, and convenience. Enjoy a covered front porch, a large lot, and an open layout that connects the kitchen and dining area seamlessly. With no HOA and easy access to major roads, schools, and shopping, this home is ready for you.</p>
 
     <div class="metrics">
       
@@ -1280,14 +1281,9 @@ h1 {
       
   <article>
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <path d="M4 19.5 19.5 4"></path>
-    <path d="M7 16.5 5.5 15"></path>
-    <path d="M10 13.5 8.5 12"></path>
-    <path d="M13 10.5 11.5 9"></path>
-    <path d="M16 7.5 14.5 6"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="1"></rect>
+    <path d="M3 9h18M9 21V9M15 3v6"></path>
   </svg>
 
     <div class="metric-info">
@@ -1299,13 +1295,13 @@ h1 {
       
   <article>
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <rect x="4" y="4" width="6" height="6"></rect>
-    <rect x="14" y="4" width="6" height="6"></rect>
-    <rect x="4" y="14" width="6" height="6"></rect>
-    <rect x="14" y="14" width="6" height="6"></rect>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="1"></rect>
+    <path d="M12 3v18M3 12h18"></path>
+    <circle cx="7.5" cy="7.5" r="1"></circle>
+    <circle cx="16.5" cy="7.5" r="1"></circle>
+    <circle cx="7.5" cy="16.5" r="1"></circle>
+    <circle cx="16.5" cy="16.5" r="1"></circle>
   </svg>
 
     <div class="metric-info">
@@ -1370,11 +1366,12 @@ h1 {
   <section class="section">
     <div class="title">
       <h2>What's Special</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="feature-grid">
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
   <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
     <rect x="3" y="3" width="18" height="18" rx="1"></rect>
@@ -1385,14 +1382,12 @@ h1 {
     <circle cx="16.5" cy="16.5" r="1"></circle>
   </svg>
 
-    <div>
-      <h3>Texas-size lot</h3>
-      <p>Spacious lot with outdoor potential.</p>
-    </div>
+    <h3>Texas-size lot</h3>
+    <p>Spacious lot with plenty of outdoor potential.</p>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
   <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
     <path d="M6 9l6-5 6 5"></path>
@@ -1403,14 +1398,12 @@ h1 {
     <path d="M4 21h16"></path>
   </svg>
 
-    <div>
-      <h3>Covered porch</h3>
-      <p>Classic covered front porch.</p>
-    </div>
+    <h3>Covered porch</h3>
+    <p>Relax on the covered front porch with classic charm.</p>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
   <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     
@@ -1419,14 +1412,12 @@ h1 {
   
   </svg>
 
-    <div>
-      <h3>No HOA</h3>
-      <p>More flexibility without HOA restrictions.</p>
-    </div>
+    <h3>No HOA</h3>
+    <p>No HOA fees or restrictions for greater flexibility.</p>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
   <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     
@@ -1435,32 +1426,24 @@ h1 {
   
   </svg>
 
-    <div>
-      <h3>Near schools</h3>
-      <p>Near local schools and amenities.</p>
-    </div>
+    <h3>Near schools</h3>
+    <p>Conveniently located near local schools and amenities.</p>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <circle cx="7.5" cy="15.5" r="5.5"></circle>
-    <path d="M12 12 22 2"></path>
-    <path d="m17 7 3 3"></path>
-    <path d="m14 10 3 3"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 18l2-2v-2h2v-2h2l4-4a3.5 3.5 0 1 0-5-5l-7 7v4h2v2z"></path>
+    <path d="M14 18l1-1v-1h1v-1h1l2-2a2 2 0 1 0-3-3l-4 4v2h1v1z"></path>
   </svg>
 
-    <div>
-      <h3>Walk-in closets</h3>
-      <p>Generous bedroom storage.</p>
-    </div>
+    <h3>Walk-in closets</h3>
+    <p>Generous closet space in the bedrooms.</p>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="feature-item">
     
   <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
     <rect x="4" y="7" width="16" height="15" rx="1"></rect>
@@ -1473,10 +1456,8 @@ h1 {
     <path d="M8 4v3M16 4v3"></path>
   </svg>
 
-    <div>
-      <h3>Open layout</h3>
-      <p>Open kitchen and dining flow.</p>
-    </div>
+    <h3>Open layout</h3>
+    <p>Open kitchen and dining flow for easy living and entertaining.</p>
   </article>
 
     </div>
@@ -1486,16 +1467,11 @@ h1 {
   <section class="section">
     <div class="title">
       <h2>Property Overview</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="overview">
-      <p>
-        This three-bedroom bungalow offers comfort, space, and convenience with
-        a covered front porch, large lot, and open kitchen/dining connection.
-        With no HOA and easy access to major roads, schools, and shopping, this
-        home is ready for immediate move-in consideration. The layout is practical,
-        bright, and well-suited for everyday living.
-      </p>
+      <p>This well-maintained three-bedroom bungalow offers comfort, space, and convenience. Enjoy a covered front porch, a large lot, and an open layout that connects the kitchen and dining area seamlessly. With no HOA and easy access to major roads, schools, and shopping, this home is ready for you.</p>
 
       <div class="overview-table">
         
@@ -1507,7 +1483,7 @@ h1 {
         
   <div>
     <span>Property type</span>
-    <b>Singlefamily</b>
+    <b>Singlefamily Home</b>
   </div>
 
         
@@ -1554,11 +1530,12 @@ h1 {
   <section class="section home-features">
     <div class="title">
       <h2>Home Features</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="highlight-grid">
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
   <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     
@@ -1576,7 +1553,7 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
   <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     
@@ -1591,14 +1568,11 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <path d="m12 2 9 5-9 5-9-5 9-5Z"></path>
-    <path d="m3 12 9 5 9-5"></path>
-    <path d="m3 17 9 5 9-5"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 14l10-5 10 5-10 5z"></path><path d="M2 14v4l10 5 10-5v-4"></path>
+    <path d="M2 9l10-5 10 5-10 5z"></path>
   </svg>
 
     <div>
@@ -1608,14 +1582,11 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <path d="M13 4h5v16h-5"></path>
-    <path d="M13 20H6V4h7"></path>
-    <path d="M10 12h.01"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="3" width="10" height="18" rx="1"></rect>
+    <path d="M4 10h10M7 5v3M7 12v3M14 11h6M14 15h6M14 19h6"></path>
   </svg>
 
     <div>
@@ -1625,25 +1596,21 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <circle cx="7.5" cy="15.5" r="5.5"></circle>
-    <path d="M12 12 22 2"></path>
-    <path d="m17 7 3 3"></path>
-    <path d="m14 10 3 3"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 22h16"></path><path d="M6 22V4h12v18"></path><path d="M12 4v18"></path>
+    <path d="M10 13h1M13 13h1"></path>
   </svg>
 
     <div>
       <h3>Walk-in closets</h3>
-      <p>Spacious bedroom storage</p>
+      <p>Spacious storage in bedrooms</p>
     </div>
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
   <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     
@@ -1667,11 +1634,12 @@ h1 {
   <section class="section neighborhood">
     <div class="title">
       <h2>Neighborhood Highlights</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="highlight-grid">
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
   <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="7" cy="7" r="3"></circle>
@@ -1688,14 +1656,11 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <circle cx="12" cy="12" r="8"></circle>
-    <path d="m15 9-2 6-4 2 2-6 4-2Z"></path>
-    <circle cx="12" cy="12" r="1"></circle>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 3v18M3 12h18"></path>
   </svg>
 
     <div>
@@ -1705,17 +1670,11 @@ h1 {
   </article>
 
       
-  <article class="highlight-item">
+  <article class="highlight-item clean-icon">
     
-  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    
-    <path d="M4 20V9l8-6 8 6v11"></path>
-    <path d="M8 20v-7h8v7"></path>
-    <path d="M10 13h4"></path>
-    <path d="M12 13v7"></path>
-    <path d="M7 9h.01"></path>
-    <path d="M17 9h.01"></path>
-  
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l8 5v14H4V8l8-5z"></path><path d="M12 12v10"></path>
+    <path d="M8 22v-4a2 2 0 0 1 4 0v4"></path><path d="M12 3v4"></path><circle cx="12" cy="9" r="1"></circle>
   </svg>
 
     <div>
@@ -1740,8 +1699,11 @@ h1 {
     <div>
       <a id="schedule" class="button primary" href="/services/executive-briefing/">
         Schedule a Viewing 
-  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; margin-left: 2px;">
-    <path d="M7 17l5 -5l-5 -5M13 17l5 -5l-5 -5"></path>
+  <svg class="zyne-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    
+    <path d="M5 12h14"></path>
+    <path d="m13 5 7 7-7 7"></path>
+  
   </svg>
 
       </a>
