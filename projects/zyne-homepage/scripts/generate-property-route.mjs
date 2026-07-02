@@ -65,6 +65,76 @@ const doubleChevronIcon = `
   </svg>
 `;
 
+// Bespoke Vector: Single Back Arrow (Premium)
+const arrowLeftIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-right: 4px;">
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+  </svg>
+`;
+
+// Bespoke Vector: Square Floorplan
+const floorplanIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="1"/>
+    <path d="M3 9h18M9 21V9M15 3v6"/>
+  </svg>
+`;
+
+// Bespoke Vector: Real Estate Yard Sign
+const yardSignIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 22V4h12v8H8"/><path d="M4 22h16"/><path d="M11 4v-2"/><path d="M17 4v-2"/>
+  </svg>
+`;
+
+// Bespoke Vector: Double Keys
+const doubleKeysIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 18l2-2v-2h2v-2h2l4-4a3.5 3.5 0 1 0-5-5l-7 7v4h2v2z"/>
+    <path d="M14 18l1-1v-1h1v-1h1l2-2a2 2 0 1 0-3-3l-4 4v2h1v1z"/>
+  </svg>
+`;
+
+// Bespoke Vector: Refrigerator & Cabinetry
+const fridgeIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="3" width="10" height="18" rx="1"/>
+    <path d="M4 10h10M7 5v3M7 12v3M14 11h6M14 15h6M14 19h6"/>
+  </svg>
+`;
+
+// Bespoke Vector: Open Double Doors
+const doubleDoorsIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 22h16"/><path d="M6 22V4h12v18"/><path d="M12 4v18"/>
+    <path d="M10 13h1M13 13h1"/>
+  </svg>
+`;
+
+// Bespoke Vector: Layered Flooring
+const flooringIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 14l10-5 10 5-10 5z"/><path d="M2 14v4l10 5 10-5v-4"/>
+    <path d="M2 9l10-5 10 5-10 5z"/>
+  </svg>
+`;
+
+// Bespoke Vector: Radar Target
+const radarIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>
+    <path d="M12 3v18M3 12h18"/>
+  </svg>
+`;
+
+// Bespoke Vector: Schoolhouse Building
+const schoolIcon = `
+  <svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l8 5v14H4V8l8-5z"/><path d="M12 12v10"/>
+    <path d="M8 22v-4a2 2 0 0 1 4 0v4"/><path d="M12 3v4"/><circle cx="12" cy="9" r="1"/>
+  </svg>
+`;
+
 const property = {
   address: "7101 Wendemere St",
   city: "Houston",
@@ -76,8 +146,7 @@ const property = {
   interior: "1,064 sqft",
   lot: "7,250 sqft",
   status: "For Rent · Active",
-  description:
-    "Three-bedroom Houston bungalow with a covered porch, Texas-size lot, no HOA, spacious bedrooms, walk-in closets, and open kitchen/dining flow."
+  description: "This well-maintained three-bedroom bungalow offers comfort, space, and convenience. Enjoy a covered front porch, a large lot, and an open layout that connects the kitchen and dining area seamlessly. With no HOA and easy access to major roads, schools, and shopping, this home is ready for you."
 };
 
 const agent = {
@@ -207,6 +276,24 @@ const metric = (icon, label, value) => `
     <div class="metric-info">
       <b>${value}</b>
       <small>${label}</small>
+    </div>
+  </article>
+`;
+
+const feature = (icon, title, copy) => `
+  <article class="feature-item">
+    ${icon}
+    <h3>${title}</h3>
+    <p>${copy}</p>
+  </article>
+`;
+
+const cleanItem = (icon, title, copy) => `
+  <article class="highlight-item clean-icon">
+    ${icon}
+    <div>
+      <h3>${title}</h3>
+      <p>${copy}</p>
     </div>
   </article>
 `;
@@ -433,6 +520,11 @@ p {
   flex-wrap: wrap;
 }
 
+.breadcrumbs .slash {
+  color: var(--muted-dark);
+  opacity: 0.5;
+}
+
 .actions button {
   display: flex;
   gap: .42rem;
@@ -619,21 +711,15 @@ h1 {
   margin: 0;
 }
 
-.metrics small {
+.metrics small,
+.overview span,
+.stat small {
   display: block;
   color: var(--muted-dark);
   text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .62rem;
-  margin-top: .15rem;
-}
-
-.overview span {
-  display: block;
-  color: var(--muted-dark);
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .66rem;
+  letter-spacing: .18em;
+  font-size: .68rem;
+  margin-top: .25rem;
 }
 
 .overview b {
@@ -803,12 +889,6 @@ h1 {
   display: block;
 }
 
-.stat small {
-  display: block;
-  color: var(--muted);
-  margin-top: .35rem;
-}
-
 .section {
   border: 1px solid var(--line);
   background:
@@ -818,9 +898,7 @@ h1 {
 }
 
 .title {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 2rem;
+  display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -832,21 +910,23 @@ h1 {
   text-transform: uppercase;
   letter-spacing: .075em;
   margin: 0;
-  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
-/* Hardened Section Header Accent: Inject Mockup's distinct gold accent bullets dynamically */
 .title h2::after {
   content: " •";
   color: var(--gold);
-  margin-left: 0.45rem;
+  margin-left: 0.65rem;
   font-weight: 900;
 }
 
-.title::after {
-  content: "";
+.title-line {
+  flex: 1;
   height: 1px;
   background: var(--line);
+  margin-left: 1.5rem;
 }
 
 .feature-grid {
@@ -854,47 +934,48 @@ h1 {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.feature-grid article {
+.feature-item {
   text-align: center;
-  padding: 1.75rem 1.2rem;
+  padding: 1.25rem .75rem;
   border-right: 1px solid rgba(201,154,46,.2);
 }
 
-.feature-grid article:last-child {
+.feature-item:last-child {
   border-right: 0;
 }
 
-.feature-grid .zyne-icon {
+.feature-item .zyne-icon {
   width: 48px;
   height: 48px;
-  margin: 0 auto 1rem;
-  padding: 8px;
-  border: 1px solid rgba(201,154,46,.30);
-  background: rgba(201,154,46,.055);
+  margin: 0 auto 1.2rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--gold);
 }
 
-.feature-grid h3 {
+.feature-item h3 {
   color: var(--gold2);
   text-transform: uppercase;
-  font-size: .92rem;
+  font-size: .88rem;
   line-height: 1.35;
-  margin: .75rem 0 .45rem;
+  margin: 0 0 .55rem;
 }
 
-.feature-grid p {
+.feature-item p {
   font-size: 14.5px;
   line-height: 1.65;
 }
 
 .overview {
   display: grid;
-  grid-template-columns: .95fr 1.15fr;
-  gap: 2.25rem;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 4.5rem;
   align-items: start;
 }
 
 .overview p {
-  max-width: 580px;
+  max-width: 520px;
   font-size: 15.5px;
   line-height: 1.75;
 }
@@ -952,6 +1033,15 @@ h1 {
   padding: 8px;
   border: 1px solid rgba(201,154,46,.32);
   background: rgba(201,154,46,.055);
+  color: var(--gold);
+}
+
+.clean-icon .zyne-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: var(--gold);
 }
 
@@ -1297,10 +1387,10 @@ const header = `
 const topbar = `
   <div class="topbar">
     <div class="breadcrumbs">
-      <a href="/">← Back to Listings</a>
-      <span>/</span>
+      <a href="/" style="display:flex;align-items:center;">${arrowLeftIcon} Back to Listings</a>
+      <span class="slash">/</span>
       <span>${property.city}, ${property.state}</span>
-      <span>/</span>
+      <span class="slash">/</span>
       <b>${property.address}</b>
     </div>
 
@@ -1349,8 +1439,8 @@ const summary = `
     <div class="metrics">
       ${metric(Icons.bed, "Bedrooms", property.beds)}
       ${metric(Icons.bath, "Baths", property.baths)}
-      ${metric(Icons.ruler, "Interior", property.interior)}
-      ${metric(Icons.grid, "Lot size", property.lot)}
+      ${metric(floorplanIcon, "Interior", property.interior)}
+      ${metric(lotIcon, "Lot size", property.lot)}
     </div>
 
     <a class="button primary" href="#schedule">
@@ -1401,7 +1491,7 @@ const summary = `
 const stats = `
   <section class="stats">
     ${stat(Icons.home, "Singlefamily", "Property Type")}
-    ${stat(Icons.calendarCheck, "Available now", "Availability")}
+    ${stat(yardSignIcon, "Available now", "Availability")}
     ${stat(Icons.fan, "Electric ceiling fan", "Cooling")}
     ${stat(Icons.flame, "Natural gas", "Heating")}
   </section>
@@ -1411,15 +1501,16 @@ const special = `
   <section class="section">
     <div class="title">
       <h2>What's Special</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="feature-grid">
-      ${item(lotIcon, "Texas-size lot", "Spacious lot with outdoor potential.")}
-      ${item(porchIcon, "Covered porch", "Classic covered front porch.")}
-      ${item(Icons.shieldCheck, "No HOA", "More flexibility without HOA restrictions.")}
-      ${item(Icons.graduationCap, "Near schools", "Near local schools and amenities.")}
-      ${item(Icons.key, "Walk-in closets", "Generous bedroom storage.")}
-      ${item(ovenIcon, "Open layout", "Open kitchen and dining flow.")}
+      ${feature(lotIcon, "Texas-size lot", "Spacious lot with plenty of outdoor potential.")}
+      ${feature(porchIcon, "Covered porch", "Relax on the covered front porch with classic charm.")}
+      ${feature(Icons.shieldCheck, "No HOA", "No HOA fees or restrictions for greater flexibility.")}
+      ${feature(Icons.graduationCap, "Near schools", "Conveniently located near local schools and amenities.")}
+      ${feature(doubleKeysIcon, "Walk-in closets", "Generous closet space in the bedrooms.")}
+      ${feature(ovenIcon, "Open layout", "Open kitchen and dining flow for easy living and entertaining.")}
     </div>
   </section>
 `;
@@ -1428,20 +1519,15 @@ const overview = `
   <section class="section">
     <div class="title">
       <h2>Property Overview</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="overview">
-      <p>
-        This three-bedroom bungalow offers comfort, space, and convenience with
-        a covered front porch, large lot, and open kitchen/dining connection.
-        With no HOA and easy access to major roads, schools, and shopping, this
-        home is ready for immediate move-in consideration. The layout is practical,
-        bright, and well-suited for everyday living.
-      </p>
+      <p>${property.description}</p>
 
       <div class="overview-table">
         ${row("Address", `${property.address}, ${property.city}, ${property.state} ${property.zip}`)}
-        ${row("Property type", "Singlefamily")}
+        ${row("Property type", "Singlefamily Home")}
         ${row("Status", "Available Now")}
         ${row("Monthly rent", property.price)}
         ${row("Beds", property.beds)}
@@ -1457,30 +1543,31 @@ const homeFeatures = `
   <section class="section home-features">
     <div class="title">
       <h2>Home Features</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="highlight-grid">
-      ${item(Icons.fan, "Electric ceiling fan", "Comfortable airflow in living spaces")}
-      ${item(Icons.flame, "Natural gas", "Efficient and reliable heating")}
-      ${item(Icons.layers, "Hardwood & carpet", "Durable flooring with soft-touch comfort")}
-      ${item(Icons.doorOpen, "Open kitchen", "Functional layout with ample cabinet space")}
-      ${item(Icons.key, "Walk-in closets", "Spacious bedroom storage")}
-      ${item(Icons.washingMachine, "Washer / dryer hookups", "Convenient in-home laundry connections")}
+      ${cleanItem(Icons.fan, "Electric ceiling fan", "Comfortable airflow in living spaces")}
+      ${cleanItem(Icons.flame, "Natural gas", "Efficient and reliable heating")}
+      ${cleanItem(flooringIcon, "Hardwood & carpet", "Durable flooring with soft-touch comfort")}
+      ${cleanItem(fridgeIcon, "Open kitchen", "Functional layout with ample cabinet space")}
+      ${cleanItem(doubleDoorsIcon, "Walk-in closets", "Spacious storage in bedrooms")}
+      ${cleanItem(Icons.washingMachine, "Washer / dryer hookups", "Convenient in-home laundry connections")}
     </div>
   </section>
 `;
 
-// Icon Swap Overhaul: Substituted generic mapPin with custom cloverleafIcon for true highway representation
 const neighborhood = `
   <section class="section neighborhood">
     <div class="title">
       <h2>Neighborhood Highlights</h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="highlight-grid">
-      ${item(cloverleafIcon, "Easy Access", "Quick access to major highways and commuting routes")}
-      ${item(Icons.compass, "Local Amenities", "Close to shopping, dining, and everyday conveniences")}
-      ${item(Icons.community, "Community", "Established neighborhood with local schools nearby")}
+      ${cleanItem(cloverleafIcon, "Easy Access", "Quick access to major highways and commuting routes")}
+      ${cleanItem(radarIcon, "Local Amenities", "Close to shopping, dining, and everyday conveniences")}
+      ${cleanItem(schoolIcon, "Community", "Established neighborhood with local schools nearby")}
     </div>
   </section>
 `;
@@ -1497,7 +1584,7 @@ const cta = `
 
     <div>
       <a id="schedule" class="button primary" href="/services/executive-briefing/">
-        Schedule a Viewing ${doubleChevronIcon}
+        Schedule a Viewing ${Icons.arrowRight}
       </a>
 
       <a id="apply" class="button secondary" href="/services/executive-briefing/">
