@@ -54,11 +54,8 @@ SEO layer validation passed: 36 routes, sitemap.xml, robots.txt, metadata, bread
 
 ## Layout Patch Implementation Report
 - Commit Hash: `16e2cab`
-- Build Status: Pass
-- Validation Checks:
-  - [x] 9 new SVGs mapped correctly.
-  - [x] 'What's Special' items successfully stacked vertically.
-  - [x] Lower grids confirmed borderless/background-free.
-  - [x] Typography tracks and spacing updated.
-  - [x] Horizontal title lines properly stretch to right container edge.
-- Notes / Friction points: None. The build generated the property route with 9 copied images, and route, legal, and SEO validations passed.
+- Local Build Status: Pass
+- CI/CD Deployment Status: Failed
+- Blocker: The deployment failed after the patch was pushed to `main`. Per instruction, no deployment fix was attempted.
+- Validation Checks: No visual/layout checks are reported as successful because the failed deployment blocked completion of the required deployed-page verification.
+- Local-only result: The build generated the property route with 9 copied images, and local route, legal, and SEO validations passed.
