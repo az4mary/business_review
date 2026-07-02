@@ -140,7 +140,7 @@ assertIncludes(propertyDetail, propertyRoute, [
   "https://www.har.com/carissa-weber/agent_WEBERC",
   "/assets/agents/carissa-weber.png",
   "/assets/decor/zyne-gold-pillars.png",
-  "See all 18 photos",
+  "See all 9 photos",
   "max-width: 1440px",
   "grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr)",
   "width: 88px",
