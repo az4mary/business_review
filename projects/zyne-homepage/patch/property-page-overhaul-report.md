@@ -33,3 +33,21 @@ Generated route validation failed:
 ## Delivery Status
 - Hardened generator was already committed before this verification.
 - No corrective code changes were made because the plan requires reporting the observed result as-is.
+
+## PATCH 1 — Bespoke Icons and Photo Badge
+- Commit: `9b3bc07` (`Add bespoke property page icons`)
+- Added bespoke lot, porch, and oven SVG icons.
+- Replaced generic feature icons in the What's Special section.
+- Added the double-chevron SVG to both Schedule a Viewing buttons.
+- Updated the photo-count badge with a darker plate, gold border, gold icon, and stronger shadow.
+
+### PATCH 1 Build Result
+
+```text
+Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html with 9 copied image(s)
+Generated route validation passed: 22 products, 5 growth paths, collection pages, subroutes, and policy routes.
+Legal layer validation passed: 4 policy pages, footer links, product policy links, and checkout disclosures.
+SEO layer validation passed: 36 routes, sitemap.xml, robots.txt, metadata, breadcrumbs, keyword map, schema, and image alt checks.
+```
+
+- Final `npm run build` status: Passed.
