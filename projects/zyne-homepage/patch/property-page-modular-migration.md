@@ -15,6 +15,9 @@
 11. ⛔ STOP HERE - Reply back to the chat with short response if you understand the complete instructions.
 
 ---
+# PATCH 1 - Modular Architecture Blueprint
+Here is the exact developer blueprint to tear down the monolithic script and rebuild it into the robust, 3-file modular architecture.
+D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
 
 ### Patch A: Fix the `canonical` Undefined Error
 
