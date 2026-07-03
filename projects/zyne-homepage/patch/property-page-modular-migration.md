@@ -264,4 +264,4 @@ The result should be visually identical to the live site right now. The output l
 
 ```
 
-Once this is confirmed passing, we can drop the new `template-investment.mjs` right into the `templates/` folder and flip the switch!
+⛔ STOP HERE - Reply back to the chat with short response if you understand the complete task.
