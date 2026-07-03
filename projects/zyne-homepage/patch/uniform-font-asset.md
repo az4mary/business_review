@@ -252,7 +252,7 @@ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patc
 
 ---
 
-# PATCH 2 - Single NPM Workspace
+# PATCH 3 - Single NPM Workspace
 
 This is the definitive migration to a single, unified NPM environment. We are going to use **NPM Workspaces** (which is built natively into standard NPM).
 
