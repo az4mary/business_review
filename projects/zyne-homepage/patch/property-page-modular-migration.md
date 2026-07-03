@@ -23,24 +23,24 @@ D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
 
 **File:** `scripts/generate-property-route.mjs`
 
-**Find the entire execution block:**
-Locate the `if` statement for the rental template and the multi-line `buildRentalPage` call inside it:
+**Find the function call:**
+Inside the `if (prop.template === "rental") {` block, highlight the entire multi-line `html = buildRentalPage(...);` statement.
+
+**Replace the highlighted text with this single line:**
 
 ```javascript
-  if (prop.template === "rental") {
-    html = buildRentalPage(
-      { ...prop.details, canonical: prop.canonical },
-      // ... whatever else is currently inside here
-    );
-  }
+    html = buildRentalPage(prop, photos, visible, primaryImage, navItems);
 
 ```
 
-**Replace with:**
+To verify, your final routing block should now look exactly like this:
 
 ```javascript
+  // Template Routing Logic
   if (prop.template === "rental") {
     html = buildRentalPage(prop, photos, visible, primaryImage, navItems);
+  } else if (prop.template === "investment") {
+    // html = buildInvestmentPage(...) -> We will add this next!
   }
 
 ```
