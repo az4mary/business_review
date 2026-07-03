@@ -19,37 +19,42 @@
 Here is the exact developer blueprint to tear down the monolithic script and rebuild it into the robust, 3-file modular architecture.
 D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
 
-### Patch A: Fix the `canonical` Undefined Error
-
-The router was passing the inner `prop.details` object, which stripped the `canonical` string from the payload before it hit the template. We need to pass the entire `prop` object.
+### Patch A: Sync the Router Call
 
 **File:** `scripts/generate-property-route.mjs`
-**Locate this line (around line 52):**
+
+**Find the entire execution block:**
+Locate the `if` statement for the rental template and the multi-line `buildRentalPage` call inside it:
 
 ```javascript
-    html = buildRentalPage(prop.details, prop.agent, photos, visible, primaryImage, navItems);
+  if (prop.template === "rental") {
+    html = buildRentalPage(
+      { ...prop.details, canonical: prop.canonical },
+      // ... whatever else is currently inside here
+    );
+  }
 
 ```
 
 **Replace with:**
 
 ```javascript
+  if (prop.template === "rental") {
     html = buildRentalPage(prop, photos, visible, primaryImage, navItems);
+  }
 
 ```
 
-### Patch B: Update the Template Signature
-
-Now that we are passing the entire `prop` object, the template needs to unpack it correctly.
+### Patch B: Sync the Template Signature
 
 **File:** `scripts/templates/template-rental.mjs`
-**Locate these lines (around line 5):**
+
+**Find the function declaration:**
+Locate the export signature and the variable assignments immediately following it at the top of the file:
 
 ```javascript
-export function buildRentalPage(propertyData, agentData, photos, visiblePhotos, primaryImage, navItems) {
-  const property = propertyData;
-  const agent = agentData;
-  const canonical = property.canonical;
+export function buildRentalPage( /* whatever parameters are currently here */ ) {
+  // whatever variable assignments are currently here
 
 ```
 
@@ -62,6 +67,8 @@ export function buildRentalPage(prop, photos, visiblePhotos, primaryImage, navIt
   const canonical = prop.canonical;
 
 ```
+
+Run `npm run build` after saving these two files. The parameters are now perfectly mapped to pass the whole object through and unpack it cleanly inside the template.
 
 ### Patch C: Clear the "Invalid Leading Text (Exit Code: 0)"
 
