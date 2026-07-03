@@ -248,7 +248,7 @@ for (const prop of properties) {
 Implement these file splits, then run `npm run build`.
 The result should be visually identical to the live site right now. The output log should read: `Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html using 'rental' template with 9 image(s)`.
 
-### Mandatory Report Format
+### Step 5: Mandatory Report Format - Modular Architecture Migration
 ⚠️ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-modular-migration-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```text
