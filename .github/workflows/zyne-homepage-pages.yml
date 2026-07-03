@@ -11,7 +11,7 @@ on:
       # 2. CORE MANIFESTS & ROOT HTML
       - "projects/zyne-homepage/index.html"
       - "projects/zyne-homepage/package.json"
-      - "projects/zyne-homepage/package-lock.json"
+      - "package-lock.json"
       # 3. SHARED REPO ASSETS & GENERATED OUTPUTS
       - "assets/catalog/**"
       - "homedetail/**"
@@ -52,7 +52,7 @@ jobs:
         with:
           node-version: "22"
           cache: "npm"
-          cache-dependency-path: "projects/zyne-homepage/package-lock.json"
+          cache-dependency-path: "package-lock.json"
       - run: npm install
       - run: npm run build
       - name: Verify PRD 1.1 publish artifact
