@@ -12,6 +12,7 @@
 8. Then **ONLY** reply `DONE` and nothing else in the chat conversation so I know the required file has been updated with your comment/report.
 9. Be 🎯 because any deviation from this rule will lead to your termination without warning at anytime.
 10. Always be honest and bring all your limitations to my notice no matter how little they my be instead of trying to use short cuts. Report any blocking issues to me directly inside the chat and stop working until I inform you of next step. No trying to solve the problems - your job is just to follow the instructions, report blocking issues and only update the report with real independently verified facts (not fake) after successfully completing the tasks.
+11. Reply back to the chat with short response if you understand the complete instructions.
 
 ---
 
