@@ -248,7 +248,8 @@ for (const prop of properties) {
 Implement these file splits, then run `npm run build`.
 The result should be visually identical to the live site right now. The output log should read: `Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html using 'rental' template with 9 image(s)`.
 
-### Developer Report Format
+### Mandatory Report Format
+⚠️ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-modular-migration-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```text
 ## Modular Architecture Migration Report
@@ -260,7 +261,7 @@ The result should be visually identical to the live site right now. The output l
   - [ ] `scripts/generate-property-route.mjs` rewritten to act as router.
   - [ ] Local build completes successfully.
   - [ ] Generated `dist/homedetail/.../index.html` matches original layout.
-- Notes / Friction points: [Any issues encountered]
+- Developer Notes: [Comment]
 
 ```
 
