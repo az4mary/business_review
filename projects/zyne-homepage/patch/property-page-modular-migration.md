@@ -220,7 +220,6 @@ export function buildRentalPage(propertyData, agentData, photos, visiblePhotos, 
 This script replaces your old monolithic generator. It acts solely as a controller: it reads the filesystem, handles image sorting, passes the payload to the correct template, and writes the output.
 
 **File to Overwrite:** `scripts/generate-property-route.mjs`
-*(Note: rename this file to `generate-properties.mjs` in your `package.json` build step).*
 
 **Code:**
 
