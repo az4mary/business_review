@@ -69,4 +69,4 @@ import { buildInvestmentPage } from "./templates/template-investment.mjs";
 
 Run `npm run build` from your root one last time. Both property types will now seamlessly generate side-by-side using the exact same data pipeline.
 
-⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-modular-migration-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\rent-invest-propertypage-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
