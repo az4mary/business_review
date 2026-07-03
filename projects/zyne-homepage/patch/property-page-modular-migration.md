@@ -1,6 +1,6 @@
 ---
 
-# ⚠️ MANDATORY RULES:
+# ⚠️ MANDATORY RULES: THE RULES TAKE PRECEDENCE OVER THE TASK.
 
 1. DO NOT MODIFY THE RULES AND DO NOT DELETE/MODIFY ANY CONTENT IN THIS FILE.
 2. ⚠️ Always adhere to ALL instructions/steps/format or ask for approvals before you deviate from the plan.
