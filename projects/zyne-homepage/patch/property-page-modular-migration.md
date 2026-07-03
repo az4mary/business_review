@@ -16,9 +16,57 @@
 
 ---
 
-# PATCH 1 - Modular Architecture Blueprint
-Here is the exact developer blueprint to tear down the monolithic script and rebuild it into the robust, 3-file modular architecture.
-D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
+### Patch A: Fix the `canonical` Undefined Error
+
+The router was passing the inner `prop.details` object, which stripped the `canonical` string from the payload before it hit the template. We need to pass the entire `prop` object.
+
+**File:** `scripts/generate-property-route.mjs`
+**Locate this line (around line 52):**
+
+```javascript
+    html = buildRentalPage(prop.details, prop.agent, photos, visible, primaryImage, navItems);
+
+```
+
+**Replace with:**
+
+```javascript
+    html = buildRentalPage(prop, photos, visible, primaryImage, navItems);
+
+```
+
+### Patch B: Update the Template Signature
+
+Now that we are passing the entire `prop` object, the template needs to unpack it correctly.
+
+**File:** `scripts/templates/template-rental.mjs`
+**Locate these lines (around line 5):**
+
+```javascript
+export function buildRentalPage(propertyData, agentData, photos, visiblePhotos, primaryImage, navItems) {
+  const property = propertyData;
+  const agent = agentData;
+  const canonical = property.canonical;
+
+```
+
+**Replace with:**
+
+```javascript
+export function buildRentalPage(prop, photos, visiblePhotos, primaryImage, navItems) {
+  const property = prop.details;
+  const agent = prop.agent;
+  const canonical = prop.canonical;
+
+```
+
+### Patch C: Clear the "Invalid Leading Text (Exit Code: 0)"
+
+If the build is throwing an "invalid leading text" or "Exit code: 0" error inside the newly created `template-rental.mjs`, it means conversational text or markdown formatting (like ````javascript` or my explanations) was accidentally pasted into the actual `.mjs` file.
+
+* **Action:** Open `scripts/templates/template-rental.mjs` and ensure line 1 starts exactly with `import { Icons } from "../property-icons.mjs";`. Delete any conversational text or markdown backticks above it.
+
+---
 
 ### Step 1: Create the Data Layer
 
