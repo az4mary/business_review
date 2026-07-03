@@ -205,6 +205,44 @@ zyne-homepage
 └── src/
 ```
 
+### `zyne.store` — First Level Only
+
+```text
+zyne.store
+├── .git/
+├── .github/
+├── .gitignore
+├── .playwright-local-profile/
+├── 404.html
+├── archive/
+├── assets/
+├── build-my-brand/
+├── CNAME
+├── convert-more-clients/
+├── delivery/
+├── docs/
+├── grow-my-visibility/
+├── homedetail/
+├── improve-my-business/
+├── intelligence/
+├── LAW/
+├── Messenger/
+├── node_modules/
+├── package.json
+├── pnpm-lock.yaml
+├── privacy/
+├── projects/
+├── Protocols/
+├── refund-policy/
+├── report/
+├── robots.txt
+├── scripts/
+├── services/
+├── sitemap.xml
+├── terms/
+└── use-ai/
+```
+
 ## Question 2: Static Asset Management Paths
 
 - **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets; selected repository inputs also come from `assets/catalog/`, `assets/zyne-stan-store-*.md`, and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
