@@ -17,7 +17,7 @@
 ---
 # PATCH 1 - Modular Architecture Blueprint
 Here is the exact developer blueprint to tear down the monolithic script and rebuild it into the robust, 3-file modular architecture.
-D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
+E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage
 
 ### Patch A: Sync the Router Call
 
@@ -306,7 +306,7 @@ Implement these file splits, then run `npm run build`.
 The result should be visually identical to the live site right now. The output log should read: `Generated homedetail/7101-wendemere-st-houston-tx-77088/index.html using 'rental' template with 9 image(s)`.
 
 ### Step 5: Mandatory Report Format - Modular Architecture Migration
-⚠️ Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-modular-migration-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
+⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\property-page-modular-migration-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
 
 ```text
 ## Modular Architecture Migration Report
