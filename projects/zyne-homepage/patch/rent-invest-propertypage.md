@@ -67,7 +67,7 @@ import { buildInvestmentPage } from "./templates/template-investment.mjs";
 
 ```
 
-### Step 2: Inject Dynamic Variables
+### Step 3: Inject Dynamic Variables
 
 **File:** `src/data/properties.mjs`
 
