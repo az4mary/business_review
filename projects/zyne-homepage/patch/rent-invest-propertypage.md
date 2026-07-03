@@ -148,7 +148,7 @@ New-Item -Path "projects\zyne-homepage\public\homedetail\7101-wendemere\images" 
 ```
 
 **2. Add placeholder images:**
-Drop at least 5 image files (e.g., `01.jpg` through `05.jpg`) into that new `images` folder.
+Drop all the image files contained in "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\dist\homedetail\7101-wendemere-st-houston-tx-77088\images" into that new `images` folder.
 
 Once the `.src` targets are updated and those image files exist in the directory, your array mapping will work perfectly, the objects will resolve to valid URLs, and the template will render the photos seamlessly.
 
