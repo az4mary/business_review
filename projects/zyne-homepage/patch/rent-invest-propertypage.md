@@ -67,6 +67,35 @@ import { buildInvestmentPage } from "./templates/template-investment.mjs";
 
 ```
 
-Run `npm run build` from your root one last time. Both property types will now seamlessly generate side-by-side using the exact same data pipeline.
+### Step 2: Inject Dynamic Variables
+
+**File:** `src/data/properties.mjs`
+
+Open the file and add this second object to your exported array, right below your existing rental property. Make sure to include a comma after the rental object!
+
+```javascript
+export const properties = [
+  {
+    // ... (Your existing rental property object stays here)
+  },
+  {
+    id: "7101-wendemere",
+    template: "investment",
+    status: "For Sale",
+    address: "7101 Wendemere St",
+    city: "Houston",
+    state: "TX",
+    zip: "77088",
+    price: "$150,000",
+    description: "Seller-financed Acres Homes investment opportunity with a 6.51% negotiated note, 20% down payment, oversized 7,250 sqft lot, zero HOA, and a value-add path toward $1,700/month target rent.",
+    agentName: "Carissa Weber",
+    brokerage: "Better Homes and Gardens Real Estate<br>Gary Greene - Sugar Land",
+    agentImage: "/assets/agents/carissa-weber.png"
+  }
+];
+
+```
+
+The router will now iterate over the array, recognize `template: "investment"`, pass the Wendemere data directly into your newly created `template-investment.mjs`, and successfully output both property types side-by-side in your `dist/` folder.
 
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\rent-invest-propertypage-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
