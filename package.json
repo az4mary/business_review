@@ -1,5 +1,12 @@
 {
+  "name": "zyne.store",
+  "workspaces": [
+    "projects/zyne-homepage"
+  ],
   "scripts": {
+    "build": "npm run build --workspace=projects/zyne-homepage",
+    "preview": "npm run preview --workspace=projects/zyne-homepage",
+    "test": "playwright test",
     "capture:property-local": "node scripts/capture-property-listings-local.mjs"
   },
   "devDependencies": {
