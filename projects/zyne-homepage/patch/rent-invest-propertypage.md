@@ -98,4 +98,58 @@ export const properties = [
 
 The router will now iterate over the array, recognize `template: "investment"`, pass the Wendemere data directly into your newly created `template-investment.mjs`, and successfully output both property types side-by-side in your `dist/` folder.
 
+### Step 4: The `[object Object]` Template
+
+Because the router passes an array of objects (`{ src, label, index }`), we must explicitly target the `.src` property inside the template string.
+
+**File:** `projects/zyne-homepage/scripts/templates/template-investment.mjs`
+
+Find the entire `<!-- LEFT PANEL: Dynamic Masonry -->` block (around line 300) and replace it with this updated version that calls `.src`:
+
+```javascript
+        <!-- LEFT PANEL: Dynamic Masonry -->
+        <div class="photo-masonry">
+          <div class="masonry-col col-left">
+            <div class="img-wrap">
+              <span class="status-badge">${prop.status}</span>
+              ${visible[0] ? `<img src="${visible[0].src}" alt="${prop.address}">` : '<div style="width:100%; height:100%; background:#1c2520;"></div>'}
+            </div>
+            <div class="img-wrap">
+              ${visible[1] ? `<img src="${visible[1].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#153d5a;"></div>'}
+            </div>
+          </div>
+          <div class="masonry-col col-right">
+            <div class="img-wrap">
+              ${visible[2] ? `<img src="${visible[2].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#d4cfc7;"></div>'}
+            </div>
+            <div class="img-wrap">
+              ${visible[3] ? `<img src="${visible[3].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#bda316;"></div>'}
+            </div>
+            <div class="img-wrap">
+              ${visible[4] ? `<img src="${visible[4].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#8c1d1d;"></div>'}
+            </div>
+          </div>
+        </div>
+
+```
+
+---
+
+### Step 5: The Image Directory
+
+The build script will likely scan for the directory to process the images. We need to create the folder and populate it so the router has actual files to index.
+
+**1. Create the directory:**
+Run this from your root terminal to generate the correct folder structure (adjusting `public` to wherever your Vite static assets currently live, if different):
+
+```powershell
+New-Item -Path "projects\zyne-homepage\public\homedetail\7101-wendemere\images" -ItemType Directory -Force
+
+```
+
+**2. Add placeholder images:**
+Drop at least 5 image files (e.g., `01.jpg` through `05.jpg`) into that new `images` folder.
+
+Once the `.src` targets are updated and those image files exist in the directory, your array mapping will work perfectly, the objects will resolve to valid URLs, and the template will render the photos seamlessly.
+
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\rent-invest-propertypage-report.md” and write report. Reply `DONE` in the chat conversation after you have updated the file with your comment.
