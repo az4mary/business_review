@@ -183,6 +183,28 @@ zyne.store
 └── sitemap.xml
 ```
 
+### `projects/zyne-homepage` — First Level Only
+
+```text
+zyne-homepage
+├── .gitignore
+├── .qa-edge/
+├── dist/
+├── docs/
+├── index.html
+├── package-lock.json
+├── package.json
+├── patch/
+├── pnpm-workspace.yaml
+├── PRD_COMPLIANCE.md
+├── public/
+├── qa-catalog-contact-sheet.jpg
+├── qa-homepage.png
+├── README.md
+├── scripts/
+└── src/
+```
+
 ## Question 2: Static Asset Management Paths
 
 - **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets; selected repository inputs also come from `assets/catalog/`, `assets/zyne-stan-store-*.md`, and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
