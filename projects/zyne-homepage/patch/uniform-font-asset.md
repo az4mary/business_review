@@ -249,3 +249,68 @@ npm install
 ```
 
 Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\uniform-font-asset-report.md” and write report in the below requested format. Reply DONE in the chat conversation after you have updated the file with your comment.
+
+---
+
+# PATCH 2 - Single NPM Workspace
+
+This is the definitive migration to a single, unified NPM environment. We are going to use **NPM Workspaces** (which is built natively into standard NPM).
+
+This approach turns your root folder into the master controller. You will only ever run `npm install` at the root, and NPM will automatically map your Vite dependencies down into the `projects/zyne-homepage` folder.
+
+### 1. Final Conflict Purge
+
+Run this exact command in PowerShell to guarantee absolutely no broken lockfiles survived the earlier purges. This ensures the new install has a 100% clean slate.
+
+```powershell
+cd D:\PROJECTS\GITHUB\az4mary\zyne.store
+Remove-Item -Path "package-lock.json", "projects\zyne-homepage\package-lock.json" -Force -ErrorAction SilentlyContinue
+
+```
+
+### 2. Configure the Master Controller
+
+Open your root `package.json` file (`zyne.store/package.json`). We need to tell NPM that it owns the homepage project.
+
+Add the `"workspaces"` array to the top level of the JSON, and add the proxy commands to your `"scripts"` block so you can run Vite directly from the root:
+
+```json
+{
+  "name": "zyne.store",
+  "workspaces": [
+    "projects/zyne-homepage"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=projects/zyne-homepage",
+    "preview": "npm run preview --workspace=projects/zyne-homepage",
+    "test": "playwright test" 
+  },
+  "devDependencies": {
+    "...": "..."
+  }
+}
+
+```
+
+*(Leave whatever Playwright dependencies you already have in `devDependencies` intact).*
+
+### 3. The Single Install
+
+Now, run your installation command from the root directory:
+
+```powershell
+npm install
+
+```
+
+NPM will now read the workspace configuration, scan both the root Playwright needs and the homepage Vite needs, and resolve everything perfectly in one pass. It will generate a single, master `package-lock.json` at the root.
+
+### 4. Run Your Build
+
+Because we added the proxy scripts in Step 2, you no longer need to change directories to run your website. Stay in the root folder and run:
+
+```powershell
+npm run build
+
+```
+Open the file "D:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\uniform-font-asset-report.md” and write report in the below requested format. Reply `DONE` in the chat conversation after you have updated the file with your comment.
