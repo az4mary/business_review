@@ -24,6 +24,20 @@ export const properties = [
       profileUrl: "https://www.har.com/carissa-weber/agent_WEBERC",
       photo: "/assets/agents/carissa-weber.png"
     }
+  },
+  {
+    id: "7101-wendemere",
+    template: "investment",
+    status: "For Sale",
+    address: "7101 Wendemere St",
+    city: "Houston",
+    state: "TX",
+    zip: "77088",
+    price: "$150,000",
+    description: "Seller-financed Acres Homes investment opportunity with a 6.51% negotiated note, 20% down payment, oversized 7,250 sqft lot, zero HOA, and a value-add path toward $1,700/month target rent.",
+    agentName: "Carissa Weber",
+    brokerage: "Better Homes and Gardens Real Estate<br>Gary Greene - Sugar Land",
+    agentImage: "/assets/agents/carissa-weber.png"
   }
 ];
 

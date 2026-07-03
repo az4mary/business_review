@@ -383,7 +383,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
       <img src="/assets/zyne-logo.png" alt="ZYNE">
     </a>
     <nav aria-label="Main navigation">
-      ${navItems}
+      ${navItems.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}
     </nav>
   </header>
 
@@ -396,21 +396,21 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
           <div class="masonry-col col-left">
             <div class="img-wrap">
               <span class="status-badge">${prop.status}</span>
-              ${visible[0] ? `<img src="${visible[0]}" alt="${prop.address}">` : '<div style="width:100%; height:100%; background:#1c2520;"></div>'}
+              ${visible[0] ? `<img src="${visible[0].src}" alt="${prop.address}">` : '<div style="width:100%; height:100%; background:#1c2520;"></div>'}
             </div>
             <div class="img-wrap">
-              ${visible[1] ? `<img src="${visible[1]}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#153d5a;"></div>'}
+              ${visible[1] ? `<img src="${visible[1].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#153d5a;"></div>'}
             </div>
           </div>
           <div class="masonry-col col-right">
             <div class="img-wrap">
-              ${visible[2] ? `<img src="${visible[2]}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#d4cfc7;"></div>'}
+              ${visible[2] ? `<img src="${visible[2].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#d4cfc7;"></div>'}
             </div>
             <div class="img-wrap">
-              ${visible[3] ? `<img src="${visible[3]}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#bda316;"></div>'}
+              ${visible[3] ? `<img src="${visible[3].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#bda316;"></div>'}
             </div>
             <div class="img-wrap">
-              ${visible[4] ? `<img src="${visible[4]}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#8c1d1d;"></div>'}
+              ${visible[4] ? `<img src="${visible[4].src}" alt="Interior View">` : '<div style="width:100%; height:100%; background:#8c1d1d;"></div>'}
             </div>
           </div>
         </div>

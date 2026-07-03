@@ -2,6 +2,7 @@ import { copyFile, mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { properties, navItems } from "../src/data/properties.mjs";
 import { buildRentalPage } from "./templates/template-rental.mjs";
+import { buildInvestmentPage } from "./templates/template-investment.mjs";
 
 const labels = [
   "Bathroom", "Bedroom", "Living room", "Dining area", "Front exterior",
@@ -56,7 +57,7 @@ for (const prop of properties) {
   if (prop.template === "rental") {
     html = buildRentalPage(prop, photos, visible, primaryImage, navItems);
   } else if (prop.template === "investment") {
-    // html = buildInvestmentPage(...) -> We will add this next!
+    html = buildInvestmentPage(prop, photos, visible, primaryImage, navItems);
   }
 
   await mkdir(outputDir, { recursive: true });
