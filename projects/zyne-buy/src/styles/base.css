@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+html { background: var(--black); scroll-snap-type: y proximity; scrollbar-color: #6e5700 #050606; }
+body { margin: 0; background: var(--black); color: var(--white); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+button { font: inherit; }
+.viewport-page { position: relative; width: 100%; height: 100dvh; min-height: 1px; overflow: hidden; scroll-snap-align: start; scroll-snap-stop: normal; background: var(--black); }
+.design-canvas { position: absolute; left: 50vw; top: 50%; width: var(--canvas-width); height: var(--canvas-height); transform: translate(-50%, -50%) scale(var(--canvas-scale)); transform-origin: center; overflow: hidden; background: var(--black); }
+.site-header { min-height: 82px; height: 82px; padding: 0 6vw; display: flex; gap: 24px; align-items: center; border-bottom: 1px solid rgba(201,169,103,.22); background: rgba(7,7,6,.93); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(18px); }
+.site-logo { display: block; flex: 0 0 auto; }
+.site-logo img { display: block; width: 110px; height: 73px; object-fit: contain; }
+.site-header nav { display: flex; gap: 16px; flex-wrap: wrap; margin-left: auto; }
+.site-header nav a { color: #b4aea3; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; text-decoration: none; }
+.site-header nav a:hover { color: #f1eadc; }
+.page-stack { margin-top: -82px; }
+.canvas-header-space { height: 82px; }
+.icon { width: 42px; height: 42px; fill: none; stroke: currentColor; stroke-width: 1.15; stroke-linecap: round; stroke-linejoin: round; }
+.small-icon { width: 18px; height: 18px; stroke-width: 1.8; }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+button[aria-disabled="true"] { cursor: default; }
+.lightbox-open { position: fixed; width: 100%; overflow: hidden; }

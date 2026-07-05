@@ -1,0 +1,15 @@
+.lightbox { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; color: #fff; }
+.lightbox-backdrop { position: absolute; inset: 0; border: 0; background: rgba(0,0,0,.94); }
+.lightbox-shell { position: relative; width: min(94vw, 1500px); height: 94dvh; display: grid; grid-template-rows: 54px 1fr 106px; }
+.lightbox-toolbar { display: flex; justify-content: space-between; align-items: center; font-size: 14px; letter-spacing: 2px; }
+.lightbox-toolbar button { width: 44px; height: 44px; border: 1px solid #6e5700; color: #f2ca00; background: #070808; font-size: 28px; }
+.lightbox-stage { min-height: 0; display: grid; grid-template-columns: 64px 1fr 64px; align-items: center; gap: 14px; }
+.lightbox-stage > button { height: 80px; border: 1px solid #6e5700; background: #050606; color: #f2ca00; font-size: 50px; }
+.lightbox figure { height: 100%; min-width: 0; margin: 0; display: grid; grid-template-rows: 1fr 30px; place-items: center; }
+.lightbox figure img { max-width: 100%; max-height: calc(94dvh - 190px); object-fit: contain; }
+.lightbox figcaption { align-self: end; color: #c8c8c5; font-size: 13px; letter-spacing: 1px; }
+.lightbox-thumbnails { display: flex; justify-content: center; gap: 8px; overflow-x: auto; padding: 14px; }
+.lightbox-thumbnails button { flex: 0 0 92px; height: 66px; padding: 0; border: 1px solid transparent; background: #111; opacity: .55; }
+.lightbox-thumbnails button.active { border-color: #f2ca00; opacity: 1; }
+.lightbox-thumbnails img { width: 100%; height: 100%; display:block; object-fit:cover; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }

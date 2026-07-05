@@ -1,0 +1,14 @@
+:root {
+  --canvas-scale: 1;
+  --canvas-width: 1672px;
+  --canvas-height: 941px;
+  --black: #020303;
+  --panel: #050606;
+  --gold: #f2cc00;
+  --gold-line: #725600;
+  --gold-soft: #f3c45a;
+  --white: #f2f2f0;
+  --muted: #c2c2bf;
+  --font: Inter, "Helvetica Neue", Arial, sans-serif;
+  --property-font: Roboto, Arial, sans-serif;
+}
