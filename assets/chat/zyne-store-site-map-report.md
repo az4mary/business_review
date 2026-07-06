@@ -141,7 +141,7 @@ zyne.store
 │   ├── project-docs/prd                  # PRD archive
 │   ├── property-listing-screenshots
 │   ├── top-ecommerce-website-screenshots
-│   └── zyne-stan-store-*.md              # Legal source Markdown used by the build
+│   └── legal/                             # Legal source Markdown used by the build
 ├── docs
 │   ├── automation
 │   ├── brand
@@ -245,7 +245,7 @@ zyne.store
 
 ## Question 2: Static Asset Management Paths
 
-- **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets, including product media in `projects/zyne-homepage/public/assets/catalog/products/`; selected repository inputs also come from `assets/zyne-stan-store-*.md` and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
+- **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets, including product media in `projects/zyne-homepage/public/assets/catalog/products/`; selected repository inputs also come from `assets/legal/` and the shared property media tree.
 - **Compiled Output Path:** `projects/zyne-homepage/dist/assets/`; the property generator also copies listing images to `projects/zyne-homepage/dist/homedetail/7101-wendemere-st-houston-tx-77088/images/`.
 - **Font Asset Delivery Method:** `None currently loaded` — no local font files, `@font-face`, Google Fonts stylesheet, or other font CDN is present. CSS uses system font stacks.
 
@@ -289,6 +289,7 @@ on:
     paths:
       - "projects/zyne-homepage/**"
       - "projects/zyne-homepage/public/assets/catalog/**"
+      - "assets/legal/**"
       - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
       - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"
@@ -296,6 +297,7 @@ on:
     paths:
       - "projects/zyne-homepage/**"
       - "projects/zyne-homepage/public/assets/catalog/**"
+      - "assets/legal/**"
       - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
       - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"

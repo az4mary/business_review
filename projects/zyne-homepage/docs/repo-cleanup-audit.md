@@ -33,8 +33,8 @@ Use these files as the active project source:
 | `projects/zyne-homepage/public/assets/catalog/products/` | Canonical product image source | Product media is centralized here as lowercase WebP files and published via build. |
 | `assets/project-docs/prd/zyne-website-PRD-*.md` | Requirements archive | Keep as PRD archive. Do not mix these files into runtime code. |
 | `assets/project-docs/prd/zyne-website-PRD-*-validation-result.md` | Historical validation records | Keep as audit trail. Future validation should be generated or documented under `projects/zyne-homepage/docs/` when project-specific. |
-| `assets/stan_store_product_urls.md` | Source/reference URL list | Keep as reference until the full live catalog is normalized into structured product data. Do not duplicate under `public/`. |
-| `assets/stan_store_product_listings.md` | Live product listing reference | Keep as catalog-reference source until the full product catalog is migrated into structured data. |
+| `assets/catalog-reference/stan_store_product_urls.md` | Source/reference URL list | Keep as reference until the full live catalog is normalized into structured product data. Do not duplicate under `public/`. |
+| `assets/catalog-reference/stan_store_product_listings.md` | Live product listing reference | Keep as catalog-reference source until the full product catalog is migrated into structured data. |
 | `patches/zyne-crawler-enabled.md` | Implemented patch instruction | Consolidated into `projects/zyne-homepage/docs/crawler-seo-rendering.md` and removed. |
 | `assets/index_zyne_homepage_1.html` | Obsolete standalone homepage artifact | Removed because it was publicly servable and not part of the current source/build pipeline. |
 | `assets/index_redirect_stan_store.html` | Obsolete standalone Stan Store redirect artifact | Removed because direct redirect artifacts conflict with the product-education-first model. |
@@ -46,7 +46,7 @@ Use these files as the active project source:
 - Added `projects/zyne-homepage/public/CNAME` so built GitHub Pages artifacts preserve the `zyne.store` custom domain.
 - Added `projects/zyne-homepage/public/.nojekyll` so GitHub Pages serves generated static assets without Jekyll processing.
 - Added `.github/workflows/zyne-homepage-pages.yml` to build `projects/zyne-homepage` and deploy the generated `dist` artifact to GitHub Pages.
-- Removed the duplicate public artifact `projects/zyne-homepage/public/assets/stan_store_product_urls.md` because it duplicated `assets/stan_store_product_urls.md` and would be published as a public static file.
+- Removed the duplicate public artifact `projects/zyne-homepage/public/assets/stan_store_product_urls.md` because it duplicated `assets/catalog-reference/stan_store_product_urls.md` and would be published as a public static file.
 - Consolidated crawler/AI extraction guidance into `projects/zyne-homepage/docs/crawler-seo-rendering.md`.
 - Removed root `patches/zyne-crawler-enabled.md` after consolidation.
 - Removed obsolete public standalone HTML artifacts under `assets/` that were not part of the current build.

@@ -82,3 +82,17 @@ Cleaned the requested repository-level `assets/`, `assets/products/`, and `asset
 - Remaining `assets/index-*` files: 0.
 - Archived `archive/index-*` files: 15.
 - Re-ran `npm run build` from repository root after relocation; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.
+
+## Follow-up Cleanup - Remaining Top-Level `assets` Files
+
+- Relocated all 12 files that remained directly under repository-level `assets/`:
+  - 1 integration document to `assets/project-docs/integration/`.
+  - 2 catalog reference documents to `assets/catalog-reference/`.
+  - 5 report template images to `assets/templates/reports/`.
+  - 4 legal policy documents to `assets/legal/`.
+- Updated active legal generation, README, audit, workflow, site-map report, and LAW report-template references to the relocated paths.
+- Verified files directly under repository-level `assets/`: 0.
+- Verified repository-level `assets/` now contains directories only at its first level.
+- Verified no changes were made to `projects/zyne-buy/` or `projects/zyne-homepage/patch/file-reorganization.md`.
+- Executed `npm run build` from repository root after relocation; exit code 0.
+- Catalog, PRD 1.1, PRD 1.2A, generated-route, legal-layer, and SEO-layer validations passed.

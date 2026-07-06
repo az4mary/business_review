@@ -58,13 +58,13 @@ The build script runs catalog validation, PRD 1.1 homepage UX validation, Vite b
 
 Legal source copy is maintained as Markdown in the repository-level `assets/` folder and rendered into static pages during `npm run build`:
 
-* `assets/zyne-stan-store-privacy-policy.md` → `/privacy/`
+* `assets/legal/zyne-stan-store-privacy-policy.md` → `/privacy/`
 
-* `assets/zyne-stan-store-terms-and-conditions.md` → `/terms/`
+* `assets/legal/zyne-stan-store-terms-and-conditions.md` → `/terms/`
 
-* `assets/zyne-stan-store-refund-and-scope-policy.md` → `/refund-policy/`
+* `assets/legal/zyne-stan-store-refund-and-scope-policy.md` → `/refund-policy/`
 
-* `assets/zyne-stan-store-cookie-policy.md` → `/cookie-policy/`
+* `assets/legal/zyne-stan-store-cookie-policy.md` → `/cookie-policy/`
 
 
 `projects/zyne-homepage/scripts/generate-legal-layer.mjs` reads those Markdown sources, injects required ZYNE/Stan Store relationship disclosures, preserves validator-required phrases, and writes the generated legal routes into `dist`.

@@ -3,10 +3,10 @@ import { join } from 'node:path';
 
 const distDir = 'dist';
 const siteUrl = 'https://zyne.store';
-const privacyPolicySource = join('..', '..', 'assets', 'zyne-stan-store-privacy-policy.md');
-const termsPolicySource = join('..', '..', 'assets', 'zyne-stan-store-terms-and-conditions.md');
-const refundPolicySource = join('..', '..', 'assets', 'zyne-stan-store-refund-and-scope-policy.md');
-const cookiePolicySource = join('..', '..', 'assets', 'zyne-stan-store-cookie-policy.md');
+const privacyPolicySource = join('..', '..', 'assets', 'legal', 'zyne-stan-store-privacy-policy.md');
+const termsPolicySource = join('..', '..', 'assets', 'legal', 'zyne-stan-store-terms-and-conditions.md');
+const refundPolicySource = join('..', '..', 'assets', 'legal', 'zyne-stan-store-refund-and-scope-policy.md');
+const cookiePolicySource = join('..', '..', 'assets', 'legal', 'zyne-stan-store-cookie-policy.md');
 
 const legalLinks = [
   ['Privacy Policy', '/privacy/'],
