@@ -69,7 +69,7 @@ const faqItem = ([question, answer], index) => `<details class="${index < 2 ? "t
 export const renderHomePage = () => `
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /></a>
+    <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><b>Menu</b></button>
     <nav id="main-navigation" aria-label="Main navigation"><a href="#services">Services</a><a href="#growth-paths">Growth Paths</a><a href="#intelligence">Intelligence</a><a href="#delivery">Delivery</a><a href="#industries">Industries</a><a href="#faq">FAQ</a></nav>
     <a class="button button-small" href="/services/" data-event="header_shop_services_click">Shop Services</a>
@@ -88,7 +88,7 @@ export const renderHomePage = () => `
     <section class="section faq" id="faq"><div class="section-heading"><div><p class="eyebrow">Clarity before checkout</p><h2>Frequently Asked <em>Questions</em></h2></div></div><div class="faq-list">${faqs.map(faqItem).join("")}</div></section>
     <section class="final-cta"><p class="eyebrow">Your next move can be clear</p><h2>Lead with clarity.<br/><em>Execute with confidence.</em></h2><p>Browse fixed-price services for visibility, brand authority, AI systems, websites, and client conversion. Review details on ZYNE, then check out securely through Stan Store.</p><div class="actions"><a class="button" href="/services/" data-event="final_cta_shop_services_click">Shop Paid Services ${arrow}</a><a class="button button-ghost" href="#growth-paths" data-event="final_cta_find_growth_path_click">Find My Growth Path</a></div></section>
   </main>
-  <footer><div class="footer-brand"><img src="/assets/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div><div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
+  <footer><div class="footer-brand"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div><div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
 `;
 
 const featuredServiceList = () => ({
@@ -117,7 +117,7 @@ export const buildSchema = () => {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": "/#organization", name: "ZYNE", url: "/", logo: "/assets/zyne-logo-optimized.webp" },
+      { "@type": "Organization", "@id": "/#organization", name: "ZYNE", url: "/", logo: "/assets/brand/zyne-logo-optimized.webp" },
       { "@type": "WebSite", "@id": "/#website", url: "/", name: "ZYNE", publisher: { "@id": "/#organization" } },
       { "@type": "CollectionPage", "@id": "/#homepage", name: "ZYNE Premium Growth Services", url: "/", description: "Fixed-price ZYNE growth services for visibility, authority, automation, and client conversion.", mainEntity: featuredServices },
       featuredServices,

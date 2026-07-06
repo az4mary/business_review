@@ -57,7 +57,7 @@ All moves were recorded as Git renames, preserving file contents and history.
 The active site source and all build inputs stayed at their established paths:
 
 - `projects/zyne-homepage/src`, `scripts`, and `public`
-- `assets/catalog`, policy Markdown, catalog reference data, and active design assets
+- `projects/zyne-homepage/public/assets/catalog/products`, policy Markdown, catalog reference data, and active design assets
 - `homedetail/7101-wendemere-st-houston-tx-77088` property source and images
 - `.github/workflows/zyne-homepage-pages.yml` and validation/capture workflows
 - Root generated customer routes such as `services/`, growth-path folders, legal routes, `404.html`, `robots.txt`, and `sitemap.xml`
@@ -109,7 +109,7 @@ The following are exact duplicates or likely obsolete generated archives. They a
 3. `assets/favicon.svg` and `assets/ZYNE-favicon.svg`; `assets/ZYNE Logo Trans.png` and `assets/zyne-logo.png`; `assets/ZYNE-apple-touch-icon.png` and `assets/ZYNE-favicon.png` — three exact duplicate pairs. Candidate rationale: duplicate brand files. Prerequisite: standardize all HTML/public references on the canonical lowercase web assets.
 4. `assets/product_images/*_Image_1` and matching `assets/products/*_Image_1` files for Market Positioning, Operational Audit, Origination System, and Web Architecture — four exact duplicate pairs. Candidate rationale: overlapping product-image collections. Prerequisite: choose one canonical product image directory and update all consumers.
 5. `assets/AI_Integration_thumbnail.jpg` / `assets/product_images/AI_Integration_Image_1.jpg` and `assets/Competitor_Readiness_thumnail.png` / `assets/product_images/Competitor_Readiness_Image_1.png` — exact duplicate pairs with different roles/names. Candidate rationale: redundant binaries. Prerequisite: verify whether separate semantic filenames are still required by legacy pages.
-6. `assets/Homepage_Fix_Pack_thumbnail.png` / `assets/Website_Quick_Win_Audit_thumbnail.png` and their corresponding `assets/catalog/` files — exact duplicate image pairs. Candidate rationale: the same visual is stored under two product identities. Prerequisite: confirm this is intentional product artwork rather than accidental duplication.
+6. The former loose `assets/catalog/` and `projects/zyne-homepage/public/assets/catalog/` product files were consolidated as WebP assets under `projects/zyne-homepage/public/assets/catalog/products/`; the duplicate loose files were removed.
 7. Root `assets/index-*.js` and `assets/index-*.css` files — multiple hashed build generations are present, including one exact duplicate JavaScript pair. Candidate rationale: stale generated bundles can accumulate. Prerequisite: retire root-generated deployment artifacts or identify precisely which hashes current root HTML references.
 8. `assets/property-listing-screenshots.zip`, `assets/top-ecommerce-website-screenshots.zip`, and `homedetail/7101-wendemere-st-houston-tx-77088/images.zip` — untracked archives alongside expanded source folders. Candidate rationale: likely redundant packaged copies. Prerequisite: confirm archive contents/checksums and whether the ZIPs are required for delivery; these existing untracked files were not modified or committed.
 
@@ -245,7 +245,7 @@ zyne.store
 
 ## Question 2: Static Asset Management Paths
 
-- **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets; selected repository inputs also come from `assets/catalog/`, `assets/zyne-stan-store-*.md`, and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
+- **Source Asset Path:** `projects/zyne-homepage/public/assets/` for deployable static assets, including product media in `projects/zyne-homepage/public/assets/catalog/products/`; selected repository inputs also come from `assets/zyne-stan-store-*.md` and `homedetail/7101-wendemere-st-houston-tx-77088/images/`.
 - **Compiled Output Path:** `projects/zyne-homepage/dist/assets/`; the property generator also copies listing images to `projects/zyne-homepage/dist/homedetail/7101-wendemere-st-houston-tx-77088/images/`.
 - **Font Asset Delivery Method:** `None currently loaded` — no local font files, `@font-face`, Google Fonts stylesheet, or other font CDN is present. CSS uses system font stacks.
 
@@ -288,14 +288,14 @@ on:
   push:
     paths:
       - "projects/zyne-homepage/**"
-      - "assets/catalog/**"
+      - "projects/zyne-homepage/public/assets/catalog/**"
       - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
       - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"
   pull_request:
     paths:
       - "projects/zyne-homepage/**"
-      - "assets/catalog/**"
+      - "projects/zyne-homepage/public/assets/catalog/**"
       - "assets/project-docs/prd/zyne-website-PRD-2-product-data-model.md"
       - "assets/project-docs/prd/zyne-website-PRD-2-asset-migration-map.md"
       - ".github/workflows/zyne-homepage-validation.yml"

@@ -24,7 +24,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
     if (!photo) return `<div class="tile ${className}" style="background:#111;"></div>`;
     return `
       <button class="tile ${className}" type="button" data-photo="${photo.index}">
-        <img src="${photo.src}" alt="${photo.label} at ${property.address}">
+        <img src="${photo.thumbnailSrc}" srcset="${photo.mobileThumbnailSrc} 768w, ${photo.thumbnailSrc} 1024w" sizes="(max-width: 768px) 100vw, 50vw" alt="${photo.label} at ${property.address}">
         ${className.includes("hero-photo") ? `<b class="status-chevron">FOR SALE • SELLER FINANCING</b>` : ""}
       </button>
     `;
@@ -219,7 +219,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   const header = `
     <header class="site-header">
       <a class="brand" href="/">
-        <img src="/assets/zyne-logo.png" alt="ZYNE">
+        <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
         <b>ZYNE</b>
       </a>
       <nav class="main-nav">${nav}</nav>
@@ -294,7 +294,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
       <div class="agent-card">
         <h2>Listing Agent</h2>
         <div class="agent-profile">
-          <img src="${agent.photo || '/assets/agents/carissa-weber.png'}" alt="${agent.name || 'Agent'}">
+          <img src="${agent.photo || '/assets/catalog/agents/carissa-weber.png'}" alt="${agent.name || 'Agent'}">
           <div>
             <h3>${agent.name || 'Carissa Weber'} <span class="agent-badge">${agent.badge || 'PLATINUM'}</span></h3>
             <p>${agent.brokerage || 'Better Homes and Gardens Real Estate'}</p>
@@ -376,7 +376,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   <title>Investment Prospectus | ${property.address} | ZYNE</title>
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="icon" href="/assets/brand/favicon.svg">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <style>${css}</style>
 </head>

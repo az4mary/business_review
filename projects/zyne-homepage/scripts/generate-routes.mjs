@@ -61,7 +61,7 @@ ${schema ? schemaScript(schema) : ""}
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
-  <a href="/" aria-label="ZYNE home"><img src="/assets/zyne-logo.png" alt="ZYNE"></a>
+  <a href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo.png" alt="ZYNE"></a>
   <nav aria-label="Main navigation">
     <a href="/services/">Services</a>
     <a href="/grow-my-visibility/">Visibility</a>

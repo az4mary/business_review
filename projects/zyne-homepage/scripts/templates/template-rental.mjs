@@ -1,4 +1,4 @@
-﻿import { Icons } from "../property-icons.mjs";
+import { Icons } from "../property-icons.mjs";
 
 // Custom beautifully stylized thin-line vector highway cloverleaf for Easy Access
 const cloverleafIcon = `
@@ -138,7 +138,7 @@ const tile = (photo, className = "") => {
 
   return `
     <button class="tile ${className}" type="button" data-photo="${photo.index}">
-      <img src="${photo.src}" alt="${photo.label} at ${property.address}">
+      <img src="${photo.thumbnailSrc}" srcset="${photo.mobileThumbnailSrc} 768w, ${photo.thumbnailSrc} 1024w" sizes="(max-width: 768px) 100vw, 50vw" alt="${photo.label} at ${property.address}">
       ${
         className === "hero-photo"
           ? `<b class="status">${property.status}</b>`
@@ -984,7 +984,7 @@ h1 {
   bottom: 0;
   width: 245px;
   height: 100%;
-  background-image: url("/assets/decor/zyne-gold-pillars.png");
+  background-image: url("/assets/brand/zyne-gold-pillars.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -1267,7 +1267,7 @@ h1 {
 const header = `
   <header class="site-header">
     <a class="brand" href="/">
-      <img src="/assets/zyne-logo.png" alt="ZYNE">
+      <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
       <b>ZYNE</b>
     </a>
 
@@ -1312,7 +1312,7 @@ const gallery = `
       <button class="tile see-all" type="button" data-photo="${visible[5]?.index ?? 0}">
         ${
           visible[5]
-            ? `<img src="${visible[5].src}" alt="${visible[5].label} at ${property.address}">`
+            ? `<img src="${visible[5].thumbnailSrc}" srcset="${visible[5].mobileThumbnailSrc} 768w, ${visible[5].thumbnailSrc} 1024w" sizes="(max-width: 768px) 100vw, 50vw" alt="${visible[5].label} at ${property.address}">`
             : ""
         }
         <span>${Icons.images} See all ${photos.length} photos</span>
@@ -1494,7 +1494,7 @@ const cta = `
 const footer = `
   <footer class="footer">
     <a class="brand" href="/">
-      <img src="/assets/zyne-logo.png" alt="ZYNE">
+      <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
       <b>ZYNE</b>
     </a>
 
@@ -1599,7 +1599,7 @@ return `<!doctype html>
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="icon" href="/assets/brand/favicon.svg">
 
   <meta property="og:title" content="7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail">
   <meta property="og:description" content="Three-bedroom Houston rental with covered porch, large lot, open layout, and clear property details.">

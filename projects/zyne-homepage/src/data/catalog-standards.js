@@ -1,12 +1,12 @@
 export const catalogAssetPolicy = {
-  canonicalRootAssetDir: "assets/catalog/",
-  canonicalSourceAssetDir: "projects/zyne-homepage/public/assets/catalog/",
-  imagePathPrefix: "catalog/",
+  canonicalRootAssetDir: "projects/zyne-homepage/public/assets/catalog/products/",
+  canonicalSourceAssetDir: "projects/zyne-homepage/public/assets/catalog/products/",
+  imagePathPrefix: "catalog/products/",
   filenamePattern: "product-slug-thumbnail.ext",
-  preferredExtension: ".png",
+  preferredExtension: ".webp",
   allowedExtensions: [".png", ".webp", ".avif", ".jpg", ".jpeg"],
   forbiddenFragments: ["thumnail", "Thumnail", "Thumbnail"],
-  replacementRule: "Replace the same filename and extension in both canonical asset folders. No code change is required when the filename and extension do not change."
+  replacementRule: "Replace the same filename and extension in the canonical products folder. No code change is required when the filename and extension do not change."
 };
 
 export const canonicalImageName = (slug, extension = catalogAssetPolicy.preferredExtension) => {

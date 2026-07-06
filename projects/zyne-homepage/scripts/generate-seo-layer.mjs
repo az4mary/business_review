@@ -4,7 +4,7 @@ import { getSeoKeywords, seoKeywordMap } from '../src/data/seo-keywords.js';
 
 const distDir = 'dist';
 const siteUrl = 'https://zyne.store';
-const defaultImage = `${siteUrl}/assets/zyne-logo-optimized.webp`;
+const defaultImage = `${siteUrl}/assets/brand/zyne-logo-optimized.webp`;
 
 const escapeHtml = (value = '') => String(value)
   .replaceAll('&', '&amp;')

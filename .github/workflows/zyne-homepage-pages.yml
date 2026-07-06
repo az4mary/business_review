@@ -13,7 +13,7 @@ on:
       - "projects/zyne-homepage/package.json"
       - "package-lock.json"
       # 3. SHARED REPO ASSETS & GENERATED OUTPUTS
-      - "assets/catalog/**"
+      - "projects/zyne-homepage/public/assets/catalog/**"
       - "homedetail/**"
       - "services/**"
       - "grow-my-visibility/**"
