@@ -1,12 +1,15 @@
-const mediaRoot = "/assets/properties/7101-wendemere-st-houston-tx-77088";
-const photo = (id, file, label, alt) => ({
-  id,
-  label,
-  alt,
-  src: `${mediaRoot}/display/${file.toLowerCase().replace(/\.(?:jpe?g|png)$/i, ".webp")}`,
-  fullSrc: `${mediaRoot}/original/${file}`,
-  thumbnailSrc: `${mediaRoot}/thumbnail/${file.toLowerCase().replace(/\.(?:jpe?g|png)$/i, ".webp")}`
-});
+const mediaRoot = "/assets/catalog/properties/7101-wendemere-st";
+const photo = (id, file, label, alt) => {
+  const webp = file.toLowerCase().replace(/\.(?:jpe?g|png)$/i, ".webp");
+  return {
+    id,
+    label,
+    alt,
+    src: `${mediaRoot}/thumbnails/${webp}`,
+    fullSrc: `${mediaRoot}/gallery/${webp}`,
+    thumbnailSrc: `${mediaRoot}/thumbnails-mobile/${webp}`
+  };
+};
 
 const photos = [
   photo("exterior", "FRONT.jpg", "Front exterior", "Front exterior of 7101 Wendemere St"),
@@ -47,7 +50,7 @@ export const listing = {
     badge: "PLATINUM",
     brokerage: "Better Homes and Gardens Real Estate",
     office: "Gary Greene – Sugar Land",
-    photo: { id: "agent", alt: "Carissa Weber", src: "/assets/agents/carissa-weber.webp" }
+    photo: { id: "agent", alt: "Carissa Weber", src: "/assets/catalog/agents/carissa-weber.webp" }
   },
   photos,
   galleryOrder: ["exterior", "living-room", "kitchen", "bedroom-red", "bedroom-blue", "bedroom-office", "bathroom", "front-yard", "back-yard"],

@@ -105,3 +105,10 @@ Cleaned the requested repository-level `assets/`, `assets/products/`, and `asset
 - Updated 5 active references across property data, route validation, the investment template fallback, and the verified current-page capture.
 - Verified active references remaining to `/assets/catalog/agents/carissa-weber.png`: 0.
 - Executed `npm run build` from repository root after conversion; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.
+
+## Buy Page Image Integration
+
+- Repointed the Buy page to the existing master agent image at `/assets/catalog/agents/carissa-weber.webp`.
+- Repointed all nine Buy-page photos to the existing shared `gallery/`, `thumbnails/`, and `thumbnails-mobile/` property folders.
+- Removed 28 duplicate image files from `projects/zyne-buy/public/assets/`: one agent image, nine original JPEG files, nine display WebP files, and nine thumbnail WebP files.
+- No image conversion, generation, recompression, or pixel modification was performed.

@@ -2,6 +2,7 @@ import { listing } from "../src/data/listing.js";
 import { validateListing } from "../src/data/validateListing.js";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const errors = validateListing(listing);
 if (errors.length) {
@@ -32,7 +33,12 @@ if (missingCopy.length || /[Ââ�]/.test(serializedListing)) {
 const assetUrls = listing.photos.flatMap((photo) => [photo.src, photo.fullSrc, photo.thumbnailSrc]);
 assetUrls.push(listing.agent.photo.src);
 assetUrls.push("/assets/brand/zyne-logo.webp", "/assets/brand/zyne-favicon.svg", "/assets/brand/zyne-favicon.png");
-const missingAssets = assetUrls.filter((url) => !existsSync(join("public", url.replace(/^\//, ""))));
+const buyPublicDir = fileURLToPath(new URL("../public/", import.meta.url));
+const homepagePublicDir = fileURLToPath(new URL("../../zyne-homepage/public/", import.meta.url));
+const missingAssets = assetUrls.filter((url) => {
+  const publicDir = url.startsWith("/assets/catalog/") ? homepagePublicDir : buyPublicDir;
+  return !existsSync(join(publicDir, url.replace(/^\//, "")));
+});
 if (missingAssets.length) {
   console.error(`Missing required assets:\n${missingAssets.join("\n")}`);
   process.exit(1);
