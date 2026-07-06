@@ -24,7 +24,8 @@
 
 ### 🗂️ The Master Asset Tree Structure
 
-This is the exact hierarchy you must create and follow. Any media files living outside of these specific buckets will trigger a failure in the validation script. "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage”
+This is the exact hierarchy you must create and follow. Any media files living outside of these specific buckets will trigger a failure in the validation script. Files should be relocated, duplicate should be deleted. 
+**Target:** "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage”
 
 - `public/assets/`
     - `brand/` *(Global logos, favicons, site-wide UI graphics)*
