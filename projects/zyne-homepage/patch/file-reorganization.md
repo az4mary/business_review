@@ -20,6 +20,8 @@
 
 **Objective:** Reorganize the existing scattered assets into the strict **Master Asset Tree** hierarchy. You must execute these file migrations and update the corresponding data scripts to match.
 
+"E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-buy" is completely excluded from this task.
+
 #### Action 1: Relocate Agent Media
 
 Currently, agent headshots are stored outside the central catalog hierarchy.
