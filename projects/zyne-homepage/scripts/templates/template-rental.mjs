@@ -282,7 +282,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter var', Inter, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -1586,13 +1586,10 @@ const clientScript = `
 return `<!doctype html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#050505">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=block" rel="stylesheet">
 
   <title>7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail</title>
   <meta name="description" content="Three-bedroom Houston rental with covered porch, large lot, open layout, and clear property details.">

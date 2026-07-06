@@ -1,0 +1,21 @@
+/* public/assets/fonts/fonts.css */
+
+/* Centralized Variable Axis (Unlocks Weights 100 through 900 instantly) */
+@font-face {
+  font-family: 'Inter Var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable.woff2') format('woff2-variations'),
+       url('/assets/fonts/InterVariable.woff2') format('woff2');
+}
+
+/* Centralized Italic Variable Axis (Unlocks Italic Weights 100 through 900 instantly) */
+@font-face {
+  font-family: 'Inter Var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable-Italic.woff2') format('woff2-variations'),
+       url('/assets/fonts/InterVariable-Italic.woff2') format('woff2');
+}
