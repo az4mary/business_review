@@ -22,6 +22,51 @@
 
 "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-buy" is completely excluded from this task.
 
+### 🗂️ The Master Asset Tree Structure
+
+This is the exact hierarchy you must follow. Any media files living outside of these specific buckets will trigger a failure in the validation script.
+
+* `public/assets/`
+* `brand/` *(Global logos, favicons, site-wide UI graphics)*
+* `fonts/` *(The single source of truth for all typography)*
+* `catalog/` *(The central database for all non-UI media)*
+* `agents/` *(Agent headshots and profiles)*
+* `products/` *(Global services, e.g., `/executive-briefing/`)*
+* `properties/` *(Strictly segregated by property ID)*
+* `7101-wendemere-st/`
+* `gallery/` *(High-res originals and WebP display assets)*
+* `thumbnails/` *(Optimized preview assets)*
+
+
+
+
+
+
+
+
+
+---
+
+### 📋 Developer Mandate: Asset & Typography Enforcement
+
+**Developer Instructions:**
+As part of the Buy page integration, you are strictly forbidden from introducing new media directories or new font files into the repository. You must adhere to the following enforcement rules:
+
+**1. Centralized Image Catalog**
+You must not duplicate any property or product images. All property-specific gallery derivatives, thumbnails, and agent headshots must be moved into the strict `public/assets/catalog/...` hierarchy outlined above. The global validation script will be updated to reject any `.jpg`, `.png`, or `.webp` files committed outside of the `brand/` or `catalog/` subdirectories.
+
+**2. Typography Lock (No New Fonts)**
+The Buy page must utilize the existing typography already established in the master repository.
+
+* You must completely remove all `@fontsource` dependencies.
+
+
+* **Do not** bundle, download, or commit new `.woff2` files for Inter or Roboto.
+* You must map the Buy page's CSS font families exclusively to the font files that already exist inside the `public/assets/fonts/` directory. If a specific weight or style from the original mockup does not exist in our global directory, you must fall back to the closest existing global font weight.
+
+**3. Validation Blocker**
+You are required to add an assertion to the master validation pipeline that scans for and fails the build if any unauthorized `.woff`, `.woff2`, `.ttf`, or `@fontsource` imports are detected anywhere in the repository.
+
 #### Action 1: Relocate Agent Media
 
 Currently, agent headshots are stored outside the central catalog hierarchy.
