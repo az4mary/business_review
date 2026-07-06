@@ -16,14 +16,6 @@
 
 ---
 
-This is exactly what we needed to see. By reviewing `properties.mjs` and `catalog-image-map.js`, we have full visibility into how your current architecture is routing assets.
-
-Your instincts were right—the house is currently scattered. Agent images are sitting outside the catalog, product images are dumped into a generic folder with inconsistent casing, and there is a massive risk of property image duplication because the same physical house has two different IDs in the database.
-
-Here is the exact **Housekeeping Mandate** to hand over to your developer to execute *before* they migrate the Buy page.
-
----
-
 ### 🧹 Developer Housekeeping Mandate: Pre-Migration Asset Cleanup
 
 **Objective:** Reorganize the existing scattered assets into the strict **Master Asset Tree** hierarchy. You must execute these file migrations and update the corresponding data scripts to match.
