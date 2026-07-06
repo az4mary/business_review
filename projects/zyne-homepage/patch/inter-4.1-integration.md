@@ -78,6 +78,6 @@ b  { font-family: 'Inter Var', sans-serif; font-weight: 900; } /* Heavy emphasis
 - Add `<link rel="stylesheet" href="/assets/fonts.css">` to `index.html`, `template-rental.mjs`, and `template-investment.mjs`.
 - Delete all `fonts.googleapis.com` and `fonts.gstatic.com` external links from the property templates.
 
-⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\file-reorganization-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
+⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\inter-4.1-integration-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
 
 ⛔ STOP HERE - Reply back to the chat with short response if you understand the complete task.
