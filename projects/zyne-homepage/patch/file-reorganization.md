@@ -24,18 +24,18 @@
 
 ### 🗂️ The Master Asset Tree Structure
 
-This is the exact hierarchy you must follow. Any media files living outside of these specific buckets will trigger a failure in the validation script.
+This is the exact hierarchy you must create and follow. Any media files living outside of these specific buckets will trigger a failure in the validation script. "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage”
 
-* `public/assets/`
-* `brand/` *(Global logos, favicons, site-wide UI graphics)*
-* `fonts/` *(The single source of truth for all typography)*
-* `catalog/` *(The central database for all non-UI media)*
-* `agents/` *(Agent headshots and profiles)*
-* `products/` *(Global services, e.g., `/executive-briefing/`)*
-* `properties/` *(Strictly segregated by property ID)*
-* `7101-wendemere-st/`
-* `gallery/` *(High-res originals and WebP display assets)*
-* `thumbnails/` *(Optimized preview assets)*
+- `public/assets/`
+    - `brand/` *(Global logos, favicons, site-wide UI graphics)*
+    - `fonts/` *(The single source of truth for all typography)*
+    - `catalog/` *(The central database for all non-UI media)*
+        - `agents/` *(Agent headshots and profiles)*
+        - `products/` *(Global services, e.g., `/executive-briefing/`)*
+        - `properties/` *(Strictly segregated by property ID)*
+            - `7101-wendemere-st/`
+                - `gallery/` *(High-res originals and WebP display assets)*
+                - `thumbnails/` *(Optimized preview assets)*
 
 
 
