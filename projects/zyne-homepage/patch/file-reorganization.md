@@ -39,6 +39,26 @@ This is the exact hierarchy you must create and follow. Any media files living o
                 - `gallery/` *(High-res originals and WebP display assets)*
                 - `thumbnails/` *(Optimized preview assets)*
 
+### ⚙️ Image Conversion Specifications
+
+1. **Gallery Display Images (Full-Screen Lightbox)**
+These are the high-resolution assets used when a user clicks into the nine-image full-screen lightbox. Because real estate relies heavily on visual fidelity, we prioritize quality here while letting WebP's superior compression algorithm keep the payload light.
+    - **Format:** WebP
+    - **Quality:** 85%
+    - **Dimensions:** Max 1920px width by 1080px height (maintain original aspect ratio)
+2. **Thumbnail Images (Dashboard Grid)**
+These are the lightweight preview images loaded into the six explicitly assigned Page 1 gallery positions. Since the largest "hero" masonry slot spans slightly more than half of the 1672px canvas, the thumbnails need enough resolution to look crisp in that dominant spot without wasting bandwidth in the smaller side slots.
+    - **Format:** WebP
+    - **Quality:** 75%
+    - **Dimensions:** Max 1024px width (maintain original aspect ratio)
+3. Modern smartphones feature high-DPI (Retina) displays. While a mobile viewport might only be 390 CSS pixels wide, the physical screen renders at double or triple that resolution. If you use 480px, the thumbnails will look visibly blurred or pixelated on almost every modern phone. 768px provides the exact pixel density needed for a crisp, premium appearance without adding unnecessary payload bloat.
+    
+    Here are the exact specifications to lock in for that phase:
+    
+    - **Format:** WebP
+    - **Quality:** 75%
+    - **Dimensions:** Max 768px width (maintain original aspect ratio)
+
 ---
 
 #### Action 1: Relocate Agent Media
