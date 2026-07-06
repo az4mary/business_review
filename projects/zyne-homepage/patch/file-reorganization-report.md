@@ -55,3 +55,21 @@ Completed the Master Asset Tree reorganization for `projects/zyne-homepage/publi
 ## Limitation
 
 `npm run validate:catalog:strict` was not successfully executed locally because its POSIX environment-variable assignment is not accepted by Windows `cmd.exe`. No workaround was used. The root `npm run build` command completed successfully as reported above.
+
+## Follow-up Cleanup — Repository-Level `assets`
+
+Cleaned the requested repository-level `assets/`, `assets/products/`, and `assets/decor/` locations against the canonical `projects/zyne-homepage/public/assets/` tree.
+
+- Removed 95 verified duplicate or relocated media files:
+  - 39 loose product thumbnails superseded by canonical product assets.
+  - 36 portrait files duplicated exactly in `LAW/Abdulaziz_Bin_Ali_Partners/Human_Photos/`.
+  - 3 PRD 1.2A screenshots duplicated exactly in the workflow-owned PRD 1.1 image set.
+  - 16 additional files duplicated exactly in the canonical brand or catalog tree.
+  - 1 misspelled competitor thumbnail duplicated exactly in `assets/product_images/`.
+- Updated the testimonial mapping to the retained LAW portrait paths.
+- Moved the retained touch icon to `public/assets/brand/zyne-touch-icon.png`, removed its duplicate PNG, and updated all references.
+- Removed the empty `assets/products/`, `assets/decor/`, and `assets/Human Photo/` folders.
+- Removed one unreferenced duplicate JavaScript bundle and two duplicate empty failure JSON files.
+- Final repository-level `assets` count: 196 files.
+- Final duplicate SHA-256 groups across all repository-level `assets` files: 0.
+- Re-ran `npm run build` from repository root after cleanup; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.

@@ -877,7 +877,7 @@ h1 {
   bottom: 0;
   width: 245px;
   height: 100%;
-  background-image: url("/assets/decor/zyne-gold-pillars.png");
+  background-image: url("/assets/brand/zyne-gold-pillars.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
