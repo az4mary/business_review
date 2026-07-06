@@ -78,3 +78,4 @@ In `properties.mjs`, you have two separate objects for the exact same physical p
 
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\file-reorganization-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
 
+⛔ STOP HERE - Reply back to the chat with short response if you understand the complete task.
