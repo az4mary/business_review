@@ -73,3 +73,12 @@ Cleaned the requested repository-level `assets/`, `assets/products/`, and `asset
 - Final repository-level `assets` count: 196 files.
 - Final duplicate SHA-256 groups across all repository-level `assets` files: 0.
 - Re-ran `npm run build` from repository root after cleanup; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.
+
+## Follow-up Cleanup — Legacy `index-*` Bundles
+
+- Found 15 unreferenced legacy `index-*` JavaScript/CSS bundles directly under repository-level `assets/`.
+- Verified that no tracked file referenced any of the 15 filenames.
+- Relocated all 15 files directly to repository-level `archive/` as requested.
+- Remaining `assets/index-*` files: 0.
+- Archived `archive/index-*` files: 15.
+- Re-ran `npm run build` from repository root after relocation; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.
