@@ -19,7 +19,7 @@
 ### 🛠️ Developer Implementation Plan (Using the Download)
 
 **Step 1: Extract the Web Fonts**
-Open the `web/` directory from the `inter-4.1` folder "E:\DOWNLOAD\inter-4.1". Locate the `.woff2` files for `InterVariable`  ****and `InterVariable-Italic` 
+Open the `web/` directory from the `inter-4.1` folder. Locate the `.woff2` files for `InterVariable`  ****and `InterVariable-Italic` 
 
 **Step 2: Seed the Master Asset Tree**
 
@@ -31,14 +31,14 @@ Move those specific `.woff2` files into your master directory at:
 To comply with Condition 2 of the SIL Open Font License, take the `LICENSE` text file from the root of your downloaded folder and copy it directly into the `public/assets/fonts/` directory alongside the `.woff2` files.
 
 **Step 4: Create the Global CSS**
-Open the `inter.css` file located inside the downloaded `web/` folder. Copy the `@font-face` rules for `InterVariable`  ****and `InterVariable-Italic` . Paste them into a new file located at `projects/zyne-homepage/src/styles/fonts.css`, ensuring the `src: url(...)` paths are updated to point to `/assets/fonts/`.
+Open the `inter.css` file located inside the downloaded `web/` folder. Copy the `@font-face` rules for `InterVariable`  ****and `InterVariable-Italic` . Paste them into a new file located at `projects/zyne-homepage/public/assets/fonts/fonts.css`
 
 ### Step 5: Write the All-In-One `fonts.css`
 
-Instead of writing dozens of messy font rules, paste these two clean blocks at the top of `src/styles/fonts.css`. Notice the `100 900` range—this unlocks every single weight variant automatically:
+Instead of writing dozens of messy font rules, paste these two clean blocks at the top of `projects/zyne-homepage/public/assets/fonts/fonts.css`. Notice the `100 900` range—this unlocks every single weight variant automatically:
 
 ```css
-/* src/styles/fonts.css */
+/* public/assets/fonts/fonts.css */
 
 /* Centralized Variable Axis (Unlocks Weights 100 through 900 instantly) */
 @font-face {
@@ -75,7 +75,10 @@ b  { font-family: 'Inter Var', sans-serif; font-weight: 900; } /* Heavy emphasis
 
 **Step 7: Enforce and Purge**
 
-- Add `<link rel="stylesheet" href="/assets/fonts.css">` to `index.html`, `template-rental.mjs`, and `template-investment.mjs`.
+- Now that the file is a static public asset, the link path will perfectly match. Inject this exact line into the `<head>` of `index.html`, `template-rental.mjs`, and `template-investment.mjs`:
+    
+    `<link rel="stylesheet" href="/assets/fonts/fonts.css">`
+    
 - Delete all `fonts.googleapis.com` and `fonts.gstatic.com` external links from the property templates.
 
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\inter-4.1-integration-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
