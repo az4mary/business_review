@@ -21,7 +21,7 @@ The project is an isolated Vite and vanilla JavaScript application maintained un
 - Six explicitly assigned Page 1 gallery positions
 - Nine-image full-screen lightbox
 - Keyboard navigation, focus trapping, and scroll restoration
-- Locally bundled Roboto and Inter fonts
+- Master local Inter variable font bundle
 - Optimized WebP display images and thumbnails
 - Build-time listing, copy, encoding, and asset validation
 
@@ -143,8 +143,8 @@ After processing, update the stable photo IDs and filenames in `src/data/listing
 
 ## Typography
 
-- Roboto is bundled locally for the property interface.
-- Inter is bundled locally for the site header and footer.
+- The property interface uses the master local Inter variable font bundle from `/assets/fonts/fonts.css`.
+- The site header and footer use the same master local Inter variable font bundle.
 - The application does not rely on Google Fonts or platform-installed fonts at runtime.
 
 ## Desktop scaling

@@ -9,6 +9,6 @@
   --gold-soft: #f3c45a;
   --white: #f2f2f0;
   --muted: #c2c2bf;
-  --font: Inter, "Helvetica Neue", Arial, sans-serif;
-  --property-font: Roboto, Arial, sans-serif;
+  --font: "Inter Var", Inter, "Helvetica Neue", Arial, sans-serif;
+  --property-font: "Inter Var", Inter, "Helvetica Neue", Arial, sans-serif;
 }

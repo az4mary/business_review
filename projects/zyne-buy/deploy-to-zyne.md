@@ -19,8 +19,8 @@ Existing routes and the Buy page’s approved property-panel geometry, gallery b
 
 ### Shared resources
 
-* Add Inter and Roboto `.woff2` files once under the master `public/assets/fonts/` directory and declare them in the global stylesheet.
-* Remove `@fontsource` dependencies and imports.
+* Use the existing Inter `.woff2` files under the master `public/assets/fonts/` directory and declare them in the global stylesheet.
+* Remove package-managed font dependencies and imports.
 * Reuse existing global logo, favicon, and agent assets where equivalent; place property-specific optimized gallery derivatives only in the master asset tree.
 * Extend `scripts/property-icons.mjs` with the Buy page’s metric, highlight, CTA, and utility SVGs. Remove the isolated icon module.
 * Extract the established master header, property topbar, and footer markup into shared render functions.

@@ -3,7 +3,8 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const pageCss = readFileSync(new URL("../src/styles/page.css", import.meta.url), "utf8");
-const mainJs = readFileSync(new URL("../src/main.js", import.meta.url), "utf8");
+const routeHtml = readFileSync(new URL("../homedetail/7101-wendemere-st-houston-tx-77088/buy/index.html", import.meta.url), "utf8");
+const tokensCss = readFileSync(new URL("../src/styles/tokens.css", import.meta.url), "utf8");
 const iconsJs = readFileSync(new URL("../src/components/icons.js", import.meta.url), "utf8");
 
 test("pixel-critical Page 1 geometry remains locked", () => {
@@ -15,10 +16,10 @@ test("pixel-critical Page 1 geometry remains locked", () => {
   assert.match(pageCss, /top:\s*17px;\s*bottom:\s*18px/);
 });
 
-test("property typography is bundled Roboto while icons remain inline SVG", () => {
-  assert.match(mainJs, /@fontsource\/roboto\/latin-400\.css/);
-  assert.match(mainJs, /@fontsource\/roboto\/latin-500\.css/);
-  assert.match(mainJs, /@fontsource\/roboto\/latin-700\.css/);
+test("property typography uses the master local Inter bundle while icons remain inline SVG", () => {
+  assert.match(routeHtml, /\/assets\/fonts\/fonts\.css/);
+  assert.match(tokensCss, /--property-font:\s*"Inter Var", Inter/);
+  assert.doesNotMatch(tokensCss, /Robo[to]{2}/);
   assert.match(iconsJs, /<svg class=/);
   assert.doesNotMatch(iconsJs, /<img|\.png|\.webp|\.jpg/);
 });
