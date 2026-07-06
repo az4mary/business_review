@@ -112,3 +112,10 @@ Cleaned the requested repository-level `assets/`, `assets/products/`, and `asset
 - Repointed all nine Buy-page photos to the existing shared `gallery/`, `thumbnails/`, and `thumbnails-mobile/` property folders.
 - Removed 28 duplicate image files from `projects/zyne-buy/public/assets/`: one agent image, nine original JPEG files, nine display WebP files, and nine thumbnail WebP files.
 - No image conversion, generation, recompression, or pixel modification was performed.
+
+## Buy Page Brand Integration
+
+- Repointed the Buy page to the existing master logo, SVG favicon, and touch-icon assets under `public/assets/brand/`.
+- Removed the three duplicate Buy-project brand files.
+- Updated Buy-page asset validation to resolve both catalog and brand media from the master homepage asset tree.
+- No brand image conversion, generation, recompression, or pixel modification was performed.

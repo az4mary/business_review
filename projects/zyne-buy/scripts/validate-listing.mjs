@@ -32,11 +32,11 @@ if (missingCopy.length || /[Ââ�]/.test(serializedListing)) {
 }
 const assetUrls = listing.photos.flatMap((photo) => [photo.src, photo.fullSrc, photo.thumbnailSrc]);
 assetUrls.push(listing.agent.photo.src);
-assetUrls.push("/assets/brand/zyne-logo.webp", "/assets/brand/zyne-favicon.svg", "/assets/brand/zyne-favicon.png");
+assetUrls.push("/assets/brand/zyne-logo-optimized.webp", "/assets/brand/favicon.svg", "/assets/brand/zyne-touch-icon.png");
 const buyPublicDir = fileURLToPath(new URL("../public/", import.meta.url));
 const homepagePublicDir = fileURLToPath(new URL("../../zyne-homepage/public/", import.meta.url));
 const missingAssets = assetUrls.filter((url) => {
-  const publicDir = url.startsWith("/assets/catalog/") ? homepagePublicDir : buyPublicDir;
+  const publicDir = /^\/assets\/(?:brand|catalog)\//.test(url) ? homepagePublicDir : buyPublicDir;
   return !existsSync(join(publicDir, url.replace(/^\//, "")));
 });
 if (missingAssets.length) {

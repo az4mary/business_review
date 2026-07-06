@@ -9,5 +9,5 @@ export function renderHeader() {
     ["Intelligence", "/intelligence/"],
     ["Delivery", "/delivery/"]
   ];
-  return `<header class="site-header"><a class="site-logo" href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo.webp" alt="ZYNE"></a><nav aria-label="Main navigation">${links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}</nav></header>`;
+  return `<header class="site-header"><a class="site-logo" href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE"></a><nav aria-label="Main navigation">${links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}</nav></header>`;
 }
