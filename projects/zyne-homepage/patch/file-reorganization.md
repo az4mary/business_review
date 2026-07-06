@@ -15,3 +15,50 @@
 11. ⛔ STOP HERE - Reply back to the chat with short response if you understand the complete instructions.
 
 ---
+
+This is exactly what we needed to see. By reviewing `properties.mjs` and `catalog-image-map.js`, we have full visibility into how your current architecture is routing assets.
+
+Your instincts were right—the house is currently scattered. Agent images are sitting outside the catalog, product images are dumped into a generic folder with inconsistent casing, and there is a massive risk of property image duplication because the same physical house has two different IDs in the database.
+
+Here is the exact **Housekeeping Mandate** to hand over to your developer to execute *before* they migrate the Buy page.
+
+---
+
+### 🧹 Developer Housekeeping Mandate: Pre-Migration Asset Cleanup
+
+**Objective:** Reorganize the existing scattered assets into the strict **Master Asset Tree** hierarchy. You must execute these file migrations and update the corresponding data scripts to match.
+
+#### Action 1: Relocate Agent Media
+
+Currently, agent headshots are stored outside the central catalog hierarchy.
+
+* **Current Location:** `public/assets/agents/carissa-weber.png`
+
+* **Target Location:** Move to `public/assets/catalog/agents/carissa-weber.png`
+* **Script Update:** Open `src/data/properties.mjs`. You must update the `photo` and `agentImage` values for both Wendemere property entries to point to the new `/assets/catalog/agents/carissa-weber.png` path.
+
+
+
+#### Action 2: Organize Product Media
+
+Currently, product thumbnails are dumped loosely into a generic `catalog/` folder using Title_Case naming conventions (e.g., `catalog/Google_BP_Mini_Audit_thumbnail.webp`). They must be bucketed properly.
+
+* **Current Location:** All 22 thumbnails currently mapped in `public/assets/catalog/`
+
+* **Target Location:** Create a new subdirectory at `public/assets/catalog/products/`. Move all 22 product images into this folder.
+* **Script Update:** Open `src/data/catalog-image-map.js`. Update the `current` key paths in the `productImageMigrationMap` array to reflect the new subfolder (e.g., change `"catalog/Google_BP_Mini_Audit_thumbnail.webp"` to `"catalog/products/Google_BP_Mini_Audit_thumbnail.webp"`).
+
+
+
+#### Action 3: Prevent Property Gallery Duplication
+
+In `properties.mjs`, you have two separate objects for the exact same physical property:
+
+1. `id: "7101-wendemere-st-houston-tx-77088"` (Rental Template)
+
+
+2. `id: "7101-wendemere"` (Investment Template)
+
+
+
+* **Enforcement Rule:** You must **not** create two separate image folders for these IDs. Both routes must pull their gallery images and thumbnails from a single, unified property directory: `public/assets/catalog/properties/7101-wendemere-st/`. Ensure the gallery rendering logic for both templates points to this exact same folder to guarantee zero property image duplication.
