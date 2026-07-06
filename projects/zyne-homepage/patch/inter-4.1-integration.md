@@ -19,7 +19,7 @@
 ### 🛠️ Developer Implementation Plan (Using the Download)
 
 **Step 1: Extract the Web Fonts**
-Open the `web/` directory from the `inter-4.1` folder. Locate the `.woff2` files for `InterVariable`  ****and `InterVariable-Italic` 
+Open the `web/` directory from the `inter-4.1` folder "E:\DOWNLOAD\inter-4.1". Locate the `.woff2` files for `InterVariable`  ****and `InterVariable-Italic` 
 
 **Step 2: Seed the Master Asset Tree**
 
