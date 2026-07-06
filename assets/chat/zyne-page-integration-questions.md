@@ -28,3 +28,5 @@ To properly integrate the new Buy page into the global `zyne.store` architecture
 5. **Validation & Test Scripts**
     - **Question:** Are the data, typography, and pixel layout tests isolated within a separate `zyne-buy/tests` folder, or have they been integrated into the master repository's global test suite?
     - **Mandatory Format:** `[Isolated / Integrated]` - `[Provide the exact directory path to the test files running specifically for this page]`
+
+⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\assets\chat\zyne-page-integration-answers-zyne-buy.md” and write answers in mandatory format. Reply DONE in the chat conversation after you have updated the file with your comment.
