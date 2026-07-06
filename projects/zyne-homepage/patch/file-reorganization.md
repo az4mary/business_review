@@ -22,7 +22,7 @@
 
 "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-buy" is completely excluded from this task.
 
-### 🗂️ The Master Asset Tree Structure
+### 🗂️ NOTE 1 - The Master Asset Tree Structure
 
 This is the exact hierarchy you must create and follow. Any media files living outside of these specific buckets will trigger a failure in the validation script. Files should be relocated, duplicate should be deleted.
 
@@ -39,7 +39,7 @@ This is the exact hierarchy you must create and follow. Any media files living o
                 - `gallery/` *(High-res originals and WebP display assets)*
                 - `thumbnails/` *(Optimized preview assets)*
 
-### ⚙️ Image Conversion Specifications
+### ⚙️ NOTE 2 - Image Conversion Specifications
 
 1. **Gallery Display Images (Full-Screen Lightbox)**
 These are the high-resolution assets used when a user clicks into the nine-image full-screen lightbox. Because real estate relies heavily on visual fidelity, we prioritize quality here while letting WebP's superior compression algorithm keep the payload light.
