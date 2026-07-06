@@ -77,5 +77,3 @@ The listing schema and six gallery slot names remain unchanged.
 * Property-page content remains pixel-matched; only site chrome and resource sourcing are centralized.
 * Optimized display and thumbnail derivatives are intentional production assets, not prohibited duplication.
 * No existing live URL is renamed, redirected, deleted, or replaced.
-
- To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.
