@@ -81,6 +81,28 @@ b  { font-family: 'Inter Var', sans-serif; font-weight: 900; } /* Heavy emphasis
     
 - Delete all `fonts.googleapis.com` and `fonts.gstatic.com` external links from the property templates.
 
+**Step 8  `src/styles/main.css`**
+Update the `body` rule to prioritize the variable font while keeping standard fallbacks:
+
+```css
+body { margin:0; color:var(--cream); background:var(--black); font-family:'Inter var', Inter, "Segoe UI", Arial, sans-serif; overflow-x:hidden; }
+```
+
+**Step 9 `template-rental.mjs` & `template-investment.mjs`**
+
+Update the `body` rule inside the template CSS string to match:
+
+```css
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter var', Inter, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+```
+
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\inter-4.1-integration-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
 
 ⛔ STOP HERE - Reply back to the chat with short response if you understand the complete task.
