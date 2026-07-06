@@ -294,7 +294,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
       <div class="agent-card">
         <h2>Listing Agent</h2>
         <div class="agent-profile">
-          <img src="${agent.photo || '/assets/catalog/agents/carissa-weber.png'}" alt="${agent.name || 'Agent'}">
+          <img src="${agent.photo || '/assets/catalog/agents/carissa-weber.webp'}" alt="${agent.name || 'Agent'}">
           <div>
             <h3>${agent.name || 'Carissa Weber'} <span class="agent-badge">${agent.badge || 'PLATINUM'}</span></h3>
             <p>${agent.brokerage || 'Better Homes and Gardens Real Estate'}</p>

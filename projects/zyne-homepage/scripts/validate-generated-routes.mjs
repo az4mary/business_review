@@ -138,7 +138,7 @@ assertIncludes(propertyDetail, propertyRoute, [
   "Better Homes and Gardens Real Estate",
   "Gary Greene - Sugar Land",
   "https://www.har.com/carissa-weber/agent_WEBERC",
-  "/assets/catalog/agents/carissa-weber.png",
+  "/assets/catalog/agents/carissa-weber.webp",
   "/assets/brand/zyne-gold-pillars.png",
   "See all 9 photos",
   "max-width: 1440px",

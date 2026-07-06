@@ -29,7 +29,7 @@ export const properties = [
       brokerage: "Better Homes and Gardens Real Estate",
       market: "Gary Greene - Sugar Land",
       profileUrl: "https://www.har.com/carissa-weber/agent_WEBERC",
-      photo: "/assets/catalog/agents/carissa-weber.png"
+      photo: "/assets/catalog/agents/carissa-weber.webp"
     }
   },
   {
@@ -45,7 +45,7 @@ export const properties = [
     description: "Seller-financed Acres Homes investment opportunity with a 6.51% negotiated note, 20% down payment, oversized 7,250 sqft lot, zero HOA, and a value-add path toward $1,700/month target rent.",
     agentName: "Carissa Weber",
     brokerage: "Better Homes and Gardens Real Estate<br>Gary Greene - Sugar Land",
-    agentImage: "/assets/catalog/agents/carissa-weber.png"
+    agentImage: "/assets/catalog/agents/carissa-weber.webp"
   }
 ];
 

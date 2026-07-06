@@ -96,3 +96,12 @@ Cleaned the requested repository-level `assets/`, `assets/products/`, and `asset
 - Verified no changes were made to `projects/zyne-buy/` or `projects/zyne-homepage/patch/file-reorganization.md`.
 - Executed `npm run build` from repository root after relocation; exit code 0.
 - Catalog, PRD 1.1, PRD 1.2A, generated-route, legal-layer, and SEO-layer validations passed.
+
+## Follow-up Conversion - Agent Image
+
+- Converted `public/assets/catalog/agents/carissa-weber.png` to lossless WebP at `public/assets/catalog/agents/carissa-weber.webp`.
+- Verified source and target dimensions: 400x400.
+- Verified decoded RGBA pixel hashes are identical.
+- Updated 5 active references across property data, route validation, the investment template fallback, and the verified current-page capture.
+- Verified active references remaining to `/assets/catalog/agents/carissa-weber.png`: 0.
+- Executed `npm run build` from repository root after conversion; exit code 0 with catalog, PRD, generated-route, legal-layer, and SEO-layer validation passing.
