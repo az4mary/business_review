@@ -16,6 +16,67 @@
 
 ---
 
+### 🛠️ Developer Implementation Plan (Using the Download)
+
+**Step 1: Extract the Web Fonts**
+Open the `web/` directory from the `inter-4.1` folder. Locate the `.woff2` files for `InterVariable`  ****and `InterVariable-Italic` 
+
+**Step 2: Seed the Master Asset Tree**
+
+Move those specific `.woff2` files into your master directory at:
+
+`projects/zyne-homepage/public/assets/fonts/`
+
+**Step 3: Satisfy the Legal License**
+To comply with Condition 2 of the SIL Open Font License, take the `LICENSE` text file from the root of your downloaded folder and copy it directly into the `public/assets/fonts/` directory alongside the `.woff2` files.
+
+**Step 4: Create the Global CSS**
+Open the `inter.css` file located inside the downloaded `web/` folder. Copy the `@font-face` rules for `InterVariable`  ****and `InterVariable-Italic` . Paste them into a new file located at `projects/zyne-homepage/src/styles/fonts.css`, ensuring the `src: url(...)` paths are updated to point to `/assets/fonts/`.
+
+### Step 5: Write the All-In-One `fonts.css`
+
+Instead of writing dozens of messy font rules, paste these two clean blocks at the top of `src/styles/fonts.css`. Notice the `100 900` range—this unlocks every single weight variant automatically:
+
+```css
+/* src/styles/fonts.css */
+
+/* Centralized Variable Axis (Unlocks Weights 100 through 900 instantly) */
+@font-face {
+  font-family: 'Inter Var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable.woff2') format('woff2-variations'),
+       url('/assets/fonts/InterVariable.woff2') format('woff2');
+}
+
+/* Centralized Italic Variable Axis (Unlocks Italic Weights 100 through 900 instantly) */
+@font-face {
+  font-family: 'Inter Var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable-Italic.woff2') format('woff2-variations'),
+       url('/assets/fonts/InterVariable-Italic.woff2') format('woff2');
+}
+```
+
+### Step 6: Developer Variety Usage
+
+Now, you have complete freedom to use whatever variety you want in the site styles. You can dial in exact custom weights to match your visual aesthetic perfectly:
+
+```css
+/* Example of developers utilizing infinite variety without performance bloat */
+h1 { font-family: 'Inter Var', sans-serif; font-weight: 250; } /* Elegant, ultra-thin headers */
+p  { font-family: 'Inter Var', sans-serif; font-weight: 400; } /* Standard body copy */
+h3 { font-family: 'Inter Var', sans-serif; font-weight: 650; } /* Custom medium-bold sub-headings */
+b  { font-family: 'Inter Var', sans-serif; font-weight: 900; } /* Heavy emphasis text */
+```
+
+**Step 7: Enforce and Purge**
+
+- Add `<link rel="stylesheet" href="/assets/fonts.css">` to `index.html`, `template-rental.mjs`, and `template-investment.mjs`.
+- Delete all `fonts.googleapis.com` and `fonts.gstatic.com` external links from the property templates.
 
 ⚠️ Open the file "E:\PROJECTS\GITHUB\az4mary\zyne.store\projects\zyne-homepage\patch\file-reorganization-report.md” and write report. Reply DONE in the chat conversation after you have updated the file with your comment.
 
