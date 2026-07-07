@@ -59,7 +59,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
     --line: rgba(201, 154, 46, .34);
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .page *, .page *::before, .page *::after, .lightbox, .lightbox *, .lightbox *::before, .lightbox *::after { box-sizing: border-box; margin: 0; padding: 0; }
   
   html {
     -webkit-font-smoothing: antialiased;
@@ -78,9 +78,9 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   }
   
   img, svg { display: block; max-width: 100%; height: auto; }
-  a { color: inherit; text-decoration: none; }
+  main a, .lightbox a { color: inherit; text-decoration: none; }
   button { font: inherit; background: none; border: none; cursor: pointer; }
-  p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+  main p { color: var(--muted); font-size: 15px; line-height: 1.7; }
   ${globalHeaderFooterStyles}
   
   .zyne-icon {
