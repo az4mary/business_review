@@ -68,13 +68,6 @@ const faqItem = ([question, answer], index) => `<details class="${index < 2 ? "t
 
 export const renderHomePage = () => `
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><b>Menu</b></button>
-    <nav id="main-navigation" aria-label="Main navigation"><a href="#services">Services</a><a href="#growth-paths">Growth Paths</a><a href="#intelligence">Intelligence</a><a href="#delivery">Delivery</a><a href="#industries">Industries</a><a href="#faq">FAQ</a></nav>
-    <a class="button button-small" href="/services/" data-event="header_shop_services_click">Shop Services</a>
-  </header>
-  <nav class="mobile-sticky-cta" aria-label="Mobile conversion actions"><a class="button" href="#growth-paths" data-event="mobile_sticky_find_growth_path_click">Find My Growth Path</a><a class="button button-ghost" href="/services/" data-event="mobile_sticky_shop_services_click">Shop Services</a></nav>
   <main id="main-content">
     <section class="hero"><div class="hero-glow"></div><div class="hero-copy"><p class="eyebrow">Growth intelligence · Strategic execution</p><h1>Premium Growth Services for <em>Visibility, Authority, Automation,</em> and Client Conversion.</h1><p class="lede">ZYNE helps ambitious service businesses strengthen visibility, build authority, deploy practical AI systems, and convert more clients through fixed-price strategic services.</p><div class="actions"><a class="button" href="#growth-paths" data-event="hero_find_growth_path_click">Find My Growth Path <span>${arrow}</span></a><a class="button button-ghost" href="/services/" data-event="hero_shop_services_click">Shop Paid Services</a></div><p class="disclosure">Review full service details on ZYNE. Secure checkout is completed through Stan Store.</p></div><div class="hero-mark" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="monogram">Z</div><small>Intelligence<br/>in motion</small></div></section>
     <section class="trust-strip" aria-label="Service assurances">${["Fixed-price services", "Clear deliverables", "Defined timelines", "Secure Stan Store checkout"].map((item, i) => `<div><span>0${i + 1}</span>${item}</div>`).join("")}</section>
@@ -88,7 +81,6 @@ export const renderHomePage = () => `
     <section class="section faq" id="faq"><div class="section-heading"><div><p class="eyebrow">Clarity before checkout</p><h2>Frequently Asked <em>Questions</em></h2></div></div><div class="faq-list">${faqs.map(faqItem).join("")}</div></section>
     <section class="final-cta"><p class="eyebrow">Your next move can be clear</p><h2>Lead with clarity.<br/><em>Execute with confidence.</em></h2><p>Browse fixed-price services for visibility, brand authority, AI systems, websites, and client conversion. Review details on ZYNE, then check out securely through Stan Store.</p><div class="actions"><a class="button" href="/services/" data-event="final_cta_shop_services_click">Shop Paid Services ${arrow}</a><a class="button button-ghost" href="#growth-paths" data-event="final_cta_find_growth_path_click">Find My Growth Path</a></div></section>
   </main>
-  <footer><div class="footer-brand"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE" width="500" height="333" /><p>Growth intelligence and strategic execution for ambitious businesses.</p></div><div><h3>Growth Paths</h3><a href="/grow-my-visibility/">Visibility</a><a href="/build-my-brand/">Brand</a><a href="/improve-my-business/">Business</a><a href="/use-ai/">AI Systems</a><a href="/convert-more-clients/">Conversion</a></div><div><h3>Explore</h3><a href="/services/">Services</a><a href="/intelligence/">Intelligence</a><a href="/delivery/">Delivery</a><a href="#industries">Industries</a><a href="#faq">Support</a></div><div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/refund-policy/">Refund policy</a></div><small>Product education and service details are provided on ZYNE. Checkout is completed securely through Stan Store.</small></footer>
 `;
 
 const featuredServiceList = () => ({

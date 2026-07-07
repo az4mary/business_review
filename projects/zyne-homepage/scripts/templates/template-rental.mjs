@@ -1264,22 +1264,7 @@ h1 {
 }
 `;
 
-const header = `
-  <header class="site-header">
-    <a class="brand" href="/">
-      <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
-      <b>ZYNE</b>
-    </a>
-
-    <nav class="main-nav">
-      ${nav}
-    </nav>
-
-    <a class="header-cta" href="/services/executive-briefing/">
-      Schedule Executive Briefing
-    </a>
-  </header>
-`;
+const header = ``;
 
 const topbar = `
   <div class="topbar">
@@ -1491,26 +1476,7 @@ const cta = `
   </section>
 `;
 
-const footer = `
-  <footer class="footer">
-    <a class="brand" href="/">
-      <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
-      <b>ZYNE</b>
-    </a>
-
-    <nav class="footer-nav">
-      ${nav}
-    </nav>
-
-    <div class="socials">
-      <span>in</span>
-      <span>𝕏</span>
-      <span>✉</span>
-    </div>
-
-    <small>© 2025 ZYNE. All rights reserved.</small>
-  </footer>
-`;
+const footer = ``;
 
 const lightbox = `
   <div class="lightbox" id="lightbox" aria-hidden="true">
