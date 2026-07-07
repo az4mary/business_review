@@ -1,10 +1,5 @@
 import { readFileSync } from "node:fs";
 import { repairScheduleContent } from "../../src/data/repair-schedule-content.js";
-import {
-  globalHeaderFooterStyles,
-  renderGlobalFooter,
-  renderGlobalHeader
-} from "../global-header-footer.mjs";
 
 const siteUrl = "https://zyne.store";
 const styles = readFileSync(new URL("../../src/styles/repair-schedule.css", import.meta.url), "utf8");
@@ -46,12 +41,11 @@ export const renderRepairSchedulePage = () => `<!doctype html>
 <title>${escapeHtml(repairScheduleContent.seoTitle)}</title>
 <meta name="description" content="${escapeHtml(repairScheduleContent.description)}">
 <link rel="canonical" href="${absoluteUrl(repairScheduleContent.canonicalPath)}">
-<style>${globalHeaderFooterStyles}${styles}</style>
+<style>${styles}</style>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-${renderGlobalHeader()}
 <main id="main-content" class="repair-page">
   <section class="repair-hero">
     <div class="repair-panel">
@@ -83,6 +77,5 @@ ${renderGlobalHeader()}
     <ul>${listItems(repairScheduleContent.notes)}</ul>
   </section>
 </main>
-${renderGlobalFooter()}
 </body>
 </html>`;
