@@ -163,3 +163,53 @@ See:
 projects/zyne-homepage/docs/repo-cleanup-audit.md
 
 ```
+
+---
+
+# Recommended file model for adding a new subdirectory page
+
+### Shared Files (To Update or Link)
+
+* **`src/styles/main.css`**
+* *Action:* Refactor or verify that global design tokens (typography, core theme variables, and brand colors) are strictly defined here to enforce a unified aesthetic across all routes.
+
+
+
+
+* **`scripts/global-header-footer.mjs`**
+* *Action:* Reference this module to import `renderGlobalHeader()` and `renderGlobalFooter()` into your new template, keeping layout, navigation links, and sticky behaviors consistent.
+
+
+
+
+* **`scripts/generate-routes.mjs`**
+* *Action:* Update this generator script to import your new page template, establish its build path (`dist/your-subdirectory/index.html`), and hook it into the main `npm run build` process.
+
+
+
+
+* **`scripts/` (Build Validators)**
+* *Action:* Update your PRD 1.1 validation rules or deployment artifact guards to crawl the new generated subdirectory, ensuring it contains mandatory global elements, semantic structural schema, and valid CTA hierarchies before deployment.
+
+
+
+
+
+---
+
+### Standalone Files (To Create)
+
+* **`src/data/your-page-content.js`**
+* *Action:* Create this data file to store all static copy, image asset mappings, dynamic SEO metadata, and structural schema blocks specific to the new subdirectory.
+
+
+
+
+* **`scripts/templates/template-your-page.mjs`**
+* *Action:* Create this template module to ingest data from your new content file, pull in the shared header/footer functions, and return a clean, fully pre-rendered HTML layout string to the router.
+
+
+
+
+* **`src/styles/your-page.css`**
+* *Action:* Create this scoped style sheet strictly for unique layout requirements, specific grid templates, or bespoke icon scaling unique to this new subdirectory.
