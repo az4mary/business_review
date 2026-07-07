@@ -17,9 +17,6 @@ const route = "homedetail/7101-wendemere-st-houston-tx-77088/buy";
 const outputDir = join("dist", route);
 
 const cssFiles = [
-  "src/styles/main.css",
-  "src/styles/header-hero-alignment.css",
-  "src/styles/prd-1-2a.css",
   "../zyne-buy/src/styles/tokens.css",
   "../zyne-buy/src/styles/page.css",
   "../zyne-buy/src/styles/lightbox.css"
@@ -33,7 +30,12 @@ const readBuyCss = async () => {
 };
 
 const chromeCss = `
-.site-header{z-index:40}
+*{box-sizing:border-box}
+html{background:#070706;color:#f1eadc;scrollbar-color:#6e5700 #050606}
+body{margin:0;background:#070706;color:#f1eadc;font-family:Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid #c9a967;outline-offset:4px}
 .buy-page-stack{background:#020303}
 .viewport-page{position:relative;width:100%;height:100dvh;min-height:1px;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:normal;background:#020303}
 .design-canvas{position:absolute;left:50vw;top:50%;width:var(--canvas-width);height:var(--canvas-height);transform:translate(-50%,-50%) scale(var(--canvas-scale));transform-origin:center;overflow:hidden;background:#020303}
