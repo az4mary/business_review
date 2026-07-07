@@ -118,6 +118,20 @@ assertOneH1(realtorGpt, join("use-ai", "realtor-gpt"));
 assertSchema(realtorGpt, join("use-ai", "realtor-gpt"), ["CollectionPage", "ItemList"]);
 assertIncludes(realtorGpt, "use-ai/realtor-gpt", ["Realtor GPT Products", "real estate agents and teams", "Product comparison", "Secure checkout is completed through Stan Store"]);
 
+const repairSchedule = await assertFile("repair-schedule");
+allRouteHtml.push(["repair-schedule", repairSchedule]);
+assertOneH1(repairSchedule, "repair-schedule");
+assertSchema(repairSchedule, "repair-schedule", ["WebPage", "Repair Schedule"]);
+assertIncludes(repairSchedule, "repair-schedule", [
+  "Repair Schedule",
+  "Service coordination",
+  "Start Repair Request",
+  "Repair request details",
+  "Appointment windows",
+  "Resolution tracking",
+  "Build out the repair workflow gradually"
+]);
+
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");
 const propertyDetail = await assertFile(propertyRoute);
 allRouteHtml.push([propertyRoute, propertyDetail]);

@@ -9,6 +9,7 @@ import {
 } from "../src/data/products.js";
 import { categoryPageContent, collectionPageContent } from "../src/data/category-content.js";
 import { getProductDetailContent } from "../src/data/product-detail-content.js";
+import { renderRepairSchedulePage } from "./templates/template-repair-schedule.mjs";
 import {
   globalHeaderFooterStyles,
   renderGlobalFooter,
@@ -280,6 +281,8 @@ await writeRoute("use-ai/realtor-gpt", collectionPage({
   sections: ["Compare Realtor GPT starter and growth options.", "Review fit and delivery timelines.", "Move to the right internal product page before checkout."],
   cta: "/use-ai/"
 }));
+
+await writeRoute("repair-schedule", renderRepairSchedulePage());
 
 await writeRoute("privacy", legalPage({
   url: "/privacy/",
