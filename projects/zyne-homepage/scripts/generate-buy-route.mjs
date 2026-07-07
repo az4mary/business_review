@@ -75,6 +75,7 @@ const open=(id,button)=>{active=Math.max(0,ordered.findIndex(photo=>photo.id===i
 const close=()=>{root.innerHTML="";document.body.classList.remove("lightbox-open");document.body.style.top="";scrollTo(0,savedScrollY);opener?.focus();};
 const move=delta=>{active=(active+delta+ordered.length)%ordered.length;render();};
 document.querySelectorAll(".gallery-slot").forEach(button=>button.addEventListener("click",()=>open(button.dataset.photoId,button)));
+document.querySelectorAll("[data-reveal-phone]").forEach(button=>button.addEventListener("click",()=>{button.textContent="(346) 592-4718";button.setAttribute("aria-label","Phone number (346) 592-4718");}));
 root.addEventListener("click",event=>{if(event.target.classList.contains("lightbox-backdrop")||event.target.closest(".lightbox-close")) close(); if(event.target.closest(".lightbox-prev")) move(-1); if(event.target.closest(".lightbox-next")) move(1); const thumb=event.target.closest("[data-index]"); if(thumb){active=Number(thumb.dataset.index);render();}});
 addEventListener("keydown",event=>{if(!root.innerHTML)return; if(event.key==="Escape")close(); if(event.key==="ArrowLeft")move(-1); if(event.key==="ArrowRight")move(1);});
 `;

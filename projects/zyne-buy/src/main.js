@@ -18,4 +18,8 @@ document.querySelector("#app").innerHTML = `${renderHeader()}<div class="page-st
 
 const lightbox = new Lightbox(document.querySelector("#overlay-root"), listing);
 document.querySelectorAll(".gallery-slot").forEach((button) => button.addEventListener("click", () => lightbox.open(button.dataset.photoId, button)));
+document.querySelectorAll("[data-reveal-phone]").forEach((button) => button.addEventListener("click", () => {
+  button.textContent = "(346) 592-4718";
+  button.setAttribute("aria-label", "Phone number (346) 592-4718");
+}));
 observeCanvasScale();

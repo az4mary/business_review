@@ -14,11 +14,11 @@ export function renderPropertyPanel(listing) {
       </div>
       <div class="metric-grid">${listing.metrics.map((metric) => `<div class="metric"><div class="metric-icon">${icon(metric.icon)}</div><div><small>${metric.label}</small><strong>${metric.value}</strong></div></div>`).join("")}</div>
     </div>
-    <div class="cta-row"><button type="button" aria-disabled="true" class="cta primary">REQUEST INVESTMENT PACKET ${icon("arrow", "small-icon")}</button><button type="button" aria-disabled="true" class="cta outline">CONTACT LISTING AGENT</button></div>
+    <div class="cta-row"><a href="mailto:lisibeth@zyne.store?subject=Investment%20Packet%20Request%20-%207101%20Wendemere%20St" class="cta primary">REQUEST INVESTMENT PACKET ${icon("arrow", "small-icon")}</a><button type="button" class="cta outline" data-reveal-phone>CONTACT LISTING AGENT</button></div>
     <div class="tag-row">${listing.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
     <div class="highlight-row">${listing.highlights.map((item) => `<div class="highlight">${icon(item.icon)}<p><span>${item.lines[0]}</span><span>${item.lines[1]}</span></p></div>`).join("")}</div>
     <p class="agent-label">LISTING AGENT</p>
-    <div class="agent-row"><div class="agent-identity"><img src="${listing.agent.photo.src}" alt="${listing.agent.photo.alt}"/><div><h2>${listing.agent.name} <em>${listing.agent.badge}</em></h2><p>${listing.agent.brokerage}<br>${listing.agent.office}</p></div></div><div class="agent-actions"><button type="button" aria-disabled="true">VIEW PROFILE</button><button type="button" aria-disabled="true">CONTACT AGENT</button></div></div>
+    <div class="agent-row"><div class="agent-identity"><img src="${listing.agent.photo.src}" alt="${listing.agent.photo.alt}"/><div><h2>${listing.agent.name} <em>${listing.agent.badge}</em></h2><p>${listing.agent.brokerage}<br>${listing.agent.office}</p></div></div><div class="agent-actions"><a href="https://www.har.com/carissa-weber/agent_WEBERC" target="_blank" rel="noopener noreferrer">VIEW PROFILE</a><button type="button" data-reveal-phone>CONTACT AGENT</button></div></div>
   </section>`;
 }
 
