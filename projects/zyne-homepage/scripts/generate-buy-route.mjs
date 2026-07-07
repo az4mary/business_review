@@ -32,7 +32,7 @@ const readBuyCss = async () => {
 const chromeCss = `
 *{box-sizing:border-box}
 html{background:#070706;color:#f1eadc;scrollbar-color:#6e5700 #050606}
-body{margin:0;background:#070706;color:#f1eadc;font-family:Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#070706;color:#f1eadc;font-family:"Inter Var",Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid #c9a967;outline-offset:4px}
