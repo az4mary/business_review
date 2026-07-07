@@ -54,6 +54,45 @@ The build script runs catalog validation, PRD 1.1 homepage UX validation, Vite b
 
 
 
+## Global header/footer source model
+
+Shared header, header navigation, footer, footer navigation, and their shared layout/color styles are centralized in:
+
+```txt
+projects/zyne-homepage/scripts/global-header-footer.mjs
+
+```
+
+That module exports:
+
+* `globalHeaderFooterStyles`
+* `headerLinks`
+* `footerLinks`
+* `renderGlobalHeader()`
+* `renderGlobalFooter()`
+
+As of the latest header/footer unification pass, these generators/templates import the shared module directly:
+
+* `projects/zyne-homepage/scripts/generate-legal-layer.mjs` for `/privacy/`, `/terms/`, `/refund-policy/`, and `/cookie-policy/`.
+* `projects/zyne-homepage/scripts/generate-routes.mjs` for `/services/`, product detail pages, category pages, and generated service collection routes.
+* `projects/zyne-homepage/scripts/templates/template-investment.mjs` for `/homedetail/7101-wendemere/`.
+
+Implementation ledger:
+
+* Done: created `projects/zyne-homepage/scripts/global-header-footer.mjs`.
+* Done: updated `projects/zyne-homepage/scripts/generate-legal-layer.mjs`, covering `/privacy/`, `/terms/`, `/refund-policy/`, and `/cookie-policy/`.
+* Done: updated `projects/zyne-homepage/scripts/generate-routes.mjs`, covering `/services/`, service product pages, service category pages, and generated service collection routes.
+* Done: updated `projects/zyne-homepage/scripts/templates/template-investment.mjs`, covering `/homedetail/7101-wendemere/`.
+* Done: updated this README with the shared header/footer source model.
+
+The shared module currently controls header/footer/nav markup, active URL hrefs, nav colors, footer-link gold styling, sticky header behavior, blur, spacing, and mobile nav hiding. Page-level generators still provide their own base page CSS such as `body` font-family and page-specific layout rules, so font ownership has not yet been moved into `global-header-footer.mjs`.
+
+Important historical context:
+
+* `services/index.html` originally inherited footer nav styling from generic `nav` rules in `generate-routes.mjs`.
+* Legal pages originally had footer-specific `.footer-links` gold styles in `generate-legal-layer.mjs`.
+* A standalone preview was created at `C:\Users\murad\Documents\Codex\2026-07-07\co\outputs\global-footer-header-page.html` to compare and confirm the desired shared header/footer behavior before creating the source module.
+
 ## Legal page source model
 
 Legal source copy is maintained as Markdown in the repository-level `assets/` folder and rendered into static pages during `npm run build`:
@@ -133,6 +172,12 @@ projects/zyne-homepage/docs/repo-cleanup-audit.md
 
 * **`src/styles/main.css`**
 * *Action:* Refactor or verify that global design tokens (typography, core theme variables, and brand colors) are strictly defined here to enforce a unified aesthetic across all routes.
+
+
+
+
+* **`scripts/global-header-footer.mjs`**
+* *Action:* Reference this module to import `renderGlobalHeader()` and `renderGlobalFooter()` into your new template, keeping layout, navigation links, and sticky behaviors consistent.
 
 
 
