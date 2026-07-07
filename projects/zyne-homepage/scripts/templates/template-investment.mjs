@@ -1,4 +1,9 @@
 import { Icons } from "../property-icons.mjs";
+import {
+  globalHeaderFooterStyles,
+  renderGlobalFooter,
+  renderGlobalHeader
+} from "../global-header-footer.mjs";
 
 // Bespoke SVGs (1.25px Stroke) for Investment Metrics
 const tagIcon = `<svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>`;
@@ -76,6 +81,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   main a, .lightbox a { color: inherit; text-decoration: none; }
   button { font: inherit; background: none; border: none; cursor: pointer; }
   main p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+  ${globalHeaderFooterStyles}
   
   .zyne-icon {
     width: 36px; height: 36px; color: var(--gold); flex: 0 0 auto;
@@ -359,6 +365,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   <style>${css}</style>
 </head>
 <body>
+  ${renderGlobalHeader()}
   <main class="page">
     ${topbar}
     <div class="hero">
@@ -366,6 +373,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
       ${summary}
     </div>
   </main>
+  ${renderGlobalFooter()}
   ${lightbox}
   ${clientScript}
 </body>

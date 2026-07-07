@@ -3,6 +3,11 @@ import { join } from "node:path";
 import { listing as sourceListing } from "../../zyne-buy/src/data/listing.js";
 import { renderGallery } from "../../zyne-buy/src/components/gallery.js";
 import { renderContextBar, renderPropertyPanel } from "../../zyne-buy/src/components/propertyPanel.js";
+import {
+  globalHeaderFooterStyles,
+  renderGlobalFooter,
+  renderGlobalHeader
+} from "./global-header-footer.mjs";
 
 const listing = structuredClone(sourceListing);
 listing.status = "FOR SALE • SELLER FINANCING";
@@ -101,11 +106,13 @@ const html = `<!doctype html>
   <link rel="canonical" href="https://zyne.store/${route}/">
   <meta name="description" content="Seller-financed investment opportunity at 7101 Wendemere St, Houston, Texas.">
   <title>7101 Wendemere St | Seller Financing Investment Property</title>
-  <style>${chromeCss}${await readBuyCss()}</style>
+  <style>${globalHeaderFooterStyles}${chromeCss}${await readBuyCss()}</style>
   <script type="application/ld+json">${escapeJson(schema)}</script>
 </head>
 <body>
+  ${renderGlobalHeader()}
   ${buyShell}
+  ${renderGlobalFooter()}
   <div id="overlay-root"></div>
   <script>${clientScript}</script>
 </body>
