@@ -1,4 +1,9 @@
 import { Icons } from "../property-icons.mjs";
+import {
+  globalHeaderFooterStyles,
+  renderGlobalFooter,
+  renderGlobalHeader
+} from "../global-header-footer.mjs";
 
 // Bespoke SVGs (1.25px Stroke) for Investment Metrics
 const tagIcon = `<svg class="zyne-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>`;
@@ -16,8 +21,6 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   const property = prop.details || prop;
   const agent = prop.agent || prop;
   const canonical = prop.canonical || "https://zyne.store";
-
-  const nav = navItems.map(([label, href]) => `<a href="${href}">${label}</a>`).join("");
 
   // Inherited tile component from rental template
   const tile = (photo, className = "") => {
@@ -78,20 +81,13 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   a { color: inherit; text-decoration: none; }
   button { font: inherit; background: none; border: none; cursor: pointer; }
   p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+  ${globalHeaderFooterStyles}
   
   .zyne-icon {
     width: 36px; height: 36px; color: var(--gold); flex: 0 0 auto;
     filter: drop-shadow(0 0 6px rgba(201, 154, 46, .20));
   }
   .zyne-icon stroke, .zyne-icon path, .zyne-icon circle { stroke-width: 1.25px !important; }
-  
-  /* Inherited Global Layout */
-  .site-header { height: 92px; padding: 0 1.5rem; display: flex; align-items: center; border-bottom: 1px solid var(--line); background: #050505; position: sticky; top: 0; z-index: 20; }
-  .brand { display: flex; align-items: center; gap: .85rem; min-width: 235px; }
-  .brand img { width: 58px; height: auto; }
-  .brand b { font-family: Georgia, serif; color: var(--gold2); font-size: 2rem; letter-spacing: .08em; }
-  .main-nav { display: flex; gap: 1.55rem; margin-left: auto; align-items: center; }
-  .main-nav a { font-size: .72rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--text); opacity: .92; }
   
   .page { width: calc(100% - 3rem); max-width: 1440px; margin: 0 auto; padding-bottom: 3rem; }
   .topbar { display: flex; justify-content: space-between; gap: 1rem; padding: 2.55rem 0 1.55rem; font-size: .83rem; color: var(--muted); }
@@ -214,16 +210,6 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   .highlight-bar .zyne-icon { margin: 0 auto 0.75rem; width: 32px; height: 32px; }
   .highlight-bar b { display: block; color: var(--text); font-size: .75rem; margin-bottom: .25rem; }
   .highlight-bar small { display: block; color: var(--muted); font-size: .7rem; }
-  `;
-
-  const header = `
-    <header class="site-header">
-      <a class="brand" href="/">
-        <img src="/assets/brand/zyne-logo.png" alt="ZYNE">
-        <b>ZYNE</b>
-      </a>
-      <nav class="main-nav">${nav}</nav>
-    </header>
   `;
 
   const topbar = `
@@ -379,7 +365,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   <style>${css}</style>
 </head>
 <body>
-  ${header}
+  ${renderGlobalHeader()}
   <main class="page">
     ${topbar}
     <div class="hero">
@@ -387,6 +373,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
       ${summary}
     </div>
   </main>
+  ${renderGlobalFooter()}
   ${lightbox}
   ${clientScript}
 </body>
