@@ -77,6 +77,14 @@ As of the latest header/footer unification pass, these generators/templates impo
 * `projects/zyne-homepage/scripts/generate-routes.mjs` for `/services/`, product detail pages, category pages, and generated service collection routes.
 * `projects/zyne-homepage/scripts/templates/template-investment.mjs` for `/homedetail/7101-wendemere/`.
 
+Implementation ledger:
+
+* Done: created `projects/zyne-homepage/scripts/global-header-footer.mjs`.
+* Done: updated `projects/zyne-homepage/scripts/generate-legal-layer.mjs`, covering `/privacy/`, `/terms/`, `/refund-policy/`, and `/cookie-policy/`.
+* Done: updated `projects/zyne-homepage/scripts/generate-routes.mjs`, covering `/services/`, service product pages, service category pages, and generated service collection routes.
+* Done: updated `projects/zyne-homepage/scripts/templates/template-investment.mjs`, covering `/homedetail/7101-wendemere/`.
+* Done: updated this README with the shared header/footer source model.
+
 The shared module currently controls header/footer/nav markup, active URL hrefs, nav colors, footer-link gold styling, sticky header behavior, blur, spacing, and mobile nav hiding. Page-level generators still provide their own base page CSS such as `body` font-family and page-specific layout rules, so font ownership has not yet been moved into `global-header-footer.mjs`.
 
 Important historical context:
