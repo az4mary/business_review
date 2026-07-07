@@ -124,12 +124,16 @@ assertOneH1(repairSchedule, "repair-schedule");
 assertSchema(repairSchedule, "repair-schedule", ["WebPage", "Repair Schedule"]);
 assertIncludes(repairSchedule, "repair-schedule", [
   "Repair Schedule",
-  "Service coordination",
-  "Start Repair Request",
-  "Repair request details",
-  "Appointment windows",
-  "Resolution tracking",
-  "Build out the repair workflow gradually"
+  "Posted 07/05/2026",
+  "Tentative repair schedule",
+  "Phase 1",
+  "Safety &amp; Baseline",
+  "Replace and test all security devices/detectors",
+  "September 2026 - March 2027",
+  "Interior Cosmetics &amp; Comfort",
+  "Broken fence repaired (cosmetic)",
+  "May - June 2029",
+  "Planning assumptions"
 ]);
 
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");

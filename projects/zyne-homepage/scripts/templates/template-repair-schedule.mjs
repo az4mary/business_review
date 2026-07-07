@@ -20,6 +20,15 @@ const absoluteUrl = (path) => `${siteUrl}${path.endsWith("/") ? path : `${path}/
 
 const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 
+const repairPhase = (phase) => `<article class="repair-phase">
+  <div>
+    <p class="eyebrow">${escapeHtml(phase.phase)}</p>
+    <h3>${escapeHtml(phase.title)}</h3>
+  </div>
+  <strong>${escapeHtml(phase.timeframe)}</strong>
+  <ul>${listItems(phase.work)}</ul>
+</article>`;
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -56,22 +65,22 @@ ${renderGlobalHeader()}
       </div>
     </div>
     <aside class="repair-card repair-status" aria-label="Repair schedule status">
-      <p class="eyebrow">Page status</p>
-      <h2>Content in progress</h2>
-      <p>This route is now available for the repair scheduling workflow. Operational content can be added incrementally as the process is finalized.</p>
+      <p class="eyebrow">Schedule span</p>
+      <h2>July 2026 to June 2029</h2>
+      <p>The work begins with safety and baseline checks, then moves through systems, interior comfort, exterior items, and final touches.</p>
     </aside>
   </section>
-  <section id="repair-request" class="repair-grid" aria-label="Repair schedule workflow">
-    ${repairScheduleContent.sections.map((section) => `<article class="repair-card">
-      <p class="eyebrow">${escapeHtml(section.label)}</p>
-      <h3>${escapeHtml(section.title)}</h3>
-      <p>${escapeHtml(section.body)}</p>
-    </article>`).join("")}
+  <section id="repair-schedule" class="repair-schedule" aria-label="Tentative repair schedule">
+    <div class="section-heading">
+      <p class="eyebrow">Tentative repair schedule</p>
+      <h2>Phased repair timeline</h2>
+    </div>
+    <div class="repair-timeline">${repairScheduleContent.phases.map(repairPhase).join("")}</div>
   </section>
-  <section id="next-steps" class="repair-next">
-    <p class="eyebrow">Next steps</p>
-    <h2>Build out the repair workflow gradually</h2>
-    <ol>${listItems(repairScheduleContent.nextSteps)}</ol>
+  <section id="schedule-notes" class="repair-next">
+    <p class="eyebrow">Schedule notes</p>
+    <h2>Planning assumptions</h2>
+    <ul>${listItems(repairScheduleContent.notes)}</ul>
   </section>
 </main>
 ${renderGlobalFooter()}

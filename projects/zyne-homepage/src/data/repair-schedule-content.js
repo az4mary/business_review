@@ -1,38 +1,77 @@
 export const repairScheduleContent = {
   title: "Repair Schedule",
   seoTitle: "Repair Schedule | ZYNE",
-  description: "A ZYNE repair scheduling page for coordinating service requests, appointment windows, and follow-up details.",
+  description: "Tentative repair schedule for property safety, systems, interior, exterior, and final repair work from July 2026 through June 2029.",
   canonicalPath: "/repair-schedule/",
-  eyebrow: "Service coordination",
-  intro: "Use this page to organize repair requests and scheduling details as the workflow is built out.",
+  eyebrow: "Posted 07/05/2026",
+  intro: "This tentative schedule organizes repair work by phase, work description, and expected timeframe. Timing may be refined as work is coordinated.",
   primaryCta: {
-    label: "Start Repair Request",
-    href: "#repair-request"
+    label: "View Schedule",
+    href: "#repair-schedule"
   },
   secondaryCta: {
-    label: "Review Next Steps",
-    href: "#next-steps"
+    label: "Review Notes",
+    href: "#schedule-notes"
   },
-  sections: [
+  phases: [
     {
-      label: "Intake",
-      title: "Repair request details",
-      body: "Capture the issue, property or account context, urgency, access notes, and preferred contact method."
+      phase: "Phase 1",
+      title: "Safety & Baseline",
+      timeframe: "July - August 2026",
+      work: [
+        "Replace and test all security devices/detectors",
+        "Check ceiling fans in bedroom/living room",
+        "HVAC and water heater checkup",
+        "Kitchen and toilet plumbing checked",
+        "Switch plates, outlet covers, etc. checked",
+        "Front and back doors fixed with new hardware",
+        "One-time mow the grass",
+        "Initiate quarterly pest control"
+      ]
     },
     {
-      label: "Scheduling",
-      title: "Appointment windows",
-      body: "Confirm the available service window, responsible contact, location details, and any constraints before dispatch."
+      phase: "Phase 2",
+      title: "Structural & Systems",
+      timeframe: "September 2026 - March 2027",
+      work: [
+        "Check and fix subfloor"
+      ]
     },
     {
-      label: "Follow-up",
-      title: "Resolution tracking",
-      body: "Track status, completion notes, photos, materials, and any additional work required after the initial visit."
+      phase: "Phase 3",
+      title: "Interior Cosmetics & Comfort",
+      timeframe: "April - October 2027",
+      work: [
+        "Drywall cover-up in utility room",
+        "Sheetrock and drywall cover-up/replacement",
+        "All inside doors fixed or replaced",
+        "Insulate subfloor"
+      ]
+    },
+    {
+      phase: "Phase 4",
+      title: "Exterior & Low-Priority",
+      timeframe: "November 2027 - April 2029",
+      work: [
+        "All outside lighting checked",
+        "Exterior building paint",
+        "Broken bedroom window replaced (cosmetic)",
+        "Broken fence repaired (cosmetic)"
+      ]
+    },
+    {
+      phase: "Phase 5",
+      title: "Final Touches",
+      timeframe: "May - June 2029",
+      work: [
+        "Mailbox repaired",
+        "Sand fill the carport"
+      ]
     }
   ],
-  nextSteps: [
-    "Add the final repair intake form or booking embed.",
-    "Connect confirmed scheduling destinations once the operations flow is ready.",
-    "Expand the page content with request categories, response expectations, and support instructions."
+  notes: [
+    "Schedule is tentative and based on the posted repair plan dated 07/05/2026.",
+    "Quarterly pest control begins in July 2026 and continues on an ongoing basis.",
+    "Cosmetic and lower-priority exterior items are scheduled after safety, systems, and interior comfort work."
   ]
 };

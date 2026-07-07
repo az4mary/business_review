@@ -140,29 +140,62 @@ li {
   min-height: 100%;
 }
 
-.repair-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+.section-heading {
+  margin-bottom: 1.35rem;
+}
+
+.section-heading h2 {
+  margin-top: .45rem;
+}
+
+.repair-schedule {
   padding: 0 0 clamp(3.5rem, 7vw, 6rem);
 }
 
-.repair-card strong {
+.repair-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.repair-phase {
+  display: grid;
+  grid-template-columns: minmax(210px, .75fr) minmax(190px, .55fr) minmax(0, 1.7fr);
+  gap: 1.25rem;
+  align-items: start;
+  border: 1px solid rgba(201, 169, 103, .26);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, .01));
+  padding: 1.35rem;
+}
+
+.repair-card strong,
+.repair-phase strong {
   color: #c9a967;
+}
+
+.repair-phase ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.repair-phase li + li {
+  margin-top: .35rem;
 }
 
 .repair-next {
   margin-bottom: clamp(3.5rem, 7vw, 6rem);
 }
 
-.repair-next ol {
+.repair-next ul {
   margin: 1rem 0 0;
   padding-left: 1.25rem;
 }
 
 @media (max-width: 900px) {
-  .repair-hero,
-  .repair-grid {
+  .repair-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .repair-phase {
     grid-template-columns: 1fr;
   }
 
