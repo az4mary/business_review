@@ -3,7 +3,8 @@ import { repairScheduleContent } from "../../src/data/repair-schedule-content.js
 import {
   globalHeaderFooterStyles,
   renderGlobalFooter,
-  renderGlobalHeader
+  renderGlobalHeader,
+  renderGlobalHeaderFooterScript
 } from "../global-header-footer.mjs";
 
 const siteUrl = "https://zyne.store";
@@ -84,5 +85,6 @@ ${renderGlobalHeader()}
   </section>
 </main>
 ${renderGlobalFooter()}
+${renderGlobalHeaderFooterScript()}
 </body>
 </html>`;
