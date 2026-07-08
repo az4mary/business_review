@@ -816,6 +816,7 @@ Everything else belongs below the fold.
 The main unresolved issue in the latest build is that it still treats mobile as a compressed brochure. The spec above forces a true mobile decision flow: fewer elements, larger type, no thumbnails, no early chips, no early agent card, and no duplicated terms.
 
 ---
+
 ---
 
 # PATCH 2 - ZYNE Mobile Listing Page — Updated Developer Fix Spec
