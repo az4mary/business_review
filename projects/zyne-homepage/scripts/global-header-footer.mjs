@@ -20,7 +20,9 @@ export const footerLinks = [
 
 const renderLinks = (links) => links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("");
 
-export const renderGlobalHeader = () => `<header>
+export const globalMobileHeaderStyles = `@media(max-width:767px){header{min-height:64px;height:64px;padding-left:8px;padding-right:12px;gap:8px}header img{width:150px;height:60px;max-height:60px;object-fit:contain}.header-briefing{min-width:0;width:54px;height:auto;margin-left:auto;padding:0;border:0;background:transparent;color:#f2cc4d;font-size:8px;line-height:9px;font-weight:300;letter-spacing:.02em;text-align:center;white-space:normal;opacity:1}.mobile-menu-toggle{width:28px;height:20px;margin-left:6px;display:flex;flex-direction:column;justify-content:space-between}.mobile-menu-toggle span{width:28px;height:2px;margin:0;background:#f7f3ea;border-radius:2px}}`;
+
+export const renderGlobalHeader = () => `<style data-global-mobile-header>${globalMobileHeaderStyles}</style><header>
   <a href="/" aria-label="ZYNE home"><img src="/assets/brand/zyne-logo-optimized.webp" alt="ZYNE"></a>
   <nav aria-label="Main navigation">${renderLinks(headerLinks)}</nav>
   <a class="header-briefing" href="/services/executive-briefing/">Schedule Briefing</a>
