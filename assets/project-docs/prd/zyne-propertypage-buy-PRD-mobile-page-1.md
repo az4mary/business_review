@@ -1,4 +1,4 @@
-Below is a **developer-ready handoff**. It is intentionally strict and removes interpretation.
+⚠️Below is a **developer-ready handoff**. It is intentionally strict and removes interpretation.
 
 # ZYNE Mobile Listing Page — Required Developer Changes
 
