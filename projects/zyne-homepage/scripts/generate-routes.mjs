@@ -14,7 +14,8 @@ import {
   globalHeaderFooterStyles,
   renderGlobalFavicons,
   renderGlobalFooter,
-  renderGlobalHeader
+  renderGlobalHeader,
+  renderGlobalHeaderFooterScript
 } from "./global-header-footer.mjs";
 
 const siteUrl = "https://zyne.store";
@@ -71,6 +72,7 @@ ${schema ? schemaScript(schema) : ""}
 ${renderGlobalHeader()}
 <main id="main-content">${main}</main>
 ${renderGlobalFooter()}
+${renderGlobalHeaderFooterScript()}
 </body>
 </html>`;
 

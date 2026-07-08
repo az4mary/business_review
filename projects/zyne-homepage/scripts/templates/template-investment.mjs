@@ -3,7 +3,8 @@ import {
   globalHeaderFooterStyles,
   renderGlobalFavicons,
   renderGlobalFooter,
-  renderGlobalHeader
+  renderGlobalHeader,
+  renderGlobalHeaderFooterScript
 } from "../global-header-footer.mjs";
 
 // Bespoke SVGs (1.25px Stroke) for Investment Metrics
@@ -377,6 +378,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   ${renderGlobalFooter()}
   ${lightbox}
   ${clientScript}
+  ${renderGlobalHeaderFooterScript()}
 </body>
 </html>`;
 }
