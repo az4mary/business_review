@@ -1,4 +1,4 @@
-import { icon } from "./icons.js";
+import { icon } from "./icons.mjs";
 
 const tool = (name, label) => `<button type="button" class="utility-button" aria-disabled="true">${icon(name, "small-icon")}<span>${label}</span></button>`;
 

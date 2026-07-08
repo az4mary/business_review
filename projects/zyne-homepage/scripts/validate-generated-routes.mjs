@@ -165,6 +165,28 @@ assertIncludes(propertyDetail, propertyRoute, [
   "Wendemere St"
 ]);
 
+const buyRoute = join(propertyRoute, "buy");
+const buyDetail = await assertFile(buyRoute);
+allRouteHtml.push([buyRoute, buyDetail]);
+
+assertSchema(buyDetail, buyRoute, ["SingleFamilyResidence", "Offer"]);
+assertIncludes(buyDetail, buyRoute, [
+  "<body class=\"buy-route\">",
+  "id=\"main-content\"",
+  "class=\"buy-page-stack desktop-buy-pages\"",
+  "class=\"buy-page-stack mobile-buy-pages\"",
+  "data-mobile-menu-open",
+  "id=\"mobile-menu\"",
+  "<footer class=\"footer\">",
+  "REQUEST INVESTMENT PACKET",
+  "CONTACT LISTING AGENT",
+  "https://www.har.com/carissa-weber/agent_WEBERC",
+  "mailto:lisibeth@zyne.store",
+  "tel:+13465924718",
+  "1 of 9",
+  "/assets/catalog/agents/carissa-weber.webp"
+]);
+
 for (const product of catalogProducts) {
   const route = join("services", product.slug);
   const html = await assertFile(route);

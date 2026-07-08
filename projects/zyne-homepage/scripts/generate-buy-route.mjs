@@ -1,16 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { listing as sourceListing } from "../../zyne-buy/src/data/listing.js";
-import { renderGallery } from "../../zyne-buy/src/components/gallery.js";
-import { renderContextBar, renderPropertyPanel } from "../../zyne-buy/src/components/propertyPanel.js";
-import { icon } from "../../zyne-buy/src/components/icons.js";
-import {
-  globalHeaderFooterStyles,
-  renderGlobalFavicons,
-  renderGlobalFooter,
-  renderGlobalHeader,
-  renderGlobalHeaderFooterScript
-} from "./global-header-footer.mjs";
+import { listing as sourceListing } from "../src/data/buy-page-content.js";
+import { renderGallery } from "./templates/buy/gallery.mjs";
+import { icon } from "./templates/buy/icons.mjs";
+import { renderContextBar, renderPropertyPanel } from "./templates/buy/property-panel.mjs";
+import { renderBuyPage } from "./templates/template-buy.mjs";
 
 const listing = structuredClone(sourceListing);
 listing.status = "FOR SALE • SELLER FINANCING";
@@ -20,9 +14,9 @@ const route = "homedetail/7101-wendemere-st-houston-tx-77088/buy";
 const outputDir = join("dist", route);
 
 const cssFiles = [
-  "../zyne-buy/src/styles/tokens.css",
-  "../zyne-buy/src/styles/page.css",
-  "../zyne-buy/src/styles/lightbox.css"
+  "src/styles/buy-page-tokens.css",
+  "src/styles/buy-page.css",
+  "src/styles/buy-page-lightbox.css"
 ];
 
 const escapeJson = (value) => JSON.stringify(value).replace(/</g, "\\u003c");
@@ -128,30 +122,15 @@ const schema = {
   }
 };
 
-const html = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020303">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  ${renderGlobalFavicons()}
-  <link rel="canonical" href="https://zyne.store/${route}/">
-  <meta name="description" content="Seller-financed investment opportunity at 7101 Wendemere St, Houston, Texas.">
-  <title>7101 Wendemere St | Seller Financing Investment Property</title>
-  <style>${globalHeaderFooterStyles}${chromeCss}${await readBuyCss()}</style>
-  <script type="application/ld+json">${escapeJson(schema)}</script>
-</head>
-<body class="buy-route">
-  ${renderGlobalHeader()}
-  ${buyShell}
-  ${mobileShell}
-  ${renderGlobalFooter()}
-  <div id="overlay-root"></div>
-  <script>${clientScript}</script>
-  ${renderGlobalHeaderFooterScript()}
-</body>
-</html>`;
+const html = renderBuyPage({
+  route,
+  listing,
+  styles: `${chromeCss}${await readBuyCss()}`,
+  buyShell,
+  mobileShell,
+  clientScript,
+  schema
+});
 
 await mkdir(outputDir, { recursive: true });
 await writeFile(join(outputDir, "index.html"), html);
