@@ -819,6 +819,8 @@ The main unresolved issue in the latest build is that it still treats mobile as 
 
 ---
 
+---
+
 # PATCH 2 - ZYNE Mobile Listing Page — Updated Developer Fix Spec
 The latest build has moved in the right direction. The major structural recommendations are now mostly implemented, but several execution issues remain: **badge readability, financing-card wrapping, CTA placement, header proportions, and first-viewport spacing**.
 
