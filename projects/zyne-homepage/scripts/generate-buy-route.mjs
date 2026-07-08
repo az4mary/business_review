@@ -6,6 +6,7 @@ import { renderContextBar, renderPropertyPanel } from "../../zyne-buy/src/compon
 import { icon } from "../../zyne-buy/src/components/icons.js";
 import {
   globalHeaderFooterStyles,
+  renderGlobalFavicons,
   renderGlobalFooter,
   renderGlobalHeader,
   renderGlobalHeaderFooterScript
@@ -134,8 +135,7 @@ const html = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#020303">
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
-  <link rel="apple-touch-icon" href="/assets/brand/zyne-touch-icon.png">
+  ${renderGlobalFavicons()}
   <link rel="canonical" href="https://zyne.store/${route}/">
   <meta name="description" content="Seller-financed investment opportunity at 7101 Wendemere St, Houston, Texas.">
   <title>7101 Wendemere St | Seller Financing Investment Property</title>

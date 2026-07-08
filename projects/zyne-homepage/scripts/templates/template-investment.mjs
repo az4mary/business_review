@@ -1,6 +1,7 @@
 import { Icons } from "../property-icons.mjs";
 import {
   globalHeaderFooterStyles,
+  renderGlobalFavicons,
   renderGlobalFooter,
   renderGlobalHeader
 } from "../global-header-footer.mjs";
@@ -360,7 +361,7 @@ export function buildInvestmentPage(prop, photos, visible, primaryImage, navItem
   <title>Investment Prospectus | ${property.address} | ZYNE</title>
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="/assets/brand/favicon.svg">
+  ${renderGlobalFavicons()}
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <style>${css}</style>
 </head>

@@ -1,4 +1,5 @@
 import { Icons } from "../property-icons.mjs";
+import { renderGlobalFavicons } from "../global-header-footer.mjs";
 
 // Custom beautifully stylized thin-line vector highway cloverleaf for Easy Access
 const cloverleafIcon = `
@@ -1596,7 +1597,7 @@ return `<!doctype html>
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="/assets/brand/favicon.svg">
+  ${renderGlobalFavicons()}
 
   <meta property="og:title" content="7101 Wendemere St Houston TX 77088 Rental | ZYNE Property Detail">
   <meta property="og:description" content="Three-bedroom Houston rental with covered porch, large lot, open layout, and clear property details.">

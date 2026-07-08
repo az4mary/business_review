@@ -12,6 +12,7 @@ import { getProductDetailContent } from "../src/data/product-detail-content.js";
 import { renderRepairSchedulePage } from "./templates/template-repair-schedule.mjs";
 import {
   globalHeaderFooterStyles,
+  renderGlobalFavicons,
   renderGlobalFooter,
   renderGlobalHeader
 } from "./global-header-footer.mjs";
@@ -61,6 +62,7 @@ const layout = ({ title, description, main, schema }) => `<!doctype html>
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
 <link rel="canonical" href="${absoluteUrl(schema?.url || "/")}">
+${renderGlobalFavicons()}
 <style>${baseStyles}</style>
 ${schema ? schemaScript(schema) : ""}
 </head>

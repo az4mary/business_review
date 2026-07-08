@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { repairScheduleContent } from "../../src/data/repair-schedule-content.js";
 import {
   globalHeaderFooterStyles,
+  renderGlobalFavicons,
   renderGlobalFooter,
   renderGlobalHeader,
   renderGlobalHeaderFooterScript
@@ -47,6 +48,7 @@ export const renderRepairSchedulePage = () => `<!doctype html>
 <title>${escapeHtml(repairScheduleContent.seoTitle)}</title>
 <meta name="description" content="${escapeHtml(repairScheduleContent.description)}">
 <link rel="canonical" href="${absoluteUrl(repairScheduleContent.canonicalPath)}">
+${renderGlobalFavicons()}
 <style>${globalHeaderFooterStyles}${styles}</style>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
