@@ -163,7 +163,7 @@ assertIncludes(propertyDetail, propertyRoute, [
   "https://www.har.com/carissa-weber/agent_WEBERC",
   "/assets/catalog/agents/carissa-weber.webp",
   "/assets/brand/zyne-gold-pillars.png",
-  "See all 9 photos",
+  "See all 10 photos",
   "max-width: 1440px",
   "grid-template-columns: minmax(0, 1.48fr) minmax(460px, .98fr)",
   "width: 88px",
