@@ -124,7 +124,7 @@ assertOneH1(repairSchedule, "repair-schedule");
 assertSchema(repairSchedule, "repair-schedule", ["WebPage", "Repair Schedule"]);
 assertIncludes(repairSchedule, "repair-schedule", [
   "Repair Schedule",
-  "Posted 08/07/2026",
+  "Posted 07/31/2026",
   "Tentative repair schedule",
   "Phase 1",
   "Safety &amp; Baseline",
