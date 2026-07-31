@@ -22,7 +22,20 @@ const absoluteUrl = (path) => `${siteUrl}${path.endsWith("/") ? path : `${path}/
 
 const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 
+const propertyImage = ({ file, alt, caption, className = "" }) => {
+  const base = `/assets/catalog/properties/7101-wendemere-st`;
+  return `<figure class="repair-photo ${className}">
+    <picture>
+      <source media="(max-width: 700px)" srcset="${base}/thumbnails-mobile/${escapeHtml(file)}">
+      <source media="(max-width: 1100px)" srcset="${base}/thumbnails/${escapeHtml(file)}">
+      <img src="${base}/gallery/${escapeHtml(file)}" alt="${escapeHtml(alt)}" loading="lazy">
+    </picture>
+    ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ""}
+  </figure>`;
+};
+
 const repairPhase = (phase) => `<article class="repair-phase">
+  ${propertyImage({ ...phase.image, className: "phase-photo" })}
   <div>
     <p class="eyebrow">${escapeHtml(phase.phase)}</p>
     <h3>${escapeHtml(phase.title)}</h3>
@@ -68,6 +81,7 @@ ${renderGlobalHeader()}
       </div>
     </div>
     <aside class="repair-card repair-status" aria-label="Repair schedule status">
+      ${propertyImage({ ...repairScheduleContent.heroImage, className: "hero-photo" })}
       <p class="eyebrow">Schedule span</p>
       <h2>August 2026 to July 2029</h2>
       <p>The work begins with safety and baseline checks, then moves through systems, interior comfort, exterior items, and final touches.</p>

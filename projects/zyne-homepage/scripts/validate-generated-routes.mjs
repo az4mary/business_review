@@ -133,7 +133,11 @@ assertIncludes(repairSchedule, "repair-schedule", [
   "Interior Cosmetics &amp; Comfort",
   "Broken fence repaired (cosmetic)",
   "June - July 2029",
-  "Planning assumptions"
+  "Planning assumptions",
+  "/assets/catalog/properties/7101-wendemere-st/gallery/front.webp",
+  "/assets/catalog/properties/7101-wendemere-st/thumbnails-mobile/front.webp",
+  "/assets/catalog/properties/7101-wendemere-st/gallery/living-room.webp",
+  "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard.webp"
 ]);
 
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");
