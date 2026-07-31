@@ -69,7 +69,7 @@ ${renderGlobalHeader()}
     </div>
     <aside class="repair-card repair-status" aria-label="Repair schedule status">
       <p class="eyebrow">Schedule span</p>
-      <h2>July 2026 to June 2029</h2>
+      <h2>August 2026 to July 2029</h2>
       <p>The work begins with safety and baseline checks, then moves through systems, interior comfort, exterior items, and final touches.</p>
     </aside>
   </section>

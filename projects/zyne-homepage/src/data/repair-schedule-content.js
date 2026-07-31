@@ -1,9 +1,9 @@
 export const repairScheduleContent = {
   title: "Repair Schedule",
   seoTitle: "Repair Schedule | ZYNE",
-  description: "Tentative repair schedule for property safety, systems, interior, exterior, and final repair work from July 2026 through June 2029.",
+  description: "Tentative repair schedule for property safety, systems, interior, exterior, and final repair work from August 2026 through July 2029.",
   canonicalPath: "/repair-schedule/",
-  eyebrow: "Posted 07/05/2026",
+  eyebrow: "Posted 08/07/2026",
   intro: "This tentative schedule organizes repair work by phase, work description, and expected timeframe. Timing may be refined as work is coordinated.",
   primaryCta: {
     label: "View Schedule",
@@ -17,7 +17,7 @@ export const repairScheduleContent = {
     {
       phase: "Phase 1",
       title: "Safety & Baseline",
-      timeframe: "July - August 2026",
+      timeframe: "August - September 2026",
       work: [
         "Replace and test all security devices/detectors",
         "Check ceiling fans in bedroom/living room",
@@ -32,7 +32,7 @@ export const repairScheduleContent = {
     {
       phase: "Phase 2",
       title: "Structural & Systems",
-      timeframe: "September 2026 - March 2027",
+      timeframe: "October 2026 - April 2027",
       work: [
         "Check and fix subfloor"
       ]
@@ -40,7 +40,7 @@ export const repairScheduleContent = {
     {
       phase: "Phase 3",
       title: "Interior Cosmetics & Comfort",
-      timeframe: "April - October 2027",
+      timeframe: "May - November 2027",
       work: [
         "Drywall cover-up in utility room",
         "Sheetrock and drywall cover-up/replacement",
@@ -51,7 +51,7 @@ export const repairScheduleContent = {
     {
       phase: "Phase 4",
       title: "Exterior & Low-Priority",
-      timeframe: "November 2027 - April 2029",
+      timeframe: "December 2027 - May 2029",
       work: [
         "All outside lighting checked",
         "Exterior building paint",
@@ -62,7 +62,7 @@ export const repairScheduleContent = {
     {
       phase: "Phase 5",
       title: "Final Touches",
-      timeframe: "May - June 2029",
+      timeframe: "June - July 2029",
       work: [
         "Mailbox repaired",
         "Sand fill the carport"
@@ -70,8 +70,8 @@ export const repairScheduleContent = {
     }
   ],
   notes: [
-    "Schedule is tentative and based on the posted repair plan dated 07/05/2026.",
-    "Quarterly pest control begins in July 2026 and continues on an ongoing basis.",
+    "Schedule is tentative and based on the posted repair plan dated 08/07/2026.",
+    "Quarterly pest control begins in August 2026 and continues on an ongoing basis.",
     "Cosmetic and lower-priority exterior items are scheduled after safety, systems, and interior comfort work."
   ]
 };
