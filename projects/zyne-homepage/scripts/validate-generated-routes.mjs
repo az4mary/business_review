@@ -137,7 +137,8 @@ assertIncludes(repairSchedule, "repair-schedule", [
   "/assets/catalog/properties/7101-wendemere-st/gallery/front.webp",
   "/assets/catalog/properties/7101-wendemere-st/thumbnails-mobile/front.webp",
   "/assets/catalog/properties/7101-wendemere-st/gallery/living-room.webp",
-  "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard.webp"
+  "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard.webp",
+  "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard-mailbox-carport.png"
 ]);
 
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");

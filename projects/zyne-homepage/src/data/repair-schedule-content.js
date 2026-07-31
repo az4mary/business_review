@@ -85,8 +85,8 @@ export const repairScheduleContent = {
       title: "Final Touches",
       timeframe: "June - July 2029",
       image: {
-        file: "bathroom.webp",
-        alt: "Bathroom plumbing and interior finish context at 7101 Wendemere St"
+        file: "front-yard-mailbox-carport.png",
+        alt: "Cropped front yard view showing the mailbox and carport approach at 7101 Wendemere St"
       },
       work: [
         "Mailbox repaired",
