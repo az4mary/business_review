@@ -21,9 +21,8 @@ export const customDeliveryContent = {
       checkoutBody: "راجع الفاتورة هنا، ثم أكمل الدفع في Stan.",
       payNow: "ادفع الآن",
       invoiceTitle: "معاينة الفاتورة",
-      invoiceService: "Delivery Fee",
-      invoiceItemLabel: "Delivery Fee",
-      invoiceService: "Delivery Fee",
+      invoiceService: "???? ???????",
+      invoiceItemLabel: "???? ???????",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "الإجمالي",
@@ -52,9 +51,8 @@ export const customDeliveryContent = {
       checkoutBody: "Revisa la factura aquí y completa el pago en Stan.",
       payNow: "Pagar ahora",
       invoiceTitle: "Vista previa de la factura",
-      invoiceService: "Delivery Fee",
-      invoiceItemLabel: "Delivery Fee",
-      invoiceService: "Delivery Fee",
+      invoiceService: "Tarifa de entrega",
+      invoiceItemLabel: "Tarifa de entrega",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "Total",
@@ -83,9 +81,8 @@ export const customDeliveryContent = {
       checkoutBody: "Vérifiez la facture ici, puis terminez le paiement sur Stan.",
       payNow: "Payer maintenant",
       invoiceTitle: "Aperçu de facture",
-      invoiceService: "Delivery Fee",
-      invoiceItemLabel: "Delivery Fee",
-      invoiceService: "Delivery Fee",
+      invoiceService: "Frais de livraison",
+      invoiceItemLabel: "Frais de livraison",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "Total",
@@ -158,5 +155,10 @@ export const customDeliveryContent = {
   fitNotes: [
     "Review the bill before checkout.",
     "If anything looks off, confirm the invoice details before paying on Stan."
-  ]
+  ],
+  translationsFitNotes: {
+    ar: ["???? ???????? ??? ????? ?????.", "??? ??? ???? ??? ??? ????? ??? ?????? ???????? ??? ????? ??? Stan."],
+    es: ["Revisa la factura antes de pagar.", "Si algo no cuadra, confirma los detalles antes de pagar en Stan."],
+    fr: ["V?rifiez la facture avant de payer.", "Si quelque chose semble incorrect, confirmez les d?tails avant de payer sur Stan."]
+  }
 };

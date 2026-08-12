@@ -58,7 +58,10 @@ const pageTitle = customDeliveryContent.seoTitle;
 const pageDescription = customDeliveryContent.shareDescription || customDeliveryContent.description;
 const pageImage = `${siteUrl}${customDeliveryContent.shareImage}`;
 const translations = customDeliveryContent.translations || {};
-const translationJson = JSON.stringify(translations).replaceAll("</", "<\\/");
+const translationJson = JSON.stringify({
+  translations,
+  fitNotes: customDeliveryContent.translationsFitNotes || {}
+}).replaceAll("</", "<\\/");
 
 export const renderCustomDeliveryPage = () => `<!doctype html>
 <html lang="en">
@@ -162,7 +165,7 @@ ${renderGlobalHeader()}
   <section id="delivery-fit" class="custom-notes">
     <p class="eyebrow" data-i18n="beforePay">Before you pay</p>
     <h2 data-i18n="quickChecks">Quick checks</h2>
-    <ul>${listItems(customDeliveryContent.fitNotes)}</ul>
+    <ul data-i18n-fit-notes>${listItems(customDeliveryContent.fitNotes)}</ul>
   </section>
 </main>
 ${renderGlobalFooter()}
@@ -170,7 +173,9 @@ ${renderGlobalFooter()}
 ${renderGlobalHeaderFooterScript()}
 <script>
 (() => {
-  const translations = window.__CUSTOM_DELIVERY_TRANSLATIONS__ || {};
+  const localeData = window.__CUSTOM_DELIVERY_TRANSLATIONS__ || {};
+  const translations = localeData.translations || {};
+  const translationsFitNotes = localeData.fitNotes || {};
   const page = document.documentElement;
   const locale = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
   const normalized = locale.toLowerCase();
@@ -184,6 +189,11 @@ ${renderGlobalHeaderFooterScript()}
     if (!key || !(key in strings)) return;
     node.textContent = strings[key];
   });
+  const fitNotes = translationsFitNotes?.[lang];
+  const fitNotesList = document.querySelector("[data-i18n-fit-notes]");
+  if (fitNotesList && Array.isArray(fitNotes) && fitNotes.length) {
+    fitNotesList.innerHTML = fitNotes.map((item) => '<li>' + item + '</li>').join('');
+  }
 })();
 </script>
 </body>
