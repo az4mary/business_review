@@ -99,6 +99,7 @@ ${renderGlobalHeader()}
     <aside class="custom-card custom-status" aria-label="Custom delivery status">
       <p class="eyebrow">Checkout</p>
       <h2>Stan checkout</h2>
+      <p>Delivery date: ${escapeHtml(customDeliveryContent.deliveryDate)}.</p>
       <p>Review the bill here, then complete payment on Stan.</p>
       <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external">Pay now</a>
     </aside>
@@ -142,6 +143,10 @@ ${renderGlobalHeader()}
       <div>
         <span>Total</span>
         <strong>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total)}</strong>
+      </div>
+      <div>
+        <span>Delivery date</span>
+        <strong>${escapeHtml(customDeliveryContent.deliveryDate)}</strong>
       </div>
       <div>
         <span>Approx. USD</span>

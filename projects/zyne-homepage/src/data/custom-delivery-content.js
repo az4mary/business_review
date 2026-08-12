@@ -7,6 +7,7 @@ export const customDeliveryContent = {
   canonicalPath: "/delivery/custom/",
   eyebrow: "View bill",
   intro: "This is a read-only bill preview. It shows the breakdown, the total, and the checkout path to Stan.",
+  deliveryDate: "August 4, 2026",
   checkoutUrl: "https://stan.store/ZYNE_store/p/custom-order--invoice-checkout",
   currency: {
     primarySymbol: "⃁",
