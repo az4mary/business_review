@@ -148,11 +148,19 @@ assertSchema(customDelivery, join("delivery", "custom"), ["WebPage", "Custom Del
 assertIncludes(customDelivery, "delivery/custom", [
   "Custom Delivery",
   "Custom delivery",
-  "Start Custom Scope",
-  "Define the custom delivery need",
-  "Shape the delivery pathway",
-  "Execute in managed stages",
-  "When custom delivery makes sense"
+  "Pay Now",
+  "Invoice preview",
+  "Delivery Fee",
+  "Task",
+  "Duration",
+  "Rate",
+  "Cost",
+  "⃁282.50",
+  "Approx. USD",
+  "$75.33",
+  "Continue to Stan",
+  "Stan checkout",
+  "This page shows a read-only delivery invoice preview."
 ]);
 
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");

@@ -4,30 +4,56 @@ export const customDeliveryContent = {
   description: "A ZYNE delivery page for custom scopes, staged implementation, and bespoke operational support that does not fit a fixed-price product.",
   canonicalPath: "/delivery/custom/",
   eyebrow: "Custom delivery",
-  intro: "Use this page to shape delivery requests that need a scoped plan before they can become a fixed workstream.",
+  intro: "This page shows a read-only delivery invoice preview. Review the billed breakdown, confirm the total, and continue to Stan for payment.",
+  checkoutUrl: "https://stan.store/ZYNE_store/p/custom-order--invoice-checkout",
+  currency: {
+    primarySymbol: "⃁",
+    secondarySymbol: "$",
+    code: "SAR",
+    exchangeRate: 3.75
+  },
+  invoice: {
+    service: "Delivery Fee",
+    items: [
+      {
+        label: "Delivery Fee",
+        start: "16:38",
+        end: "18:21",
+        durationMinutes: 103,
+        ratePerHour: 50
+      },
+      {
+        label: "Delivery Fee",
+        start: "18:21",
+        end: "19:20",
+        durationMinutes: 59,
+        ratePerHour: 200
+      }
+    ]
+  },
   primaryCta: {
-    label: "Start Custom Scope",
-    href: "#custom-scope"
+    label: "Pay Now",
+    href: "https://stan.store/ZYNE_store/p/custom-order--invoice-checkout"
   },
   secondaryCta: {
-    label: "Review Fit",
-    href: "#delivery-fit"
+    label: "Review Breakdown",
+    href: "#invoice-breakdown"
   },
   cards: [
     {
       label: "Scope",
-      title: "Define the custom delivery need",
-      body: "Clarify the business context, requested outcome, dependencies, timeline, and decision owner before work is scheduled."
+      title: "Read-only billing preview",
+      body: "The amounts are shown for review only. The customer can see the billed breakdown, but they cannot edit the invoice from this page."
     },
     {
-      label: "Plan",
-      title: "Shape the delivery pathway",
-      body: "Translate the request into milestones, responsibilities, exclusions, handoff points, and acceptance criteria."
+      label: "Total",
+      title: "Calculated before checkout",
+      body: "Each line item is calculated from its time block and hourly rate, then summarized into the total before handoff to Stan."
     },
     {
-      label: "Build",
-      title: "Execute in managed stages",
-      body: "Move through agreed work blocks with review checkpoints, delivery notes, and next-step recommendations."
+      label: "Checkout",
+      title: "Stan handles payment",
+      body: "The checkout button sends the customer directly to Stan, while the ZYNE page remains the source of the previewed billing details."
     }
   ],
   fitNotes: [

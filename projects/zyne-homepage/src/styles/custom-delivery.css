@@ -114,6 +114,10 @@ li {
   margin-top: 1.4rem;
 }
 
+.custom-actions .button {
+  min-width: 180px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -147,6 +151,89 @@ li {
   padding: 0 0 clamp(3.5rem, 7vw, 6rem);
 }
 
+.custom-invoice {
+  padding: 0 0 clamp(3.5rem, 7vw, 6rem);
+}
+
+.custom-invoice-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.custom-rate {
+  text-align: right;
+}
+
+.custom-rate span {
+  display: block;
+  color: #b4aea3;
+  font-size: .95rem;
+}
+
+.custom-rate strong {
+  display: block;
+  color: #c9a967;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  margin-top: .3rem;
+}
+
+.custom-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(201, 169, 103, .26);
+  background: rgba(255, 255, 255, .015);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(201, 169, 103, .12);
+  text-align: left;
+  vertical-align: top;
+}
+
+.custom-table th {
+  color: #c9a967;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .68rem;
+}
+
+.custom-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(201, 169, 103, .26);
+  background: rgba(255, 255, 255, .02);
+}
+
+.custom-summary span {
+  display: block;
+  color: #b4aea3;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .68rem;
+}
+
+.custom-summary strong {
+  display: block;
+  color: #f1eadc;
+  font-size: 1.4rem;
+  margin-top: .35rem;
+}
+
 .custom-card strong {
   color: #c9a967;
 }
@@ -162,8 +249,18 @@ li {
 
 @media (max-width: 900px) {
   .custom-hero,
-  .custom-grid {
+  .custom-grid,
+  .custom-summary {
     grid-template-columns: 1fr;
+  }
+
+  .custom-invoice-head {
+    display: block;
+  }
+
+  .custom-rate {
+    text-align: left;
+    margin-top: .75rem;
   }
 
   .custom-actions .button {
