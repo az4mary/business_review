@@ -43,6 +43,8 @@ a:focus-visible {
 .custom-page {
   width: min(1180px, 88vw);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .custom-hero {
@@ -142,6 +144,11 @@ li {
   display: grid;
   align-content: center;
   min-height: 100%;
+}
+
+.currency-symbol {
+  font-family: "Noto Sans Symbols 2", "Segoe UI Symbol", "Apple Symbols", "DejaVu Sans", sans-serif;
+  font-variant-ligatures: none;
 }
 
 .custom-grid {
@@ -245,6 +252,24 @@ li {
 }
 
 @media (max-width: 900px) {
+  .custom-page {
+    gap: 1rem;
+  }
+
+  .custom-hero {
+    order: 2;
+    padding: 0 0 1rem;
+  }
+
+  .custom-invoice {
+    order: 1;
+    padding: 1rem 0 0;
+  }
+
+  .custom-notes {
+    order: 3;
+  }
+
   .custom-hero,
   .custom-summary {
     grid-template-columns: 1fr;
@@ -257,6 +282,10 @@ li {
   .custom-rate {
     text-align: left;
     margin-top: .75rem;
+  }
+
+  .custom-status {
+    min-height: auto;
   }
 
   .custom-actions .button {
