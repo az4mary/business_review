@@ -12,43 +12,25 @@ import {
 
 const siteUrl = "https://zyne.store";
 const styles = readFileSync(new URL("../../src/styles/custom-delivery.css", import.meta.url), "utf8");
-
-const escapeHtml = (value = "") => String(value)
-  .replaceAll("&", "&amp;")
-  .replaceAll("<", "&lt;")
-  .replaceAll(">", "&gt;")
-  .replaceAll('"', "&quot;")
-  .replaceAll("'", "&#39;");
-
+const escapeHtml = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const absoluteUrl = (path) => `${siteUrl}${path.endsWith("/") ? path : `${path}/`}`;
 const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-
 const formatDuration = (minutes) => {
   const hours = Math.floor(minutes / 60);
   const mins = minutes % 60;
   return [hours ? `${hours}h` : "", mins ? `${mins}m` : ""].filter(Boolean).join(" ");
 };
-
 const buildInvoice = (invoice, currency) => {
   const rows = invoice.items.map((item) => ({ ...item, cost: (item.durationMinutes / 60) * item.ratePerHour }));
   const total = rows.reduce((sum, row) => sum + row.cost, 0);
   const usdTotal = total / currency.exchangeRate;
   return { rows, total, usdTotal };
 };
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Custom Delivery",
-  "description": "Review your custom delivery bill, confirm the total, and continue to Stan for checkout.",
-  "url": absoluteUrl(customDeliveryContent.canonicalPath)
-};
-
+const schema = { "@context": "https://schema.org", "@type": "WebPage", name: "Custom Delivery", description: "Review your custom delivery bill, confirm the total, and continue to Stan for checkout.", url: absoluteUrl(customDeliveryContent.canonicalPath) };
 const pageImage = `${siteUrl}${customDeliveryContent.shareImage}`;
-const localePayload = JSON.stringify({
-  locales: customDeliveryLocales,
-  settings: localizationSettings
-}).replaceAll("</", "<\\/");
+const localePayload = JSON.stringify({ locales: customDeliveryLocales, settings: localizationSettings }).replaceAll("</", "<\\/");
+const defaultStrings = customDeliveryLocales.en;
+const invoice = buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency);
 
 export const renderCustomDeliveryPage = () => `<!doctype html>
 <html lang="en">
@@ -79,80 +61,80 @@ ${renderGlobalHeader()}
 <main id="main-content" class="custom-page">
   <section class="custom-hero">
     <div class="custom-panel">
-      <p class="eyebrow" data-i18n="eyebrow">View bill</p>
-      <h1 data-i18n="title">Custom Delivery</h1>
-      <p class="lede" data-i18n="description">Review your custom delivery bill, confirm the total, and continue to Stan for checkout.</p>
-      <p data-i18n="intro">This is a read-only bill preview. It shows the breakdown, the total, and the checkout path to Stan.</p>
+      <p class="eyebrow" data-i18n="eyebrow">${escapeHtml(defaultStrings.eyebrow)}</p>
+      <h1 data-i18n="title">${escapeHtml(defaultStrings.title)}</h1>
+      <p class="lede" data-i18n="description">${escapeHtml(defaultStrings.description)}</p>
+      <p data-i18n="intro">${escapeHtml(defaultStrings.intro)}</p>
       <div class="custom-actions">
-        <a class="button ghost" href="#invoice-breakdown" data-i18n="viewBreakdown">View breakdown</a>
-        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">Pay now</a>
+        <a class="button ghost" href="#invoice-breakdown" data-i18n="viewBreakdown">${escapeHtml(defaultStrings.viewBreakdown)}</a>
+        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">${escapeHtml(defaultStrings.payNow)}</a>
       </div>
     </div>
     <aside class="custom-card custom-status" aria-label="Custom delivery status">
-      <p class="eyebrow" data-i18n="checkoutLabel">Checkout</p>
-      <h2 data-i18n="checkoutTitle">Stan checkout</h2>
-      <p><span data-i18n="deliveryDateLabel">Delivery date</span>: <span data-i18n-delivery-date>${escapeHtml(customDeliveryContent.deliveryDate)}</span>.</p>
-      <p data-i18n="checkoutBody">Review the bill here, then complete payment on Stan.</p>
-      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">Pay now</a>
+      <p class="eyebrow" data-i18n="checkoutLabel">${escapeHtml(defaultStrings.checkoutLabel)}</p>
+      <h2 data-i18n="checkoutTitle">${escapeHtml(defaultStrings.checkoutTitle)}</h2>
+      <p><span data-i18n="deliveryDateLabel">${escapeHtml(defaultStrings.deliveryDateLabel)}</span>: <span data-i18n-delivery-date>${escapeHtml(customDeliveryContent.deliveryDate)}</span>.</p>
+      <p data-i18n="checkoutBody">${escapeHtml(defaultStrings.checkoutBody)}</p>
+      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">${escapeHtml(defaultStrings.payNow)}</a>
     </aside>
   </section>
   <section id="invoice-breakdown" class="custom-invoice" aria-label="Invoice breakdown">
     <div class="custom-invoice-head">
       <div>
-        <p class="eyebrow" data-i18n="invoiceService">Delivery Fee</p>
-        <h2 data-i18n="invoiceTitle">Invoice preview</h2>
+        <p class="eyebrow" data-i18n="invoiceService">${escapeHtml(defaultStrings.invoiceService)}</p>
+        <h2 data-i18n="invoiceTitle">${escapeHtml(defaultStrings.invoiceTitle)}</h2>
       </div>
       <div class="custom-rate">
-        <span class="custom-rate-line"><span data-i18n="rateLinePrefix">$1</span><span data-i18n="rateLineEquals">=</span><span data-i18n="rateLineSuffix">SAR</span> <span data-i18n-rate-value>${customDeliveryContent.currency.exchangeRate}</span></span>
-        <strong data-i18n="currencyCodeLabel">SAR</strong>
+        <span class="custom-rate-line"><span data-i18n="rateLinePrefix">${escapeHtml(defaultStrings.rateLinePrefix)}</span><span data-i18n="rateLineEquals">${escapeHtml(defaultStrings.rateLineEquals)}</span><span data-i18n="rateLineSuffix">${escapeHtml(defaultStrings.rateLineSuffix)}</span> <span data-i18n-rate-value>${customDeliveryContent.currency.exchangeRate.toFixed(2)}</span></span>
+        <strong data-i18n="currencyCodeLabel">${escapeHtml(defaultStrings.currencyCodeLabel)}</strong>
       </div>
     </div>
     <div class="custom-table-wrap">
       <table class="custom-table">
         <thead>
           <tr>
-            <th data-i18n="task">Task</th>
-            <th data-i18n="start">Start</th>
-            <th data-i18n="end">End</th>
-            <th data-i18n="duration">Duration</th>
-            <th data-i18n="rate">Rate</th>
-            <th data-i18n="cost">Cost</th>
+            <th data-i18n="task">${escapeHtml(defaultStrings.task)}</th>
+            <th data-i18n="start">${escapeHtml(defaultStrings.start)}</th>
+            <th data-i18n="end">${escapeHtml(defaultStrings.end)}</th>
+            <th data-i18n="duration">${escapeHtml(defaultStrings.duration)}</th>
+            <th data-i18n="rate">${escapeHtml(defaultStrings.rate)}</th>
+            <th data-i18n="cost">${escapeHtml(defaultStrings.cost)}</th>
           </tr>
         </thead>
         <tbody>
-          ${buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).rows.map((item) => `<tr>
-            <td data-i18n="invoiceItemLabel">Delivery Fee</td>
+          ${invoice.rows.map((item) => `<tr>
+            <td data-i18n="invoiceItemLabel">${escapeHtml(defaultStrings.invoiceItemLabel)}</td>
             <td>${escapeHtml(item.start)}</td>
             <td>${escapeHtml(item.end)}</td>
             <td>${escapeHtml(formatDuration(item.durationMinutes))}</td>
-            <td><span data-i18n="currencyCodeLabel">SAR</span> <span data-i18n-rate-value>${item.ratePerHour}</span><span data-i18n="ratePerHourSuffix">/hr</span></td>
-            <td><span data-i18n="currencyCodeLabel">SAR</span> <span data-i18n-rate-value>${item.cost}</span></td>
+            <td><span data-i18n="currencyCodeLabel">${escapeHtml(defaultStrings.currencyCodeLabel)}</span> <span data-i18n-rate-value>${item.ratePerHour.toFixed(2)}</span><span data-i18n="ratePerHourSuffix">${escapeHtml(defaultStrings.ratePerHourSuffix)}</span></td>
+            <td><span data-i18n="currencyCodeLabel">${escapeHtml(defaultStrings.currencyCodeLabel)}</span> <span data-i18n-rate-value>${item.cost.toFixed(2)}</span></td>
           </tr>`).join("")}
         </tbody>
       </table>
     </div>
     <div class="custom-summary">
       <div>
-        <span data-i18n="totalLabel">Total</span>
-        <strong><span data-i18n="currencyCodeLabel">SAR</span> <span data-i18n-rate-value>${buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total}</span></strong>
+        <span data-i18n="totalLabel">${escapeHtml(defaultStrings.totalLabel)}</span>
+        <strong data-i18n-rate-value>$${invoice.usdTotal.toFixed(2)}</strong>
       </div>
       <div>
-        <span data-i18n="deliveryDateLabel">Delivery date</span>
+        <span data-i18n="deliveryDateLabel">${escapeHtml(defaultStrings.deliveryDateLabel)}</span>
         <strong data-i18n-delivery-date>${escapeHtml(customDeliveryContent.deliveryDate)}</strong>
       </div>
       <div>
-        <span data-i18n="approxUsdLabel">Approx. USD</span>
-        <strong>$${buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).usdTotal.toFixed(2)}</strong>
+        <span data-i18n="approxUsdLabel">${escapeHtml(defaultStrings.approxUsdLabel)}</span>
+        <strong data-i18n-rate-value>$${invoice.usdTotal.toFixed(2)}</strong>
       </div>
       <div>
-        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="continueToStan">Continue to Stan</a>
+        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="continueToStan">${escapeHtml(defaultStrings.continueToStan)}</a>
       </div>
     </div>
   </section>
   <section id="delivery-fit" class="custom-notes">
-    <p class="eyebrow" data-i18n="beforePay">Before you pay</p>
-    <h2 data-i18n="quickChecks">Quick checks</h2>
-    <ul data-i18n-fit-notes>${listItems(["Review the bill before checkout.", "If anything looks off, confirm the invoice details before paying on Stan."])}</ul>
+    <p class="eyebrow" data-i18n="beforePay">${escapeHtml(defaultStrings.beforePay)}</p>
+    <h2 data-i18n="quickChecks">${escapeHtml(defaultStrings.quickChecks)}</h2>
+    <ul data-i18n-fit-notes></ul>
   </section>
 </main>
 ${renderGlobalFooter()}
@@ -165,21 +147,20 @@ ${renderGlobalHeaderFooterScript()}
   const settings = localeData.settings || {};
   const locale = (navigator.languages && navigator.languages[0]) || navigator.language || settings.defaultLocale || "en";
   const normalized = String(locale).toLowerCase();
-  const resolved = Object.entries(settings.localeAliases || {}).find(([, aliases]) => aliases.includes(normalized) || aliases.includes(normalized.split("-")[0]))?.[0] || normalized.split("-")[0] || settings.defaultLocale || "en";
-  const strings = locales[resolved] || locales[settings.defaultLocale || "en"] || locales.en || {};
+  const aliasEntry = Object.entries(settings.localeAliases || {}).find(([, aliases]) => aliases.includes(normalized) || aliases.includes(normalized.split("-")[0]));
+  const key = aliasEntry?.[0] || normalized.split("-")[0] || settings.defaultLocale || "en";
+  const strings = locales[key] || locales[settings.defaultLocale || "en"] || locales.en || {};
   const page = document.documentElement;
-  page.lang = strings.htmlLang || resolved;
-  if ((settings.rtlLocales || []).includes(resolved)) page.dir = "rtl";
+  page.lang = strings.htmlLang || key;
+  if ((settings.rtlLocales || []).includes(key)) page.dir = "rtl";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    const key = node.getAttribute("data-i18n");
-    if (key && key in strings) node.textContent = strings[key];
+    const text = strings[node.getAttribute("data-i18n")];
+    if (typeof text === "string") node.textContent = text;
   });
   const formatNumber = (value, currency) => new Intl.NumberFormat(locale, { style: "currency", currency, currencyDisplay: "symbol", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(Number(value));
   document.querySelectorAll("[data-i18n-rate-value]").forEach((node) => {
-    const text = String(node.textContent || "");
-    const currency = text.includes("SAR") ? "SAR" : "USD";
-    const numeric = Number(text.replace(/[^0-9.]/g, ""));
-    node.textContent = formatNumber(numeric, currency);
+    const currency = node.closest("td")?.textContent?.includes("SAR") ? "SAR" : "USD";
+    node.textContent = formatNumber(node.textContent, currency);
   });
   const fitNotesList = document.querySelector("[data-i18n-fit-notes]");
   if (fitNotesList && Array.isArray(strings.fitNotes) && strings.fitNotes.length) {
