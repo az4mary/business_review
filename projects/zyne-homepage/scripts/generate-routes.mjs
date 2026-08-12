@@ -9,6 +9,7 @@ import {
 } from "../src/data/products.js";
 import { categoryPageContent, collectionPageContent } from "../src/data/category-content.js";
 import { getProductDetailContent } from "../src/data/product-detail-content.js";
+import { renderCustomDeliveryPage } from "./templates/template-custom-delivery.mjs";
 import { renderRepairSchedulePage } from "./templates/template-repair-schedule.mjs";
 import {
   globalHeaderFooterStyles,
@@ -287,6 +288,8 @@ await writeRoute("use-ai/realtor-gpt", collectionPage({
 }));
 
 await writeRoute("repair-schedule", renderRepairSchedulePage());
+
+await writeRoute("delivery/custom", renderCustomDeliveryPage());
 
 await writeRoute("privacy", legalPage({
   url: "/privacy/",

@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #070706;
+  color: #f1eadc;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top right, rgba(201, 169, 103, .14), transparent 32rem),
+    #070706;
+  color: #f1eadc;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid #c9a967;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  z-index: 99;
+  background: #c9a967;
+  color: #080807;
+  padding: .8rem 1rem;
+}
+
+.custom-page {
+  width: min(1180px, 88vw);
+  margin: 0 auto;
+}
+
+.custom-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: stretch;
+  padding: clamp(4rem, 9vw, 8rem) 0;
+}
+
+.custom-panel,
+.custom-card,
+.custom-notes {
+  border: 1px solid rgba(201, 169, 103, .26);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, .01));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .22);
+}
+
+.custom-panel {
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.custom-card,
+.custom-notes {
+  padding: 1.35rem;
+}
+
+.eyebrow {
+  color: #c9a967;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .66rem;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6.4vw, 5.4rem);
+  line-height: .95;
+  margin: .65rem 0 1rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 1;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+h3 {
+  margin: .25rem 0 .65rem;
+}
+
+p,
+li {
+  color: #b4aea3;
+  line-height: 1.72;
+}
+
+.lede {
+  font-size: 1.12rem;
+  max-width: 68ch;
+}
+
+.custom-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: 1rem 1.2rem;
+  background: #c9a967;
+  color: #080807;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .72rem;
+  font-weight: 800;
+  border: 1px solid #c9a967;
+}
+
+.button.ghost {
+  background: transparent;
+  color: #f1eadc;
+}
+
+.custom-status {
+  display: grid;
+  align-content: center;
+  min-height: 100%;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0 0 clamp(3.5rem, 7vw, 6rem);
+}
+
+.custom-card strong {
+  color: #c9a967;
+}
+
+.custom-notes {
+  margin-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.custom-notes ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .custom-hero,
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-actions .button {
+    width: 100%;
+  }
+}

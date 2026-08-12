@@ -141,6 +141,20 @@ assertIncludes(repairSchedule, "repair-schedule", [
   "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard-mailbox-carport.png"
 ]);
 
+const customDelivery = await assertFile(join("delivery", "custom"));
+allRouteHtml.push([join("delivery", "custom"), customDelivery]);
+assertOneH1(customDelivery, join("delivery", "custom"));
+assertSchema(customDelivery, join("delivery", "custom"), ["WebPage", "Custom Delivery"]);
+assertIncludes(customDelivery, "delivery/custom", [
+  "Custom Delivery",
+  "Custom delivery",
+  "Start Custom Scope",
+  "Define the custom delivery need",
+  "Shape the delivery pathway",
+  "Execute in managed stages",
+  "When custom delivery makes sense"
+]);
+
 const propertyRoute = join("homedetail", "7101-wendemere-st-houston-tx-77088");
 const propertyDetail = await assertFile(propertyRoute);
 allRouteHtml.push([propertyRoute, propertyDetail]);
