@@ -21,6 +21,9 @@ export const customDeliveryContent = {
       checkoutBody: "راجع الفاتورة هنا، ثم أكمل الدفع في Stan.",
       payNow: "ادفع الآن",
       invoiceTitle: "معاينة الفاتورة",
+      invoiceService: "Delivery Fee",
+      invoiceItemLabel: "Delivery Fee",
+      invoiceService: "Delivery Fee",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "الإجمالي",
@@ -49,6 +52,9 @@ export const customDeliveryContent = {
       checkoutBody: "Revisa la factura aquí y completa el pago en Stan.",
       payNow: "Pagar ahora",
       invoiceTitle: "Vista previa de la factura",
+      invoiceService: "Delivery Fee",
+      invoiceItemLabel: "Delivery Fee",
+      invoiceService: "Delivery Fee",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "Total",
@@ -77,6 +83,9 @@ export const customDeliveryContent = {
       checkoutBody: "Vérifiez la facture ici, puis terminez le paiement sur Stan.",
       payNow: "Payer maintenant",
       invoiceTitle: "Aperçu de facture",
+      invoiceService: "Delivery Fee",
+      invoiceItemLabel: "Delivery Fee",
+      invoiceService: "Delivery Fee",
       rateLinePrefix: "$1",
       rateLineEquals: "=",
       totalLabel: "Total",
@@ -120,6 +129,7 @@ export const customDeliveryContent = {
       }
     ]
   },
+  invoiceItemLabel: "Delivery Fee",
   primaryCta: {
     label: "Pay now",
     href: "https://stan.store/ZYNE_store/p/custom-order--invoice-checkout"

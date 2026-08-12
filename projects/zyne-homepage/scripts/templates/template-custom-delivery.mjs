@@ -109,7 +109,7 @@ ${renderGlobalHeader()}
   <section id="invoice-breakdown" class="custom-invoice" aria-label="Invoice breakdown">
     <div class="custom-invoice-head">
       <div>
-        <p class="eyebrow">${escapeHtml(customDeliveryContent.invoice.service)}</p>
+        <p class="eyebrow" data-i18n="invoiceService">${escapeHtml(customDeliveryContent.invoice.service)}</p>
         <h2 data-i18n="invoiceTitle">Invoice preview</h2>
       </div>
       <div class="custom-rate">
@@ -131,7 +131,7 @@ ${renderGlobalHeader()}
         </thead>
         <tbody>
           ${buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).rows.map((item) => `<tr>
-            <td>${escapeHtml(item.label)}</td>
+            <td data-i18n="invoiceItemLabel">${escapeHtml(item.label)}</td>
             <td>${escapeHtml(item.start)}</td>
             <td>${escapeHtml(item.end)}</td>
             <td>${escapeHtml(formatDuration(item.durationMinutes))}</td>
