@@ -54,14 +54,28 @@ const schema = {
   "url": absoluteUrl(customDeliveryContent.canonicalPath)
 };
 
+const pageTitle = customDeliveryContent.seoTitle;
+const pageDescription = customDeliveryContent.shareDescription || customDeliveryContent.description;
+const pageImage = `${siteUrl}${customDeliveryContent.shareImage}`;
+
 export const renderCustomDeliveryPage = () => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070706">
-<title>${escapeHtml(customDeliveryContent.seoTitle)}</title>
+<title>${escapeHtml(pageTitle)}</title>
 <meta name="description" content="${escapeHtml(customDeliveryContent.description)}">
+<meta property="og:title" content="${escapeHtml(pageTitle)}">
+<meta property="og:description" content="${escapeHtml(pageDescription)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${absoluteUrl(customDeliveryContent.canonicalPath)}">
+<meta property="og:site_name" content="ZYNE">
+<meta property="og:image" content="${escapeHtml(pageImage)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(pageTitle)}">
+<meta name="twitter:description" content="${escapeHtml(pageDescription)}">
+<meta name="twitter:image" content="${escapeHtml(pageImage)}">
 <link rel="canonical" href="${absoluteUrl(customDeliveryContent.canonicalPath)}">
 ${renderGlobalFavicons()}
 <style>${globalHeaderFooterStyles}${styles}</style>

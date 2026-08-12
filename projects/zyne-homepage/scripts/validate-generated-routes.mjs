@@ -45,6 +45,8 @@ const assertNoForbiddenPhrases = (html, route) => {
   }
 };
 
+const sarCurrencyMarker = `currency-symbol">${String.fromCodePoint(0x20C1)}</span>282.50`;
+
 const assertSchema = (html, route, snippets = []) => {
   assertIncludes(html, route, ["application/ld+json", ...snippets]);
 };
@@ -156,7 +158,7 @@ assertIncludes(customDelivery, "delivery/custom", [
   "Duration",
   "Rate",
   "Cost",
-  "⃁282.50",
+  sarCurrencyMarker,
   "Approx. USD",
   "$75.33",
   "Continue to Stan",
