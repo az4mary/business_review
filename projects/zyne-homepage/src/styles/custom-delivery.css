@@ -145,10 +145,7 @@ li {
 }
 
 .custom-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 0 0 clamp(3.5rem, 7vw, 6rem);
+  display: none;
 }
 
 .custom-invoice {
@@ -249,7 +246,6 @@ li {
 
 @media (max-width: 900px) {
   .custom-hero,
-  .custom-grid,
   .custom-summary {
     grid-template-columns: 1fr;
   }

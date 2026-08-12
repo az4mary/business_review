@@ -78,15 +78,15 @@ ${renderGlobalHeader()}
       <p class="lede">${escapeHtml(customDeliveryContent.description)}</p>
       <p>${escapeHtml(customDeliveryContent.intro)}</p>
       <div class="custom-actions">
-        <a class="button" href="${escapeHtml(customDeliveryContent.primaryCta.href)}">${escapeHtml(customDeliveryContent.primaryCta.label)}</a>
         <a class="button ghost" href="${escapeHtml(customDeliveryContent.secondaryCta.href)}">${escapeHtml(customDeliveryContent.secondaryCta.label)}</a>
+        <a class="button" href="${escapeHtml(customDeliveryContent.primaryCta.href)}" target="_blank" rel="noopener noreferrer external">${escapeHtml(customDeliveryContent.primaryCta.label)}</a>
       </div>
     </div>
     <aside class="custom-card custom-status" aria-label="Custom delivery status">
-      <p class="eyebrow">Checkout handoff</p>
+      <p class="eyebrow">Checkout</p>
       <h2>Stan checkout</h2>
-      <p>The customer reviews the invoice here, then completes payment on Stan. The preview on this page stays read-only.</p>
-      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external">Pay Now</a>
+      <p>Review the bill here, then complete payment on Stan.</p>
+      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external">Pay now</a>
     </aside>
   </section>
   <section id="invoice-breakdown" class="custom-invoice" aria-label="Invoice breakdown">
@@ -138,16 +138,9 @@ ${renderGlobalHeader()}
       </div>
     </div>
   </section>
-  <section id="custom-scope" class="custom-grid" aria-label="Custom delivery workflow">
-    ${customDeliveryContent.cards.map((card) => `<article class="custom-card">
-      <p class="eyebrow">${escapeHtml(card.label)}</p>
-      <h3>${escapeHtml(card.title)}</h3>
-      <p>${escapeHtml(card.body)}</p>
-    </article>`).join("")}
-  </section>
   <section id="delivery-fit" class="custom-notes">
-    <p class="eyebrow">Delivery fit</p>
-    <h2>When custom delivery makes sense</h2>
+    <p class="eyebrow">Before you pay</p>
+    <h2>Quick checks</h2>
     <ul>${listItems(customDeliveryContent.fitNotes)}</ul>
   </section>
 </main>
