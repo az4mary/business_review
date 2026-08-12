@@ -57,6 +57,8 @@ const schema = {
 const pageTitle = customDeliveryContent.seoTitle;
 const pageDescription = customDeliveryContent.shareDescription || customDeliveryContent.description;
 const pageImage = `${siteUrl}${customDeliveryContent.shareImage}`;
+const translations = customDeliveryContent.translations || {};
+const translationJson = JSON.stringify(translations).replaceAll("</", "<\\/");
 
 export const renderCustomDeliveryPage = () => `<!doctype html>
 <html lang="en">
@@ -87,31 +89,31 @@ ${renderGlobalHeader()}
 <main id="main-content" class="custom-page">
   <section class="custom-hero">
     <div class="custom-panel">
-      <p class="eyebrow">${escapeHtml(customDeliveryContent.eyebrow)}</p>
-      <h1>${escapeHtml(customDeliveryContent.title)}</h1>
-      <p class="lede">${escapeHtml(customDeliveryContent.description)}</p>
-      <p>${escapeHtml(customDeliveryContent.intro)}</p>
+      <p class="eyebrow" data-i18n="eyebrow">${escapeHtml(customDeliveryContent.eyebrow)}</p>
+      <h1 data-i18n="title">${escapeHtml(customDeliveryContent.title)}</h1>
+      <p class="lede" data-i18n="description">${escapeHtml(customDeliveryContent.description)}</p>
+      <p data-i18n="intro">${escapeHtml(customDeliveryContent.intro)}</p>
       <div class="custom-actions">
-        <a class="button ghost" href="${escapeHtml(customDeliveryContent.secondaryCta.href)}">${escapeHtml(customDeliveryContent.secondaryCta.label)}</a>
-        <a class="button" href="${escapeHtml(customDeliveryContent.primaryCta.href)}" target="_blank" rel="noopener noreferrer external">${escapeHtml(customDeliveryContent.primaryCta.label)}</a>
+        <a class="button ghost" href="${escapeHtml(customDeliveryContent.secondaryCta.href)}" data-i18n="viewBreakdown">${escapeHtml(customDeliveryContent.secondaryCta.label)}</a>
+        <a class="button" href="${escapeHtml(customDeliveryContent.primaryCta.href)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">${escapeHtml(customDeliveryContent.primaryCta.label)}</a>
       </div>
     </div>
     <aside class="custom-card custom-status" aria-label="Custom delivery status">
-      <p class="eyebrow">Checkout</p>
-      <h2>Stan checkout</h2>
-      <p>Delivery date: ${escapeHtml(customDeliveryContent.deliveryDate)}.</p>
-      <p>Review the bill here, then complete payment on Stan.</p>
-      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external">Pay now</a>
+      <p class="eyebrow" data-i18n="checkoutLabel">Checkout</p>
+      <h2 data-i18n="checkoutTitle">Stan checkout</h2>
+      <p><span data-i18n="deliveryDateLabel">Delivery date</span>: <span data-i18n="deliveryDate">${escapeHtml(customDeliveryContent.deliveryDate)}</span>.</p>
+      <p data-i18n="checkoutBody">Review the bill here, then complete payment on Stan.</p>
+      <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="payNow">Pay now</a>
     </aside>
   </section>
   <section id="invoice-breakdown" class="custom-invoice" aria-label="Invoice breakdown">
     <div class="custom-invoice-head">
       <div>
         <p class="eyebrow">${escapeHtml(customDeliveryContent.invoice.service)}</p>
-        <h2>Invoice preview</h2>
+        <h2 data-i18n="invoiceTitle">Invoice preview</h2>
       </div>
       <div class="custom-rate">
-        <span class="custom-rate-line"><span>${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1</span><span>=</span><span>${formatCurrency(customDeliveryContent.currency.exchangeRate)} ${escapeHtml(customDeliveryContent.currency.code)}</span></span>
+        <span class="custom-rate-line"><span data-i18n="rateLinePrefix">${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1</span><span data-i18n="rateLineEquals">=</span><span>${formatCurrency(customDeliveryContent.currency.exchangeRate)} ${escapeHtml(customDeliveryContent.currency.code)}</span></span>
         <strong>${escapeHtml(customDeliveryContent.currency.code)}</strong>
       </div>
     </div>
@@ -119,12 +121,12 @@ ${renderGlobalHeader()}
       <table class="custom-table">
         <thead>
           <tr>
-            <th>Task</th>
-            <th>Start</th>
-            <th>End</th>
-            <th>Duration</th>
-            <th>Rate</th>
-            <th>Cost</th>
+            <th data-i18n="task">Task</th>
+            <th data-i18n="start">Start</th>
+            <th data-i18n="end">End</th>
+            <th data-i18n="duration">Duration</th>
+            <th data-i18n="rate">Rate</th>
+            <th data-i18n="cost">Cost</th>
           </tr>
         </thead>
         <tbody>
@@ -141,29 +143,48 @@ ${renderGlobalHeader()}
     </div>
     <div class="custom-summary">
       <div>
-        <span>Total</span>
+        <span data-i18n="totalLabel">Total</span>
         <strong>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total)}</strong>
       </div>
       <div>
-        <span>Delivery date</span>
+        <span data-i18n="deliveryDateLabel">Delivery date</span>
         <strong>${escapeHtml(customDeliveryContent.deliveryDate)}</strong>
       </div>
       <div>
-        <span>Approx. USD</span>
+        <span data-i18n="approxUsdLabel">Approx. USD</span>
         <strong>${escapeHtml(customDeliveryContent.currency.secondarySymbol)}${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).usdTotal)}</strong>
       </div>
       <div>
-        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external">Continue to Stan</a>
+        <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="continueToStan">Continue to Stan</a>
       </div>
     </div>
   </section>
   <section id="delivery-fit" class="custom-notes">
-    <p class="eyebrow">Before you pay</p>
-    <h2>Quick checks</h2>
+    <p class="eyebrow" data-i18n="beforePay">Before you pay</p>
+    <h2 data-i18n="quickChecks">Quick checks</h2>
     <ul>${listItems(customDeliveryContent.fitNotes)}</ul>
   </section>
 </main>
 ${renderGlobalFooter()}
+<script>window.__CUSTOM_DELIVERY_TRANSLATIONS__=${translationJson};</script>
 ${renderGlobalHeaderFooterScript()}
+<script>
+(() => {
+  const translations = window.__CUSTOM_DELIVERY_TRANSLATIONS__ || {};
+  const page = document.documentElement;
+  const locale = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
+  const normalized = locale.toLowerCase();
+  const lang = normalized.startsWith("ar") ? "ar" : normalized.startsWith("es") ? "es" : normalized.startsWith("fr") ? "fr" : "en";
+  const strings = translations[lang];
+  if (!strings) return;
+  page.lang = strings.htmlLang || lang;
+  if (lang === "ar") page.dir = "rtl";
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    const key = node.getAttribute("data-i18n");
+    if (!key || !(key in strings)) return;
+    node.textContent = strings[key];
+  });
+})();
+</script>
 </body>
 </html>`;
