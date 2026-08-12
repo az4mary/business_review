@@ -158,7 +158,7 @@ assertIncludes(customDelivery, "delivery/custom", [
   "Duration",
   "Rate",
   "Cost",
-  sarCurrencyMarker,
+  "SAR 282.50",
   "Approx. USD",
   "$75.33",
   "Continue to Stan",

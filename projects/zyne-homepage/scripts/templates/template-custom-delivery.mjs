@@ -110,7 +110,7 @@ ${renderGlobalHeader()}
         <h2>Invoice preview</h2>
       </div>
       <div class="custom-rate">
-        <span>${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1 = <span class="currency-symbol">${escapeHtml(customDeliveryContent.currency.primarySymbol)}</span>${formatCurrency(customDeliveryContent.currency.exchangeRate)}</span>
+        <span class="custom-rate-line"><span>${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1</span><span>=</span><span>${formatCurrency(customDeliveryContent.currency.exchangeRate)} ${escapeHtml(customDeliveryContent.currency.code)}</span></span>
         <strong>${escapeHtml(customDeliveryContent.currency.code)}</strong>
       </div>
     </div>
@@ -132,8 +132,8 @@ ${renderGlobalHeader()}
             <td>${escapeHtml(item.start)}</td>
             <td>${escapeHtml(item.end)}</td>
             <td>${escapeHtml(formatDuration(item.durationMinutes))}</td>
-            <td><span class="currency-symbol">${escapeHtml(customDeliveryContent.currency.primarySymbol)}</span>${formatCurrency(item.ratePerHour)}/hr</td>
-            <td><span class="currency-symbol">${escapeHtml(customDeliveryContent.currency.primarySymbol)}</span>${formatCurrency(item.cost)}</td>
+            <td>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(item.ratePerHour)}/hr</td>
+            <td>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(item.cost)}</td>
           </tr>`).join("")}
         </tbody>
       </table>
@@ -141,7 +141,7 @@ ${renderGlobalHeader()}
     <div class="custom-summary">
       <div>
         <span>Total</span>
-        <strong><span class="currency-symbol">${escapeHtml(customDeliveryContent.currency.primarySymbol)}</span>${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total)}</strong>
+        <strong>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total)}</strong>
       </div>
       <div>
         <span>Approx. USD</span>
