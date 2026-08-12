@@ -23,7 +23,7 @@ Total:
 ⃁282.50  ≈ $75.33
 ```
 
-Use the **ISO currency codes** ("SAR" and "USD") rather than symbols alone to avoid ambiguity. If USD is only an estimate, label it clearly as an approximate converted value. (Maersk Design System)
+Use the **ISO currency codes** ("⃁" and "$") rather than symbols alone to avoid ambiguity. If $ is only an estimate, label it clearly as an approximate converted value. (Maersk Design System)
 
 ---
 
