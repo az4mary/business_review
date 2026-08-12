@@ -7,6 +7,7 @@ import {
   renderGlobalHeader,
   renderGlobalHeaderFooterScript
 } from "../global-header-footer.mjs";
+import { formatDate, formatMoney, getBrowserLocale, pickLocalePack } from "../../src/lib/localization.mjs";
 
 const siteUrl = "https://zyne.store";
 const styles = readFileSync(new URL("../../src/styles/custom-delivery.css", import.meta.url), "utf8");
@@ -21,11 +22,6 @@ const escapeHtml = (value = "") => String(value)
 const absoluteUrl = (path) => `${siteUrl}${path.endsWith("/") ? path : `${path}/`}`;
 
 const listItems = (items = []) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
-
-const formatCurrency = (value) => new Intl.NumberFormat("en-US", {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2
-}).format(value);
 
 const formatDuration = (minutes) => {
   const hours = Math.floor(minutes / 60);
@@ -60,7 +56,11 @@ const pageImage = `${siteUrl}${customDeliveryContent.shareImage}`;
 const translations = customDeliveryContent.translations || {};
 const translationJson = JSON.stringify({
   translations,
-  fitNotes: customDeliveryContent.translationsFitNotes || {}
+  fitNotes: customDeliveryContent.translationsFitNotes || {},
+  fallbackLocale: {
+    rateLinePrefix: "$1",
+    rateLineEquals: "="
+  }
 }).replaceAll("</", "<\\/");
 
 export const renderCustomDeliveryPage = () => `<!doctype html>
@@ -116,7 +116,7 @@ ${renderGlobalHeader()}
         <h2 data-i18n="invoiceTitle">Invoice preview</h2>
       </div>
       <div class="custom-rate">
-        <span class="custom-rate-line"><span data-i18n="rateLinePrefix">${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1</span><span data-i18n="rateLineEquals">=</span><span>${formatCurrency(customDeliveryContent.currency.exchangeRate)} ${escapeHtml(customDeliveryContent.currency.code)}</span></span>
+        <span class="custom-rate-line"><span data-i18n="rateLinePrefix">${escapeHtml(customDeliveryContent.currency.secondarySymbol)}1</span><span data-i18n="rateLineEquals">=</span><span data-i18n="rateLineSuffix">${escapeHtml(customDeliveryContent.currency.code)}</span> <span data-i18n-rate-value>${formatMoney(customDeliveryContent.currency.exchangeRate, "en", customDeliveryContent.currency.code)}</span></span>
         <strong>${escapeHtml(customDeliveryContent.currency.code)}</strong>
       </div>
     </div>
@@ -138,8 +138,8 @@ ${renderGlobalHeader()}
             <td>${escapeHtml(item.start)}</td>
             <td>${escapeHtml(item.end)}</td>
             <td>${escapeHtml(formatDuration(item.durationMinutes))}</td>
-            <td>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(item.ratePerHour)}/hr</td>
-            <td>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(item.cost)}</td>
+            <td><span data-i18n="rateCurrency">${escapeHtml(customDeliveryContent.currency.code)}</span> <span data-i18n-rate-value>${formatMoney(item.ratePerHour, "en", customDeliveryContent.currency.code)}</span><span data-i18n="ratePerHourSuffix">/hr</span></td>
+            <td><span data-i18n="totalCurrencyPrefix">${escapeHtml(customDeliveryContent.currency.code)}</span> <span data-i18n-rate-value>${formatMoney(item.cost, "en", customDeliveryContent.currency.code)}</span></td>
           </tr>`).join("")}
         </tbody>
       </table>
@@ -147,15 +147,15 @@ ${renderGlobalHeader()}
     <div class="custom-summary">
       <div>
         <span data-i18n="totalLabel">Total</span>
-        <strong>${escapeHtml(customDeliveryContent.currency.code)} ${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total)}</strong>
+        <strong><span data-i18n="totalCurrencyPrefix">${escapeHtml(customDeliveryContent.currency.code)}</span> <span data-i18n-rate-value>${formatMoney(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).total, "en", customDeliveryContent.currency.code)}</span></strong>
       </div>
       <div>
         <span data-i18n="deliveryDateLabel">Delivery date</span>
-        <strong>${escapeHtml(customDeliveryContent.deliveryDate)}</strong>
+        <strong data-i18n-delivery-date>${escapeHtml(customDeliveryContent.deliveryDate)}</strong>
       </div>
       <div>
         <span data-i18n="approxUsdLabel">Approx. USD</span>
-        <strong>${escapeHtml(customDeliveryContent.currency.secondarySymbol)}${formatCurrency(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).usdTotal)}</strong>
+        <strong><span data-i18n="approxCurrencyPrefix">${escapeHtml(customDeliveryContent.currency.secondarySymbol)}</span> <span data-i18n-rate-value>${formatMoney(buildInvoice(customDeliveryContent.invoice, customDeliveryContent.currency).usdTotal, "en", "USD")}</span></strong>
       </div>
       <div>
         <a class="button" href="${escapeHtml(customDeliveryContent.checkoutUrl)}" target="_blank" rel="noopener noreferrer external" data-i18n="continueToStan">Continue to Stan</a>
@@ -177,10 +177,10 @@ ${renderGlobalHeaderFooterScript()}
   const translations = localeData.translations || {};
   const translationsFitNotes = localeData.fitNotes || {};
   const page = document.documentElement;
-  const locale = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
-  const normalized = locale.toLowerCase();
-  const lang = normalized.startsWith("ar") ? "ar" : normalized.startsWith("es") ? "es" : normalized.startsWith("fr") ? "fr" : "en";
-  const strings = translations[lang];
+  const browserLocale = navigator.languages?.[0] || navigator.language || "en";
+  const locale = (navigator.languages && navigator.languages[0]) || navigator.language || browserLocale;
+  const strings = (${pickLocalePack.toString()})(locale, translations, "en").pack;
+  const lang = (${pickLocalePack.toString()})(locale, translations, "en").key;
   if (!strings) return;
   page.lang = strings.htmlLang || lang;
   if (lang === "ar") page.dir = "rtl";
@@ -189,10 +189,31 @@ ${renderGlobalHeaderFooterScript()}
     if (!key || !(key in strings)) return;
     node.textContent = strings[key];
   });
+  const formatMoney = (value, currency) => new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    currencyDisplay: "symbol",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(Number(value));
+  document.querySelectorAll("[data-i18n-rate-value]").forEach((node) => {
+    const currency = node.parentElement?.textContent?.includes("USD") ? "USD" : "SAR";
+    node.textContent = new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency,
+      currencyDisplay: "symbol",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }).format(Number(node.textContent.replace(/[^0-9.]/g, "")));
+  });
   const fitNotes = translationsFitNotes?.[lang];
   const fitNotesList = document.querySelector("[data-i18n-fit-notes]");
   if (fitNotesList && Array.isArray(fitNotes) && fitNotes.length) {
     fitNotesList.innerHTML = fitNotes.map((item) => '<li>' + item + '</li>').join('');
+  }
+  const deliveryDateNode = document.querySelector("[data-i18n-delivery-date]");
+  if (deliveryDateNode) {
+    deliveryDateNode.textContent = (${formatDate.toString()})(new Date("2026-08-04"), locale);
   }
 })();
 </script>
