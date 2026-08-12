@@ -3,7 +3,7 @@ export const customDeliveryContent = {
   seoTitle: "Custom Delivery | ZYNE",
   description: "Review your custom delivery bill, confirm the total, and continue to Stan for checkout.",
   shareDescription: "Read-only invoice preview for custom delivery. Confirm the SAR 282.50 total, then continue to Stan for checkout.",
-  shareImage: "/assets/catalog/properties/7101-wendemere-st/gallery/front-yard-mailbox-carport.png",
+  shareImage: "/assets/catalog/products/share-preview-thumbnail.png",
   canonicalPath: "/delivery/custom/",
   eyebrow: "View bill",
   intro: "This is a read-only bill preview. It shows the breakdown, the total, and the checkout path to Stan.",
